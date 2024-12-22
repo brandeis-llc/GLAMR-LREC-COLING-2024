@@ -1,0 +1,235 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1259
+export time: 4/3/2023, 4:21:27 PM
+
+# :: snt1	Season turkey with salt and pepper or lemon pepper .
+# sentence level graph:
+(s1s2 / season-01
+  :ARG1 (s1t / turkey)
+  :ARG2 (s1o / or
+          :op1 (s1s / salt)
+          :op2 (s1p / pepper
+                 :mod (s1l / lemon)))
+  :mode imperative)
+
+# alignment:s1l: 8-8
+s1o: 7-7
+s1p: 9-9
+s1s: 4-4
+s1s2: 1-1
+s1t: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	In a large skillet over medium - high heat , heat olive oil .
+# sentence level graph:
+(s2h2 / heat-01
+  :ARG1 (s2o / oil
+          :mod (s2o2 / olive))
+  :location (s2s / skillet
+              :mod (s2l / large)
+              :mod (s2t / temperature-quantity
+                     :mod (s2u / umr-choice
+                            :op1 (s2m2 / medium)
+                            :op2 (s2h4 / high-02))))
+  :mode imperative)
+
+# alignment:s2h2: 11-11
+s2l: 3-3
+s2o: 13-13
+s2o2: 12-12
+s2s: 4-4
+s2t: -1--1
+s2u: -1--1
+s2m2: 6-6
+s2h4: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add turkey thighs ; brown for about 10 minutes .
+# sentence level graph:
+(s3a3 / and
+  :op1 (s3a2 / add-02
+         :ARG1 (s3t2 / thigh
+                 :part-of (s3t3 / turkey))
+         :mode imperative)
+  :op2 (s3b / brown-01
+         :ARG1 s3t2
+         :duration (s3a / about
+                     :op1 (s3t / temporal-quantity
+                            :quant 10
+                            :unit (s3m / minute)))
+         :mode imperative))
+
+# alignment:s3a: 7-7
+s3a2: 1-1
+s3a3: 4-4
+s3b: 5-5
+s3m: 9-9
+s3t: 9-9
+s3t2: 0-0
+s3t3: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Place turkey in slow cooker ; add remaining ingredients .
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4p / place-01
+         :ARG1 (s4t / turkey)
+         :ARG2 (s4c / cooker
+                 :ARG1-of (s4s / slow-01)))
+  :op2 (s4a / add-02
+         :ARG1 (s4i / ingredient
+                 :ARG1-of (s4r / remain-01)))
+  :mode imperative)
+
+# alignment:s4a: 7-7
+s4a2: 6-6
+s4c: 5-5
+s4i: 9-9
+s4p: 1-1
+s4r: 8-8
+s4s: 4-4
+s4t: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Cook on high for 3 to 4 hours , or until turkey thighs are cooked through .
+# sentence level graph:
+(s5c / cook-01
+  :duration (s5o / or
+              :op1 (s5t2 / temporal-quantity
+                     :quant 3
+                     :unit (s5h3 / hour))
+              :op2 (s5t / temporal-quantity
+                     :quant 4
+                     :unit (s5h2 / hour))
+              :time (s5u / until
+                      :op1 (s5c2 / cook-01
+                             :ARG1 (s5t3 / thigh
+                                     :part-of (s5t5 / turkey))
+                             :manner (s5t4 / through))))
+  :mod (s5t6 / temperature-quantity
+          :quant (s5h / high-02)))
+
+# alignment:s5c: 1-1
+s5c2: 15-15
+s5h2: 4-4
+s5h3: 8-8
+s5o: 10-10
+s5t: 6-6
+s5t2: 8-8
+s5t3: 13-13
+s5t4: 16-16
+s5t5: 12-12
+s5t6: -1--1
+s5u: 11-11
+s5h: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Remove garlic cloves from pot .
+# sentence level graph:
+(s6r / remove-01
+  :ARG1 (s6c / clove
+          :consist-of (s6g / garlic))
+  :ARG2 (s6p / pot)
+  :mode imperative)
+
+# alignment:s6c: 3-3
+s6g: 2-2
+s6p: 5-5
+s6r: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Mash a few and return to the slow cooker , if desired .
+# sentence level graph:
+(s7a / and
+  :op1 (s7m / mash
+         :ARG1 (s7i2 / implicit-argument
+                 :mod (s7f / few))
+         :mode imperative)
+  :op2 (s7r / return-04
+         :ARG2 (s7c2 / cooker
+                 :ARG1-of (s7s2 / slow-05))
+         :mode imperative)
+  :condition (s7d / desire-01))
+
+# alignment:s7a: 4-4
+s7c2: 9-9
+s7d: 12-12
+s7f: 3-3
+s7i2: 0-0
+s7m: 1-1
+s7r: 5-5
+s7s2: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Serve turkey with juices .
+# sentence level graph:
+(s8s / serve-02
+  :ARG1 (s8t / turkey)
+  :accompanier (s8j / juice)
+  :mode imperative)
+
+# alignment:s8j: 4-4
+s8s: 1-1
+s8t: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Season turkey with salt and pepper or lemon pepper .
+In a large skillet over medium - high heat , heat olive oil .
+Add turkey thighs ; brown for about 10 minutes .
+Place turkey in slow cooker ; add remaining ingredients .
+Cook on high for 3 to 4 hours , or until turkey thighs are cooked through .
+Remove garlic cloves from pot .
+Mash a few and return to the slow cooker , if desired .
+Serve turkey with juices .

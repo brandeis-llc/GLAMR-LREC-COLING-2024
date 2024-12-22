@@ -1,0 +1,77 @@
+# :: f-627L5MNN::step01::sent01
+# :: snt1	Preheat oven to 350 degrees F.
+(s1 / sentence)
+
+
+# :: f-627L5MNN::step02::sent01
+# :: snt2	Line two cookie sheets with parchment paper .
+(s2 / sentence)
+
+
+# :: f-627L5MNN::step03::sent01
+# :: snt3	In a large bowl whip butter and sugar until light and fluffy .
+(s3 / sentence
+    :coref ((s3b2 :aggregation s3w2)
+			(s3s2 :aggregation s3w2)))
+
+
+# :: f-627L5MNN::step03::sent02
+# :: snt4	Add 1 egg and vanilla .
+(s4 / sentence)
+
+
+# :: f-627L5MNN::step03::sent03
+# :: snt5	Stir in flour and oolong tea until a very soft and moist cookie dough forms .
+(s5 / sentence
+    :coref ((s3w2 :cut s5s)
+			(s5s :aggregation s5a2)
+			(s5a2 :cut s5s)
+			(s5s :cut s5u)
+			(s3w2 :aggregation s5a2)
+			(s5a2 :cut s5u)
+			(s3l :cut s5s)
+			(s5s :cut s5s)
+			(s3w :cut s5s)
+			(s3l :aggregation s5a2)
+			(s3w :aggregation s5a2)))
+
+
+# :: f-627L5MNN::step04::sent01
+# :: snt6	Pour about 1/2 cup of confectioner 's sugar in a small bowl .
+(s6 / sentence
+    :coref ((s5u :cut s6p)
+			(s6p :cut s6p)
+			(s5s :cut s6p)
+			(s5a2 :cut s6p)))
+
+
+# :: f-627L5MNN::step05::sent01
+# :: snt7	Scoop out about a teaspoon amount of cookie dough and roll in confectioner 's sugar .
+(s7 / sentence
+    :coref ((s6p :aggregation s7c)
+			(s5u :aggregation s7c)
+			(s5s :aggregation s7c)
+			(s5a2 :aggregation s7c)
+			(s7t :aggregation s7c)))
+
+
+# :: f-627L5MNN::step05::sent02
+# :: snt8	Place on prepared cookie sheets and flatten out with bottom of a glass .
+(s8 / sentence)
+
+
+# :: f-627L5MNN::step06::sent01
+# :: snt9	Bake for about 8 minutes or until edges are lightly golden .
+(s9 / sentence)
+
+
+# :: f-627L5MNN::step06::sent02
+# :: snt10	Transfer cookies to a cooling rack .
+(s10 / sentence)
+
+
+# :: f-627L5MNN::step07::sent01
+# :: snt11	Serve with your favorite tea and enjoy !
+(s11 / sentence)
+
+

@@ -1,0 +1,292 @@
+# :: f-QSNYFL4Q::step01::sent01
+# :: snt1	Chop the lemongrass into 2 inch pieces and then slice down the center , add to the soup pot along with the broth and coconut milk , garlic and ginger .
+(s1a2 / and~7
+      :op1 (s1c3 / chop-01~0
+                 :ARG1 (s1l / lemongrass~2)
+                 :destination (s1p / piece~6
+                                   :mod (s1d / distance-quantity
+                                             :quant 2
+                                             :unit (s1i / inch~5)))
+                 :ARG0 (s1y / you)
+                 :event-structure (s1se / subevents
+                                        :E1 (s1d1 / degradation_material_integrity
+                                                  :polarity -
+                                                  :PATIENT s1l)
+                                        :E2 (s1c1 / contact
+                                                  :PATIENT s1l)
+                                        :E3 (s1d3 / degradation_material_integrity
+                                                  :PATIENT s1l)
+                                        :E0 (s1d4 / do
+                                                  :ACTION s1c3))
+                 :imp_output (s1c4 / chop.RES))
+      :op2 (s1s / slice-01~9
+                :ARG1 (s1c / center~12)
+                :direction (s1d2 / down~10)
+                :time (s1t / then~8)
+                :ARG0 s1y
+                :event-structure (s1se1 / subevents
+                                        :E1 (s1d5 / degradation_material_integrity
+                                                  :polarity -
+                                                  :IMP_PATIENT s1c4)
+                                        :E2 (s1c5 / contact
+                                                  :IMP_PATIENT s1c4)
+                                        :E3 (s1d6 / degradation_material_integrity
+                                                  :IMP_PATIENT s1c4)
+                                        :E0 (s1d7 / do
+                                                  :ACTION s1s))
+                :imp_output (s1s1 / slice.RES))
+      :op3 (s1a / add-02~14
+                :ARG1 (s1a3 / and~23
+                            :op1 (s1b / broth~22)
+                            :op2 (s1m / milk~25
+                                      :source (s1c2 / coconut~24))
+                            :op3 (s1g / garlic~27)
+                            :op4 (s1g2 / ginger~29))
+                :ARG2 (s1p2 / pot~18
+                            :mod (s1s2 / soup~17))
+                :ARG0 s1y
+                :event-structure (s1se2 / subevents
+                                        :E1 (s1t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s1p2
+                                                  :PATIENT_J s1b
+                                                  :PATIENT_K s1m
+                                                  :PATIENT_L s1g
+                                                  :PATIENT_M s1g2)
+                                        :E3 (s1t2 / together
+                                                  :PATIENT_I s1p2
+                                                  :PATIENT_J s1b
+                                                  :PATIENT_K s1m
+                                                  :PATIENT_L s1g
+                                                  :PATIENT_M s1g2)
+                                        :E0 (s1d8 / do
+                                                  :ACTION s1a))
+                :imp_output (s1a1 / add.RES))
+      :mode imperative)
+
+
+# :: f-QSNYFL4Q::step01::sent02
+# :: snt2	Bring to a boil and them simmer on low for 30 minutes .
+(s2a / and~4
+     :op1 (s2b / bring-ON-02~0
+               :destination (s2b2 / boil-01~3)
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E1 (s2c / cooked
+                                               :polarity -
+                                               :IMP_PATIENT (s2a1 / add.RES)
+                                               :V_FINAL_STATE (s2b1 / brought-to-a-boil))
+                                      :E3 (s2a2 / apply_heat
+                                                :IMP_PATIENT s2a1)
+                                      :E4 (s2c1 / cooked
+                                                :IMP_PATIENT s2a1
+                                                :V_FINAL_STATE s2b1)
+                                      :E0 (s2d / do
+                                               :ACTION s2b))
+               :imp_output (s2b3 / bring-to-a-boil.RES))
+     :op2 (s2s / simmer-01~6
+               :duration (s2t / temporal-quantity
+                              :quant 30
+                              :unit (s2m / minute~11))
+               :manner (s2l / low~8)
+               :mode imperative
+               :time (s2t3 / then~5)
+               :ARG0 s2y
+               :event-structure (s2se1 / subevents
+                                       :E1 (s2c2 / cooked
+                                                 :polarity -
+                                                 :IMP_PATIENT s2b3
+                                                 :V_FINAL_STATE (s2s1 / simmered))
+                                       :E3 (s2a3 / apply_heat
+                                                 :INSTRUMENT s2l
+                                                 :IMP_PATIENT s2b3)
+                                       :E4 (s2c3 / cooked
+                                                 :IMP_PATIENT s2b3
+                                                 :V_FINAL_STATE s2s1)
+                                       :E0 (s2d1 / do
+                                                 :ACTION s2s))
+               :imp_output (s2s2 / simmer.RES)))
+
+
+# :: f-QSNYFL4Q::step01::sent03
+# :: snt3	Once the broth is done simmering you will want to strain it through some cheese cloth .
+(s3w / want-01~8
+     :ARG0 (s3y / you~6)
+     :ARG1 (s3s2 / strain-02~10
+                 :ARG0 (s3c2 / cheese-cloth~14,15)
+                 :ARG1 (s3i2 / it~11
+                             :mod (s3s3 / some~13))
+                 :ARG0 s3y1
+                 :event-structure (s3se1 / subevents
+                                         :E1 (s3h / has_location
+                                                  :THEME s3i2)
+                                         :E3 (s3a1 / and
+                                                   :op1 (s3m / motion
+                                                             :THEME s3i2)
+                                                   :op2 (s3h1 / has_location
+                                                              :polarity -
+                                                              :THEME s3i2))
+                                         :E4 (s3h2 / has_location
+                                                   :THEME s3i2)
+                                         :E0 (s3d1 / do
+                                                   :ACTION s3s2))
+                 :imp_outputI (s3s5 / strain.RES)
+                 :imp_outputJ (s3s6 / strain.RES))
+     :time (s3o / once~0
+                :op1 (s3c / complete-01
+                          :ARG1 (s3s / simmer-01~5
+                                     :ARG1 (s3b / broth~2)
+                                     :ARG0 (s3y1 / you)
+                                     :event-structure (s3se / subevents
+                                                            :E1 (s3c1 / cooked
+                                                                      :polarity -
+                                                                      :PATIENT s3b
+                                                                      :V_FINAL_STATE (s3s1 / simmered))
+                                                            :E3 (s3a / apply_heat
+                                                                     :PATIENT s3b)
+                                                            :E4 (s3c3 / cooked
+                                                                      :PATIENT s3b
+                                                                      :V_FINAL_STATE s3s1)
+                                                            :E0 (s3d / do
+                                                                     :ACTION s3s))
+                                     :imp_output (s3s4 / simmer.RES))))
+     :mode imperative)
+
+
+# :: f-QSNYFL4Q::step01::sent04
+# :: snt4	The lemongrass stalks are not edible , I found that out the hard way .
+(s4p / possible-01
+     :ARG1 (s4e / eat-01
+                :ARG1 (s4s / stalk~2
+                           :part-of (s4l / lemongrass~1)))
+     :ARG1-of (s4f / find-out-03~8,10
+                   :ARG0 (s4i / i~7)
+                   :manner (s4w / way~13
+                                :mod (s4h / hard~12))
+                   :ARG0 (s4y / you))
+     :polarity -)
+
+
+# :: f-QSNYFL4Q::step02::sent01
+# :: snt5	Bring the broth back to a simmer and add the tofu , mushrooms , snow peas and the rice noodles .
+(s5a2 / and~7
+      :op1 (s5b2 / bring-ON-02~0
+                 :ARG1 (s5b3 / broth~2)
+                 :ARG4 (s5s / simmer-01~6)
+                 :direction (s5b / back~3))
+      :op2 (s5a / add-02~8
+                :ARG1 (s5a3 / and~16
+                            :op1 (s5t / tofu~10)
+                            :op2 (s5m / mushroom~12)
+                            :op3 (s5p / pea~15
+                                      :mod (s5s2 / snow~14))
+                            :op4 (s5n / noodle~19
+                                      :mod (s5r / rice~18)))
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s5t
+                                                 :PATIENT_J s5m
+                                                 :PATIENT_K s5p
+                                                 :PATIENT_L s5n)
+                                       :E3 (s5t2 / together
+                                                 :PATIENT_I s5t
+                                                 :PATIENT_J s5m
+                                                 :PATIENT_K s5p
+                                                 :PATIENT_L s5n)
+                                       :E0 (s5d / do
+                                                :ACTION s5a))
+                :imp_output (s5a1 / add.RES))
+      :mode imperative)
+
+
+# :: f-QSNYFL4Q::step03::sent01
+# :: snt6	You can add the lime juice at any time .
+(s6p / possible-01
+     :ARG1 (s6a / add-02~2
+                :ARG0 (s6y / you~0)
+                :ARG1 (s6j / juice~5
+                           :source (s6l / lime~4))
+                :time (s6a2 / any~7)
+                :ARG0 (s6y1 / you)
+                :event-structure (s6se / subevents
+                                       :E1 (s6t / together
+                                                :polarity -
+                                                :PATIENT_I s6j)
+                                       :E3 (s6t1 / together
+                                                 :PATIENT_I s6j)
+                                       :E0 (s6d / do
+                                                :ACTION s6a))
+                :imp_output (s6a1 / add.RES)))
+
+
+# :: f-QSNYFL4Q::step04::sent01
+# :: snt7	I added some lime juice at the beginning and then some at the end before serving .
+(s7a3 / and~8
+      :op1 (s7a / add-02~1
+                :ARG0 (s7i / i~0)
+                :ARG1 (s7j / juice~4
+                           :quant (s7s2 / some)
+                           :source (s7l / lime~3))
+                :time (s7b2 / beginning~7))
+      :op2 (s7a2 / add-02
+                 :ARG1 (s7j2 / juice
+                             :quant (s7s3 / some~10))
+                 :time (s7e / end~13)
+                 :time (s7b / before~14
+                            :op1 (s7s / serve-02~15))))
+
+
+# :: f-QSNYFL4Q::step05::sent01
+# :: snt8	Simmer until the noodles are soft .
+(s8s2 / simmer-01~0
+      :duration (s8u / until~1
+                     :op1 (s8n / noodle~3
+                               :mod (s8s / soft~5)))
+      :mode imperative
+      :ARG0 (s8y / you)
+      :event-structure (s8se / subevents
+                             :E1 (s8c / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s8a / add.RES)
+                                      :V_FINAL_STATE (s8s1 / simmered))
+                             :E3 (s8a1 / apply_heat
+                                       :IMP_PATIENT s8a)
+                             :E4 (s8a2 / and
+                                       :op1 (s8c1 / cooked
+                                                  :IMP_PATIENT s8a
+                                                  :V_FINAL_STATE s8s1)
+                                       :op2 (s8h / has_state
+                                                 :IMP_PATIENT s8a
+                                                 :RESULT s8s))
+                             :E0 (s8d / do
+                                      :ACTION s8s2))
+      :imp_output (s8s3 / simmer.RES))
+
+
+# :: f-QSNYFL4Q::step06::sent01
+# :: snt9	Garnish with grated ginger or scallions .
+(s9g3 / garnish-01~0
+      :ARG2 (s9o / or
+                 :op1 (s9g / ginger~3
+                           :ARG1-of (s9g2 / grate-01~2))
+                 :op2 (s9s / scallion~5))
+      :mode imperative
+      :ARG0 (s9y / you)
+      :event-structure (s9se / subevents
+                             :E1 (s9h / has_location
+                                      :THEME s9s)
+                             :E3 (s9a / and
+                                      :op1 (s9m / motion
+                                                :THEME s9s)
+                                      :op2 (s9h1 / has_location
+                                                 :polarity -
+                                                 :THEME s9s))
+                             :E4 (s9h2 / has_location
+                                       :THEME s9s)
+                             :E0 (s9d / do
+                                      :ACTION s9g3))
+      :imp_output (s9g1 / garnish.RES))
+
+

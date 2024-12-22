@@ -1,0 +1,106 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1446
+export time: 9/11/2023, 8:55:40 PM
+
+# :: snt1	Place fruit in serving bowl .
+# sentence level graph:
+(s1p / place-01
+  :ARG1 (s1f / fruit)
+  :ARG2 (s1b / bowl
+          :purpose (s1s / serve-02))
+  :mode imperative)
+
+# alignment:s1b: 5-5
+s1f: 2-2
+s1p: 1-1
+s1s: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Pour orange juice over fruit and mix gently .
+# sentence level graph:
+(s2a / and
+  :op1 (s2p / pour-01
+         :ARG1 (s2j / juice
+                 :source (s2o / orange))
+         :ARG3 (s2f / fruit))
+  :op2 (s2m / mix-01
+         :manner (s2g / gentle))
+  :mode imperative)
+
+# alignment:s2a: 6-6
+s2f: 5-5
+s2g: 8-8
+s2j: 3-3
+s2m: 7-7
+s2o: 2-2
+s2p: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Garnish with almonds or coconut .
+# sentence level graph:
+(s3g / Garnish-01
+  :ARG2 (s3o / or
+          :op1 (s3a2 / almond)
+          :op2 (s3c / coconut))
+  :mode imperative)
+
+# alignment:s3a2: 3-3
+s3c: 5-5
+s3o: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Cover and chill several hours before serving .
+# sentence level graph:
+(s4a / and
+  :op1 (s4c2 / cover-02)
+  :op2 (s4c / chill-01)
+  :duration (s4s2 / several
+              :op1 (s4t / temporal-quantity
+                     :quant 1
+                     :unit (s4h / hour)))
+  :time (s4b / before
+          :op1 (s4s / serve-02))
+  :mode imperative)
+
+# alignment:s4a: 2-2
+s4b: 6-6
+s4c: 3-3
+s4c2: 1-1
+s4h: 5-5
+s4s: 7-7
+s4s2: 4-4
+s4t: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Place fruit in serving bowl .
+Pour orange juice over fruit and mix gently .
+Garnish with almonds or coconut .
+Cover and chill several hours before serving .

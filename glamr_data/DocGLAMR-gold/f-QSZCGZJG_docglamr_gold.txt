@@ -1,0 +1,60 @@
+# :: f-QSZCGZJG::step01::sent01
+# :: snt1	Heat a sauce pan with the olive oil and add the onion , garlic and zucchini .
+(s1 / sentence
+    :coref ((s1o2 :cut s1h2)
+			(s1h2 :aggregation s1a4)
+			(s1a4 :cut s1s)
+			(s1s :aggregation s1h)
+			(s1o3 :aggregation s1a4)
+			(s1a4 :aggregation s1h)
+			(s1g :aggregation s1a4)
+			(s1z :aggregation s1a4)
+			(s1a2 :aggregation s1h)
+			(s1o3 :aggregation s1h)))
+
+
+# :: f-QSZCGZJG::step01::sent02
+# :: snt2	Let this saute for about 1 minute .
+(s2 / sentence
+    :coref ((s1h :cut s2l)
+			(s1a4 :cut s2l)
+			(s1s :cut s2l)))
+
+
+# :: f-QSZCGZJG::step01::sent03
+# :: snt3	Add the chicken broth , lemon juice , fresh basil and seasonings .
+(s3 / sentence
+    :coref ((s2l :aggregation s3a)
+			(s3a :cut s3a)
+			(s1h :aggregation s3a)
+			(s2l :cut s3a)
+			(s1a4 :aggregation s3a)
+			(s1h :cut s3a)
+			(s3c :aggregation s3a)))
+
+
+# :: f-QSZCGZJG::step02::sent01
+# :: snt4	Simmer this on low until the zucchini become soft and the onion is transparent .
+(s4 / sentence)
+
+
+# :: f-QSZCGZJG::step02::sent02
+# :: snt5	This will take about 30 - 35 minutes .
+(s5 / sentence)
+
+
+# :: f-QSZCGZJG::step03::sent01
+# :: snt6	Add the coconut milk with the zucchini is cooked .
+(s6 / sentence)
+
+
+# :: f-QSZCGZJG::step03::sent02
+# :: snt7	Simmer for another minute or two and adjust the seasonings to taste .
+(s7 / sentence)
+
+
+# :: f-QSZCGZJG::step04::sent01
+# :: snt8	Prepare the rice as directed .
+(s8 / sentence)
+
+

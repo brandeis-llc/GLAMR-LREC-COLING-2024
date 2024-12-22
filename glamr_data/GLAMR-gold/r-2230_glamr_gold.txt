@@ -1,0 +1,276 @@
+# :: r-2230::step01::sent01
+# :: snt1	In a large bowl , combine lemon juice and mustard ; whisk until blended .
+(s1a / and
+     :op1 (s1c / combine-01~5
+               :ARG1 (s1j / juice~7
+                          :source (s1l2 / lemon~6))
+               :ARG2 (s1m / mustard~9)
+               :location (s1b2 / bowl~3
+                               :mod (s1l / large~2))
+               :ARG0 (s1y / you)
+               :event-structure (s1se / subevents
+                                      :E1 (s1a1 / and
+                                                :op1 (s1m1 / mingled
+                                                           :polarity -
+                                                           :PATIENT_I s1j
+                                                           :PATIENT_J s1m)
+                                                :op2 (s1h / has_material_integrity_state
+                                                          :polarity -
+                                                          :PATIENT_I s1j
+                                                          :V_STATE (s1c1 / combined)
+                                                          :PATIENT_J s1m)
+                                                :op3 (s1h1 / has_material_integrity_state
+                                                           :polarity -
+                                                           :PATIENT_J s1m
+                                                           :V_STATE s1c1
+                                                           :PATIENT_I s1j))
+                                      :E3 (s1a2 / and
+                                                :op1 (s1m2 / mingled
+                                                           :PATIENT_I s1j
+                                                           :PATIENT_J s1m)
+                                                :op2 (s1h2 / has_material_integrity_state
+                                                           :PATIENT_I s1j
+                                                           :V_STATE s1c1
+                                                           :PATIENT_J s1m)
+                                                :op3 (s1h3 / has_material_integrity_state
+                                                           :PATIENT_J s1m
+                                                           :V_STATE s1c1
+                                                           :PATIENT_I s1j))
+                                      :E0 (s1d / do
+                                               :ACTION s1c))
+               :imp_output (s1c2 / combine.RES))
+     :op2 (s1w / whisk-ON-03~11
+               :duration (s1u / until~12
+                              :op1 (s1b / blend-01~13))
+               :ARG0 s1y
+               :event-structure (s1se1 / subevents
+                                       :E1 (s1c3 / contact
+                                                 :polarity -
+                                                 :IMP_PATIENT s1c2)
+                                       :E3 (s1c4 / contact
+                                                 :IMP_PATIENT s1c2)
+                                       :E4 (s1h4 / has_state
+                                                 :IMP_PATIENT s1c2
+                                                 :RESULT s1b)
+                                       :E0 (s1d1 / do
+                                                 :ACTION s1w))
+               :imp_output (s1w1 / whisk.RES))
+     :mode imperative)
+
+
+# :: r-2230::step02::sent01
+# :: snt2	Add olive oil in a thin , steady stream , whisking constantly until smooth .
+(s2a / add-02~0
+     :ARG1 (s2o / oil~2
+                :source (s2o2 / olive~1))
+     :manner (s2s3 / stream~8
+                   :mod (s2t / thin~5)
+                   :mod (s2s2 / steady~7))
+     :manner (s2w / whisk-ON-03~10
+                  :manner (s2c / constant~11)
+                  :duration (s2u / until~12
+                                 :op1 (s2s / smooth~13))
+                  :ARG0 s2y
+                  :event-structure (s2se1 / subevents
+                                          :E1 (s2c1 / contact
+                                                    :polarity -
+                                                    :IMP_PATIENT s2a1)
+                                          :E3 (s2c2 / contact
+                                                    :IMP_PATIENT s2a1)
+                                          :E4 (s2h / has_state
+                                                   :IMP_PATIENT s2a1
+                                                   :RESULT s2s)
+                                          :E0 (s2d1 / do
+                                                    :ACTION s2w))
+                  :imp_output (s2w1 / whisk.RES))
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2t1 / together
+                                      :polarity -
+                                      :PATIENT_I s2o)
+                            :E3 (s2t2 / together
+                                      :PATIENT_I s2o)
+                            :E0 (s2d / do
+                                     :ACTION s2a))
+     :imp_output (s2a1 / add.RES))
+
+
+# :: r-2230::step03::sent01
+# :: snt3	Add green beans , tomatoes , shallot , basil , and parsley .
+(s3a / add-02~0
+     :ARG1 (s3a2 / and~10
+                 :op1 (s3b2 / bean~2
+                            :mod (s3g / green~1))
+                 :op2 (s3t / tomato~4)
+                 :op3 (s3s / shallot~6)
+                 :op4 (s3b / basil~8)
+                 :op5 (s3p / parsley~11))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3t1 / together
+                                      :polarity -
+                                      :PATIENT_I s3b2
+                                      :PATIENT_J s3t
+                                      :PATIENT_K s3s
+                                      :PATIENT_L s3b
+                                      :PATIENT_M s3p)
+                            :E3 (s3t2 / together
+                                      :PATIENT_I s3b2
+                                      :PATIENT_J s3t
+                                      :PATIENT_K s3s
+                                      :PATIENT_L s3b
+                                      :PATIENT_M s3p)
+                            :E0 (s3d / do
+                                     :ACTION s3a))
+     :imp_output (s3a1 / add.RES))
+
+
+# :: r-2230::step04::sent01
+# :: snt4	Toss to coat .
+(s4t / toss-01~0
+     :purpose (s4c / coat-01~2)
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4b / be
+                                     :polarity -)
+                            :E3 (s4b1 / be)
+                            :E0 (s4d / do
+                                     :ACTION s4t))
+     :imp_output (s4t1 / toss.RES))
+
+
+# :: r-2230::step05::sent01
+# :: snt5	Season with salt and pepper to taste .
+(s5s2 / season-01~0
+      :ARG1 (s5a / and~3
+                 :op1 (s5s / salt~2)
+                 :op2 (s5p / pepper~4))
+      :purpose (s5t / taste-01~6)
+      :mode imperative
+      :ARG0 (s5y / you)
+      :event-structure (s5se / subevents
+                             :E1 (s5h / has_location
+                                      :IMP_THEME (s5t1 / toss.RES))
+                             :E3 (s5a1 / and
+                                       :op1 (s5m / motion
+                                                 :IMP_THEME s5t1)
+                                       :op2 (s5h1 / has_location
+                                                  :polarity -
+                                                  :IMP_THEME s5t1))
+                             :E4 (s5h2 / has_location
+                                       :IMP_THEME s5t1)
+                             :E0 (s5d / do
+                                      :ACTION s5s2))
+      :imp_output (s5s1 / season.RES))
+
+
+# :: r-2230::step06::sent01
+# :: snt6	Cut salmon into 1-inch cubes ; add to salad .
+(s6a2 / and
+      :op1 (s6c2 / cut-01~0
+                 :ARG1 (s6s2 / salmon~1)
+                 :destination (s6c / cube~4
+                                   :quant (s6d / distance-quantity
+                                               :quant 1
+                                               :unit (s6i / inch~3)))
+                 :ARG0 (s6y / you)
+                 :event-structure (s6se / subevents
+                                        :E1 (s6d1 / degradation_material_integrity
+                                                  :polarity -
+                                                  :PATIENT s6s2)
+                                        :E2 (s6c1 / contact
+                                                  :PATIENT s6s2)
+                                        :E3 (s6d2 / degradation_material_integrity
+                                                  :PATIENT s6s2)
+                                        :E0 (s6d3 / do
+                                                  :ACTION s6c2))
+                 :imp_output (s6c3 / cut.RES))
+      :op2 (s6a / add-02~6
+                :ARG2 (s6s / salad~8)
+                :ARG0 s6y
+                :event-structure (s6se1 / subevents
+                                        :E1 (s6t / together
+                                                 :polarity -
+                                                 :PATIENT_I s6c
+                                                 :PATIENT_J s6s)
+                                        :E3 (s6t1 / together
+                                                  :PATIENT_I s6c
+                                                  :PATIENT_J s6s)
+                                        :E0 (s6d4 / do
+                                                  :ACTION s6a))
+                :imp_output (s6a1 / add.RES))
+      :mode imperative)
+
+
+# :: r-2230::step07::sent01
+# :: snt7	Toss gently to coat .
+(s7t / toss-01~0
+     :purpose (s7c / coat-01~3)
+     :manner (s7g / gentle~1)
+     :mode imperative
+     :ARG0 (s7y / you)
+     :event-structure (s7se / subevents
+                            :E1 (s7b / be
+                                     :polarity -)
+                            :E3 (s7b1 / be)
+                            :E0 (s7d / do
+                                     :ACTION s7t))
+     :imp_output (s7t1 / toss.RES))
+
+
+# :: r-2230::step08::sent01
+# :: snt8	Arrange greens on serving plates ; top with salmon mixture .
+(s8a2 / and
+      :op1 (s8a / arrange-01~0
+                :ARG1 (s8g / green~1)
+                :ARG4 (s8p / plate~4
+                           :purpose (s8s2 / serve-02~3))
+                :ARG0 (s8y / you)
+                :event-structure (s8se / subevents
+                                       :E1 (s8h / has_location
+                                                :THEME s8g)
+                                       :E3 (s8a1 / and
+                                                 :op1 (s8m1 / motion
+                                                            :THEME s8g)
+                                                 :op2 (s8h1 / has_location
+                                                            :polarity -
+                                                            :THEME s8g))
+                                       :E4 (s8h2 / has_location
+                                                 :THEME s8g
+                                                 :DESTINATION s8p)
+                                       :E0 (s8d / do
+                                                :ACTION s8a))
+                :imp_output (s8a3 / arrange.RES))
+      :op2 (s8t / top-01~6
+                :ARG2 (s8m / mixture~9
+                           :consist-of (s8s / salmon~8))
+                :ARG0 s8y)
+      :mode imperative)
+
+
+# :: r-2230::step09::sent01
+# :: snt9	Garnish with pepper strips .
+(s9g / garnish-01~0
+     :ARG2 (s9s / strip~3
+                :consist-of (s9p / pepper~2))
+     :mode imperative
+     :ARG0 (s9y / you)
+     :event-structure (s9se / subevents
+                            :E1 (s9h / has_location
+                                     :THEME s9s)
+                            :E3 (s9a / and
+                                     :op1 (s9m / motion
+                                               :THEME s9s)
+                                     :op2 (s9h1 / has_location
+                                                :polarity -
+                                                :THEME s9s))
+                            :E4 (s9h2 / has_location
+                                      :THEME s9s)
+                            :E0 (s9d / do
+                                     :ACTION s9g))
+     :imp_output (s9g1 / garnish.RES))
+
+

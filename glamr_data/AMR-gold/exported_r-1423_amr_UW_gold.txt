@@ -1,0 +1,270 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1465
+export time: 9/26/2023, 9:01:23 PM
+
+# :: snt1	Cut meat into small cubes .
+# sentence level graph:
+(s1c2 / cut-01
+  :ARG1 (s1m / meat)
+  :destination (s1c / cube
+                 :mod (s1s / small))
+  :mode imperative)
+
+# alignment:s1c: 5-5
+s1c2: 1-1
+s1m: 2-2
+s1s: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Heat 1 quart water to a boil , add meat and a few of the bones and bring to a boil again .
+# sentence level graph:
+(s2a3 / and
+  :op1 (s2h / heat-01
+         :ARG1 (s2w / water
+                 :quant (s2v / volume-quantity
+                          :unit (s2q / quart)
+                          :quant 1))
+         :destination (s2b / boil))
+  :op2 (s2a / add-02
+         :ARG1 (s2a4 / and
+                 :op1 (s2m / meat)
+                 :op2 (s2b3 / bone
+                        :quant (s2f / few))))
+  :op3 (s2b4 / bring-ON-02
+         :destination (s2b2 / boil)
+         :mod (s2a2 / again))
+  :mode imperative)
+
+# alignment:s2a: 9-9
+s2a2: 22-22
+s2a3: 5-5
+s2a4: 11-11
+s2b: 7-7
+s2b2: 21-21
+s2b3: 16-16
+s2b4: 18-18
+s2f: 13-13
+s2h: 1-1
+s2m: 10-10
+s2q: 3-3
+s2v: 0-0
+s2w: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Pour water , meat and bones into a clean sink and wash well .
+# sentence level graph:
+(s3a / and
+  :op1 (s3p / pour-01
+         :ARG1 (s3a2 / and
+                 :op1 (s3w2 / water)
+                 :op2 (s3m / meat)
+                 :op3 (s3b / bone))
+         :ARG3 (s3s / sink
+                 :mod (s3c / clean)))
+  :op2 (s3w / wash-01
+         :manner (s3w3 / well))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 11-11
+s3b: 6-6
+s3c: 9-9
+s3m: 4-4
+s3p: 1-1
+s3s: 10-10
+s3w: 12-12
+s3w2: 2-2
+s3w3: 13-13
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Place meat , bones and 1 1/2 quart water into a large , clean pan , bring to the boil , skim and cook at a moderate heat for about 60 minutes .
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4p2 / place-01
+         :ARG1 (s4a3 / and
+                 :op1 (s4m / meat)
+                 :op2 (s4b2 / bone)
+                 :op3 (s4w / water
+                        :quant (s4v / volume-quantity
+                                 :quant 1.5
+                                 :unit (s4q / quart))))
+         :ARG2 (s4p / pan
+                 :mod (s4c / clean)
+                 :mod (s4l / large)))
+  :op2 (s4b / bring-ON-02
+         :destination (s4b3 / boil))
+  :op3 (s4s / skim-02)
+  :op4 (s4c2 / cook-01
+         :duration (s4a / about
+                     :op1 (s4t / temporal-quantity
+                            :quant 60
+                            :unit (s4m2 / minute)))
+         :manner (s4h / heat
+                   :mod (s4m3 / moderate)))
+  :mode imperative)
+
+# alignment:s4a: 30-30
+s4a2: 5-5
+s4a3: 23-23
+s4b: 20-20
+s4b2: 4-4
+s4c: 14-14
+s4c2: 24-24
+s4h: 28-28
+s4l: 12-12
+s4m: 2-2
+s4m2: 32-32
+s4m3: 27-27
+s4p: 15-15
+s4p2: 1-1
+s4q: 8-8
+s4s: 22-22
+s4t: 32-32
+s4v: 8-8
+s4w: 9-9
+s4b3: 20-20
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Remove bones and season to taste with salt and pepper .
+# sentence level graph:
+(s5a / and
+  :op1 (s5r / remove-01
+         :ARG1 (s5b / bone))
+  :op2 (s5s / season-01
+         :ARG2 (s5a2 / and
+                 :op1 (s5s2 / salt)
+                 :op2 (s5p / pepper))
+         :purpose (s5t / taste-01))
+  :mode imperative)
+
+# alignment:s5a: 3-3
+s5a2: 9-9
+s5b: 2-2
+s5p: 10-10
+s5r: 1-1
+s5s: 4-4
+s5t: 6-6
+s5s2: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Clean vegetables , cut into pieces and add to the pot .
+# sentence level graph:
+(s6a2 / and
+  :op1 (s6c / clean-01
+         :ARG1 (s6v2 / vegetable))
+  :op2 (s6c2 / cut-01
+         :destination (s6p / piece))
+  :op3 (s6a / add-02
+         :location (s6p2 / pot))
+  :mode imperative)
+
+# alignment:s6a: 8-8
+s6a2: 7-7
+s6c: -1--1
+s6c2: 4-4
+s6p: 6-6
+s6p2: 11-11
+s6v2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Bring to boil , skim , add rice and cook for 20 minutes , season to taste with salt and pepper if needed and add herbs to the soup just before it is served .
+# sentence level graph:
+(s7a5 / and
+  :op1 (s7b2 / bring-on-02
+         :destination (s7b3 / boil))
+  :op2 (s7s4 / skim-02)
+  :op3 (s7a / add-02
+         :ARG1 (s7r / rice))
+  :op4 (s7c / cook-01
+         :duration (s7t2 / temporal-quantity
+                     :unit (s7m / minute)
+                     :quant 20))
+  :op5 (s7s / season-01
+         :ARG2 (s7a4 / and
+                 :op1 (s7s2 / salt)
+                 :op2 (s7p / pepper))
+         :condition (s7n / need-01)
+         :purpose (s7t / taste-01))
+  :op6 (s7a2 / add-02
+         :ARG1 (s7h / herb)
+         :ARG2 (s7s5 / soup)
+         :time (s7b / before
+                 :op1 (s7s3 / serve-02)
+                 :mod (s7j / just)))
+  :mode imperative)
+
+# alignment:s7a: -1--1
+s7a2: -1--1
+s7a4: -1--1
+s7b: -1--1
+s7b2: -1--1
+s7b3: -1--1
+s7c: -1--1
+s7h: -1--1
+s7j: -1--1
+s7m: -1--1
+s7n: -1--1
+s7p: -1--1
+s7r: -1--1
+s7s: -1--1
+s7s2: -1--1
+s7s3: -1--1
+s7s4: -1--1
+s7s5: -1--1
+s7t: -1--1
+s7t2: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Cut meat into small cubes .
+Heat 1 quart water to a boil , add meat and a few of the bones and bring to a boil again .
+Pour water , meat and bones into a clean sink and wash well .
+Place meat , bones and 1 1/2 quart water into a large , clean pan , bring to the boil , skim and cook at a moderate heat for about 60 minutes .
+Remove bones and season to taste with salt and pepper .
+Clean vegetables , cut into pieces and add to the pot .
+Bring to boil , skim , add rice and cook for 20 minutes , season to taste with salt and pepper if needed and add herbs to the soup just before it is served .

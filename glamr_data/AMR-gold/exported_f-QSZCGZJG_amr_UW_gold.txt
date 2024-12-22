@@ -1,0 +1,242 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1436
+export time: 9/14/2023, 3:54:54 PM
+
+# :: snt1	Heat a sauce pan with the olive oil and add the onion , garlic and zucchini .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1h / heat-01
+         :ARG1 (s1s / saucepan)
+         :ARG2 (s1o / oil
+                 :mod (s1o2 / olive)))
+  :op2 (s1a / add-02
+         :ARG1 (s1a3 / and
+                 :op1 (s1o3 / onion)
+                 :op2 (s1g / garlic)
+                 :op3 (s1z / zucchini)))
+  :mode imperative)
+
+# alignment:s1a: 10-10
+s1a2: 9-9
+s1a3: 15-15
+s1g: 14-14
+s1h: 1-1
+s1o: 8-8
+s1o2: 7-7
+s1o3: 12-12
+s1s: 3-3
+s1z: 16-16
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Let this saute for about 1 minute .
+# sentence level graph:
+(s2l / let-01
+  :ARG1 (s2s / saute-01
+          :ARG1 (s2t2 / this)
+          :duration (s2a / about
+                      :op1 (s2t / temporal-quantity
+                             :quant 1
+                             :unit (s2m / minute))))
+  :mode imperative)
+
+# alignment:s2a: 5-5
+s2l: 1-1
+s2m: 7-7
+s2s: 3-3
+s2t: 7-7
+s2t2: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add the chicken broth , lemon juice , fresh basil and seasonings .
+# sentence level graph:
+(s3a / add-02
+  :ARG1 (s3a2 / and
+          :op1 (s3b2 / broth
+                 :mod (s3c / chicken))
+          :op2 (s3j / juice
+                 :source (s3l / lemon))
+          :op3 (s3b / basil
+                 :mod (s3f / fresh))
+          :op4 (s3s / seasoning))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 11-11
+s3b: 10-10
+s3b2: 4-4
+s3c: 3-3
+s3f: 9-9
+s3j: 7-7
+s3l: 6-6
+s3s: 12-12
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Simmer this on low until the zucchini become soft and the onion is transparent .
+# sentence level graph:
+(s4s2 / simmer-01
+  :ARG1 (s4t2 / this)
+  :manner (s4l / low)
+  :mode imperative
+  :duration (s4u / until
+              :op1 (s4a / and
+                     :op1 (s4b / become-01
+                            :ARG1 (s4z / zucchini)
+                            :ARG2 (s4s / soft))
+                     :op2 (s4t3 / transparency
+                            :domain (s4o / onion)))))
+
+# alignment:s4a: 10-10
+s4b: 8-8
+s4l: 4-4
+s4o: 12-12
+s4s: 9-9
+s4t2: 2-2
+s4t3: 14-14
+s4u: 5-5
+s4z: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	This will take about 30 - 35 minutes .
+# sentence level graph:
+(s5t / take-10
+    :ARG0 (s5t4 / this)
+    :ARG1 (s5a / about
+        :op1 (s5b / between
+            :op1 (s5t2 / temporal-quantity
+                :quant 30
+                :unit (s5m2 / minute))
+            :op2 (s5t3 / temporal-quantity
+                :quant 35
+                :unit (s5m / minute)))))
+
+
+# alignment:s5t4: 1-1
+s5b: 2-2
+s5t: 3-3
+s5a: 4-4
+s50: 5-5
+s5m: 6-6
+s51: 7-7
+s5t2: 8-8
+s5m2: 8-8
+s5t3: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Add the coconut milk with the zucchini is cooked .
+# sentence level graph:
+(s6a / add-02
+  :ARG1 (s6m / milk
+          :source (s6c / coconut))
+  :ARG2 (s6z / zucchini
+          :ARG1-of (s6c2 / cook-01))
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6c: 3-3
+s6c2: 9-9
+s6m: 4-4
+s6z: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Simmer for another minute or two and adjust the seasonings to taste .
+# sentence level graph:
+(s7a2 / and
+  :op1 (s7s2 / simmer-01
+         :duration (s7o / or
+                     :op1 (s7t2 / temporal-quantity
+                            :quant 1
+                            :unit (s7m / minute))
+                     :op2 (s7t3 / temporal-quantity
+                            :quant 2
+                            :unit (s7m2 / minute))
+                     :mod (s7a3 / another)))
+  :op2 (s7a / adjust-01
+         :ARG1 (s7s / seasoning)
+         :ARG2 (s7t / taste-01))
+  :mode imperative)
+
+# alignment:s7a: 8-8
+s7a2: 7-7
+s7a3: 3-3
+s7m: -1--1
+s7o: 5-5
+s7s: 10-10
+s7s2: 1-1
+s7t: 12-12
+s7t2: 4-4
+s7t3: 0-0
+s7m2: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Prepare the rice as directed .
+# sentence level graph:
+(s8p / prepare-02
+  :ARG1 (s8r / rice)
+  :manner (s8d / direct-01)
+  :mode imperative)
+
+# alignment:s8d: 5-5
+s8p: 1-1
+s8r: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Heat a sauce pan with the olive oil and add the onion , garlic and zucchini .
+Let this saute for about 1 minute .
+Add the chicken broth , lemon juice , fresh basil and seasonings .
+Simmer this on low until the zucchini become soft and the onion is transparent .
+This will take about 30 - 35 minutes .
+Add the coconut milk with the zucchini is cooked .
+Simmer for another minute or two and adjust the seasonings to taste .
+Prepare the rice as directed .

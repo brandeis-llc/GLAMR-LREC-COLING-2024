@@ -1,0 +1,321 @@
+# :: f-4D3H7QM3::step01::sent01
+# :: snt1	Heat the oil with the garlic in a heavy skillet over medium heat .
+(s1h / heat-01~0
+     :ARG1 (s1o2 / oil~2)
+     :ARG2 (s1s2 / skillet~9
+                 :mod (s1h4 / heavy~8)
+                 :mod (s1t / temperature-quantity
+                           :op1 (s1m2 / medium~11)))
+     :accompanier (s1g / garlic~5)
+     :mode imperative
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1c / cooked
+                                     :polarity -
+                                     :PATIENT s1g
+                                     :V_FINAL_STATE (s1h1 / heated))
+                            :E3 (s1a / apply_heat
+                                     :INSTRUMENT s1m2
+                                     :PATIENT s1g)
+                            :E4 (s1c1 / cooked
+                                      :PATIENT s1g
+                                      :V_FINAL_STATE s1h1)
+                            :E0 (s1d / do
+                                     :ACTION s1h))
+     :imp_output (s1h2 / heat.RES))
+
+
+# :: f-4D3H7QM3::step01::sent02
+# :: snt2	Cook stirring occasionally , until the garlic is golden .
+(s2c / cook-stir-00~0,1
+     :mode imperative
+     :duration (s2u2 / until~4
+                     :op1 (s2g3 / garlic~6
+                                :mod (s2g4 / golden~8)))
+     :manner (s2o / occasional~2)
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2c1 / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s2h / heat.RES)
+                                      :V_FINAL_STATE (s2c2 / cooked))
+                            :E3 (s2a / apply_heat
+                                     :IMP_PATIENT s2h)
+                            :E4 (s2a1 / and
+                                      :op1 (s2c3 / cooked
+                                                 :IMP_PATIENT s2h
+                                                 :V_FINAL_STATE s2c2)
+                                      :op2 (s2h1 / has_state
+                                                 :IMP_PATIENT s2h
+                                                 :RESULT s2g4))
+                            :E0 (s2d / do
+                                     :ACTION s2c))
+     :imp_output (s2c4 / cook.RES))
+
+
+# :: f-4D3H7QM3::step01::sent03
+# :: snt3	Remove the garlic from the skillet with a slotted spoon and transfer to a paper towel .
+(s3a / and
+     :op1 (s3r / remove-01~0
+               :ARG1 (s3g / garlic~2)
+               :ARG2 (s3s / skillet~5)
+               :instrument (s3s2 / spoon~9
+                                 :ARG1-of (s3l / Slotted-01~8))
+               :ARG0 (s3y / you)
+               :event-structure (s3se / subevents
+                                      :E1 (s3h / has_location
+                                               :THEME s3g)
+                                      :E3 (s3a1 / and
+                                                :op1 (s3m / motion
+                                                          :THEME s3g)
+                                                :op2 (s3h1 / has_location
+                                                           :polarity -
+                                                           :THEME s3g))
+                                      :E4 (s3h2 / has_location
+                                                :THEME s3g)
+                                      :E0 (s3d / do
+                                               :ACTION s3r))
+               :imp_output (s3r1 / remove.RES))
+     :op2 (s3t2 / transfer-01~11
+                :ARG1 s3g
+                :ARG2 (s3t / towel~15
+                           :consist-of (s3p / paper~14))
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3h3 / has_location
+                                                  :THEME s3g)
+                                        :E3 (s3a2 / and
+                                                  :op1 (s3m1 / motion
+                                                             :THEME s3g)
+                                                  :op2 (s3h4 / has_location
+                                                             :polarity -
+                                                             :THEME s3g))
+                                        :E4 (s3h5 / has_location
+                                                  :THEME s3g
+                                                  :?DESTINATION s3t)
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3t2))
+                :imp_output (s3t1 / transfer.RES))
+     :mode imperative)
+
+
+# :: f-4D3H7QM3::step02::sent01
+# :: snt4	Add the butter to the oil in the skillet and heat over medium heat .
+(s4a2 / and
+      :op1 (s4a3 / add-01~0
+                 :ARG1 (s4b2 / butter~2)
+                 :ARG2 (s4o3 / oil~5
+                             :location (s4s2 / skillet~8))
+                 :ARG0 (s4y / you)
+                 :event-structure (s4se / subevents
+                                        :E1 (s4t / together
+                                                 :polarity -
+                                                 :PATIENT_I s4b2
+                                                 :PATIENT_J s4o3
+                                                 :PATIENT_K s4s2)
+                                        :E3 (s4t1 / together
+                                                  :PATIENT_I s4b2
+                                                  :PATIENT_J s4o3
+                                                  :PATIENT_K s4s2)
+                                        :E0 (s4d / do
+                                                 :ACTION s4a3))
+                 :imp_output (s4a / add.RES))
+      :op2 (s4h / heat-01~10
+                :ARG1 (s4b / butter)
+                :manner (s4o2 / over~11
+                              :op1 (s4h2 / heat-01~13
+                                         :degree (s4m / medium~12)))
+                :ARG0 s4y
+                :event-structure (s4se1 / subevents
+                                        :E1 (s4c / cooked
+                                                 :polarity -
+                                                 :PATIENT s4s2
+                                                 :V_FINAL_STATE (s4h1 / heated))
+                                        :E3 (s4a1 / apply_heat
+                                                  :INSTRUMENT s4h2
+                                                  :PATIENT s4s2)
+                                        :E4 (s4a4 / and
+                                                  :op1 (s4c1 / cooked
+                                                             :PATIENT s4s2
+                                                             :V_FINAL_STATE s4h1)
+                                                  :op2 (s4h3 / has_state
+                                                             :PATIENT s4s2))
+                                        :E0 (s4d1 / do
+                                                  :ACTION s4h))
+                :imp_output (s4h4 / heat.RES))
+      :mode imperative)
+
+
+# :: f-4D3H7QM3::step02::sent02
+# :: snt5	Add the onions , salt and pepper and saute , until the onions are translucent and starting to turn golden .
+(s5a2 / and
+      :op1 (s5a / add-02~0
+                :ARG1 (s5a4 / and
+                            :op1 (s5o3 / onion~2)
+                            :op2 (s5s / salt~4)
+                            :op3 (s5p / pepper~6))
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s5o3
+                                                 :PATIENT_J s5s
+                                                 :PATIENT_K s5p)
+                                       :E3 (s5t3 / together
+                                                 :PATIENT_I s5o3
+                                                 :PATIENT_J s5s
+                                                 :PATIENT_K s5p)
+                                       :E0 (s5d / do
+                                                :ACTION s5a))
+                :imp_output (s5a1 / add.RES))
+      :op2 (s5s2 / saute-01~8
+                 :ARG1 s5a4
+                 :duration (s5u / until~10
+                                :op1 (s5t / transluscent~14
+                                          :ARG1 (s5o2 / onion~12))
+                                :op2 (s5s3 / start-01~16
+                                           :ARG0 (s5o / onion)
+                                           :ARG1 (s5t2 / turn-02~18
+                                                       :ARG1 s5o
+                                                       :ARG2 (s5g / golden~19))))
+                 :ARG0 s5y
+                 :event-structure (s5se1 / subevents
+                                         :E1 (s5c / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s5a1
+                                                  :V_FINAL_STATE (s5s1 / sauted))
+                                         :E3 (s5a3 / apply_heat
+                                                   :IMP_PATIENT s5a1)
+                                         :E4 (s5a5 / and
+                                                   :op1 (s5c1 / cooked
+                                                              :IMP_PATIENT s5a1
+                                                              :V_FINAL_STATE s5s1)
+                                                   :op2 (s5h / has_state
+                                                             :IMP_PATIENT s5a1
+                                                             :RESULT s5g))
+                                         :E0 (s5d1 / do
+                                                   :ACTION s5s2))
+                 :imp_output (s5s4 / saute.RES)))
+
+
+# :: f-4D3H7QM3::step03::sent01
+# :: snt6	Add the beans and continue cooking stirring occasionally .
+(s6a2 / and~3
+      :op1 (s6a / add-02~0
+                :ARG1 (s6b / bean~2)
+                :ARG0 (s6y / you)
+                :event-structure (s6se / subevents
+                                       :E1 (s6t / together
+                                                :polarity -
+                                                :PATIENT_I s6b)
+                                       :E3 (s6t1 / together
+                                                 :PATIENT_I s6b)
+                                       :E0 (s6d / do
+                                                :ACTION s6a))
+                :imp_output (s6a1 / add.RES))
+      :op2 (s6c / continue-01~4
+                :ARG1 (s6c2 / cook-stir-00~5,6
+                            :ARG0 s6y
+                            :event-structure (s6se1 / subevents
+                                                    :E1 (s6c1 / cooked
+                                                              :polarity -
+                                                              :IMP_PATIENT s6a1
+                                                              :V_FINAL_STATE (s6c3 / cooked))
+                                                    :E3 (s6a3 / apply_heat
+                                                              :IMP_PATIENT s6a1)
+                                                    :E4 (s6c4 / cooked
+                                                              :IMP_PATIENT s6a1
+                                                              :V_FINAL_STATE s6c3)
+                                                    :E0 (s6d1 / do
+                                                              :ACTION s6c2))
+                            :imp_output (s6c5 / cook.RES))
+                :manner (s6o / occasional~7))
+      :mode imperative)
+
+
+# :: f-4D3H7QM3::step03::sent02
+# :: snt7	Stir in both vinegars and season with salt and pepper to taste .
+(s7a / and~4
+     :op1 (s7s3 / stir-02~0
+                :ARG1 (s7v / vinegar~3
+                           :mod (s7b / both~2))
+                :ARG0 (s7y / you)
+                :event-structure (s7se / subevents
+                                       :E1 (s7h / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT s7v
+                                                :V_STATE (s7s1 / stirred))
+                                       :E3 (s7h1 / has_material_integrity_state
+                                                 :PATIENT s7v
+                                                 :V_STATE s7s1)
+                                       :E0 (s7d / do
+                                                :ACTION s7s3))
+                :imp_output (s7s4 / stir.RES))
+     :op2 (s7s2 / season-01~5
+                :ARG1 (s7a2 / and
+                            :op1 (s7s / salt~7)
+                            :op2 (s7p / pepper~9))
+                :purpose (s7t / taste-01~11)
+                :ARG0 s7y
+                :event-structure (s7se1 / subevents
+                                        :E1 (s7h2 / has_location
+                                                  :IMP_THEME s7s4)
+                                        :E3 (s7a1 / and
+                                                  :op1 (s7m / motion
+                                                            :IMP_THEME s7s4)
+                                                  :op2 (s7h3 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s7s4))
+                                        :E4 (s7h4 / has_location
+                                                  :IMP_THEME s7s4)
+                                        :E0 (s7d1 / do
+                                                  :ACTION s7s2))
+                :imp_output (s7s5 / season.RES))
+     :mode imperative)
+
+
+# :: f-4D3H7QM3::step04::sent01
+# :: snt8	Transfer the beans to a serving dish and sprinkle with the garlic chips .
+(s8a / and
+     :op1 (s8t / transfer-01~0
+               :ARG1 (s8b / bean~2)
+               :ARG2 (s8d / dish~6
+                          :ARG2-of (s8s / serve-02~5))
+               :ARG0 (s8y / you)
+               :event-structure (s8se / subevents
+                                      :E1 (s8h / has_location
+                                               :THEME s8b)
+                                      :E3 (s8a1 / and
+                                                :op1 (s8m / motion
+                                                          :THEME s8b)
+                                                :op2 (s8h1 / has_location
+                                                           :polarity -
+                                                           :THEME s8b))
+                                      :E4 (s8h2 / has_location
+                                                :THEME s8b
+                                                :DESTINATION s8d)
+                                      :E0 (s8d1 / do
+                                                :ACTION s8t))
+               :imp_output (s8t1 / transfer.RES))
+     :op2 (s8s2 / sprinkle-01~8
+                :ARG1 (s8c / chips~12
+                           :consist-of (s8g / garlic~11))
+                :ARG2 s8d
+                :ARG0 s8y
+                :event-structure (s8se1 / subevents
+                                        :E1 (s8h3 / has_location
+                                                  :THEME s8c)
+                                        :E3 (s8a2 / and
+                                                  :op1 (s8m1 / motion
+                                                             :THEME s8c)
+                                                  :op2 (s8h4 / has_location
+                                                             :polarity -
+                                                             :THEME s8c))
+                                        :E4 (s8h5 / has_location
+                                                  :THEME s8c
+                                                  :DESTINATION s8d)
+                                        :E0 (s8d2 / do
+                                                  :ACTION s8s2))
+                :imp_output (s8s1 / sprinkle.RES)))
+
+

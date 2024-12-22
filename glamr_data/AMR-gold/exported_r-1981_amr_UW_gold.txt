@@ -1,0 +1,114 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1478
+export time: 9/30/2023, 9:26:19 PM
+
+# :: snt1	Melt butter in pan , add dill and stir gently over low heat for a few minutes .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1m / melt-01
+         :ARG1 (s1b / butter)
+         :location (s1p / pan))
+  :op2 (s1a / add-02
+         :ARG1 (s1d / dill))
+  :op3 (s1s / stir-01
+         :duration (s1f / few
+                     :op1 (s1t / temporal-quantity
+                            :quant 1
+                            :unit (s1m2 / minute)))
+         :manner (s1h / heat
+                   :mod (s1l / low))
+         :manner (s1g / gentle))
+  :mode imperative)
+
+# alignment:s1a: 6-6
+s1a2: 8-8
+s1b: 2-2
+s1d: 7-7
+s1f: 16-16
+s1g: 11-11
+s1h: 13-13
+s1l: 12-12
+s1m: 1-1
+s1m2: 17-17
+s1p: 4-4
+s1s: 9-9
+s1t: 17-17
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Heat stock and add the dill to it .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2h / heat-01
+         :ARG1 (s2s / stock))
+  :op2 (s2a / add-02
+         :ARG1 (s2d / dill)
+         :ARG2 s2s)
+  :mode imperative)
+
+# alignment:s2a: 4-4
+s2a2: 3-3
+s2d: 6-6
+s2h: 1-1
+s2s: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Mix in the lemon juice and cream .
+# sentence level graph:
+(s3m / mix-01
+  :ARG1 (s3a / and
+          :op1 (s3j / juice
+                 :source (s3l / lemon))
+          :op2 (s3c / cream))
+  :mode imperative)
+
+# alignment:s3a: 6-6
+s3c: 7-7
+s3j: 5-5
+s3l: 4-4
+s3m: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Season and serve .
+# sentence level graph:
+(s4a / and
+  :op1 (s4s / season-01)
+  :op2 (s4s2 / serve-02)
+  :mode imperative)
+
+# alignment:s4a: 2-2
+s4s: 1-1
+s4s2: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Melt butter in pan , add dill and stir gently over low heat for a few minutes .
+Heat stock and add the dill to it .
+Mix in the lemon juice and cream .
+Season and serve .

@@ -1,0 +1,350 @@
+# :: r-324::step01::sent01
+# :: snt1	Heat oil in a skillet , add chicken and brown on both sides , 3 - 5 minutes per side , remove .
+(s1a3 / and~8
+      :op1 (s1h / heat-01~0
+                :ARG1 (s1o / oil~1)
+                :location (s1s3 / skillet~4)
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1c1 / cooked
+                                                 :polarity -
+                                                 :PATIENT s1o
+                                                 :V_FINAL_STATE (s1h1 / heated))
+                                       :E3 (s1a1 / apply_heat
+                                                 :PATIENT s1o)
+                                       :E4 (s1c2 / cooked
+                                                 :PATIENT s1o
+                                                 :V_FINAL_STATE s1h1)
+                                       :E0 (s1d / do
+                                                :ACTION s1h))
+                :imp_output (s1h2 / heat.RES))
+      :op2 (s1a / add-02~6
+                :ARG1 (s1c / chicken~7)
+                :ARG0 s1y
+                :event-structure (s1se1 / subevents
+                                        :E1 (s1t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s1c)
+                                        :E3 (s1t3 / together
+                                                  :PATIENT_I s1c)
+                                        :E0 (s1d1 / do
+                                                  :ACTION s1a))
+                :imp_output (s1a2 / add.RES))
+      :op3 (s1b3 / brown-01~9
+                 :location (s1s / side~12
+                                :mod (s1b2 / both~11))
+                 :manner (s1r / rate-entity-91
+                              :ARG1 (s1b4 / between
+                                          :op1 (s1t2 / temporal-quantity
+                                                     :unit (s1m2 / minute)
+                                                     :quant 3)
+                                          :op2 (s1t / temporal-quantity
+                                                    :unit (s1m / minute~17)
+                                                    :quant 5))
+                              :ARG2 (s1s2 / side~19
+                                          :mod (s1b / both)))
+                 :ARG0 s1y
+                 :event-structure (s1se2 / subevents
+                                         :E1 (s1c3 / cooked
+                                                   :polarity -
+                                                   :PATIENT s1c
+                                                   :V_FINAL_STATE (s1b1 / browned))
+                                         :E3 (s1a4 / apply_heat
+                                                   :PATIENT s1c)
+                                         :E4 (s1c4 / cooked
+                                                   :PATIENT s1c
+                                                   :V_FINAL_STATE s1b1)
+                                         :E0 (s1d2 / do
+                                                   :ACTION s1b3))
+                 :imp_output (s1b5 / brown.RES))
+      :op4 (s1r2 / remove-01~21
+                 :ARG0 s1y
+                 :event-structure (s1se3 / subevents
+                                         :E1 (s1h3 / has_location)
+                                         :E3 (s1a5 / and
+                                                   :op1 (s1m1 / motion
+                                                              :IMP_THEME s1b5)
+                                                   :op2 (s1h4 / has_location
+                                                              :polarity -
+                                                              :IMP_THEME s1b5))
+                                         :E4 (s1h5 / has_location
+                                                   :IMP_THEME s1b5)
+                                         :E0 (s1d3 / do
+                                                   :ACTION s1r2))
+                 :imp_outputI (s1r1 / remove.RES)
+                 :imp_outputJ (s1r3 / remove.RES))
+      :mode imperative)
+
+
+# :: r-324::step02::sent01
+# :: snt2	Add onions and garlic to pan , cook for 2 minutes .
+(s2a2 / and
+      :op1 (s2a / add-02~0
+                :ARG1 (s2a3 / and~2
+                            :op1 (s2o / onion~1)
+                            :op2 (s2g / garlic~3))
+                :ARG2 (s2p / pan~5)
+                :ARG0 (s2y / you)
+                :event-structure (s2se / subevents
+                                       :E1 (s2t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s2o
+                                                 :PATIENT_J s2g
+                                                 :PATIENT_K s2p)
+                                       :E3 (s2t2 / together
+                                                 :PATIENT_I s2o
+                                                 :PATIENT_J s2g
+                                                 :PATIENT_K s2p)
+                                       :E0 (s2d / do
+                                                :ACTION s2a))
+                :imp_output (s2a1 / add.RES))
+      :op2 (s2c / cook-01~7
+                :duration (s2t / temporal-quantity
+                               :quant 2
+                               :unit (s2m / minute~10))
+                :ARG0 s2y
+                :event-structure (s2se1 / subevents
+                                        :E1 (s2c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s2a1
+                                                  :V_FINAL_STATE (s2c2 / cooked))
+                                        :E3 (s2a4 / apply_heat
+                                                  :IMP_PATIENT s2a1)
+                                        :E4 (s2c3 / cooked
+                                                  :IMP_PATIENT s2a1
+                                                  :V_FINAL_STATE s2c2)
+                                        :E0 (s2d1 / do
+                                                  :ACTION s2c))
+                :imp_output (s2c4 / cook.RES))
+      :mode imperative)
+
+
+# :: r-324::step03::sent01
+# :: snt3	Add walnuts , cook for 1 minute .
+(s3a2 / and
+      :op1 (s3a / add-02~0
+                :ARG1 (s3w / walnut~1)
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s3w)
+                                       :E3 (s3t2 / together
+                                                 :PATIENT_I s3w)
+                                       :E0 (s3d / do
+                                                :ACTION s3a))
+                :imp_output (s3a1 / add.RES))
+      :op2 (s3c / cook-01~3
+                :duration (s3t / temporal-quantity
+                               :quant 1
+                               :unit (s3m / minute~6))
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s3a1
+                                                  :V_FINAL_STATE (s3c2 / cooked))
+                                        :E3 (s3a3 / apply_heat
+                                                  :IMP_PATIENT s3a1)
+                                        :E4 (s3c3 / cooked
+                                                  :IMP_PATIENT s3a1
+                                                  :V_FINAL_STATE s3c2)
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3c))
+                :imp_output (s3c4 / cook.RES))
+      :mode imperative)
+
+
+# :: r-324::step04::sent01
+# :: snt4	Add flour , cinnamon , red pepper flakes , stirring .
+(s4a / and
+     :op1 (s4a3 / add-02~0
+                :ARG1 (s4a2 / and
+                            :op1 (s4f2 / flour~1)
+                            :op2 (s4c / cinnamon~3)
+                            :op3 (s4f / flake~7
+                                      :consist-of (s4p / pepper~6
+                                                       :mod (s4r / red~5))))
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4t / together
+                                                :polarity -
+                                                :PATIENT_I s4f2
+                                                :PATIENT_J s4c
+                                                :PATIENT_K s4f)
+                                       :E3 (s4t1 / together
+                                                 :PATIENT_I s4f2
+                                                 :PATIENT_J s4c
+                                                 :PATIENT_K s4f)
+                                       :E0 (s4d / do
+                                                :ACTION s4a3))
+                :imp_output (s4a1 / add.RES))
+     :op2 (s4s / stir-01~9
+               :ARG0 s4y
+               :event-structure (s4se1 / subevents
+                                       :E1 (s4h / has_material_integrity_state
+                                                :polarity -
+                                                :IMP_PATIENT s4a1
+                                                :V_STATE (s4s1 / stirred))
+                                       :E3 (s4h1 / has_material_integrity_state
+                                                 :IMP_PATIENT s4a1
+                                                 :V_STATE s4s1)
+                                       :E0 (s4d1 / do
+                                                 :ACTION s4s))
+               :imp_output (s4s2 / stir.RES))
+     :mode imperative)
+
+
+# :: r-324::step05::sent01
+# :: snt5	Add broth , stir to mix well .
+(s5a2 / and
+      :op1 (s5a / add-02~0
+                :ARG1 (s5b / broth~1)
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5t / together
+                                                :polarity -
+                                                :PATIENT_I s5b)
+                                       :E3 (s5t1 / together
+                                                 :PATIENT_I s5b)
+                                       :E0 (s5d / do
+                                                :ACTION s5a))
+                :imp_output (s5a1 / add.RES))
+      :op2 (s5s / stir-01~3
+                :purpose (s5m / mix-01~5
+                              :manner (s5w / well~6))
+                :ARG0 s5y
+                :event-structure (s5se1 / subevents
+                                        :E1 (s5h / has_material_integrity_state
+                                                 :polarity -
+                                                 :IMP_PATIENT s5a1
+                                                 :V_STATE (s5s1 / stirred))
+                                        :E3 (s5h1 / has_material_integrity_state
+                                                  :IMP_PATIENT s5a1
+                                                  :V_STATE s5s1)
+                                        :E0 (s5d1 / do
+                                                  :ACTION s5s))
+                :imp_output (s5s2 / stir.RES))
+      :mode imperative)
+
+
+# :: r-324::step06::sent01
+# :: snt6	Return chicken to pan , cover , simmer 15 minutes until chicken is cooked through and sauce thickens .
+(s6a / and
+     :op1 (s6r / return-03~0
+               :ARG1 (s6c / chicken~1,11)
+               :ARG2 (s6p / pan~3)
+               :ARG0 (s6y / you)
+               :event-structure (s6se / subevents
+                                      :E1 (s6h / has_location
+                                               :THEME s6c)
+                                      :E3 (s6a1 / and
+                                                :op1 (s6m1 / motion
+                                                           :THEME s6c)
+                                                :op2 (s6h1 / has_location
+                                                           :polarity -
+                                                           :THEME s6c))
+                                      :E4 (s6h2 / has_location
+                                                :THEME s6c
+                                                :DESTINATION s6p)
+                                      :E0 (s6d / do
+                                               :ACTION s6r))
+               :imp_output (s6r1 / return.RES))
+     :op2 (s6c3 / cover-02~5
+                :ARG0 s6y
+                :event-structure (s6se1 / subevents
+                                        :E1 (s6h3 / has_location
+                                                  :IMP_THEME s6r1)
+                                        :E3 (s6a3 / and
+                                                  :op1 (s6m2 / motion
+                                                             :IMP_THEME s6r1)
+                                                  :op2 (s6h4 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s6r1))
+                                        :E4 (s6h5 / has_location
+                                                  :IMP_THEME s6r1)
+                                        :E0 (s6d1 / do
+                                                  :ACTION s6c3))
+                :imp_output (s6c1 / cover.RES))
+     :op3 (s6s2 / simmer-01~7
+                :duration (s6t / temporal-quantity
+                               :quant 15
+                               :unit (s6m / minute~9))
+                :duration (s6u / until~10
+                               :op1 (s6a2 / and~15
+                                          :op1 (s6c2 / cook-01~13
+                                                     :ARG1 s6c
+                                                     :manner (s6t3 / through~14))
+                                          :op2 (s6t2 / thicken-01~17
+                                                     :ARG1 (s6s / sauce~16))))
+                :ARG0 s6y
+                :event-structure (s6se2 / subevents
+                                        :E1 (s6c4 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s6c1
+                                                  :V_FINAL_STATE (s6s1 / simmered))
+                                        :E3 (s6a4 / apply_heat
+                                                  :IMP_PATIENT s6c1)
+                                        :E4 (s6a5 / and
+                                                  :op1 (s6c5 / cooked
+                                                             :IMP_PATIENT s6c1
+                                                             :V_FINAL_STATE s6s1)
+                                                  :op2 (s6h6 / has_state
+                                                             :IMP_PATIENT s6c1
+                                                             :RESULT s6t2))
+                                        :E0 (s6d2 / do
+                                                  :ACTION s6s2))
+                :imp_output (s6s3 / simmer.RES))
+     :mode imperative)
+
+
+# :: r-324::step07::sent01
+# :: snt7	Stir in parsley , salt , pepper , vinegar .
+(s7s2 / stir-01~0
+      :ARG1 (s7a / and
+                 :op1 (s7p / parsley~2)
+                 :op2 (s7s / salt~4)
+                 :op3 (s7p2 / pepper~6)
+                 :op4 (s7v / vinegar~8))
+      :mode imperative
+      :ARG0 (s7y / you)
+      :event-structure (s7se / subevents
+                             :E1 (s7h / has_material_integrity_state
+                                      :polarity -
+                                      :PATIENT s7v
+                                      :V_STATE (s7s1 / stirred))
+                             :E3 (s7h1 / has_material_integrity_state
+                                       :PATIENT s7v
+                                       :V_STATE s7s1)
+                             :E0 (s7d / do
+                                      :ACTION s7s2))
+      :imp_output (s7s3 / stir.RES))
+
+
+# :: r-324::step08::sent01
+# :: snt8	Serve over rice .
+(s8s / serve-02~0
+     :mode imperative
+     :location (s8o / over~1
+                    :op1 (s8r / rice~2))
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8a / and
+                                     :op1 (s8h / has_possession
+                                               :IMP_THEME (s8s1 / stir.RES))
+                                     :op2 (s8h1 / has_possession
+                                                :polarity -
+                                                :IMP_THEME s8s1))
+                            :E2 (s8t / transfer
+                                     :IMP_THEME s8s1)
+                            :E3 (s8a1 / and
+                                      :op1 (s8h2 / has_possession
+                                                 :IMP_THEME s8s1)
+                                      :op2 (s8h3 / has_possession
+                                                 :polarity -
+                                                 :IMP_THEME s8s1))
+                            :E0 (s8d / do
+                                     :ACTION s8s))
+     :imp_output (s8s2 / serve.RES))
+
+

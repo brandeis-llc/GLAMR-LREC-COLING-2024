@@ -1,0 +1,208 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1258
+export time: 4/3/2023, 4:22:25 PM
+
+# :: snt1	Beat eggs until thick and creamy .
+# sentence level graph:
+(s1b / beat-06
+  :ARG1 (s1e / egg)
+  :duration (s1u / until
+              :op1 (s1a / and
+                     :op1 (s1t / thick-03
+                            :ARG1 s1e)
+                     :op2 (s1c / creamy
+                            :domain s1e)))
+  :mode imperative)
+
+# alignment:s1a: 5-5
+s1b: 1-1
+s1c: 6-6
+s1e: 2-2
+s1t: 4-4
+s1u: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Gradually add sugar .
+# sentence level graph:
+(s2a / add-02
+  :ARG1 (s2s / sugar)
+  :manner (s2g / gradual)
+  :mode imperative)
+
+# alignment:s2a: 2-2
+s2g: 1-1
+s2s: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Continue beating until sugar completely dissolved .
+# sentence level graph:
+(s3c2 / continue-01
+  :ARG1 (s3b / beat-06)
+  :time (s3u / until
+          :op1 (s3d2 / dissolve-01
+                 :ARG1 (s3s3 / sugar-01)
+                 :degree (s3c / complete-02)))
+  :mode imperative)
+
+# alignment:s3b: 2-2
+s3c: 5-5
+s3c2: 1-1
+s3d2: 6-6
+s3s3: 4-4
+s3u: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Fold in sifted self rising flour and cornflour , then combined water and butter .
+# sentence level graph:
+(s4a / and
+  :op1 (s4f2 / fold-03
+         :ARG1 (s4c2 / cornflour
+                 :ARG1-of (s4s2 / sift-01))
+         :ARG2 (s4s / self-rising-flour
+                 :ARG1-of (s4s4 / sift-01)))
+  :op2 (s4c / combine-01
+         :ARG1 (s4w / water)
+         :ARG2 (s4b / butter)
+         :time (s4t / then))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4b: 14-14
+s4c: 11-11
+s4c2: 8-8
+s4f2: 2-2
+s4s2: 3-3
+s4t: 10-10
+s4w: 12-12
+s4s: 4-6
+s4s4: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Pour mixture into prepared lamington tins 18 cm x 28 cm ( 7 in x 11 in ) .
+# sentence level graph:
+(s5p / pour-01
+  :ARG1 (s5m / mixture)
+  :ARG3 (s5t2 / tin-01
+          :ARG1-of (s5p5 / prepare-01)
+          :extent (s5p4 / product-of
+                    :op1 (s5d4 / distance-quantity
+                           :unit (s5c4 / centimeter)
+                           :quant 18)
+                    :op2 (s5d3 / distance-quantity
+                           :unit (s5c3 / centimeter)
+                           :quant 28))
+          :mod (s5l2 / lamington))
+  :mode imperative)
+
+# alignment:s5c3: -1--1
+s5c4: -1--1
+s5d3: -1--1
+s5d4: -1--1
+s5l2: 0-0
+s5m: 2-2
+s5p: 1-1
+s5p4: 0-0
+s5p5: 0-0
+s5t2: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Bake in moderate oven approximately 30 minutes .
+# sentence level graph:
+(s6b / bake-01
+  :location (s6o / oven
+              :ARG1-of (s6m2 / moderate-01))
+  :duration (s6t2 / temporal-quantity
+              :quant (s6a2 / approximately
+                       :op1 30)
+              :unit (s6m / minutes))
+  :mode imperative)
+
+# alignment:s6a2: 5-5
+s6b: 1-1
+s6m: 7-7
+s6m2: 3-3
+s6o: 4-4
+s6t2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Let cake stand in pan for 5 minutes before turning out onto wire rack .
+# sentence level graph:
+(s7l / let-01
+  :ARG1 (s7s / stand-01
+          :ARG1 (s7c / cake)
+          :ARG2 (s7p / pan)
+          :duration (s7t / temporal-quantity
+                      :quant 5
+                      :unit (s7m / minute))
+          :time (s7b / before
+                  :op1 (s7t2 / turn-out-11
+                         :ARG1 s7c
+                         :location (s7r / rack
+                                     :mod (s7w / wire)))))
+  :mode imperative)
+
+# alignment:s7b: 9-9
+s7c: 2-2
+s7l: 1-1
+s7m: 8-8
+s7p: 5-5
+s7r: 14-14
+s7s: 3-3
+s7t: 8-8
+s7t2: 10-10
+s7w: 13-13
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Beat eggs until thick and creamy .
+Gradually add sugar .
+Continue beating until sugar completely dissolved .
+Fold in sifted self rising flour and cornflour , then combined water and butter .
+Pour mixture into prepared lamington tins 18 cm x 28 cm ( 7 in x 11 in ) .
+Bake in moderate oven approximately 30 minutes .
+Let cake stand in pan for 5 minutes before turning out onto wire rack .

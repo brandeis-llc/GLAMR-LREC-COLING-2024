@@ -1,0 +1,85 @@
+# :: r-2230::step01::sent01
+# :: snt1	In a large bowl , combine lemon juice and mustard ; whisk until blended .
+(s1 / sentence
+    :coref ((s1l2 :aggregation s1c2)
+			(s1c2 :cut s1w1)
+			(s1m :aggregation s1c2)))
+
+
+# :: r-2230::step02::sent01
+# :: snt2	Add olive oil in a thin , steady stream , whisking constantly until smooth .
+(s2 / sentence
+    :coref ((s1w1 :aggregation s2a1)
+			(s2a1 :cut s2w1)
+			(s1c2 :aggregation s2a1)
+			(s2o2 :aggregation s2a1)))
+
+
+# :: r-2230::step03::sent01
+# :: snt3	Add green beans , tomatoes , shallot , basil , and parsley .
+(s3 / sentence
+    :coref ((s2w1 :aggregation s3a1)
+			(s2a1 :aggregation s3a1)
+			(s3g :aggregation s3a1)
+			(s3t :aggregation s3a1)
+			(s3s :aggregation s3a1)
+			(s3b :aggregation s3a1)
+			(s3p :aggregation s3a1)))
+
+
+# :: r-2230::step04::sent01
+# :: snt4	Toss to coat .
+(s4 / sentence
+    :coref ((s3a1 :cut s4t1)
+			(s2a1 :cut s4t1)))
+
+
+# :: r-2230::step05::sent01
+# :: snt5	Season with salt and pepper to taste .
+(s5 / sentence
+    :coref ((s4t1 :aggregation s5s1)
+			(s3a1 :aggregation s5s1)
+			(s5s :aggregation s5s1)
+			(s5p :aggregation s5s1)))
+
+
+# :: r-2230::step06::sent01
+# :: snt6	Cut salmon into 1-inch cubes ; add to salad .
+(s6 / sentence
+    :coref ((s5s1 :aggregation s6a1)
+			(s4t1 :aggregation s6a1)
+			(s3a1 :aggregation s6a1)
+			(s6s2 :cut s6c3)
+			(s6c3 :aggregation s6a1)))
+
+
+# :: r-2230::step07::sent01
+# :: snt7	Toss gently to coat .
+(s7 / sentence
+    :coref ((s6a1 :cut s7t1)
+			(s5s1 :cut s7t1)
+			(s3a1 :cut s7t1)))
+
+
+# :: r-2230::step08::sent01
+# :: snt8	Arrange greens on serving plates ; top with salmon mixture .
+(s8 / sentence
+    :coref ((s7t1 :aggregation s8t)
+			(s6a1 :aggregation s8t)
+			(s3a1 :aggregation s8t)
+			(s5s1 :aggregation s8t)
+			(s8g :cut s8a3)
+			(s8a3 :aggregation s8t)))
+
+
+# :: r-2230::step09::sent01
+# :: snt9	Garnish with pepper strips .
+(s9 / sentence
+    :coref ((s8t :aggregation s9g1)
+			(s7t1 :aggregation s9g1)
+			(s6a1 :aggregation s9g1)
+			(s3a1 :aggregation s9g1)
+			(s5s1 :aggregation s9g1)
+			(s9p :aggregation s9g1)))
+
+

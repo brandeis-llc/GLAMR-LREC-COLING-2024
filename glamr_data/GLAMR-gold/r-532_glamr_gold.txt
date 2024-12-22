@@ -1,0 +1,138 @@
+# :: r-532::step01::sent01
+# :: snt1	Mix together first 4 ingredients .
+(s1m / mix-01~0
+     :ARG1 (s1i / ingredient~4
+                :quant 4
+                :ord (s1o / ordinal-entity
+                          :value 1))
+     :manner (s1t / together~1)
+     :mode imperative
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1a / and
+                                     :op1 (s1m1 / mingled
+                                                :polarity -
+                                                :PATIENT_I s1i)
+                                     :op2 (s1h / has_material_integrity_state
+                                               :polarity -
+                                               :PATIENT_I s1i
+                                               :V_STATE (s1m2 / mixed))
+                                     :op3 (s1h1 / has_material_integrity_state
+                                                :polarity -
+                                                :V_STATE s1m2
+                                                :PATIENT_I s1i))
+                            :E3 (s1a1 / and
+                                      :op1 (s1m3 / mingled
+                                                 :PATIENT_I s1i)
+                                      :op2 (s1h2 / has_material_integrity_state
+                                                 :PATIENT_I s1i
+                                                 :V_STATE s1m2)
+                                      :op3 (s1h3 / has_material_integrity_state
+                                                 :V_STATE s1m2
+                                                 :PATIENT_I s1i))
+                            :E0 (s1d / do
+                                     :ACTION s1m))
+     :imp_output (s1m4 / mix.RES))
+
+
+# :: r-532::step02::sent01
+# :: snt2	Spread evenly on toast rounds .
+(s2s / spread-01~0
+     :ARG2 (s2r / round~4
+                :mod (s2t / toast-01~3))
+     :ARG1-of (s2e / even-02~1)
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2h / has_location
+                                     :IMP_THEME (s2m / mix.RES))
+                            :E3 (s2a / and
+                                     :op1 (s2m1 / motion
+                                                :IMP_THEME s2m)
+                                     :op2 (s2h1 / has_location
+                                                :polarity -
+                                                :IMP_THEME s2m))
+                            :E4 (s2h2 / has_location
+                                      :IMP_THEME s2m
+                                      :DESTINATION s2r)
+                            :E0 (s2d / do
+                                     :ACTION s2s))
+     :imp_output (s2s1 / spread.RES))
+
+
+# :: r-532::step03::sent01
+# :: snt3	Place on baking sheet , and broil 2 minutes or until Cheese melts .
+(s3a / and~5
+     :op1 (s3p / place-01~0
+               :ARG2 (s3s / sheet~3
+                          :purpose (s3b / bake-01~2))
+               :ARG0 (s3y / you)
+               :event-structure (s3se / subevents
+                                      :E1 (s3h / has_location)
+                                      :E3 (s3a1 / and
+                                                :op1 (s3m1 / motion
+                                                           :IMP_THEME (s3s1 / spread.RES))
+                                                :op2 (s3h1 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME s3s1))
+                                      :E4 (s3h2 / has_location
+                                                :IMP_THEME s3s1
+                                                :DESTINATION s3s)
+                                      :E0 (s3d / do
+                                               :ACTION s3p))
+               :imp_output (s3p1 / place.RES))
+     :op2 (s3b2 / broil-01~6
+                :duration (s3o / or
+                               :op1 (s3t / temporal-quantity
+                                         :unit (s3m2 / minute~8)
+                                         :quant 2)
+                               :op2 (s3u / until~10
+                                         :op1 (s3m / melt-01~12
+                                                   :ARG1 (s3c / cheese~11))))
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s3p1
+                                                  :V_FINAL_STATE (s3b1 / broiled))
+                                        :E3 (s3a2 / apply_heat
+                                                  :IMP_PATIENT s3p1)
+                                        :E4 (s3a3 / and
+                                                  :op1 (s3c2 / cooked
+                                                             :IMP_PATIENT s3p1
+                                                             :V_FINAL_STATE s3b1)
+                                                  :op2 (s3h3 / has_state
+                                                             :IMP_PATIENT s3p1
+                                                             :RESULT s3m))
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3b2))
+                :imp_output (s3b3 / broil.RES))
+     :mode imperative)
+
+
+# :: r-532::step04::sent01
+# :: snt4	Serve hot .
+(s4s / serve-02~0
+     :manner (s4h / hot~1)
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4a / and
+                                     :op1 (s4h1 / has_possession
+                                                :IMP_THEME (s4b / broil.RES))
+                                     :op2 (s4h2 / has_possession
+                                                :polarity -
+                                                :IMP_THEME s4b))
+                            :E2 (s4t / transfer
+                                     :IMP_THEME s4b)
+                            :E3 (s4a1 / and
+                                      :op1 (s4h3 / has_possession
+                                                 :IMP_THEME s4b)
+                                      :op2 (s4h4 / has_possession
+                                                 :polarity -
+                                                 :IMP_THEME s4b))
+                            :E0 (s4d / do
+                                     :ACTION s4s))
+     :imp_output (s4s1 / serve.RES))
+
+

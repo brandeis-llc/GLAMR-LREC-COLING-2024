@@ -1,0 +1,57 @@
+# :: r-23::step01::sent01
+# :: snt1	Beat eggs until thick and creamy .
+(s1 / sentence
+    :coref ((s1e :cut s1b2)))
+
+
+# :: r-23::step02::sent01
+# :: snt2	Gradually add sugar .
+(s2 / sentence
+    :coref ((s1b2 :aggregation s2a1)
+			(s2s :aggregation s2a1)))
+
+
+# :: r-23::step03::sent01
+# :: snt3	Continue beating until sugar completely dissolved .
+(s3 / sentence
+    :coref ((s2a1 :cut s3b2)))
+
+
+# :: r-23::step04::sent01
+# :: snt4	Fold in sifted self rising flour and cornflour , then combined water and butter .
+(s4 / sentence
+    :coref ((s3b2 :aggregation s4f)
+			(s4f :aggregation s4c)
+			(s2a1 :aggregation s4f)
+			(s4s :aggregation s4f)
+			(s4c2 :aggregation s4f)
+			(s4w :aggregation s4c)
+			(s4b :aggregation s4c)))
+
+
+# :: r-23::step05::sent01
+# :: snt5	Pour mixture into prepared lamington tins 18 cm x 28 cm ( 7 in x 11 in ) .
+(s5 / sentence
+    :coref ((s4c :cut s5p1)
+			(s4f :cut s5p1)))
+
+
+# :: r-23::step06::sent01
+# :: snt6	Bake in moderate oven approximately 30 minutes .
+(s6 / sentence
+    :coref ((s5p1 :cut s6b2)
+			(s4f :cut s6b2)
+			(s4c :cut s6b2)))
+
+
+# :: r-23::step07::sent01
+# :: snt7	Let cake stand in pan for 5 minutes before turning out onto wire rack .
+(s7 / sentence
+    :coref ((s6b2 :cut s7s2)
+			(s7s2 :cut s7t1)
+			(s5p1 :cut s7s2)
+			(s6b2 :cut s7t1)
+			(s4f :cut s7s2)
+			(s4c :cut s7s2)))
+
+

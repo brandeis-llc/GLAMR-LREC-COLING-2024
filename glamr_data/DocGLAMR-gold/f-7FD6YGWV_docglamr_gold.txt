@@ -1,0 +1,88 @@
+# :: f-7FD6YGWV::step01::sent01
+# :: snt1	Preheat oven to 350 degrees F and line a cookie sheet with parchment paper .
+(s1 / sentence)
+
+
+# :: f-7FD6YGWV::step02::sent01
+# :: snt2	Put the cake flour , sugar , coffee , walnuts , and salt in a food processor and process for about 10 seconds ( or until the walnuts are well grounded ) .
+(s2 / sentence
+    :coref ((s2c :aggregation s2p1)
+			(s2p1 :cut s2p5)
+			(s2s3 :aggregation s2p1)
+			(s2c2 :aggregation s2p1)
+			(s2w :aggregation s2p1)
+			(s2s :aggregation s2p1)))
+
+
+# :: f-7FD6YGWV::step03::sent01
+# :: snt3	Now put the mixture into a mixing bowl and add canola oil .
+(s3 / sentence
+    :coref ((s2p5 :cut s3p1)
+			(s3p1 :aggregation s3a3)
+			(s3a3 :cut s3n)
+			(s3n :cut s3m2)
+			(s3m2 :aggregation s3n)
+			(s3n :aggregation s3b)
+			(s2p1 :cut s3p1)
+			(s3p1 :cut s3n)
+			(s3n :aggregation s3n)
+			(s2p1 :aggregation s3a3)
+			(s3a3 :cut s3m2)
+			(s3m2 :aggregation s3b)
+			(s2p1 :cut s3n)
+			(s2p1 :cut s3m2)
+			(s3c :aggregation s3a3)
+			(s3a3 :aggregation s3n)
+			(s3a2 :aggregation s3b)))
+
+
+# :: f-7FD6YGWV::step03::sent02
+# :: snt4	Form a pasty dough , then separate the dough with your hands to form small crumbs .
+(s4 / sentence
+    :coref ((s3b :cut s4f)
+			(s4f :cut s4f)
+			(s4f :cut s4d2)
+			(s3n :cut s4f)
+			(s3b :cut s4d2)
+			(s3n :cut s4d2)
+			(s3m2 :cut s4f)))
+
+
+# :: f-7FD6YGWV::step03::sent03
+# :: snt5	Add the water and form into a clean dough .
+(s5 / sentence
+    :coref ((s4d2 :cut s5a2)
+			(s5a2 :aggregation s5a)
+			(s4f :cut s5a2)
+			(s4d2 :aggregation s5a)
+			(s4f :aggregation s5a)
+			(s3n :cut s5a2)
+			(s3b :cut s5a2)
+			(s5w :aggregation s5a)))
+
+
+# :: f-7FD6YGWV::step03::sent04
+# :: snt6	If you like raisins , you can combine it with the dough now .
+(s6 / sentence)
+
+
+# :: f-7FD6YGWV::step04::sent01
+# :: snt7	Divide the dough into 16 pieces and roll each piece into a ball .
+(s7 / sentence)
+
+
+# :: f-7FD6YGWV::step04::sent02
+# :: snt8	Put each ball on a cookie sheet and bake at 350 degrees F for 25 minutes .
+(s8 / sentence)
+
+
+# :: f-7FD6YGWV::step05::sent01
+# :: snt9	Let the cookies cool for about 20 minutes .
+(s9 / sentence)
+
+
+# :: f-7FD6YGWV::step05::sent02
+# :: snt10	Dust with powdered sugar before serving .
+(s10 / sentence)
+
+

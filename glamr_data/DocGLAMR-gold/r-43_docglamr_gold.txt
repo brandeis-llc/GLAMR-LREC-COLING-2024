@@ -1,0 +1,73 @@
+# :: r-43::step01::sent01
+# :: snt1	Wash burghul under running water then soak in water for about 60 minutes .
+(s1 / sentence
+    :coref ((s1b :aggregation s1w4)
+			(s1w4 :aggregation s1s)
+			(s1w3 :aggregation s1w4)
+			(s1w2 :aggregation s1s)))
+
+
+# :: r-43::step02::sent01
+# :: snt2	Drain , then press to remove moisture as much as possible .
+(s2 / sentence
+    :coref ((s1s :cut s2d3)
+			(s2d3 :cut s2p1)
+			(s1w4 :cut s2d3)
+			(s1s :cut s2p1)))
+
+
+# :: r-43::step03::sent01
+# :: snt3	Mash onion in the food processor then add minced meat in batches .
+(s3 / sentence
+    :coref ((s3o :cut s3m5)
+			(s3m5 :aggregation s3a4)
+			(s3m3 :aggregation s3a4)))
+
+
+# :: r-43::step04::sent01
+# :: snt4	Remove and place aside .
+(s4 / sentence
+    :coref ((s3a4 :cut s4r1)
+			(s4r1 :cut s4p1)
+			(s3a4 :cut s4p1)))
+
+
+# :: r-43::step05::sent01
+# :: snt5	Mix meat mixture with burghul , salt , green chile , allspice , and cinnamon .
+(s5 / sentence
+    :coref ((s2p1 :aggregation s5m6)
+			(s2d3 :aggregation s5m6)
+			(s4p1 :aggregation s5m6)
+			(s5s :aggregation s5m6)
+			(s5g :aggregation s5m6)
+			(s5a :aggregation s5m6)
+			(s5c2 :aggregation s5m6)))
+
+
+# :: r-43::step06::sent01
+# :: snt6	Process well in batches into a firm paste .
+(s6 / sentence
+    :coref ((s5m6 :cut s6p3)
+			(s2p1 :cut s6p3)
+			(s4p1 :cut s6p3)))
+
+
+# :: r-43::step07::sent01
+# :: snt7	Knead mixture with wet hands into a smooth paste .
+(s7 / sentence
+    :coref ((s6p3 :cut s7k)
+			(s5m6 :cut s7k)))
+
+
+# :: r-43::step08::sent01
+# :: snt8	Put in refrigerator for 30 minutes covered with a piece of wet texture .
+(s8 / sentence
+    :coref ((s7k :cut s8p1)
+			(s8p1 :cut s8c1)
+			(s7k :cut s8c1)
+			(s6p3 :cut s8p1)
+			(s5m6 :cut s8p1)
+			(s6p3 :cut s8c1)
+			(s5m6 :cut s8c1)))
+
+

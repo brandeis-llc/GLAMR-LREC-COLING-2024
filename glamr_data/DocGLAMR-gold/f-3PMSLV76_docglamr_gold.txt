@@ -1,0 +1,81 @@
+# :: f-3PMSLV76::step01::sent01
+# :: snt1	Pre heat oven to 350 degrees F. In a large bowl combine flour , powdered sugar , and cornstarch .
+(s1 / sentence
+    :coref ((s1f2 :aggregation s1c3)
+			(s1c3 :cut s1s)
+			(s1p :aggregation s1c3)
+			(s1c2 :aggregation s1c3)
+			(s1l :cut s1s)))
+
+
+# :: f-3PMSLV76::step01::sent02
+# :: snt2	Using a spoon , mix in apple sauce and vanilla extract until a soft dough forms .
+(s2 / sentence
+    :coref ((s1s :cut s2a2)
+			(s2a2 :cut s2v)
+			(s1c3 :cut s2a2)
+			(s1c3 :cut s2v)
+			(s1s :cut s2v)))
+
+
+# :: f-3PMSLV76::step02::sent01
+# :: snt3	Shape dough into 1-inch balls and place in prepared muffin pans .
+(s3 / sentence
+    :coref ((s2v :aggregation s3s)
+			(s2a2 :aggregation s3s)
+			(s2m :aggregation s3s)
+			(s3p2 :aggregation s3b)
+			(s3b :aggregation s3s)
+			(s3p3 :aggregation s3b)
+			(s3p :aggregation s3b)))
+
+
+# :: f-3PMSLV76::step02::sent02
+# :: snt4	Press dough in bottom and up the side of each muffin cup .
+(s4 / sentence
+    :coref ((s3s :cut s4p)
+			(s4p :cut s4p)
+			(s2v :cut s4p)
+			(s3b :cut s4p)))
+
+
+# :: f-3PMSLV76::step02::sent03
+# :: snt5	Bake the dough - lined cup for about 8 - 10 minutes .
+(s5 / sentence)
+
+
+# :: f-3PMSLV76::step02::sent04
+# :: snt6	Remove the muffin pan from the oven and let rest for a few minutes .
+(s6 / sentence)
+
+
+# :: f-3PMSLV76::step02::sent05
+# :: snt7	Spoon 1 teaspoon of preserves into each muffin cup .
+(s7 / sentence)
+
+
+# :: f-3PMSLV76::step03::sent01
+# :: snt8	In a small bowl mix together sugar , egg and coconut with a fork until well blended .
+(s8 / sentence)
+
+
+# :: f-3PMSLV76::step03::sent02
+# :: snt9	Spoon a teaspoon of coconut mixture over preserves in each cup .
+(s9 / sentence)
+
+
+# :: f-3PMSLV76::step04::sent01
+# :: snt10	Bake 23 -33 minutes or until cookie crusts are lightly golden brown .
+(s10 / sentence)
+
+
+# :: f-3PMSLV76::step04::sent02
+# :: snt11	Cool in pans on a cooling rack for 30 minutes .
+(s11 / sentence)
+
+
+# :: f-3PMSLV76::step05::sent01
+# :: snt12	Gently remove each cookie tart , sprinkle with confectioner 's sugar and serve !
+(s12 / sentence)
+
+

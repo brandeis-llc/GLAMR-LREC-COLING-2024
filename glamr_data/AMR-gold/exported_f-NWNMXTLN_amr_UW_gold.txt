@@ -1,0 +1,327 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1429
+export time: 9/8/2023, 3:46:25 PM
+
+# :: snt1	Mix and combine , until smooth , sour milk , yogurt , oil , eggs and baking powder .
+# sentence level graph:
+(s1a / and
+  :op1 (s1m2 / mix-01
+         :op1 (s1a2 / and
+                :op1 (s1m / milk
+                       :mod (s1s / sour))
+                :op2 (s1y / yogurt)
+                :op3 (s1o / oil)
+                :op4 (s1e / egg)
+                :op5 (s1p / powder
+                       :ARG3-of (s1b / bake-01))))
+  :op2 (s1c / combine-01
+         :op1 s1a2)
+  :duration (s1s2 / smooth)
+  :mode imperative)
+
+# alignment:s1a: 2-2
+s1a2: 0-0
+s1b: -1--1
+s1c: 3-3
+s1e: -1--1
+s1m: -1--1
+s1m2: 1-1
+s1o: -1--1
+s1p: -1--1
+s1s: -1--1
+s1s2: 8-8
+s1y: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Spoon and set aside 8 tablespoons of the mixture .
+# sentence level graph:
+(s2a / and
+  :op1 (s2s2 / spoon-01
+         :ARG1 (s2m / mixture
+                 :quant (s2v / volume-quantity
+                          :unit (s2t2 / teaspoon)
+                          :quant 8)))
+  :op2 (s2s / set-01
+         :ARG1 s2m
+         :ARG2 (s2a2 / aside))
+  :mode imperative)
+
+# alignment:s2a: 2-2
+s2a2: 4-4
+s2m: -1--1
+s2s: 3-3
+s2s2: 1-1
+s2t2: -1--1
+s2v: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Set aside 4 sheets of phyllo dough , and tear the remaining sheets into small pieces .
+# sentence level graph:
+(s3a / and
+  :op1 (s3s / set-01
+         :ARG1 (s3s5 / sheet
+                 :quant 4
+                 :consist-of (s3d / dough
+                               :consist-of (s3p / phyllo)))
+         :ARG2 (s3a2 / aside))
+  :op2 (s3t / tear-01
+         :ARG1 (s3s3 / sheet
+                 :ARG1-of (s3r / remain-01))
+         :destination (s3p2 / piece
+                        :mod (s3s4 / small)))
+  :mode imperative)
+
+# alignment:s3a: 9-9
+s3a2: 2-2
+s3d: 7-7
+s3p: -1--1
+s3p2: 16-16
+s3r: 12-12
+s3s: 1-1
+s3s3: 13-13
+s3s4: 15-15
+s3t: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Stir them gently into the sour milk filling .
+# sentence level graph:
+(s4s2 / stir-01
+  :ARG1 (s4t / they)
+  :location (s4f / filling
+              :consist-of (s4m / milk
+                            :mod (s4s / sour)))
+  :manner (s4g / gentle)
+  :mode imperative)
+
+# alignment:s4f: 8-8
+s4g: 3-3
+s4m: 7-7
+s4s: 6-6
+s4s2: 1-1
+s4t: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Add and combine crumbled feta cheese .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5a / add-02
+         :ARG1 (s5c / cheese
+                 :ARG1-of (s5c3 / crumble-01)
+                 :mod (s5f / feta)))
+  :op2 (s5c2 / combine-01
+         :ARG1 s5c)
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5a2: 2-2
+s5c: 6-6
+s5c2: 3-3
+s5c3: 4-4
+s5f: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Place 2 pastry sheets on the bottom of the oiled baking pan .
+# sentence level graph:
+(s6p3 / place-01
+  :ARG1 (s6s / sheet
+          :quant 2
+          :mod (s6p2 / pastry))
+  :ARG2 (s6p4 / pan
+          :ARG1-of (s6o / oil-01)
+          :purpose (s6b / bake-01)
+          :location (s6b2 / bottom))
+  :mode imperative)
+
+# alignment:s6b: -1--1
+s6b2: 7-7
+s6o: -1--1
+s6p2: 3-3
+s6p3: 1-1
+s6s: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Cover with evenly distributed sour milk filling , cover with 2 remaining pastry sheets .
+# sentence level graph:
+(s7a / and
+  :op1 (s7c / cover-02
+         :ARG2 (s7f / filling
+                 :ARG2 (s7m / milk
+                         :mod (s7s2 / sour))
+                 :ARG1-of (s7d / distribute-01
+                            :ARG1-of (s7e / even-02))))
+  :op2 (s7c2 / cover-02
+         :ARG2 (s7s / sheet
+                 :quant 2
+                 :ARG1-of (s7r / remain-01)
+                 :mod (s7p / pastry)))
+  :mode imperative)
+
+# alignment:s7a: 2-2
+s7c: 1-1
+s7c2: 9-9
+s7d: 4-4
+s7e: 3-3
+s7f: 7-7
+s7m: 6-6
+s7p: 13-13
+s7r: 12-12
+s7s: 14-14
+s7s2: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Spread 8 tablespoons of the sour milk , yogurt , oil , eggs and baking powder mixture over the top sheet .
+# sentence level graph:
+(s8s3 / spread-01
+  :ARG1 (s8m2 / mixture
+          :quant (s8v / volume-quantity
+                   :quant 8
+                   :unit (s8t2 / tablespoon))
+          :consist-of (s8a / and
+                        :op1 (s8m / milk
+                               :mod (s8s2 / sour))
+                        :op2 (s8y / yogurt)
+                        :op3 (s8o / oil)
+                        :op4 (s8e / egg)
+                        :op5 (s8p / powder
+                               :purpose (s8b / bake-01))))
+  :ARG2 (s8o3 / over
+          :op1 (s8s / sheet
+                 :mod (s8t / top)))
+  :mode imperative)
+
+# alignment:s8a: 14-14
+s8b: 15-15
+s8e: 13-13
+s8m: 7-7
+s8m2: 17-17
+s8o: 11-11
+s8o3: 18-18
+s8p: 16-16
+s8s: 21-21
+s8s2: 6-6
+s8s3: 1-1
+s8t: 20-20
+s8y: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Bake at 2000C for about 30 minutes or until done and golden in colour .
+# sentence level graph:
+(s9b / bake-01
+  :mod (s9t / temperature-quantity
+         :scale (s9c / celsius)
+         :quant 2000)
+  :duration (s9o / or
+              :op1 (s9a3 / about
+                     :op1 (s9t2 / temporal-quantity
+                            :unit (s9m / minute)
+                            :quant 30))
+              :op2 (s9u / until
+                     :op1 (s9a2 / and
+                            :op1 (s9d / done-08)
+                            :op2 (s9g / golden))))
+  :mode imperative)
+
+# alignment:s9a2: 11-11
+s9a3: 0-0
+s9b: 1-1
+s9c: 4-4
+s9g: 12-12
+s9m: -1--1
+s9o: 8-8
+s9t: 2-2
+s9t2: -1--1
+s9u: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Allow to cool slightly , cut and serve .
+# sentence level graph:
+(s10a2 / and
+  :op1 (s10a / allow-01
+         :ARG1 (s10c / cool-01
+                 :degree (s10s2 / slight)))
+  :op2 (s10c2 / cut-01)
+  :op3 (s10s / serve-02)
+  :mode imperative)
+
+# alignment:s10a: 1-1
+s10a2: 7-7
+s10c: 3-3
+s10c2: 6-6
+s10s: 8-8
+s10s2: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Mix and combine , until smooth , sour milk , yogurt , oil , eggs and baking powder .
+Spoon and set aside 8 tablespoons of the mixture .
+Set aside 4 sheets of phyllo dough , and tear the remaining sheets into small pieces .
+Stir them gently into the sour milk filling .
+Add and combine crumbled feta cheese .
+Place 2 pastry sheets on the bottom of the oiled baking pan .
+Cover with evenly distributed sour milk filling , cover with 2 remaining pastry sheets .
+Spread 8 tablespoons of the sour milk , yogurt , oil , eggs and baking powder mixture over the top sheet .
+Bake at 2000C for about 30 minutes or until done and golden in colour .
+Allow to cool slightly , cut and serve .

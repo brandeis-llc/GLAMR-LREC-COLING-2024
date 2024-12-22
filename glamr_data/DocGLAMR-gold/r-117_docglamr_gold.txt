@@ -1,0 +1,60 @@
+# :: r-117::step01::sent01
+# :: snt1	Fillet the fish and flake the flesh then put in a mortar .
+(s1 / sentence
+    :coref ((s1f2 :cut s1f5)
+			(s1f5 :cut s1f7)
+			(s1f7 :cut s1p)))
+
+
+# :: r-117::step02::sent01
+# :: snt2	Put in garlic and ginger and pound the mixture to a paste .
+(s2 / sentence
+    :coref ((s1p :aggregation s2p1)
+			(s2p1 :cut s2p2)
+			(s2 :aggregation s2p1)
+			(s2g2 :aggregation s2p1)))
+
+
+# :: r-117::step03::sent01
+# :: snt3	Add in the turmeric , salt and chili flakes .
+(s3 / sentence
+    :coref ((s2p2 :aggregation s3a1)
+			(s2p1 :aggregation s3a1)
+			(s3t :aggregation s3a1)
+			(s3s :aggregation s3a1)
+			(s3c :aggregation s3a1)))
+
+
+# :: r-117::step04::sent01
+# :: snt4	Pound for 10 - 12 minutes .
+(s4 / sentence
+    :coref ((s3a1 :cut s4p)
+			(s2p1 :cut s4p)))
+
+
+# :: r-117::step05::sent01
+# :: snt5	Moisten your hands with water and scoop some of the pasty mixture and flatten it on your palm until it resembles a cookie .
+(s5 / sentence
+    :coref ((s4p :cut s5s1)
+			(s5s1 :cut s5f2)
+			(s3a1 :cut s5s1)
+			(s4p :cut s5f2)
+			(s3a1 :cut s5f2)))
+
+
+# :: r-117::step06::sent01
+# :: snt6	Heat oil in a pan and deep - fry the fish fritters for 4 - 5 minutes or until golden brown .
+(s6 / sentence
+    :coref ((s5f2 :aggregation s6d4)
+			(s5s1 :aggregation s6d4)
+			(s3a1 :aggregation s6d4)
+			(s6o :cut s6h2)
+			(s6h2 :aggregation s6d4)))
+
+
+# :: r-117::step07::sent01
+# :: snt7	Drain excess oil in absorbent paper before serving .
+(s7 / sentence
+    :coref ((s7d1 :cut s7s1)))
+
+

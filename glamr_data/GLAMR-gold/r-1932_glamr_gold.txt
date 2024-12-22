@@ -1,0 +1,229 @@
+# :: r-1932::step01::sent01
+# :: snt1	In a saucepan , melt butter .
+(s1m / melt-01~4
+     :ARG1 (s1b / butter~5)
+     :location (s1s / saucepan~2)
+     :mode imperative
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1b1 / be
+                                      :polarity -)
+                            :E2 (s1a / and
+                                     :op1 (s1b2 / be)
+                                     :op2 (s1m1 / made_of))
+                            :E0 (s1d / do
+                                     :ACTION s1m))
+     :imp_output (s1m2 / melt.RES))
+
+
+# :: r-1932::step02::sent01
+# :: snt2	Add flour and stir until slightly brown .
+(s2a2 / and~2
+      :op1 (s2a / add-02~0
+                :ARG1 (s2f / flour~1)
+                :ARG0 (s2y / you)
+                :event-structure (s2se / subevents
+                                       :E1 (s2t / together
+                                                :polarity -
+                                                :PATIENT_I s2f)
+                                       :E3 (s2t1 / together
+                                                 :PATIENT_I s2f)
+                                       :E0 (s2d / do
+                                                :ACTION s2a))
+                :imp_output (s2a1 / add.RES))
+      :op2 (s2s2 / stir-01~3
+                 :duration (s2u / until~4
+                                :op1 (s2b / brown~6
+                                          :degree (s2s / slight~5)))
+                 :ARG0 s2y
+                 :event-structure (s2se1 / subevents
+                                         :E1 (s2h / has_material_integrity_state
+                                                  :polarity -
+                                                  :IMP_PATIENT s2a1
+                                                  :V_STATE (s2s1 / stirred))
+                                         :E3 (s2h1 / has_material_integrity_state
+                                                   :IMP_PATIENT s2a1
+                                                   :V_STATE s2s1)
+                                         :E0 (s2d1 / do
+                                                   :ACTION s2s2))
+                 :imp_output (s2s3 / stir.RES))
+      :mode imperative)
+
+
+# :: r-1932::step03::sent01
+# :: snt3	Add chicken broth and hot water .
+(s3a / add-02~0
+     :ARG1 (s3a2 / and~3
+                 :op1 (s3b / broth~2
+                           :source (s3c / chicken~1))
+                 :op2 (s3w / water~5
+                           :mod (s3h / hot~4)))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3t / together
+                                     :polarity -
+                                     :PATIENT_I s3b
+                                     :PATIENT_J s3w)
+                            :E3 (s3t1 / together
+                                      :PATIENT_I s3b
+                                      :PATIENT_J s3w)
+                            :E0 (s3d / do
+                                     :ACTION s3a))
+     :imp_output (s3a1 / add.RES))
+
+
+# :: r-1932::step04::sent01
+# :: snt4	Stir constantly .
+(s4s / stir-01~0
+     :manner (s4c / constant~1)
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4h / has_material_integrity_state
+                                     :polarity -
+                                     :IMP_PATIENT (s4a / add.RES)
+                                     :V_STATE (s4s1 / stirred))
+                            :E3 (s4h1 / has_material_integrity_state
+                                      :IMP_PATIENT s4a
+                                      :V_STATE s4s1)
+                            :E0 (s4d / do
+                                     :ACTION s4s))
+     :imp_output (s4s2 / stir.RES))
+
+
+# :: r-1932::step05::sent01
+# :: snt5	Add cream , Cheez Whiz , Worcestershire sauce , Guinness and garlic powder .
+(s5a / add-02
+     :ARG1 (s5a2 / and~0
+                 :op1 (s5c / cream~1)
+                 :op2 (s5p2 / product
+                            :name (s5n / name
+                                       :op1 "Cheez"
+                                       :op2 "Whiz"))
+                 :op3 (s5s / sauce~7
+                           :mod (s5p3 / product
+                                      :name (s5n2 / name
+                                                  :op1 "Worcestershire")))
+                 :op4 (s5p4 / product
+                            :name (s5n3 / name
+                                        :op1 "Guinness"))
+                 :op5 (s5p / powder~12
+                           :consist-of (s5g / garlic~11))
+                 :ARG0 (s5y / you)
+                 :event-structure (s5se / subevents
+                                        :E1 (s5t / together
+                                                 :polarity -
+                                                 :PATIENT_I s5c
+                                                 :PATIENT_J (s5C / Cheez-Whiz)
+                                                 :PATIENT_K s5s
+                                                 :PATIENT_L (s5G / Guinness~9)
+                                                 :PATIENT_M s5p)
+                                        :E3 (s5t1 / together
+                                                  :PATIENT_I s5c
+                                                  :PATIENT_J s5C
+                                                  :PATIENT_K s5s
+                                                  :PATIENT_L s5G
+                                                  :PATIENT_M s5p)
+                                        :E0 (s5d / do
+                                                 :ACTION s5a2))
+                 :imp_output (s5a1 / add.RES))
+     :mode imperative)
+
+
+# :: r-1932::step06::sent01
+# :: snt6	Simmer over medium low heat for 15 minutes .
+(s6s / simmer-01~0
+     :duration (s6t / temporal-quantity
+                    :quant 15
+                    :unit (s6m2 / minute~7))
+     :manner (s6h / heat~4
+                  :mod (s6l / low~3)
+                  :mod (s6m / medium~2))
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s6a / add.RES)
+                                     :V_FINAL_STATE (s6s1 / simmered))
+                            :E3 (s6a1 / apply_heat
+                                      :INSTRUMENT s6h
+                                      :IMP_PATIENT s6a)
+                            :E4 (s6c1 / cooked
+                                      :IMP_PATIENT s6a
+                                      :V_FINAL_STATE s6s1)
+                            :E0 (s6d / do
+                                     :ACTION s6s))
+     :imp_output (s6s2 / simmer.RES))
+
+
+# :: r-1932::step07::sent01
+# :: snt7	Ladle on soup bowls and garnish with chives .
+(s7a / and~4
+     :op1 (s7l / ladle-01~0
+               :ARG2 (s7b / bowl~3
+                          :mod (s7s / soup~2))
+               :ARG0 (s7y / you)
+               :event-structure (s7se / subevents
+                                      :E1 (s7h / has_location
+                                               :IMP_THEME (s7s1 / simmer.RES))
+                                      :E3 (s7a1 / and
+                                                :op1 (s7m / motion
+                                                          :IMP_THEME s7s1)
+                                                :op2 (s7h1 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME s7s1))
+                                      :E4 (s7h2 / has_location
+                                                :IMP_THEME s7s1
+                                                :DESTINATION s7b)
+                                      :E0 (s7d / do
+                                               :ACTION s7l))
+               :imp_output (s7l1 / ladle.RES))
+     :op2 (s7g / garnish-01~5
+               :ARG2 (s7c / chive~7)
+               :ARG0 s7y
+               :event-structure (s7se1 / subevents
+                                       :E1 (s7h3 / has_location
+                                                 :THEME s7c)
+                                       :E3 (s7a2 / and
+                                                 :op1 (s7m1 / motion
+                                                            :THEME s7c)
+                                                 :op2 (s7h4 / has_location
+                                                            :polarity -
+                                                            :THEME s7c))
+                                       :E4 (s7h5 / has_location
+                                                 :THEME s7c)
+                                       :E0 (s7d1 / do
+                                                 :ACTION s7g))
+               :imp_output (s7g1 / garnish.RES))
+     :mode imperative)
+
+
+# :: r-1932::step08::sent01
+# :: snt8	Serve piping hot .
+(s8s / serve-02~0
+     :mod (s8h / hot~2
+               :mod (s8p / piping~1))
+     :mode imperative
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8a / and
+                                     :op1 (s8h1 / has_possession
+                                                :IMP_THEME (s8g / garnish.RES))
+                                     :op2 (s8h2 / has_possession
+                                                :polarity -
+                                                :IMP_THEME s8g))
+                            :E2 (s8t / transfer
+                                     :IMP_THEME s8g)
+                            :E3 (s8a1 / and
+                                      :op1 (s8h3 / has_possession
+                                                 :IMP_THEME s8g)
+                                      :op2 (s8h4 / has_possession
+                                                 :polarity -
+                                                 :IMP_THEME s8g))
+                            :E0 (s8d / do
+                                     :ACTION s8s))
+     :imp_output (s8s1 / serve.RES))
+
+

@@ -1,0 +1,201 @@
+# :: r-23::step01::sent01
+# :: snt1	Beat eggs until thick and creamy .
+(s1b / beat-06~0
+     :ARG1 (s1e / egg~1)
+     :duration (s1u / until~2
+                    :op1 (s1a / and~4
+                              :op1 (s1t / thick-03~3
+                                        :ARG1 s1e)
+                              :op2 (s1c / creamy~5
+                                        :domain s1e)))
+     :mode imperative
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1h / has_material_integrity_state
+                                     :polarity -
+                                     :PATIENT s1e
+                                     :V_STATE (s1b1 / beaten))
+                            :E3 (s1h1 / has_material_integrity_state
+                                      :PATIENT s1e
+                                      :V_STATE s1b1)
+                            :E0 (s1d / do
+                                     :ACTION s1b))
+     :imp_output (s1b2 / beat.RES))
+
+
+# :: r-23::step02::sent01
+# :: snt2	Gradually add sugar .
+(s2a / add-02~1
+     :ARG1 (s2s / sugar~2)
+     :manner (s2g / gradual~0)
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2t / together
+                                     :polarity -
+                                     :PATIENT_I s2s)
+                            :E3 (s2t1 / together
+                                      :PATIENT_I s2s)
+                            :E0 (s2d / do
+                                     :ACTION s2a))
+     :imp_output (s2a1 / add.RES))
+
+
+# :: r-23::step03::sent01
+# :: snt3	Continue beating until sugar completely dissolved .
+(s3c2 / continue-01~0
+      :ARG1 (s3b / beat-06~1
+                 :ARG0 (s3y / you)
+                 :event-structure (s3se / subevents
+                                        :E1 (s3h / has_material_integrity_state
+                                                 :polarity -
+                                                 :IMP_PATIENT (s3a / add.RES)
+                                                 :V_STATE (s3b1 / beaten))
+                                        :E3 (s3h1 / has_material_integrity_state
+                                                  :IMP_PATIENT s3a
+                                                  :V_STATE s3b1)
+                                        :E0 (s3d / do
+                                                 :ACTION s3b))
+                 :imp_output (s3b2 / beat.RES))
+      :time (s3u / until~2
+                 :op1 (s3d2 / dissolve-01~5
+                            :ARG1 (s3s3 / sugar-01~3)
+                            :degree (s3c / complete-02~4)))
+      :mode imperative)
+
+
+# :: r-23::step04::sent01
+# :: snt4	Fold in sifted self rising flour and cornflour , then combined water and butter .
+(s4a / and~6
+     :op1 (s4f2 / fold-03~0
+                :ARG1 (s4c2 / cornflour~7
+                            :ARG1-of (s4s2 / sift-01))
+                :ARG2 (s4s / self-rising-flour~3,4,5
+                           :ARG1-of (s4s4 / sift-01~2))
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4b1 / be
+                                                 :polarity -)
+                                       :E2 (s4a1 / and
+                                                 :op1 (s4b2 / be)
+                                                 :op2 (s4m / made_of))
+                                       :E0 (s4d / do
+                                                :ACTION s4f2))
+                :imp_output (s4f / fold.RES))
+     :op2 (s4c / combine-01~10
+               :ARG1 (s4w / water~11)
+               :ARG2 (s4b / butter~13)
+               :time (s4t / then~9))
+     :mode imperative)
+
+
+# :: r-23::step05::sent01
+# :: snt5	Pour mixture into prepared lamington tins 18 cm x 28 cm ( 7 in x 11 in ) .
+(s5p / pour-01~0
+     :ARG1 (s5m / mixture~1)
+     :ARG3 (s5t2 / tin-01~5
+                 :ARG1-of (s5p5 / prepare-01~3)
+                 :extent (s5p4 / product-of
+                               :op1 (s5d4 / distance-quantity
+                                          :unit (s5c4 / centimeter~7)
+                                          :quant 18)
+                               :op2 (s5d3 / distance-quantity
+                                          :unit (s5c3 / centimeter~10)
+                                          :quant 28))
+                 :mod (s5l2 / lamington~4))
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5h / has_location
+                                     :THEME s5m)
+                            :E3 (s5a / and
+                                     :op1 (s5m1 / motion
+                                                :THEME s5m)
+                                     :op2 (s5h1 / has_location
+                                                :polarity -
+                                                :THEME s5m))
+                            :E4 (s5h2 / has_location
+                                      :THEME s5m
+                                      :DESTINATION s5c3)
+                            :E0 (s5d / do
+                                     :ACTION s5p))
+     :imp_output (s5p1 / pour.RES))
+
+
+# :: r-23::step06::sent01
+# :: snt6	Bake in moderate oven approximately 30 minutes .
+(s6b / bake-01~0
+     :location (s6o / oven~3
+                    :ARG1-of (s6m2 / moderate-01~2))
+     :duration (s6t2 / temporal-quantity
+                     :quant (s6a2 / approximately~4
+                                  :op1 30)
+                     :unit (s6m / minutes~6))
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s6p / pour.RES)
+                                     :V_FINAL_STATE (s6b1 / baked))
+                            :E3 (s6a / apply_heat
+                                     :INSTRUMENT s6o
+                                     :IMP_PATIENT s6p)
+                            :E4 (s6c1 / cooked
+                                      :IMP_PATIENT s6p
+                                      :V_FINAL_STATE s6b1)
+                            :E0 (s6d / do
+                                     :ACTION s6b))
+     :imp_output (s6b2 / bake.RES))
+
+
+# :: r-23::step07::sent01
+# :: snt7	Let cake stand in pan for 5 minutes before turning out onto wire rack .
+(s7l / let-01~0
+     :ARG1 (s7s / stand-01~2
+                :ARG1 (s7c / cake~1)
+                :ARG2 (s7p / pan~4)
+                :duration (s7t / temporal-quantity
+                               :quant 5
+                               :unit (s7m / minute~7))
+                :time (s7b / before~8
+                           :op1 (s7t2 / turn-out-11~9,10
+                                      :ARG1 s7c
+                                      :location (s7r / rack~13
+                                                     :mod (s7w / wire~12))
+                                      :ARG0 s7y
+                                      :event-structure (s7se1 / subevents
+                                                              :E1 (s7h3 / has_location
+                                                                        :THEME s7c)
+                                                              :E3 (s7a / and
+                                                                       :op1 (s7m1 / motion
+                                                                                  :THEME s7c)
+                                                                       :op2 (s7h4 / has_location
+                                                                                  :polarity -
+                                                                                  :THEME s7c))
+                                                              :E4 (s7h5 / has_location
+                                                                        :THEME s7c
+                                                                        :DESTINATION s7r)
+                                                              :E0 (s7d1 / do
+                                                                        :ACTION s7t2))
+                                      :imp_output (s7t1 / turn.RES)))
+                :ARG0 (s7y / you)
+                :event-structure (s7se / subevents
+                                       :E (s7h / has_location
+                                               :THEME s7c
+                                               :LOCATION s7p)
+                                       :E1 (s7h1 / has_configuration
+                                                 :polarity -
+                                                 :THEME s7c
+                                                 :V_CONFIGURATION (s7s1 / stood))
+                                       :E3 (s7i / intrinsic_motion
+                                                :THEME s7c)
+                                       :E4 (s7h2 / has_configuration
+                                                 :THEME s7c
+                                                 :V_CONFIGURATION s7s1)
+                                       :E0 (s7d / do
+                                                :ACTION s7s))
+                :imp_output (s7s2 / stand.RES))
+     :mode imperative)
+
+

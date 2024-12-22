@@ -1,0 +1,370 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1280
+export time: 4/7/2023, 6:52:55 PM
+
+# :: snt1	Preheat the grill to medium - high heat .
+# sentence level graph:
+(s1p / preheat-00
+  :ARG1 (s1g / grill-01
+          :mod (s1t / temperature-quantity
+                 :mod (s1u / umr-choice
+                        :op1 (s1m / medium)
+                        :op2 (s1h / high-02))))
+  :mode imperative)
+
+# alignment:s1g: 3-3
+s1h: -1--1
+s1m: -1--1
+s1t: -1--1
+s1u: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Combine the melted butter with parsley .
+# sentence level graph:
+(s2c / combine-01
+  :ARG1 (s2b / butter
+          :ARG1-of (s2m / melt-01))
+  :ARG2 (s2p / parsley)
+  :mode imperative)
+
+# alignment:s2b: 4-4
+s2c: 1-1
+s2m: 3-3
+s2p: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Make sure the corn cobs are stripped of all the silks , then brush each one with the butter / parsley mix .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3e3 / ensure-01
+         :ARG1 (s3s / strip-01
+                 :ARG1 (s3s3 / silk
+                         :mod (s3a / all))
+                 :ARG2 (s3c / cob
+                         :mod (s3c2 / corn))))
+  :op2 (s3b / brush-01
+         :ARG1 s3s3
+         :instrument (s3m2 / mix-01
+                       :ARG1 (s3b2 / butter)
+                       :ARG2 (s3p / parsley))
+         :time (s3t / then))
+  :mode imperative)
+
+# alignment:s3a: -1--1
+s3b: 14-14
+s3b2: 19-19
+s3c: -1--1
+s3c2: -1--1
+s3m2: 22-22
+s3p: -1--1
+s3s: -1--1
+s3s3: 0-0
+s3t: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Wrap each individual corn cob in aluminum foil .
+# sentence level graph:
+(s4w / wrap-01
+  :ARG1 (s4c / cob
+          :mod (s4i / individual)
+          :mod (s4c2 / corn)
+          :mod (s4e / each))
+  :ARG2 (s4f / foil
+          :mod (s4a / aluminum))
+  :mode imperative)
+
+# alignment:s4a: 7-7
+s4c: 5-5
+s4c2: 4-4
+s4e: 2-2
+s4f: 8-8
+s4i: 3-3
+s4w: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Grill them over direct heat , turning about every 4 - 5 minutes .
+# sentence level graph:
+(s5g / grill-01
+  :ARG1 (s5t3 / they)
+  :manner (s5o / over
+            :op1 (s5h / heat
+                   :mod (s5d / direct)))
+  :manner (s5t4 / turn-01
+            :ARG1 s5t3
+            :frequency (s5e / every
+                         :op1 (s5b / between
+                                :op1 (s5t / temporal-quantity
+                                       :quant 4
+                                       :unit (s5m2 / minute))
+                                :op2 (s5t2 / temporal-quantity
+                                       :quant 5
+                                       :unit (s5m / minute)))))
+  :mode imperative)
+
+# alignment:s5b: 10-10
+s5d: 4-4
+s5e: 9-9
+s5g: 1-1
+s5h: 5-5
+s5m: 8-8
+s5m2: 13-13
+s5o: 3-3
+s5t: 13-13
+s5t2: 14-14
+s5t3: 2-2
+s5t4: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	They should be done in about 15 minutes .
+# sentence level graph:
+(s6r / recommend-01
+  :ARG1 (s6d / done-08
+          :ARG1 (s6t2 / they)
+          :time (s6a2 / after
+                  :op1 (s6n / now)
+                  :quant (s6a / about
+                           :op1 (s6t / temporal-quantity
+                                  :quant 15
+                                  :unit (s6m / minute))))))
+
+# alignment:s6a: 6-6
+s6a2: 3-3
+s6d: 4-4
+s6m: 8-8
+s6n: 5-5
+s6r: 2-2
+s6t: 8-8
+s6t2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Every grill is different , so watch them .
+# sentence level graph:
+(s7d / differ-02
+  :ARG1 (s7g / grill
+          :mod (s7e / every))
+  :ARG0-of (s7c / cause-01
+             :ARG1 (s7w / watch-01
+                     :ARG1 (s7t / them)))
+  :mode imperative)
+
+# alignment:s7d: 4-4
+s7e: 1-1
+s7g: 2-2
+s7t: -1--1
+s7w: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Whisk together the sesame oil , vinegar , chicken broth and ramen seasoning ; refrigerate .
+# sentence level graph:
+(s8m / multi-sentence
+  :snt1 (s8h / Whisk-01
+          :ARG1 (s8a / and
+                  :op1 (s8o / oil
+                         :source (s8s2 / sesame))
+                  :op2 (s8v / vinegar)
+                  :op3 (s8b / broth
+                         :source (s8c / chicken))
+                  :op4 (s8s / season-01
+                         :mod (s8r / ramen)))
+          :mod (s8t / together)
+          :mode imperative)
+  :snt2 (s8r2 / refrigerate-01
+          :mode imperative))
+
+# alignment:s8a: 11-11
+s8b: 10-10
+s8c: 9-9
+s8h: 1-1
+s8m: 3-3
+s8o: 5-5
+s8r: 12-12
+s8r2: 15-15
+s8s: 13-13
+s8s2: 4-4
+s8t: 2-2
+s8v: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Once the corn is done and has cooled off a bit , cut the corn off using a sharp knife .
+# sentence level graph:
+(s9c3 / cut-off-04
+  :ARG1 (s9c2 / corn)
+  :instrument (s9k / knife
+                :ARG1-of (s9s / sharp))
+  :mode imperative
+  :time (s9a / and
+          :op1 (s9b / be-done-08)
+          :op2 (s9c / cool-01
+                 :ARG1 s9c2
+                 :degree (s9b2 / bit))))
+
+# alignment:s9a: 6-6
+s9b: 5-5
+s9b2: 11-11
+s9c: 8-8
+s9c2: 15-15
+s9c3: 13-13
+s9k: 20-20
+s9s: 19-19
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Do n't cut your fingers off .
+# sentence level graph:
+(s10c / cut-off-04
+  :ARG1 (s10f / finger
+          :part-of (s10y / you))
+  :mode imperative
+  :polarity -)
+
+# alignment:s10c: 3-3
+s10f: 5-5
+s10y: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt11	Please .
+# sentence level graph:
+(s11p / please-01
+  :mode imperative)
+
+# alignment:s11p: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt12	In a large bowl combine the slaw mix , corn , ramen noodles , dressing and basil .
+# sentence level graph:
+(s12c / combine-01
+  :ARG1 (s12a / and
+          :op1 (s12m / mix
+                 :ARG1 (s12s / slaw))
+          :op2 (s12c2 / corn)
+          :op3 (s12n / noodle
+                 :mod (s12r / ramen))
+          :op4 (s12d / dressing)
+          :op5 (s12b / basil))
+  :ARG2 (s12b2 / bowl
+          :mod (s12l / large))
+  :mode imperative)
+
+# alignment:s12a: 16-16
+s12b: 17-17
+s12b2: 4-4
+s12c: 5-5
+s12c2: 10-10
+s12d: 15-15
+s12l: 3-3
+s12m: 8-8
+s12n: 13-13
+s12r: 12-12
+s12s: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt13	Add the feta and gently toss .
+# sentence level graph:
+(s13a2 / and
+  :op1 (s13a / add-02
+         :ARG1 (s13f / feta))
+  :op2 (s13t / toss-01
+         :manner (s13g / gentle))
+  :mode imperative)
+
+# alignment:s13a: 1-1
+s13a2: 4-4
+s13f: 3-3
+s13g: 5-5
+s13t: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Preheat the grill to medium - high heat .
+Combine the melted butter with parsley .
+Make sure the corn cobs are stripped of all the silks , then brush each one with the butter / parsley mix .
+Wrap each individual corn cob in aluminum foil .
+Grill them over direct heat , turning about every 4 - 5 minutes .
+They should be done in about 15 minutes .
+Every grill is different , so watch them .
+Whisk together the sesame oil , vinegar , chicken broth and ramen seasoning ; refrigerate .
+Once the corn is done and has cooled off a bit , cut the corn off using a sharp knife .
+Do n't cut your fingers off .
+Please .
+In a large bowl combine the slaw mix , corn , ramen noodles , dressing and basil .
+Add the feta and gently toss .

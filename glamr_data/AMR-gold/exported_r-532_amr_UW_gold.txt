@@ -1,0 +1,105 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1454
+export time: 9/14/2023, 3:21:32 PM
+
+# :: snt1	Mix together first 4 ingredients .
+# sentence level graph:
+(s1m / mix-01
+  :ARG1 (s1i / ingredient
+          :quant 4
+          :ord (s1o / ordinal-entity
+                 :value 1))
+  :manner (s1t / together)
+  :mode imperative)
+
+# alignment:s1i: 5-5
+s1m: 1-1
+s1o: 3-3
+s1t: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Spread evenly on toast rounds .
+# sentence level graph:
+(s2s / spread-01
+  :ARG2 (s2r / round
+          :mod (s2t / toast-01))
+  :ARG1-of (s2e / even-02)
+  :mode imperative)
+
+# alignment:s2e: 2-2
+s2r: 5-5
+s2s: 1-1
+s2t: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Place on baking sheet , and broil 2 minutes or until Cheese melts .
+# sentence level graph:
+(s3a / and
+  :op1 (s3p / place-01
+         :ARG2 (s3s / sheet
+                 :purpose (s3b / bake-01)))
+  :op2 (s3b2 / broil-01
+         :duration (s3o / or
+                     :op1 (s3t / temporal-quantity
+                            :unit (s3m2 / minute)
+                            :quant 2)
+                     :op2 (s3u / until
+                            :op1 (s3m / melt-01
+                                   :ARG1 (s3c / cheese)))))
+  :mode imperative)
+
+# alignment:s3a: 6-6
+s3b: 3-3
+s3b2: 7-7
+s3c: -1--1
+s3m: -1--1
+s3m2: -1--1
+s3p: 1-1
+s3s: 4-4
+s3t: -1--1
+s3u: -1--1
+s3o: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Serve hot .
+# sentence level graph:
+(s4s / serve-02
+  :manner (s4h / hot)
+  :mode imperative)
+
+# alignment:s4h: 2-2
+s4s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Mix together first 4 ingredients .
+Spread evenly on toast rounds .
+Place on baking sheet , and broil 2 minutes or until Cheese melts .
+Serve hot .

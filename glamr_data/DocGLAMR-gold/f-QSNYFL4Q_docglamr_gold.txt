@@ -1,0 +1,66 @@
+# :: f-QSNYFL4Q::step01::sent01
+# :: snt1	Chop the lemongrass into 2 inch pieces and then slice down the center , add to the soup pot along with the broth and coconut milk , garlic and ginger .
+(s1 / sentence
+    :coref ((s1l :cut s1c4)
+			(s1c4 :cut s1s1)
+			(s1s1 :aggregation s1a1)
+			(s1a1 :cut s1c3)
+			(s1c3 :cut s1p)
+			(s1p :cut s1i)
+			(s1i :separation s1d2)
+			(s1d2 :separation s1d2)
+			(s1d2 :cut s1t)
+			(s1b :aggregation s1a1)
+			(s1a1 :cut s1p)
+			(s1p :separation s1d2)
+			(s1c2 :aggregation s1a1)
+			(s1a1 :cut s1i)
+			(s1i :cut s1t)
+			(s1g :aggregation s1a1)
+			(s1a1 :separation s1d2)
+			(s1g2 :aggregation s1a1)
+			(s1a1 :cut s1t)))
+
+
+# :: f-QSNYFL4Q::step01::sent02
+# :: snt2	Bring to a boil and them simmer on low for 30 minutes .
+(s2 / sentence)
+
+
+# :: f-QSNYFL4Q::step01::sent03
+# :: snt3	Once the broth is done simmering you will want to strain it through some cheese cloth .
+(s3 / sentence)
+
+
+# :: f-QSNYFL4Q::step01::sent04
+# :: snt4	The lemongrass stalks are not edible , I found that out the hard way .
+(s4 / sentence)
+
+
+# :: f-QSNYFL4Q::step02::sent01
+# :: snt5	Bring the broth back to a simmer and add the tofu , mushrooms , snow peas and the rice noodles .
+(s5 / sentence)
+
+
+# :: f-QSNYFL4Q::step03::sent01
+# :: snt6	You can add the lime juice at any time .
+(s6 / sentence
+    :coref ((s6a :aggregation s6y)
+			(s6j :aggregation s6y)))
+
+
+# :: f-QSNYFL4Q::step04::sent01
+# :: snt7	I added some lime juice at the beginning and then some at the end before serving .
+(s7 / sentence)
+
+
+# :: f-QSNYFL4Q::step05::sent01
+# :: snt8	Simmer until the noodles are soft .
+(s8 / sentence)
+
+
+# :: f-QSNYFL4Q::step06::sent01
+# :: snt9	Garnish with grated ginger or scallions .
+(s9 / sentence)
+
+

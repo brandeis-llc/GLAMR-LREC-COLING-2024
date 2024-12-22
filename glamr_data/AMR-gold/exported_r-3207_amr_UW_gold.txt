@@ -1,0 +1,98 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1485
+export time: 9/30/2023, 5:11:45 PM
+
+# :: snt1	Shake all ingredients except wine .
+# sentence level graph:
+(s1s / shake-01
+  :ARG1 (s1i / ingredient
+          :ARG2-of (s1e / except-01
+                     :ARG1 (s1w / wine))
+          :mod (s1a / all))
+  :mode imperative)
+
+# alignment:s1a: 2-2
+s1e: 4-4
+s1i: 3-3
+s1s: 1-1
+s1w: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Pour into a glass half filled with ice cubes .
+# sentence level graph:
+(s2p / pour-01
+  :ARG3 (s2g / glass
+          :ARG1-of (s2f / fill-01
+                     :ARG2 (s2c / cube
+                             :consist-of (s2i / ice))
+                     :degree (s2h / half)))
+  :mode imperative)
+
+# alignment:s2c: 9-9
+s2f: 6-6
+s2g: 4-4
+s2h: 5-5
+s2i: 8-8
+s2p: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add wine and stir gently .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3a / add-02
+         :ARG1 (s3w / wine))
+  :op2 (s3s / stir-01
+         :manner (s3g / gentle))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 3-3
+s3g: 5-5
+s3s: 4-4
+s3w: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Top with a pineapple ring .
+# sentence level graph:
+(s4t / top-01
+  :ARG1 (s4r / ring
+          :consist-of (s4p / pineapple))
+  :mode imperative)
+
+# alignment:s4p: 4-4
+s4r: 5-5
+s4t: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Shake all ingredients except wine .
+Pour into a glass half filled with ice cubes .
+Add wine and stir gently .
+Top with a pineapple ring .

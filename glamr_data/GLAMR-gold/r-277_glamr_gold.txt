@@ -1,0 +1,334 @@
+# :: r-277::step01::sent01
+# :: snt1	Break the rice sticks into a pan and cover with boiling water for 5 minutes - then strain .
+(s1a / and~7
+     :op1 (s1b2 / break-01~0
+                :ARG1 (s1s3 / stick~3
+                            :consist-of (s1r / rice~2))
+                :location (s1p / pan~6)
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1a1 / and
+                                                 :op1 (s1d / degradation_material_integrity
+                                                           :polarity -
+                                                           :PATIENT s1s3)
+                                                 :op2 (s1h / has_physical_form
+                                                           :polarity -
+                                                           :PATIENT s1s3
+                                                           :V_FINAL_STATE (s1b1 / broken)))
+                                       :E3 (s1a2 / and
+                                                 :op1 (s1d1 / degradation_material_integrity
+                                                            :PATIENT s1s3)
+                                                 :op2 (s1h1 / has_physical_form
+                                                            :PATIENT s1s3
+                                                            :V_FINAL_STATE s1b1))
+                                       :E0 (s1d2 / do
+                                                 :ACTION s1b2))
+                :imp_output (s1b3 / break.RES))
+     :op2 (s1c / cover-02~8
+               :ARG2 (s1w / water~11
+                          :ARG1-of (s1b / boil-01~10))
+               :duration (s1t / temporal-quantity
+                              :quant 5
+                              :unit (s1m / minute~14))
+               :ARG0 s1y
+               :event-structure (s1se1 / subevents
+                                       :E1 (s1h2 / has_location
+                                                 :THEME s1w)
+                                       :E3 (s1a3 / and
+                                                 :op1 (s1m1 / motion
+                                                            :THEME s1w)
+                                                 :op2 (s1h3 / has_location
+                                                            :polarity -
+                                                            :THEME s1w))
+                                       :E4 (s1h4 / has_location
+                                                 :THEME s1w)
+                                       :E0 (s1d3 / do
+                                                 :ACTION s1c))
+               :imp_output (s1c1 / cover.RES))
+     :op3 (s1s2 / strain-01~17
+                :time (s1t2 / then~16)
+                :ARG0 s1y
+                :event-structure (s1se2 / subevents
+                                        :E1 (s1h5 / has_location
+                                                  :IMP_THEME s1c1)
+                                        :E3 (s1a4 / and
+                                                  :op1 (s1m2 / motion
+                                                             :IMP_THEME s1c1)
+                                                  :op2 (s1h6 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s1c1))
+                                        :E4 (s1h7 / has_location
+                                                  :IMP_THEME s1c1)
+                                        :E0 (s1d4 / do
+                                                  :ACTION s1s2))
+                :imp_output (s1s / strain.RES))
+     :mode imperative)
+
+
+# :: r-277::step02::sent01
+# :: snt2	Reserve .
+(s2r / reserve-01~0
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2a / and
+                                     :op1 (s2h / has_possession
+                                               :IMP_THEME (s2s / strain.RES))
+                                     :op2 (s2h1 / has_possession
+                                                :polarity -
+                                                :IMP_THEME s2s))
+                            :E2 (s2t / transfer
+                                     :IMP_THEME s2s)
+                            :E3 (s2a1 / and
+                                      :op1 (s2h2 / has_possession
+                                                 :IMP_THEME s2s)
+                                      :op2 (s2h3 / has_possession
+                                                 :polarity -
+                                                 :IMP_THEME s2s))
+                            :E0 (s2d / do
+                                     :ACTION s2r))
+     :imp_output (s2r1 / reserve.RES))
+
+
+# :: r-277::step03::sent01
+# :: snt3	Fry the shallots and garlic for a few minutes in the oil , then add the ginger , coriander , and turmeric .
+(s3a4 / and
+      :op1 (s3f / fry-01~0
+                :ARG1 (s3a2 / and~3
+                            :op1 (s3s / shallot~2)
+                            :op2 (s3g / garlic~4))
+                :medium (s3o / oil~11)
+                :duration (s3t / temporal-quantity
+                               :unit (s3m / minute~8)
+                               :quant "few")
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3c1 / cooked
+                                                 :polarity -
+                                                 :PATIENT s3g
+                                                 :V_FINAL_STATE (s3f1 / fried))
+                                       :E3 (s3a1 / apply_heat
+                                                 :INSTRUMENT s3o
+                                                 :PATIENT s3g)
+                                       :E4 (s3c2 / cooked
+                                                 :PATIENT s3g
+                                                 :V_FINAL_STATE s3f1)
+                                       :E0 (s3d / do
+                                                :ACTION s3f))
+                :imp_output (s3f2 / fry.RES))
+      :op2 (s3a / add-02~14
+                :ARG1 (s3a3 / and~20
+                            :op1 (s3g2 / ginger~16)
+                            :op2 (s3c / coriander~18)
+                            :op3 (s3t3 / turmeric~21))
+                :time (s3t2 / then~13)
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s3g2
+                                                  :PATIENT_J s3c
+                                                  :PATIENT_K s3t3)
+                                        :E3 (s3t4 / together
+                                                  :PATIENT_I s3g2
+                                                  :PATIENT_J s3c
+                                                  :PATIENT_K s3t3)
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3a))
+                :imp_output (s3a5 / add.RES))
+      :mode imperative)
+
+
+# :: r-277::step04::sent01
+# :: snt4	Pour in the stock , bring to a boil , then reduce heat and simmer for 30 minutes .
+(s4a2 / and~13
+      :op1 (s4p2 / pour-01~0
+                 :ARG1 (s4s2 / stock~3)
+                 :ARG0 (s4y / you)
+                 :event-structure (s4se / subevents
+                                        :E1 (s4h1 / has_location
+                                                  :THEME s4s2)
+                                        :E3 (s4a / and
+                                                 :op1 (s4m1 / motion
+                                                            :THEME s4s2)
+                                                 :op2 (s4h2 / has_location
+                                                            :polarity -
+                                                            :THEME s4s2))
+                                        :E4 (s4h3 / has_location
+                                                  :THEME s4s2
+                                                  :DESTINATION (s4i / in~1))
+                                        :E0 (s4d / do
+                                                 :ACTION s4p2))
+                 :imp_output (s4p / pour.RES))
+      :op2 (s4b2 / bring-ON-02~5
+                 :destination (s4b / boil-01~8)
+                 :ARG0 s4y
+                 :event-structure (s4se1 / subevents
+                                         :E1 (s4c / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s4p
+                                                  :V_FINAL_STATE (s4b1 / brought-to-a-boil))
+                                         :E3 (s4a1 / apply_heat
+                                                   :IMP_PATIENT s4p)
+                                         :E4 (s4c1 / cooked
+                                                   :IMP_PATIENT s4p
+                                                   :V_FINAL_STATE s4b1)
+                                         :E0 (s4d1 / do
+                                                   :ACTION s4b2))
+                 :imp_output (s4b3 / bring-to-a-boil.RES))
+      :op3 (s4r / reduce-01~11
+                :ARG1 (s4h / heat~12)
+                :time (s4t2 / then~10))
+      :op4 (s4s / simmer-01~14
+                :duration (s4t / temporal-quantity
+                               :quant 30
+                               :unit (s4m / minute~17))
+                :ARG0 s4y
+                :event-structure (s4se2 / subevents
+                                        :E1 (s4c2 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s4b3
+                                                  :V_FINAL_STATE (s4s1 / simmered))
+                                        :E3 (s4a3 / apply_heat
+                                                  :IMP_PATIENT s4b3)
+                                        :E4 (s4c3 / cooked
+                                                  :IMP_PATIENT s4b3
+                                                  :V_FINAL_STATE s4s1)
+                                        :E0 (s4d2 / do
+                                                  :ACTION s4s))
+                :imp_output (s4s3 / simmer.RES))
+      :mode imperative)
+
+
+# :: r-277::step05::sent01
+# :: snt5	When ready to serve , add the rice sticks and the coconut milk and bring to a simmer for about 5 minutes ( if you bring the coconut milk to a boil , you 'll use the coconut taste )
+(s5a5 / and~13
+      :op1 (s5a2 / add-02~5
+                 :ARG1 (s5a3 / and~9
+                             :op1 (s5s3 / sticks~8
+                                        :consist-of (s5r2 / rice~7))
+                             :op2 (s5m3 / milk~12
+                                        :source (s5c / coconut~11)))
+                 :ARG0 (s5y1 / you)
+                 :event-structure (s5se / subevents
+                                        :E1 (s5t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s5s3
+                                                  :PATIENT_J s5m3)
+                                        :E3 (s5t3 / together
+                                                  :PATIENT_I s5s3
+                                                  :PATIENT_J s5m3)
+                                        :E0 (s5d / do
+                                                 :ACTION s5a2))
+                 :imp_output (s5a1 / add.RES))
+      :op2 (s5b2 / bring-ON-02~14
+                 :destination (s5s2 / simmer-01~17
+                                    :duration (s5a / about~19
+                                                   :op1 (s5t2 / temporal-quantity
+                                                              :unit (s5m2 / minute~21)
+                                                              :quant 5))))
+      :op3 (s5u / use-01~35
+                :ARG0 (s5y / you)
+                :ARG1 (s5t / taste~38
+                           :mod (s5c2 / coconut~37))
+                :condition (s5b / bring-01~25
+                                :destination (s5b3 / boil-01~31
+                                                   :ARG1 (s5m / milk~28))))
+      :mode imperative
+      :time (s5r / ready-02~1
+                 :ARG2 (s5s / serve-02~3)))
+
+
+# :: r-277::step06::sent01
+# :: snt6	Toss in the shrimp and bean sprouts and simmer for 5 more minutes .
+(s6a / and~7
+     :op1 (s6t2 / toss-01~0
+                :ARG1 (s6a2 / and~4
+                            :op1 (s6s / shrimp~3)
+                            :op2 (s6b2 / bean-sprout~5,6))
+                :ARG0 (s6y / you)
+                :event-structure (s6se / subevents
+                                       :E1 (s6b / be
+                                                :polarity -)
+                                       :E3 (s6b1 / be)
+                                       :E0 (s6d / do
+                                                :ACTION s6t2))
+                :imp_output (s6t / toss.RES))
+     :op2 (s6s2 / simmer-01~8
+                :duration (s6t3 / temporal-quantity
+                                :quant 5
+                                :unit (s6m3 / minute~12)
+                                :mod (s6m / more~11))
+                :ARG0 s6y
+                :event-structure (s6se1 / subevents
+                                        :E1 (s6c / cooked
+                                                 :polarity -
+                                                 :IMP_PATIENT s6t
+                                                 :V_FINAL_STATE (s6s1 / simmered))
+                                        :E3 (s6a1 / apply_heat
+                                                  :IMP_PATIENT s6t)
+                                        :E4 (s6c1 / cooked
+                                                  :IMP_PATIENT s6t
+                                                  :V_FINAL_STATE s6s1)
+                                        :E0 (s6d1 / do
+                                                  :ACTION s6s2))
+                :imp_output (s6s3 / simmer.RES))
+     :mode imperative)
+
+
+# :: r-277::step07::sent01
+# :: snt7	Adjust the seasoning , ladle into bowls , and garnish with chopped scallions .
+(s7a2 / and~8
+      :op1 (s7a / adjust-01~0
+                :ARG1 (s7s2 / seasoning~2)
+                :ARG0 (s7y / you)
+                :event-structure (s7se / subevents
+                                       :E1 (s7a1 / adjusted
+                                                 :polarity -
+                                                 :PATIENT s7s2)
+                                       :E3 (s7a3 / adjusted
+                                                 :PATIENT s7s2)
+                                       :E (s7e / equals
+                                               :PATIENT s7s2)
+                                       :E0 (s7d / do
+                                                :ACTION s7a))
+                :imp_output (s7a4 / adjust.RES))
+      :op2 (s7l / ladle-01~4
+                :ARG2 (s7b / bowl~6)
+                :ARG0 s7y
+                :event-structure (s7se1 / subevents
+                                        :E1 (s7h / has_location
+                                                 :IMP_THEME s7a4)
+                                        :E3 (s7a5 / and
+                                                  :op1 (s7m / motion
+                                                            :IMP_THEME s7a4)
+                                                  :op2 (s7h1 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s7a4))
+                                        :E4 (s7h2 / has_location
+                                                  :IMP_THEME s7a4
+                                                  :DESTINATION s7b)
+                                        :E0 (s7d1 / do
+                                                  :ACTION s7l))
+                :imp_output (s7l1 / ladle.RES))
+      :op3 (s7g / garnish-01~9
+                :ARG2 (s7s / scallion~12
+                           :ARG1-of (s7c / chop-01~11))
+                :ARG0 s7y
+                :event-structure (s7se2 / subevents
+                                        :E1 (s7h3 / has_location
+                                                  :THEME s7s)
+                                        :E3 (s7a6 / and
+                                                  :op1 (s7m1 / motion
+                                                             :THEME s7s)
+                                                  :op2 (s7h4 / has_location
+                                                             :polarity -
+                                                             :THEME s7s))
+                                        :E4 (s7h5 / has_location
+                                                  :THEME s7s)
+                                        :E0 (s7d2 / do
+                                                  :ACTION s7g))
+                :imp_output (s7g1 / garnish.RES))
+      :mode imperative)
+
+

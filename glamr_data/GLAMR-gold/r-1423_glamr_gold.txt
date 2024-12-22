@@ -1,0 +1,428 @@
+# :: r-1423::step01::sent01
+# :: snt1	Cut meat into small cubes .
+(s1c2 / cut-01~0
+      :ARG1 (s1m / meat~1)
+      :destination (s1c / cube~4
+                        :mod (s1s / small~3))
+      :mode imperative
+      :ARG0 (s1y / you)
+      :event-structure (s1se / subevents
+                             :E1 (s1d / degradation_material_integrity
+                                      :polarity -
+                                      :PATIENT s1m)
+                             :E2 (s1c1 / contact
+                                       :PATIENT s1m)
+                             :E3 (s1d1 / degradation_material_integrity
+                                       :PATIENT s1m)
+                             :E0 (s1d2 / do
+                                       :ACTION s1c2))
+      :imp_output (s1c3 / cut.RES))
+
+
+# :: r-1423::step02::sent01
+# :: snt2	Heat 1 quart water to a boil , add meat and a few of the bones and bring to a boil again .
+(s2a3 / and~16
+      :op1 (s2h / heat-01~0
+                :ARG1 (s2w / water~3
+                           :quant (s2v / volume-quantity
+                                       :unit (s2q / quart)
+                                       :quant 1))
+                :destination (s2b / boil~6))
+      :op2 (s2a / add-02~8
+                :ARG1 (s2a4 / and~10
+                            :op1 (s2m / meat~9)
+                            :op2 (s2b3 / bone~15
+                                       :quant (s2f / few~12)))
+                :ARG0 (s2y / you)
+                :event-structure (s2se / subevents
+                                       :E1 (s2t / together
+                                                :polarity -
+                                                :PATIENT_I s2m
+                                                :PATIENT_J s2b3)
+                                       :E3 (s2t1 / together
+                                                 :PATIENT_I s2m
+                                                 :PATIENT_J s2b3)
+                                       :E0 (s2d / do
+                                                :ACTION s2a))
+                :imp_output (s2a1 / add.RES))
+      :op3 (s2b4 / bring-ON-02~17
+                 :destination (s2b2 / boil~20)
+                 :mod (s2a2 / again~21)
+                 :ARG0 s2y
+                 :event-structure (s2se1 / subevents
+                                         :E1 (s2c / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s2a1
+                                                  :V_FINAL_STATE (s2b1 / brought-to-a-boil))
+                                         :E3 (s2a5 / apply_heat
+                                                   :IMP_PATIENT s2a1)
+                                         :E4 (s2c1 / cooked
+                                                   :IMP_PATIENT s2a1
+                                                   :V_FINAL_STATE s2b1)
+                                         :E0 (s2d1 / do
+                                                   :ACTION s2b4))
+                 :imp_output (s2b5 / bring-to-a-boil.RES))
+      :mode imperative)
+
+
+# :: r-1423::step03::sent01
+# :: snt3	Pour water , meat and bones into a clean sink and wash well .
+(s3a / and~10
+     :op1 (s3p / pour-01~0
+               :ARG1 (s3a2 / and~4
+                           :op1 (s3w2 / water~1)
+                           :op2 (s3m / meat~3)
+                           :op3 (s3b / bone~5))
+               :ARG3 (s3s / sink~9
+                          :mod (s3c / clean~8))
+               :ARG0 (s3y / you)
+               :event-structure (s3se / subevents
+                                      :E1 (s3h / has_location
+                                               :THEME s3b)
+                                      :E3 (s3a1 / and
+                                                :op1 (s3m1 / motion
+                                                           :THEME s3b)
+                                                :op2 (s3h1 / has_location
+                                                           :polarity -
+                                                           :THEME s3b))
+                                      :E4 (s3h2 / has_location
+                                                :THEME s3b
+                                                :DESTINATION s3s)
+                                      :E0 (s3d / do
+                                               :ACTION s3p))
+               :imp_outputI (s3p1 / pour.RES)
+               :imp_outputJ (s3p2 / pour.RES)
+               :imp_outputK (s3p3 / pour.RES))
+     :op2 (s3w / wash-01~11
+               :manner (s3w3 / well~12)
+               :ARG0 s3y
+               :event-structure (s3se1 / subevents
+                                       :E1 (s3h3 / has_state
+                                                 :polarity -
+                                                 :IMP_PATIENT_I s3p2
+                                                 :IMP_PATIENT_J s3p3
+                                                 :V_FINAL_STATE (s3w1 / washed))
+                                       :E3 (s3h4 / has_state
+                                                 :IMP_PATIENT_I s3p2
+                                                 :IMP_PATIENT_J s3p3
+                                                 :V_FINAL_STATE s3w1)
+                                       :E0 (s3d1 / do
+                                                 :ACTION s3w))
+               :imp_output (s3w4 / wash.RES))
+     :mode imperative)
+
+
+# :: r-1423::step04::sent01
+# :: snt4	Place meat , bones and 1 1/2 quart water into a large , clean pan , bring to the boil , skim and cook at a moderate heat for about 60 minutes .
+(s4a2 / and~22
+      :op1 (s4p2 / place-01~0
+                 :ARG1 (s4a3 / and~4
+                             :op1 (s4m / meat~1)
+                             :op2 (s4b2 / bone~3)
+                             :op3 (s4w / water~8
+                                       :quant (s4v / volume-quantity
+                                                   :quant 1.5
+                                                   :unit (s4q / quart~7))))
+                 :ARG2 (s4p / pan~14
+                            :mod (s4c / clean~13)
+                            :mod (s4l / large~11))
+                 :ARG0 (s4y / you)
+                 :event-structure (s4se / subevents
+                                        :E1 (s4h1 / has_location
+                                                  :THEME s4w)
+                                        :E3 (s4a1 / and
+                                                  :op1 (s4m1 / motion
+                                                             :THEME s4w)
+                                                  :op2 (s4h2 / has_location
+                                                             :polarity -
+                                                             :THEME s4w))
+                                        :E4 (s4h3 / has_location
+                                                  :THEME s4w
+                                                  :DESTINATION s4p)
+                                        :E0 (s4d / do
+                                                 :ACTION s4p2))
+                 :imp_output (s4p1 / place.RES))
+      :op2 (s4b / bring-ON-02~16
+                :destination (s4b3 / boil~19)
+                :ARG0 s4y
+                :event-structure (s4se1 / subevents
+                                        :E1 (s4c1 / cooked
+                                                  :polarity -
+                                                  :PATIENT s4w
+                                                  :V_FINAL_STATE (s4b1 / brought-to-the-boil))
+                                        :E3 (s4a4 / apply_heat
+                                                  :PATIENT s4w)
+                                        :E4 (s4c3 / cooked
+                                                  :PATIENT s4w
+                                                  :V_FINAL_STATE s4b1)
+                                        :E0 (s4d1 / do
+                                                  :ACTION s4b))
+                :imp_output (s4b4 / bring-to-the-boil.RES))
+      :op3 (s4s / skim-02~21
+                :ARG0 s4y
+                :event-structure (s4se2 / subevents
+                                        :E1 (s4h4 / has_location
+                                                  :IMP_THEME s4b4)
+                                        :E3 (s4a5 / and
+                                                  :op1 (s4m4 / motion
+                                                             :IMP_THEME s4b4)
+                                                  :op2 (s4h5 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s4b4))
+                                        :E4 (s4h6 / has_location
+                                                  :IMP_THEME s4b4)
+                                        :E0 (s4d2 / do
+                                                  :ACTION s4s))
+                :imp_output (s4s1 / skim.RES))
+      :op4 (s4c2 / cook-01~23
+                 :duration (s4a / about~29
+                                :op1 (s4t / temporal-quantity
+                                          :quant 60
+                                          :unit (s4m2 / minute~31)))
+                 :manner (s4h / heat~27
+                              :mod (s4m3 / moderate~26))
+                 :ARG0 s4y
+                 :event-structure (s4se3 / subevents
+                                         :E1 (s4c4 / cooked
+                                                   :polarity -
+                                                   :IMP_PATIENT s4s1
+                                                   :V_FINAL_STATE (s4c5 / cooked))
+                                         :E3 (s4a6 / apply_heat
+                                                   :IMP_PATIENT s4s1)
+                                         :E4 (s4c6 / cooked
+                                                   :IMP_PATIENT s4s1
+                                                   :V_FINAL_STATE s4c5)
+                                         :E0 (s4d3 / do
+                                                   :ACTION s4c2))
+                 :imp_output (s4c7 / cook.RES))
+      :mode imperative)
+
+
+# :: r-1423::step05::sent01
+# :: snt5	Remove bones and season to taste with salt and pepper .
+(s5a / and~2
+     :op1 (s5r / remove-01~0
+               :ARG1 (s5b / bone~1)
+               :ARG0 (s5y / you)
+               :event-structure (s5se / subevents
+                                      :E1 (s5h / has_location
+                                               :THEME s5b)
+                                      :E3 (s5a1 / and
+                                                :op1 (s5m / motion
+                                                          :THEME s5b)
+                                                :op2 (s5h1 / has_location
+                                                           :polarity -
+                                                           :THEME s5b))
+                                      :E4 (s5h2 / has_location
+                                                :THEME s5b)
+                                      :E0 (s5d / do
+                                               :ACTION s5r))
+               :imp_outputI (s5r1 / remove.RES)
+               :imp_outputJ (s5r2 / remove.RES))
+     :op2 (s5s / season-01~3
+               :ARG2 (s5a2 / and~8
+                           :op1 (s5s2 / salt~7)
+                           :op2 (s5p / pepper~9))
+               :purpose (s5t / taste-01~5)
+               :ARG0 s5y
+               :event-structure (s5se1 / subevents
+                                       :E1 (s5h3 / has_location
+                                                 :IMP_THEME s5r1)
+                                       :E3 (s5a3 / and
+                                                 :op1 (s5m1 / motion
+                                                            :IMP_THEME s5r1)
+                                                 :op2 (s5h4 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s5r1))
+                                       :E4 (s5h5 / has_location
+                                                 :IMP_THEME s5r1)
+                                       :E0 (s5d1 / do
+                                                 :ACTION s5s))
+               :imp_output (s5s1 / season.RES))
+     :mode imperative)
+
+
+# :: r-1423::step06::sent01
+# :: snt6	Clean vegetables , cut into pieces and add to the pot .
+(s6a2 / and~6
+      :op1 (s6c / clean-01~0
+                :ARG1 (s6v2 / vegetable~1)
+                :ARG0 (s6y / you)
+                :event-structure (s6se / subevents
+                                       :E1 (s6a1 / and
+                                                 :op1 (s6h / has_location
+                                                           :THEME s6v2)
+                                                 :op2 (s6h1 / has_state
+                                                            :polarity -
+                                                            :V_FINAL_STATE (s6c1 / cleaned)))
+                                       :E3 (s6a3 / and
+                                                 :op1 (s6m / motion
+                                                           :THEME s6v2)
+                                                 :op2 (s6h2 / has_location
+                                                            :polarity -
+                                                            :THEME s6v2))
+                                       :E4 (s6a4 / and
+                                                 :op1 (s6h3 / has_location
+                                                            :THEME s6v2)
+                                                 :op2 (s6h4 / has_state
+                                                            :V_FINAL_STATE s6c1))
+                                       :E0 (s6d / do
+                                                :ACTION s6c))
+                :imp_output (s6c3 / clean.RES))
+      :op2 (s6c2 / cut-01~3
+                 :destination (s6p / piece~5)
+                 :ARG0 s6y
+                 :event-structure (s6se1 / subevents
+                                         :E1 (s6d1 / degradation_material_integrity
+                                                   :polarity -
+                                                   :PATIENT s6v2)
+                                         :E2 (s6c4 / contact
+                                                   :PATIENT s6v2)
+                                         :E3 (s6d2 / degradation_material_integrity
+                                                   :PATIENT s6v2)
+                                         :E0 (s6d3 / do
+                                                   :ACTION s6c2))
+                 :imp_output (s6c5 / cut.RES))
+      :op3 (s6a / add-02~7
+                :location (s6p2 / pot~10)
+                :ARG0 s6y
+                :event-structure (s6se2 / subevents
+                                        :E1 (s6t / together
+                                                 :polarity -
+                                                 :PATIENT_I s6p
+                                                 :PATIENT_J s6p2)
+                                        :E3 (s6t1 / together
+                                                  :PATIENT_I s6p
+                                                  :PATIENT_J s6p2)
+                                        :E0 (s6d4 / do
+                                                  :ACTION s6a))
+                :imp_output (s6a5 / add.RES))
+      :mode imperative)
+
+
+# :: r-1423::step07::sent01
+# :: snt7	Bring to boil , skim , add rice and cook for 20 minutes , season to taste with salt and pepper if needed and add herbs to the soup just before it is served .
+(s7a5 / and~8,23
+      :op1 (s7b2 / bring-on-02~0
+                 :destination (s7b3 / boil~2)
+                 :ARG0 (s7y / you)
+                 :event-structure (s7se / subevents
+                                        :E1 (s7c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT (s7a1 / add.RES)
+                                                  :V_FINAL_STATE (s7b1 / brought-to-boil))
+                                        :E3 (s7a3 / apply_heat
+                                                  :IMP_PATIENT s7a1)
+                                        :E4 (s7c2 / cooked
+                                                  :IMP_PATIENT s7a1
+                                                  :V_FINAL_STATE s7b1)
+                                        :E0 (s7d / do
+                                                 :ACTION s7b2))
+                 :imp_output (s7b4 / bring-to-boil.RES))
+      :op2 (s7s4 / skim-02~4
+                 :ARG0 s7y
+                 :event-structure (s7se1 / subevents
+                                         :E1 (s7h1 / has_location
+                                                   :IMP_THEME s7b4)
+                                         :E3 (s7a6 / and
+                                                   :op1 (s7m1 / motion
+                                                              :IMP_THEME s7b4)
+                                                   :op2 (s7h2 / has_location
+                                                              :polarity -
+                                                              :IMP_THEME s7b4))
+                                         :E4 (s7h3 / has_location
+                                                   :IMP_THEME s7b4)
+                                         :E0 (s7d1 / do
+                                                   :ACTION s7s4))
+                 :imp_output (s7s1 / skim.RES))
+      :op3 (s7a / add-02~6
+                :ARG1 (s7r / rice~7)
+                :ARG0 s7y
+                :event-structure (s7se2 / subevents
+                                        :E1 (s7t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s7r)
+                                        :E3 (s7t3 / together
+                                                  :PATIENT_I s7r)
+                                        :E0 (s7d2 / do
+                                                  :ACTION s7a))
+                :imp_output (s7a7 / add.RES))
+      :op4 (s7c / cook-01~9
+                :duration (s7t2 / temporal-quantity
+                                :unit (s7m / minute~12)
+                                :quant 20)
+                :ARG0 s7y
+                :event-structure (s7se3 / subevents
+                                        :E1 (s7c3 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s7a7
+                                                  :V_FINAL_STATE (s7c4 / cooked))
+                                        :E3 (s7a8 / apply_heat
+                                                  :IMP_PATIENT s7a7)
+                                        :E4 (s7c5 / cooked
+                                                  :IMP_PATIENT s7a7
+                                                  :V_FINAL_STATE s7c4)
+                                        :E0 (s7d3 / do
+                                                  :ACTION s7c))
+                :imp_output (s7c6 / cook.RES))
+      :op5 (s7s / season-01~14
+                :ARG2 (s7a4 / and~19
+                            :op1 (s7s2 / salt~18)
+                            :op2 (s7p / pepper~20))
+                :condition (s7n / need-01~22)
+                :purpose (s7t / taste-01~16)
+                :ARG0 s7y
+                :event-structure (s7se4 / subevents
+                                        :E1 (s7h4 / has_location
+                                                  :IMP_THEME s7c6)
+                                        :E3 (s7a9 / and
+                                                  :op1 (s7m2 / motion
+                                                             :IMP_THEME s7c6)
+                                                  :op2 (s7h5 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s7c6))
+                                        :E4 (s7h6 / has_location
+                                                  :IMP_THEME s7c6)
+                                        :E0 (s7d4 / do
+                                                  :ACTION s7s))
+                :imp_output (s7s6 / season.RES))
+      :op6 (s7a2 / add-02~24
+                 :ARG1 (s7h / herb~25)
+                 :ARG2 (s7s5 / soup~28)
+                 :time (s7b / before~30
+                            :op1 (s7s3 / serve-02~33
+                                       :ARG0 s7y
+                                       :event-structure (s7se6 / subevents
+                                                               :E1 (s7a11 / and
+                                                                          :op1 (s7h7 / has_possession
+                                                                                     :THEME (s7i / it~31))
+                                                                          :op2 (s7h8 / has_possession
+                                                                                     :polarity -
+                                                                                     :THEME s7i))
+                                                               :E2 (s7t6 / transfer
+                                                                         :THEME s7i)
+                                                               :E3 (s7a12 / and
+                                                                          :op1 (s7h9 / has_possession
+                                                                                     :THEME s7i)
+                                                                          :op2 (s7h10 / has_possession
+                                                                                      :polarity -
+                                                                                      :THEME s7i))
+                                                               :E0 (s7d6 / do
+                                                                         :ACTION s7s3))
+                                       :imp_output (s7s7 / serve.RES))
+                            :mod (s7j / just~29))
+                 :ARG0 s7y
+                 :event-structure (s7se5 / subevents
+                                         :E1 (s7t4 / together
+                                                   :polarity -
+                                                   :PATIENT_I s7h
+                                                   :PATIENT_J s7s5)
+                                         :E3 (s7t5 / together
+                                                   :PATIENT_I s7h
+                                                   :PATIENT_J s7s5)
+                                         :E0 (s7d5 / do
+                                                   :ACTION s7a2))
+                 :imp_output (s7a10 / add.RES))
+      :mode imperative)
+
+

@@ -1,0 +1,59 @@
+# :: f-THFWK7D6::step01::sent01
+# :: snt1	Preheat oven to 350 F.
+(s1 / sentence)
+
+
+# :: f-THFWK7D6::step02::sent01
+# :: snt2	Grease cookie sheets .
+(s2 / sentence)
+
+
+# :: f-THFWK7D6::step03::sent01
+# :: snt3	In a medium bowl , cream together the shortening , sugar , coffee and Cuppa Joe Spice .
+(s3 / sentence
+    :coref ((s3s :aggregation s3c3)
+			(s3s2 :aggregation s3c3)
+			(s3c :aggregation s3c3)))
+
+
+# :: f-THFWK7D6::step04::sent01
+# :: snt4	Beat in the egg , flour , vanilla and chopped nuts .
+(s4 / sentence
+    :coref ((s3c3 :aggregation s4b2)
+			(s4e :aggregation s4b2)
+			(s4f :aggregation s4b2)
+			(s4v :aggregation s4b2)
+			(s4c :aggregation s4b2)))
+
+
+# :: f-THFWK7D6::step05::sent01
+# :: snt5	Mix until well blended .
+(s5 / sentence
+    :coref ((s4b2 :cut s5m4)
+			(s3c3 :cut s5m4)))
+
+
+# :: f-THFWK7D6::step06::sent01
+# :: snt6	Drop by teaspoonfuls onto cookie sheets
+(s6 / sentence
+    :coref ((s5m4 :cut s6d3)
+			(s3c3 :cut s6d3)
+			(s4b2 :cut s6d3)))
+
+
+# :: f-THFWK7D6::step07::sent01
+# :: snt7	Bake for 10 to 12 minutes in the preheated oven , or until edges are golden .
+(s7 / sentence
+    :coref ((s6d3 :cut s7b3)
+			(s5m4 :cut s7b3)
+			(s4b2 :cut s7b3)))
+
+
+# :: f-THFWK7D6::step08::sent01
+# :: snt8	Let cool on wire racks
+(s8 / sentence
+    :coref ((s7b3 :cut s8c2)
+			(s6d3 :cut s8c2)
+			(s4b2 :cut s8c2)))
+
+

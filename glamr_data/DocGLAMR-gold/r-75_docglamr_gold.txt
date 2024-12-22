@@ -1,0 +1,61 @@
+# :: r-75::step01::sent01
+# :: snt1	Preheat the broiler .
+(s1 / sentence)
+
+
+# :: r-75::step02::sent01
+# :: snt2	Prick the eggplant a few times with a fork .
+(s2 / sentence
+    :coref ((s2e :cut s2p3)))
+
+
+# :: r-75::step03::sent01
+# :: snt3	Place it on a foil - lined baking tray .
+(s3 / sentence
+    :coref ((s2p3 :cut s3p1)))
+
+
+# :: r-75::step04::sent01
+# :: snt4	Place under broiler .
+(s4 / sentence
+    :coref ((s3p1 :cut s4p2)))
+
+
+# :: r-75::step05::sent01
+# :: snt5	When the skin chars on one side , give the eggplant a 1/4 turn .
+(s5 / sentence
+    :coref ((s4p2 :cut s5t)))
+
+
+# :: r-75::step06::sent01
+# :: snt6	Continue until entire skin is charred and pulp is soft and mushy .
+(s6 / sentence
+    :coref ((s5t :cut s6c2)))
+
+
+# :: r-75::step07::sent01
+# :: snt7	Peel away skin , rinsing to remove all charred skin .
+(s7 / sentence
+    :coref ((s6c2 :cut s7p3)
+			(s7p3 :cut s7r1)))
+
+
+# :: r-75::step08::sent01
+# :: snt8	Pat dry .
+(s8 / sentence
+    :coref ((s7r1 :cut s8p2)))
+
+
+# :: r-75::step09::sent01
+# :: snt9	In blender or food processor , combine all ingredients .
+(s9 / sentence
+    :coref ((s8p2 :aggregation s9c2)
+			(s9i :aggregation s9c2)))
+
+
+# :: r-75::step10::sent01
+# :: snt10	Serve with toasted Turkish bread and enjoy !
+(s10 / sentence
+     :coref ((s9c2 :aggregation s10s1)))
+
+

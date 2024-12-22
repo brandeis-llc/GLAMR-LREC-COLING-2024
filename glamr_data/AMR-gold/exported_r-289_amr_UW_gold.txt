@@ -1,0 +1,212 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1448
+export time: 9/14/2023, 3:13:56 PM
+
+# :: snt1	Clean the beef rump and cut into cubes .
+# sentence level graph:
+(s1a / and
+  :op1 (s1c / clean-01
+         :ARG1 (s1r / rump
+                 :part-of (s1b / beef)))
+  :op2 (s1c3 / cut-01
+         :destination (s1c2 / cube))
+  :mode imperative)
+
+# alignment:s1a: 5-5
+s1b: 3-3
+s1c: 1-1
+s1c2: 8-8
+s1c3: 6-6
+s1r: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Blend shallot , garlic , ginger , candlenut , turmeric , red chile and black nuts ( kluwek ) until smooth .
+# sentence level graph:
+(s2b2 / blend-01
+  :ARG1 (s2a / and
+          :op1 (s2s / shallot)
+          :op2 (s2g / garlic)
+          :op3 (s2g2 / ginger)
+          :op4 (s2c / candlenut)
+          :op5 (s2t / turmeric)
+          :op6 (s2c2 / chile
+                 :mod (s2r / red))
+          :op7 (s2n / nut
+                 :ARG1-of (s2m / mean-01
+                            :ARG2 (s2k / kluwek))
+                 :mod (s2b / black)))
+  :duration (s2u / until
+              :op1 (s2s2 / smooth))
+  :mode imperative)
+
+# alignment:s2a: 14-14
+s2b: 15-15
+s2b2: 1-1
+s2c: 8-8
+s2c2: 13-13
+s2g: 4-4
+s2g2: 6-6
+s2k: 18-18
+s2m: 17-17
+s2n: 16-16
+s2r: 12-12
+s2s: 2-2
+s2s2: 21-21
+s2t: 10-10
+s2u: 20-20
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Heat pan and put all blended ingredients and saute until cooked and smell good .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3h / heat-01
+         :ARG1 (s3p / pan))
+  :op2 (s3p2 / put-01
+         :ARG1 (s3i / ingredient
+                 :ARG1-of (s3b / blend-01)
+                 :mod (s3a / all)))
+  :op3 (s3s2 / saute-01
+         :duration (s3u / until
+                     :op1 (s3a3 / and
+                            :op1 (s3c / cook-01)
+                            :op2 (s3s / smell-02
+                                   :mod (s3g / good)))))
+  :mode imperative)
+
+# alignment:s3a: 5-5
+s3a2: 3-3
+s3a3: 12-12
+s3b: 6-6
+s3c: -1--1
+s3g: -1--1
+s3h: 1-1
+s3i: 7-7
+s3p: 2-2
+s3p2: 4-4
+s3s: -1--1
+s3u: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add beef rump cubes and water to make the stock .
+# sentence level graph:
+(s4a / add-02
+  :ARG1 (s4a2 / and
+          :op1 (s4c / cube
+                 :consist-of (s4r / rump
+                               :part-of (s4b / beef)))
+          :op2 (s4w / water))
+  :purpose (s4m / make-01
+             :ARG1 (s4s / stock))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4a2: 5-5
+s4b: 2-2
+s4c: 4-4
+s4m: 8-8
+s4r: 3-3
+s4s: 10-10
+s4w: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Put kaffir lime leaves , salam , galangal , lemon grass and boil until beef is tender .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5p / put-01
+         :ARG1 (s5a / and
+                 :op1 (s5l / leaf
+                        :part-of (s5l3 / lime
+                                   :mod (s5k / kaffir)))
+                 :op2 (s5s / salam)
+                 :op3 (s5g / galangal)
+                 :op4 (s5l2 / lemongrass)))
+  :op2 (s5b2 / boil-01
+         :duration (s5u / until
+                     :op1 (s5t / tender-ON-03
+                            :ARG1 (s5b / beef))))
+  :mode imperative)
+
+# alignment:s5a: 5-5
+s5a2: 12-12
+s5b: 15-15
+s5b2: 13-13
+s5g: 8-8
+s5k: 2-2
+s5l: 4-4
+s5l2: 10-10
+s5l3: 3-3
+s5p: 1-1
+s5s: 6-6
+s5t: 17-17
+s5u: 14-14
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Season with coriander powder , cumin , salt and sugar according to taste .
+# sentence level graph:
+(s6s2 / season-01
+  :ARG2 (s6a / and
+          :op1 (s6p / powder
+                 :source (s6c / coriander))
+          :op2 (s6c2 / cumin)
+          :op3 (s6s / salt)
+          :op4 (s6s3 / sugar))
+  :cause (s6a2 / according
+           :op1 (s6t / taste-01))
+  :mode imperative)
+
+# alignment:s6a: 9-9
+s6c: 3-3
+s6c2: 6-6
+s6p: 4-4
+s6s: 8-8
+s6s2: 1-1
+s6s3: 10-10
+s6t: 13-13
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Clean the beef rump and cut into cubes .
+Blend shallot , garlic , ginger , candlenut , turmeric , red chile and black nuts ( kluwek ) until smooth .
+Heat pan and put all blended ingredients and saute until cooked and smell good .
+Add beef rump cubes and water to make the stock .
+Put kaffir lime leaves , salam , galangal , lemon grass and boil until beef is tender .
+Season with coriander powder , cumin , salt and sugar according to taste .

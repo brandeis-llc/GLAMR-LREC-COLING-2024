@@ -1,0 +1,313 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1437
+export time: 9/12/2023, 8:35:48 PM
+
+# :: snt1	Saute pancetta in a large pan over medium - high heat , stirring occasionally , until crispy .
+# sentence level graph:
+(s1a / Saute-01
+  :ARG1 (s1p2 / pancetta)
+  :location (s1p / pan
+              :mod (s1l / large)
+              :mod (s1t / temperature-quantity
+                     :mod (s1u2 / umr-choice
+                            :op1 (s1m2 / medium)
+                            :op2 (s1h3 / high))))
+  :manner (s1s / stir-01
+            :manner (s1o / occasional))
+  :mode imperative
+  :duration (s1u / until
+              :op1 (s1c / crispy)))
+
+# alignment:s1a: 1-1
+s1c: -1--1
+s1h3: 10-10
+s1l: 5-5
+s1m2: 8-8
+s1o: 14-14
+s1p: 6-6
+s1p2: -1--1
+s1s: 13-13
+s1t: 0-0
+s1u: -1--1
+s1u2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Remove pancetta with a slotted spoon and set aside .
+# sentence level graph:
+(s2a / and
+  :op1 (s2r / remove-01
+         :ARG1 (s2p / pancetta)
+         :instrument (s2s3 / spoon
+                       :ARG1-of (s2s2 / slot-01)))
+  :op2 (s2s / set-01
+         :ARG2 (s2a2 / aside))
+  :mode imperative)
+
+# alignment:s2a: 7-7
+s2a2: 9-9
+s2p: 2-2
+s2r: 1-1
+s2s: 8-8
+s2s2: 5-5
+s2s3: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add asparagus to the pan and saute in the pancetta grease for about 5 - 6 minutes , stirring occasionally , until almost cooked .
+# sentence level graph:
+(s3a4 / and
+  :op1 (s3a2 / add-02
+         :ARG1 (s3a5 / asparagus)
+         :ARG2 (s3p / pan))
+  :op2 (s3s2 / saute-01
+         :duration (s3a / about
+                     :op1 (s3b / between
+                            :op1 (s3t / temporal-quantity
+                                   :quant 5
+                                   :unit (s3m2 / minute))
+                            :op2 (s3t2 / temporal-quantity
+                                   :quant 6
+                                   :unit (s3m / minute))))
+         :manner (s3s / stir-01
+                   :manner (s3o / occasional))
+         :duration (s3u / until
+                     :op1 (s3c / cooked
+                            :degree (s3a3 / almost)))
+         :medium (s3g / grease
+                   :source (s3p2 / pancetta)))
+  :mode imperative)
+
+# alignment:s3a: 13-13
+s3a2: 1-1
+s3a3: 23-23
+s3a4: 6-6
+s3a5: 2-2
+s3b: 12-12
+s3c: 7-7
+s3m: 15-15
+s3m2: 17-17
+s3o: 20-20
+s3p: 5-5
+s3s: 19-19
+s3t: 17-17
+s3t2: 18-18
+s3u: 22-22
+s3g: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Slowly add the white wine to deglaze the pan .
+# sentence level graph:
+(s4a2 / add-02
+  :ARG1 (s4w2 / wine
+          :mod (s4w / white))
+  :purpose (s4d / deglaze-01
+             :ARG1 (s4p / pan))
+  :manner (s4s / slow-05)
+  :mode imperative)
+
+# alignment:s4a2: 2-2
+s4d: 7-7
+s4p: 9-9
+s4s: 1-1
+s4w: 4-4
+s4w2: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Continue cooking for 5 minutes or until the wine has reduced by about half .
+# sentence level graph:
+(s5c / continue-01
+  :ARG1 (s5c2 / cook-01
+          :duration (s5o / or
+                      :op1 (s5t / temporal-quantity
+                             :unit (s5m / minute)
+                             :quant 5)
+                      :op2 (s5u / until
+                             :op1 (s5r / reduce-01
+                                    :ARG1 (s5w / wine)
+                                    :ARG2 (s5a / about
+                                            :op1 "1/2")))))
+  :mode imperative)
+
+# alignment:s5a: -1--1
+s5c: 1-1
+s5c2: 2-2
+s5m: -1--1
+s5r: -1--1
+s5t: -1--1
+s5u: -1--1
+s5w: -1--1
+s5o: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Cook the pasta in a large pot according to package instructions .
+# sentence level graph:
+(s6c2 / cook-01
+  :ARG1 (s6p2 / pasta)
+  :manner (s6s / say-01
+            :ARG0 (s6i2 / instructions
+                    :source (s6p4 / package)))
+  :location (s6p3 / pot
+              :mod (s6l / large))
+  :mode imperative)
+
+# alignment:s6c2: 1-1
+s6l: 6-6
+s6p2: 3-3
+s6p3: 7-7
+s6i2: 11-11
+s6p4: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Drain , but reserve 1/4 cup of the pasta water for later ( if needed ) .
+# sentence level graph:
+(s7c / contrast-01
+  :ARG1 (s7d / drain-01)
+  :ARG2 (s7r / reserve-01
+          :ARG1 (s7w / water
+                  :quant (s7v / volume-quantity
+                           :quant "1/4"
+                           :unit (s7c2 / cup))
+                  :mod (s7p / pasta))
+          :condition (s7n / need-01)
+          :time (s7a / after
+                  :op1 s7d))
+  :mode imperative)
+
+# alignment:s7a: 8-8
+s7c: 1-1
+s7c2: 6-6
+s7d: 2-2
+s7n: 15-15
+s7p: 9-9
+s7r: 4-4
+s7v: 6-6
+s7w: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Add the pasta , pancetta and 1/4 cup Parmesan cheese to the saute pan with asparagus , and toss until combined .
+# sentence level graph:
+(s8a2 / and
+  :op1 (s8a / add-02
+         :ARG1 (s8a3 / and
+                 :op1 (s8p3 / pasta)
+                 :op2 (s8p2 / pancetta)
+                 :op3 (s8c / cheese
+                        :name (s8n / name
+                                :op1 "Parmesan")
+                        :quant (s8v / volume-quantity
+                                 :quant "1/4"
+                                 :unit (s8c4 / cup)))
+                 :accompanier (s8a4 / asparagus))
+         :location (s8p4 / pan
+                     :purpose (s8s2 / saute-01)))
+  :op2 (s8t / toss-01
+         :duration (s8u / until
+                     :op1 (s8c2 / combine-01)))
+  :mode imperative)
+
+# alignment:s8a: 1-1
+s8a2: 6-6
+s8a3: 18-18
+s8a4: 16-16
+s8c: 9-9
+s8c2: 21-21
+s8c4: 8-8
+s8n: 9-9
+s8p2: 5-5
+s8p3: 3-3
+s8p4: 14-14
+s8s2: 13-13
+s8t: 19-19
+s8u: 20-20
+s8v: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Sprinkle pasta with the remaining Parmesan cheese and serve immediately .
+# sentence level graph:
+(s9a / and
+  :op1 (s9s2 / sprinkle-01
+         :ARG1 (s9c / cheese
+                 :name (s9n / name
+                         :op1 "Parmesan")
+                 :ARG1-of (s9r / remain-01))
+         :ARG2 (s9p / pasta))
+  :op2 (s9s / serve-02
+         :time (s9i / immediate))
+  :mode imperative)
+
+# alignment:s9a: 8-8
+s9c: 6-6
+s9i: 10-10
+s9n: 6-6
+s9p: 2-2
+s9r: 5-5
+s9s: 9-9
+s9s2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Saute pancetta in a large pan over medium - high heat , stirring occasionally , until crispy .
+Remove pancetta with a slotted spoon and set aside .
+Add asparagus to the pan and saute in the pancetta grease for about 5 - 6 minutes , stirring occasionally , until almost cooked .
+Slowly add the white wine to deglaze the pan .
+Continue cooking for 5 minutes or until the wine has reduced by about half .
+Cook the pasta in a large pot according to package instructions .
+Drain , but reserve 1/4 cup of the pasta water for later ( if needed ) .
+Add the pasta , pancetta and 1/4 cup Parmesan cheese to the saute pan with asparagus , and toss until combined .
+Sprinkle pasta with the remaining Parmesan cheese and serve immediately .

@@ -1,0 +1,322 @@
+# :: f-8NKNNF6N::step01::sent01
+# :: snt1	Heat a large frying pan with a drizzle of olive oil .
+(s1h2 / heat-01~0
+      :ARG1 (s1p / pan~4
+                 :mod (s1l / large~2)
+                 :ARG2-of (s1f / fry-01~3))
+      :ARG2 (s1d / drizzle-01~7
+                 :ARG1 (s1o / oil~10
+                            :mod (s1o2 / olive~9)))
+      :mode imperative
+      :ARG0 (s1y / you)
+      :event-structure (s1se / subevents
+                             :E1 (s1c / cooked
+                                      :polarity -
+                                      :PATIENT s1o
+                                      :V_FINAL_STATE (s1h / heated))
+                             :E3 (s1a / apply_heat
+                                      :PATIENT s1o)
+                             :E4 (s1c1 / cooked
+                                       :PATIENT s1o
+                                       :V_FINAL_STATE s1h)
+                             :E0 (s1d1 / do
+                                       :ACTION s1h2))
+      :imp_output (s1h1 / heat.RES))
+
+
+# :: f-8NKNNF6N::step01::sent02
+# :: snt2	Add the chickpeas and mushrooms .
+(s2a / add-02~0
+     :ARG1 (s2a2 / and~3
+                 :op1 (s2c / chickpeas~2)
+                 :op2 (s2m / mushroom~4))
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2t / together
+                                     :polarity -
+                                     :PATIENT_I s2c
+                                     :PATIENT_J s2m)
+                            :E3 (s2t1 / together
+                                      :PATIENT_I s2c
+                                      :PATIENT_J s2m)
+                            :E0 (s2d / do
+                                     :ACTION s2a))
+     :imp_output (s2a1 / add.RES))
+
+
+# :: f-8NKNNF6N::step01::sent03
+# :: snt3	Saute the chickpeas and mushrooms on a medium to gentle heat , for a minute or two , until the mushrooms get a slightly rich and healthy color .
+(s3a / Saute-01~0
+     :ARG1 (s3a2 / and
+                 :op1 (s3c / chickpeas~2)
+                 :op2 (s3m4 / mushroom~4,20))
+     :temperature-quantity (s3a4 / amr-choice
+                                 :op1 (s3m / medium~7)
+                                 :op2 (s3g / gentle-01~9))
+     :duration (s3a3 / amr-choice
+                     :op1 (s3o / or~15
+                               :op1 (s3t2 / temporal-quantity
+                                          :unit (s3m3 / minute~14)
+                                          :quant 1)
+                               :op2 (s3t / temporal-quantity
+                                         :unit (s3m2 / minute)
+                                         :quant 2))
+                     :op2 (s3u / until~18
+                               :op1 (s3g2 / get-03~21
+                                          :ARG1 s3m4
+                                          :ARG2 (s3c2 / color-01~27
+                                                      :mod (s3s2 / slight~23
+                                                                 :op1 (s3r2 / rich~24)
+                                                                 :op2 (s3h / healthy~26))))))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3c1 / cooked
+                                      :polarity -
+                                      :PATIENT s3m4
+                                      :V_FINAL_STATE (s3s / sauted))
+                            :E3 (s3a1 / apply_heat
+                                      :INSTRUMENT s3g
+                                      :PATIENT s3m4)
+                            :E4 (s3a5 / and
+                                      :op1 (s3c3 / cooked
+                                                 :PATIENT s3m4
+                                                 :V_FINAL_STATE s3s)
+                                      :op2 (s3h1 / has_state
+                                                 :PATIENT s3m4
+                                                 :RESULT s3c2))
+                            :E0 (s3d / do
+                                     :ACTION s3a))
+     :imp_output (s3s1 / saute.RES))
+
+
+# :: f-8NKNNF6N::step02::sent01
+# :: snt4	Add the scallions , garlic and parsley and continue to saute for another minute or two .
+(s4a2 / and~7
+      :op1 (s4a / add-02~0
+                :ARG1 (s4a3 / and~5
+                            :op1 (s4s / scallion~2)
+                            :op2 (s4g / garlic~4)
+                            :op3 (s4p / parsley~6))
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s4s
+                                                 :PATIENT_J s4g
+                                                 :PATIENT_K s4p)
+                                       :E3 (s4t3 / together
+                                                 :PATIENT_I s4s
+                                                 :PATIENT_J s4g
+                                                 :PATIENT_K s4p)
+                                       :E0 (s4d / do
+                                                :ACTION s4a))
+                :imp_output (s4a1 / add.RES))
+      :op2 (s4c / continue-01~8
+                :ARG1 (s4s2 / saute-01~10
+                            :duration (s4o / or~14
+                                           :op1 (s4t / temporal-quantity
+                                                     :mod (s4a4 / another~12)
+                                                     :unit (s4m / minute~13))
+                                           :op2 (s4t2 / temporal-quantity
+                                                      :quant 2
+                                                      :unit (s4m2 / minute)))
+                            :ARG0 s4y
+                            :event-structure (s4se1 / subevents
+                                                    :E1 (s4c1 / cooked
+                                                              :polarity -
+                                                              :IMP_PATIENT s4a1
+                                                              :V_FINAL_STATE (s4s1 / sauted))
+                                                    :E3 (s4a5 / apply_heat
+                                                              :IMP_PATIENT s4a1)
+                                                    :E4 (s4c2 / cooked
+                                                              :IMP_PATIENT s4a1
+                                                              :V_FINAL_STATE s4s1)
+                                                    :E0 (s4d1 / do
+                                                              :ACTION s4s2))
+                            :imp_output (s4s3 / saute.RES)))
+      :mode imperative)
+
+
+# :: f-8NKNNF6N::step03::sent01
+# :: snt5	Add the wine and the chicken broth .
+(s5a / add-02~0
+     :ARG1 (s5a2 / and~3
+                 :op1 (s5w / wine~2)
+                 :op2 (s5b / broth~6
+                           :mod (s5c / chicken~5)))
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5t / together
+                                     :polarity -
+                                     :PATIENT_I s5w
+                                     :PATIENT_J s5b)
+                            :E3 (s5t1 / together
+                                      :PATIENT_I s5w
+                                      :PATIENT_J s5b)
+                            :E0 (s5d / do
+                                     :ACTION s5a))
+     :imp_output (s5a1 / add.RES))
+
+
+# :: f-8NKNNF6N::step03::sent02
+# :: snt6	Add the butter and seasonings to taste .
+(s6a / add-02~0
+     :ARG1 (s6a2 / and~3
+                 :op1 (s6b / butter~2)
+                 :op2 (s6s / season-01~4))
+     :purpose (s6t / taste-01~6)
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6t1 / together
+                                      :polarity -
+                                      :PATIENT_I s6b
+                                      :PATIENT_J s6s)
+                            :E3 (s6t2 / together
+                                      :PATIENT_I s6b
+                                      :PATIENT_J s6s)
+                            :E0 (s6d / do
+                                     :ACTION s6a))
+     :imp_output (s6a1 / add.RES))
+
+
+# :: f-8NKNNF6N::step03::sent03
+# :: snt7	Continue to saute on a gentle heat .
+(s7c / continue-01~0
+     :ARG1 (s7s / saute-01~2
+                :mod (s7t / temperature-quantity
+                          :op1 (s7g2 / gentle-01~5))
+                :ARG0 (s7y / you)
+                :event-structure (s7se / subevents
+                                       :E1 (s7c1 / cooked
+                                                 :polarity -
+                                                 :IMP_PATIENT (s7a / add.RES)
+                                                 :V_FINAL_STATE (s7s1 / sauted))
+                                       :E3 (s7a1 / apply_heat
+                                                 :INSTRUMENT s7g2
+                                                 :IMP_PATIENT s7a)
+                                       :E4 (s7c2 / cooked
+                                                 :IMP_PATIENT s7a
+                                                 :V_FINAL_STATE s7s1)
+                                       :E0 (s7d / do
+                                                :ACTION s7s))
+                :imp_output (s7s2 / saute.RES))
+     :mode imperative)
+
+
+# :: f-8NKNNF6N::step04::sent01
+# :: snt8	Prepare the macaroni as directed .
+(s8p / prepare-02~0
+     :ARG1 (s8m / macaroni~2)
+     :ARG1-of (s8d / direct-01~4)
+     :mode imperative
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8b / be
+                                     :polarity -)
+                            :E3 (s8b1 / be)
+                            :E0 (s8d1 / do
+                                      :ACTION s8p))
+     :imp_output (s8p1 / prepare.RES))
+
+
+# :: f-8NKNNF6N::step05::sent01
+# :: snt9	Drizzle olive oil on a serving platter and plate the macaroni .
+(s9a / and~7
+     :op1 (s9d / drizzle-01~0
+               :ARG1 (s9o / oil~2
+                          :mod (s9o2 / olive~1))
+               :ARG2 (s9p2 / platter~6
+                           :purpose (s9s / serve-02~5))
+               :ARG0 (s9y / you)
+               :event-structure (s9se / subevents
+                                      :E1 (s9h / has_location
+                                               :THEME s9o)
+                                      :E3 (s9a1 / and
+                                                :op1 (s9m1 / motion
+                                                           :THEME s9o)
+                                                :op2 (s9h1 / has_location
+                                                           :polarity -
+                                                           :THEME s9o))
+                                      :E4 (s9h2 / has_location
+                                                :THEME s9o
+                                                :DESTINATION s9p2)
+                                      :E0 (s9d1 / do
+                                                :ACTION s9d))
+               :imp_output (s9d2 / drizzle.RES))
+     :op2 (s9p / plate-01~8
+               :ARG1 (s9m / macaroni~10)
+               :ARG0 s9y
+               :event-structure (s9se1 / subevents
+                                       :E1 (s9h3 / has_location
+                                                 :THEME s9m)
+                                       :E3 (s9a2 / and
+                                                 :op1 (s9m2 / motion
+                                                            :THEME s9m)
+                                                 :op2 (s9h4 / has_location
+                                                            :polarity -
+                                                            :THEME s9m))
+                                       :E4 (s9h5 / has_location
+                                                 :THEME s9m)
+                                       :E0 (s9d3 / do
+                                                 :ACTION s9p))
+               :imp_output (s9p1 / plate.RES))
+     :mode imperative)
+
+
+# :: f-8NKNNF6N::step05::sent02
+# :: snt10	Add the mushrooms and chickpeas .
+(s10a / add-02~0
+      :ARG1 (s10a2 / and~3
+                   :op1 (s10m / mushroom~2)
+                   :op2 (s10c / chickpea~4))
+      :mode imperative
+      :ARG0 (s10y / you)
+      :event-structure (s10se / subevents
+                              :E1 (s10t / together
+                                        :polarity -
+                                        :PATIENT_I s10m
+                                        :PATIENT_J s10c)
+                              :E3 (s10t1 / together
+                                         :PATIENT_I s10m
+                                         :PATIENT_J s10c)
+                              :E0 (s10d / do
+                                        :ACTION s10a))
+      :imp_output (s10a1 / add.RES))
+
+
+# :: f-8NKNNF6N::step05::sent03
+# :: snt11	Top with a drizzle of olive oil , red pepper flakes and fresh grated Romano cheese .
+(s11t2 / top-ON03~0
+       :ARG2 (s11a / and~11
+                   :op1 (s11d / drizzle-01~3
+                              :ARG1 (s11o2 / oil~6
+                                           :mod (s11o3 / olive~5)))
+                   :op2 (s11l / Flake~10
+                              :mod (s11p / pepper~9
+                                         :ARG1-of (s11r / red-02~8)))
+                   :op3 (s11c / cheese~15
+                              :ARG1-of (s11g / grate-01~13
+                                             :ARG1-of (s11f / fresh-04~12))
+                              :mod (s11r2 / Romano~14)))
+       :mode imperative
+       :ARG0 (s11y / you)
+       :event-structure (s11se / subevents
+                               :E1 (s11h / has_location
+                                         :THEME s11c)
+                               :E3 (s11a1 / and
+                                          :op1 (s11m / motion
+                                                     :THEME s11c)
+                                          :op2 (s11h1 / has_location
+                                                      :polarity -
+                                                      :THEME s11c))
+                               :E4 (s11h2 / has_location
+                                          :THEME s11c)
+                               :E0 (s11d1 / do
+                                          :ACTION s11t2))
+       :imp_output (s11t / top.RES))
+
+

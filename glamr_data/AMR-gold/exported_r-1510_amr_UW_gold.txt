@@ -1,0 +1,254 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1467
+export time: 9/26/2023, 9:12:34 PM
+
+# :: snt1	Heat butter and add the seekh kebab and fry till golden brown .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1h / heat-01
+         :ARG1 (s1b2 / butter))
+  :op2 (s1a / add-02
+         :ARG1 (s1k / kebab
+                 :mod (s1s / seekh)))
+  :op3 (s1f / fry-01
+         :duration (s1u / until
+                     :op1 (s1b / brown
+                            :mod (s1g / golden))))
+  :mode imperative)
+
+# alignment:s1a: 4-4
+s1a2: 3-3
+s1b: 12-12
+s1b2: 2-2
+s1f: 9-9
+s1g: 11-11
+s1h: 1-1
+s1k: 7-7
+s1s: 6-6
+s1u: 13-13
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Slit the seekh kebab from top and stuff it with grated cheese .
+# sentence level graph:
+(s2a / and
+  :op1 (s2s / slit-01
+         :ARG1 (s2k / kebab
+                 :mod (s2s3 / seekh))
+         :ARG2 (s2t / top))
+  :op2 (s2s2 / stuff-01
+         :ARG1 s2k
+         :ARG2 (s2c / cheese
+                 :ARG1-of (s2g / grate-01)))
+  :mode imperative)
+
+# alignment:s2a: 7-7
+s2c: 12-12
+s2k: 3-3
+s2s: 1-1
+s2s2: 8-8
+s2s3: -1--1
+s2t: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Fry the onions in butter .
+# sentence level graph:
+(s3f / fry-01
+  :ARG1 (s3o / onion)
+  :medium (s3b / butter)
+  :mode imperative)
+
+# alignment:s3b: 5-5
+s3f: 1-1
+s3o: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add salt , vinegar and paprika and fry until translucent .
+# sentence level graph:
+(s4a3 / and
+  :op1 (s4a / add-02
+         :ARG1 (s4a2 / and
+                 :op1 (s4s / salt)
+                 :op2 (s4v / vinegar)
+                 :op3 (s4p / paprika)))
+  :op2 (s4f / fry-01
+         :duration (s4u / until
+                     :op1 (s4t / translucent)))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4a2: 3-3
+s4a3: 5-5
+s4f: 8-8
+s4p: 6-6
+s4s: 2-2
+s4t: 10-10
+s4u: 9-9
+s4v: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Slit the bun in half , apply butter and grill to golden brown .
+# sentence level graph:
+(s5a / and
+  :op1 (s5s / slit-01
+         :ARG1 (s5b2 / bun)
+         :manner (s5h / half))
+  :op2 (s5a2 / apply-03
+         :ARG1 (s5b3 / butter))
+  :op3 (s5g2 / grill-01
+         :destination (s5b / brown
+                        :mod (s5g / golden)))
+  :mode imperative)
+
+# alignment:s5a: 9-9
+s5a2: 7-7
+s5b: 13-13
+s5b2: 3-3
+s5b3: 8-8
+s5g: 12-12
+s5g2: 10-10
+s5h: 5-5
+s5s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Cut the tomatoes in half slice and place them on the bun ] .
+# sentence level graph:
+(s6a / and
+  :op1 (s6c / cut-01
+         :ARG1 (s6t / tomato)
+         :manner (s6s / slice
+                   :mod (s6h / half)))
+  :op2 (s6p / place-01
+         :ARG1 s6t
+         :ARG2 (s6b / bun))
+  :mode imperative)
+
+# alignment:s6a: 7-7
+s6b: -1--1
+s6c: 1-1
+s6h: 5-5
+s6p: -1--1
+s6s: 6-6
+s6t: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Put seekh kebab and onions , and grate cheese over the sandwich .
+# sentence level graph:
+(s7a2 / and
+  :op1 (s7p / put-01
+         :ARG1 (s7a / and
+                 :op1 (s7k / kebab
+                        :mod (s7s2 / seekh))
+                 :op2 (s7o / onion)))
+  :op2 (s7g / grate-01
+         :ARG1 (s7c / cheese)
+         :location (s7o2 / over
+                     :op1 (s7s / sandwich)))
+  :mode imperative)
+
+# alignment:s7a: 3-3
+s7a2: 4-4
+s7c: 9-9
+s7g: 8-8
+s7k: 2-2
+s7o: 5-5
+s7o2: 10-10
+s7p: 1-1
+s7s: 12-12
+s7s2: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Grill until cheese melts .
+# sentence level graph:
+(s8g / grill-01
+  :mode imperative
+  :duration (s8u / until
+              :op1 (s8m / melt-01
+                     :ARG1 (s8c / cheese))))
+
+# alignment:s8c: 3-3
+s8g: 1-1
+s8m: 4-4
+s8u: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Serve with chips and salad .
+# sentence level graph:
+(s9s2 / serve-02
+  :accompanier (s9a / and
+                 :op1 (s9c / chip)
+                 :op2 (s9s / salad))
+  :mode imperative)
+
+# alignment:s9a: 4-4
+s9c: 3-3
+s9s: 5-5
+s9s2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Heat butter and add the seekh kebab and fry till golden brown .
+Slit the seekh kebab from top and stuff it with grated cheese .
+Fry the onions in butter .
+Add salt , vinegar and paprika and fry until translucent .
+Slit the bun in half , apply butter and grill to golden brown .
+Cut the tomatoes in half slice and place them on the bun ] .
+Put seekh kebab and onions , and grate cheese over the sandwich .
+Grill until cheese melts .
+Serve with chips and salad .

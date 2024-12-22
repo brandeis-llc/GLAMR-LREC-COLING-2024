@@ -1,0 +1,51 @@
+# :: r-68::step01::sent01
+# :: snt1	Firstly , heat the vegetable oil in a medium - sized pan .
+(s1 / sentence
+    :coref ((s1v :cut s1h2)))
+
+
+# :: r-68::step02::sent01
+# :: snt2	When the oil is hot , add the almonds and toss until they brown .
+(s2 / sentence
+    :coref ((s1h2 :aggregation s2a1)
+			(s2a1 :cut s2t3)
+			(s2a2 :aggregation s2a1)))
+
+
+# :: r-68::step03::sent01
+# :: snt3	Drain the almonds , making sure any excess water is removed , then mix them with the walnut oil and salt in a blender until they form a smooth paste .
+(s3 / sentence
+    :coref ((s2t3 :separation s3d3)
+			(s3d3 :separation s3d4)
+			(s3d4 :cut s3r)
+			(s2a1 :separation s3d3)
+			(s3d3 :cut s3r)
+			(s3w :aggregation s3m6)
+			(s3s :aggregation s3m6)))
+
+
+# :: r-68::step04::sent01
+# :: snt4	Add the honey and blend for another few seconds .
+(s4 / sentence
+    :coref ((s3m6 :aggregation s4a1)
+			(s4a1 :cut s4b2)
+			(s3m6 :cut s4b2)
+			(s4h :aggregation s4a1)))
+
+
+# :: r-68::step05::sent01
+# :: snt5	Pour into an airtight jar and refrigerate .
+(s5 / sentence
+    :coref ((s4b2 :cut s5p1)
+			(s5p1 :cut s5r2)
+			(s4b2 :cut s5r2)
+			(s4a1 :cut s5p1)))
+
+
+# :: r-68::step06::sent01
+# :: snt6	The paste will be good for two months from the day it is made .
+(s6 / sentence
+    :coref ((s5r2 :cut s6m3)
+			(s5p1 :cut s6m3)))
+
+

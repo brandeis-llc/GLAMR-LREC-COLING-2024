@@ -1,0 +1,196 @@
+# :: r-1407::step01::sent01
+# :: snt1	Fry the sewian in hot oil until golden brown .
+(s1f / fry-01~0
+     :ARG1 (s1s / sewian~2)
+     :medium (s1o / oil~5
+                  :mod (s1h / hot~4))
+     :mode imperative
+     :duration (s1u / until~6
+                    :op1 (s1b / brown~8
+                              :mod (s1g / gold~7)))
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1c / cooked
+                                     :polarity -
+                                     :PATIENT s1s
+                                     :V_FINAL_STATE (s1f1 / fried))
+                            :E3 (s1a / apply_heat
+                                     :INSTRUMENT s1o
+                                     :PATIENT s1s)
+                            :E4 (s1a1 / and
+                                      :op1 (s1c1 / cooked
+                                                 :PATIENT s1s
+                                                 :V_FINAL_STATE s1f1)
+                                      :op2 (s1h1 / has_state
+                                                 :PATIENT s1s
+                                                 :RESULT s1b))
+                            :E0 (s1d / do
+                                     :ACTION s1f))
+     :imp_output (s1f2 / fry.RES))
+
+
+# :: r-1407::step02::sent01
+# :: snt2	Heat the milk to boiling and add the sewian .
+(s2a2 / and~5
+      :op1 (s2h / heat-01~0
+                :ARG1 (s2m / milk~2)
+                :destination (s2b / boiling~4))
+      :op2 (s2a / add-02~6
+                :ARG1 (s2s / sewer~8)
+                :ARG0 (s2y / you)
+                :event-structure (s2se / subevents
+                                       :E1 (s2t / together
+                                                :polarity -
+                                                :PATIENT_I s2s)
+                                       :E3 (s2t1 / together
+                                                 :PATIENT_I s2s)
+                                       :E0 (s2d / do
+                                                :ACTION s2a))
+                :imp_output (s2a1 / add.RES))
+      :mode imperative)
+
+
+# :: r-1407::step03::sent01
+# :: snt3	Cook until the milk is reduced by half .
+(s3c / cook-01~0
+     :mode imperative
+     :duration (s3u / until~1
+                    :op1 (s3r / reduce-01~5
+                              :ARG1 (s3m / milk~3)
+                              :ARG2 (s3h / half~7)))
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3c1 / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s3a / add.RES)
+                                      :V_FINAL_STATE (s3c2 / cooked))
+                            :E3 (s3a1 / apply_heat
+                                      :IMP_PATIENT s3a)
+                            :E4 (s3a2 / and
+                                      :op1 (s3c3 / cooked
+                                                 :IMP_PATIENT s3a
+                                                 :V_FINAL_STATE s3c2)
+                                      :op2 (s3h1 / has_state
+                                                 :IMP_PATIENT s3a
+                                                 :RESULT s3h))
+                            :E0 (s3d / do
+                                     :ACTION s3c))
+     :imp_output (s3c4 / cook.RES))
+
+
+# :: r-1407::step04::sent01
+# :: snt4	Add sugar and cook on low heat until creamy ( about 25 minutes ) .
+(s4a3 / and~2
+      :op1 (s4a2 / add-02~0
+                 :ARG1 (s4s2 / sugar~1)
+                 :ARG0 (s4y / you)
+                 :event-structure (s4se / subevents
+                                        :E1 (s4t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s4s2)
+                                        :E3 (s4t2 / together
+                                                  :PATIENT_I s4s2)
+                                        :E0 (s4d / do
+                                                 :ACTION s4a2))
+                 :imp_output (s4a1 / add.RES))
+      :op2 (s4c / cook-01~3
+                :manner (s4h / heat~6
+                             :mod (s4l / low~5))
+                :duration (s4u / until~7
+                               :op1 (s4c2 / creamy~8)
+                               :op2 (s4a / about~10
+                                         :op1 (s4t / temporal-quantity
+                                                   :quant 25
+                                                   :unit (s4m / minute~12))))
+                :ARG0 s4y
+                :event-structure (s4se1 / subevents
+                                        :E1 (s4c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s4a1
+                                                  :V_FINAL_STATE (s4c3 / cooked))
+                                        :E3 (s4a4 / apply_heat
+                                                  :INSTRUMENT s4h
+                                                  :IMP_PATIENT s4a1)
+                                        :E4 (s4a5 / and
+                                                  :op1 (s4c4 / cooked
+                                                             :IMP_PATIENT s4a1
+                                                             :V_FINAL_STATE s4c3)
+                                                  :op2 (s4h1 / has_state
+                                                             :IMP_PATIENT s4a1
+                                                             :RESULT s4c2))
+                                        :E0 (s4d1 / do
+                                                  :ACTION s4c))
+                :imp_output (s4c5 / cook.RES))
+      :mode imperative)
+
+
+# :: r-1407::step05::sent01
+# :: snt5	Remove from the heat .
+(s5r / remove-01~0
+     :ARG2 (s5h / heat~3)
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5h1 / has_location)
+                            :E3 (s5a / and
+                                     :op1 (s5m / motion
+                                               :IMP_THEME (s5c / cook.RES))
+                                     :op2 (s5h2 / has_location
+                                                :polarity -
+                                                :IMP_THEME s5c))
+                            :E4 (s5h3 / has_location
+                                      :IMP_THEME s5c)
+                            :E0 (s5d / do
+                                     :ACTION s5r))
+     :imp_output (s5r1 / remove.RES))
+
+
+# :: r-1407::step06::sent01
+# :: snt6	Add in rose water .
+(s6a / add-02~0
+     :ARG1 (s6w / water~3
+                :mod (s6r / rose~2))
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6t / together
+                                     :polarity -
+                                     :PATIENT_I s6w)
+                            :E3 (s6t1 / together
+                                      :PATIENT_I s6w)
+                            :E0 (s6d / do
+                                     :ACTION s6a))
+     :imp_output (s6a1 / add.RES))
+
+
+# :: r-1407::step07::sent01
+# :: snt7	Decorate with blanched finely shredded almonds and pistachio nuts and silver leaves if desired .
+(s7d / decorate-01~0
+     :ARG2 (s7a2 / and~6,9
+                 :op1 (s7a / almond~5
+                           :ARG1-of (s7b / blanch-01~2)
+                           :ARG1-of (s7s / shred-01~4
+                                         :manner (s7f / fine~3)))
+                 :op2 (s7n / nut~8
+                           :mod (s7p / pistachio~7))
+                 :op3 (s7l / leaf~11
+                           :consist-of (s7s2 / silver~10)))
+     :condition (s7d2 / desire-01~13)
+     :mode imperative
+     :ARG0 (s7y / you)
+     :event-structure (s7se / subevents
+                            :E1 (s7b1 / be
+                                      :polarity -
+                                      :THEME s7l)
+                            :E2 (s7c / create_image
+                                     :THEME s7l)
+                            :E3 (s7a1 / and
+                                      :op1 (s7b2 / be
+                                                 :THEME s7l)
+                                      :op2 (s7p1 / part_of
+                                                 :THEME s7l))
+                            :E0 (s7d1 / do
+                                      :ACTION s7d))
+     :imp_output (s7d3 / decorate.RES))
+
+

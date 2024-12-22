@@ -1,0 +1,396 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1273
+export time: 4/8/2023, 11:14:32 PM
+
+# :: snt1	Place the oil into the bottom of your Instant Pot , and turn on the Saute mode .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1p / place-01
+         :ARG1 (s1o / oil)
+         :ARG2 (s1b / bottom
+                 :part-of (s1p2 / pot
+                            :mod (s1i / instant)
+                            :poss (s1y / you)))
+         :mode imperative)
+  :op2 (s1t / turn-on-13
+         :ARG1 (s1m / mode
+                 :mod (s1a / Saute-01)))
+  :mode imperative)
+
+# alignment:s1a: 16-16
+s1a2: 12-12
+s1b: 6-6
+s1i: 9-9
+s1m: 17-17
+s1o: 3-3
+s1p: 1-1
+s1p2: 10-10
+s1t: 13-13
+s1y: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	While it is heating , liberally season your chicken breasts with the salt , pepper , garlic salt , and onion powder .
+# sentence level graph:
+(s2s3 / season-01
+  :ARG1 (s2b / breast
+          :poss (s2y / you)
+          :part-of (s2c / chicken))
+  :ARG2 (s2a / and
+          :op1 (s2s / salt)
+          :op2 (s2p / pepper)
+          :op3 (s2s2 / salt
+                 :mod (s2g / garlic))
+          :op4 (s2p2 / powder
+                 :consist-of (s2o / onion)))
+  :manner (s2l / liberation)
+  :mode imperative
+  :time (s2h / heat-01
+          :ARG1 (s2i / it)))
+
+# alignment:s2a: 20-20
+s2b: 10-10
+s2c: 9-9
+s2g: 17-17
+s2h: 4-4
+s2i: 2-2
+s2l: 6-6
+s2o: 21-21
+s2p: 15-15
+s2p2: 22-22
+s2s: 13-13
+s2s2: 18-18
+s2s3: 7-7
+s2y: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Brown the chicken breasts on each side .
+# sentence level graph:
+(s3b2 / brown-01
+  :ARG1 (s3b / breast
+          :part-of (s3c / chicken))
+  :location (s3s / side
+              :mod (s3e / each))
+  :mode imperative)
+
+# alignment:s3b: 4-4
+s3b2: 1-1
+s3c: 3-3
+s3e: 6-6
+s3s: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Once the breasts are browned , remove from the pot and set aside and add the sliced onion in .
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4r / remove-01
+         :ARG1 "s4b"
+         :ARG2 (s4p / pot))
+  :op2 (s4s / set-01
+         :ARG1 "s4b"
+         :ARG2 (s4a3 / aside))
+  :op3 (s4a / add-02
+         :ARG1 (s4o / onion
+                 :ARG1-of (s4s2 / slice-01)))
+  :time (s4a4 / after
+          :op1 (s4b3 / brown-01
+                 :ARG1 (s4b / breast)))
+  :mode imperative)
+
+# alignment:s4a: 15-15
+s4a2: 11-11
+s4a3: 13-13
+s4b: -1--1
+s4b3: 5-5
+s4o: 18-18
+s4p: -1--1
+s4r: -1--1
+s4s: 12-12
+s4s2: 17-17
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Saute for 3 - 4 minutes , stirring frequently .
+# sentence level graph:
+(s5a / and
+  :op1 (s5s2 / saute
+         :duration (s5b / between
+                     :op1 (s5t2 / temporal-quantity
+                            :unit (s5m2 / minute)
+                            :quant 3)
+                     :op2 (s5t / temporal-quantity
+                            :unit (s5m / minute)
+                            :quant 4)))
+  :op2 (s5s / stir-01
+         :manner (s5f / frequent-02))
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5b: -1--1
+s5f: 9-9
+s5m: -1--1
+s5m2: -1--1
+s5s: 8-8
+s5t: -1--1
+s5t2: -1--1
+s5s2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Add in the dry hard cider , diced tomatoes , cilantro , and salsa .
+# sentence level graph:
+(s6a / add-02
+  :ARG1 (s6a2 / and
+          :op1 (s6c / cider
+                 :ARG1-of (s6h / hard-04)
+                 :mod (s6d / dry-02))
+          :op2 (s6t / tomato
+                 :ARG1-of (s6d2 / dice-01))
+          :op3 (s6c2 / cilantro)
+          :op4 (s6s / salsa))
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6a2: 13-13
+s6c: 6-6
+s6c2: 11-11
+s6d: 4-4
+s6h: 5-5
+s6s: 14-14
+s6t: 9-9
+s6d2: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Place the chicken into this mixture , replace the lid , and change the function of your pot to Manual and set the timer to 8 minutes .
+# sentence level graph:
+(s7a / and
+  :op1 (s7p / place-01
+         :ARG1 (s7c2 / chicken)
+         :ARG2 (s7m3 / mixture
+                 :mod (s7t2 / this)))
+  :op2 (s7r / replace-01
+         :ARG1 (s7l / lid))
+  :op3 (s7a2 / and
+         :op1 (s7c / change-01
+                :ARG1 (s7f / function-01
+                        :ARG0 (s7p2 / pot
+                                :poss (s7y / you)))
+                :ARG2 (s7m2 / manual))
+         :op2 (s7s / set-08
+                :ARG1 (s7t3 / timer)
+                :ARG2 (s7t / temporal-quantity
+                        :quant 8
+                        :unit (s7m / minute))))
+  :mode imperative)
+
+# alignment:s7a: 12-12
+s7a2: -1--1
+s7c: -1--1
+s7c2: 3-3
+s7f: -1--1
+s7l: 10-10
+s7m: -1--1
+s7m2: -1--1
+s7m3: 6-6
+s7p: 1-1
+s7p2: -1--1
+s7r: 8-8
+s7s: -1--1
+s7t: -1--1
+s7t2: 5-5
+s7t3: -1--1
+s7y: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Once the pot is finished , do a quick release of the pressure and remove the chicken from the pot .
+# sentence level graph:
+(s8a / and
+  :op1 (s8r / release-01
+         :ARG1 (s8p2 / pressure)
+         :ARG1-of (s8q / quick-02))
+  :op2 (s8r2 / remove-01
+         :ARG1 (s8c / chicken)
+         :ARG2 (s8p / pot))
+  :time (s8f / finish-01
+          :ARG1 s8p)
+  :mode imperative)
+
+# alignment:s8a: 14-14
+s8c: 17-17
+s8f: 5-5
+s8p: 20-20
+s8p2: 13-13
+s8q: 9-9
+s8r: 10-10
+s8r2: 15-15
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Shred the chicken with two forks , and return to the pot .
+# sentence level graph:
+(s9a / and
+  :op1 (s9s / shred-01
+         :ARG1 (s9c / chicken)
+         :instrument (s9f / fork
+                       :quant 2))
+  :op2 (s9r / return-04
+         :ARG1 s9c
+         :ARG2 (s9p / pot))
+  :mode imperative)
+
+# alignment:s9a: 8-8
+s9c: 0-0
+s9f: 6-6
+s9p: 12-12
+s9r: 9-9
+s9s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Turn the pot back to saute , and add in the taco seasoning packet .
+# sentence level graph:
+(s10a2 / and
+  :op1 (s10t2 / turn-01
+         :ARG1 (s10p2 / pot)
+         :purpose (s10s2 / saute-01)
+         :direction (s10b / back))
+  :op2 (s10a / add-02
+         :ARG1 (s10p / packet
+                 :ARG0-of (s10s / season-01)))
+  :mode imperative)
+
+# alignment:s10a: 9-9
+s10a2: 8-8
+s10b: 4-4
+s10p: 14-14
+s10p2: 3-3
+s10s: 13-13
+s10t2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt11	Stir constantly for 2 minutes until the mixture is slightly thickened .
+# sentence level graph:
+(s11s2 / stir-02
+  :duration (s11t / temporal-quantity
+              :quant 2
+              :unit (s11m / minute))
+  :manner (s11c / constant)
+  :mode imperative
+  :time (s11u / until
+          :op1 (s11t2 / thicken-01
+                 :ARG1 (s11m2 / mixture)
+                 :degree (s11s / slight))))
+
+# alignment:s11c: 2-2
+s11m: 5-5
+s11m2: 8-8
+s11s: 10-10
+s11s2: 1-1
+s11t: 5-5
+s11t2: 11-11
+s11u: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt12	Serve with your favorite taco fixings , and enjoy !
+# sentence level graph:
+(s12a / and
+  :op1 (s12s / serve-02
+         :accompanier (s12t2 / thing
+                        :ARG1-of (s12f2 / fixings
+                                   :ARG1 (s12t / taco)
+                                   :ARG1-of (s12f / favor-01))))
+  :op2 (s12e / enjoy-01)
+  :mode imperative)
+
+# alignment:s12a: 8-8
+s12e: 9-9
+s12f: 4-4
+s12f2: 6-6
+s12s: 1-1
+s12t: 5-5
+s12t2: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Place the oil into the bottom of your Instant Pot , and turn on the Saute mode .
+While it is heating , liberally season your chicken breasts with the salt , pepper , garlic salt , and onion powder .
+Brown the chicken breasts on each side .
+Once the breasts are browned , remove from the pot and set aside and add the sliced onion in .
+Saute for 3 - 4 minutes , stirring frequently .
+Add in the dry hard cider , diced tomatoes , cilantro , and salsa .
+Place the chicken into this mixture , replace the lid , and change the function of your pot to Manual and set the timer to 8 minutes .
+Once the pot is finished , do a quick release of the pressure and remove the chicken from the pot .
+Shred the chicken with two forks , and return to the pot .
+Turn the pot back to saute , and add in the taco seasoning packet .
+Stir constantly for 2 minutes until the mixture is slightly thickened .
+Serve with your favorite taco fixings , and enjoy !

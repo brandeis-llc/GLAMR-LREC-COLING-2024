@@ -1,0 +1,231 @@
+# :: r-866::step01::sent01
+# :: snt1	Put onions in skillet with wine , vinegar , salt , pepper , and lemon slices .
+(s1p2 / put-01~0
+      :ARG1 (s1o / onion~1)
+      :ARG2 (s1s2 / skillet~3)
+      :accompanier (s1a / and~13
+                        :op1 (s1w / wine~5)
+                        :op2 (s1v / vinegar~7)
+                        :op3 (s1s / salt~9)
+                        :op4 (s1p / pepper~11)
+                        :op5 (s1s3 / slice~15
+                                   :mod (s1l / lemon~14)))
+      :mode imperative
+      :ARG0 (s1y / you)
+      :event-structure (s1se / subevents
+                             :E1 (s1h / has_location
+                                      :THEME s1o)
+                             :E3 (s1a1 / and
+                                       :op1 (s1m / motion
+                                                 :THEME s1o)
+                                       :op2 (s1h1 / has_location
+                                                  :polarity -
+                                                  :THEME s1o))
+                             :E4 (s1h2 / has_location
+                                       :THEME s1o
+                                       :DESTINATION s1s2)
+                             :E0 (s1d / do
+                                      :ACTION s1p2))
+      :imp_output (s1p1 / put.RES))
+
+
+# :: r-866::step02::sent01
+# :: snt2	Simmer until onions are just tender but still crisp in the center .
+(s2s / simmer-01~0
+     :mode imperative
+     :duration (s2u / until~1
+                    :op1 (s2c2 / contrast-01
+                               :ARG1 (s2t / tender-02~5
+                                          :ARG1 (s2o / onion~2)
+                                          :mod (s2j / just~4))
+                               :ARG2 (s2c3 / crisp-01~8
+                                           :location (s2c / center~11)
+                                           :mod (s2s2 / still~7))))
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2c1 / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s2p / put.RES)
+                                      :V_FINAL_STATE (s2s1 / simmered))
+                            :E3 (s2a / apply_heat
+                                     :IMP_PATIENT s2p)
+                            :E4 (s2a1 / and
+                                      :op1 (s2c4 / cooked
+                                                 :IMP_PATIENT s2p
+                                                 :V_FINAL_STATE s2s1)
+                                      :op2 (s2h / has_state
+                                                :IMP_PATIENT s2p
+                                                :RESULT s2c))
+                            :E0 (s2d / do
+                                     :ACTION s2s))
+     :imp_output (s2s3 / simmer.RES))
+
+
+# :: r-866::step03::sent01
+# :: snt3	Stir in tomato paste and raisins and cook for several minutes .
+(s3a / and~6
+     :op1 (s3s2 / stir-01~0
+                :ARG1 (s3a2 / and~4
+                            :op1 (s3p / paste~3
+                                      :source (s3t2 / tomato~2))
+                            :op2 (s3r / raisin~5))
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3h / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT s3r
+                                                :V_STATE (s3s1 / stirred))
+                                       :E3 (s3h1 / has_material_integrity_state
+                                                 :PATIENT s3r
+                                                 :V_STATE s3s1)
+                                       :E0 (s3d / do
+                                                :ACTION s3s2))
+                :imp_output (s3s3 / stir.RES))
+     :op2 (s3c / cook-01~7
+               :duration (s3s / several~9
+                              :op1 (s3t / temporal-quantity
+                                        :quant 1
+                                        :unit (s3m / minute~10)))
+               :ARG0 s3y
+               :event-structure (s3se1 / subevents
+                                       :E1 (s3c1 / cooked
+                                                 :polarity -
+                                                 :IMP_PATIENT s3s3
+                                                 :V_FINAL_STATE (s3c2 / cooked))
+                                       :E3 (s3a1 / apply_heat
+                                                 :IMP_PATIENT s3s3)
+                                       :E4 (s3c3 / cooked
+                                                 :IMP_PATIENT s3s3
+                                                 :V_FINAL_STATE s3c2)
+                                       :E0 (s3d1 / do
+                                                 :ACTION s3c))
+               :imp_output (s3c4 / cook.RES))
+     :mode imperative)
+
+
+# :: r-866::step04::sent01
+# :: snt4	Remove the onions to a dish .
+(s4r / remove-01~0
+     :ARG1 (s4o / onion~2)
+     :destination (s4d / dish~5)
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4h / has_location
+                                     :THEME s4o)
+                            :E3 (s4a / and
+                                     :op1 (s4m / motion
+                                               :THEME s4o)
+                                     :op2 (s4h1 / has_location
+                                                :polarity -
+                                                :THEME s4o))
+                            :E4 (s4h2 / has_location
+                                      :THEME s4o
+                                      :DESTINATION s4d)
+                            :E0 (s4d1 / do
+                                      :ACTION s4r))
+     :imp_outputI (s4r1 / remove.RES)
+     :imp_outputJ (s4r2 / remove.RES))
+
+
+# :: r-866::step05::sent01
+# :: snt5	Let the juices cook down with the raisins until the liquid is almost a glaze .
+(s5l / let-01~0
+     :ARG1 (s5c / cook-01~3
+                :ARG1 (s5j / juice~2)
+                :accompanier (s5r / raisin~7)
+                :duration (s5u / until~8
+                               :op1 (s5g / glaze-01~14
+                                         :ARG1 (s5l2 / liquid~10)
+                                         :mod (s5a / almost~12)))
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5c1 / cooked
+                                                 :polarity -
+                                                 :PATIENT s5j
+                                                 :V_FINAL_STATE (s5c2 / cooked-down))
+                                       :E3 (s5a1 / apply_heat
+                                                 :PATIENT s5j)
+                                       :E4 (s5a2 / and
+                                                 :op1 (s5c3 / cooked
+                                                            :PATIENT s5j
+                                                            :V_FINAL_STATE s5c2)
+                                                 :op2 (s5h / has_state
+                                                           :PATIENT s5j
+                                                           :RESULT s5g))
+                                       :E0 (s5d / do
+                                                :ACTION s5c))
+                :imp_output (s5c4 / cook.RES))
+     :mode imperative)
+
+
+# :: r-866::step06::sent01
+# :: snt6	Pour over the onions and chill .
+(s6a / and~4
+     :op1 (s6p / pour-01~0
+               :ARG1 (s6o / onion~3)
+               :ARG0 (s6y / you)
+               :event-structure (s6se / subevents
+                                      :E1 (s6h / has_location
+                                               :IMP_THEME_I (s6c1 / cook.RES)
+                                               :IMP_THEME_J (s6r / remove.RES))
+                                      :E3 (s6a1 / and
+                                                :op1 (s6m / motion
+                                                          :IMP_THEME_I s6c1
+                                                          :IMP_THEME_J s6r)
+                                                :op2 (s6h1 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME_I s6c1
+                                                           :IMP_THEME_J s6r))
+                                      :E4 (s6h2 / has_location
+                                                :IMP_THEME_I s6c1
+                                                :IMP_THEME_J s6r
+                                                :DESTINATION s6o)
+                                      :E0 (s6d / do
+                                               :ACTION s6p))
+               :imp_output (s6p1 / pour.RES))
+     :op2 (s6c / chill-01~5
+               :ARG0 s6y
+               :event-structure (s6se1 / subevents
+                                       :E1 (s6h3 / has_state
+                                                 :polarity -
+                                                 :IMP_PATIENT s6p1
+                                                 :V_FINAL_STATE (s6c2 / chilled))
+                                       :E3 (s6h4 / has_state
+                                                 :IMP_PATIENT s6p1
+                                                 :V_FINAL_STATE s6c2)
+                                       :E0 (s6d1 / do
+                                                 :ACTION s6c))
+               :imp_output (s6c3 / chill.RES))
+     :mode imperative)
+
+
+# :: r-866::step07::sent01
+# :: snt7	Serve as an hors - d'oeuvre or with cold meat .
+(s7s / serve-02~0
+     :manner (s7o / or~6
+                  :op1 (s7h / hors-d'oeuvre~3)
+                  :op2 (s7m / meat~9
+                            :mod (s7c / cold~8)))
+     :mode imperative
+     :ARG0 (s7y / you)
+     :event-structure (s7se / subevents
+                            :E1 (s7a / and
+                                     :op1 (s7h1 / has_possession
+                                                :IMP_THEME (s7c1 / chill.RES))
+                                     :op2 (s7h2 / has_possession
+                                                :polarity -
+                                                :IMP_THEME s7c1))
+                            :E2 (s7t / transfer
+                                     :IMP_THEME s7c1)
+                            :E3 (s7a1 / and
+                                      :op1 (s7h3 / has_possession
+                                                 :IMP_THEME s7c1)
+                                      :op2 (s7h4 / has_possession
+                                                 :polarity -
+                                                 :IMP_THEME s7c1))
+                            :E0 (s7d / do
+                                     :ACTION s7s))
+     :imp_output (s7s1 / serve.RES))
+
+

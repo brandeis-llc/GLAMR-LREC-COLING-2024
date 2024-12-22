@@ -1,0 +1,481 @@
+# :: f-NWNMXTLN::step01::sent01
+# :: snt1	Mix and combine , until smooth , sour milk , yogurt , oil , eggs and baking powder .
+(s1a / and~1
+     :op1 (s1m2 / mix-01~0
+                :op1 (s1a2 / and~15
+                           :op1 (s1m / milk~8
+                                     :mod (s1s / sour~7))
+                           :op2 (s1y / yogurt~10)
+                           :op3 (s1o / oil~12)
+                           :op4 (s1e / egg~14)
+                           :op5 (s1p / powder~17
+                                     :ARG3-of (s1b / bake-01~16)))
+                :ARG0 (s1y1 / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1a1 / and
+                                                 :op1 (s1m1 / mingled
+                                                            :polarity -
+                                                            :PATIENT_I s1m
+                                                            :PATIENT_J s1y
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p)
+                                                 :op2 (s1h / has_material_integrity_state
+                                                           :polarity -
+                                                           :PATIENT_I s1m
+                                                           :V_STATE (s1m3 / mixed)
+                                                           :PATIENT_J s1y
+                                                           :PATIENT_K s1o
+                                                           :PATIENT_L s1e
+                                                           :PATIENT_M s1p)
+                                                 :op3 (s1h1 / has_material_integrity_state
+                                                            :polarity -
+                                                            :PATIENT_J s1y
+                                                            :V_STATE s1m3
+                                                            :PATIENT_I s1m
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p))
+                                       :E3 (s1a3 / and
+                                                 :op1 (s1m4 / mingled
+                                                            :PATIENT_I s1m
+                                                            :PATIENT_J s1y
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p)
+                                                 :op2 (s1h2 / has_material_integrity_state
+                                                            :PATIENT_I s1m
+                                                            :V_STATE s1m3
+                                                            :PATIENT_J s1y
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p)
+                                                 :op3 (s1h3 / has_material_integrity_state
+                                                            :PATIENT_J s1y
+                                                            :V_STATE s1m3
+                                                            :PATIENT_I s1m
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p))
+                                       :E0 (s1d / do
+                                                :ACTION s1m2))
+                :imp_output (s1m5 / mix.RES))
+     :op2 (s1c / combine-01~2
+               :op1 s1a2
+               :ARG0 s1y1
+               :event-structure (s1se1 / subevents
+                                       :E1 (s1a4 / and
+                                                 :op1 (s1m6 / mingled
+                                                            :polarity -
+                                                            :PATIENT_I s1m
+                                                            :PATIENT_J s1y
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p)
+                                                 :op2 (s1h4 / has_material_integrity_state
+                                                            :polarity -
+                                                            :PATIENT_I s1m
+                                                            :V_STATE (s1c1 / combined)
+                                                            :PATIENT_J s1y
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p)
+                                                 :op3 (s1h5 / has_material_integrity_state
+                                                            :polarity -
+                                                            :PATIENT_J s1y
+                                                            :V_STATE s1c1
+                                                            :PATIENT_I s1m
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p))
+                                       :E3 (s1a5 / and
+                                                 :op1 (s1m7 / mingled
+                                                            :PATIENT_I s1m
+                                                            :PATIENT_J s1y
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p)
+                                                 :op2 (s1h6 / has_material_integrity_state
+                                                            :PATIENT_I s1m
+                                                            :V_STATE s1c1
+                                                            :PATIENT_J s1y
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p)
+                                                 :op3 (s1h7 / has_material_integrity_state
+                                                            :PATIENT_J s1y
+                                                            :V_STATE s1c1
+                                                            :PATIENT_I s1m
+                                                            :PATIENT_K s1o
+                                                            :PATIENT_L s1e
+                                                            :PATIENT_M s1p))
+                                       :E0 (s1d1 / do
+                                                 :ACTION s1c))
+               :imp_output (s1c2 / combine.RES))
+     :duration (s1s2 / smooth~5)
+     :mode imperative)
+
+
+# :: f-NWNMXTLN::step02::sent01
+# :: snt2	Spoon and set aside 8 tablespoons of the mixture .
+(s2a / and~1
+     :op1 (s2s2 / spoon-01~0
+                :ARG1 (s2m / mixture~8
+                           :quant (s2v / volume-quantity
+                                       :unit (s2t2 / teaspoon~5)
+                                       :quant 8))
+                :ARG0 (s2y / you)
+                :event-structure (s2se / subevents
+                                       :E1 (s2h / has_location
+                                                :THEME s2m)
+                                       :E3 (s2a1 / and
+                                                 :op1 (s2m1 / motion
+                                                            :THEME s2m)
+                                                 :op2 (s2h1 / has_location
+                                                            :polarity -
+                                                            :THEME s2m))
+                                       :E4 (s2h2 / has_location
+                                                 :THEME s2m)
+                                       :E0 (s2d / do
+                                                :ACTION s2s2))
+                :imp_output (s2s1 / spoon.RES))
+     :op2 (s2s / set-01~2
+               :ARG1 s2m
+               :ARG2 (s2a2 / aside~3)
+               :ARG0 s2y
+               :event-structure (s2se1 / subevents
+                                       :E1 (s2h3 / has_location
+                                                 :THEME s2m)
+                                       :E3 (s2a3 / and
+                                                 :op1 (s2m2 / motion
+                                                            :THEME s2m)
+                                                 :op2 (s2h4 / has_location
+                                                            :polarity -
+                                                            :THEME s2m))
+                                       :E4 (s2h5 / has_location
+                                                 :THEME s2m)
+                                       :E0 (s2d1 / do
+                                                 :ACTION s2s))
+               :imp_outputI (s2s3 / set.RES)
+               :imp_outputJ (s2s4 / set.RES))
+     :mode imperative)
+
+
+# :: f-NWNMXTLN::step03::sent01
+# :: snt3	Set aside 4 sheets of phyllo dough , and tear the remaining sheets into small pieces .
+(s3a / and~8
+     :op1 (s3s / set-01~0
+               :ARG1 (s3s5 / sheet~3
+                           :quant 4
+                           :consist-of (s3d / dough~6
+                                            :consist-of (s3p / phyllo~5)))
+               :ARG2 (s3a2 / aside~1)
+               :ARG0 (s3y / you)
+               :event-structure (s3se / subevents
+                                      :E1 (s3h / has_location
+                                               :THEME s3d)
+                                      :E3 (s3a1 / and
+                                                :op1 (s3m / motion
+                                                          :THEME s3d)
+                                                :op2 (s3h1 / has_location
+                                                           :polarity -
+                                                           :THEME s3d))
+                                      :E4 (s3h2 / has_location
+                                                :THEME s3d)
+                                      :E0 (s3d1 / do
+                                                :ACTION s3s))
+               :imp_outputI (s3s1 / set.RES)
+               :imp_outputJ (s3s2 / set.RES))
+     :op2 (s3t / tear-01~9
+               :ARG1 (s3s3 / sheet~12
+                           :ARG1-of (s3r / remain-01~11))
+               :destination (s3p2 / piece~15
+                                  :mod (s3s4 / small~14))
+               :ARG0 s3y
+               :event-structure (s3se1 / subevents
+                                       :E1 (s3a3 / attached
+                                                 :PATIENT s3s3)
+                                       :E3 (s3a4 / attached
+                                                 :polarity -
+                                                 :PATIENT s3s3)
+                                       :E0 (s3d2 / do
+                                                 :ACTION s3t))
+               :imp_output (s3t1 / tear.RES))
+     :mode imperative)
+
+
+# :: f-NWNMXTLN::step03::sent02
+# :: snt4	Stir them gently into the sour milk filling .
+(s4s2 / stir-01~0
+      :ARG1 (s4t / they~1)
+      :location (s4f / filling~7
+                     :consist-of (s4m / milk~6
+                                      :mod (s4s / sour~5)))
+      :manner (s4g / gentle~2)
+      :mode imperative
+      :ARG0 (s4y / you)
+      :event-structure (s4se / subevents
+                             :E1 (s4h / has_material_integrity_state
+                                      :polarity -
+                                      :PATIENT s4t
+                                      :V_STATE (s4s1 / stirred))
+                             :E3 (s4h1 / has_material_integrity_state
+                                       :PATIENT s4t
+                                       :V_STATE s4s1)
+                             :E0 (s4d / do
+                                      :ACTION s4s2))
+      :imp_output (s4s3 / stir.RES))
+
+
+# :: f-NWNMXTLN::step04::sent01
+# :: snt5	Add and combine crumbled feta cheese .
+(s5a2 / and~1
+      :op1 (s5a / add-02~0
+                :ARG1 (s5c / cheese~5
+                           :ARG1-of (s5c3 / crumble-01~3)
+                           :mod (s5f / feta~4))
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5t / together
+                                                :polarity -
+                                                :PATIENT_I s5c)
+                                       :E3 (s5t1 / together
+                                                 :PATIENT_I s5c)
+                                       :E0 (s5d / do
+                                                :ACTION s5a))
+                :imp_output (s5a1 / add.RES))
+      :op2 (s5c2 / combine-01~2
+                 :ARG1 s5c
+                 :ARG0 s5y
+                 :event-structure (s5se1 / subevents
+                                         :E1 (s5a3 / and
+                                                   :op1 (s5m / mingled
+                                                             :polarity -
+                                                             :PATIENT_I s5c)
+                                                   :op2 (s5h / has_material_integrity_state
+                                                             :polarity -
+                                                             :PATIENT_I s5c
+                                                             :V_STATE (s5c1 / combined))
+                                                   :op3 (s5h1 / has_material_integrity_state
+                                                              :polarity -
+                                                              :V_STATE s5c1
+                                                              :PATIENT_I s5c))
+                                         :E3 (s5a4 / and
+                                                   :op1 (s5m1 / mingled
+                                                              :PATIENT_I s5c)
+                                                   :op2 (s5h2 / has_material_integrity_state
+                                                              :PATIENT_I s5c
+                                                              :V_STATE s5c1)
+                                                   :op3 (s5h3 / has_material_integrity_state
+                                                              :V_STATE s5c1
+                                                              :PATIENT_I s5c))
+                                         :E0 (s5d1 / do
+                                                   :ACTION s5c2))
+                 :imp_output (s5c4 / combine.RES))
+      :mode imperative)
+
+
+# :: f-NWNMXTLN::step05::sent01
+# :: snt6	Place 2 pastry sheets on the bottom of the oiled baking pan .
+(s6p3 / place-01~0
+      :ARG1 (s6s / sheet~3
+                 :quant 2
+                 :mod (s6p2 / pastry~2))
+      :ARG2 (s6p4 / pan~11
+                  :ARG1-of (s6o / oil-01~9)
+                  :purpose (s6b / bake-01~10)
+                  :location (s6b2 / bottom~6))
+      :mode imperative
+      :ARG0 (s6y / you)
+      :event-structure (s6se / subevents
+                             :E1 (s6h / has_location
+                                      :THEME s6s)
+                             :E3 (s6a / and
+                                      :op1 (s6m / motion
+                                                :THEME s6s)
+                                      :op2 (s6h1 / has_location
+                                                 :polarity -
+                                                 :THEME s6s))
+                             :E4 (s6h2 / has_location
+                                       :THEME s6s
+                                       :DESTINATION s6p4)
+                             :E0 (s6d / do
+                                      :ACTION s6p3))
+      :imp_outputI (s6p / place.RES)
+      :imp_outputJ (s6p1 / place.RES))
+
+
+# :: f-NWNMXTLN::step05::sent02
+# :: snt7	Cover with evenly distributed sour milk filling , cover with 2 remaining pastry sheets .
+(s7a / and
+     :op1 (s7c / cover-02~0
+               :ARG2 (s7f / filling~6
+                          :ARG2 (s7m / milk~5
+                                     :mod (s7s2 / sour~4))
+                          :ARG1-of (s7d / distribute-01~3
+                                        :ARG1-of (s7e / even-02~2)))
+               :ARG0 (s7y / you)
+               :event-structure (s7se / subevents
+                                      :E1 (s7h / has_location
+                                               :THEME s7f)
+                                      :E3 (s7a1 / and
+                                                :op1 (s7m1 / motion
+                                                           :THEME s7f)
+                                                :op2 (s7h1 / has_location
+                                                           :polarity -
+                                                           :THEME s7f))
+                                      :E4 (s7h2 / has_location
+                                                :THEME s7f)
+                                      :E0 (s7d1 / do
+                                                :ACTION s7c))
+               :imp_output (s7c1 / cover.RES))
+     :op2 (s7c2 / cover-02~8
+                :ARG2 (s7s / sheet~13
+                           :quant 2
+                           :ARG1-of (s7r / remain-01~11)
+                           :mod (s7p / pastry~12))
+                :ARG0 s7y
+                :event-structure (s7se1 / subevents
+                                        :E1 (s7h3 / has_location
+                                                  :THEME s7s)
+                                        :E3 (s7a2 / and
+                                                  :op1 (s7m2 / motion
+                                                             :THEME s7s)
+                                                  :op2 (s7h4 / has_location
+                                                             :polarity -
+                                                             :THEME s7s))
+                                        :E4 (s7h5 / has_location
+                                                  :THEME s7s)
+                                        :E0 (s7d2 / do
+                                                  :ACTION s7c2))
+                :imp_output (s7c3 / cover.RES))
+     :mode imperative)
+
+
+# :: f-NWNMXTLN::step06::sent01
+# :: snt8	Spread 8 tablespoons of the sour milk , yogurt , oil , eggs and baking powder mixture over the top sheet .
+(s8s3 / spread-01~0
+      :ARG1 (s8m2 / mixture~16
+                  :quant (s8v / volume-quantity
+                              :quant 8
+                              :unit (s8t2 / tablespoon~2))
+                  :consist-of (s8a / and~13
+                                   :op1 (s8m / milk~6
+                                             :mod (s8s2 / sour~5))
+                                   :op2 (s8y / yogurt~8)
+                                   :op3 (s8o / oil~10)
+                                   :op4 (s8e / egg~12)
+                                   :op5 (s8p / powder~15
+                                             :purpose (s8b / bake-01~14))))
+      :ARG2 (s8o3 / over~17
+                  :op1 (s8s / sheet~20
+                            :mod (s8t / top~19)))
+      :mode imperative
+      :ARG0 (s8y1 / you)
+      :event-structure (s8se / subevents
+                             :E1 (s8h / has_location
+                                      :THEME s8m2)
+                             :E3 (s8a1 / and
+                                       :op1 (s8m1 / motion
+                                                  :THEME s8m2)
+                                       :op2 (s8h1 / has_location
+                                                  :polarity -
+                                                  :THEME s8m2))
+                             :E4 (s8h2 / has_location
+                                       :THEME s8m2
+                                       :DESTINATION s8s)
+                             :E0 (s8d / do
+                                      :ACTION s8s3))
+      :imp_output (s8s1 / spread.RES))
+
+
+# :: f-NWNMXTLN::step07::sent01
+# :: snt9	Bake at 2000C for about 30 minutes or until done and golden in colour .
+(s9b / bake-01~0
+     :mod (s9t / temperature-quantity
+               :scale (s9c / celsius)
+               :quant 2000)
+     :duration (s9o / or
+                    :op1 (s9a3 / about~4
+                               :op1 (s9t2 / temporal-quantity
+                                          :unit (s9m / minute~6)
+                                          :quant 30))
+                    :op2 (s9u / until~8
+                              :op1 (s9a2 / and
+                                         :op1 (s9d / done-08~9)
+                                         :op2 (s9g / golden~11))))
+     :mode imperative
+     :ARG0 (s9y / you)
+     :event-structure (s9se / subevents
+                            :E1 (s9c1 / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s9s / spread.RES)
+                                      :V_FINAL_STATE (s9b1 / baked))
+                            :E3 (s9a / apply_heat
+                                     :IMP_PATIENT s9s)
+                            :E4 (s9a1 / and
+                                      :op1 (s9c2 / cooked
+                                                 :IMP_PATIENT s9s
+                                                 :V_FINAL_STATE s9b1)
+                                      :op2 (s9h / has_state
+                                                :IMP_PATIENT s9s
+                                                :RESULT s9g))
+                            :E0 (s9d1 / do
+                                      :ACTION s9b))
+     :imp_output (s9b2 / bake.RES))
+
+
+# :: f-NWNMXTLN::step08::sent01
+# :: snt10	Allow to cool slightly , cut and serve .
+(s10a2 / and~6
+       :op1 (s10a / allow-01~0
+                  :ARG1 (s10c / cool-01~2
+                              :degree (s10s2 / slight~3)
+                              :ARG0 (s10y / you)
+                              :event-structure (s10se / subevents
+                                                      :E1 (s10h / has_state
+                                                                :polarity -
+                                                                :IMP_PATIENT (s10b / bake.RES)
+                                                                :V_FINAL_STATE (s10c1 / cooled))
+                                                      :E3 (s10h1 / has_state
+                                                                 :IMP_PATIENT s10b
+                                                                 :V_FINAL_STATE s10c1)
+                                                      :E0 (s10d / do
+                                                                :ACTION s10c))
+                              :imp_output (s10c3 / cool.RES)))
+       :op2 (s10c2 / cut-01~5
+                   :ARG0 s10y
+                   :event-structure (s10se1 / subevents
+                                            :E1 (s10d1 / degradation_material_integrity
+                                                       :polarity -
+                                                       :IMP_PATIENT s10c3)
+                                            :E2 (s10c4 / contact
+                                                       :IMP_PATIENT s10c3)
+                                            :E3 (s10d2 / degradation_material_integrity
+                                                       :IMP_PATIENT s10c3)
+                                            :E0 (s10d3 / do
+                                                       :ACTION s10c2))
+                   :imp_output (s10c5 / cut.RES))
+       :op3 (s10s / serve-02~7
+                  :ARG0 s10y
+                  :event-structure (s10se2 / subevents
+                                           :E1 (s10a1 / and
+                                                      :op1 (s10h2 / has_possession
+                                                                  :IMP_THEME s10c5)
+                                                      :op2 (s10h3 / has_possession
+                                                                  :polarity -
+                                                                  :IMP_THEME s10c5))
+                                           :E2 (s10t / transfer
+                                                     :IMP_THEME s10c5)
+                                           :E3 (s10a3 / and
+                                                      :op1 (s10h4 / has_possession
+                                                                  :IMP_THEME s10c5)
+                                                      :op2 (s10h5 / has_possession
+                                                                  :polarity -
+                                                                  :IMP_THEME s10c5))
+                                           :E0 (s10d4 / do
+                                                      :ACTION s10s))
+                  :imp_output (s10s1 / serve.RES))
+       :mode imperative)
+
+

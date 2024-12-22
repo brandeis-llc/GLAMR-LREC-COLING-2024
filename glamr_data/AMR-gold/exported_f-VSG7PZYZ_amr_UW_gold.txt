@@ -1,0 +1,125 @@
+user name: timobi
+user id: 423
+file language: english
+file format: plain_text
+Doc ID in database: 1439
+export time: 9/11/2023, 4:18:33 PM
+
+# :: snt1	In a tall glass , fill with ice and add one and half jiggers of spiced rum , add 2/3 of the glass with pineapple soda
+# sentence level graph:
+(s1a3 / and
+  :op1 (s1f / fill-01
+         :ARG2 (s1i / ice))
+  :op2 (s1a / add-02
+         :ARG1 (s1r / rum
+                 :quant (s1v / volume-quantity
+                          :quant 1.5
+                          :unit (s1j / jigger))
+                 :ARG1-of (s1s2 / spice-02)))
+  :op3 (s1a2 / add-02
+         :ARG1 (s1v2 / volume-quantity
+                 :quant "2/3"
+                 :unit (s1g3 / glass))
+         :ARG2 (s1s / soda
+                 :mod (s1p / pineapple)))
+  :location (s1g / glass
+              :mod (s1t / tall)))
+
+# alignment:s1a: 10-10
+s1a2: 19-19
+s1a3: 9-9
+s1f: 6-6
+s1g: -1--1
+s1i: 8-8
+s1j: 14-14
+s1p: 25-25
+s1r: 17-17
+s1s: 26-26
+s1s2: 16-16
+s1t: 3-3
+s1v: 14-14
+s1g3: 23-23
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	float til glass is full with ginger beer
+# sentence level graph:
+(s2f / float-01
+  :mode imperative
+  :time (s2u / until
+          :op1 (s2f2 / fill-01
+                 :ARG1 (s2g2 / glass)
+                 :ARG2 (s2b / beer
+                         :mod (s2g / ginger)))))
+
+# alignment:s2b: 8-8
+s2f: 1-1
+s2f2: 5-5
+s2g: 7-7
+s2g2: 3-3
+s2u: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	squeeze a generous squeeze of lime
+# sentence level graph:
+(s3s / squeeze-02
+  :ARG1 (s3l2 / lime
+          :quant (s3v / volume-quantity
+                   :mod (s3g / generous)
+                   :unit (s3s2 / squeeze)))
+  :mode imperative)
+
+# alignment:s3g: 0-0
+s3s: 1-1
+s3s2: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	add straw stir gently drink slowly and enjoy !
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4a / add-02
+         :ARG1 (s4s3 / straw))
+  :op2 (s4s2 / stir-01
+         :manner (s4g / gentle))
+  :op3 (s4e / enjoy-01)
+  :mode imperative
+  :op3 (s4d / drink-01
+         :manner (s4s / slow)))
+
+# alignment:s4a: 1-1
+s4a2: 7-7
+s4e: 8-8
+s4s: 6-6
+s4s2: 3-3
+s4s3: 2-2
+s4d: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+In a tall glass , fill with ice and add one and half jiggers of spiced rum , add 2/3 of the glass with pineapple soda
+float til glass is full with ginger beer
+squeeze a generous squeeze of lime
+add straw stir gently drink slowly and enjoy !

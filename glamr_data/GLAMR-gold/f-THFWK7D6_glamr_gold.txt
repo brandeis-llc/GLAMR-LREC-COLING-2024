@@ -1,0 +1,217 @@
+# :: f-THFWK7D6::step01::sent01
+# :: snt1	Preheat oven to 350 F.
+(s1p / preheat-00~0
+     :ARG1 (s1o / oven~1)
+     :destination (s1t / temperature-quantity
+                       :quant 350
+                       :scale (s1f / fahrenheit~4))
+     :mode imperative)
+
+
+# :: f-THFWK7D6::step02::sent01
+# :: snt2	Grease cookie sheets .
+(s2g / grease-01~0
+     :ARG1 (s2s / sheet~2
+                :mod (s2c / cookie~1))
+     :mode imperative)
+
+
+# :: f-THFWK7D6::step03::sent01
+# :: snt3	In a medium bowl , cream together the shortening , sugar , coffee and Cuppa Joe Spice .
+(s3c2 / cream-01~5
+      :ARG1 (s3a / and~13
+                 :op1 (s3s / shortening~8)
+                 :op2 (s3s2 / sugar~10)
+                 :op3 (s3c / coffee~12)
+                 :op4 (s3p / product
+                           :name (s3n / name
+                                      :op1 "Cuppa"
+                                      :op2 "Joe"
+                                      :op3 "Spice")))
+      :location (s3b / bowl~3
+                     :mod (s3m / medium~2))
+      :manner (s3t / together~6)
+      :mode imperative
+      :ARG0 (s3y / you)
+      :event-structure (s3se / subevents
+                             :E1 (s3a1 / and
+                                       :op1 (s3m1 / mingled
+                                                  :polarity -
+                                                  :PATIENT_I s3s
+                                                  :PATIENT_J s3s2
+                                                  :PATIENT_K s3c
+                                                  :PATIENT_L (s3C / Cuppa-Joe-Spice))
+                                       :op2 (s3h / has_material_integrity_state
+                                                 :polarity -
+                                                 :PATIENT_I s3s
+                                                 :V_STATE (s3c1 / creamed)
+                                                 :PATIENT_J s3s2
+                                                 :PATIENT_K s3c
+                                                 :PATIENT_L s3C)
+                                       :op3 (s3h1 / has_material_integrity_state
+                                                  :polarity -
+                                                  :PATIENT_J s3s2
+                                                  :V_STATE s3c1
+                                                  :PATIENT_I s3s
+                                                  :PATIENT_K s3c
+                                                  :PATIENT_L s3C))
+                             :E3 (s3a2 / and
+                                       :op1 (s3m2 / mingled
+                                                  :PATIENT_I s3s
+                                                  :PATIENT_J s3s2
+                                                  :PATIENT_K s3c
+                                                  :PATIENT_L s3C)
+                                       :op2 (s3h2 / has_material_integrity_state
+                                                  :PATIENT_I s3s
+                                                  :V_STATE s3c1
+                                                  :PATIENT_J s3s2
+                                                  :PATIENT_K s3c
+                                                  :PATIENT_L s3C)
+                                       :op3 (s3h3 / has_material_integrity_state
+                                                  :PATIENT_J s3s2
+                                                  :V_STATE s3c1
+                                                  :PATIENT_I s3s
+                                                  :PATIENT_K s3c
+                                                  :PATIENT_L s3C))
+                             :E0 (s3d / do
+                                      :ACTION s3c2))
+      :imp_output (s3c3 / cream.RES))
+
+
+# :: f-THFWK7D6::step04::sent01
+# :: snt4	Beat in the egg , flour , vanilla and chopped nuts .
+(s4b / beat-01~0
+     :ARG1 (s4a / and
+                :op1 (s4e / egg~3)
+                :op2 (s4f / flour~5)
+                :op3 (s4v / vanilla~7)
+                :op4 (s4n / nut~10
+                          :ARG1-of (s4c / chop-01~9)))
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4h / has_material_integrity_state
+                                     :polarity -
+                                     :PATIENT s4n
+                                     :V_STATE (s4b1 / beaten))
+                            :E3 (s4h1 / has_material_integrity_state
+                                      :PATIENT s4n
+                                      :V_STATE s4b1)
+                            :E0 (s4d / do
+                                     :ACTION s4b))
+     :imp_output (s4b2 / beat.RES))
+
+
+# :: f-THFWK7D6::step05::sent01
+# :: snt5	Mix until well blended .
+(s5m / mix-01~0
+     :duration (s5u / until~1
+                    :op1 (s5b / blend-01~3
+                              :manner (s5w / well~2)))
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5a / and
+                                     :op1 (s5m1 / mingled
+                                                :polarity -)
+                                     :op2 (s5h / has_material_integrity_state
+                                               :polarity -
+                                               :V_STATE (s5m2 / mixed))
+                                     :op3 (s5h1 / has_material_integrity_state
+                                                :polarity -
+                                                :V_STATE s5m2))
+                            :E3 (s5a1 / and
+                                      :op1 (s5m3 / mingled)
+                                      :op2 (s5h2 / has_material_integrity_state
+                                                 :V_STATE s5m2)
+                                      :op3 (s5h3 / has_material_integrity_state
+                                                 :V_STATE s5m2))
+                            :E0 (s5d / do
+                                     :ACTION s5m))
+     :imp_output (s5m4 / mix.RES))
+
+
+# :: f-THFWK7D6::step06::sent01
+# :: snt6	Drop by teaspoonfuls onto cookie sheets
+(s6d / drop-01~0
+     :ARG4 (s6s / sheet~5
+                :mod (s6c / cookie~4))
+     :manner (s6t2 / teaspoonful~2)
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6h / has_location)
+                            :E2 (s6e / exert_force
+                                     :IMP_THEME (s6m / mix.RES))
+                            :E3 (s6a / and
+                                     :op1 (s6m1 / motion
+                                                :IMP_THEME s6m
+                                                :V_TRAJECTORY (s6d1 / dropped))
+                                     :op2 (s6h1 / has_location
+                                                :polarity -))
+                            :E4 (s6h2 / has_location
+                                      :IMP_THEME s6m
+                                      :DESTINATION s6s)
+                            :E0 (s6d2 / do
+                                      :ACTION s6d))
+     :imp_output (s6d3 / drop.RES))
+
+
+# :: f-THFWK7D6::step07::sent01
+# :: snt7	Bake for 10 to 12 minutes in the preheated oven , or until edges are golden .
+(s7b / bake-01~0
+     :duration (s7u / until~12
+                    :op1 (s7g / golden-03~15
+                              :ARG1 (s7e / edge~13)))
+     :duration (s7b2 / between
+                     :op1 (s7t / temporal-quantity
+                               :quant 10
+                               :unit (s7m / minute))
+                     :op2 (s7t2 / temporal-quantity
+                                :quant 12
+                                :unit (s7m2 / minute~5)))
+     :location (s7o / oven~9
+                    :ARG1-of (s7p / preheat-00~8))
+     :mode imperative
+     :ARG0 (s7y / you)
+     :event-structure (s7se / subevents
+                            :E1 (s7c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s7d / drop.RES)
+                                     :V_FINAL_STATE (s7b1 / baked))
+                            :E3 (s7a / apply_heat
+                                     :INSTRUMENT s7o
+                                     :IMP_PATIENT s7d)
+                            :E4 (s7a1 / and
+                                      :op1 (s7c1 / cooked
+                                                 :IMP_PATIENT s7d
+                                                 :V_FINAL_STATE s7b1)
+                                      :op2 (s7h / has_state
+                                                :IMP_PATIENT s7d
+                                                :RESULT s7g))
+                            :E0 (s7d1 / do
+                                      :ACTION s7b))
+     :imp_output (s7b3 / bake.RES))
+
+
+# :: f-THFWK7D6::step08::sent01
+# :: snt8	Let cool on wire racks
+(s8l / let-01~0
+     :ARG1 (s8c / cool-04~1
+                :location (s8r / rack~4
+                               :mod (s8w / wire~3))
+                :ARG0 (s8y / you)
+                :event-structure (s8se / subevents
+                                       :E1 (s8h / has_state
+                                                :polarity -
+                                                :IMP_PATIENT (s8b / bake.RES)
+                                                :V_FINAL_STATE (s8c1 / cooled))
+                                       :E3 (s8h1 / has_state
+                                                 :IMP_PATIENT s8b
+                                                 :V_FINAL_STATE s8c1)
+                                       :E0 (s8d / do
+                                                :ACTION s8c))
+                :imp_output (s8c2 / cool.RES))
+     :mode imperative)
+
+

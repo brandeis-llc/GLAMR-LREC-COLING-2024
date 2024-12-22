@@ -1,0 +1,36 @@
+# :: r-1981::step01::sent01
+# :: snt1	Melt butter in pan , add dill and stir gently over low heat for a few minutes .
+(s1 / sentence
+    :coref ((s1b :cut s1m3)
+			(s1m3 :aggregation s1a3)
+			(s1a3 :cut s1s2)
+			(s1d :aggregation s1a3)))
+
+
+# :: r-1981::step02::sent01
+# :: snt2	Heat stock and add the dill to it .
+(s2 / sentence
+    :coref ((s1s2 :aggregation s2a3)
+			(s1a3 :aggregation s2a3)
+			(s2s :cut s2h2)
+			(s2h2 :aggregation s2a3)))
+
+
+# :: r-1981::step03::sent01
+# :: snt3	Mix in the lemon juice and cream .
+(s3 / sentence
+    :coref ((s2a3 :aggregation s3m4)
+			(s3l :aggregation s3m4)
+			(s3c :aggregation s3m4)))
+
+
+# :: r-1981::step04::sent01
+# :: snt4	Season and serve .
+(s4 / sentence
+    :coref ((s3m4 :cut s4s1)
+			(s4s1 :cut s4s3)
+			(s2a3 :cut s4s1)
+			(s2a3 :cut s4s3)
+			(s3m4 :cut s4s3)))
+
+

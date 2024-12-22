@@ -1,0 +1,205 @@
+# :: r-1376::step01::sent01
+# :: snt1	In a 3 quart saucepan , place prunes and 2 cups water ; heat to boiling .
+(s1a2 / and
+      :op1 (s1p / place-01~6
+                :ARG1 (s1a / and~8
+                           :op1 (s1p2 / prune~7)
+                           :op2 (s1w / water~11
+                                     :quant (s1v2 / volume-quantity
+                                                  :quant 2
+                                                  :unit (s1c / cup~10))))
+                :location (s1s / saucepan~4
+                               :mod (s1v / volume-quantity
+                                         :quant 3
+                                         :unit (s1q / quart~3)))
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1h1 / has_location
+                                                 :THEME s1w)
+                                       :E3 (s1a1 / and
+                                                 :op1 (s1m / motion
+                                                           :THEME s1w)
+                                                 :op2 (s1h2 / has_location
+                                                            :polarity -
+                                                            :THEME s1w))
+                                       :E4 (s1h3 / has_location
+                                                 :THEME s1w
+                                                 :DESTINATION s1s)
+                                       :E0 (s1d / do
+                                                :ACTION s1p))
+                :imp_output (s1p1 / place.RES))
+      :op2 (s1h / heat-01~13
+                :destination (s1b / boiling~15)
+                :ARG0 s1y
+                :event-structure (s1se1 / subevents
+                                        :E1 (s1c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s1p1
+                                                  :V_FINAL_STATE (s1h4 / heated))
+                                        :E3 (s1a3 / apply_heat
+                                                  :IMP_PATIENT s1p1)
+                                        :E4 (s1c2 / cooked
+                                                  :IMP_PATIENT s1p1
+                                                  :V_FINAL_STATE s1h4)
+                                        :E0 (s1d1 / do
+                                                  :ACTION s1h))
+                :imp_output (s1h5 / heat.RES))
+      :mode imperative)
+
+
+# :: r-1376::step02::sent01
+# :: snt2	Reduce heat , and simmer , covered , 30 minutes , or until prunes are very tender .
+(s2a / and~3
+     :op1 (s2r / reduce-01~0
+               :ARG1 (s2h / heat~1))
+     :op2 (s2s / simmer-01~4
+               :manner (s2c / cover-02~6)
+               :duration (s2o / or~11
+                              :op1 (s2t / temporal-quantity
+                                        :unit (s2m / minute~9)
+                                        :quant 30)
+                              :op2 (s2u / until~12
+                                        :op1 (s2t2 / tender-ON-03~16
+                                                   :ARG1 (s2p / prune~13)
+                                                   :degree (s2v / very~15))))
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E1 (s2c1 / cooked
+                                                :polarity -
+                                                :IMP_PATIENT (s2h1 / heat.RES)
+                                                :V_FINAL_STATE (s2s1 / simmered))
+                                      :E3 (s2a1 / apply_heat
+                                                :IMP_PATIENT s2h1)
+                                      :E4 (s2a2 / and
+                                                :op1 (s2c2 / cooked
+                                                           :IMP_PATIENT s2h1
+                                                           :V_FINAL_STATE s2s1)
+                                                :op2 (s2h2 / has_state
+                                                           :IMP_PATIENT s2h1
+                                                           :RESULT s2t2))
+                                      :E0 (s2d / do
+                                               :ACTION s2s))
+               :imp_output (s2s2 / simmer.RES))
+     :mode imperative)
+
+
+# :: r-1376::step03::sent01
+# :: snt3	Drain prunes , reserving liquid .
+(s3d / drain-01~0
+     :ARG1 (s3p / prune~1)
+     :manner (s3r / reserve-01~3
+                  :ARG1 (s3l / liquid~4))
+     :mode imperative)
+
+
+# :: r-1376::step04::sent01
+# :: snt4	Chop prunes finely .
+(s4c / chop-01~0
+     :ARG1 (s4p / prune~1)
+     :manner (s4f / fine~2)
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4d / degradation_material_integrity
+                                     :polarity -
+                                     :PATIENT s4p)
+                            :E2 (s4c1 / contact
+                                      :PATIENT s4p)
+                            :E3 (s4d1 / degradation_material_integrity
+                                      :PATIENT s4p)
+                            :E0 (s4d2 / do
+                                      :ACTION s4c))
+     :imp_output (s4c2 / chop.RES))
+
+
+# :: r-1376::step05::sent01
+# :: snt5	Add 3/4 cup granulated sugar , 1 teaspoon vanilla ; the cardamom , 1/4 teaspoon salt , and 1/2 cup reserved cooking liquid ; mix until ingredients are well blended .
+(s5a2 / and
+      :op1 (s5a / add-02~0
+                :ARG1 (s5a3 / and~17
+                            :op1 (s5s2 / sugar~4
+                                       :ARG1-of (s5g / granulate-01~3)
+                                       :quant (s5v3 / volume-quantity
+                                                    :quant "3/4"
+                                                    :unit (s5c5 / cup~2)))
+                            :op2 (s5v / vanilla~8
+                                      :quant (s5v4 / volume-quantity
+                                                   :quant 1
+                                                   :unit (s5t / teaspoon~7)))
+                            :op3 (s5c / cardamom~11)
+                            :op4 (s5s / salt~15
+                                      :quant (s5v5 / volume-quantity
+                                                   :quant "1/4"
+                                                   :unit (s5t2 / teaspoon)))
+                            :op5 (s5l / liquid~22
+                                      :purpose (s5c2 / cook-01~21)
+                                      :quant (s5v2 / volume-quantity
+                                                   :quant "1/2"
+                                                   :unit (s5c4 / cup~19))
+                                      :ARG1-of (s5r / reserve-01~20)))
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s5s2
+                                                 :PATIENT_J s5v
+                                                 :PATIENT_K s5c
+                                                 :PATIENT_L s5s
+                                                 :PATIENT_M s5l)
+                                       :E3 (s5t3 / together
+                                                 :PATIENT_I s5s2
+                                                 :PATIENT_J s5v
+                                                 :PATIENT_K s5c
+                                                 :PATIENT_L s5s
+                                                 :PATIENT_M s5l)
+                                       :E0 (s5d / do
+                                                :ACTION s5a))
+                :imp_output (s5a1 / add.RES))
+      :op2 (s5m3 / mix-01~24
+                 :duration (s5u / until~25
+                                :op1 (s5b / blend-01~29
+                                          :ARG1 (s5i / ingredient~26)
+                                          :manner (s5w / well~28)))
+                 :ARG0 s5y
+                 :event-structure (s5se1 / subevents
+                                         :E1 (s5a4 / and
+                                                   :op1 (s5m / mingled
+                                                             :polarity -)
+                                                   :op2 (s5h / has_material_integrity_state
+                                                             :polarity -
+                                                             :V_STATE (s5m1 / mixed))
+                                                   :op3 (s5h1 / has_material_integrity_state
+                                                              :polarity -
+                                                              :V_STATE s5m1))
+                                         :E3 (s5a5 / and
+                                                   :op1 (s5m2 / mingled)
+                                                   :op2 (s5h2 / has_material_integrity_state
+                                                              :V_STATE s5m1)
+                                                   :op3 (s5h3 / has_material_integrity_state
+                                                              :V_STATE s5m1))
+                                         :E0 (s5d1 / do
+                                                   :ACTION s5m3))
+                 :imp_output (s5m4 / mix.RES))
+      :mode imperative)
+
+
+# :: r-1376::step06::sent01
+# :: snt6	Set aside to cool .
+(s6s / set-01~0
+     :ARG2 (s6a / aside~1)
+     :purpose (s6c / cool-01~3
+                   :ARG0 (s6y / you)
+                   :event-structure (s6se / subevents
+                                          :E1 (s6h / has_state
+                                                   :polarity -
+                                                   :IMP_PATIENT (s6m / mix.RES)
+                                                   :V_FINAL_STATE (s6c1 / cooled))
+                                          :E3 (s6h1 / has_state
+                                                    :IMP_PATIENT s6m
+                                                    :V_FINAL_STATE s6c1)
+                                          :E0 (s6d / do
+                                                   :ACTION s6c))
+                   :imp_output (s6c2 / cool.RES))
+     :mode imperative)
+
+

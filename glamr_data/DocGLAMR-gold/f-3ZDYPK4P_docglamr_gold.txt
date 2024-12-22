@@ -1,0 +1,66 @@
+# :: f-3ZDYPK4P::step01::sent01
+# :: snt1	In a large skillet , cook andouille on high for 2 minutes .
+(s1 / sentence
+    :coref ((s1a :cut s1c4)))
+
+
+# :: f-3ZDYPK4P::step01::sent02
+# :: snt2	Lower heat to medium and continue to cook until sausage begins to brown .
+(s2 / sentence
+    :coref ((s1c4 :cut s2l)
+			(s2l :cut s2m)))
+
+
+# :: f-3ZDYPK4P::step02::sent01
+# :: snt3	Stir frequently and scrape juiced from the bottom of the pan .
+(s3 / sentence
+    :coref ((s2m :aggregation s3s2)
+			(s3s2 :cut s3a)
+			(s3f :aggregation s3s2)
+			(s3s :aggregation s3s2)))
+
+
+# :: f-3ZDYPK4P::step03::sent01
+# :: snt4	Add onions , celery and peppers .
+(s4 / sentence)
+
+
+# :: f-3ZDYPK4P::step03::sent02
+# :: snt5	Continue to cook until vegetables are tender but still firm , about 7 minutes .
+(s5 / sentence
+    :coref ((s3a :aggregation s5c)
+			(s5c :cut s5c)
+			(s5c :cut s5c3)
+			(s3s2 :aggregation s5c)
+			(s3s2 :cut s5c)))
+
+
+# :: f-3ZDYPK4P::step04::sent01
+# :: snt6	Return the heat to high , which will bring the oil to the bottom of the pan .
+(s6 / sentence
+    :coref ((s5c3 :aggregation s6r)
+			(s6r :cut s6h2)
+			(s5c :aggregation s6r)
+			(s5c :cut s6h2)))
+
+
+# :: f-3ZDYPK4P::step05::sent01
+# :: snt7	Add Beaumonde ; cook until the mixture sticks , almost to the point of scorching , about 2 minutes .
+(s7 / sentence)
+
+
+# :: f-3ZDYPK4P::step05::sent02
+# :: snt8	Stir and scrape the bottom of the pan constantly over this period .
+(s8 / sentence)
+
+
+# :: f-3ZDYPK4P::step06::sent01
+# :: snt9	Add stock and bring to a simmer .
+(s9 / sentence)
+
+
+# :: f-3ZDYPK4P::step06::sent02
+# :: snt10	Reduce heat and continue simmering and stirring for another 5 minutes .
+(s10 / sentence)
+
+

@@ -1,0 +1,170 @@
+# :: r-1981::step01::sent01
+# :: snt1	Melt butter in pan , add dill and stir gently over low heat for a few minutes .
+(s1a2 / and~7
+      :op1 (s1m / melt-01~0
+                :ARG1 (s1b / butter~1)
+                :location (s1p / pan~3)
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1b1 / be
+                                                 :polarity -)
+                                       :E2 (s1a1 / and
+                                                 :op1 (s1b2 / be)
+                                                 :op2 (s1m1 / made_of))
+                                       :E0 (s1d1 / do
+                                                 :ACTION s1m))
+                :imp_output (s1m3 / melt.RES))
+      :op2 (s1a / add-02~5
+                :ARG1 (s1d / dill~6)
+                :ARG0 s1y
+                :event-structure (s1se1 / subevents
+                                        :E1 (s1t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s1d)
+                                        :E3 (s1t2 / together
+                                                  :PATIENT_I s1d)
+                                        :E0 (s1d2 / do
+                                                  :ACTION s1a))
+                :imp_output (s1a3 / add.RES))
+      :op3 (s1s / stir-01~8
+                :duration (s1f / few~15
+                               :op1 (s1t / temporal-quantity
+                                         :quant 1
+                                         :unit (s1m2 / minute~16)))
+                :manner (s1h / heat~12
+                             :mod (s1l / low~11))
+                :manner (s1g / gentle~9)
+                :ARG0 s1y
+                :event-structure (s1se2 / subevents
+                                        :E1 (s1h1 / has_material_integrity_state
+                                                  :polarity -
+                                                  :IMP_PATIENT s1a3
+                                                  :V_STATE (s1s1 / stirred))
+                                        :E3 (s1h2 / has_material_integrity_state
+                                                  :IMP_PATIENT s1a3
+                                                  :V_STATE s1s1)
+                                        :E0 (s1d3 / do
+                                                  :ACTION s1s))
+                :imp_output (s1s2 / stir.RES))
+      :mode imperative)
+
+
+# :: r-1981::step02::sent01
+# :: snt2	Heat stock and add the dill to it .
+(s2a2 / and~2
+      :op1 (s2h / heat-01~0
+                :ARG1 (s2s / stock~1,7)
+                :ARG0 (s2y / you)
+                :event-structure (s2se / subevents
+                                       :E1 (s2c / cooked
+                                                :polarity -
+                                                :PATIENT s2s
+                                                :V_FINAL_STATE (s2h1 / heated))
+                                       :E3 (s2a1 / apply_heat
+                                                 :PATIENT s2s)
+                                       :E4 (s2c1 / cooked
+                                                 :PATIENT s2s
+                                                 :V_FINAL_STATE s2h1)
+                                       :E0 (s2d1 / do
+                                                 :ACTION s2h))
+                :imp_output (s2h2 / heat.RES))
+      :op2 (s2a / add-02~3
+                :ARG1 (s2d / dill~5)
+                :ARG2 s2s
+                :ARG0 s2y
+                :event-structure (s2se1 / subevents
+                                        :E1 (s2t / together
+                                                 :polarity -
+                                                 :PATIENT_I s2d)
+                                        :E3 (s2t1 / together
+                                                  :PATIENT_I s2d)
+                                        :E0 (s2d2 / do
+                                                  :ACTION s2a))
+                :imp_output (s2a3 / add.RES))
+      :mode imperative)
+
+
+# :: r-1981::step03::sent01
+# :: snt3	Mix in the lemon juice and cream .
+(s3m / mix-01~0
+     :ARG1 (s3a / and~5
+                :op1 (s3j / juice~4
+                          :source (s3l / lemon~3))
+                :op2 (s3c / cream~6))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3a1 / and
+                                      :op1 (s3m1 / mingled
+                                                 :polarity -
+                                                 :PATIENT_I s3j
+                                                 :PATIENT_J s3c)
+                                      :op2 (s3h / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT_I s3j
+                                                :V_STATE (s3m2 / mixed)
+                                                :PATIENT_J s3c)
+                                      :op3 (s3h1 / has_material_integrity_state
+                                                 :polarity -
+                                                 :PATIENT_J s3c
+                                                 :V_STATE s3m2
+                                                 :PATIENT_I s3j))
+                            :E3 (s3a2 / and
+                                      :op1 (s3m3 / mingled
+                                                 :PATIENT_I s3j
+                                                 :PATIENT_J s3c)
+                                      :op2 (s3h2 / has_material_integrity_state
+                                                 :PATIENT_I s3j
+                                                 :V_STATE s3m2
+                                                 :PATIENT_J s3c)
+                                      :op3 (s3h3 / has_material_integrity_state
+                                                 :PATIENT_J s3c
+                                                 :V_STATE s3m2
+                                                 :PATIENT_I s3j))
+                            :E0 (s3d / do
+                                     :ACTION s3m))
+     :imp_output (s3m4 / mix.RES))
+
+
+# :: r-1981::step04::sent01
+# :: snt4	Season and serve .
+(s4a / and~1
+     :op1 (s4s / season-01~0
+               :ARG0 (s4y / you)
+               :event-structure (s4se / subevents
+                                      :E1 (s4h / has_location
+                                               :IMP_THEME (s4m / mix.RES))
+                                      :E3 (s4a1 / and
+                                                :op1 (s4m1 / motion
+                                                           :IMP_THEME s4m)
+                                                :op2 (s4h1 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME s4m))
+                                      :E4 (s4h2 / has_location
+                                                :IMP_THEME s4m)
+                                      :E0 (s4d / do
+                                               :ACTION s4s))
+               :imp_output (s4s1 / season.RES))
+     :op2 (s4s2 / serve-02~2
+                :ARG0 s4y
+                :event-structure (s4se1 / subevents
+                                        :E1 (s4a2 / and
+                                                  :op1 (s4h3 / has_possession
+                                                             :IMP_THEME s4s1)
+                                                  :op2 (s4h4 / has_possession
+                                                             :polarity -
+                                                             :IMP_THEME s4s1))
+                                        :E2 (s4t / transfer
+                                                 :IMP_THEME s4s1)
+                                        :E3 (s4a3 / and
+                                                  :op1 (s4h5 / has_possession
+                                                             :IMP_THEME s4s1)
+                                                  :op2 (s4h6 / has_possession
+                                                             :polarity -
+                                                             :IMP_THEME s4s1))
+                                        :E0 (s4d1 / do
+                                                  :ACTION s4s2))
+                :imp_output (s4s3 / serve.RES))
+     :mode imperative)
+
+

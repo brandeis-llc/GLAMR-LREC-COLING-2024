@@ -1,0 +1,332 @@
+user name: qiyuansinestrofeng
+user id: 360
+file language: english
+file format: plain_text
+Doc ID in database: 1278
+export time: 4/8/2023, 9:21:05 PM
+
+# :: snt1	Preheat oven to 350 degrees F.
+# sentence level graph:
+(s1p / preheat-00
+  :ARG1 (s1o / oven)
+  :mod (s1t / temperature-quantity
+         :quant 350
+         :scale (s1f / fahrenheit))
+  :mode imperative)
+
+# alignment:s1f: 5-5
+s1o: 2-2
+s1t: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Line two cookie sheets with parchment paper .
+# sentence level graph:
+(s2l / line-01
+  :ARG1 (s2s / sheet
+          :quant 2
+          :mod (s2c / cookie))
+  :ARG2 (s2p / paper
+          :mod (s2p2 / parchment))
+  :mode imperative)
+
+# alignment:s2c: 3-3
+s2l: 1-1
+s2p: 7-7
+s2p2: 6-6
+s2s: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	In a large bowl whip butter and sugar until light and fluffy .
+# sentence level graph:
+(s3w / whip-01
+  :ARG1 (s3a / and
+          :op1 (s3b2 / butter)
+          :op2 (s3s2 / sugar))
+  :location (s3b / bowl
+              :mod (s3l / large))
+  :duration (s3u / until
+              :op1 (s3a2 / and
+                     :op1 (s3l2 / light
+                            :ARG1 s3a)
+                     :op2 (s3f / fluffy
+                            :ARG1 s3a)))
+  :mode imperative)
+
+# alignment:s3a: 0-0
+s3a2: 11-11
+s3b: 4-4
+s3b2: 6-6
+s3l: 3-3
+s3l2: 0-0
+s3s2: 8-8
+s3u: 9-9
+s3w: 5-5
+s3f: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add 1 egg and vanilla .
+# sentence level graph:
+(s4a / add-02
+  :ARG1 (s4a2 / and
+          :op1 (s4e / egg
+                 :quant 1)
+          :op2 (s4v / vanilla))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4a2: 4-4
+s4e: 3-3
+s4v: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Stir in flour and oolong tea until a very soft and moist cookie dough forms .
+# sentence level graph:
+(s5s / stir-01
+  :ARG1 (s5a / and
+          :op1 (s5f / flour)
+          :op2 (s5t / tea
+                 :mod (s5o / oolong)))
+  :duration (s5u / until
+              :op1 (s5f2 / form-01
+                     :ARG1 (s5d / dough
+                             :ARG1-of (s5a2 / and
+                                        :op1 (s5s2 / soft
+                                               :degree (s5v / very))
+                                        :op2 (s5m / moist
+                                               :degree s5v))
+                             :mod (s5c / cookie))))
+  :mode imperative)
+
+# alignment:s5a: 0-0
+s5a2: 0-0
+s5c: 0-0
+s5d: 0-0
+s5f: 0-0
+s5f2: 0-0
+s5m: 0-0
+s5o: 0-0
+s5s: 10-10
+s5s2: 0-0
+s5t: 0-0
+s5u: 0-0
+s5v: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Pour about 1/2 cup of confectioner 's sugar in a small bowl .
+# sentence level graph:
+(s6p / pour-01
+  :ARG1 (s6s2 / sugar
+          :quant (s6a / about
+                   :op1 (s6v / volume-quantity
+                          :quant "1/2"
+                          :unit (s6c2 / cup)))
+          :source (s6c / confectioner))
+  :ARG2 (s6b / bowl
+          :mod (s6s / small))
+  :mode imperative)
+
+# alignment:s6a: 2-2
+s6b: 12-12
+s6c: 6-6
+s6c2: 4-4
+s6p: 1-1
+s6s: 11-11
+s6s2: 8-8
+s6v: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Scoop out about a teaspoon amount of cookie dough and roll in confectioner 's sugar .
+# sentence level graph:
+(s7a3 / and
+  :op1 (s7c / Scoop-out-02
+         :ARG1 (s7d / dough
+                 :quant (s7a2 / amount
+                          :quant (s7a / about
+                                   :op1 (s7v / volume-quantity
+                                          :quant 1
+                                          :unit (s7t / teaspoon))))
+                 :mod (s7c3 / cookie)))
+  :op2 (s7r / roll-01
+         :ARG1 s7d
+         :ARG2 (s7s / sugar
+                 :source (s7c2 / confectioner)))
+  :mode imperative)
+
+# alignment:s7a: 3-3
+s7a2: 6-6
+s7a3: 10-10
+s7c: 1-1
+s7c2: 13-13
+s7c3: 8-8
+s7d: 9-9
+s7r: 11-11
+s7s: 15-15
+s7t: 5-5
+s7v: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Place on prepared cookie sheets and flatten out with bottom of a glass .
+# sentence level graph:
+(s8a / and
+  :op1 (s8p / place-01
+         :ARG2 (s8s / sheet
+                 :ARG1-of (s9p / prepare-02)
+                 :mod (s8c / cookie)))
+  :op2 (s8f / flatten-01
+         :ARG1 s8s
+         :instrument (s8b / bottom
+                       :part-of (s8g / glass)))
+  :mode imperative)
+
+# alignment:s8a: 6-6
+s8b: 10-10
+s8c: 4-4
+s8f: 7-7
+s8g: 13-13
+s8p: 1-1
+s8s: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Bake for about 8 minutes or until edges are lightly golden .
+# sentence level graph:
+(s9b / bake-01
+  :mode imperative
+  :time (s9u / until
+          :op1 (s9g / golden-00
+                 :ARG1 (s9e / edge)
+                 :degree (s9l / light)))
+  :duration (s9o / or
+              :op1 (s9a / about
+                     :op1 (s9t / temporal-quantity
+                            :quant 8
+                            :unit (s9m / minute)))
+              :op2 (s9u2 / until
+                     :op1 (s9g2 / golden-00
+                            :ARG1 (s9e2 / edges)
+                            :degree (s9l2 / light)))))
+
+# alignment:s9a: 0-0
+s9b: 1-1
+s9e: 8-8
+s9g: 11-11
+s9l: 10-10
+s9m: 0-0
+s9t: 0-0
+s9u: 7-7
+s9o: 0-0
+s9u2: 0-0
+s9g2: 0-0
+s9e2: 0-0
+s9l2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Transfer cookies to a cooling rack .
+# sentence level graph:
+(s10t / transfer-01
+  :ARG1 (s10c / cookie)
+  :ARG2 (s10r / rack
+          :ARG1-of (s10c3 / cool-01))
+  :mode imperative)
+
+# alignment:s10c: 2-2
+s10r: 6-6
+s10t: 1-1
+s10c3: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt11	Serve with your favorite tea and enjoy !
+# sentence level graph:
+(s11a2 / and
+  :op1 (s11s / serve-02
+         :accompanier (s11t / tea
+                        :ARG1-of (s11f2 / favor-01
+                                   :ARG0 (s11y2 / you))))
+  :op2 (s11e / enjoy-01)
+  :mode imperative)
+
+# alignment:s11a2: 6-6
+s11e: 7-7
+s11s: 1-1
+s11t: 0-0
+s11f2: 0-0
+s11y2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Preheat oven to 350 degrees F.
+Line two cookie sheets with parchment paper .
+In a large bowl whip butter and sugar until light and fluffy .
+Add 1 egg and vanilla .
+Stir in flour and oolong tea until a very soft and moist cookie dough forms .
+Pour about 1/2 cup of confectioner 's sugar in a small bowl .
+Scoop out about a teaspoon amount of cookie dough and roll in confectioner 's sugar .
+Place on prepared cookie sheets and flatten out with bottom of a glass .
+Bake for about 8 minutes or until edges are lightly golden .
+Transfer cookies to a cooling rack .
+Serve with your favorite tea and enjoy !

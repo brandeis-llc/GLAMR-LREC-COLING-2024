@@ -1,0 +1,171 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1472
+export time: 9/20/2023, 8:49:53 PM
+
+# :: snt1	Place meat in a pot and cover with water .
+# sentence level graph:
+(s1a / and
+  :op1 (s1p / place-01
+         :ARG1 (s1m / meat)
+         :ARG2 (s1p2 / pot))
+  :op2 (s1c / cover-02
+         :ARG2 (s1w / water))
+  :mode imperative)
+
+# alignment:s1a: 6-6
+s1c: 7-7
+s1m: 2-2
+s1p: 1-1
+s1p2: 5-5
+s1w: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Bring to a boil .
+# sentence level graph:
+(s2b2 / bring-ON-02
+  :destination (s2b / boil)
+  :mode imperative)
+
+# alignment:s2b: 4-4
+s2b2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add diced carrots , parsnips , herbs and seasoning .
+# sentence level graph:
+(s3a / add-02
+  :ARG1 (s3a2 / and
+          :op1 (s3c / carrot
+                 :ARG1-of (s3d / diced-01))
+          :op2 (s3p / parsnip)
+          :op3 (s3h / herb)
+          :op4 (s3s / seasoning))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 8-8
+s3c: 3-3
+s3d: 2-2
+s3h: 7-7
+s3p: 5-5
+s3s: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Simmer over moderate low heat for 20 minutes .
+# sentence level graph:
+(s4s / simmer-01
+  :duration (s4t / temporal-quantity
+              :quant 20
+              :unit (s4m / minute))
+  :manner (s4h / heat
+            :mod (s4l / low
+                   :mod (s4m2 / moderate)))
+  :mode imperative)
+
+# alignment:s4h: 5-5
+s4l: 4-4
+s4m: 8-8
+s4m2: -1--1
+s4s: 1-1
+s4t: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Add peeled whole potatoes and beef stock .
+# sentence level graph:
+(s5a / add-02
+  :ARG1 (s5a2 / and
+          :op1 (s5p2 / potato
+                 :ARG1-of (s5p / peel-01)
+                 :mod (s5w / whole))
+          :op2 (s5s / stock
+                 :source (s5b / beef)))
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5a2: 5-5
+s5b: 6-6
+s5p: 2-2
+s5p2: 4-4
+s5s: 7-7
+s5w: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Simmer on low heat for 1 hour .
+# sentence level graph:
+(s6s / simmer-01
+  :duration (s6t / temporal-quantity
+              :quant 1
+              :unit (s6h2 / hour))
+  :mode imperative
+  :manner (s6h / heat
+            :mod (s6l / low)))
+
+# alignment:s6h: 4-4
+s6h2: 7-7
+s6l: 3-3
+s6s: 1-1
+s6t: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Stir occasionally .
+# sentence level graph:
+(s7s / stir-01
+  :manner (s7o / occasional)
+  :mode imperative)
+
+# alignment:s7o: 2-2
+s7s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Place meat in a pot and cover with water .
+Bring to a boil .
+Add diced carrots , parsnips , herbs and seasoning .
+Simmer over moderate low heat for 20 minutes .
+Add peeled whole potatoes and beef stock .
+Simmer on low heat for 1 hour .
+Stir occasionally .

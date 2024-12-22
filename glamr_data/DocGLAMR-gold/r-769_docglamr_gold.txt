@@ -1,0 +1,101 @@
+# :: r-769::step01::sent01
+# :: snt1	cream 2 tablespoons butter , beat in eggs and salt .
+(s1 / sentence
+    :coref ((s1b2 :cut s1c2)
+			(s1c2 :aggregation s1b3)
+			(s1e :aggregation s1b3)
+			(s1s :aggregation s1b3)))
+
+
+# :: r-769::step02::sent01
+# :: snt2	Gradually beat in flour and riced potatoes .
+(s2 / sentence
+    :coref ((s1b3 :aggregation s2b2)
+			(s2f :aggregation s2b2)
+			(s2r :aggregation s2b2)))
+
+
+# :: r-769::step03::sent01
+# :: snt3	Dough should be stiff to knead thoroughly .
+(s3 / sentence
+    :coref ((s2b2 :cut s3k)
+			(s1b3 :cut s3k)))
+
+
+# :: r-769::step04::sent01
+# :: snt4	On floured board roll out dough to 1/4-inch thickness , then cut 3-inch squares .
+(s4 / sentence
+    :coref ((s3k :cut s4r1)
+			(s4r1 :cut s4c2)
+			(s3k :cut s4c2)
+			(s1b3 :cut s4r1)
+			(s2b2 :cut s4r1)
+			(s2b2 :cut s4c2)))
+
+
+# :: r-769::step05::sent01
+# :: snt5	Lay 1 plum on each square , sprinkle with little cinnamon sugar and fold edges over plum .
+(s5 / sentence
+    :coref ((s4c2 :aggregation s5l3)
+			(s5l3 :aggregation s5s1)
+			(s5s1 :cut s5f2)
+			(s4c2 :aggregation s5s1)
+			(s4r1 :aggregation s5l3)
+			(s5l3 :cut s5f2)
+			(s4r1 :aggregation s5s1)
+			(s4c2 :cut s5f2)
+			(s5p :aggregation s5l3)
+			(s5c :aggregation s5s1)))
+
+
+# :: r-769::step06::sent01
+# :: snt6	Shape with hands into a ball .
+(s6 / sentence
+    :coref ((s5f2 :cut s6s1)
+			(s5s1 :cut s6s1)
+			(s5l3 :cut s6s1)))
+
+
+# :: r-769::step07::sent01
+# :: snt7	The wall of dough should be very thin .
+(s7 / sentence)
+
+
+# :: r-769::step08::sent01
+# :: snt8	Drop dumplings into boiling salted water , cover and simmer for about 15 minutes .
+(s8 / sentence
+    :coref ((s6s1 :aggregation s8d3)
+			(s8d3 :cut s8c1)
+			(s8c1 :cut s8s3)
+			(s6s1 :cut s8c1)
+			(s5f2 :aggregation s8d3)
+			(s8d3 :cut s8s3)
+			(s5s1 :aggregation s8d3)
+			(s5f2 :cut s8c1)
+			(s6s1 :cut s8s3)
+			(s5s1 :cut s8c1)
+			(s8b :aggregation s8d3)))
+
+
+# :: r-769::step09::sent01
+# :: snt9	Brown bread crumbs in 1/3 cup hot butter .
+(s9 / sentence
+    :coref ((s9b :aggregation s9b4)
+			(s9h :aggregation s9b4)))
+
+
+# :: r-769::step10::sent01
+# :: snt10	Roll dumplings in buttered bread crumbs , sprinkle with cinnamon sugar .
+(s10 / sentence
+     :coref ((s8s3 :aggregation s10r1)
+			(s10r1 :aggregation s10s1)
+			(s8c1 :aggregation s10r1)
+			(s8s3 :aggregation s10s1)
+			(s8d3 :aggregation s10r1)
+			(s8c1 :aggregation s10s1)
+			(s8d3 :aggregation s10s1)
+			(s9b4 :aggregation s10r1)
+			(s9b4 :aggregation s10s1)
+			(s10c :aggregation s10s1)))
+
+

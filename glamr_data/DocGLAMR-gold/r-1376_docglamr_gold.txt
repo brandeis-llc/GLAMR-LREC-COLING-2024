@@ -1,0 +1,45 @@
+# :: r-1376::step01::sent01
+# :: snt1	In a 3 quart saucepan , place prunes and 2 cups water ; heat to boiling .
+(s1 / sentence
+    :coref ((s1p2 :aggregation s1p1)
+			(s1p1 :cut s1h5)
+			(s1w :aggregation s1p1)))
+
+
+# :: r-1376::step02::sent01
+# :: snt2	Reduce heat , and simmer , covered , 30 minutes , or until prunes are very tender .
+(s2 / sentence
+    :coref ((s1h5 :cut s2s2)
+			(s1p1 :cut s2s2)))
+
+
+# :: r-1376::step03::sent01
+# :: snt3	Drain prunes , reserving liquid .
+(s3 / sentence)
+
+
+# :: r-1376::step04::sent01
+# :: snt4	Chop prunes finely .
+(s4 / sentence
+    :coref ((s3d :cut s4c2)))
+
+
+# :: r-1376::step05::sent01
+# :: snt5	Add 3/4 cup granulated sugar , 1 teaspoon vanilla ; the cardamom , 1/4 teaspoon salt , and 1/2 cup reserved cooking liquid ; mix until ingredients are well blended .
+(s5 / sentence
+    :coref ((s4c2 :aggregation s5a1)
+			(s5a1 :cut s5m4)
+			(s5g :aggregation s5a1)
+			(s5v :aggregation s5a1)
+			(s5c :aggregation s5a1)
+			(s5s :aggregation s5a1)
+			(s3d :aggregation s5a1)))
+
+
+# :: r-1376::step06::sent01
+# :: snt6	Set aside to cool .
+(s6 / sentence
+    :coref ((s5m4 :cut s6c2)
+			(s5a1 :cut s6c2)))
+
+

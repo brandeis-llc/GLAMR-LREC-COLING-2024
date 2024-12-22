@@ -1,0 +1,247 @@
+user name: Keer Xu
+user id: 347
+file language: english
+file format: plain_text
+Doc ID in database: 1443
+export time: 2023/10/3 15:24:31
+
+# :: snt1	Preheat the broiler .
+# sentence level graph:
+(s1p / preheat-00
+  :ARG1 (s1b / broiler)
+  :mode imperative)
+
+# alignment:s1b: 3-3
+s1p: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Prick the eggplant a few times with a fork .
+# sentence level graph:
+(s2p / prick-01
+  :ARG1 (s2e / eggplant)
+  :frequency (s2f / few)
+  :instrument (s2f2 / fork)
+  :mode imperative)
+
+# alignment:s2e: 3-3
+s2f: 5-5
+s2f2: 9-9
+s2p: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Place it on a foil - lined baking tray .
+# sentence level graph:
+(s3p / place-01
+  :ARG1 (s3i / it)
+  :ARG2 (s3t / tray
+          :purpose (s3b / bake-01)
+          :ARG1-of (s3l / line-01
+                     :ARG2 (s3f / foil)))
+  :mode imperative)
+
+# alignment:s3b: 8-8
+s3f: 5-5
+s3i: 2-2
+s3l: 7-7
+s3p: 1-1
+s3t: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Place under broiler .
+# sentence level graph:
+(s4p / place-01
+  :ARG2 (s4u / under
+          :op1 (s4b / broiler))
+  :mode imperative)
+
+# alignment:s4b: 3-3
+s4p: 1-1
+s4u: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	When the skin chars on one side , give the eggplant a 1/4 turn .
+# sentence level graph:
+(s5g / give-01
+  :ARG1 (s5t / turn-01
+          :quant "1/4")
+  :ARG2 (s5e / eggplant)
+  :mode imperative
+  :time (s5c / char-01
+          :ARG1 (s5s2 / skin
+                  :location (s5s / side
+                              :mod 1))))
+
+# alignment:s5e: 11-11
+s5g: 9-9
+s5s: -1--1
+s5s2: 3-3
+s5t: 14-14
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Continue until entire skin is charred and pulp is soft and mushy .
+# sentence level graph:
+(s6c2 / continue-01
+  :mode imperative
+  :duration (s6u / until
+              :op1 (s6a / and
+                     :op1 (s6c / char-01
+                            :ARG1 (s6s / skin
+                                    :mod (s6e / entire)))
+                     :op2 (s6a2 / and
+                            :op1 (s6s2 / soft
+                                   :ARG1 (s6p / pulp))
+                            :op2 (s6m / mushy)))))
+
+# alignment:s6a: 7-7
+s6a2: 11-11
+s6c: 6-6
+s6c2: 1-1
+s6e: 3-3
+s6m: 12-12
+s6p: 8-8
+s6s: 4-4
+s6s2: 10-10
+s6u: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Peel away skin , rinsing to remove all charred skin .
+# sentence level graph:
+(s7a2 / and
+  :op1 (s7p / peel-01
+         :ARG1 (s7s / skin))
+  :op2 (s7r2 / rinse-01
+         :purpose (s7r / remove-01
+                    :ARG1 (s7s2 / skin
+                            :ARG1-of (s7c / char-01)
+                            :mod (s7a / all))))
+  :mode imperative)
+
+# alignment:s7a: -1--1
+s7a2: 2-2
+s7c: 9-9
+s7p: -1--1
+s7r: 7-7
+s7r2: 5-5
+s7s: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Pat dry .
+# sentence level graph:
+(s8p / pat-01
+  :purpose (s8d / dry)
+  :mode imperative)
+
+# alignment:s8d: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	In blender or food processor , combine all ingredients .
+# sentence level graph:
+(s9c / combine-01
+  :ARG1 (s9i / ingredient
+          :mod (s9a / all))
+  :instrument (s9o / or
+                :op1 (s9b / blender)
+                :op2 (s9p2 / processor
+                       :mod (s9f2 / food)))
+  :mode imperative)
+
+# alignment:s9a: 8-8
+s9c: 7-7
+s9i: 9-9
+s9o: 3-3
+s9b: 2-2
+s9p2: 5-5
+s9f2: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Serve with toasted Turkish bread and enjoy !
+# sentence level graph:
+(s10a / and
+  :op1 (s10s / serve-02
+         :accompanier (s10b / bread
+                        :ARG1-of (s10t / toast-01)
+                        :mod (s10c / country
+                      		:name (s10n / name
+                          			:op1 "Turkey"))))
+  :op2 (s10e / enjoy-01)
+  :mode imperative)
+
+# alignment:s10a: 6-6
+s10b: 5-5
+s10e: 7-7
+s10s: 1-1
+s10t: 3-3
+s10t2: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Preheat the broiler .
+Prick the eggplant a few times with a fork .
+Place it on a foil - lined baking tray .
+Place under broiler .
+When the skin chars on one side , give the eggplant a 1/4 turn .
+Continue until entire skin is charred and pulp is soft and mushy .
+Peel away skin , rinsing to remove all charred skin .
+Pat dry .
+In blender or food processor , combine all ingredients .
+Serve with toasted Turkish bread and enjoy !

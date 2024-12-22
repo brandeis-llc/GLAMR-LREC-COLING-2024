@@ -1,0 +1,416 @@
+# :: f-QTSTCCSV::step01::sent01
+# :: snt1	Saute pancetta in a large pan over medium - high heat , stirring occasionally , until crispy .
+(s1a / Saute-01~0
+     :ARG1 (s1p2 / pancetta~1)
+     :location (s1p / pan~5
+                    :mod (s1l / large~4)
+                    :mod (s1t / temperature-quantity
+                              :mod (s1u2 / umr-choice
+                                         :op1 (s1m2 / medium~7)
+                                         :op2 (s1h3 / high~9))))
+     :manner (s1s / stir-01~12
+                  :manner (s1o / occasional~13)
+                  :ARG0 s1y
+                  :event-structure (s1se1 / subevents
+                                          :E1 (s1h1 / has_material_integrity_state
+                                                    :polarity -
+                                                    :IMP_PATIENT s1s2
+                                                    :V_STATE (s1s3 / stirred))
+                                          :E3 (s1h2 / has_material_integrity_state
+                                                    :IMP_PATIENT s1s2
+                                                    :V_STATE s1s3)
+                                          :E0 (s1d1 / do
+                                                    :ACTION s1s))
+                  :imp_output (s1s4 / stir.RES))
+     :mode imperative
+     :duration (s1u / until~15
+                    :op1 (s1c / crispy~16))
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1c1 / cooked
+                                      :polarity -
+                                      :PATIENT s1p2
+                                      :V_FINAL_STATE (s1s1 / sauted))
+                            :E3 (s1a1 / apply_heat
+                                      :INSTRUMENT s1h3
+                                      :PATIENT s1p2)
+                            :E4 (s1a2 / and
+                                      :op1 (s1c2 / cooked
+                                                 :PATIENT s1p2
+                                                 :V_FINAL_STATE s1s1)
+                                      :op2 (s1h / has_state
+                                                :PATIENT s1p2
+                                                :RESULT s1c))
+                            :E0 (s1d / do
+                                     :ACTION s1a))
+     :imp_output (s1s2 / saute.RES))
+
+
+# :: f-QTSTCCSV::step01::sent02
+# :: snt2	Remove pancetta with a slotted spoon and set aside .
+(s2a / and~6
+     :op1 (s2r / remove-01~0
+               :ARG1 (s2p / pancetta~1)
+               :instrument (s2s3 / spoon~5
+                                 :ARG1-of (s2s2 / slot-01~4))
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E1 (s2h / has_location
+                                               :THEME s2p)
+                                      :E3 (s2a1 / and
+                                                :op1 (s2m / motion
+                                                          :THEME s2p)
+                                                :op2 (s2h1 / has_location
+                                                           :polarity -
+                                                           :THEME s2p))
+                                      :E4 (s2h2 / has_location
+                                                :THEME s2p)
+                                      :E0 (s2d / do
+                                               :ACTION s2r))
+               :imp_outputI (s2r1 / remove.RES)
+               :imp_outputJ (s2r2 / remove.RES))
+     :op2 (s2s / set-01~7
+               :ARG2 (s2a2 / aside~8)
+               :ARG0 s2y
+               :event-structure (s2se1 / subevents
+                                       :E1 (s2h3 / has_location)
+                                       :E3 (s2a3 / and
+                                                 :op1 (s2m1 / motion
+                                                            :IMP_THEME s2r2)
+                                                 :op2 (s2h4 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s2r2))
+                                       :E4 (s2h5 / has_location
+                                                 :IMP_THEME s2r2)
+                                       :E0 (s2d1 / do
+                                                 :ACTION s2s))
+               :imp_output (s2s1 / set.RES))
+     :mode imperative)
+
+
+# :: f-QTSTCCSV::step02::sent01
+# :: snt3	Add asparagus to the pan and saute in the pancetta grease for about 5 - 6 minutes , stirring occasionally , until almost cooked .
+(s3a4 / and~5
+      :op1 (s3a2 / add-02~0
+                 :ARG1 (s3a5 / asparagus~1)
+                 :ARG2 (s3p / pan~4)
+                 :ARG0 (s3y / you)
+                 :event-structure (s3se / subevents
+                                        :E1 (s3t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s3a5
+                                                  :PATIENT_J s3p)
+                                        :E3 (s3t3 / together
+                                                  :PATIENT_I s3a5
+                                                  :PATIENT_J s3p)
+                                        :E0 (s3d / do
+                                                 :ACTION s3a2))
+                 :imp_output (s3a1 / add.RES))
+      :op2 (s3s2 / saute-01~6
+                 :duration (s3a / about~12
+                                :op1 (s3b / between
+                                          :op1 (s3t / temporal-quantity
+                                                    :quant 5
+                                                    :unit (s3m2 / minute~16))
+                                          :op2 (s3t2 / temporal-quantity
+                                                     :quant 6
+                                                     :unit (s3m / minute))))
+                 :manner (s3s / stir-01~18
+                              :manner (s3o / occasional~19)
+                              :ARG0 s3y
+                              :event-structure (s3se2 / subevents
+                                                      :E1 (s3h1 / has_material_integrity_state
+                                                                :polarity -
+                                                                :IMP_PATIENT s3s3
+                                                                :V_STATE (s3s4 / stirred))
+                                                      :E3 (s3h2 / has_material_integrity_state
+                                                                :IMP_PATIENT s3s3
+                                                                :V_STATE s3s4)
+                                                      :E0 (s3d2 / do
+                                                                :ACTION s3s))
+                              :imp_output (s3s5 / stir.RES))
+                 :duration (s3u / until~21
+                                :op1 (s3c / cooked~23
+                                          :degree (s3a3 / almost~22)))
+                 :medium (s3g / grease~10
+                              :source (s3p2 / pancetta~9))
+                 :ARG0 s3y
+                 :event-structure (s3se1 / subevents
+                                         :E1 (s3c1 / cooked
+                                                   :polarity -
+                                                   :IMP_PATIENT s3a1
+                                                   :V_FINAL_STATE (s3s1 / sauted))
+                                         :E3 (s3a6 / apply_heat
+                                                   :INSTRUMENT s3g
+                                                   :IMP_PATIENT s3a1)
+                                         :E4 (s3a7 / and
+                                                   :op1 (s3c2 / cooked
+                                                              :IMP_PATIENT s3a1
+                                                              :V_FINAL_STATE s3s1)
+                                                   :op2 (s3h / has_state
+                                                             :IMP_PATIENT s3a1
+                                                             :RESULT s3c))
+                                         :E0 (s3d1 / do
+                                                   :ACTION s3s2))
+                 :imp_output (s3s3 / saute.RES))
+      :mode imperative)
+
+
+# :: f-QTSTCCSV::step03::sent01
+# :: snt4	Slowly add the white wine to deglaze the pan .
+(s4a2 / add-02~1
+      :ARG1 (s4w2 / wine~4
+                  :mod (s4w / white~3))
+      :purpose (s4d / deglaze-01~6
+                    :ARG1 (s4p / pan~8)
+                    :ARG0 s4y
+                    :event-structure (s4se1 / subevents
+                                            :E1 (s4h / has_location
+                                                     :V_THEME s4p
+                                                     :V_THEME (s4d2 / deglazed))
+                                            :E3 (s4a1 / and
+                                                      :op1 (s4m / motion
+                                                                :V_THEME s4p
+                                                                :V_THEME s4d2)
+                                                      :op2 (s4h1 / has_location
+                                                                 :polarity -
+                                                                 :V_THEME s4p
+                                                                 :V_THEME s4d2))
+                                            :E (s4p1 / part_of
+                                                     :V_THEME s4p
+                                                     :V_THEME s4d2)
+                                            :E0 (s4d3 / do
+                                                      :ACTION s4d))
+                    :imp_output (s4d4 / deglaze.RES))
+      :manner (s4s / slow-05~0)
+      :mode imperative
+      :ARG0 (s4y / you)
+      :event-structure (s4se / subevents
+                             :E1 (s4t / together
+                                      :polarity -
+                                      :PATIENT_I s4w2)
+                             :E3 (s4t1 / together
+                                       :PATIENT_I s4w2)
+                             :E0 (s4d1 / do
+                                       :ACTION s4a2))
+      :imp_output (s4a / add.RES))
+
+
+# :: f-QTSTCCSV::step03::sent02
+# :: snt5	Continue cooking for 5 minutes or until the wine has reduced by about half .
+(s5c / continue-01~0
+     :ARG1 (s5c2 / cook-01~1
+                 :duration (s5o / or
+                                :op1 (s5t / temporal-quantity
+                                          :unit (s5m / minute~4)
+                                          :quant 5)
+                                :op2 (s5u / until~6
+                                          :op1 (s5r / reduce-01~10
+                                                    :ARG1 (s5w / wine~8)
+                                                    :ARG2 (s5a / about~12
+                                                               :op1 "1/2"))))
+                 :ARG0 (s5y / you)
+                 :event-structure (s5se / subevents
+                                        :E1 (s5c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT (s5d / deglaze.RES)
+                                                  :V_FINAL_STATE (s5c3 / cooked))
+                                        :E3 (s5a1 / apply_heat
+                                                  :IMP_PATIENT s5d)
+                                        :E4 (s5a2 / and
+                                                  :op1 (s5c4 / cooked
+                                                             :IMP_PATIENT s5d
+                                                             :V_FINAL_STATE s5c3)
+                                                  :op2 (s5h / has_state
+                                                            :IMP_PATIENT s5d
+                                                            :RESULT s5a))
+                                        :E0 (s5d1 / do
+                                                  :ACTION s5c2))
+                 :imp_output (s5c5 / cook.RES))
+     :mode imperative)
+
+
+# :: f-QTSTCCSV::step04::sent01
+# :: snt6	Cook the pasta in a large pot according to package instructions .
+(s6c2 / cook-01~0
+      :ARG1 (s6p2 / pasta~2)
+      :manner (s6s / say-01
+                   :ARG0 (s6i2 / instructions~10
+                               :source (s6p4 / package~9)))
+      :location (s6p3 / pot~6
+                      :mod (s6l / large~5))
+      :mode imperative
+      :ARG0 (s6y / you)
+      :event-structure (s6se / subevents
+                             :E1 (s6c / cooked
+                                      :polarity -
+                                      :PATIENT s6p2
+                                      :V_FINAL_STATE (s6c1 / cooked))
+                             :E3 (s6a / apply_heat
+                                      :INSTRUMENT s6p3
+                                      :PATIENT s6p2)
+                             :E4 (s6c3 / cooked
+                                       :PATIENT s6p2
+                                       :V_FINAL_STATE s6c1)
+                             :E0 (s6d / do
+                                      :ACTION s6c2))
+      :imp_output (s6c4 / cook.RES))
+
+
+# :: f-QTSTCCSV::step04::sent02
+# :: snt7	Drain , but reserve 1/4 cup of the pasta water for later ( if needed ) .
+(s7c / contrast-01
+     :ARG1 (s7d / drain-01~0
+                :ARG0 (s7y / you)
+                :event-structure (s7se / subevents
+                                       :E1 (s7a1 / and
+                                                 :op1 (s7h / has_location
+                                                           :IMP_THEME (s7c1 / cook.RES))
+                                                 :op2 (s7h1 / has_state
+                                                            :polarity -
+                                                            :V_FINAL_STATE (s7d1 / drained)))
+                                       :E3 (s7a2 / and
+                                                 :op1 (s7m / motion
+                                                           :IMP_THEME s7c1)
+                                                 :op2 (s7h2 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s7c1))
+                                       :E4 (s7a3 / and
+                                                 :op1 (s7h3 / has_location
+                                                            :IMP_THEME s7c1)
+                                                 :op2 (s7h4 / has_state
+                                                            :V_FINAL_STATE s7d1))
+                                       :E0 (s7d2 / do
+                                                 :ACTION s7d))
+                :imp_outputI (s7d3 / drain.RES)
+                :imp_outputJ (s7d4 / drain.RES))
+     :ARG2 (s7r / reserve-01~3
+                :ARG1 (s7w / water~9
+                           :quant (s7v / volume-quantity
+                                       :quant "1/4"
+                                       :unit (s7c2 / cup~5))
+                           :mod (s7p / pasta~8))
+                :condition (s7n / need-01~14)
+                :time (s7a / after
+                           :op1 s7d)
+                :ARG0 s7y
+                :event-structure (s7se1 / subevents
+                                        :E1 (s7a4 / and
+                                                  :op1 (s7h5 / has_possession
+                                                             :THEME s7w)
+                                                  :op2 (s7h6 / has_possession
+                                                             :polarity -
+                                                             :THEME s7w))
+                                        :E2 (s7t / transfer
+                                                 :THEME s7w)
+                                        :E3 (s7a5 / and
+                                                  :op1 (s7h7 / has_possession
+                                                             :THEME s7w)
+                                                  :op2 (s7h8 / has_possession
+                                                             :polarity -
+                                                             :THEME s7w))
+                                        :E0 (s7d5 / do
+                                                  :ACTION s7r))
+                :imp_output (s7r1 / reserve.RES))
+     :mode imperative)
+
+
+# :: f-QTSTCCSV::step05::sent01
+# :: snt8	Add the pasta , pancetta and 1/4 cup Parmesan cheese to the saute pan with asparagus , and toss until combined .
+(s8a2 / and~17
+      :op1 (s8a / add-02~0
+                :ARG1 (s8a3 / and~5
+                            :op1 (s8p3 / pasta~2)
+                            :op2 (s8p2 / pancetta~4)
+                            :op3 (s8c / cheese~9
+                                      :name (s8n / name
+                                                 :op1 "Parmesan")
+                                      :quant (s8v / volume-quantity
+                                                  :quant "1/4"
+                                                  :unit (s8c4 / cup~7)))
+                            :accompanier (s8a4 / asparagus~15))
+                :location (s8p4 / pan~13
+                                :purpose (s8s2 / saute-01~12))
+                :ARG0 (s8y / you)
+                :event-structure (s8se / subevents
+                                       :E1 (s8t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s8p3
+                                                 :PATIENT_J s8p2
+                                                 :PATIENT_K s8c
+                                                 :PATIENT_L s8p4
+                                                 :PATIENT_M s8a4)
+                                       :E3 (s8t2 / together
+                                                 :PATIENT_I s8p3
+                                                 :PATIENT_J s8p2
+                                                 :PATIENT_K s8c
+                                                 :PATIENT_L s8p4
+                                                 :PATIENT_M s8a4)
+                                       :E0 (s8d / do
+                                                :ACTION s8a))
+                :imp_output (s8a1 / add.RES))
+      :op2 (s8t / toss-01~18
+                :duration (s8u / until~19
+                               :op1 (s8c2 / combine-01~20))
+                :ARG0 s8y
+                :event-structure (s8se1 / subevents
+                                        :E1 (s8b / be
+                                                 :polarity -
+                                                 :PRODUCT s8c2)
+                                        :E3 (s8b1 / be
+                                                  :PRODUCT s8c2)
+                                        :E0 (s8d1 / do
+                                                  :ACTION s8t))
+                :imp_output (s8t3 / toss.RES))
+      :mode imperative)
+
+
+# :: f-QTSTCCSV::step05::sent02
+# :: snt9	Sprinkle pasta with the remaining Parmesan cheese and serve immediately .
+(s9a / and~7
+     :op1 (s9s2 / sprinkle-01~0
+                :ARG1 (s9c / cheese~6
+                           :name (s9n / name
+                                      :op1 "Parmesan")
+                           :ARG1-of (s9r / remain-01~4))
+                :ARG2 (s9p / pasta~1)
+                :ARG0 (s9y / you)
+                :event-structure (s9se / subevents
+                                       :E1 (s9h / has_location
+                                                :THEME s9c)
+                                       :E3 (s9a1 / and
+                                                 :op1 (s9m / motion
+                                                           :THEME s9c)
+                                                 :op2 (s9h1 / has_location
+                                                            :polarity -
+                                                            :THEME s9c))
+                                       :E4 (s9h2 / has_location
+                                                 :THEME s9c
+                                                 :DESTINATION s9p)
+                                       :E0 (s9d / do
+                                                :ACTION s9s2))
+                :imp_output (s9s1 / sprinkle.RES))
+     :op2 (s9s / serve-02~8
+               :time (s9i / immediate~9)
+               :ARG0 s9y
+               :event-structure (s9se1 / subevents
+                                       :E1 (s9a2 / and
+                                                 :op1 (s9h3 / has_possession
+                                                            :IMP_THEME s9s1)
+                                                 :op2 (s9h4 / has_possession
+                                                            :polarity -
+                                                            :IMP_THEME s9s1))
+                                       :E2 (s9t / transfer
+                                                :IMP_THEME s9s1)
+                                       :E3 (s9a3 / and
+                                                 :op1 (s9h5 / has_possession
+                                                            :IMP_THEME s9s1)
+                                                 :op2 (s9h6 / has_possession
+                                                            :polarity -
+                                                            :IMP_THEME s9s1))
+                                       :E0 (s9d1 / do
+                                                 :ACTION s9s))
+               :imp_output (s9s3 / serve.RES))
+     :mode imperative)
+
+

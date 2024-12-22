@@ -1,0 +1,264 @@
+# :: r-2399::step01::sent01
+# :: snt1	Season turkey with salt and pepper or lemon pepper .
+(s1s2 / season-01~0
+      :ARG1 (s1t / turkey~1)
+      :ARG2 (s1o / or~6
+                 :op1 (s1s / salt~3)
+                 :op2 (s1p / pepper~5,8
+                           :mod (s1l / lemon~7)))
+      :mode imperative
+      :ARG0 (s1y / you)
+      :event-structure (s1se / subevents
+                             :E1 (s1h / has_location
+                                      :THEME s1t)
+                             :E3 (s1a / and
+                                      :op1 (s1m / motion
+                                                :THEME s1t)
+                                      :op2 (s1h1 / has_location
+                                                 :polarity -
+                                                 :THEME s1t))
+                             :E4 (s1h2 / has_location
+                                       :THEME s1t)
+                             :E0 (s1d / do
+                                      :ACTION s1s2))
+      :imp_output (s1s1 / season.RES))
+
+
+# :: r-2399::step02::sent01
+# :: snt2	In a large skillet over medium - high heat , heat olive oil .
+(s2h2 / heat-01
+      :ARG1 (s2o / oil~12
+                 :mod (s2o2 / olive~11))
+      :location (s2s / skillet~3
+                     :mod (s2l / large)
+                     :mod (s2t / temperature-quantity
+                               :mod (s2u / umr-choice
+                                         :op1 (s2m2 / medium~5)
+                                         :op2 (s2h4 / high-02~7))))
+      :mode imperative)
+
+
+# :: r-2399::step03::sent01
+# :: snt3	Add turkey thighs ; brown for about 10 minutes .
+(s3a3 / and
+      :op1 (s3a2 / add-02~0
+                 :ARG1 (s3t2 / thigh~2
+                             :part-of (s3t3 / turkey~1))
+                 :mode imperative
+                 :ARG0 (s3y / you)
+                 :event-structure (s3se / subevents
+                                        :E1 (s3t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s3t2)
+                                        :E3 (s3t4 / together
+                                                  :PATIENT_I s3t2)
+                                        :E0 (s3d / do
+                                                 :ACTION s3a2))
+                 :imp_output (s3a1 / add.RES))
+      :op2 (s3b / brown-01~4
+                :ARG1 s3t2
+                :duration (s3a / about~6
+                               :op1 (s3t / temporal-quantity
+                                         :quant 10
+                                         :unit (s3m / minute~8)))
+                :mode imperative
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3c / cooked
+                                                 :polarity -
+                                                 :PATIENT s3t2
+                                                 :V_FINAL_STATE (s3b1 / browned))
+                                        :E3 (s3a4 / apply_heat
+                                                  :PATIENT s3t2)
+                                        :E4 (s3c1 / cooked
+                                                  :PATIENT s3t2
+                                                  :V_FINAL_STATE s3b1)
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3b))
+                :imp_output (s3b2 / brown.RES)))
+
+
+# :: r-2399::step04::sent01
+# :: snt4	Place turkey in slow cooker ; add remaining ingredients .
+(s4a2 / and~6
+      :op1 (s4p / place-01~0
+                :ARG1 (s4t / turkey~1)
+                :ARG2 (s4c / cooker~4
+                           :ARG1-of (s4s / slow-01~3))
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4h / has_location
+                                                :THEME s4t)
+                                       :E3 (s4a1 / and
+                                                 :op1 (s4m / motion
+                                                           :THEME s4t)
+                                                 :op2 (s4h1 / has_location
+                                                            :polarity -
+                                                            :THEME s4t))
+                                       :E4 (s4h2 / has_location
+                                                 :THEME s4t
+                                                 :DESTINATION s4c)
+                                       :E0 (s4d / do
+                                                :ACTION s4p))
+                :imp_output (s4p1 / place.RES))
+      :op2 (s4a / add-02
+                :ARG1 (s4i / ingredient~8
+                           :ARG1-of (s4r / remain-01~7)))
+      :mode imperative
+      :ARG0 s4y
+      :event-structure (s4se1 / subevents
+                              :E1 (s4t1 / together
+                                        :polarity -
+                                        :PATIENT_I s4i)
+                              :E3 (s4t2 / together
+                                        :PATIENT_I s4i)
+                              :E0 (s4d1 / do
+                                        :ACTION s4a2))
+      :imp_output (s4a3 / add.RES))
+
+
+# :: r-2399::step05::sent01
+# :: snt5	Cook on high for 3 to 4 hours , or until turkey thighs are cooked through .
+(s5c / cook-01~0
+     :duration (s5o / or
+                    :op1 (s5t2 / temporal-quantity
+                               :quant 3
+                               :unit (s5h3 / hour~7))
+                    :op2 (s5t / temporal-quantity
+                              :quant 4
+                              :unit (s5h2 / hour))
+                    :time (s5u / until~10
+                               :op1 (s5c2 / cook-01~14
+                                          :ARG1 (s5t3 / thigh~12
+                                                      :part-of (s5t5 / turkey~11))
+                                          :manner (s5t4 / through~15))))
+     :mod (s5t6 / temperature-quantity
+                :quant (s5h / high-02))
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5c1 / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s5a / add.RES)
+                                      :V_FINAL_STATE (s5c3 / cooked))
+                            :E3 (s5a1 / apply_heat
+                                      :INSTRUMENT (s5o1 / on-high)
+                                      :IMP_PATIENT s5a)
+                            :E4 (s5a2 / and
+                                      :op1 (s5c4 / cooked
+                                                 :IMP_PATIENT s5a
+                                                 :V_FINAL_STATE s5c3)
+                                      :op2 (s5h1 / has_state
+                                                 :IMP_PATIENT s5a
+                                                 :RESULT s5t4))
+                            :E0 (s5d / do
+                                     :ACTION s5c))
+     :imp_output (s5c5 / cook.RES))
+
+
+# :: r-2399::step06::sent01
+# :: snt6	Remove garlic cloves from pot .
+(s6r / remove-01~0
+     :ARG1 (s6c / clove~2
+                :consist-of (s6g / garlic~1))
+     :ARG2 (s6p / pot~4)
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6h / has_location
+                                     :THEME s6c)
+                            :E3 (s6a / and
+                                     :op1 (s6m / motion
+                                               :THEME s6c)
+                                     :op2 (s6h1 / has_location
+                                                :polarity -
+                                                :THEME s6c))
+                            :E4 (s6h2 / has_location
+                                      :THEME s6c)
+                            :E0 (s6d / do
+                                     :ACTION s6r))
+     :imp_outputI (s6r1 / remove.RES)
+     :imp_outputJ (s6r2 / remove.RES))
+
+
+# :: r-2399::step06::sent02
+# :: snt7	Mash a few and return to the slow cooker , if desired .
+(s7a / and
+     :op1 (s7m / mash~0
+               :ARG1 (s7i2 / implicit-argument
+                           :mod (s7f / few~2))
+               :mode imperative
+               :ARG0 (s7y / you)
+               :event-structure (s7se / subevents
+                                      :E1 (s7a1 / and
+                                                :op1 (s7d1 / degradation_material_integrity
+                                                           :polarity -
+                                                           :PATIENT s7f)
+                                                :op2 (s7h / has_physical_form
+                                                          :polarity -
+                                                          :PATIENT s7f
+                                                          :V_FORM (s7m1 / mashed)))
+                                      :E2 (s7c / contact
+                                               :PATIENT s7f)
+                                      :E3 (s7a2 / and
+                                                :op1 (s7d2 / degradation_material_integrity
+                                                           :PATIENT s7f)
+                                                :op2 (s7h1 / has_physical_form
+                                                           :PATIENT s7f
+                                                           :V_FORM s7m1))
+                                      :E0 (s7d3 / do
+                                                :ACTION s7m))
+               :imp_output (s7m2 / mash.RES))
+     :op2 (s7r / return-04~4
+               :ARG2 (s7c2 / cooker~8
+                           :ARG1-of (s7s2 / slow-05~7))
+               :mode imperative
+               :ARG0 s7y
+               :event-structure (s7se1 / subevents
+                                       :E1 (s7h2 / has_location
+                                                 :IMP_THEME_I s7m2
+                                                 :IMP_THEME_J (s7r1 / remove.RES))
+                                       :E3 (s7a3 / and
+                                                 :op1 (s7m3 / motion
+                                                            :IMP_THEME_I s7m2
+                                                            :IMP_THEME_J s7r1)
+                                                 :op2 (s7h3 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME_I s7m2
+                                                            :IMP_THEME_J s7r1))
+                                       :E4 (s7h4 / has_location
+                                                 :IMP_THEME_I s7m2
+                                                 :IMP_THEME_J s7r1
+                                                 :DESTINATION s7c2)
+                                       :E0 (s7d4 / do
+                                                 :ACTION s7r))
+               :imp_output (s7r2 / return.RES))
+     :condition (s7d / desire-01~11))
+
+
+# :: r-2399::step07::sent01
+# :: snt8	Serve turkey with juices .
+(s8s / serve-02~0
+     :ARG1 (s8t / turkey~1)
+     :accompanier (s8j / juice~3)
+     :mode imperative
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8a / and
+                                     :op1 (s8h / has_possession
+                                               :THEME s8t)
+                                     :op2 (s8h1 / has_possession
+                                                :polarity -
+                                                :THEME s8t))
+                            :E2 (s8t1 / transfer
+                                      :THEME s8t)
+                            :E3 (s8a1 / and
+                                      :op1 (s8h2 / has_possession
+                                                 :THEME s8t)
+                                      :op2 (s8h3 / has_possession
+                                                 :polarity -
+                                                 :THEME s8t))
+                            :E0 (s8d / do
+                                     :ACTION s8s))
+     :imp_output (s8s1 / serve.RES))
+
+

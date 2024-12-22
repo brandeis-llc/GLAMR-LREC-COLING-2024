@@ -1,0 +1,162 @@
+# :: f-P4J28HGK::step01::sent01
+# :: snt1	Clean pumpkin seeds and spread on a cookie sheet overnight to dry .
+(s1a / and~3
+     :op1 (s1c / clean-01~0
+               :ARG1 (s1s / seeds~2
+                          :part-of (s1p / pumpkin~1))
+               :ARG0 (s1y / you)
+               :event-structure (s1se / subevents
+                                      :E1 (s1a1 / and
+                                                :op1 (s1h / has_location
+                                                          :THEME s1s)
+                                                :op2 (s1h1 / has_state
+                                                           :polarity -
+                                                           :V_FINAL_STATE (s1c1 / cleaned)))
+                                      :E3 (s1a2 / and
+                                                :op1 (s1m / motion
+                                                          :THEME s1s)
+                                                :op2 (s1h2 / has_location
+                                                           :polarity -
+                                                           :THEME s1s))
+                                      :E4 (s1a3 / and
+                                                :op1 (s1h3 / has_location
+                                                           :THEME s1s)
+                                                :op2 (s1h4 / has_state
+                                                           :V_FINAL_STATE s1c1))
+                                      :E0 (s1d1 / do
+                                                :ACTION s1c))
+               :imp_output (s1c3 / clean.RES))
+     :op2 (s1s3 / spread-01~4
+                :ARG2 (s1s2 / sheet~8
+                            :mod (s1c2 / cookie~7))
+                :purpose (s1d / dry-02~11
+                              :ARG0 s1y)
+                :duration (s1o / overnight~9)
+                :ARG0 s1y
+                :event-structure (s1se1 / subevents
+                                        :E1 (s1h5 / has_location
+                                                  :IMP_THEME s1c3)
+                                        :E3 (s1a4 / and
+                                                  :op1 (s1m1 / motion
+                                                             :IMP_THEME s1c3)
+                                                  :op2 (s1h6 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s1c3))
+                                        :E4 (s1h7 / has_location
+                                                  :IMP_THEME s1c3
+                                                  :DESTINATION s1s2)
+                                        :E0 (s1d2 / do
+                                                  :ACTION s1s3))
+                :imp_output (s1s1 / spread.RES))
+     :mode imperative)
+
+
+# :: f-P4J28HGK::step02::sent01
+# :: snt2	Preheat oven to 350
+(s2p / preheat-00~0
+     :ARG1 (s2o / oven~1)
+     :destination (s2t / temperature-quantity
+                       :quant 350)
+     :mode imperative)
+
+
+# :: f-P4J28HGK::step03::sent01
+# :: snt3	Spray seeds with cooking spray and season with curry powder and salt .
+(s3a / and~5
+     :op1 (s3s4 / spray-01~0
+                :ARG1 (s3s5 / spray~4
+                            :purpose (s3c / cook-01~3))
+                :ARG2 (s3s3 / seed~1)
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3h / has_location
+                                                :THEME s3s5)
+                                       :E3 (s3a1 / and
+                                                 :op1 (s3m / motion
+                                                           :THEME s3s5)
+                                                 :op2 (s3h1 / has_location
+                                                            :polarity -
+                                                            :THEME s3s5))
+                                       :E4 (s3h2 / has_location
+                                                 :THEME s3s5
+                                                 :DESTINATION s3s3)
+                                       :E0 (s3d / do
+                                                :ACTION s3s4))
+                :imp_output (s3s1 / spray.RES))
+     :op2 (s3s2 / season-01~6
+                :ARG2 (s3a2 / and~10
+                            :op1 (s3p / powder~9
+                                      :mod (s3c2 / curry))
+                            :op2 (s3s / salt~11))
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3h3 / has_location
+                                                  :IMP_THEME s3s1)
+                                        :E3 (s3a3 / and
+                                                  :op1 (s3m1 / motion
+                                                             :IMP_THEME s3s1)
+                                                  :op2 (s3h4 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s3s1))
+                                        :E4 (s3h5 / has_location
+                                                  :IMP_THEME s3s1)
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3s2))
+                :imp_output (s3s6 / season.RES))
+     :mode imperative)
+
+
+# :: f-P4J28HGK::step04::sent01
+# :: snt4	Roast in the oven for 40 minutes , flipping after 20 .
+(s4a2 / and
+      :op1 (s4r / roast-01~0
+                :duration (s4t / temporal-quantity
+                               :quant 40
+                               :unit (s4m / minute~6))
+                :location (s4o / oven~3)
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4c / cooked
+                                                :polarity -
+                                                :IMP_PATIENT (s4s / season.RES)
+                                                :V_FINAL_STATE (s4r1 / roasted))
+                                       :E3 (s4a1 / apply_heat
+                                                 :INSTRUMENT s4o
+                                                 :IMP_PATIENT s4s)
+                                       :E4 (s4c1 / cooked
+                                                 :IMP_PATIENT s4s
+                                                 :V_FINAL_STATE s4r1)
+                                       :E0 (s4d / do
+                                                :ACTION s4r))
+                :imp_output (s4r2 / roast.RES))
+      :op2 (s4f / flip-01~8
+                :time (s4a / after~9
+                           :quant (s4t2 / temporal-quantity
+                                        :quant 20
+                                        :unit (s4m2 / minute)))
+                :ARG0 s4y
+                :event-structure (s4se1 / subevents
+                                        :E1 (s4h / has_location
+                                                 :IMP_THEME s4r2)
+                                        :E2 (s4a3 / and
+                                                  :op1 (s4e / exert_force
+                                                            :IMP_THEME s4r2)
+                                                  :op2 (s4c2 / contact
+                                                             :IMP_THEME s4r2))
+                                        :E3 (s4a4 / and
+                                                  :op1 (s4m1 / motion
+                                                             :IMP_THEME s4r2)
+                                                  :op2 (s4h1 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s4r2))
+                                        :E4 (s4c3 / contact
+                                                  :polarity -
+                                                  :IMP_THEME s4r2)
+                                        :E5 (s4h2 / has_location
+                                                  :IMP_THEME s4r2)
+                                        :E0 (s4d1 / do
+                                                  :ACTION s4f))
+                :imp_output (s4f1 / flipping.RES))
+      :mode imperative)
+
+

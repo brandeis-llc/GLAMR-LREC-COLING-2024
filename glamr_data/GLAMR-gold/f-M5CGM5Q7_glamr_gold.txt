@@ -1,0 +1,559 @@
+# :: f-M5CGM5Q7::step01::sent01
+# :: snt1	Place chopped sweet potato in a pot and cover with water .
+(s1a2 / and~7
+      :op1 (s1p / place-01~0
+                :ARG1 (s1s2 / sweet-potato~2,3
+                            :ARG1-of (s1c / chop-01~1))
+                :ARG2 (s1p2 / pot~6)
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1h / has_location
+                                                :THEME s1s2)
+                                       :E3 (s1a / and
+                                                :op1 (s1m / motion
+                                                          :THEME s1s2)
+                                                :op2 (s1h1 / has_location
+                                                           :polarity -
+                                                           :THEME s1s2))
+                                       :E4 (s1h2 / has_location
+                                                 :THEME s1s2
+                                                 :DESTINATION s1p2)
+                                       :E0 (s1d / do
+                                                :ACTION s1p))
+                :imp_output (s1p1 / place.RES))
+      :op2 (s1c3 / cover-02~8
+                 :ARG2 (s1w / water~10)
+                 :ARG0 s1y
+                 :event-structure (s1se1 / subevents
+                                         :E1 (s1h3 / has_location
+                                                   :THEME s1w)
+                                         :E3 (s1a1 / and
+                                                   :op1 (s1m1 / motion
+                                                              :THEME s1w)
+                                                   :op2 (s1h4 / has_location
+                                                              :polarity -
+                                                              :THEME s1w))
+                                         :E4 (s1h5 / has_location
+                                                   :THEME s1w
+                                                   :DESTINATION s1s2)
+                                         :E0 (s1d1 / do
+                                                   :ACTION s1c3))
+                 :imp_output (s1c1 / cover.RES))
+      :mode imperative)
+
+
+# :: f-M5CGM5Q7::step01::sent02
+# :: snt2	Bring to boil , lower heat and simmer for about 20 minutes or until tender .
+(s2a2 / and~6
+      :op1 (s2b2 / bring-ON-02~0
+                 :ARG4 (s2b / boil-01~2)
+                 :ARG0 (s2y / you)
+                 :event-structure (s2se / subevents
+                                        :E1 (s2c / cooked
+                                                 :polarity -
+                                                 :IMP_PATIENT (s2c1 / cover.RES)
+                                                 :V_FINAL_STATE (s2b1 / brought-to-boil))
+                                        :E3 (s2a1 / apply_heat
+                                                  :IMP_PATIENT s2c1)
+                                        :E4 (s2c2 / cooked
+                                                  :IMP_PATIENT s2c1
+                                                  :V_FINAL_STATE s2b1)
+                                        :E0 (s2d / do
+                                                 :ACTION s2b2))
+                 :imp_output (s2b3 / bring-to-boil.RES))
+      :op2 (s2l / lower-05~4
+                :ARG1 (s2h / heat~5))
+      :op3 (s2s / simmer-01~7
+                :duration (s2a / about~9
+                               :op1 (s2t / temporal-quantity
+                                         :quant 20
+                                         :unit (s2m / minute~11)))
+                :duration (s2u / until~13
+                               :op1 (s2t2 / tender-02~14))
+                :ARG0 s2y
+                :event-structure (s2se1 / subevents
+                                        :E1 (s2c3 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s2b3
+                                                  :V_FINAL_STATE (s2s1 / simmered))
+                                        :E3 (s2a3 / apply_heat
+                                                  :IMP_PATIENT s2b3)
+                                        :E4 (s2a4 / and
+                                                  :op1 (s2c4 / cooked
+                                                             :IMP_PATIENT s2b3
+                                                             :V_FINAL_STATE s2s1)
+                                                  :op2 (s2h1 / has_state
+                                                             :IMP_PATIENT s2b3
+                                                             :RESULT s2t2))
+                                        :E0 (s2d1 / do
+                                                  :ACTION s2s))
+                :imp_output (s2s2 / simmer.RES))
+      :mode imperative)
+
+
+# :: f-M5CGM5Q7::step01::sent03
+# :: snt3	Then place the cooked sweet potato , sugar and fresh milk in a liquidiser , blend till very smooth .
+(s3a / and
+     :op1 (s3p / place-01~1
+               :ARG1 (s3a2 / and~8
+                           :op1 (s3s4 / sweet-potato~4,5
+                                      :ARG1-of (s3c / cook-01~3))
+                           :op2 (s3s2 / sugar~7)
+                           :op3 (s3m / milk~10
+                                     :mod (s3f / fresh~9)))
+               :ARG2 (s3l / liquidiser~13)
+               :time (s3t / then~0)
+               :ARG0 (s3y / you)
+               :event-structure (s3se / subevents
+                                      :E1 (s3h / has_location
+                                               :THEME s3m)
+                                      :E3 (s3a1 / and
+                                                :op1 (s3m1 / motion
+                                                           :THEME s3m)
+                                                :op2 (s3h1 / has_location
+                                                           :polarity -
+                                                           :THEME s3m))
+                                      :E4 (s3h2 / has_location
+                                                :THEME s3m
+                                                :DESTINATION s3l)
+                                      :E0 (s3d / do
+                                               :ACTION s3p))
+               :imp_output (s3p1 / place.RES))
+     :op2 (s3b / blend-01~15
+               :duration (s3t2 / till~16
+                               :op1 (s3s / smooth-04~18
+                                         :ARG1 s3a2
+                                         :degree (s3v / very~17)))
+               :ARG0 s3y
+               :event-structure (s3se1 / subevents
+                                       :E1 (s3a3 / and
+                                                 :op1 (s3m2 / mingled
+                                                            :polarity -)
+                                                 :op2 (s3h3 / has_material_integrity_state
+                                                            :polarity -
+                                                            :V_STATE (s3b1 / blent))
+                                                 :op3 (s3h4 / has_material_integrity_state
+                                                            :polarity -
+                                                            :V_STATE s3b1))
+                                       :E3 (s3a4 / and
+                                                 :op1 (s3m3 / mingled)
+                                                 :op2 (s3h5 / has_material_integrity_state
+                                                            :V_STATE s3b1)
+                                                 :op3 (s3h6 / has_material_integrity_state
+                                                            :V_STATE s3b1))
+                                       :E0 (s3d1 / do
+                                                 :ACTION s3b))
+               :imp_output (s3b2 / blend.RES))
+     :mode imperative)
+
+
+# :: f-M5CGM5Q7::step01::sent04
+# :: snt4	Add a little more milk if you find the cooked sweet potato is still a little dry .
+(s4a / add-02~0
+     :ARG1 (s4m / milk~4
+                :quant (s4m2 / more~3
+                             :quant (s4l / little~2)))
+     :condition (s4f / find-01~7
+                     :ARG0 (s4y / you~6)
+                     :ARG1 (s4d / dry-02~16
+                                :ARG1 (s4s3 / sweet-potato~10,11
+                                            :ARG1-of (s4c / cook-01~9))
+                                :degree (s4l2 / little~15)
+                                :mod (s4s / still~13)))
+     :mode imperative
+     :ARG0 (s4y1 / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4t / together
+                                     :polarity -
+                                     :PATIENT_I s4m)
+                            :E3 (s4t1 / together
+                                      :PATIENT_I s4m)
+                            :E0 (s4d1 / do
+                                      :ACTION s4a))
+     :imp_output (s4a1 / add.RES))
+
+
+# :: f-M5CGM5Q7::step02::sent01
+# :: snt5	In a bowl , mix egg yolks and condensed milk together and set aside .
+(s5a / and~11
+     :op1 (s5m2 / mix-01~4
+                :ARG1 (s5y / yolk~6
+                           :part-of (s5e / egg~5))
+                :ARG2 (s5m / milk~9
+                           :ARG1-of (s5c / condense-01~8))
+                :location (s5b / bowl~2)
+                :manner (s5t / together~10)
+                :ARG0 (s5y1 / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5a1 / and
+                                                 :op1 (s5m1 / mingled
+                                                            :polarity -
+                                                            :PATIENT_I s5y
+                                                            :PATIENT_J s5m)
+                                                 :op2 (s5h / has_material_integrity_state
+                                                           :polarity -
+                                                           :PATIENT_I s5y
+                                                           :V_STATE (s5m3 / mixed)
+                                                           :PATIENT_J s5m)
+                                                 :op3 (s5h1 / has_material_integrity_state
+                                                            :polarity -
+                                                            :PATIENT_J s5m
+                                                            :V_STATE s5m3
+                                                            :PATIENT_I s5y))
+                                       :E3 (s5a3 / and
+                                                 :op1 (s5m4 / mingled
+                                                            :PATIENT_I s5y
+                                                            :PATIENT_J s5m)
+                                                 :op2 (s5h2 / has_material_integrity_state
+                                                            :PATIENT_I s5y
+                                                            :V_STATE s5m3
+                                                            :PATIENT_J s5m)
+                                                 :op3 (s5h3 / has_material_integrity_state
+                                                            :PATIENT_J s5m
+                                                            :V_STATE s5m3
+                                                            :PATIENT_I s5y))
+                                       :E0 (s5d / do
+                                                :ACTION s5m2))
+                :imp_output (s5m5 / mix.RES))
+     :op2 (s5s / set-01~12
+               :ARG2 (s5a2 / aside~13)
+               :ARG0 s5y1
+               :event-structure (s5se1 / subevents
+                                       :E1 (s5h4 / has_location)
+                                       :E3 (s5a4 / and
+                                                 :op1 (s5m6 / motion
+                                                            :IMP_THEME s5m5)
+                                                 :op2 (s5h5 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s5m5))
+                                       :E4 (s5h6 / has_location
+                                                 :IMP_THEME s5m5
+                                                 :DESTINATION s5a2)
+                                       :E0 (s5d1 / do
+                                                 :ACTION s5s))
+               :imp_output (s5s1 / set.RES))
+     :mode imperative)
+
+
+# :: f-M5CGM5Q7::step02::sent02
+# :: snt6	Boil 250ml whipping cream and gradually add into the egg yolk mixture and stir well with a hand whisk .
+(s6a2 / and~4,12
+      :op1 (s6b2 / boil-01~0
+                 :ARG1 (s6c / cream~3
+                            :quant (s6v / volume-quantity
+                                        :quant 250
+                                        :unit (s6m3 / ml))
+                            :ARG1-of (s6w2 / whip-01~2))
+                 :ARG0 (s6y1 / you)
+                 :event-structure (s6se / subevents
+                                        :E1 (s6c1 / cooked
+                                                  :polarity -
+                                                  :PATIENT s6c
+                                                  :V_FINAL_STATE (s6b / boiled))
+                                        :E3 (s6a1 / apply_heat
+                                                  :PATIENT s6c)
+                                        :E4 (s6c2 / cooked
+                                                  :PATIENT s6c
+                                                  :V_FINAL_STATE s6b)
+                                        :E0 (s6d / do
+                                                 :ACTION s6b2))
+                 :imp_output (s6b1 / boil.RES))
+      :op2 (s6a / add-02~6
+                :ARG2 (s6m2 / mixture~11
+                            :consist-of (s6y / yolk~10
+                                             :part-of (s6e / egg)))
+                :manner (s6g / gradual~5)
+                :ARG0 s6y1
+                :event-structure (s6se1 / subevents
+                                        :E1 (s6t / together
+                                                 :polarity -)
+                                        :E3 (s6t1 / together)
+                                        :E0 (s6d1 / do
+                                                  :ACTION s6a))
+                :imp_output (s6a3 / add.RES))
+      :op3 (s6s / stir-01~13
+                :ARG1-of (s6w / well-09~14)
+                :instrument (s6h2 / hand-whisk~17,18)
+                :ARG0 s6y1
+                :event-structure (s6se2 / subevents
+                                        :E1 (s6h / has_material_integrity_state
+                                                 :polarity -
+                                                 :IMP_PATIENT s6a3
+                                                 :V_STATE (s6s1 / stirred))
+                                        :E3 (s6h1 / has_material_integrity_state
+                                                  :IMP_PATIENT s6a3
+                                                  :V_STATE s6s1)
+                                        :E0 (s6d2 / do
+                                                  :ACTION s6s))
+                :imp_output (s6s2 / stir.RES))
+      :mode imperative)
+
+
+# :: f-M5CGM5Q7::step02::sent03
+# :: snt7	Then pour egg yolk mixture back to the pot and bring to boil over low heat , stir until thickens , remove from heat .
+(s7a / and~9
+     :op1 (s7p2 / pour-01~1
+                :ARG1 (s7m / mixture~4
+                           :consist-of (s7y / yolk~3
+                                            :part-of (s7e / egg~2)))
+                :ARG2 (s7p / pot~8)
+                :direction (s7b / back~5)
+                :ARG0 (s7y1 / you)
+                :event-structure (s7se / subevents
+                                       :E1 (s7h1 / has_location
+                                                 :THEME s7m)
+                                       :E3 (s7a1 / and
+                                                 :op1 (s7m1 / motion
+                                                            :THEME s7m)
+                                                 :op2 (s7h2 / has_location
+                                                            :polarity -
+                                                            :THEME s7m))
+                                       :E4 (s7h3 / has_location
+                                                 :THEME s7m
+                                                 :DESTINATION s7p)
+                                       :E0 (s7d / do
+                                                :ACTION s7p2))
+                :imp_output (s7p1 / pour.RES))
+     :op2 (s7b3 / bring-01~10
+                :purpose (s7b2 / boil-01~12
+                               :ARG1 s7m
+                               :manner (s7h / heat~15,23
+                                            :mod (s7l / low~14)))
+                :ARG0 s7y1
+                :event-structure (s7se1 / subevents
+                                        :E1 (s7c / cooked
+                                                 :polarity -
+                                                 :IMP_PATIENT s7p1
+                                                 :V_FINAL_STATE (s7b1 / brought-to-boil))
+                                        :E3 (s7a2 / apply_heat
+                                                  :INSTRUMENT s7h
+                                                  :IMP_PATIENT s7p1)
+                                        :E4 (s7c1 / cooked
+                                                  :IMP_PATIENT s7p1
+                                                  :V_FINAL_STATE s7b1)
+                                        :E0 (s7d1 / do
+                                                  :ACTION s7b3))
+                :imp_output (s7b4 / bring-to-boil.RES))
+     :op3 (s7s / stir-01~17
+               :duration (s7u / until~18
+                              :op1 (s7t2 / thicken-01~19
+                                         :ARG1 s7m))
+               :ARG0 s7y1
+               :event-structure (s7se2 / subevents
+                                       :E1 (s7h4 / has_material_integrity_state
+                                                 :polarity -
+                                                 :IMP_PATIENT s7b4
+                                                 :V_STATE (s7s1 / stirred))
+                                       :E3 (s7h5 / has_material_integrity_state
+                                                 :IMP_PATIENT s7b4
+                                                 :V_STATE s7s1)
+                                       :E0 (s7d2 / do
+                                                 :ACTION s7s))
+               :imp_output (s7s2 / stir.RES))
+     :op4 (s7r / remove-01~21
+               :ARG2 s7h
+               :ARG0 s7y1
+               :event-structure (s7se3 / subevents
+                                       :E1 (s7h6 / has_location)
+                                       :E3 (s7a3 / and
+                                                 :op1 (s7m2 / motion
+                                                            :IMP_THEME s7s2)
+                                                 :op2 (s7h7 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s7s2))
+                                       :E4 (s7h8 / has_location
+                                                 :IMP_THEME s7s2)
+                                       :E0 (s7d3 / do
+                                                 :ACTION s7r))
+               :imp_output (s7r1 / remove.RES))
+     :time (s7t / then~0)
+     :mode imperative)
+
+
+# :: f-M5CGM5Q7::step03::sent01
+# :: snt8	Add in sweet potato , mix well and leave to cool and chill for 2 hours .
+(s8a2 / and~7
+      :op1 (s8a / add-02~0
+                :ARG1 (s8s2 / sweet-potato~2,3)
+                :ARG0 (s8y / you)
+                :event-structure (s8se / subevents
+                                       :E1 (s8t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s8s2)
+                                       :E3 (s8t2 / together
+                                                 :PATIENT_I s8s2)
+                                       :E0 (s8d / do
+                                                :ACTION s8a))
+                :imp_output (s8a1 / add.RES))
+      :op2 (s8m / mix-01~5
+                :manner (s8w / well~6)
+                :ARG0 s8y
+                :event-structure (s8se1 / subevents
+                                        :E1 (s8a4 / and
+                                                  :op1 (s8m1 / mingled
+                                                             :polarity -)
+                                                  :op2 (s8h1 / has_material_integrity_state
+                                                             :polarity -
+                                                             :V_STATE (s8m2 / mixed))
+                                                  :op3 (s8h2 / has_material_integrity_state
+                                                             :polarity -
+                                                             :V_STATE s8m2))
+                                        :E3 (s8a5 / and
+                                                  :op1 (s8m3 / mingled)
+                                                  :op2 (s8h3 / has_material_integrity_state
+                                                             :V_STATE s8m2)
+                                                  :op3 (s8h4 / has_material_integrity_state
+                                                             :V_STATE s8m2))
+                                        :E0 (s8d1 / do
+                                                  :ACTION s8m))
+                :imp_output (s8m4 / mix.RES))
+      :op3 (s8l / leave-14~8
+                :ARG1 (s8a3 / and
+                            :op1 (s8c2 / cool-06~10
+                                       :ARG0 s8y
+                                       :event-structure (s8se2 / subevents
+                                                               :E1 (s8h5 / has_state
+                                                                         :polarity -
+                                                                         :IMP_PATIENT s8m4
+                                                                         :V_FINAL_STATE (s8c1 / cooled))
+                                                               :E3 (s8h6 / has_state
+                                                                         :IMP_PATIENT s8m4
+                                                                         :V_FINAL_STATE s8c1)
+                                                               :E0 (s8d2 / do
+                                                                         :ACTION s8c2))
+                                       :imp_output (s8c3 / cool.RES))
+                            :op2 (s8c / chill-01~12
+                                      :ARG0 s8y
+                                      :event-structure (s8se3 / subevents
+                                                              :E1 (s8h7 / has_state
+                                                                        :polarity -
+                                                                        :IMP_PATIENT s8c3
+                                                                        :V_FINAL_STATE (s8c4 / chilled))
+                                                              :E3 (s8h8 / has_state
+                                                                        :IMP_PATIENT s8c3
+                                                                        :V_FINAL_STATE s8c4)
+                                                              :E0 (s8d3 / do
+                                                                        :ACTION s8c))
+                                      :imp_output (s8c5 / chill.RES)))
+                :duration (s8t / temporal-quantity
+                               :quant 2
+                               :unit (s8h / hour~15)))
+      :mode imperative)
+
+
+# :: f-M5CGM5Q7::step04::sent01
+# :: snt9	Then pour mixture into ice cream maker and churn for about 30 - 40 minutes till soft ice cream is formed or according to maker 's instruction .
+(s9a2 / and~7
+      :op1 (s9p / pour-01~1
+                :ARG1 (s9m4 / mixture~2)
+                :ARG3 (s9i3 / ice-cream-maker~4,5,6,24)
+                :ARG0 (s9y / you)
+                :event-structure (s9se / subevents
+                                       :E1 (s9h / has_location
+                                                :THEME s9m4)
+                                       :E3 (s9a / and
+                                                :op1 (s9m / motion
+                                                          :THEME s9m4)
+                                                :op2 (s9h1 / has_location
+                                                           :polarity -
+                                                           :THEME s9m4))
+                                       :E4 (s9h2 / has_location
+                                                 :THEME s9m4
+                                                 :DESTINATION s9i3)
+                                       :E0 (s9d / do
+                                                :ACTION s9p))
+                :imp_output (s9p1 / pour.RES))
+      :op2 (s9c / churn-01~8
+                :ARG2 (s9i2 / ice-cream~17,18
+                            :ARG1-of (s9s / soft-02~16))
+                :duration (s9u / umr-choice
+                               :op1 (s9b / between
+                                         :op1 (s9t2 / temporal-quantity
+                                                    :unit (s9m3 / minute)
+                                                    :quant 30)
+                                         :op2 (s9t / temporal-quantity
+                                                   :unit (s9m2 / minute~14)
+                                                   :quant 40))
+                               :op2 (s9s2 / say-01
+                                          :ARG0 (s9i4 / instruction~26
+                                                      :poss s9i3)))
+                :ARG0 s9y
+                :event-structure (s9se1 / subevents
+                                        :E1 (s9b1 / be
+                                                  :polarity -
+                                                  :PRODUCT s9i2)
+                                        :E3 (s9a1 / and
+                                                  :op1 (s9b2 / be
+                                                             :PRODUCT s9i2)
+                                                  :op2 (s9m1 / made_of
+                                                             :PRODUCT s9i2))
+                                        :E0 (s9d1 / do
+                                                  :ACTION s9c))
+                :imp_output (s9c1 / churn.RES))
+      :time (s9t3 / then~0)
+      :mode imperative)
+
+
+# :: f-M5CGM5Q7::step05::sent01
+# :: snt10	Spoon the soft ice cream into a container and freeze for 3 - 4 hours before serving .
+(s10a / and~8
+      :op1 (s10s3 / spoon-01~0
+                  :ARG1 (s10i / ice-cream~3,4
+                              :ARG1-of (s10s2 / soft-02~2))
+                  :ARG2 (s10c / container~7)
+                  :ARG0 (s10y / you)
+                  :event-structure (s10se / subevents
+                                          :E1 (s10h1 / has_location
+                                                     :THEME s10i)
+                                          :E3 (s10a1 / and
+                                                     :op1 (s10m / motion
+                                                                :THEME s10i)
+                                                     :op2 (s10h3 / has_location
+                                                                 :polarity -
+                                                                 :THEME s10i))
+                                          :E4 (s10h4 / has_location
+                                                     :THEME s10i
+                                                     :DESTINATION s10c)
+                                          :E0 (s10d / do
+                                                    :ACTION s10s3))
+                  :imp_output (s10s1 / spoon.RES))
+      :op2 (s10f / freeze-01~9
+                 :duration (s10b2 / between
+                                  :op1 (s10t / temporal-quantity
+                                             :quant 3
+                                             :unit (s10h2 / hour))
+                                  :op2 (s10t2 / temporal-quantity
+                                              :quant 4
+                                              :unit (s10h / hour~14)))
+                 :time (s10b / before~15
+                             :op1 (s10s / serve-02~16
+                                        :ARG0 s10y
+                                        :event-structure (s10se2 / subevents
+                                                                 :E1 (s10a2 / and
+                                                                            :op1 (s10h5 / has_possession
+                                                                                        :IMP_THEME s10f2)
+                                                                            :op2 (s10h6 / has_possession
+                                                                                        :polarity -
+                                                                                        :IMP_THEME s10f2))
+                                                                 :E2 (s10t1 / transfer
+                                                                            :IMP_THEME s10f2)
+                                                                 :E3 (s10a3 / and
+                                                                            :op1 (s10h7 / has_possession
+                                                                                        :IMP_THEME s10f2)
+                                                                            :op2 (s10h8 / has_possession
+                                                                                        :polarity -
+                                                                                        :IMP_THEME s10f2))
+                                                                 :E0 (s10d2 / do
+                                                                            :ACTION s10s))
+                                        :imp_output (s10s4 / serve.RES)))
+                 :ARG0 s10y
+                 :event-structure (s10se1 / subevents
+                                          :E1 (s10w / weather
+                                                    :V_WEATHER (s10f1 / frozen)
+                                                    :IMP_THEME s10s1)
+                                          :E0 (s10d1 / do
+                                                     :ACTION s10f))
+                 :imp_output (s10f2 / freeze.RES))
+      :mode imperative)
+
+

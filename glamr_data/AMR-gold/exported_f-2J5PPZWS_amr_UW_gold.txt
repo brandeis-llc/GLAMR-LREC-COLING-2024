@@ -1,0 +1,257 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1261
+export time: 4/3/2023, 4:22:56 PM
+
+# :: snt1	In a shallow dish , stir together egg , water , rosemary , black pepper , and garlic granules .
+# sentence level graph:
+(s1s2 / stir-01
+  :ARG1 (s1a / and
+          :op1 (s1e / egg)
+          :op2 (s1w / water)
+          :op3 (s1r / rosemary)
+          :op4 (s1p / pepper
+                 :ARG1-of (s1b / black-04))
+          :op5 (s1g2 / granule
+                 :consist-of (s1g / garlic)))
+  :location (s1d / dish
+              :mod (s1s / shallow))
+  :mod (s1t / together)
+  :mode imperative)
+
+# alignment:s1a: 17-17
+s1b: 14-14
+s1d: 4-4
+s1e: 8-8
+s1g: 18-18
+s1g2: 19-19
+s1p: 15-15
+s1r: 12-12
+s1s: 3-3
+s1s2: 6-6
+s1t: 7-7
+s1w: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Put the bread crumbs in another dish .
+# sentence level graph:
+(s2p / put-01
+  :ARG1 (s2c / crumb
+          :consist-of (s2b / bread))
+  :ARG2 (s2d / dish
+          :mod (s2a / another))
+  :mode imperative)
+
+# alignment:s2a: 6-6
+s2b: 3-3
+s2c: 4-4
+s2d: 7-7
+s2p: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Dip pork steaks into egg mixture , coat with bread crumbs .
+# sentence level graph:
+(s3a / and
+  :op1 (s3d / dip-02
+         :ARG1 (s3s / steak
+                 :consist-of (s3p / pork))
+         :ARG2 (s3t / thing
+                 :ARG2-of (s3m / mix-01
+                            :ARG1 (s3e / egg))))
+  :op2 (s3c / coat-01
+         :ARG1 s3s
+         :ARG2 (s3c2 / crumb
+                 :consist-of (s3b / bread)))
+  :mode imperative)
+
+# alignment:s3a: 4-4
+s3b: 10-10
+s3c: 8-8
+s3c2: 11-11
+s3d: 1-1
+s3e: 5-5
+s3m: 6-6
+s3p: 2-2
+s3s: 3-3
+s3t: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Brown steaks in butter and oil for 5 minutes on each side .
+# sentence level graph:
+(s4b3 / brown
+  :ARG1 (s4s3 / steak)
+  :instrument (s4a2 / and
+                :op1 (s4b4 / butter)
+                :op2 (s4o2 / oil))
+  :duration (s4t / temporal-quantity
+              :unit (s4m / minute)
+              :quant 5)
+  :location (s4s / side
+              :mod (s4e / each))
+  :mode imperative)
+
+# alignment:s4e: -1--1
+s4m: -1--1
+s4s: -1--1
+s4t: -1--1
+s4b3: 1-1
+s4s3: 2-2
+s4a2: 0-0
+s4o2: -1--1
+s4b4: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Remove , place in a baking dish .
+# sentence level graph:
+(s5a / and
+  :op1 (s5r / remove-01)
+  :op2 (s5p / place-01
+         :ARG2 (s5d / dish
+                 :ARG2-of (s5b / bake-01)))
+  :mode imperative)
+
+# alignment:s5a: 2-2
+s5b: 6-6
+s5d: 7-7
+s5p: 3-3
+s5r: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	In the same skillet stir in apple chips , sour cream and bouillon , cook briefly .
+# sentence level graph:
+(s6a / and
+  :op1 (s6s4 / stir-01
+         :ARG1 (s6a2 / and
+                 :op1 (s6c / chip
+                        :consist-of (s6a3 / apple))
+                 :op2 (s6c3 / cream
+                        :mod (s6s3 / sour))
+                 :op3 (s6b / bouillon))
+         :location (s6s2 / skillet
+                     :ARG1-of (s6s / same-01)))
+  :op2 (s6c2 / cook-01
+         :duration (s6b2 / brief))
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6a2: 12-12
+s6a3: 7-7
+s6b: 13-13
+s6b2: 16-16
+s6c: 8-8
+s6c2: 15-15
+s6c3: 11-11
+s6s: 3-3
+s6s2: 4-4
+s6s3: 10-10
+s6s4: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Pour the sauce over pork , cover the and bake in oven at 170'C for 45 minutes .
+# sentence level graph:
+(s7a / and
+  :op1 (s7p2 / pour-01
+         :ARG1 (s7s / sauce)
+         :ARG3 (s7p / pork))
+  :op2 (s7c / cover-02
+         :ARG1 s7p)
+  :op3 (s7b / bake-01
+         :ARG1 s7p
+         :duration (s7t / temporal-quantity
+                     :quant 45
+                     :unit (s7m / minute))
+         :location (s7o / oven
+                     :mod (s7t2 / temperature-quantity
+                            :quant 170
+                            :unit "'C")))
+  :mode imperative)
+
+# alignment:s7a: 9-9
+s7b: 10-10
+s7c: 7-7
+s7m: 17-17
+s7o: 12-12
+s7p: 5-5
+s7p2: 1-1
+s7s: 3-3
+s7t: 17-17
+s7t2: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Serve with cooked bulgur , rice or barley .
+# sentence level graph:
+(s8s / serve-02
+  :accompanier (s8o / or
+                 :op1 (s8b2 / bulgur
+                        :ARG1-of (s8c / cook-01))
+                 :op2 (s8r / rice)
+                 :op3 (s8b / barley))
+  :mode imperative)
+
+# alignment:s8b: 8-8
+s8b2: 4-4
+s8c: 3-3
+s8o: 7-7
+s8r: 6-6
+s8s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+In a shallow dish , stir together egg , water , rosemary , black pepper , and garlic granules .
+Put the bread crumbs in another dish .
+Dip pork steaks into egg mixture , coat with bread crumbs .
+Brown steaks in butter and oil for 5 minutes on each side .
+Remove , place in a baking dish .
+In the same skillet stir in apple chips , sour cream and bouillon , cook briefly .
+Pour the sauce over pork , cover the and bake in oven at 170'C for 45 minutes .
+Serve with cooked bulgur , rice or barley .

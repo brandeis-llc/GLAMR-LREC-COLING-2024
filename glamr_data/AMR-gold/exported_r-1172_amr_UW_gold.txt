@@ -1,0 +1,164 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1462
+export time: 9/26/2023, 1:12:32 PM
+
+# :: snt1	Bring a medium pot of water to a boil .
+# sentence level graph:
+(s1b2 / bring-ON-02
+  :ARG1 (s1w / water
+          :quant (s1p / pot
+                   :mod (s1m / medium)))
+  :destination (s1b / boil)
+  :mode imperative)
+
+# alignment:s1b: 9-9
+s1b2: 1-1
+s1m: 3-3
+s1p: 4-4
+s1w: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Drop in corn , beans , and carrots ; cook for 3 minutes .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2d / drop-01
+         :ARG1 (s2a / and
+                 :op1 (s2c2 / corn)
+                 :op2 (s2b / bean)
+                 :op3 (s2c3 / carrot)))
+  :op2 (s2c / cook-01
+         :duration (s2t / temporal-quantity
+                     :quant 3
+                     :unit (s2m / minute)))
+  :mode imperative)
+
+# alignment:s2a: 2-2
+s2a2: 9-9
+s2b: 5-5
+s2c: 10-10
+s2c2: 3-3
+s2d: 1-1
+s2m: 13-13
+s2t: 13-13
+s2c3: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Drain vegetables and plunge into cold water .
+# sentence level graph:
+(s3a / and
+  :op1 (s3d / drain-01
+         :ARG1 (s3v / vegetable))
+  :op2 (s3p / plunge-02
+         :ARG2 (s3w / water
+                 :mod (s3c / cold)))
+  :mode imperative)
+
+# alignment:s3a: 3-3
+s3c: 6-6
+s3d: 1-1
+s3p: 4-4
+s3v: 2-2
+s3w: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Drain again and place in a large bowl .
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4d / drain-01
+         :mod (s4a / again))
+  :op2 (s4p / place-01
+         :ARG2 (s4b / bowl
+                 :mod (s4l / large)))
+  :mode imperative)
+
+# alignment:s4a: 2-2
+s4a2: 3-3
+s4b: 8-8
+s4d: 1-1
+s4l: 7-7
+s4p: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Add remaining ingredients and toss to mix well .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5a / add-02
+         :ARG1 (s5i / ingredient
+                 :ARG1-of (s5r / remain-01)))
+  :op2 (s5t / toss-01
+         :purpose (s5m / mix-01
+                    :manner (s5w / well)))
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5a2: 4-4
+s5i: 3-3
+s5m: 7-7
+s5r: 2-2
+s5t: 5-5
+s5w: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Refrigerate for 1 hour to blend flavors .
+# sentence level graph:
+(s6r / refrigerate-01
+  :purpose (s6b / blend-01
+             :ARG1 (s6f / flavor))
+  :duration (s6t / temporal-quantity
+              :quant 1
+              :unit (s6h / hour))
+  :mode imperative)
+
+# alignment:s6b: 6-6
+s6f: 7-7
+s6h: 4-4
+s6r: 1-1
+s6t: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Bring a medium pot of water to a boil .
+Drop in corn , beans , and carrots ; cook for 3 minutes .
+Drain vegetables and plunge into cold water .
+Drain again and place in a large bowl .
+Add remaining ingredients and toss to mix well .
+Refrigerate for 1 hour to blend flavors .

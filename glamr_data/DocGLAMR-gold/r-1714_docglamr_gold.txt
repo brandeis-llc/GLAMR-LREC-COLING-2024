@@ -1,0 +1,45 @@
+# :: r-1714::step01::sent01
+# :: snt1	In a large pot , bring the water and salt to a boil ; add the lentils , reduce the heat to medium - low and cook for 30 minutes or until the lentils are tender but not overcooked ; drain .
+(s1 / sentence
+    :coref ((s1w :aggregation s1b)
+			(s1b :aggregation s1a1)
+			(s1a1 :cut s1c5)
+			(s1c5 :cut s1d5)
+			(s1s :aggregation s1b)
+			(s1b :cut s1c5)
+			(s1l2 :aggregation s1a1)
+			(s1a1 :cut s1d5)))
+
+
+# :: r-1714::step02::sent01
+# :: snt2	In a colander , rinse the cooked lentils under cold water until slightly cool , then place them in a bowl .
+(s2 / sentence
+    :coref ((s1d5 :aggregation s2r1)
+			(s2r1 :cut s2p1)
+			(s1c5 :aggregation s2r1)
+			(s1d5 :cut s2p1)
+			(s2c3 :aggregation s2r1)))
+
+
+# :: r-1714::step03::sent01
+# :: snt3	Whisk together the remaining ingredients ; pour over the lentils and combine well .
+(s3 / sentence
+    :coref ((s2p1 :aggregation s3p3)
+			(s3p3 :cut s3c2)
+			(s2r1 :aggregation s3p3)
+			(s2p1 :cut s3c2)
+			(s2r1 :cut s3c2)
+			(s3i :cut s3w1)
+			(s3w1 :aggregation s3p3)))
+
+
+# :: r-1714::step04::sent01
+# :: snt4	Chill for 1 to 2 hours and serve cold .
+(s4 / sentence
+    :coref ((s3c2 :cut s4c4)
+			(s4c4 :cut s4s1)
+			(s3p3 :cut s4c4)
+			(s3c2 :cut s4s1)
+			(s3p3 :cut s4s1)))
+
+

@@ -1,0 +1,33 @@
+# :: f-VSG7PZYZ::step01::sent01
+# :: snt1	In a tall glass , fill with ice and add one and half jiggers of spiced rum , add 2/3 of the glass with pineapple soda
+(s1 / sentence
+    :coref ((s1i :cut s1f1)
+			(s1f1 :aggregation s1a4)
+			(s1a4 :aggregation s1a5)
+			(s1s2 :aggregation s1a4)
+			(s1p :aggregation s1a5)))
+
+
+# :: f-VSG7PZYZ::step02::sent01
+# :: snt2	float til glass is full with ginger beer
+(s2 / sentence
+    :coref ((s1a5 :aggregation s2f1)
+			(s1a4 :aggregation s2f1)
+			(s2g :aggregation s2f1)))
+
+
+# :: f-VSG7PZYZ::step03::sent01
+# :: snt3	squeeze a generous squeeze of lime
+(s3 / sentence
+    :coref ((s2f1 :aggregation s3s)
+			(s1a5 :aggregation s3s)
+			(s3l2 :aggregation s3s)))
+
+
+# :: f-VSG7PZYZ::step04::sent01
+# :: snt4	add straw stir gently drink slowly and enjoy !
+(s4 / sentence
+    :coref ((s3s :cut s4s5)
+			(s2f1 :cut s4s5)))
+
+

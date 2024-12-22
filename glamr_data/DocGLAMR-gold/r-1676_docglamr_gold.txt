@@ -1,0 +1,33 @@
+# :: r-1676::step01::sent01
+# :: snt1	Wash cauliflower well and remove the stems ( optionally you can keep part of the stems as long as you boil them enough to tender ) .
+(s1 / sentence
+    :coref ((s1c :cut s1w3)
+			(s1r :cut s1k1)
+			(s1k1 :cut s1b2)))
+
+
+# :: r-1676::step02::sent01
+# :: snt2	Boil until tender .
+(s2 / sentence
+    :coref ((s1b2 :aggregation s2b3)
+			(s1r :aggregation s2b3)))
+
+
+# :: r-1676::step03::sent01
+# :: snt3	Drain the cauliflower well and place in a bowl .
+(s3 / sentence
+    :coref ((s2b3 :cut s3d3)
+			(s3d3 :cut s3p)
+			(s2b3 :cut s3p)))
+
+
+# :: r-1676::step04::sent01
+# :: snt4	Pour some olive oil and sprinkle with lemon juice .
+(s4 / sentence
+    :coref ((s3p :aggregation s4p)
+			(s4p :aggregation s4s1)
+			(s3p :aggregation s4s1)
+			(s4o3 :aggregation s4p)
+			(s4l :aggregation s4s1)))
+
+

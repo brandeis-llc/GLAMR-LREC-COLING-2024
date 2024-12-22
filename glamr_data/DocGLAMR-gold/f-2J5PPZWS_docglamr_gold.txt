@@ -1,0 +1,60 @@
+# :: f-2J5PPZWS::step01::sent01
+# :: snt1	In a shallow dish , stir together egg , water , rosemary , black pepper , and garlic granules .
+(s1 / sentence
+    :coref ((s1e :aggregation s1s3)
+			(s1w :aggregation s1s3)
+			(s1r :aggregation s1s3)
+			(s1b :aggregation s1s3)
+			(s1g :aggregation s1s3)))
+
+
+# :: f-2J5PPZWS::step01::sent02
+# :: snt2	Put the bread crumbs in another dish .
+(s2 / sentence
+    :coref ((s1s3 :aggregation s2p)))
+
+
+# :: f-2J5PPZWS::step02::sent01
+# :: snt3	Dip pork steaks into egg mixture , coat with bread crumbs .
+(s3 / sentence
+    :coref ((s2p :aggregation s3d)
+			(s3d :separation s3d)
+			(s1s3 :aggregation s3d)
+			(s1s3 :separation s3d)
+			(s1s :aggregation s3d)
+			(s3m :aggregation s3d)))
+
+
+# :: f-2J5PPZWS::step03::sent01
+# :: snt4	Brown steaks in butter and oil for 5 minutes on each side .
+(s4 / sentence
+    :coref ((s3d :aggregation s4a2)
+			(s1s3 :aggregation s4a2)))
+
+
+# :: f-2J5PPZWS::step03::sent02
+# :: snt5	Remove , place in a baking dish .
+(s5 / sentence
+    :coref ((s4a2 :aggregation s5r)
+			(s5r :cut s5d)
+			(s3d :aggregation s5r)
+			(s3d :cut s5d)
+			(s4a2 :cut s5d)
+			(s1s3 :aggregation s5r)))
+
+
+# :: f-2J5PPZWS::step04::sent01
+# :: snt6	In the same skillet stir in apple chips , sour cream and bouillon , cook briefly .
+(s6 / sentence)
+
+
+# :: f-2J5PPZWS::step05::sent01
+# :: snt7	Pour the sauce over pork , cover the and bake in oven at 170'C for 45 minutes .
+(s7 / sentence)
+
+
+# :: f-2J5PPZWS::step06::sent01
+# :: snt8	Serve with cooked bulgur , rice or barley .
+(s8 / sentence)
+
+

@@ -1,0 +1,37 @@
+# :: f-LWGGLHLM::step01::sent01
+# :: snt1	Melt cheese cubes and grated Parmesan in milk over low heat , stirring occasionally .
+(s1 / sentence
+    :coref ((s1c2 :aggregation s1m1)
+			(s1m1 :cut s1s2)
+			(s1g :aggregation s1m1)
+			(s1m2 :aggregation s1m1)))
+
+
+# :: f-LWGGLHLM::step01::sent02
+# :: snt2	When cheese is completely melted , set the sauce aside , season with pepper .
+(s2 / sentence)
+
+
+# :: f-LWGGLHLM::step02::sent01
+# :: snt3	In a pan saute the schnitzels for 3 minutes on both sides over low heat .
+(s3 / sentence
+    :coref ((s1s2 :cut s3h)
+			(s1m1 :cut s3h)
+			(s1o :cut s3h)
+			(s3b :cut s3h)))
+
+
+# :: f-LWGGLHLM::step03::sent01
+# :: snt4	Pour the cheese sauce over schnitzels , sprinkle with chopped herbs , cover and cook for 5 minutes on low .
+(s4 / sentence
+    :coref ((s3h :aggregation s4p)
+			(s1m1 :aggregation s4p)
+			(s4s :aggregation s4p)
+			(s4s2 :aggregation s4p)))
+
+
+# :: f-LWGGLHLM::step04::sent01
+# :: snt5	Serve immediately with rice and green salad .
+(s5 / sentence)
+
+

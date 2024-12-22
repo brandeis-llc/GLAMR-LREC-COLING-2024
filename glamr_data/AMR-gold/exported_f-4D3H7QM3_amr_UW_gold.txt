@@ -1,0 +1,249 @@
+user name: qiyuansinestrofeng
+user id: 360
+file language: english
+file format: plain_text
+Doc ID in database: 1272
+export time: 4/3/2023, 1:02:11 AM
+
+# :: snt1	Heat the oil with the garlic in a heavy skillet over medium heat .
+# sentence level graph:
+(s1h / heat-01
+  :ARG1 (s1o2 / oil)
+  :ARG2 (s1s2 / skillet
+          :mod (s1h4 / heavy)
+          :mod (s1t / temperature-quantity
+                 :op1 (s1m2 / medium)))
+  :accompanier (s1g / garlic)
+  :mode imperative)
+
+# alignment:s1g: 6-6
+s1h: 1-1
+s1h4: 0-0
+s1o2: 3-3
+s1s2: 0-0
+s1t: 0-0
+s1m2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Cook stirring occasionally , until the garlic is golden .
+# sentence level graph:
+(s2c / cook-stir-00
+  :mode imperative
+  :duration (s2u2 / until
+              :op1 (s2g3 / garlic
+                     :mod (s2g4 / golden)))
+  :manner (s2o / occasional))
+
+# alignment:s2c: 1-1
+s2g3: 0-0
+s2g4: 0-0
+s2o: 0-0
+s2u2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Remove the garlic from the skillet with a slotted spoon and transfer to a paper towel .
+# sentence level graph:
+(s3a / and
+  :op1 (s3r / remove-01
+         :ARG1 (s3g / garlic)
+         :ARG2 (s3s / skillet)
+         :instrument (s3s2 / spoon
+                       :ARG1-of (s3l / Slotted-01)))
+  :op2 (s3t2 / transfer-01
+         :ARG1 s3g
+         :ARG2 (s3t / towel
+                 :consist-of (s3p / paper)))
+  :mode imperative)
+
+# alignment:s3a: 11-11
+s3g: 3-3
+s3l: 9-9
+s3p: 15-15
+s3r: 1-1
+s3s: 6-6
+s3s2: 10-10
+s3t: 16-16
+s3t2: 12-12
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add the butter to the oil in the skillet and heat over medium heat .
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4a3 / add-01
+         :ARG1 (s4b2 / butter)
+         :ARG2 (s4o3 / oil
+                 :location (s4s2 / skillet)))
+  :op2 (s4h / heat-01
+         :ARG1 (s4b / butter)
+         :manner (s4o2 / over
+                   :op1 (s4h2 / heat-01
+                          :degree (s4m / medium))))
+  :mode imperative)
+
+# alignment:s4a2: 10-10
+s4b: 3-3
+s4h: 11-11
+s4h2: 14-14
+s4m: 13-13
+s4o2: 12-12
+s4a3: 0-0
+s4b2: 0-0
+s4o3: 0-0
+s4s2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Add the onions , salt and pepper and saute , until the onions are translucent and starting to turn golden .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5a / add-02
+         :ARG1 (s5a4 / and
+                 :op1 (s5o3 / onion)
+                 :op2 (s5s / salt)
+                 :op3 (s5p / pepper)))
+  :op2 (s5s2 / saute-01
+         :ARG1 s5a4
+         :duration (s5u / until
+                     :op1 (s5t / transluscent
+                            :ARG1 (s5o2 / onion))
+                     :op2 (s5s3 / start-01
+                            :ARG0 (s5o / onion)
+                            :ARG1 (s5t2 / turn-02
+                                    :ARG1 s5o
+                                    :ARG2 (s5g / golden))))))
+
+# alignment:s5a: 1-1
+s5a2: 2-2
+s5a4: 0-0
+s5o: 0-0
+s5o2: 0-0
+s5o3: 0-0
+s5p: 0-0
+s5s: 0-0
+s5s2: 0-0
+s5s3: 0-0
+s5t: 0-0
+s5t2: 19-19
+s5u: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Add the beans and continue cooking stirring occasionally .
+# sentence level graph:
+(s6a2 / and
+  :op1 (s6a / add-02
+         :ARG1 (s6b / bean))
+  :op2 (s6c / continue-01
+         :ARG1 (s6c2 / cook-stir-00)
+         :manner (s6o / occasional))
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6a2: 4-4
+s6b: 3-3
+s6c: 5-5
+s6c2: 0-0
+s6o: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Stir in both vinegars and season with salt and pepper to taste .
+# sentence level graph:
+(s7a / and
+  :op1 (s7s3 / stir-02
+         :ARG1 (s7v / vinegar
+                 :mod (s7b / both)))
+  :op2 (s7s2 / season-01
+         :ARG1 (s7a2 / and
+                 :op1 (s7s / salt)
+                 :op2 (s7p / pepper))
+         :purpose (s7t / taste-01))
+  :mode imperative)
+
+# alignment:s7a: 5-5
+s7a2: 9-9
+s7b: 3-3
+s7p: 10-10
+s7s: 8-8
+s7s2: 6-6
+s7s3: 1-1
+s7t: 12-12
+s7v: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Transfer the beans to a serving dish and sprinkle with the garlic chips .
+# sentence level graph:
+(s8a / and
+  :op1 (s8t / transfer-01
+         :ARG1 (s8b / bean)
+         :ARG2 (s8d / dish
+                 :ARG2-of (s8s / serve-02)))
+  :op2 (s8s2 / sprinkle-01
+         :ARG1 (s8c / chips
+                 :consist-of (s8g / garlic))
+         :ARG2 s8d))
+
+# alignment:s8a: 8-8
+s8b: 3-3
+s8c: 13-13
+s8d: 0-0
+s8g: 12-12
+s8s: 6-6
+s8s2: 9-9
+s8t: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Heat the oil with the garlic in a heavy skillet over medium heat .
+Cook stirring occasionally , until the garlic is golden .
+Remove the garlic from the skillet with a slotted spoon and transfer to a paper towel .
+Add the butter to the oil in the skillet and heat over medium heat .
+Add the onions , salt and pepper and saute , until the onions are translucent and starting to turn golden .
+Add the beans and continue cooking stirring occasionally .
+Stir in both vinegars and season with salt and pepper to taste .
+Transfer the beans to a serving dish and sprinkle with the garlic chips .

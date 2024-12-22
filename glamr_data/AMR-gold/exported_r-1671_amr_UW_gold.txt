@@ -1,0 +1,153 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1468
+export time: 9/26/2023, 9:18:15 PM
+
+# :: snt1	Heat the butter in a saucepan and roast the onions .
+# sentence level graph:
+(s1a / and
+  :op1 (s1h / heat-ON-01
+         :ARG1 (s1b / butter)
+         :location (s1s / saucepan))
+  :op2 (s1r / roast-01
+         :ARG1 (s1o / onion))
+  :mode imperative)
+
+# alignment:s1a: 7-7
+s1b: 3-3
+s1h: 1-1
+s1o: 10-10
+s1r: 8-8
+s1s: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Add some water , the corn flour and stir .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2a / add-02
+         :ARG1 (s2a3 / and
+                 :op1 (s2w / water
+                        :quant (s2s / some))
+                 :op2 (s2f2 / flour
+                        :source (s2c / corn))))
+  :op2 (s2s2 / stir-01)
+  :mode imperative)
+
+# alignment:s2a: 1-1
+s2a2: 8-8
+s2a3: 10-10
+s2c: 6-6
+s2s: 2-2
+s2s2: 9-9
+s2w: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add 5 cups of water , the rest of the ingredients and simmer until the vegetables are tender .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3a / add-02
+         :ARG1 (s3a3 / and
+                 :op1 (s3w / water
+                        :quant (s3v2 / volume-quantity
+                                 :unit (s3c / cup)
+                                 :quant 5))
+                 :op2 (s3i2 / ingredient
+                        :mod (s3r / rest))))
+  :op2 (s3s / simmer-01
+         :duration (s3u / until
+                     :op1 (s3t / tender
+                            :ARG1 (s3v / vegetable))))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 12-12
+s3a3: 12-12
+s3c: -1--1
+s3i2: 11-11
+s3r: 8-8
+s3s: 13-13
+s3t: 18-18
+s3u: 14-14
+s3v: 16-16
+s3v2: -1--1
+s3w: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Remove from heat .
+# sentence level graph:
+(s4r / remove-01
+  :ARG2 (s4h / heat)
+  :mode imperative)
+
+# alignment:s4h: 3-3
+s4r: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Sieve soup if you desire .
+# sentence level graph:
+(s5s / sieve-ON-02
+  :ARG1 (s5s2 / soup)
+  :condition (s5d / desire-01
+               :ARG0 (s5y / you))
+  :mode imperative)
+
+# alignment:s5d: 5-5
+s5y: 4-4
+s5s2: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Serve hot .
+# sentence level graph:
+(s6s / serve-02
+  :manner (s6h / hot)
+  :mode imperative)
+
+# alignment:s6h: 2-2
+s6s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Heat the butter in a saucepan and roast the onions .
+Add some water , the corn flour and stir .
+Add 5 cups of water , the rest of the ingredients and simmer until the vegetables are tender .
+Remove from heat .
+Sieve soup if you desire .
+Serve hot .

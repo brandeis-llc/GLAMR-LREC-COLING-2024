@@ -1,0 +1,167 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1284
+export time: 9/14/2023, 3:59:12 PM
+
+# :: snt1	Melt cheese cubes and grated Parmesan in milk over low heat , stirring occasionally .
+# sentence level graph:
+(s1m3 / melt-01
+  :ARG1 (s1a / and
+          :op1 (s1c / cube
+                 :consist-of (s1c2 / cheese))
+          :op2 (s1p / parmesan
+                 :ARG1-of (s1g / grate-01))
+          :op3 (s1m2 / milk))
+  :manner (s1h / heat-01
+            :mod (s1l / low-04))
+  :manner (s1s / stir-01
+            :frequency (s1o / occasional))
+  :mode imperative)
+
+# alignment:s1a: -1--1
+s1c: -1--1
+s1c2: -1--1
+s1g: -1--1
+s1h: -1--1
+s1l: -1--1
+s1m2: -1--1
+s1o: -1--1
+s1s: -1--1
+s1p: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	When cheese is completely melted , set the sauce aside , season with pepper .
+# sentence level graph:
+(s2a / and
+  :op1 (s2s3 / set-01
+         :ARG1 (s2s / sauce)
+         :ARG2 (s2a2 / aside))
+  :op2 (s2s2 / season-01
+         :ARG2 (s2p / pepper))
+  :time (s2m / melt-01
+          :ARG1 (s2c / cheese)
+          :degree (s2c2 / completely))
+  :mode imperative)
+
+# alignment:s2a: 1-1
+s2a2: 10-10
+s2c: 2-2
+s2c2: 4-4
+s2m: 5-5
+s2p: 14-14
+s2s: 9-9
+s2s2: 12-12
+s2s3: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	In a pan saute the schnitzels for 3 minutes on both sides over low heat .
+# sentence level graph:
+(s3s2 / saute-01
+  :ARG1 (s3s3 / schnitzel
+          :location (s3s / side
+                      :mod (s3b / both)))
+  :duration (s3t / temporal-quantity
+              :quant 3
+              :unit (s3m / minute))
+  :location (s3p / pan)
+  :manner (s3h / heat-01
+            :ARG1-of (s3l / low-04))
+  :mode imperative)
+
+# alignment:s3b: -1--1
+s3h: 15-15
+s3l: 14-14
+s3m: 9-9
+s3p: 3-3
+s3s: -1--1
+s3t: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Pour the cheese sauce over schnitzels , sprinkle with chopped herbs , cover and cook for 5 minutes on low .
+# sentence level graph:
+(s4a / and
+  :op1 (s4p / pour-01
+         :ARG1 (s4s / sauce
+                 :consist-of (s4c / cheese))
+         :ARG2 (s4s2 / schnitzel))
+  :op2 (s4s3 / sprinkle-01
+         :ARG1 (s4h / herb
+                 :ARG1-of (s4c2 / chop-01)))
+  :op3 (s4c4 / cover-02)
+  :op4 (s4c3 / cook-01
+         :duration (s4t / temporal-quantity
+                     :quant 5
+                     :unit (s4m / minute))
+         :manner (s4l2 / low))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4c: 3-3
+s4c2: 10-10
+s4c3: 15-15
+s4c4: 13-13
+s4h: 11-11
+s4m: 18-18
+s4p: 1-1
+s4s: 4-4
+s4s2: 6-6
+s4s3: 8-8
+s4t: 18-18
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Serve immediately with rice and green salad .
+# sentence level graph:
+(s5s2 / serve-02
+  :mode imperative
+  :time (s5i / immediate)
+  :accompanier (s5a2 / and
+                 :op1 (s5r / rice)
+                 :op2 (s5s3 / salad
+                        :mod (s5g2 / green-01))))
+
+# alignment:s5i: 2-2
+s5r: -1--1
+s5s2: 1-1
+s5a2: 5-5
+s5s3: 7-7
+s5g2: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Melt cheese cubes and grated Parmesan in milk over low heat , stirring occasionally .
+When cheese is completely melted , set the sauce aside , season with pepper .
+In a pan saute the schnitzels for 3 minutes on both sides over low heat .
+Pour the cheese sauce over schnitzels , sprinkle with chopped herbs , cover and cook for 5 minutes on low .
+Serve immediately with rice and green salad .

@@ -1,0 +1,69 @@
+# :: r-2399::step01::sent01
+# :: snt1	Season turkey with salt and pepper or lemon pepper .
+(s1 / sentence
+    :coref ((s1t :aggregation s1s1)
+			(s1s :aggregation s1s1)
+			(s1p :aggregation s1s1)
+			(s1l :aggregation s1s1)))
+
+
+# :: r-2399::step02::sent01
+# :: snt2	In a large skillet over medium - high heat , heat olive oil .
+(s2 / sentence)
+
+
+# :: r-2399::step03::sent01
+# :: snt3	Add turkey thighs ; brown for about 10 minutes .
+(s3 / sentence
+    :coref ((s1s1 :aggregation s3a1)
+			(s3a1 :cut s3b2)
+			(s1s1 :cut s3b2)
+			(s2o2 :aggregation s3a1)))
+
+
+# :: r-2399::step04::sent01
+# :: snt4	Place turkey in slow cooker ; add remaining ingredients .
+(s4 / sentence
+    :coref ((s3b2 :cut s4p1)
+			(s4p1 :aggregation s4a3)
+			(s3b2 :aggregation s4a3)
+			(s1s1 :cut s4p1)
+			(s1s1 :aggregation s4a3)
+			(s3a1 :cut s4p1)
+			(s4i :aggregation s4a3)))
+
+
+# :: r-2399::step05::sent01
+# :: snt5	Cook on high for 3 to 4 hours , or until turkey thighs are cooked through .
+(s5 / sentence
+    :coref ((s4a3 :cut s5c5)
+			(s4p1 :cut s5c5)))
+
+
+# :: r-2399::step06::sent01
+# :: snt6	Remove garlic cloves from pot .
+(s6 / sentence
+    :coref ((s5c5 :separation s6r1)
+			(s6r1 :separation s6r2)
+			(s6r2 :aggregation s6p)
+			(s4a3 :separation s6r1)
+			(s6r1 :aggregation s6p)
+			(s5c5 :separation s6r2)
+			(s4a3 :separation s6r2)
+			(s4p1 :separation s6r1)
+			(s4a3 :aggregation s6p)))
+
+
+# :: r-2399::step06::sent02
+# :: snt7	Mash a few and return to the slow cooker , if desired .
+(s7 / sentence
+    :coref ((s6p :cut s7m)
+			(s6r2 :cut s7m)
+			(s6r1 :cut s7m)))
+
+
+# :: r-2399::step07::sent01
+# :: snt8	Serve turkey with juices .
+(s8 / sentence)
+
+

@@ -1,0 +1,331 @@
+# :: r-43::step01::sent01
+# :: snt1	Wash burghul under running water then soak in water for about 60 minutes .
+(s1a2 / and
+      :op1 (s1w / wash-01~0
+                :ARG1 (s1b / burghul~1)
+                :ARG2 (s1w3 / water~4
+                            :ARG1-of (s1r / run-08~3))
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1h / has_state
+                                                :polarity -
+                                                :PATIENT s1b
+                                                :V_FINAL_STATE (s1w1 / washed))
+                                       :E3 (s1h1 / has_state
+                                                 :PATIENT s1b
+                                                 :V_FINAL_STATE s1w1)
+                                       :E0 (s1d / do
+                                                :ACTION s1w))
+                :imp_output (s1w4 / wash.RES))
+      :op2 (s1s / soak-01~6
+                :duration (s1a / about~10
+                               :op1 (s1t / temporal-quantity
+                                         :unit (s1m / minute~12)
+                                         :quant 60))
+                :location (s1w2 / water~8)
+                :time (s1t2 / then~5)
+                :ARG0 s1y)
+      :mode imperative)
+
+
+# :: r-43::step02::sent01
+# :: snt2	Drain , then press to remove moisture as much as possible .
+(s2a / and
+     :op1 (s2d / drain-01~0
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E1 (s2a1 / and
+                                                :op1 (s2h1 / has_location
+                                                           :IMP_THEME (s2s / soak.RES))
+                                                :op2 (s2h2 / has_state
+                                                           :polarity -
+                                                           :V_FINAL_STATE (s2d1 / drained)))
+                                      :E3 (s2a2 / and
+                                                :op1 (s2m1 / motion
+                                                           :IMP_THEME s2s)
+                                                :op2 (s2h3 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME s2s))
+                                      :E4 (s2a3 / and
+                                                :op1 (s2h4 / has_location
+                                                           :IMP_THEME s2s)
+                                                :op2 (s2h5 / has_state
+                                                           :V_FINAL_STATE s2d1))
+                                      :E0 (s2d2 / do
+                                                :ACTION s2d))
+               :imp_output (s2d3 / drain.RES))
+     :op2 (s2p2 / press-01~3
+                :purpose (s2r / remove-01~5
+                              :ARG1 (s2m / moisture~6
+                                         :ARG1-of (s2h / have-quant-91
+                                                       :ARG2 (s2m2 / much~8)
+                                                       :ARG3 (s2e / equal)
+                                                       :ARG4 (s2p / possible-01~10))))
+                :time (s2t / then~2)
+                :ARG0 s2y
+                :event-structure (s2se1 / subevents
+                                        :E (s2a4 / and
+                                                 :op1 (s2e1 / exert_force
+                                                            :IMP_THEME s2d3)
+                                                 :op2 (s2c / contact
+                                                           :IMP_THEME s2d3))
+                                        :E0 (s2d4 / do
+                                                  :ACTION s2p2))
+                :imp_output (s2p1 / press.RES))
+     :mode imperative)
+
+
+# :: r-43::step03::sent01
+# :: snt3	Mash onion in the food processor then add minced meat in batches .
+(s3a2 / and
+      :op1 (s3m / mash-01~0
+                :ARG1 (s3o / onion~1)
+                :location (s3m4 / machine
+                                :purpose (s3p / process-01~5
+                                              :ARG1 (s3f / food~4)))
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3a1 / and
+                                                 :op1 (s3d / degradation_material_integrity
+                                                           :polarity -
+                                                           :PATIENT s3o)
+                                                 :op2 (s3h / has_physical_form
+                                                           :polarity -
+                                                           :PATIENT s3o
+                                                           :V_FORM (s3m1 / mashed)))
+                                       :E2 (s3c / contact
+                                                :INSTRUMENT s3p
+                                                :PATIENT s3o)
+                                       :E3 (s3a3 / and
+                                                 :op1 (s3d1 / degradation_material_integrity
+                                                            :PATIENT s3o)
+                                                 :op2 (s3h1 / has_physical_form
+                                                            :PATIENT s3o
+                                                            :V_FORM s3m1))
+                                       :E0 (s3d2 / do
+                                                 :ACTION s3m))
+                :imp_output (s3m5 / mash.RES))
+      :op2 (s3a / add-02~7
+                :ARG1 (s3m2 / meat~9
+                            :ARG1-of (s3m3 / minced-02~8))
+                :manner (s3b / batch~11)
+                :time (s3t / then~6)
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s3m2)
+                                        :E3 (s3t2 / together
+                                                  :PATIENT_I s3m2)
+                                        :E0 (s3d3 / do
+                                                  :ACTION s3a))
+                :imp_output (s3a4 / add.RES))
+      :mode imperative)
+
+
+# :: r-43::step04::sent01
+# :: snt4	Remove and place aside .
+(s4a / and
+     :op1 (s4r / remove-01~0
+               :ARG0 (s4y / you)
+               :event-structure (s4se / subevents
+                                      :E1 (s4h / has_location)
+                                      :E3 (s4a1 / and
+                                                :op1 (s4m / motion
+                                                          :IMP_THEME (s4a3 / add.RES))
+                                                :op2 (s4h1 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME s4a3))
+                                      :E4 (s4h2 / has_location
+                                                :IMP_THEME s4a3)
+                                      :E0 (s4d / do
+                                               :ACTION s4r))
+               :imp_output (s4r1 / remove.RES))
+     :op2 (s4p / place-01~2
+               :ARG2 (s4a2 / aside~3)
+               :ARG0 s4y
+               :event-structure (s4se1 / subevents
+                                       :E1 (s4h3 / has_location)
+                                       :E3 (s4a4 / and
+                                                 :op1 (s4m1 / motion
+                                                            :IMP_THEME s4r1)
+                                                 :op2 (s4h4 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s4r1))
+                                       :E4 (s4h5 / has_location
+                                                 :IMP_THEME s4r1
+                                                 :DESTINATION s4a2)
+                                       :E0 (s4d1 / do
+                                                 :ACTION s4p))
+               :imp_output (s4p1 / place.RES))
+     :mode imperative)
+
+
+# :: r-43::step05::sent01
+# :: snt5	Mix meat mixture with burghul , salt , green chile , allspice , and cinnamon .
+(s5m2 / mix-01~0
+      :ARG1 (s5m3 / mixture~2
+                  :consist-of (s5m / meat~1))
+      :ARG2 (s5a2 / and~13
+                  :op1 (s5b / burghul~4)
+                  :op2 (s5s / salt~6)
+                  :op3 (s5c / chile~9
+                            :mod (s5g / green~8))
+                  :op4 (s5a / allspice~11)
+                  :op5 (s5c2 / cinnamon~14))
+      :mode imperative
+      :ARG0 (s5y / you)
+      :event-structure (s5se / subevents
+                             :E1 (s5a1 / and
+                                       :op1 (s5m1 / mingled
+                                                  :polarity -
+                                                  :PATIENT_I s5m3
+                                                  :PATIENT_J s5b
+                                                  :PATIENT_K s5s
+                                                  :PATIENT_L s5c
+                                                  :PATIENT_M s5a
+                                                  :PATIENT_N s5c2)
+                                       :op2 (s5h / has_material_integrity_state
+                                                 :polarity -
+                                                 :PATIENT_I s5m3
+                                                 :V_STATE (s5m4 / mixed)
+                                                 :PATIENT_J s5b
+                                                 :PATIENT_K s5s
+                                                 :PATIENT_L s5c
+                                                 :PATIENT_M s5a
+                                                 :PATIENT_N s5c2)
+                                       :op3 (s5h1 / has_material_integrity_state
+                                                  :polarity -
+                                                  :PATIENT_J s5b
+                                                  :V_STATE s5m4
+                                                  :PATIENT_I s5m3
+                                                  :PATIENT_K s5s
+                                                  :PATIENT_L s5c
+                                                  :PATIENT_M s5a
+                                                  :PATIENT_N s5c2))
+                             :E3 (s5a3 / and
+                                       :op1 (s5m5 / mingled
+                                                  :PATIENT_I s5m3
+                                                  :PATIENT_J s5b
+                                                  :PATIENT_K s5s
+                                                  :PATIENT_L s5c
+                                                  :PATIENT_M s5a
+                                                  :PATIENT_N s5c2)
+                                       :op2 (s5h2 / has_material_integrity_state
+                                                  :PATIENT_I s5m3
+                                                  :V_STATE s5m4
+                                                  :PATIENT_J s5b
+                                                  :PATIENT_K s5s
+                                                  :PATIENT_L s5c
+                                                  :PATIENT_M s5a
+                                                  :PATIENT_N s5c2)
+                                       :op3 (s5h3 / has_material_integrity_state
+                                                  :PATIENT_J s5b
+                                                  :V_STATE s5m4
+                                                  :PATIENT_I s5m3
+                                                  :PATIENT_K s5s
+                                                  :PATIENT_L s5c
+                                                  :PATIENT_M s5a
+                                                  :PATIENT_N s5c2))
+                             :E0 (s5d / do
+                                      :ACTION s5m2))
+      :imp_output (s5m6 / mix.RES))
+
+
+# :: r-43::step06::sent01
+# :: snt6	Process well in batches into a firm paste .
+(s6p2 / process-01~0
+      :ARG2 (s6p / paste~7
+                 :mod (s6f / firm~6))
+      :manner (s6w / well~1)
+      :manner (s6b / batch~3)
+      :mode imperative
+      :ARG0 (s6y / you)
+      :event-structure (s6se / subevents
+                             :E1 (s6c / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s6m / mix.RES)
+                                      :V_FINAL_STATE (s6p1 / processed))
+                             :E3 (s6a / apply_heat
+                                      :IMP_PATIENT s6m)
+                             :E4 (s6a1 / and
+                                       :op1 (s6c1 / cooked
+                                                  :IMP_PATIENT s6m
+                                                  :V_FINAL_STATE s6p1)
+                                       :op2 (s6h / has_state
+                                                 :IMP_PATIENT s6m
+                                                 :RESULT s6p))
+                             :E0 (s6d / do
+                                      :ACTION s6p2))
+      :imp_output (s6p3 / process.RES))
+
+
+# :: r-43::step07::sent01
+# :: snt7	Knead mixture with wet hands into a smooth paste .
+(s7k2 / knead-01~0
+      :ARG0 (s7h / hand~4
+                 :mod (s7w / wet~3))
+      :ARG1 (s7m / mixture~1)
+      :ARG2 (s7p / paste~8
+                 :mod (s7s / smooth~7))
+      :mode imperative
+      :ARG0 (s7y / you)
+      :event-structure (s7se / subevents
+                             :E1 (s7b / be
+                                      :polarity -
+                                      :PRODUCT s7p)
+                             :E2 (s7a / and
+                                      :op1 (s7b1 / be
+                                                 :PRODUCT s7p)
+                                      :op2 (s7m1 / made_of
+                                                 :PRODUCT s7p))
+                             :E0 (s7d / do
+                                      :ACTION s7k2))
+      :imp_output (s7k / knead.RES))
+
+
+# :: r-43::step08::sent01
+# :: snt8	Put in refrigerator for 30 minutes covered with a piece of wet texture .
+(s8p2 / put-01~0
+      :ARG2 (s8r / refrigerator~2)
+      :duration (s8t / temporal-quantity
+                     :quant 30
+                     :unit (s8m / minute~5))
+      :mode imperative
+      :manner (s8c / cover-02~6
+                   :ARG2 (s8t2 / texture~12
+                               :mod (s8w / wet~11)
+                               :unit (s8p / piece~9)
+                               :quant (s8x / 1))
+                   :ARG0 s8y
+                   :event-structure (s8se1 / subevents
+                                           :E1 (s8h3 / has_location
+                                                     :THEME s8t2)
+                                           :E3 (s8a1 / and
+                                                     :op1 (s8m2 / motion
+                                                                :THEME s8t2)
+                                                     :op2 (s8h4 / has_location
+                                                                :polarity -
+                                                                :THEME s8t2))
+                                           :E4 (s8h5 / has_location
+                                                     :THEME s8t2)
+                                           :E0 (s8d1 / do
+                                                     :ACTION s8c))
+                   :imp_output (s8c1 / cover.RES))
+      :ARG0 (s8y / you)
+      :event-structure (s8se / subevents
+                             :E1 (s8h / has_location)
+                             :E3 (s8a / and
+                                      :op1 (s8m1 / motion
+                                                 :IMP_THEME (s8k / knead.RES))
+                                      :op2 (s8h1 / has_location
+                                                 :polarity -
+                                                 :IMP_THEME s8k))
+                             :E4 (s8h2 / has_location
+                                       :IMP_THEME s8k
+                                       :DESTINATION s8r)
+                             :E0 (s8d / do
+                                      :ACTION s8p2))
+      :imp_output (s8p1 / put.RES))
+
+

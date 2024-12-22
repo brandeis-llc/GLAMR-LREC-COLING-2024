@@ -1,0 +1,89 @@
+# :: r-1510::step01::sent01
+# :: snt1	Heat butter and add the seekh kebab and fry till golden brown .
+(s1 / sentence
+    :coref ((s1b2 :cut s1h2)
+			(s1h2 :aggregation s1a3)
+			(s1a3 :cut s1f2)
+			(s1s :aggregation s1a3)))
+
+
+# :: r-1510::step02::sent01
+# :: snt2	Slit the seekh kebab from top and stuff it with grated cheese .
+(s2 / sentence
+    :coref ((s1f2 :cut s2s4)
+			(s2s4 :aggregation s2s2)
+			(s1a3 :cut s2s4)
+			(s2g :aggregation s2s2)))
+
+
+# :: r-1510::step03::sent01
+# :: snt3	Fry the onions in butter .
+(s3 / sentence
+    :coref ((s3o :aggregation s3f2)
+			(s3b :aggregation s3f2)))
+
+
+# :: r-1510::step04::sent01
+# :: snt4	Add salt , vinegar and paprika and fry until translucent .
+(s4 / sentence
+    :coref ((s3f2 :aggregation s4a1)
+			(s4a1 :cut s4f2)
+			(s3f2 :cut s4f2)
+			(s4s :aggregation s4a1)
+			(s4v :aggregation s4a1)
+			(s4p :aggregation s4a1)))
+
+
+# :: r-1510::step05::sent01
+# :: snt5	Slit the bun in half , apply butter and grill to golden brown .
+(s5 / sentence
+    :coref ((s5b2 :cut s5s2)
+			(s5s2 :aggregation s5a5)
+			(s5a5 :cut s5g3)
+			(s5b3 :aggregation s5a5)))
+
+
+# :: r-1510::step06::sent01
+# :: snt6	Cut the tomatoes in half slice and place them on the bun ] .
+(s6 / sentence
+    :coref ((s5g3 :aggregation s6p1)
+			(s5a5 :aggregation s6p1)
+			(s6t :cut s6c2)
+			(s6c2 :aggregation s6p1)))
+
+
+# :: r-1510::step07::sent01
+# :: snt7	Put seekh kebab and onions , and grate cheese over the sandwich .
+(s7 / sentence
+    :coref ((s2s2 :aggregation s7p1)
+			(s7p1 :aggregation s7g2)
+			(s2s4 :aggregation s7p1)
+			(s2s2 :aggregation s7g2)
+			(s4f2 :aggregation s7p1)
+			(s4f2 :aggregation s7g2)
+			(s4a1 :aggregation s7p1)
+			(s4a1 :aggregation s7g2)
+			(s6p1 :aggregation s7p1)
+			(s6p1 :aggregation s7g2)
+			(s7c :aggregation s7g2)))
+
+
+# :: r-1510::step08::sent01
+# :: snt8	Grill until cheese melts .
+(s8 / sentence
+    :coref ((s7g2 :cut s8g3)
+			(s7p1 :cut s8g3)
+			(s4a1 :cut s8g3)
+			(s6p1 :cut s8g3)))
+
+
+# :: r-1510::step09::sent01
+# :: snt9	Serve with chips and salad .
+(s9 / sentence
+    :coref ((s8g3 :aggregation s9s1)
+			(s7g2 :aggregation s9s1)
+			(s7p1 :aggregation s9s1)
+			(s9c :aggregation s9s1)
+			(s9s :aggregation s9s1)))
+
+

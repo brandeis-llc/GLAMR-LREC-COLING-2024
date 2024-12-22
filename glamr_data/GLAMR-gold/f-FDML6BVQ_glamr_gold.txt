@@ -1,0 +1,182 @@
+# :: f-FDML6BVQ::step01::sent01
+# :: snt1	Preheat oven to 400deg .
+(s1p / preheat-00~0
+     :ARG1 (s1o / oven~1)
+     :destination (s1t / temperature-quantity
+                       :quant 400
+                       :unit "deg")
+     :mode imperative)
+
+
+# :: f-FDML6BVQ::step02::sent01
+# :: snt2	Prepare the dough as directed .
+(s2p / prepare-01~0
+     :ARG1 (s2d2 / dough~2)
+     :manner (s2d / direct-01~4)
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2b / be
+                                     :polarity -
+                                     :PRODUCT s2d2)
+                            :E3 (s2b1 / be
+                                      :PRODUCT s2d2)
+                            :E0 (s2d1 / do
+                                      :ACTION s2p))
+     :imp_output (s2p1 / prepare.RES))
+
+
+# :: f-FDML6BVQ::step03::sent01
+# :: snt3	Drizzle oil over rolled out dough .
+(s3d2 / drizzle-01~0
+      :ARG1 (s3o / oil~1)
+      :ARG2 (s3d / dough~5
+                 :ARG1-of (s3r / roll-01~3))
+      :mode imperative
+      :ARG0 (s3y / you)
+      :event-structure (s3se / subevents
+                             :E1 (s3h / has_location
+                                      :THEME s3d)
+                             :E3 (s3a / and
+                                      :op1 (s3m / motion
+                                                :THEME s3d)
+                                      :op2 (s3h1 / has_location
+                                                 :polarity -
+                                                 :THEME s3d))
+                             :E4 (s3h2 / has_location
+                                       :THEME s3d)
+                             :E0 (s3d1 / do
+                                       :ACTION s3d2))
+      :imp_output (s3d3 / drizzle.RES))
+
+
+# :: f-FDML6BVQ::step04::sent01
+# :: snt4	Sprinkle Aussie Outback Rub over the dough .
+(s4s / sprinkle-01~0
+     :ARG1 (s4t / thing
+                :name (s4n / name
+                           :op1 "Aussie"
+                           :op2 "Outback"
+                           :op3 "Rub"))
+     :ARG2 (s4d / dough~6)
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4h / has_location
+                                     :THEME (s4A / Aussie-Outback-Rub))
+                            :E3 (s4a / and
+                                     :op1 (s4m / motion
+                                               :THEME s4A)
+                                     :op2 (s4h1 / has_location
+                                                :polarity -
+                                                :THEME s4A))
+                            :E4 (s4h2 / has_location
+                                      :THEME s4A
+                                      :DESTINATION s4d)
+                            :E0 (s4d1 / do
+                                      :ACTION s4s))
+     :imp_output (s4s1 / sprinkle.RES))
+
+
+# :: f-FDML6BVQ::step05::sent01
+# :: snt5	Spread spinach and then parnips on the pizza .
+(s5s2 / spread-01~0
+      :ARG1 (s5a / and~2
+                 :op1 (s5s / spinach~1)
+                 :op2 (s5p / pipsnip~4
+                           :time (s5t / then~3)))
+      :ARG2 (s5p2 / pizza~7)
+      :mode imperative
+      :ARG0 (s5y / you)
+      :event-structure (s5se / subevents
+                             :E1 (s5h / has_location
+                                      :THEME s5p)
+                             :E3 (s5a1 / and
+                                       :op1 (s5m / motion
+                                                 :THEME s5p)
+                                       :op2 (s5h1 / has_location
+                                                  :polarity -
+                                                  :THEME s5p))
+                             :E4 (s5h2 / has_location
+                                       :THEME s5p
+                                       :DESTINATION s5p2)
+                             :E0 (s5d / do
+                                      :ACTION s5s2))
+      :imp_output (s5s1 / spread.RES))
+
+
+# :: f-FDML6BVQ::step06::sent01
+# :: snt6	Add feta and then top with machengo .
+(s6a2 / and~2
+      :op1 (s6a / add-02~0
+                :ARG1 (s6f / feta~1)
+                :ARG0 (s6y / you)
+                :event-structure (s6se / subevents
+                                       :E1 (s6t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s6f)
+                                       :E3 (s6t3 / together
+                                                 :PATIENT_I s6f)
+                                       :E0 (s6d / do
+                                                :ACTION s6a))
+                :imp_output (s6a1 / add.RES))
+      :op2 (s6t2 / top-01~4
+                 :ARG2 (s6m / machengo~6)
+                 :time (s6t / then~3)
+                 :ARG0 s6y)
+      :mode imperative)
+
+
+# :: f-FDML6BVQ::step07::sent01
+# :: snt7	Toss pine nuts over everything .
+(s7t / toss-01~0
+     :ARG1 (s7n / nut~2
+                :mod (s7p / pine~1))
+     :ARG2 (s7e / everything~4)
+     :mode imperative
+     :ARG0 (s7y / you)
+     :event-structure (s7se / subevents
+                            :E1 (s7b / be
+                                     :polarity -)
+                            :E3 (s7b1 / be)
+                            :E0 (s7d / do
+                                     :ACTION s7t))
+     :imp_output (s7t1 / toss.RES))
+
+
+# :: f-FDML6BVQ::step08::sent01
+# :: snt8	Cook for about 20 minutes or until the crust and cheese have browned to your liking .
+(s8c2 / cook-01~0
+      :duration (s8o / or
+                     :op1 (s8a / about~2
+                               :op1 (s8t / temporal-quantity
+                                         :unit (s8m2 / minute~4)
+                                         :quant 20))
+                     :op2 (s8u / until~6
+                               :op1 (s8b2 / brown-01~12
+                                          :ARG1 (s8a3 / and~9
+                                                      :op1 (s8c3 / crust~8)
+                                                      :op2 (s8c / cheese~10))
+                                          :destination (s8l3 / like-01~15
+                                                             :ARG0 (s8y2 / you~14)))))
+      :mode imperative
+      :ARG0 (s8y / you)
+      :event-structure (s8se / subevents
+                             :E1 (s8c1 / cooked
+                                       :polarity -
+                                       :IMP_PATIENT (s8t1 / toss.RES)
+                                       :V_FINAL_STATE (s8c4 / cooked))
+                             :E3 (s8a1 / apply_heat
+                                       :IMP_PATIENT s8t1)
+                             :E4 (s8a2 / and
+                                       :op1 (s8c5 / cooked
+                                                  :IMP_PATIENT s8t1
+                                                  :V_FINAL_STATE s8c4)
+                                       :op2 (s8h / has_state
+                                                 :IMP_PATIENT s8t1
+                                                 :RESULT s8l3))
+                             :E0 (s8d / do
+                                      :ACTION s8c2))
+      :imp_output (s8c6 / cook.RES))
+
+

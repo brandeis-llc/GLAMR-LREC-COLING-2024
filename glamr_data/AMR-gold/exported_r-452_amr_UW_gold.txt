@@ -1,0 +1,161 @@
+user name: timobi
+user id: 423
+file language: english
+file format: plain_text
+Doc ID in database: 1452
+export time: 9/11/2023, 4:53:32 PM
+
+# :: snt1	Cut chicken thighs in half and place in a bowl .
+# sentence level graph:
+(s1a / and
+  :op1 (s1c / cut-02
+         :ARG1 (s1t / thigh
+                 :part-of (s1c2 / chicken))
+         :ARG2 (s1h / half))
+  :op2 (s1p / place-01
+         :ARG2 (s1b / bowl))
+  :mode imperative)
+
+# alignment:s1a: 6-6
+s1b: 10-10
+s1c: 1-1
+s1c2: 2-2
+s1h: 5-5
+s1p: 7-7
+s1t: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Combine the next 9 ingredients ( garlic thru oil ) and grind to a paste using a mortar and pestle .
+# sentence level graph:
+(s2a / and
+  :op1 (s2c / combine-01
+         :ARG1 (s2i / ingredient
+                 :quant 9
+                 :example (s2t / thru
+                            :op1 (s2g / garlic)
+                            :op2 (s2o / oil))
+                 :mod (s2n / next)))
+  :op2 (s2g2 / grind-01
+         :ARG2 (s2p / paste)
+         :instrument (s2a4 / and
+                       :op1 (s2m / mortar)
+                       :op2 (s2p2 / pestle)))
+  :mode imperative)
+
+# alignment:s2a: 11-11
+s2c: 1-1
+s2g: 7-7
+s2g2: 12-12
+s2i: 5-5
+s2m: -1--1
+s2n: 3-3
+s2o: 9-9
+s2p: 15-15
+s2p2: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Combine the paste with the chicken and mix well ; refrigerate several hours or overnight .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3c / combine-01
+         :ARG1 (s3p / paste)
+         :ARG2 (s3c2 / chicken))
+  :op2 (s3m / mix-01
+         :manner (s3w / well))
+  :op3 (s3r / refrigerate-01
+         :duration (s3o / or
+                     :op1 (s3t / temporal-quantity
+                            :unit (s3h / hour)
+                            :quant (s3s / several))
+                     :op2 (s3o2 / overnight)))
+  :mode imperative)
+
+# alignment:s3c: -1--1
+s3c2: -1--1
+s3h: -1--1
+s3m: -1--1
+s3o: -1--1
+s3o2: -1--1
+s3p: -1--1
+s3r: -1--1
+s3s: -1--1
+s3t: -1--1
+s3w: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Just before serving , grill chicken until tender , basting frequently with coconut milk .
+# sentence level graph:
+(s4g / grill-01
+  :ARG1 (s4c / chicken)
+  :duration (s4u / until
+              :op1 (s4t / tender))
+  :manner (s4b / baste-01
+            :ARG2 (s4m / milk
+                    :mod (s4c2 / coconut)))
+  :mode imperative
+  :time (s4b2 / before
+          :op1 (s4s / serve-02)
+          :mod (s4j / just)))
+
+# alignment:s4b: 10-10
+s4b2: 2-2
+s4c: 6-6
+s4c2: 13-13
+s4g: 5-5
+s4j: 1-1
+s4m: 14-14
+s4s: 3-3
+s4t: 8-8
+s4u: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Serve with sweet vinegar sauce .
+# sentence level graph:
+(s5s2 / serve-02
+  :accompanier (s5s / sauce
+                 :mod (s5v / vinegar
+                        :mod (s5s3 / sweet)))
+  :mode imperative)
+
+# alignment:s5s: 5-5
+s5s2: 1-1
+s5s3: 3-3
+s5v: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Cut chicken thighs in half and place in a bowl .
+Combine the next 9 ingredients ( garlic thru oil ) and grind to a paste using a mortar and pestle .
+Combine the paste with the chicken and mix well ; refrigerate several hours or overnight .
+Just before serving , grill chicken until tender , basting frequently with coconut milk .
+Serve with sweet vinegar sauce .

@@ -1,0 +1,184 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1262
+export time: 4/3/2023, 4:23:36 PM
+
+# :: snt1	Wash the chickpeas , drain , cover with water and let soak overnight .
+# sentence level graph:
+(s1a / and
+  :op1 (s1w / wash-01
+         :ARG1 (s1c / chickpea))
+  :op2 (s1d / drain-01
+         :ARG1 s1c)
+  :op3 (s1c2 / cover-02
+         :ARG1 s1c
+         :ARG2 (s1w2 / water))
+  :op4 (s1l / let-01
+         :ARG1 (s1s / soak-01
+                 :ARG1 s1c
+                 :duration (s1o / overnight)))
+  :mode imperative)
+
+# alignment:s1a: 1-1
+s1c: 3-3
+s1c2: 7-7
+s1d: 5-5
+s1l: 11-11
+s1o: 13-13
+s1s: 12-12
+s1w: 1-1
+s1w2: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Next day , boil till tender an hour or longer .
+# sentence level graph:
+(s2b / boil-01
+  :duration (s2a / at-least
+              :op1 (s2t / temporal-quantity
+                     :quant 1
+                     :unit (s2h / hour)))
+  :mode imperative
+  :time (s2d / day
+          :mod (s2n / next))
+  :duration (s2t3 / tender-03))
+
+# alignment:s2a: 9-9
+s2b: 4-4
+s2d: 2-2
+s2h: 8-8
+s2n: 1-1
+s2t: 8-8
+s2t3: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Mash all but a quarter cup to a puree .
+# sentence level graph:
+(s3m2 / mash
+  :ARG1 (s3a2 / all
+          :ARG2-of (s3e3 / except-01
+                     :ARG1 (s3v2 / volume-quantity
+                             :unit (s3c2 / cup)
+                             :quant 0.5)))
+  :duration (s3p2 / puree)
+  :mode imperative)
+
+# alignment:s3a2: 2-2
+s3c2: -1--1
+s3e3: 0-0
+s3m2: 1-1
+s3p2: -1--1
+s3v2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add the sesame oil , lemon juice , salt , and garlic .
+# sentence level graph:
+(s4a / add-02
+  :ARG1 (s4a2 / and
+          :op1 (s4o / oil
+                 :source (s4s2 / sesame))
+          :op2 (s4j / juice
+                 :source (s4l / lemon))
+          :op3 (s4s / salt)
+          :op4 (s4g / garlic))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4a2: 11-11
+s4g: 12-12
+s4j: 7-7
+s4l: 6-6
+s4o: 4-4
+s4s: 9-9
+s4s2: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Mix well and put on a plate .
+# sentence level graph:
+(s5a / and
+  :op1 (s5m / mix-01
+         :degree (s5w2 / well))
+  :op2 (s5p2 / put-01
+         :ARG2 (s5p / plate))
+  :mode imperative)
+
+# alignment:s5a: 3-3
+s5m: 1-1
+s5p: 7-7
+s5p2: 4-4
+s5w2: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Pour the olive oil on top and garnish with the extra whole chick Peas , paprika , and parsley .
+# sentence level graph:
+(s6a / and
+  :op1 (s6p4 / pour-01
+         :ARG1 (s6o / oil
+                 :source (s6o2 / olive))
+         :ARG3 (s6t / top))
+  :op2 (s6g / garnish-01
+         :ARG2 (s6a2 / and
+                 :op1 (s6c2 / chickpea
+                        :mod (s6w / whole)
+                        :mod (s6e / extra))
+                 :op2 (s6p / paprika)
+                 :op3 (s6p2 / parsley)))
+  :mode imperative)
+
+# alignment:s6a: 7-7
+s6a2: 18-18
+s6e: -1--1
+s6g: 8-8
+s6o: 4-4
+s6o2: 3-3
+s6p: 16-16
+s6p2: 19-19
+s6p4: 1-1
+s6t: 6-6
+s6w: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Wash the chickpeas , drain , cover with water and let soak overnight .
+Next day , boil till tender an hour or longer .
+Mash all but a quarter cup to a puree .
+Add the sesame oil , lemon juice , salt , and garlic .
+Mix well and put on a plate .
+Pour the olive oil on top and garnish with the extra whole chick Peas , paprika , and parsley .

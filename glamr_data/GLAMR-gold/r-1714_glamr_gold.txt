@@ -1,0 +1,237 @@
+# :: r-1714::step01::sent01
+# :: snt1	In a large pot , bring the water and salt to a boil ; add the lentils , reduce the heat to medium - low and cook for 30 minutes or until the lentils are tender but not overcooked ; drain .
+(s1a2 / and~25
+      :op1 (s1b2 / bring-ON-02~5
+                 :ARG1 (s1a3 / and~8
+                             :op1 (s1w / water~7)
+                             :op2 (s1s / salt~9))
+                 :destination (s1b / boil~12))
+      :op2 (s1a / add-02~14
+                :ARG1 (s1l2 / lentil~16,33)
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s1l2)
+                                       :E3 (s1t3 / together
+                                                 :PATIENT_I s1l2)
+                                       :E0 (s1d1 / do
+                                                 :ACTION s1a))
+                :imp_output (s1a1 / add.RES))
+      :op3 (s1r / reduce-01~18
+                :ARG1 (s1h / heat~20)
+                :ARG4 (s1a4 / amr-choice
+                            :op1 (s1m / medium~22)
+                            :op2 (s1l3 / low~24)))
+      :op4 (s1c2 / cook-01~26
+                 :duration (s1o2 / or
+                                 :op1 (s1t / temporal-quantity
+                                           :unit (s1m2 / minute~29)
+                                           :quant 30)
+                                 :op2 (s1u / until~31
+                                           :op1 (s1c3 / contrast-01
+                                                      :ARG1 (s1t2 / tender-ON-03~35)
+                                                      :ARG2 (s1o / overcook-01~38
+                                                                 :polarity -)
+                                                      :domain s1l2)))
+                 :ARG0 s1y
+                 :event-structure (s1se1 / subevents
+                                         :E1 (s1c / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s1a1
+                                                  :V_FINAL_STATE (s1c1 / cooked))
+                                         :E3 (s1a5 / apply_heat
+                                                   :IMP_PATIENT s1a1)
+                                         :E4 (s1a6 / and
+                                                   :op1 (s1c4 / cooked
+                                                              :IMP_PATIENT s1a1
+                                                              :V_FINAL_STATE s1c1)
+                                                   :op2 (s1h1 / has_state
+                                                              :IMP_PATIENT s1a1
+                                                              :RESULT s1o))
+                                         :E0 (s1d2 / do
+                                                   :ACTION s1c2))
+                 :imp_output (s1c5 / cook.RES))
+      :op5 (s1d / drain-01~40
+                :ARG0 s1y
+                :event-structure (s1se2 / subevents
+                                        :E1 (s1a7 / and
+                                                  :op1 (s1h2 / has_location
+                                                             :IMP_THEME s1c5
+                                                             :SOURCE (s1t4 / the-lentils))
+                                                  :op2 (s1h3 / has_state
+                                                             :polarity -
+                                                             :SOURCE s1t4
+                                                             :V_FINAL_STATE (s1d3 / drained)))
+                                        :E3 (s1a8 / and
+                                                  :op1 (s1m1 / motion
+                                                             :IMP_THEME s1c5)
+                                                  :op2 (s1h4 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s1c5
+                                                             :SOURCE s1t4))
+                                        :E4 (s1a9 / and
+                                                  :op1 (s1h5 / has_location
+                                                             :IMP_THEME s1c5)
+                                                  :op2 (s1h6 / has_state
+                                                             :SOURCE s1t4
+                                                             :V_FINAL_STATE s1d3))
+                                        :E0 (s1d4 / do
+                                                  :ACTION s1d))
+                :imp_output (s1d5 / drain.RES))
+      :location (s1p / pot~3
+                     :mod (s1l / large~2))
+      :mode imperative)
+
+
+# :: r-1714::step02::sent01
+# :: snt2	In a colander , rinse the cooked lentils under cold water until slightly cool , then place them in a bowl .
+(s2a / and
+     :op1 (s2r / rinse-01~4
+               :ARG1 (s2l / lentil~7,17
+                          :ARG1-of (s2c4 / cook-01~6))
+               :location (s2u / under~8
+                              :op1 (s2w / water~10
+                                        :mod (s2c3 / cold~9)))
+               :location (s2c2 / colander~2)
+               :duration (s2u2 / until~11
+                               :op1 (s2c5 / cool-06~13
+                                          :degree (s2s / slight~12)))
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E (s2h / has_location
+                                              :?THEME s2l)
+                                      :E0 (s2d / do
+                                               :ACTION s2r))
+               :imp_output (s2r1 / rinse.RES))
+     :op2 (s2p / place-01~16
+               :ARG1 s2l
+               :ARG2 (s2b / bowl~20)
+               :time (s2t / then~15)
+               :ARG0 s2y
+               :event-structure (s2se1 / subevents
+                                       :E1 (s2h1 / has_location
+                                                 :THEME (s2t1 / them~17))
+                                       :E3 (s2a1 / and
+                                                 :op1 (s2m / motion
+                                                           :THEME s2t1)
+                                                 :op2 (s2h2 / has_location
+                                                            :polarity -
+                                                            :THEME s2t1))
+                                       :E4 (s2h3 / has_location
+                                                 :THEME s2t1
+                                                 :DESTINATION s2b)
+                                       :E0 (s2d1 / do
+                                                 :ACTION s2p))
+               :imp_output (s2p1 / place.RES))
+     :mode imperative)
+
+
+# :: r-1714::step03::sent01
+# :: snt3	Whisk together the remaining ingredients ; pour over the lentils and combine well .
+(s3a / and~10
+     :op1 (s3w / whisk-ON-03~0
+               :ARG1 (s3i / ingredient~4
+                          :ARG1-of (s3r / remain-01~3))
+               :manner (s3t / together~1)
+               :ARG0 (s3y / you)
+               :event-structure (s3se / subevents
+                                      :E (s3p1 / part_of
+                                               :PATIENT s3i)
+                                      :E0 (s3d / do
+                                               :ACTION s3w))
+               :imp_output (s3w1 / whisk.RES))
+     :op2 (s3p / pour-01~6
+               :ARG1 (s3l / lentil~9)
+               :ARG0 s3y
+               :event-structure (s3se1 / subevents
+                                       :E1 (s3h / has_location
+                                                :IMP_THEME_I (s3p2 / place.RES)
+                                                :IMP_THEME_J s3w1)
+                                       :E3 (s3a1 / and
+                                                 :op1 (s3m / motion
+                                                           :IMP_THEME_I s3p2
+                                                           :IMP_THEME_J s3w1)
+                                                 :op2 (s3h1 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME_I s3p2
+                                                            :IMP_THEME_J s3w1))
+                                       :E4 (s3h2 / has_location
+                                                 :IMP_THEME_I s3p2
+                                                 :IMP_THEME_J s3w1
+                                                 :DESTINATION s3l)
+                                       :E0 (s3d1 / do
+                                                 :ACTION s3p))
+               :imp_output (s3p3 / pour.RES))
+     :op3 (s3c / combine-01~11
+               :manner (s3w2 / well~12)
+               :ARG0 s3y
+               :event-structure (s3se2 / subevents
+                                       :E1 (s3a2 / and
+                                                 :op1 (s3m1 / mingled
+                                                            :polarity -)
+                                                 :op2 (s3h3 / has_material_integrity_state
+                                                            :polarity -
+                                                            :V_STATE (s3c1 / combined))
+                                                 :op3 (s3h4 / has_material_integrity_state
+                                                            :polarity -
+                                                            :V_STATE s3c1))
+                                       :E3 (s3a3 / and
+                                                 :op1 (s3m2 / mingled)
+                                                 :op2 (s3h5 / has_material_integrity_state
+                                                            :V_STATE s3c1)
+                                                 :op3 (s3h6 / has_material_integrity_state
+                                                            :V_STATE s3c1))
+                                       :E0 (s3d2 / do
+                                                 :ACTION s3c))
+               :imp_output (s3c2 / combine.RES))
+     :mode imperative)
+
+
+# :: r-1714::step04::sent01
+# :: snt4	Chill for 1 to 2 hours and serve cold .
+(s4a / and~6
+     :op1 (s4c / chill-01~0
+               :duration (s4b / between
+                              :op1 (s4t / temporal-quantity
+                                        :quant 1
+                                        :unit (s4h2 / hour))
+                              :op2 (s4t2 / temporal-quantity
+                                         :unit (s4h / hour~5)
+                                         :quant 2))
+               :ARG0 (s4y / you)
+               :event-structure (s4se / subevents
+                                      :E1 (s4h1 / has_state
+                                                :polarity -
+                                                :IMP_PATIENT (s4c1 / combine.RES)
+                                                :V_FINAL_STATE (s4c3 / chilled))
+                                      :E3 (s4h3 / has_state
+                                                :IMP_PATIENT s4c1
+                                                :V_FINAL_STATE s4c3)
+                                      :E0 (s4d / do
+                                               :ACTION s4c))
+               :imp_output (s4c4 / chill.RES))
+     :op2 (s4s / serve-02~7
+               :manner (s4c2 / cold~8)
+               :ARG0 s4y
+               :event-structure (s4se1 / subevents
+                                       :E1 (s4a1 / and
+                                                 :op1 (s4h4 / has_possession
+                                                            :IMP_THEME s4c4)
+                                                 :op2 (s4h5 / has_possession
+                                                            :polarity -
+                                                            :IMP_THEME s4c4))
+                                       :E2 (s4t1 / transfer
+                                                 :IMP_THEME s4c4)
+                                       :E3 (s4a2 / and
+                                                 :op1 (s4h6 / has_possession
+                                                            :IMP_THEME s4c4)
+                                                 :op2 (s4h7 / has_possession
+                                                            :polarity -
+                                                            :IMP_THEME s4c4))
+                                       :E0 (s4d1 / do
+                                                 :ACTION s4s))
+               :imp_output (s4s1 / serve.RES))
+     :mode imperative)
+
+

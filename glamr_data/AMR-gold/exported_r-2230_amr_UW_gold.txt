@@ -1,0 +1,236 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1481
+export time: 10/1/2023, 8:22:50 PM
+
+# :: snt1	In a large bowl , combine lemon juice and mustard ; whisk until blended .
+# sentence level graph:
+(s1a / and
+  :op1 (s1c / combine-01
+         :ARG1 (s1j / juice
+                 :source (s1l2 / lemon))
+         :ARG2 (s1m / mustard)
+         :location (s1b2 / bowl
+                     :mod (s1l / large)))
+  :op2 (s1w / whisk-ON-03
+         :duration (s1u / until
+                     :op1 (s1b / blend-01)))
+  :mode imperative)
+
+# alignment:s1a: 9-9
+s1b: 14-14
+s1b2: 4-4
+s1c: 6-6
+s1j: 8-8
+s1l: 3-3
+s1l2: 7-7
+s1m: 10-10
+s1u: 13-13
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Add olive oil in a thin , steady stream , whisking constantly until smooth .
+# sentence level graph:
+(s2a / add-02
+  :ARG1 (s2o / oil
+          :source (s2o2 / olive))
+  :manner (s2s3 / stream
+            :mod (s2t / thin)
+            :mod (s2s2 / steady))
+  :manner (s2w / whisk-ON-03
+            :manner (s2c / constant)
+            :duration (s2u / until
+                        :op1 (s2s / smooth)))
+  :mode imperative)
+
+# alignment:s2a: 1-1
+s2c: 12-12
+s2o: 3-3
+s2o2: 2-2
+s2s: 14-14
+s2s2: 8-8
+s2s3: 9-9
+s2t: 6-6
+s2u: 13-13
+s2w: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add green beans , tomatoes , shallot , basil , and parsley .
+# sentence level graph:
+(s3a / add-02
+  :ARG1 (s3a2 / and
+          :op1 (s3b2 / bean
+                 :mod (s3g / green))
+          :op2 (s3t / tomato)
+          :op3 (s3s / shallot)
+          :op4 (s3b / basil)
+          :op5 (s3p / parsley))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 11-11
+s3b: 9-9
+s3b2: 3-3
+s3g: 2-2
+s3p: 12-12
+s3s: 7-7
+s3t: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Toss to coat .
+# sentence level graph:
+(s4t / toss-01
+  :purpose (s4c / coat-01)
+  :mode imperative)
+
+# alignment:s4c: 3-3
+s4t: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Season with salt and pepper to taste .
+# sentence level graph:
+(s5s2 / season-01
+  :ARG1 (s5a / and
+          :op1 (s5s / salt)
+          :op2 (s5p / pepper))
+  :purpose (s5t / taste-01)
+  :mode imperative)
+
+# alignment:s5a: 4-4
+s5p: 5-5
+s5s: 3-3
+s5s2: 1-1
+s5t: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Cut salmon into 1-inch cubes ; add to salad .
+# sentence level graph:
+(s6a2 / and
+  :op1 (s6c2 / cut-01
+         :ARG1 (s6s2 / salmon)
+         :destination (s6c / cube
+                        :quant (s6d / distance-quantity
+                                 :quant 1
+                                 :unit (s6i / inch))))
+  :op2 (s6a / add-02
+         :ARG2 (s6s / salad))
+  :mode imperative)
+
+# alignment:s6a: 7-7
+s6a2: 6-6
+s6c: 5-5
+s6c2: 1-1
+s6d: 4-4
+s6i: 4-4
+s6s: 9-9
+s6s2: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Toss gently to coat .
+# sentence level graph:
+(s7t / toss-01
+  :purpose (s7c / coat-01)
+  :manner (s7g / gentle)
+  :mode imperative)
+
+# alignment:s7c: 4-4
+s7g: 2-2
+s7t: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Arrange greens on serving plates ; top with salmon mixture .
+# sentence level graph:
+(s8a2 / and
+  :op1 (s8a / arrange-01
+         :ARG1 (s8g / green)
+         :ARG4 (s8p / plate
+                 :purpose (s8s2 / serve-02)))
+  :op2 (s8t / top-01
+         :ARG2 (s8m / mixture
+                 :consist-of (s8s / salmon)))
+  :mode imperative)
+
+# alignment:s8a: 1-1
+s8m: 10-10
+s8p: 5-5
+s8s: -1--1
+s8s2: 4-4
+s8t: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Garnish with pepper strips .
+# sentence level graph:
+(s9g / garnish-01
+  :ARG2 (s9s / strip
+          :consist-of (s9p / pepper))
+  :mode imperative)
+
+# alignment:s9p: 3-3
+s9s: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+In a large bowl , combine lemon juice and mustard ; whisk until blended .
+Add olive oil in a thin , steady stream , whisking constantly until smooth .
+Add green beans , tomatoes , shallot , basil , and parsley .
+Toss to coat .
+Season with salt and pepper to taste .
+Cut salmon into 1-inch cubes ; add to salad .
+Toss gently to coat .
+Arrange greens on serving plates ; top with salmon mixture .
+Garnish with pepper strips .

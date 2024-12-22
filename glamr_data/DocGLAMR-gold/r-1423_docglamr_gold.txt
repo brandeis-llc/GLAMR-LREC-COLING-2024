@@ -1,0 +1,88 @@
+# :: r-1423::step01::sent01
+# :: snt1	Cut meat into small cubes .
+(s1 / sentence
+    :coref ((s1m :cut s1c3)))
+
+
+# :: r-1423::step02::sent01
+# :: snt2	Heat 1 quart water to a boil , add meat and a few of the bones and bring to a boil again .
+(s2 / sentence
+    :coref ((s1c3 :aggregation s2a1)
+			(s2a1 :cut s2b5)
+			(s2w :cut s2b)
+			(s2b :aggregation s2a1)
+			(s2b3 :aggregation s2a1)))
+
+
+# :: r-1423::step03::sent01
+# :: snt3	Pour water , meat and bones into a clean sink and wash well .
+(s3 / sentence
+    :coref ((s2b5 :separation s3p1)
+			(s3p1 :separation s3p2)
+			(s3p2 :separation s3p3)
+			(s3p3 :aggregation s3w4)
+			(s2a1 :separation s3p1)
+			(s3p1 :separation s3p3)
+			(s2a1 :separation s3p2)
+			(s3p2 :aggregation s3w4)))
+
+
+# :: r-1423::step04::sent01
+# :: snt4	Place meat , bones and 1 1/2 quart water into a large , clean pan , bring to the boil , skim and cook at a moderate heat for about 60 minutes .
+(s4 / sentence
+    :coref ((s3w4 :aggregation s4p1)
+			(s4p1 :cut s4b4)
+			(s4b4 :cut s4s1)
+			(s4s1 :cut s4c7)
+			(s3p3 :aggregation s4p1)
+			(s4p1 :cut s4s1)
+			(s3w4 :cut s4b4)
+			(s4b4 :cut s4c7)
+			(s4w :aggregation s4p1)
+			(s4p1 :cut s4c7)))
+
+
+# :: r-1423::step05::sent01
+# :: snt5	Remove bones and season to taste with salt and pepper .
+(s5 / sentence
+    :coref ((s4c7 :separation s5r1)
+			(s5r1 :separation s5r2)
+			(s4s1 :separation s5r1)
+			(s4c7 :separation s5r2)
+			(s5p :aggregation s5s1)
+			(s5s2 :aggregation s5s1)))
+
+
+# :: r-1423::step06::sent01
+# :: snt6	Clean vegetables , cut into pieces and add to the pot .
+(s6 / sentence
+    :coref ((s5s1 :aggregation s6a5)
+			(s6v2 :cut s6c3)
+			(s6c3 :cut s6c5)
+			(s6c5 :aggregation s6a5)))
+
+
+# :: r-1423::step07::sent01
+# :: snt7	Bring to boil , skim , add rice and cook for 20 minutes , season to taste with salt and pepper if needed and add herbs to the soup just before it is served .
+(s7 / sentence
+    :coref ((s6a5 :cut s7b4)
+			(s7b4 :cut s7s1)
+			(s7s1 :aggregation s7a7)
+			(s7a7 :cut s7c6)
+			(s7c6 :aggregation s7s6)
+			(s7s6 :aggregation s7a10)
+			(s7a10 :cut s7s7)
+			(s5s1 :cut s7b4)
+			(s7b4 :aggregation s7a7)
+			(s7a7 :aggregation s7s6)
+			(s7s6 :cut s7s7)
+			(s6a5 :cut s7s1)
+			(s7s1 :cut s7c6)
+			(s7c6 :aggregation s7a10)
+			(s7r :aggregation s7a7)
+			(s7a7 :aggregation s7a10)
+			(s7s2 :aggregation s7s6)
+			(s7p :aggregation s7s6)
+			(s7h :aggregation s7a10)))
+
+

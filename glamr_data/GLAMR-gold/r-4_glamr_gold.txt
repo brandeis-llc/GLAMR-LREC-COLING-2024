@@ -1,0 +1,273 @@
+# :: r-4::step01::sent01
+# :: snt1	Wash the chickpeas , drain , cover with water and let soak overnight .
+(s1a / and~9
+     :op1 (s1w / wash-01~0
+               :ARG1 (s1c / chickpea~2)
+               :ARG0 (s1y / you)
+               :event-structure (s1se / subevents
+                                      :E1 (s1h / has_state
+                                               :polarity -
+                                               :PATIENT s1c
+                                               :V_FINAL_STATE (s1w1 / washed))
+                                      :E3 (s1h1 / has_state
+                                                :PATIENT s1c
+                                                :V_FINAL_STATE s1w1)
+                                      :E0 (s1d1 / do
+                                                :ACTION s1w))
+               :imp_output (s1w3 / wash.RES))
+     :op2 (s1d / drain-01~4
+               :ARG1 s1c
+               :ARG0 s1y
+               :event-structure (s1se1 / subevents
+                                       :E1 (s1a1 / and
+                                                 :op1 (s1h2 / has_location
+                                                            :IMP_THEME s1w3
+                                                            :SOURCE s1c)
+                                                 :op2 (s1h3 / has_state
+                                                            :polarity -
+                                                            :SOURCE s1c
+                                                            :V_FINAL_STATE (s1d2 / drained)))
+                                       :E3 (s1a2 / and
+                                                 :op1 (s1m / motion
+                                                           :IMP_THEME s1w3)
+                                                 :op2 (s1h4 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s1w3
+                                                            :SOURCE s1c))
+                                       :E4 (s1a3 / and
+                                                 :op1 (s1h5 / has_location
+                                                            :IMP_THEME s1w3)
+                                                 :op2 (s1h6 / has_state
+                                                            :SOURCE s1c
+                                                            :V_FINAL_STATE s1d2))
+                                       :E0 (s1d3 / do
+                                                 :ACTION s1d))
+               :imp_output (s1d4 / drain.RES))
+     :op3 (s1c2 / cover-02~6
+                :ARG1 s1c
+                :ARG2 (s1w2 / water~8)
+                :ARG0 s1y
+                :event-structure (s1se2 / subevents
+                                        :E1 (s1h7 / has_location
+                                                  :THEME s1w2)
+                                        :E3 (s1a4 / and
+                                                  :op1 (s1m1 / motion
+                                                             :THEME s1w2)
+                                                  :op2 (s1h8 / has_location
+                                                             :polarity -
+                                                             :THEME s1w2))
+                                        :E4 (s1h9 / has_location
+                                                  :THEME s1w2
+                                                  :DESTINATION s1c)
+                                        :E0 (s1d5 / do
+                                                  :ACTION s1c2))
+                :imp_output (s1c1 / cover.RES))
+     :op4 (s1l / let-01~10
+               :ARG1 (s1s / soak-01~11
+                          :ARG1 s1c
+                          :duration (s1o / overnight~12)
+                          :ARG0 s1y
+                          :event-structure (s1se3 / subevents
+                                                  :E1 (s1h10 / has_location
+                                                             :THEME s1c)
+                                                  :E3 (s1a5 / and
+                                                            :op1 (s1m2 / motion
+                                                                       :THEME s1c)
+                                                            :op2 (s1h11 / has_location
+                                                                        :polarity -
+                                                                        :THEME s1c))
+                                                  :E4 (s1h12 / has_location
+                                                             :THEME s1c)
+                                                  :E0 (s1d6 / do
+                                                            :ACTION s1s))
+                          :imp_output (s1s1 / soak.RES)))
+     :mode imperative)
+
+
+# :: r-4::step02::sent01
+# :: snt2	Next day , boil till tender an hour or longer .
+(s2b / boil-01~3
+     :duration (s2a / at-least
+                    :op1 (s2t / temporal-quantity
+                              :quant 1
+                              :unit (s2h / hour~7)))
+     :mode imperative
+     :time (s2d / day~1
+                :mod (s2n / next~0))
+     :duration (s2t3 / tender-03~5)
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s2s / soak.RES)
+                                     :V_FINAL_STATE (s2b1 / boiled))
+                            :E3 (s2a1 / apply_heat
+                                      :IMP_PATIENT s2s)
+                            :E4 (s2a2 / and
+                                      :op1 (s2c1 / cooked
+                                                 :IMP_PATIENT s2s
+                                                 :V_FINAL_STATE s2b1)
+                                      :op2 (s2h1 / has_state
+                                                 :IMP_PATIENT s2s
+                                                 :RESULT s2t3))
+                            :E0 (s2d1 / do
+                                      :ACTION s2b))
+     :imp_output (s2b2 / boil.RES))
+
+
+# :: r-4::step03::sent01
+# :: snt3	Mash all but a quarter cup to a puree .
+(s3m2 / mash~0
+      :ARG1 (s3a2 / all~1
+                  :ARG2-of (s3e3 / except-01
+                                 :ARG1 (s3v2 / volume-quantity
+                                             :unit (s3c2 / cup~5)
+                                             :quant 0.5)))
+      :duration (s3p2 / puree~8)
+      :mode imperative
+      :ARG0 (s3y / you)
+      :event-structure (s3se / subevents
+                             :E1 (s3a / and
+                                      :op1 (s3d / degradation_material_integrity
+                                                :polarity -
+                                                :PATIENT s3c2)
+                                      :op2 (s3h / has_physical_form
+                                                :polarity -
+                                                :PATIENT s3c2
+                                                :V_FORM (s3m / mashed)))
+                             :E2 (s3c / contact
+                                      :PATIENT s3c2)
+                             :E3 (s3a1 / and
+                                       :op1 (s3d1 / degradation_material_integrity
+                                                  :PATIENT s3c2)
+                                       :op2 (s3h1 / has_physical_form
+                                                  :PATIENT s3c2
+                                                  :V_FORM s3m))
+                             :E0 (s3d2 / do
+                                       :ACTION s3m2))
+      :imp_outputI (s3m1 / mash.RES)
+      :imp_outputJ (s3m3 / mash.RES))
+
+
+# :: r-4::step04::sent01
+# :: snt4	Add the sesame oil , lemon juice , salt , and garlic .
+(s4a / add-02~0
+     :ARG1 (s4a2 / and~10
+                 :op1 (s4o / oil~3
+                           :source (s4s2 / sesame~2))
+                 :op2 (s4j / juice~6
+                           :source (s4l / lemon~5))
+                 :op3 (s4s / salt~8)
+                 :op4 (s4g / garlic~11))
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4t / together
+                                     :polarity -
+                                     :PATIENT_I s4o
+                                     :PATIENT_J s4j
+                                     :PATIENT_K s4s
+                                     :PATIENT_L s4g)
+                            :E3 (s4t1 / together
+                                      :PATIENT_I s4o
+                                      :PATIENT_J s4j
+                                      :PATIENT_K s4s
+                                      :PATIENT_L s4g)
+                            :E0 (s4d / do
+                                     :ACTION s4a))
+     :imp_output (s4a1 / add.RES))
+
+
+# :: r-4::step05::sent01
+# :: snt5	Mix well and put on a plate .
+(s5a / and
+     :op1 (s5m / mix-01~0
+               :degree (s5w2 / well~1)
+               :ARG0 (s5y / you)
+               :event-structure (s5se / subevents
+                                      :E1 (s5a1 / and
+                                                :op1 (s5m1 / mingled
+                                                           :polarity -)
+                                                :op2 (s5h / has_material_integrity_state
+                                                          :polarity -
+                                                          :V_STATE (s5m2 / mixed))
+                                                :op3 (s5h1 / has_material_integrity_state
+                                                           :polarity -
+                                                           :V_STATE s5m2))
+                                      :E3 (s5a2 / and
+                                                :op1 (s5m3 / mingled)
+                                                :op2 (s5h2 / has_material_integrity_state
+                                                           :V_STATE s5m2)
+                                                :op3 (s5h3 / has_material_integrity_state
+                                                           :V_STATE s5m2))
+                                      :E0 (s5d / do
+                                               :ACTION s5m))
+               :imp_output (s5m4 / mix.RES))
+     :op2 (s5p2 / put-01~3
+                :ARG2 (s5p / plate~6)
+                :ARG0 s5y
+                :event-structure (s5se1 / subevents
+                                        :E1 (s5h4 / has_location)
+                                        :E3 (s5a3 / and
+                                                  :op1 (s5m5 / motion
+                                                             :IMP_THEME s5m4)
+                                                  :op2 (s5h5 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s5m4))
+                                        :E4 (s5h6 / has_location
+                                                  :IMP_THEME s5m4
+                                                  :DESTINATION s5p)
+                                        :E0 (s5d1 / do
+                                                  :ACTION s5p2))
+                :imp_output (s5p1 / put.RES))
+     :mode imperative)
+
+
+# :: r-4::step06::sent01
+# :: snt6	Pour the olive oil on top and garnish with the extra whole chick Peas , paprika , and parsley .
+(s6a / and
+     :op1 (s6p4 / pour-01~0
+                :ARG1 (s6o / oil~3
+                           :source (s6o2 / olive~2))
+                :ARG3 (s6t / top~5)
+                :ARG0 (s6y / you)
+                :event-structure (s6se / subevents
+                                       :E1 (s6h / has_location
+                                                :THEME s6o)
+                                       :E3 (s6a1 / and
+                                                 :op1 (s6m / motion
+                                                           :THEME s6o)
+                                                 :op2 (s6h1 / has_location
+                                                            :polarity -
+                                                            :THEME s6o))
+                                       :E4 (s6h2 / has_location
+                                                 :THEME s6o
+                                                 :DESTINATION s6t)
+                                       :E0 (s6d / do
+                                                :ACTION s6p4))
+                :imp_output (s6p1 / pour.RES))
+     :op2 (s6g / garnish-01~7
+               :ARG2 (s6a2 / and
+                           :op1 (s6c2 / chickpea~12,13
+                                      :mod (s6w / whole~11)
+                                      :mod (s6e / extra~10))
+                           :op2 (s6p / paprika~15)
+                           :op3 (s6p2 / parsley~18))
+               :ARG0 s6y
+               :event-structure (s6se1 / subevents
+                                       :E1 (s6h3 / has_location
+                                                 :THEME s6p2)
+                                       :E3 (s6a3 / and
+                                                 :op1 (s6m1 / motion
+                                                            :THEME s6p2)
+                                                 :op2 (s6h4 / has_location
+                                                            :polarity -
+                                                            :THEME s6p2))
+                                       :E4 (s6h5 / has_location
+                                                 :THEME s6p2)
+                                       :E0 (s6d1 / do
+                                                 :ACTION s6g))
+               :imp_output (s6g1 / garnish.RES))
+     :mode imperative)
+
+

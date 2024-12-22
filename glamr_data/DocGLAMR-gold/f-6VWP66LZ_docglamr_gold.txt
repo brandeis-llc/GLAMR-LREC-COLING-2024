@@ -1,0 +1,68 @@
+# :: f-6VWP66LZ::step01::sent01
+# :: snt1	Cut the broccoli into flowerets and the stem into bite - size pieces ; cut carrots and zucchini into cubes .
+(s1 / sentence
+    :coref ((s1z :aggregation s1c5)))
+
+
+# :: f-6VWP66LZ::step02::sent01
+# :: snt2	Saute onion in 2 tablespoons of olive oil , add chopped vegetables and cook for 10 minutes over low heat , stirring occasionally .
+(s2 / sentence
+    :coref ((s2o4 :aggregation s2s3)
+			(s2s3 :aggregation s2a1)
+			(s2a1 :cut s2c7)
+			(s2c7 :cut s2s5)
+			(s2o3 :aggregation s2s3)
+			(s2s3 :cut s2c7)
+			(s2c :aggregation s2a1)
+			(s2a1 :cut s2s5)))
+
+
+# :: f-6VWP66LZ::step03::sent01
+# :: snt3	In a separate pan saute minced meat breaking it up well , and stir for 6 - 8 minutes until browned .
+(s3 / sentence
+    :coref ((s3m2 :cut s3s4)
+			(s3s4 :cut s3b4)
+			(s3b4 :cut s3s6)))
+
+
+# :: f-6VWP66LZ::step04::sent01
+# :: snt4	Add the tinned tomatoes to the cooked vegetables , mash them coarsely , stir and combine .
+(s4 / sentence
+    :coref ((s2s5 :aggregation s4a1)
+			(s4a1 :cut s4m2)
+			(s4m2 :cut s4s2)
+			(s4s2 :cut s4c5)
+			(s2c7 :aggregation s4a1)
+			(s4a1 :cut s4s2)
+			(s2s5 :cut s4m2)
+			(s4m2 :cut s4c5)
+			(s4t :aggregation s4a1)
+			(s4a1 :cut s4c5)))
+
+
+# :: f-6VWP66LZ::step05::sent01
+# :: snt5	Transfer the meat into the pan with the vegetables , season with salt and pepper , mix thoroughly to combine all ingredients .
+(s5 / sentence
+    :coref ((s4c5 :aggregation s5t1)
+			(s5t1 :aggregation s5s1)
+			(s5s1 :cut s5m6)
+			(s4s2 :aggregation s5t1)
+			(s5t1 :cut s5m6)
+			(s4c5 :aggregation s5s1)
+			(s3s6 :aggregation s5t1)
+			(s4c5 :cut s5m6)
+			(s5s :aggregation s5s1)
+			(s5p2 :aggregation s5s1)))
+
+
+# :: f-6VWP66LZ::step06::sent01
+# :: snt6	Serve with cooked rice or something similar ( couscous , mashed potatoes ) .
+(s6 / sentence
+    :coref ((s5m6 :aggregation s6s1)
+			(s5s1 :aggregation s6s1)
+			(s5t1 :aggregation s6s1)
+			(s6c :aggregation s6s1)
+			(s6c3 :aggregation s6s1)
+			(s6m :aggregation s6s1)))
+
+

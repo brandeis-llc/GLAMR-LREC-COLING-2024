@@ -1,0 +1,283 @@
+user name: Keer Xu
+user id: 347
+file language: english
+file format: plain_text
+Doc ID in database: 1274
+export time: 2023/3/29 11:28:20
+
+# :: snt1	Combine the 2 1/2 cups sugar , water , vanilla and other flavoring choices into a heavy bottom saucepan .
+# sentence level graph:
+(s1c2 / combine-01
+  :ARG1 (s1a / and
+          :op1 (s1s2 / sugar
+                 :quant (s1v2 / volume-quantity
+                          :unit (s1c3 / cup)
+                          :quant 2.5))
+          :op2 (s1w / water)
+          :op3 (s1v / vanilla)
+          :op4 (s1c / choose-01
+                 :mod (s1f / flavor-01)
+                 :mod (s1o / other)))
+  :location (s1s / saucepan
+              :mod (s1h / heavy-bottom))
+  :mode imperative)
+
+# alignment:s1a: 11-11
+s1c: 14-14
+s1c2: 1-1
+s1c3: -1--1
+s1f: 13-13
+s1h: 17-17
+s1o: 12-12
+s1s: 19-19
+s1s2: 6-6
+s1v: 10-10
+s1v2: 1-1
+s1w: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Heat over medium heat until the sugar is dissolved , do not let the mixture boil !
+# sentence level graph:
+(s2a / and
+  :op1 (s2h2 / heat-01
+         :manner (s2h / heat
+                   :mod (s2m / medium))
+         :duration (s2u / until
+                     :op1 (s2d2 / dissolve-01
+                            :ARG1 (s2s / sugar))))
+  :op2 (s2l / let-01
+         :ARG1 (s2b / boil-01
+                 :ARG1 (s2m2 / mixture))
+         :polarity -)
+  :mode imperative)
+
+# alignment:s2a: 2-2
+s2b: 16-16
+s2d2: 9-9
+s2h: 4-4
+s2h2: 1-1
+s2m: 3-3
+s2m2: 15-15
+s2s: 7-7
+s2u: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Once the sugar is fully dissolved turn off the heat and remove the pan from the heat .
+# sentence level graph:
+(s3a / and
+  :op1 (s3t / turn-off-00
+         :ARG1 (s3h / heat))
+  :op2 (s3r / remove-01
+         :ARG1 (s3p / pan)
+         :ARG2 s3h)
+  :time (s3d / dissolve-01
+          :ARG1 (s3s / sugar)
+          :degree (s3f / full))
+  :mode imperative)
+
+# alignment:s3a: 11-11
+s3d: 6-6
+s3f: 5-5
+s3h: 10-10
+s3p: 14-14
+s3r: 12-12
+s3s: 3-3
+s3t: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Wash the cranberries and pour them into a large bowl .
+# sentence level graph:
+(s4a / and
+  :op1 (s4w / wash-01
+         :ARG1 (s4c / cranberry))
+  :op2 (s4p / pour-01
+         :ARG1 s4c
+         :ARG3 (s4b / bowl
+                 :mod (s4l / large)))
+  :mode imperative)
+
+# alignment:s4a: 4-4
+s4b: 10-10
+s4c: 3-3
+s4l: 9-9
+s4p: 5-5
+s4w: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Pour the syrup over the cranberries and place a heavy plate on the cranberries to keep them submerged .
+# sentence level graph:
+(s5a / and
+  :op1 (s5p3 / pour-01
+         :ARG1 (s5s2 / syrup)
+         :ARG3 (s5c / cranberry))
+  :op2 (s5p / place-01
+         :ARG1 (s5p2 / plate
+                 :mod (s5h / heavy))
+         :ARG2 s5c
+         :purpose (s5k / keep-02
+                    :ARG1 (s5s / submerge-01
+                            :ARG1 s5c)))
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5c: 6-6
+s5h: 10-10
+s5k: 16-16
+s5p: 8-8
+s5p2: 11-11
+s5p3: 1-1
+s5s: 18-18
+s5s2: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Refrigerate for 2 - 12 hours , depending on how sweet your want your cranberries .
+# sentence level graph:
+(s6r / refrigerate-01
+  :ARG1 "s6c"
+  :ARG0-of (s6d2 / depend-01
+             :ARG1 (s6d / degree
+                     :degree-of (s6s / sweet-04
+                                  :ARG1 (s6c / cranberry)
+                                  :ARG1-of (s6w / want-01
+                                             :ARG0 (s6y / you)))))
+  :duration (s6b / between
+              :op1 (s6t / temporal-quantity
+                     :quant 2
+                     :unit (s6h2 / hour))
+              :op2 (s6t2 / temporal-quantity
+                     :quant 12
+                     :unit (s6h / hour)))
+  :mode imperative)
+
+# alignment:s6b: 2-2
+s6c: 15-15
+s6d: 10-10
+s6d2: 8-8
+s6h: 4-4
+s6h2: 6-6
+s6r: 1-1
+s6s: 11-11
+s6t: 6-6
+s6t2: 7-7
+s6w: 13-13
+s6y: 12-12
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Once you have reached desired sweetness , drain the cranberries ( reserving the syrup for another use ) and roll the cranberries in the reserved 1 cup sugar until fully covered .
+# sentence level graph:
+(s7a / and
+  :op1 (s7d2 / drain-01
+         :ARG1 (s7c2 / cranberry))
+  :op2 (s7r4 / reserve-01
+         :ARG1 (s7s4 / syrup)
+         :purpose (s7u / use-01
+                    :ARG1 (s7a3 / another)))
+  :op3 (s7r3 / roll-01
+         :ARG1 s7c2
+         :ARG2 (s7s / sugar
+                 :quant (s7v / volume-quantity
+                          :quant 1
+                          :unit (s7c3 / cup)))
+         :duration (s7u2 / until
+                     :op1 (s7c / cover-02
+                            :ARG1 s7c2
+                            :manner (s7f / fully))))
+  :time (s7r / reach-01
+          :ARG1 (s7s2 / sweet-03
+                  :ARG1-of (s7d / desire-01)))
+  :mode imperative)
+
+# alignment:s7a: 19-19
+s7a3: 16-16
+s7c: 31-31
+s7c2: 10-10
+s7c3: 27-27
+s7d: 5-5
+s7d2: 8-8
+s7f: 30-30
+s7r: 4-4
+s7r3: 20-20
+s7r4: 12-12
+s7s: 28-28
+s7s2: 6-6
+s7s4: 14-14
+s7u: 17-17
+s7u2: 29-29
+s7v: 27-27
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Store covered in the refrigerator until all gone !
+# sentence level graph:
+(s8s / store-01
+  :ARG1-of (s8c / cover-02
+             :ARG2 (s8r / refrigerator))
+  :mode expressive
+  :duration (s8u / until
+              :op1 (s8g / go-02
+                     :ARG0 (s8a / all))))
+
+# alignment:s8a: 7-7
+s8c: 2-2
+s8g: 8-8
+s8r: 5-5
+s8s: 1-1
+s8u: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Combine the 2 1/2 cups sugar , water , vanilla and other flavoring choices into a heavy bottom saucepan .
+Heat over medium heat until the sugar is dissolved , do not let the mixture boil !
+Once the sugar is fully dissolved turn off the heat and remove the pan from the heat .
+Wash the cranberries and pour them into a large bowl .
+Pour the syrup over the cranberries and place a heavy plate on the cranberries to keep them submerged .
+Refrigerate for 2 - 12 hours , depending on how sweet your want your cranberries .
+Once you have reached desired sweetness , drain the cranberries ( reserving the syrup for another use ) and roll the cranberries in the reserved 1 cup sugar until fully covered .
+Store covered in the refrigerator until all gone !

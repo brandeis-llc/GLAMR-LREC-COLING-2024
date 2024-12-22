@@ -1,0 +1,325 @@
+# :: f-627L5MNN::step01::sent01
+# :: snt1	Preheat oven to 350 degrees F.
+(s1p / preheat-00~0
+     :ARG1 (s1o / oven~1)
+     :mod (s1t / temperature-quantity
+               :quant 350
+               :scale (s1f / fahrenheit~5))
+     :mode imperative)
+
+
+# :: f-627L5MNN::step02::sent01
+# :: snt2	Line two cookie sheets with parchment paper .
+(s2l / line-01
+     :ARG1 (s2s / sheet~3
+                :quant 2
+                :mod (s2c / cookie~2))
+     :ARG2 (s2p / paper~6
+                :mod (s2p2 / parchment~5))
+     :mode imperative)
+
+
+# :: f-627L5MNN::step03::sent01
+# :: snt3	In a large bowl whip butter and sugar until light and fluffy .
+(s3w / whip-01~4
+     :ARG1 (s3a / and~6
+                :op1 (s3b2 / butter~5)
+                :op2 (s3s2 / sugar~7))
+     :location (s3b / bowl~3
+                    :mod (s3l / large~2))
+     :duration (s3u / until~8
+                    :op1 (s3a2 / and~10
+                               :op1 (s3l2 / light~9
+                                          :ARG1 s3a)
+                               :op2 (s3f / fluffy~11
+                                         :ARG1 s3a)))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3h / has_material_integrity_state
+                                     :polarity -
+                                     :PATIENT s3s2
+                                     :V_STATE (s3w1 / whipped))
+                            :E3 (s3h1 / has_material_integrity_state
+                                      :PATIENT s3s2
+                                      :V_STATE s3w1)
+                            :E0 (s3d / do
+                                     :ACTION s3w))
+     :imp_output (s3w2 / whip.RES))
+
+
+# :: f-627L5MNN::step03::sent02
+# :: snt4	Add 1 egg and vanilla .
+(s4a / add-02~0
+     :ARG1 (s4a2 / and~3
+                 :op1 (s4e / egg~2
+                           :quant 1)
+                 :op2 (s4v / vanilla~4))
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4t / together
+                                     :polarity -
+                                     :PATIENT_I s4e
+                                     :PATIENT_J s4v)
+                            :E3 (s4t1 / together
+                                      :PATIENT_I s4e
+                                      :PATIENT_J s4v)
+                            :E0 (s4d / do
+                                     :ACTION s4a))
+     :imp_output (s4a1 / add.RES))
+
+
+# :: f-627L5MNN::step03::sent03
+# :: snt5	Stir in flour and oolong tea until a very soft and moist cookie dough forms .
+(s5s / stir-01~0
+     :ARG1 (s5a / and~3
+                :op1 (s5f / flour~2)
+                :op2 (s5t / tea~5
+                          :mod (s5o / oolong~4)))
+     :duration (s5u / until~6
+                    :op1 (s5f2 / form-01~14
+                               :ARG1 (s5d / dough~13
+                                          :ARG1-of (s5a2 / and~10
+                                                         :op1 (s5s2 / soft~9
+                                                                    :degree (s5v / very~8))
+                                                         :op2 (s5m / moist~11
+                                                                   :degree s5v))
+                                          :mod (s5c / cookie~12))))
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5h / has_material_integrity_state
+                                     :polarity -
+                                     :PATIENT s5t
+                                     :V_STATE (s5s1 / stirred))
+                            :E3 (s5h1 / has_material_integrity_state
+                                      :PATIENT s5t
+                                      :V_STATE s5s1)
+                            :E0 (s5d1 / do
+                                      :ACTION s5s))
+     :imp_output (s5s3 / stir.RES))
+
+
+# :: f-627L5MNN::step04::sent01
+# :: snt6	Pour about 1/2 cup of confectioner 's sugar in a small bowl .
+(s6p / pour-01~0
+     :ARG1 (s6s2 / sugar~7
+                 :quant (s6a / about~1
+                             :op1 (s6v / volume-quantity
+                                       :quant "1/2"
+                                       :unit (s6c2 / cup~3)))
+                 :source (s6c / confectioner~5))
+     :ARG2 (s6b / bowl~11
+                :mod (s6s / small))
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6h / has_location
+                                     :THEME s6s2)
+                            :E3 (s6a1 / and
+                                      :op1 (s6m / motion
+                                                :THEME s6s2)
+                                      :op2 (s6h1 / has_location
+                                                 :polarity -
+                                                 :THEME s6s2))
+                            :E4 (s6h2 / has_location
+                                      :THEME s6s2
+                                      :DESTINATION s6b)
+                            :E0 (s6d / do
+                                     :ACTION s6p))
+     :imp_output (s6p1 / pour.RES))
+
+
+# :: f-627L5MNN::step05::sent01
+# :: snt7	Scoop out about a teaspoon amount of cookie dough and roll in confectioner 's sugar .
+(s7a3 / and~9
+      :op1 (s7c / Scoop-out-02~0,1
+                :ARG1 (s7d / dough~8
+                           :quant (s7a2 / amount~5
+                                        :quant (s7a / about~2
+                                                    :op1 (s7v / volume-quantity
+                                                              :quant 1
+                                                              :unit (s7t / teaspoon~4))))
+                           :mod (s7c3 / cookie~7))
+                :ARG0 (s7y / you)
+                :event-structure (s7se / subevents
+                                       :E1 (s7h / has_location
+                                                :THEME s7d)
+                                       :E3 (s7a1 / and
+                                                 :op1 (s7m / motion
+                                                           :THEME s7d)
+                                                 :op2 (s7h1 / has_location
+                                                            :polarity -
+                                                            :THEME s7d))
+                                       :E4 (s7h2 / has_location
+                                                 :THEME s7d)
+                                       :E0 (s7d1 / do
+                                                 :ACTION s7c))
+                :imp_output (s7s1 / scoop.RES))
+      :op2 (s7r / roll-01~10
+                :ARG1 s7d
+                :ARG2 (s7s / sugar~14
+                           :source (s7c2 / confectioner~12))
+                :ARG0 s7y
+                :event-structure (s7se1 / subevents
+                                        :E1 (s7h3 / has_location
+                                                  :THEME s7d)
+                                        :E2 (s7a4 / and
+                                                  :op1 (s7m1 / motion
+                                                             :THEME s7d)
+                                                  :op2 (s7h4 / has_location
+                                                             :polarity -
+                                                             :THEME s7d))
+                                        :E3 (s7h5 / has_location
+                                                  :THEME s7d
+                                                  :DESTINATION s7s)
+                                        :E0 (s7d2 / do
+                                                  :ACTION s7r))
+                :imp_output (s7r1 / roll.RES))
+      :mode imperative)
+
+
+# :: f-627L5MNN::step05::sent02
+# :: snt8	Place on prepared cookie sheets and flatten out with bottom of a glass .
+(s8a / and~5
+     :op1 (s8p / place-01~0
+               :ARG2 (s8s / sheet~4
+                          :ARG1-of (s9p / prepare-02~2)
+                          :mod (s8c / cookie~3))
+               :ARG0 (s8y / you)
+               :event-structure (s8se / subevents
+                                      :E1 (s8h / has_location)
+                                      :E3 (s8a1 / and
+                                                :op1 (s8m / motion
+                                                          :IMP_THEME (s8r / roll.RES))
+                                                :op2 (s8h1 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME s8r))
+                                      :E4 (s8h2 / has_location
+                                                :IMP_THEME s8r
+                                                :DESTINATION s8s)
+                                      :E0 (s8d / do
+                                               :ACTION s8p))
+               :imp_output (s8p1 / place.RES))
+     :op2 (s8f / flatten-01~6
+               :ARG1 s8s
+               :instrument (s8b / bottom~9
+                                :part-of (s8g / glass~12))
+               :ARG0 s8y
+               :event-structure (s8se1 / subevents
+                                       :E1 (s8a2 / and
+                                                 :op1 (s8d1 / degradation_material_integrity
+                                                            :polarity -
+                                                            :IMP_PATIENT s8p1)
+                                                 :op2 (s8h3 / has_physical_form
+                                                            :polarity -
+                                                            :IMP_PATIENT s8p1
+                                                            :V_FORM (s8f1 / flattened-out)))
+                                       :E2 (s8c1 / contact
+                                                 :INSTRUMENT s8g
+                                                 :IMP_PATIENT s8p1)
+                                       :E3 (s8a3 / and
+                                                 :op1 (s8d2 / degradation_material_integrity
+                                                            :IMP_PATIENT s8p1)
+                                                 :op2 (s8h4 / has_physical_form
+                                                            :IMP_PATIENT s8p1
+                                                            :V_FORM s8f1))
+                                       :E0 (s8d3 / do
+                                                 :ACTION s8f))
+               :imp_output (s8f2 / flatten.RES))
+     :mode imperative)
+
+
+# :: f-627L5MNN::step06::sent01
+# :: snt9	Bake for about 8 minutes or until edges are lightly golden .
+(s9b / bake-01~0
+     :mode imperative
+     :time (s9u / until~6
+                :op1 (s9g / golden-00~10
+                          :ARG1 (s9e / edge~7)
+                          :degree (s9l / light~9)))
+     :duration (s9o / or~5
+                    :op1 (s9a / about~2
+                              :op1 (s9t / temporal-quantity
+                                        :quant 8
+                                        :unit (s9m / minute~4)))
+                    :op2 (s9u2 / until
+                               :op1 (s9g2 / golden-00
+                                          :ARG1 (s9e2 / edges)
+                                          :degree (s9l2 / light))))
+     :ARG0 (s9y / you)
+     :event-structure (s9se / subevents
+                            :E1 (s9c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s9f / flatten.RES)
+                                     :V_FINAL_STATE (s9b1 / baked))
+                            :E3 (s9a1 / apply_heat
+                                      :IMP_PATIENT s9f)
+                            :E4 (s9a2 / and
+                                      :op1 (s9c1 / cooked
+                                                 :IMP_PATIENT s9f
+                                                 :V_FINAL_STATE s9b1)
+                                      :op2 (s9h / has_state
+                                                :IMP_PATIENT s9f
+                                                :RESULT s9g))
+                            :E0 (s9d / do
+                                     :ACTION s9b))
+     :imp_output (s9b2 / bake.RES))
+
+
+# :: f-627L5MNN::step06::sent02
+# :: snt10	Transfer cookies to a cooling rack .
+(s10t / transfer-01~0
+      :ARG1 (s10c / cookie~1)
+      :ARG2 (s10r / rack~5
+                  :ARG1-of (s10c3 / cool-01~4))
+      :mode imperative
+      :ARG0 (s10y / you)
+      :event-structure (s10se / subevents
+                              :E1 (s10h / has_location
+                                        :THEME s10c)
+                              :E3 (s10a / and
+                                        :op1 (s10m / motion
+                                                   :THEME s10c)
+                                        :op2 (s10h1 / has_location
+                                                    :polarity -
+                                                    :THEME s10c))
+                              :E4 (s10h2 / has_location
+                                         :THEME s10c
+                                         :DESTINATION s10r)
+                              :E0 (s10d / do
+                                        :ACTION s10t))
+      :imp_output (s10t1 / transfer.RES))
+
+
+# :: f-627L5MNN::step07::sent01
+# :: snt11	Serve with your favorite tea and enjoy !
+(s11a2 / and~5
+       :op1 (s11s / serve-02~0
+                  :accompanier (s11t / tea~4
+                                     :ARG1-of (s11f2 / favor-01~3
+                                                     :ARG0 (s11y2 / you~2)))
+                  :ARG0 (s11y / you)
+                  :event-structure (s11se / subevents
+                                          :E1 (s11a / and
+                                                    :op1 (s11h / has_possession
+                                                               :IMP_THEME (s11t1 / transfer.RES))
+                                                    :op2 (s11h1 / has_possession
+                                                                :polarity -
+                                                                :IMP_THEME s11t1))
+                                          :E2 (s11t2 / transfer
+                                                     :IMP_THEME s11t1)
+                                          :E3 (s11a1 / and
+                                                     :op1 (s11h2 / has_possession
+                                                                 :IMP_THEME s11t1)
+                                                     :op2 (s11h3 / has_possession
+                                                                 :polarity -
+                                                                 :IMP_THEME s11t1))
+                                          :E0 (s11d / do
+                                                    :ACTION s11s))
+                  :imp_output (s11s1 / serve.RES))
+       :op2 (s11e / enjoy-01~6)
+       :mode imperative)
+
+

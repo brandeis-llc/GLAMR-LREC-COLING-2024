@@ -1,0 +1,144 @@
+# :: r-1086::step01::sent01
+# :: snt1	Preheat oven to 350degF.
+(s1p / preheat-00~0
+     :ARG1 (s1o2 / oven~1)
+     :ARG2 (s1t / temperature-quantity
+                :quant 350
+                :scale (s1f / f))
+     :mode imperative)
+
+
+# :: r-1086::step02::sent01
+# :: snt2	Combine meat ball ingredients and shape into meat balls .
+(s2a / and~4
+     :op1 (s2c / combine-01~0
+               :ARG1 (s2i / ingredient~3
+                          :mod (s2b / ball~2,8
+                                    :consist-of (s2m / meat~1)))
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E1 (s2a1 / and
+                                                :op1 (s2m1 / mingled
+                                                           :polarity -
+                                                           :PATIENT_I s2i)
+                                                :op2 (s2h / has_material_integrity_state
+                                                          :polarity -
+                                                          :PATIENT_I s2i
+                                                          :V_STATE (s2c1 / combined))
+                                                :op3 (s2h1 / has_material_integrity_state
+                                                           :polarity -
+                                                           :V_STATE s2c1
+                                                           :PATIENT_I s2i))
+                                      :E3 (s2a2 / and
+                                                :op1 (s2m2 / mingled
+                                                           :PATIENT_I s2i)
+                                                :op2 (s2h2 / has_material_integrity_state
+                                                           :PATIENT_I s2i
+                                                           :V_STATE s2c1)
+                                                :op3 (s2h3 / has_material_integrity_state
+                                                           :V_STATE s2c1
+                                                           :PATIENT_I s2i))
+                                      :E0 (s2d / do
+                                               :ACTION s2c))
+               :imp_output (s2c2 / combine.RES))
+     :ARG2 (s2s / shape-01~5
+                :ARG2 s2b
+                :ARG0 s2y)
+     :mode imperative)
+
+
+# :: r-1086::step03::sent01
+# :: snt3	Bake 30 minutes or more depending on size .
+(s3b / bake-01~0
+     :mode imperative
+     :duration (s3o / or~3
+                    :op1 (s3a / at-least
+                              :op1 (s3t / temporal-quantity
+                                        :unit (s3m / minute~2)
+                                        :quant 30))
+                    :op2 (s3m2 / more~4
+                               :condition (s3s / size~7)))
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s3s1 / shape.RES)
+                                     :V_FINAL_STATE (s3b1 / baked))
+                            :E3 (s3a1 / apply_heat
+                                      :IMP_PATIENT s3s1)
+                            :E4 (s3c1 / cooked
+                                      :IMP_PATIENT s3s1
+                                      :V_FINAL_STATE s3b1)
+                            :E0 (s3d / do
+                                     :ACTION s3b))
+     :imp_output (s3b2 / bake.RES))
+
+
+# :: r-1086::step04::sent01
+# :: snt4	Simmer in the sauce for 5 minutes before serving .
+(s4s3 / simmer-01~0
+      :location (s4s / sauce~3)
+      :duration (s4t / temporal-quantity
+                     :quant 5
+                     :unit (s4m / minute~6))
+      :mode imperative
+      :time (s4b / before~7
+                 :op1 (s4s2 / serve-02~8
+                            :ARG0 s4y
+                            :event-structure (s4se1 / subevents
+                                                    :E1 (s4a1 / and
+                                                              :op1 (s4h / has_possession
+                                                                        :IMP_THEME s4s4)
+                                                              :op2 (s4h1 / has_possession
+                                                                         :polarity -
+                                                                         :IMP_THEME s4s4))
+                                                    :E2 (s4t1 / transfer
+                                                              :IMP_THEME s4s4)
+                                                    :E3 (s4a2 / and
+                                                              :op1 (s4h2 / has_possession
+                                                                         :IMP_THEME s4s4)
+                                                              :op2 (s4h3 / has_possession
+                                                                         :polarity -
+                                                                         :IMP_THEME s4s4))
+                                                    :E0 (s4d1 / do
+                                                              :ACTION s4s2))
+                            :imp_output (s4s5 / serve.RES)))
+      :ARG0 (s4y / you)
+      :event-structure (s4se / subevents
+                             :E1 (s4c / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s4b1 / bake.RES)
+                                      :V_FINAL_STATE (s4s1 / simmered))
+                             :E3 (s4a / apply_heat
+                                      :INSTRUMENT s4s
+                                      :IMP_PATIENT s4b1)
+                             :E4 (s4c1 / cooked
+                                       :IMP_PATIENT s4b1
+                                       :V_FINAL_STATE s4s1)
+                             :E0 (s4d / do
+                                      :ACTION s4s3))
+      :imp_output (s4s4 / simmer.RES))
+
+
+# :: r-1086::step04::sent02
+# :: snt5	Sprinkle with scallions .
+(s5s2 / sprinkle-01~0
+      :ARG1 (s5s / scallion~2)
+      :mode imperative
+      :ARG0 (s5y / you)
+      :event-structure (s5se / subevents
+                             :E1 (s5h / has_location
+                                      :THEME s5s)
+                             :E3 (s5a / and
+                                      :op1 (s5m / motion
+                                                :THEME s5s)
+                                      :op2 (s5h1 / has_location
+                                                 :polarity -
+                                                 :THEME s5s))
+                             :E4 (s5h2 / has_location
+                                       :THEME s5s)
+                             :E0 (s5d / do
+                                      :ACTION s5s2))
+      :imp_output (s5s1 / sprinkle.RES))
+
+

@@ -1,0 +1,73 @@
+# :: r-2099::step01::sent01
+# :: snt1	Boil potatoes with skin on until cooked .
+(s1 / sentence
+    :coref ((s1p :cut s1b2)))
+
+
+# :: r-2099::step02::sent01
+# :: snt2	Drain , peel and slice in halves .
+(s2 / sentence
+    :coref ((s1b2 :cut s2d3)
+			(s2d3 :cut s2p3)
+			(s2p3 :cut s2s1)))
+
+
+# :: r-2099::step03::sent01
+# :: snt3	Cut potatoes in small chunks .
+(s3 / sentence
+    :coref ((s2s1 :cut s3c3)))
+
+
+# :: r-2099::step04::sent01
+# :: snt4	Put in bowl and sprinkle with vinegar .
+(s4 / sentence
+    :coref ((s3c3 :cut s4p1)
+			(s4p1 :aggregation s4s1)
+			(s4v :aggregation s4s1)))
+
+
+# :: r-2099::step05::sent01
+# :: snt5	Add celery , onion , eggs , pepper and mayonnaise .
+(s5 / sentence
+    :coref ((s4s1 :aggregation s5a1)
+			(s5c :aggregation s5a1)
+			(s5o :aggregation s5a1)
+			(s5e :aggregation s5a1)
+			(s5p :aggregation s5a1)
+			(s5m :aggregation s5a1)))
+
+
+# :: r-2099::step06::sent01
+# :: snt6	Mix well .
+(s6 / sentence
+    :coref ((s5a1 :cut s6m4)
+			(s4s1 :cut s6m4)))
+
+
+# :: r-2099::step07::sent01
+# :: snt7	When ready to serve , lay out lettuce leaves on a platter .
+(s7 / sentence
+    :coref ((s7l3 :cut s7l4)))
+
+
+# :: r-2099::step08::sent01
+# :: snt8	Put potato salad .
+(s8 / sentence
+    :coref ((s6m4 :aggregation s8p1)
+			(s5a1 :aggregation s8p1)
+			(s7l4 :aggregation s8p1)))
+
+
+# :: r-2099::step09::sent01
+# :: snt9	Top with egg slices and sprinkle with a little paprika .
+(s9 / sentence
+    :coref ((s8p1 :aggregation s9t1)
+			(s9t1 :aggregation s9s1)
+			(s6m4 :aggregation s9t1)
+			(s8p1 :aggregation s9s1)
+			(s5a1 :aggregation s9t1)
+			(s5a1 :aggregation s9s1)
+			(s9e :aggregation s9t1)
+			(s9p :aggregation s9s1)))
+
+

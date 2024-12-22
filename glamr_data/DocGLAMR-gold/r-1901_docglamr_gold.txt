@@ -1,0 +1,51 @@
+# :: r-1901::step01::sent01
+# :: snt1	Peel and chop potatoes
+(s1 / sentence
+    :coref ((s1p :cut s1p4)
+			(s1p4 :cut s1c2)))
+
+
+# :: r-1901::step02::sent01
+# :: snt2	Cook shallot in boiling butter and oil for approx 2 - 3 minutes
+(s2 / sentence
+    :coref ((s2s :aggregation s2c4)
+			(s2b2 :aggregation s2c4)
+			(s2o :aggregation s2c4)))
+
+
+# :: r-1901::step03::sent01
+# :: snt3	add leek and cook for another 5 - 6 minutes stirring vigorously
+(s3 / sentence
+    :coref ((s2c4 :aggregation s3a1)
+			(s3a1 :cut s3c4)
+			(s3c4 :cut s3s2)
+			(s2c4 :cut s3c4)
+			(s2c4 :cut s3s2)
+			(s3l :aggregation s3a1)
+			(s3a1 :cut s3s2)))
+
+
+# :: r-1901::step04::sent01
+# :: snt4	add celery , potatoes , and wine and cook for another 4 minutes
+(s4 / sentence
+    :coref ((s1c2 :aggregation s4a1)
+			(s4a1 :cut s4c5)
+			(s3s2 :aggregation s4a1)
+			(s3c4 :aggregation s4a1)
+			(s3s2 :cut s4c5)
+			(s4c :aggregation s4a1)
+			(s4w :aggregation s4a1)))
+
+
+# :: r-1901::step05::sent01
+# :: snt5	add broth and let the soup simmer for 60 minutes
+(s5 / sentence
+    :coref ((s4c5 :aggregation s5a1)
+			(s5a1 :cut s5s3)
+			(s4a1 :aggregation s5a1)
+			(s4a1 :cut s5s3)
+			(s4c5 :cut s5s3)
+			(s3s2 :aggregation s5a1)
+			(s5b :aggregation s5a1)))
+
+

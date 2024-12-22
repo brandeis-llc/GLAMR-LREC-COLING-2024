@@ -1,0 +1,403 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1271
+export time: 4/3/2023, 4:24:58 PM
+
+# :: snt1	Pre heat oven to 350 degrees F. In a large bowl combine flour , powdered sugar , and cornstarch .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1p2 / preheat-00
+         :ARG1 (s1o / oven
+                 :mod (s1t / temperature-quantity
+                        :scale (s1f / fahrenheit)
+                        :quant 350)))
+  :op2 (s1c / combine-01
+         :ARG1 (s1a / and
+                 :op1 (s1f2 / flour)
+                 :op2 (s1s / sugar
+                        :ARG1-of (s1p / powder-01))
+                 :op3 (s1c2 / cornstarch))
+         :location (s1b2 / bowl
+                     :mod (s1l / large)))
+  :mode imperative)
+
+# alignment:s1a: 18-18
+s1b2: 11-11
+s1c: 12-12
+s1c2: 19-19
+s1f: -1--1
+s1f2: 13-13
+s1l: 10-10
+s1o: 3-3
+s1p: 15-15
+s1s: 16-16
+s1t: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Using a spoon , mix in apple sauce and vanilla extract until a soft dough forms .
+# sentence level graph:
+(s2m / mix-01
+  :ARG2 (s2a / and
+          :op1 (s2s / sauce
+                 :mod (s2a2 / apple))
+          :op2 (s2e / extract-01
+                 :ARG1 (s2v / vanilla)))
+  :instrument (s2s4 / spoon)
+  :duration (s2u / until
+              :op1 (s2f / form-01
+                     :ARG1 (s2d / dough
+                             :ARG1-of (s2s2 / soft-02))))
+  :mode imperative)
+
+# alignment:s2a: 6-6
+s2a2: 7-7
+s2d: 15-15
+s2e: 11-11
+s2f: 16-16
+s2m: 5-5
+s2s: 8-8
+s2s2: 14-14
+s2u: 12-12
+s2v: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Shape dough into 1-inch balls and place in prepared muffin pans .
+# sentence level graph:
+(s3a / and
+  :op1 (s3s / shape-01
+         :ARG1 (s3d2 / dough)
+         :ARG2 (s3b / ball
+                 :mod (s3d / distance-quantity
+                        :quant 1
+                        :unit (s3i2 / inch))))
+  :op2 (s3p2 / place-01
+         :ARG1 s3d2
+         :ARG2 (s3p / pan
+                 :ARG1-of (s3p3 / prepare-01)
+                 :mod (s3m / muffin)))
+  :mode imperative)
+
+# alignment:s3a: 6-6
+s3b: 5-5
+s3d: 4-4
+s3d2: 2-2
+s3m: 10-10
+s3p: 11-11
+s3p2: 7-7
+s3p3: 9-9
+s3s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Press dough in bottom and up the side of each muffin cup .
+# sentence level graph:
+(s4p / press-01
+  :ARG1 (s4d / dough)
+  :location (s4a / and
+              :op1 (s4b / bottom
+                     :part-of (s4c / cup
+                                :mod (s4m / muffin)
+                                :mod (s4e / each)))
+              :op2 (s4u / up-03
+                     :ARG2 (s4s / side
+                             :part-of s4c)))
+  :mode imperative)
+
+# alignment:s4a: 5-5
+s4b: 4-4
+s4c: 12-12
+s4d: 2-2
+s4e: 10-10
+s4m: 11-11
+s4p: 1-1
+s4s: 8-8
+s4u: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Bake the dough - lined cup for about 8 - 10 minutes .
+# sentence level graph:
+(s5b / bake-01
+  :ARG1 (s5c / cup
+          :mod "dough-lined")
+  :duration (s5a / about
+              :duration (s5b2 / between
+                          :op1 (s5t / temporal-quantity
+                                 :quant 8
+                                 :unit (s5m2 / minute))
+                          :op2 (s5t2 / temporal-quantity
+                                 :quant 10
+                                 :unit s5m2)))
+  :mode imperative)
+
+# alignment:s5a: 8-8
+s5b: 1-1
+s5b2: 7-7
+s5m2: 0-0
+s5t: 12-12
+s5t2: 13-13
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Remove the muffin pan from the oven and let rest for a few minutes .
+# sentence level graph:
+(s6a / and
+  :op1 (s6r / remove-01
+         :ARG1 (s6p / pan
+                 :mod (s6m2 / muffin))
+         :ARG2 (s6o / oven))
+  :op2 (s6r2 / rest-01
+         :ARG1 s6p
+         :duration (s6f / few
+                     :op1 (s6t / temporal-quantity
+                            :quant 1
+                            :unit (s6m / minute))))
+  :mode imperative)
+
+# alignment:s6a: 8-8
+s6f: 13-13
+s6m: 14-14
+s6m2: 3-3
+s6o: 7-7
+s6p: 0-0
+s6r: 1-1
+s6r2: 10-10
+s6t: 14-14
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Spoon 1 teaspoon of preserves into each muffin cup .
+# sentence level graph:
+(s7s / spoon-00
+  :ARG1 (s7p / preserve
+          :quant (s7v / volume-quantity
+                   :quant 1
+                   :unit (s7t / teaspoon)))
+  :destination (s7c / cup
+                 :mod (s7e / each)
+                 :mod (s7m / muffin))
+  :mode imperative)
+
+# alignment:s7c: 9-9
+s7e: 7-7
+s7m: 8-8
+s7p: 5-5
+s7s: 1-1
+s7t: 3-3
+s7v: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	In a small bowl mix together sugar , egg and coconut with a fork until well blended .
+# sentence level graph:
+(s8m / mix-01
+  :ARG1 (s8a / and
+          :op1 (s8s2 / sugar)
+          :op2 (s8e / egg)
+          :op3 (s8c / coconut))
+  :instrument (s8f / fork)
+  :location (s8b2 / bowl
+              :mod (s8s / small))
+  :time (s8u / until
+          :op1 (s8b / blend-01
+                 :ARG1 s8a
+                 :degree (s8w / well-09)))
+  :mode imperative)
+
+# alignment:s8a: 6-6
+s8b: 17-17
+s8b2: 4-4
+s8c: 11-11
+s8e: 9-9
+s8f: 14-14
+s8m: 5-5
+s8s: 3-3
+s8s2: 7-7
+s8u: 15-15
+s8w: 16-16
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Spoon a teaspoon of coconut mixture over preserves in each cup .
+# sentence level graph:
+(s9s / spoon-00
+  :ARG1 (s9m / mixture
+          :quant (s9v / volume-quantity
+                   :unit (s9t / teaspoon)
+                   :quant 1)
+          :consist-of (s9c / coconut))
+  :location (s9o2 / over
+              :op1 (s9p / preserve
+                     :location (s9c2 / cup
+                                 :mod (s9e / each))))
+  :mode imperative)
+
+# alignment:s9c: 5-5
+s9c2: -1--1
+s9e: -1--1
+s9m: 6-6
+s9p: -1--1
+s9s: 1-1
+s9t: 3-3
+s9v: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Bake 23 -33 minutes or until cookie crusts are lightly golden brown .
+# sentence level graph:
+(s10b / bake-01
+  :duration (s10a / amr-choice
+              :op1 (s10b2 / between
+                     :op1 (s10t / temporal-quantity
+                            :unit (s10m / minute)
+                            :quant 23)
+                     :op2 (s10t2 / temporal-quantity
+                            :unit (s10m2 / minute)
+                            :quant 33))
+              :op2 (s10u2 / until
+                     :time (s10b3 / brown-01
+                             :ARG1 (s10c / crust
+                                     :part-of (s10c2 / cookie))
+                             :mod (s10g / golden
+                                    :degree (s10l / light-06)))))
+  :mode imperative)
+
+# alignment:s10b: 1-1
+s10b2: 3-3
+s10b3: -1--1
+s10c: -1--1
+s10c2: -1--1
+s10g: -1--1
+s10l: -1--1
+s10m: -1--1
+s10m2: -1--1
+s10t: -1--1
+s10t2: -1--1
+s10u2: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt11	Cool in pans on a cooling rack for 30 minutes .
+# sentence level graph:
+(s11c / cool-01
+  :duration (s11t / temporal-quantity
+              :quant 30
+              :unit (s11m / minute))
+  :location (s11p / pan
+              :location (s11r / rack
+                          :ARG0-of (s11c2 / cool-01)))
+  :mode imperative)
+
+# alignment:s11c: 1-1
+s11c2: 6-6
+s11m: 10-10
+s11p: 3-3
+s11r: 7-7
+s11t: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt12	Gently remove each cookie tart , sprinkle with confectioner 's sugar and serve !
+# sentence level graph:
+(s12a / and
+  :op1 (s12r / remove-01
+         :ARG1 (s12t / tart
+                 :mod (s12c2 / cookie)
+                 :mod (s12e / each))
+         :manner (s12g / gentle))
+  :op2 (s12s2 / sprinkle-01
+         :ARG2 (s12s3 / sugar
+                 :mod (s12c / confection)))
+  :op3 (s12s / serve-02)
+  :mode imperative)
+
+# alignment:s12a: 12-12
+s12c: 9-9
+s12c2: 4-4
+s12e: 3-3
+s12g: -1--1
+s12r: 2-2
+s12s: 13-13
+s12s2: 7-7
+s12s3: 11-11
+s12t: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Pre heat oven to 350 degrees F. In a large bowl combine flour , powdered sugar , and cornstarch .
+Using a spoon , mix in apple sauce and vanilla extract until a soft dough forms .
+Shape dough into 1-inch balls and place in prepared muffin pans .
+Press dough in bottom and up the side of each muffin cup .
+Bake the dough - lined cup for about 8 - 10 minutes .
+Remove the muffin pan from the oven and let rest for a few minutes .
+Spoon 1 teaspoon of preserves into each muffin cup .
+In a small bowl mix together sugar , egg and coconut with a fork until well blended .
+Spoon a teaspoon of coconut mixture over preserves in each cup .
+Bake 23 -33 minutes or until cookie crusts are lightly golden brown .
+Cool in pans on a cooling rack for 30 minutes .
+Gently remove each cookie tart , sprinkle with confectioner 's sugar and serve !

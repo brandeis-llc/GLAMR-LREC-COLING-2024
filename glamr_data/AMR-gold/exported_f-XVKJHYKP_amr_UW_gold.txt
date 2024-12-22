@@ -1,0 +1,283 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1440
+export time: 9/14/2023, 3:45:04 PM
+
+# :: snt1	Preheat oven to 350 degrees F.
+# sentence level graph:
+(s1p / preheat-00
+  :ARG1 (s1o / oven)
+  :destination (s1t / temperature-quantity
+                 :quant 350
+                 :scale (s1f / fahrenheit))
+  :mode imperative)
+
+# alignment:s1f: 5-5
+s1o: 2-2
+s1t: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Line cookie sheet with parchment paper .
+# sentence level graph:
+(s2l / line-01
+  :ARG1 (s2s / sheet
+          :mod (s2c / cookie))
+  :ARG2 (s2p / paper
+          :mod (s2p2 / parchment))
+  :mode imperative)
+
+# alignment:s2c: 2-2
+s2l: 1-1
+s2p: 6-6
+s2p2: 5-5
+s2s: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	In a medium bowl , combine ground cereal and oats .
+# sentence level graph:
+(s3c2 / combine-01
+  :ARG1 (s3c / cereal
+          :ARG1-of (s3g / ground-01))
+  :ARG2 (s3o / oat)
+  :location (s3b / bowl
+              :mod (s3m / medium))
+  :mode imperative)
+
+# alignment:s3b: 4-4
+s3c: 8-8
+s3c2: 6-6
+s3g: 7-7
+s3m: 3-3
+s3o: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Toss .
+# sentence level graph:
+(s4t / toss-01
+  :mode imperative)
+
+# alignment:s4t: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Add agave , oil , vanilla and egg .
+# sentence level graph:
+(s5a / add-02
+  :ARG1 (s5a3 / and
+          :op1 (s5a2 / agave)
+          :op2 (s5o / oil)
+          :op3 (s5v / vanilla)
+          :op4 (s5e / egg))
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5a2: 2-2
+s5a3: 7-7
+s5e: 8-8
+s5o: 4-4
+s5v: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Mix until a thick sticky batter forms .
+# sentence level graph:
+(s6m / mix-01
+  :duration (s6u / until
+              :op1 (s6f / form-01
+                     :ARG1 (s6b / batter
+                             :mod (s6t / thick)
+                             :mod (s6s / sticky))))
+  :mode imperative)
+
+# alignment:s6b: 6-6
+s6f: 7-7
+s6m: 1-1
+s6s: 5-5
+s6t: 4-4
+s6u: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Fold in chocolate chips .
+# sentence level graph:
+(s7f / fold-01
+  :ARG1 (s7c / chip
+          :consist-of (s7c2 / chocolate))
+  :mode imperative)
+
+# alignment:s7c: 4-4
+s7c2: 3-3
+s7f: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Using 1 round tablespoon , scoop cookie dough onto baking sheets .
+# sentence level graph:
+(s8s / scoop-01
+  :ARG1 (s8d / dough
+          :mod (s8c2 / cookie))
+  :ARG2 (s8s2 / sheet
+          :purpose (s8b / bake-01))
+  :manner (s8u / use-01
+            :ARG1 (s8v / volume-quantity
+                    :quant 1
+                    :unit (s8t / tablespoon
+                            :mod (s8r / round))))
+  :mode imperative)
+
+# alignment:s8b: 10-10
+s8c2: 7-7
+s8d: 8-8
+s8r: -1--1
+s8s: 6-6
+s8s2: 11-11
+s8t: 4-4
+s8u: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	You should get about 1 dozen or so .
+# sentence level graph:
+(s9r / recommend-01
+  :ARG1 (s9g / get-01
+          :ARG0 (s9y / you)
+          :ARG1 (s9a / about
+                  :op1 (s9o / or
+                         :op1 12
+                         :op2 (s9s / so)))))
+
+# alignment:s9a: 4-4
+s9g: 3-3
+s9o: 7-7
+s9r: 2-2
+s9s: 8-8
+s9y: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Bake for approximately 8 minutes until golden around the edges .
+# sentence level graph:
+(s10b / bake-01
+  :duration (s10a / approximately
+              :op1 (s10t / temporal-quantity
+                     :quant 8
+                     :unit (s10m / minute)))
+  :mode imperative
+  :duration (s10u / until
+              :op1 (s10g / golden-00
+                     :location (s10a2 / around
+                                 :op1 (s10e / edge)))))
+
+# alignment:s10a: 3-3
+s10a2: 8-8
+s10b: 1-1
+s10e: 10-10
+s10g: 7-7
+s10m: 5-5
+s10t: 5-5
+s10u: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt11	Transfer to a cooling rack immediately .
+# sentence level graph:
+(s11t / transfer-01
+  :ARG2 (s11r / rack
+          :purpose (s11c / cool-01))
+  :mode imperative
+  :time (s11i / immediate))
+
+# alignment:s11c: 4-4
+s11i: 6-6
+s11r: 5-5
+s11t: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt12	Enjoy !
+# sentence level graph:
+(s12e / enjoy-01
+  :mode imperative)
+
+# alignment:s12e: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Preheat oven to 350 degrees F.
+Line cookie sheet with parchment paper .
+In a medium bowl , combine ground cereal and oats .
+Toss .
+Add agave , oil , vanilla and egg .
+Mix until a thick sticky batter forms .
+Fold in chocolate chips .
+Using 1 round tablespoon , scoop cookie dough onto baking sheets .
+You should get about 1 dozen or so .
+Bake for approximately 8 minutes until golden around the edges .
+Transfer to a cooling rack immediately .
+Enjoy !

@@ -1,0 +1,280 @@
+# :: f-XVKJHYKP::step01::sent01
+# :: snt1	Preheat oven to 350 degrees F.
+(s1p / preheat-00~0
+     :ARG1 (s1o / oven~1)
+     :destination (s1t / temperature-quantity
+                       :quant 350
+                       :scale (s1f / fahrenheit~5))
+     :mode imperative)
+
+
+# :: f-XVKJHYKP::step02::sent01
+# :: snt2	Line cookie sheet with parchment paper .
+(s2l / line-01~0
+     :ARG1 (s2s / sheet~2
+                :mod (s2c / cookie~1))
+     :ARG2 (s2p / paper~5
+                :mod (s2p2 / parchment~4))
+     :mode imperative)
+
+
+# :: f-XVKJHYKP::step03::sent01
+# :: snt3	In a medium bowl , combine ground cereal and oats .
+(s3c2 / combine-01~5
+      :ARG1 (s3c / cereal~7
+                 :ARG1-of (s3g / ground-01~6))
+      :ARG2 (s3o / oat~9)
+      :location (s3b / bowl~3
+                     :mod (s3m / medium~2))
+      :mode imperative
+      :ARG0 (s3y / you)
+      :event-structure (s3se / subevents
+                             :E1 (s3a / and
+                                      :op1 (s3m1 / mingled
+                                                 :polarity -
+                                                 :PATIENT_I s3c
+                                                 :PATIENT_J s3o)
+                                      :op2 (s3h / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT_I s3c
+                                                :V_STATE (s3c1 / combined)
+                                                :PATIENT_J s3o)
+                                      :op3 (s3h1 / has_material_integrity_state
+                                                 :polarity -
+                                                 :PATIENT_J s3o
+                                                 :V_STATE s3c1
+                                                 :PATIENT_I s3c))
+                             :E3 (s3a1 / and
+                                       :op1 (s3m2 / mingled
+                                                  :PATIENT_I s3c
+                                                  :PATIENT_J s3o)
+                                       :op2 (s3h2 / has_material_integrity_state
+                                                  :PATIENT_I s3c
+                                                  :V_STATE s3c1
+                                                  :PATIENT_J s3o)
+                                       :op3 (s3h3 / has_material_integrity_state
+                                                  :PATIENT_J s3o
+                                                  :V_STATE s3c1
+                                                  :PATIENT_I s3c))
+                             :E0 (s3d / do
+                                      :ACTION s3c2))
+      :imp_output (s3c3 / combine.RES))
+
+
+# :: f-XVKJHYKP::step03::sent02
+# :: snt4	Toss .
+(s4t / toss-01~0
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4b / be
+                                     :polarity -)
+                            :E3 (s4b1 / be)
+                            :E0 (s4d / do
+                                     :ACTION s4t))
+     :imp_output (s4t1 / toss.RES))
+
+
+# :: f-XVKJHYKP::step04::sent01
+# :: snt5	Add agave , oil , vanilla and egg .
+(s5a / add-02~0
+     :ARG1 (s5a3 / and~6
+                 :op1 (s5a2 / agave~1)
+                 :op2 (s5o / oil~3)
+                 :op3 (s5v / vanilla~5)
+                 :op4 (s5e / egg~7))
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5t / together
+                                     :polarity -
+                                     :PATIENT_I s5a2
+                                     :PATIENT_J s5o
+                                     :PATIENT_K s5v
+                                     :PATIENT_L s5e)
+                            :E3 (s5t1 / together
+                                      :PATIENT_I s5a2
+                                      :PATIENT_J s5o
+                                      :PATIENT_K s5v
+                                      :PATIENT_L s5e)
+                            :E0 (s5d / do
+                                     :ACTION s5a))
+     :imp_output (s5a1 / add.RES))
+
+
+# :: f-XVKJHYKP::step04::sent02
+# :: snt6	Mix until a thick sticky batter forms .
+(s6m / mix-01~0
+     :duration (s6u / until~1
+                    :op1 (s6f / form-01~6
+                              :ARG1 (s6b / batter~5
+                                         :mod (s6t / thick~3)
+                                         :mod (s6s / sticky~4))))
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6a / and
+                                     :op1 (s6m1 / mingled
+                                                :polarity -)
+                                     :op2 (s6h / has_material_integrity_state
+                                               :polarity -
+                                               :V_STATE (s6m2 / mixed))
+                                     :op3 (s6h1 / has_material_integrity_state
+                                                :polarity -
+                                                :V_STATE s6m2))
+                            :E3 (s6a1 / and
+                                      :op1 (s6m3 / mingled)
+                                      :op2 (s6h2 / has_material_integrity_state
+                                                 :V_STATE s6m2)
+                                      :op3 (s6h3 / has_material_integrity_state
+                                                 :V_STATE s6m2))
+                            :E0 (s6d / do
+                                     :ACTION s6m))
+     :imp_output (s6m4 / mix.RES))
+
+
+# :: f-XVKJHYKP::step05::sent01
+# :: snt7	Fold in chocolate chips .
+(s7f / fold-01~0
+     :ARG1 (s7c / chip~3
+                :consist-of (s7c2 / chocolate~2))
+     :mode imperative
+     :ARG0 (s7y / you)
+     :event-structure (s7se / subevents
+                            :E1 (s7b / be
+                                     :polarity -)
+                            :E2 (s7a / and
+                                     :op1 (s7b1 / be)
+                                     :op2 (s7m / made_of))
+                            :E0 (s7d / do
+                                     :ACTION s7f))
+     :imp_output (s7f1 / fold.RES))
+
+
+# :: f-XVKJHYKP::step06::sent01
+# :: snt8	Using 1 round tablespoon , scoop cookie dough onto baking sheets .
+(s8s / scoop-01~5
+     :ARG1 (s8d / dough~7
+                :mod (s8c2 / cookie))
+     :ARG2 (s8s2 / sheet~10
+                 :purpose (s8b / bake-01~9))
+     :manner (s8u / use-01~0
+                  :ARG1 (s8v / volume-quantity
+                             :quant 1
+                             :unit (s8t / tablespoon~3
+                                        :mod (s8r / round~2))))
+     :mode imperative
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8h / has_location
+                                     :THEME s8d)
+                            :E3 (s8a / and
+                                     :op1 (s8m / motion
+                                               :THEME s8d)
+                                     :op2 (s8h1 / has_location
+                                                :polarity -
+                                                :THEME s8d))
+                            :E4 (s8h2 / has_location
+                                      :THEME s8d
+                                      :DESTINATION s8s2)
+                            :E0 (s8d1 / do
+                                      :ACTION s8s))
+     :imp_output (s8s1 / scoop.RES))
+
+
+# :: f-XVKJHYKP::step06::sent02
+# :: snt9	You should get about 1 dozen or so .
+(s9r / recommend-01~1
+     :ARG1 (s9g / get-01~2
+                :ARG0 (s9y / you~0)
+                :ARG1 (s9a / about~3
+                           :op1 (s9o / or
+                                     :op1 12
+                                     :op2 (s9s / so~7)))
+                :ARG0 (s9y1 / you)
+                :event-structure (s9se / subevents
+                                       :E1 (s9a1 / and
+                                                 :op1 (s9h / has_possession
+                                                           :THEME s9s)
+                                                 :op2 (s9h1 / has_possession
+                                                            :polarity -
+                                                            :AGENT s9y
+                                                            :THEME s9s))
+                                       :E2 (s9t / transfer
+                                                :AGENT s9y
+                                                :THEME s9s)
+                                       :E3 (s9a2 / and
+                                                 :op1 (s9h2 / has_possession
+                                                            :AGENT s9y
+                                                            :THEME s9s)
+                                                 :op2 (s9h3 / has_possession
+                                                            :polarity -
+                                                            :THEME s9s))
+                                       :E0 (s9d / do
+                                                :ACTION s9g))
+                :imp_output (s9g1 / get.RES)))
+
+
+# :: f-XVKJHYKP::step07::sent01
+# :: snt10	Bake for approximately 8 minutes until golden around the edges .
+(s10b / bake-01~0
+      :duration (s10a / approximately~2
+                      :op1 (s10t / temporal-quantity
+                                 :quant 8
+                                 :unit (s10m / minute~4)))
+      :mode imperative
+      :duration (s10u / until~5
+                      :op1 (s10g / golden-00~6
+                                 :location (s10a2 / around~7
+                                                  :op1 (s10e / edge~9))))
+      :ARG0 (s10y / you)
+      :event-structure (s10se / subevents
+                              :E1 (s10c / cooked
+                                        :polarity -
+                                        :IMP_PATIENT (s10g1 / get.RES)
+                                        :V_FINAL_STATE (s10b1 / baked))
+                              :E3 (s10a1 / apply_heat
+                                         :IMP_PATIENT s10g1)
+                              :E4 (s10a3 / and
+                                         :op1 (s10c1 / cooked
+                                                     :IMP_PATIENT s10g1
+                                                     :V_FINAL_STATE s10b1)
+                                         :op2 (s10h / has_state
+                                                    :IMP_PATIENT s10g1
+                                                    :RESULT s10e))
+                              :E0 (s10d / do
+                                        :ACTION s10b))
+      :imp_output (s10b2 / bake.RES))
+
+
+# :: f-XVKJHYKP::step07::sent02
+# :: snt11	Transfer to a cooling rack immediately .
+(s11t / transfer-01~0
+      :ARG2 (s11r / rack~4
+                  :purpose (s11c / cool-01~3))
+      :mode imperative
+      :time (s11i / immediate~5)
+      :ARG0 (s11y / you)
+      :event-structure (s11se / subevents
+                              :E1 (s11h / has_location
+                                        :IMP_THEME (s11b / bake.RES))
+                              :E3 (s11a / and
+                                        :op1 (s11m / motion
+                                                   :IMP_THEME s11b)
+                                        :op2 (s11h1 / has_location
+                                                    :polarity -
+                                                    :IMP_THEME s11b))
+                              :E4 (s11h2 / has_location
+                                         :IMP_THEME s11b
+                                         :DESTINATION s11r)
+                              :E0 (s11d / do
+                                        :ACTION s11t))
+      :imp_output (s11t1 / transfer.RES))
+
+
+# :: f-XVKJHYKP::step07::sent03
+# :: snt12	Enjoy !
+(s12e / enjoy-01
+      :mode imperative)
+
+

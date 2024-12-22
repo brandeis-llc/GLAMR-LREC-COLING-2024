@@ -1,0 +1,433 @@
+# :: f-4R6HP6R7::step01::sent01
+# :: snt1	Place the oil into the bottom of your Instant Pot , and turn on the Saute mode .
+(s1a2 / and~11
+      :op1 (s1p / place-01~0
+                :ARG1 (s1o / oil~2)
+                :ARG2 (s1b / bottom~5
+                           :part-of (s1p2 / pot~9
+                                          :mod (s1i / instant~8)
+                                          :poss (s1y / you~7)))
+                :mode imperative
+                :ARG0 (s1y1 / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1h / has_location
+                                                :THEME s1o)
+                                       :E3 (s1a1 / and
+                                                 :op1 (s1m1 / motion
+                                                            :THEME s1o)
+                                                 :op2 (s1h1 / has_location
+                                                            :polarity -
+                                                            :THEME s1o))
+                                       :E4 (s1h2 / has_location
+                                                 :THEME s1o
+                                                 :DESTINATION s1p2)
+                                       :E0 (s1d / do
+                                                :ACTION s1p))
+                :imp_output (s1p1 / place.RES))
+      :op2 (s1t / turn-on-13~12,13
+                :ARG1 (s1m / mode~16
+                           :mod (s1a / Saute-01~15)))
+      :mode imperative)
+
+
+# :: f-4R6HP6R7::step01::sent02
+# :: snt2	While it is heating , liberally season your chicken breasts with the salt , pepper , garlic salt , and onion powder .
+(s2s3 / season-01~6
+      :ARG1 (s2b / breast~9
+                 :poss (s2y / you~7)
+                 :part-of (s2c / chicken~8))
+      :ARG2 (s2a / and
+                 :op1 (s2s / salt~12)
+                 :op2 (s2p / pepper~14)
+                 :op3 (s2s2 / salt~17
+                            :mod (s2g / garlic~16))
+                 :op4 (s2p2 / powder~21
+                            :consist-of (s2o / onion~20)))
+      :manner (s2l / liberation~5)
+      :mode imperative
+      :time (s2h / heat-01~3
+                 :ARG1 (s2i / it)
+                 :ARG0 (s2y1 / you)
+                 :event-structure (s2se / subevents
+                                        :E1 (s2c1 / cooked
+                                                  :polarity -
+                                                  :PATIENT (s2i1 / it~1)
+                                                  :V_FINAL_STATE (s2h1 / heated))
+                                        :E3 (s2a1 / apply_heat
+                                                  :PATIENT s2i1)
+                                        :E4 (s2c2 / cooked
+                                                  :PATIENT s2i1
+                                                  :V_FINAL_STATE s2h1)
+                                        :E0 (s2d / do
+                                                 :ACTION s2h))
+                 :imp_output (s2h2 / heat.RES))
+      :ARG0 s2y1
+      :event-structure (s2se1 / subevents
+                              :E1 (s2h3 / has_location
+                                        :THEME s2b)
+                              :E3 (s2a2 / and
+                                        :op1 (s2m / motion
+                                                  :THEME s2b)
+                                        :op2 (s2h4 / has_location
+                                                   :polarity -
+                                                   :THEME s2b))
+                              :E4 (s2h5 / has_location
+                                        :THEME s2b)
+                              :E0 (s2d1 / do
+                                        :ACTION s2s3))
+      :imp_output (s2s1 / season.RES))
+
+
+# :: f-4R6HP6R7::step01::sent03
+# :: snt3	Brown the chicken breasts on each side .
+(s3b2 / brown-01~0
+      :ARG1 (s3b / breast~3
+                 :part-of (s3c / chicken~2))
+      :location (s3s / side~6
+                     :mod (s3e / each~5))
+      :mode imperative
+      :ARG0 (s3y / you)
+      :event-structure (s3se / subevents
+                             :E1 (s3c1 / cooked
+                                       :polarity -
+                                       :PATIENT s3b
+                                       :V_FINAL_STATE (s3b1 / browned))
+                             :E3 (s3a / apply_heat
+                                      :PATIENT s3b)
+                             :E4 (s3c2 / cooked
+                                       :PATIENT s3b
+                                       :V_FINAL_STATE s3b1)
+                             :E0 (s3d / do
+                                      :ACTION s3b2))
+      :imp_output (s3b3 / brown.RES))
+
+
+# :: f-4R6HP6R7::step02::sent01
+# :: snt4	Once the breasts are browned , remove from the pot and set aside and add the sliced onion in .
+(s4a2 / and~10,13
+      :op1 (s4r / remove-01~6
+                :ARG1 "s4b"
+                :ARG2 (s4p / pot~9)
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4h / has_location)
+                                       :E3 (s4a1 / and
+                                                 :op1 (s4m / motion
+                                                           :IMP_THEME (s4b1 / brown.RES))
+                                                 :op2 (s4h1 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s4b1))
+                                       :E4 (s4h2 / has_location
+                                                 :IMP_THEME s4b1)
+                                       :E0 (s4d / do
+                                                :ACTION s4r))
+                :imp_outputI (s4r1 / remove.RES)
+                :imp_outputJ (s4r2 / remove.RES))
+      :op2 (s4s / set-01~11
+                :ARG1 "s4b"
+                :ARG2 (s4a3 / aside~12)
+                :ARG0 s4y
+                :event-structure (s4se1 / subevents
+                                        :E1 (s4h3 / has_location)
+                                        :E3 (s4a5 / and
+                                                  :op1 (s4m1 / motion
+                                                             :IMP_THEME s4r1)
+                                                  :op2 (s4h4 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s4r1))
+                                        :E4 (s4h5 / has_location
+                                                  :IMP_THEME s4r1
+                                                  :DESTINATION s4a3)
+                                        :E0 (s4d1 / do
+                                                  :ACTION s4s))
+                :imp_output (s4s1 / set.RES))
+      :op3 (s4a / add-02~14
+                :ARG1 (s4o / onion~17
+                           :ARG1-of (s4s2 / slice-01~16))
+                :ARG0 s4y
+                :event-structure (s4se2 / subevents
+                                        :E1 (s4t / together
+                                                 :polarity -
+                                                 :PATIENT_I s4o)
+                                        :E3 (s4t1 / together
+                                                  :PATIENT_I s4o)
+                                        :E0 (s4d2 / do
+                                                  :ACTION s4a))
+                :imp_output (s4a6 / add.RES))
+      :time (s4a4 / after
+                  :op1 (s4b3 / brown-01~4
+                             :ARG1 (s4b / breast~2)))
+      :mode imperative)
+
+
+# :: f-4R6HP6R7::step02::sent02
+# :: snt5	Saute for 3 - 4 minutes , stirring frequently .
+(s5a / and
+     :op1 (s5s2 / saute~0
+                :duration (s5b / between
+                               :op1 (s5t2 / temporal-quantity
+                                          :unit (s5m2 / minute~5)
+                                          :quant 3)
+                               :op2 (s5t / temporal-quantity
+                                         :unit (s5m / minute)
+                                         :quant 4))
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5c / cooked
+                                                :polarity -
+                                                :IMP_PATIENT (s5a1 / add.RES)
+                                                :V_FINAL_STATE (s5s1 / sauted))
+                                       :E3 (s5a2 / apply_heat
+                                                 :IMP_PATIENT s5a1)
+                                       :E4 (s5c1 / cooked
+                                                 :IMP_PATIENT s5a1
+                                                 :V_FINAL_STATE s5s1)
+                                       :E0 (s5d / do
+                                                :ACTION s5s2))
+                :imp_output (s5s3 / saute.RES))
+     :op2 (s5s / stir-01~7
+               :manner (s5f / frequent-02~8)
+               :ARG0 s5y
+               :event-structure (s5se1 / subevents
+                                       :E1 (s5h / has_material_integrity_state
+                                                :polarity -
+                                                :IMP_PATIENT s5s3
+                                                :V_STATE (s5s4 / stirred))
+                                       :E3 (s5h1 / has_material_integrity_state
+                                                 :IMP_PATIENT s5s3
+                                                 :V_STATE s5s4)
+                                       :E0 (s5d1 / do
+                                                 :ACTION s5s))
+               :imp_output (s5s5 / stir.RES))
+     :mode imperative)
+
+
+# :: f-4R6HP6R7::step03::sent01
+# :: snt6	Add in the dry hard cider , diced tomatoes , cilantro , and salsa .
+(s6a / add-02~0
+     :ARG1 (s6a2 / and
+                 :op1 (s6c / cider~5
+                           :ARG1-of (s6h / hard-04~4)
+                           :mod (s6d / dry-02~3))
+                 :op2 (s6t / tomato~8
+                           :ARG1-of (s6d2 / dice-01~7))
+                 :op3 (s6c2 / cilantro~10)
+                 :op4 (s6s / salsa~13))
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6t1 / together
+                                      :polarity -
+                                      :PATIENT_I s6c
+                                      :PATIENT_J s6t
+                                      :PATIENT_K s6c2
+                                      :PATIENT_L s6s)
+                            :E3 (s6t2 / together
+                                      :PATIENT_I s6c
+                                      :PATIENT_J s6t
+                                      :PATIENT_K s6c2
+                                      :PATIENT_L s6s)
+                            :E0 (s6d1 / do
+                                      :ACTION s6a))
+     :imp_output (s6a1 / add.RES))
+
+
+# :: f-4R6HP6R7::step03::sent02
+# :: snt7	Place the chicken into this mixture , replace the lid , and change the function of your pot to Manual and set the timer to 8 minutes .
+(s7a / and
+     :op1 (s7p / place-01~0
+               :ARG1 (s7c2 / chicken~2)
+               :ARG2 (s7m3 / mixture~5
+                           :mod (s7t2 / this~4))
+               :ARG0 (s7y1 / you)
+               :event-structure (s7se / subevents
+                                      :E1 (s7h / has_location
+                                               :THEME s7c2)
+                                      :E3 (s7a1 / and
+                                                :op1 (s7m1 / motion
+                                                           :THEME s7c2)
+                                                :op2 (s7h1 / has_location
+                                                           :polarity -
+                                                           :THEME s7c2))
+                                      :E4 (s7h2 / has_location
+                                                :THEME s7c2
+                                                :DESTINATION s7m3)
+                                      :E0 (s7d / do
+                                               :ACTION s7p))
+               :imp_output (s7p1 / place.RES))
+     :op2 (s7r / replace-01~7
+               :ARG1 (s7l / lid~9))
+     :op3 (s7a2 / and~20
+                :op1 (s7c / change-01~12
+                          :ARG1 (s7f / function-01~14
+                                     :ARG0 (s7p2 / pot~17
+                                                 :poss (s7y / you~16)))
+                          :ARG2 (s7m2 / manual~19))
+                :op2 (s7s / set-08~21
+                          :ARG1 (s7t3 / timer~23)
+                          :ARG2 (s7t / temporal-quantity
+                                     :quant 8
+                                     :unit (s7m / minute~26))))
+     :mode imperative)
+
+
+# :: f-4R6HP6R7::step04::sent01
+# :: snt8	Once the pot is finished , do a quick release of the pressure and remove the chicken from the pot .
+(s8a / and
+     :op1 (s8r / release-01~9
+               :ARG1 (s8p2 / pressure~12)
+               :ARG1-of (s8q / quick-02~8))
+     :op2 (s8r2 / remove-01~14
+                :ARG1 (s8c / chicken~16)
+                :ARG2 (s8p / pot~2,19)
+                :ARG0 s8y
+                :event-structure (s8se / subevents
+                                       :E1 (s8h / has_location
+                                                :THEME s8c)
+                                       :E3 (s8a1 / and
+                                                 :op1 (s8m / motion
+                                                           :THEME s8c)
+                                                 :op2 (s8h1 / has_location
+                                                            :polarity -
+                                                            :THEME s8c))
+                                       :E4 (s8h2 / has_location
+                                                 :THEME s8c)
+                                       :E0 (s8d / do
+                                                :ACTION s8r2))
+                :imp_outputI (s8r1 / remove.RES)
+                :imp_outputJ (s8r3 / remove.RES))
+     :time (s8f / finish-01~4
+                :ARG1 s8p
+                :ARG0 (s8y / you))
+     :mode imperative)
+
+
+# :: f-4R6HP6R7::step04::sent02
+# :: snt9	Shred the chicken with two forks , and return to the pot .
+(s9a / and~7
+     :op1 (s9s / shred-01~0
+               :ARG1 (s9c / chicken~2)
+               :instrument (s9f / fork~5
+                                :quant 2)
+               :ARG0 (s9y / you)
+               :event-structure (s9se / subevents
+                                      :E1 (s9a1 / and
+                                                :op1 (s9d / degradation_material_integrity
+                                                          :polarity -
+                                                          :PATIENT s9c)
+                                                :op2 (s9h / has_physical_form
+                                                          :polarity -
+                                                          :PATIENT s9c
+                                                          :V_FINAL_STATE (s9s1 / shredded)))
+                                      :E2 (s9c1 / contact
+                                                :PATIENT s9c
+                                                :INSTRUMENT s9f)
+                                      :E3 (s9a2 / and
+                                                :op1 (s9d1 / degradation_material_integrity
+                                                           :PATIENT s9c)
+                                                :op2 (s9h1 / has_physical_form
+                                                           :PATIENT s9c
+                                                           :V_FINAL_STATE s9s1))
+                                      :E0 (s9d2 / do
+                                                :ACTION s9s))
+               :imp_output (s9s2 / shre.RES))
+     :op2 (s9r / return-04~8
+               :ARG1 s9c
+               :ARG2 (s9p / pot)
+               :ARG0 s9y
+               :event-structure (s9se1 / subevents
+                                       :E1 (s9h2 / has_location
+                                                 :IMP_THEME_I s9s2
+                                                 :IMP_THEME_J (s9r1 / remove.RES))
+                                       :E3 (s9a3 / and
+                                                 :op1 (s9m / motion
+                                                           :IMP_THEME_I s9s2
+                                                           :IMP_THEME_J s9r1)
+                                                 :op2 (s9h3 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME_I s9s2
+                                                            :IMP_THEME_J s9r1))
+                                       :E4 (s9h4 / has_location
+                                                 :IMP_THEME_I s9s2
+                                                 :IMP_THEME_J s9r1)
+                                       :E0 (s9d3 / do
+                                                 :ACTION s9r))
+               :imp_output (s9r2 / return.RES))
+     :mode imperative)
+
+
+# :: f-4R6HP6R7::step04::sent03
+# :: snt10	Turn the pot back to saute , and add in the taco seasoning packet .
+(s10a2 / and~7
+       :op1 (s10t2 / turn-01~0
+                   :ARG1 (s10p2 / pot~2)
+                   :purpose (s10s2 / saute-01~5
+                                   :ARG0 (s10y / you)
+                                   :event-structure (s10se / subevents
+                                                           :E1 (s10c / cooked
+                                                                     :polarity -
+                                                                     :IMP_PATIENT (s10r / return.RES)
+                                                                     :V_FINAL_STATE (s10s1 / sauted))
+                                                           :E3 (s10a1 / apply_heat
+                                                                      :IMP_PATIENT s10r)
+                                                           :E4 (s10c1 / cooked
+                                                                      :IMP_PATIENT s10r
+                                                                      :V_FINAL_STATE s10s1)
+                                                           :E0 (s10d / do
+                                                                     :ACTION s10s2))
+                                   :imp_output (s10s3 / saute.RES))
+                   :direction (s10b / back~3))
+       :op2 (s10a / add-02~8
+                  :ARG1 (s10p / packet~13
+                              :ARG0-of (s10s / season-01~12))
+                  :ARG0 s10y
+                  :event-structure (s10se1 / subevents
+                                           :E1 (s10t / together
+                                                     :polarity -
+                                                     :PATIENT_I s10p)
+                                           :E3 (s10t1 / together
+                                                      :PATIENT_I s10p)
+                                           :E0 (s10d1 / do
+                                                      :ACTION s10a))
+                  :imp_output (s10a3 / add.RES))
+       :mode imperative)
+
+
+# :: f-4R6HP6R7::step04::sent04
+# :: snt11	Stir constantly for 2 minutes until the mixture is slightly thickened .
+(s11s2 / stir-02~0
+       :duration (s11t / temporal-quantity
+                       :quant 2
+                       :unit (s11m / minute~4))
+       :manner (s11c / constant~1)
+       :mode imperative
+       :time (s11u / until~5
+                   :op1 (s11t2 / thicken-01~10
+                               :ARG1 (s11m2 / mixture~7)
+                               :degree (s11s / slight~9)))
+       :ARG0 (s11y / you)
+       :event-structure (s11se / subevents
+                               :E1 (s11h / has_material_integrity_state
+                                         :polarity -
+                                         :IMP_PATIENT (s11a / add.RES)
+                                         :V_STATE (s11s1 / stirred))
+                               :E3 (s11h1 / has_material_integrity_state
+                                          :IMP_PATIENT s11a
+                                          :V_STATE s11s1)
+                               :E0 (s11d / do
+                                         :ACTION s11s2))
+       :imp_output (s11s3 / stir.RES))
+
+
+# :: f-4R6HP6R7::step05::sent01
+# :: snt12	Serve with your favorite taco fixings , and enjoy !
+(s12a / and
+      :op1 (s12s / serve-02
+                 :accompanier (s12t2 / thing
+                                     :ARG1-of (s12f2 / fixings
+                                                     :ARG1 (s12t / taco)
+                                                     :ARG1-of (s12f / favor-01))))
+      :op2 (s12e / enjoy-01)
+      :mode imperative)
+
+

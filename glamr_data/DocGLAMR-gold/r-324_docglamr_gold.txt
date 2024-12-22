@@ -1,0 +1,91 @@
+# :: r-324::step01::sent01
+# :: snt1	Heat oil in a skillet , add chicken and brown on both sides , 3 - 5 minutes per side , remove .
+(s1 / sentence
+    :coref ((s1o :cut s1h2)
+			(s1h2 :aggregation s1a2)
+			(s1a2 :cut s1b5)
+			(s1b5 :separation s1r1)
+			(s1r1 :separation s1r3)
+			(s1c :aggregation s1a2)
+			(s1a2 :separation s1r1)))
+
+
+# :: r-324::step02::sent01
+# :: snt2	Add onions and garlic to pan , cook for 2 minutes .
+(s2 / sentence
+    :coref ((s2o :aggregation s2a1)
+			(s2a1 :cut s2c4)
+			(s2g :aggregation s2a1)))
+
+
+# :: r-324::step03::sent01
+# :: snt3	Add walnuts , cook for 1 minute .
+(s3 / sentence
+    :coref ((s2c4 :aggregation s3a1)
+			(s3a1 :cut s3c4)
+			(s2a1 :aggregation s3a1)
+			(s3w :aggregation s3a1)))
+
+
+# :: r-324::step04::sent01
+# :: snt4	Add flour , cinnamon , red pepper flakes , stirring .
+(s4 / sentence
+    :coref ((s3c4 :aggregation s4a1)
+			(s4a1 :cut s4s2)
+			(s3a1 :aggregation s4a1)
+			(s3a1 :cut s4s2)
+			(s4f2 :aggregation s4a1)
+			(s4c :aggregation s4a1)
+			(s4r :aggregation s4a1)))
+
+
+# :: r-324::step05::sent01
+# :: snt5	Add broth , stir to mix well .
+(s5 / sentence
+    :coref ((s4s2 :aggregation s5a1)
+			(s5a1 :cut s5s2)
+			(s4a1 :aggregation s5a1)
+			(s4s2 :cut s5s2)
+			(s4a1 :cut s5s2)
+			(s5b :aggregation s5a1)))
+
+
+# :: r-324::step06::sent01
+# :: snt6	Return chicken to pan , cover , simmer 15 minutes until chicken is cooked through and sauce thickens .
+(s6 / sentence
+    :coref ((s1r3 :aggregation s6r1)
+			(s6r1 :cut s6c1)
+			(s6c1 :cut s6s3)
+			(s1r1 :aggregation s6r1)
+			(s6r1 :cut s6s3)
+			(s5s2 :aggregation s6r1)
+			(s5a1 :aggregation s6r1)
+			(s5s2 :cut s6c1)
+			(s5s2 :cut s6s3)
+			(s4a1 :aggregation s6r1)
+			(s4a1 :cut s6c1)
+			(s5a1 :cut s6c1)))
+
+
+# :: r-324::step07::sent01
+# :: snt7	Stir in parsley , salt , pepper , vinegar .
+(s7 / sentence
+    :coref ((s6s3 :aggregation s7s3)
+			(s6r1 :aggregation s7s3)
+			(s6c1 :aggregation s7s3)
+			(s7p :aggregation s7s3)
+			(s7s :aggregation s7s3)
+			(s7p2 :aggregation s7s3)
+			(s7v :aggregation s7s3)))
+
+
+# :: r-324::step08::sent01
+# :: snt8	Serve over rice .
+(s8 / sentence
+    :coref ((s7s3 :aggregation s8s2)
+			(s6s3 :aggregation s8s2)
+			(s6r1 :aggregation s8s2)
+			(s6c1 :aggregation s8s2)
+			(s8r :aggregation s8s2)))
+
+

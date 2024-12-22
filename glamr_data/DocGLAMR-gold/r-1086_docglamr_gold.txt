@@ -1,0 +1,33 @@
+# :: r-1086::step01::sent01
+# :: snt1	Preheat oven to 350degF.
+(s1 / sentence)
+
+
+# :: r-1086::step02::sent01
+# :: snt2	Combine meat ball ingredients and shape into meat balls .
+(s2 / sentence
+    :coref ((s2m :cut s2c2)
+			(s2c2 :cut s2s)))
+
+
+# :: r-1086::step03::sent01
+# :: snt3	Bake 30 minutes or more depending on size .
+(s3 / sentence
+    :coref ((s2s :cut s3b2)))
+
+
+# :: r-1086::step04::sent01
+# :: snt4	Simmer in the sauce for 5 minutes before serving .
+(s4 / sentence
+    :coref ((s3b2 :aggregation s4s4)
+			(s4s4 :cut s4s5)
+			(s4s5 :aggregation s4s3)
+			(s4s :aggregation s4s4)
+			(s4s4 :aggregation s4s3)))
+
+
+# :: r-1086::step04::sent02
+# :: snt5	Sprinkle with scallions .
+(s5 / sentence)
+
+

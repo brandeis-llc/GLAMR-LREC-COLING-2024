@@ -1,0 +1,157 @@
+# :: r-217::step01::sent01
+# :: snt1	Place fruit in serving bowl .
+(s1p / place-01~0
+     :ARG1 (s1f / fruit~1)
+     :ARG2 (s1b / bowl~4
+                :purpose (s1s / serve-02~3))
+     :mode imperative
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1h / has_location
+                                     :THEME s1f)
+                            :E3 (s1a / and
+                                     :op1 (s1m / motion
+                                               :THEME s1f)
+                                     :op2 (s1h1 / has_location
+                                                :polarity -
+                                                :THEME s1f))
+                            :E4 (s1h2 / has_location
+                                      :THEME s1f
+                                      :DESTINATION s1b)
+                            :E0 (s1d / do
+                                     :ACTION s1p))
+     :imp_output (s1p1 / place.RES))
+
+
+# :: r-217::step02::sent01
+# :: snt2	Pour orange juice over fruit and mix gently .
+(s2a / and
+     :op1 (s2p / pour-01~0
+               :ARG1 (s2j / juice~2
+                          :source (s2o / orange~1))
+               :ARG3 (s2f / fruit~4)
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E1 (s2h / has_location
+                                               :THEME s2j)
+                                      :E3 (s2a1 / and
+                                                :op1 (s2m1 / motion
+                                                           :THEME s2j)
+                                                :op2 (s2h1 / has_location
+                                                           :polarity -
+                                                           :THEME s2j))
+                                      :E4 (s2h2 / has_location
+                                                :THEME s2j
+                                                :DESTINATION s2f)
+                                      :E0 (s2d / do
+                                               :ACTION s2p))
+               :imp_output (s2p1 / pour.RES))
+     :op2 (s2m / mix-01~6
+               :manner (s2g / gentle~7)
+               :ARG0 s2y
+               :event-structure (s2se1 / subevents
+                                       :E1 (s2a2 / and
+                                                 :op1 (s2m2 / mingled
+                                                            :polarity -)
+                                                 :op2 (s2h3 / has_material_integrity_state
+                                                            :polarity -
+                                                            :V_STATE (s2m3 / mixed))
+                                                 :op3 (s2h4 / has_material_integrity_state
+                                                            :polarity -
+                                                            :V_STATE s2m3))
+                                       :E3 (s2a3 / and
+                                                 :op1 (s2m4 / mingled)
+                                                 :op2 (s2h5 / has_material_integrity_state
+                                                            :V_STATE s2m3)
+                                                 :op3 (s2h6 / has_material_integrity_state
+                                                            :V_STATE s2m3))
+                                       :E0 (s2d1 / do
+                                                 :ACTION s2m))
+               :imp_output (s2m5 / mix.RES))
+     :mode imperative)
+
+
+# :: r-217::step03::sent01
+# :: snt3	Garnish with almonds or coconut .
+(s3g / Garnish-01~0
+     :ARG2 (s3o / or
+                :op1 (s3a2 / almond~2)
+                :op2 (s3c / coconut~4))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3h / has_location
+                                     :THEME s3c)
+                            :E3 (s3a / and
+                                     :op1 (s3m / motion
+                                               :THEME s3c)
+                                     :op2 (s3h1 / has_location
+                                                :polarity -
+                                                :THEME s3c))
+                            :E4 (s3h2 / has_location
+                                      :THEME s3c)
+                            :E0 (s3d / do
+                                     :ACTION s3g))
+     :imp_output (s3g1 / garnish.RES))
+
+
+# :: r-217::step04::sent01
+# :: snt4	Cover and chill several hours before serving .
+(s4a / and
+     :op1 (s4c2 / cover-02~0
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4h1 / has_location
+                                                 :IMP_THEME (s4g / garnish.RES))
+                                       :E3 (s4a1 / and
+                                                 :op1 (s4m / motion
+                                                           :IMP_THEME s4g)
+                                                 :op2 (s4h2 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s4g))
+                                       :E4 (s4h3 / has_location
+                                                 :IMP_THEME s4g)
+                                       :E0 (s4d / do
+                                                :ACTION s4c2))
+                :imp_output (s4c1 / cover.RES))
+     :op2 (s4c / chill-01~2
+               :ARG0 s4y
+               :event-structure (s4se1 / subevents
+                                       :E1 (s4h4 / has_state
+                                                 :polarity -
+                                                 :IMP_PATIENT s4c1
+                                                 :V_FINAL_STATE (s4c3 / chilled))
+                                       :E3 (s4h5 / has_state
+                                                 :IMP_PATIENT s4c1
+                                                 :V_FINAL_STATE s4c3)
+                                       :E0 (s4d1 / do
+                                                 :ACTION s4c))
+               :imp_output (s4c4 / chill.RES))
+     :duration (s4s2 / several~3
+                     :op1 (s4t / temporal-quantity
+                               :quant 1
+                               :unit (s4h / hour~4)))
+     :time (s4b / before~5
+                :op1 (s4s / serve-02~6
+                          :ARG0 s4y
+                          :event-structure (s4se2 / subevents
+                                                  :E1 (s4a2 / and
+                                                            :op1 (s4h6 / has_possession
+                                                                       :IMP_THEME s4c4)
+                                                            :op2 (s4h7 / has_possession
+                                                                       :polarity -
+                                                                       :IMP_THEME s4c4))
+                                                  :E2 (s4t1 / transfer
+                                                            :IMP_THEME s4c4)
+                                                  :E3 (s4a3 / and
+                                                            :op1 (s4h8 / has_possession
+                                                                       :IMP_THEME s4c4)
+                                                            :op2 (s4h9 / has_possession
+                                                                       :polarity -
+                                                                       :IMP_THEME s4c4))
+                                                  :E0 (s4d2 / do
+                                                            :ACTION s4s))
+                          :imp_output (s4s1 / serve.RES)))
+     :mode imperative)
+
+

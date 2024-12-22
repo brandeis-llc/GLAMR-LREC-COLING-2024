@@ -1,0 +1,303 @@
+# :: r-1741::step01::sent01
+# :: snt1	Heat the oil in a large skillet .
+(s1h / heat-01~0
+     :ARG1 (s1o / oil~2)
+     :location (s1s / skillet~6
+                    :mod (s1l / large~5))
+     :mode imperative
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1c / cooked
+                                     :polarity -
+                                     :PATIENT s1o
+                                     :V_FINAL_STATE (s1h1 / heated))
+                            :E3 (s1a / apply_heat
+                                     :PATIENT s1o)
+                            :E4 (s1c1 / cooked
+                                      :PATIENT s1o
+                                      :V_FINAL_STATE s1h1)
+                            :E0 (s1d / do
+                                     :ACTION s1h))
+     :imp_output (s1h2 / heat.RES))
+
+
+# :: r-1741::step02::sent01
+# :: snt2	Add the garlic , jalapeno , green onions and onions .
+(s2a / add-02~0
+     :ARG1 (s2a2 / and~8
+                 :op1 (s2g / garlic~2)
+                 :op2 (s2j / jalapeno~4)
+                 :op3 (s2o / onion~9)
+                 :op4 (s2o2 / onion~7
+                            :mod (s2g2 / green~6)))
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2t / together
+                                     :polarity -
+                                     :PATIENT_I s2g
+                                     :PATIENT_J s2j
+                                     :PATIENT_K s2o2
+                                     :PATIENT_L s2o)
+                            :E3 (s2t1 / together
+                                      :PATIENT_I s2g
+                                      :PATIENT_J s2j
+                                      :PATIENT_K s2o2
+                                      :PATIENT_L s2o)
+                            :E0 (s2d / do
+                                     :ACTION s2a))
+     :imp_output (s2a1 / add.RES))
+
+
+# :: r-1741::step03::sent01
+# :: snt3	Cook , stirring , for 2 minutes , then add the sirloin strips to the pan .
+(s3a2 / and
+      :op1 (s3c / cook-01~0
+                :manner (s3s2 / stir-01~2
+                              :ARG0 s3y
+                              :event-structure (s3se1 / subevents
+                                                      :E1 (s3h / has_material_integrity_state
+                                                               :polarity -
+                                                               :IMP_PATIENT s3c4
+                                                               :V_STATE (s3s1 / stirred))
+                                                      :E3 (s3h1 / has_material_integrity_state
+                                                                :IMP_PATIENT s3c4
+                                                                :V_STATE s3s1)
+                                                      :E0 (s3d1 / do
+                                                                :ACTION s3s2))
+                              :imp_output (s3s4 / stir.RES))
+                :duration (s3t / temporal-quantity
+                               :unit (s3m / minute~6)
+                               :quant 2)
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3c1 / cooked
+                                                 :polarity -
+                                                 :IMP_PATIENT (s3a1 / add.RES)
+                                                 :V_FINAL_STATE (s3c2 / cooked))
+                                       :E3 (s3a3 / apply_heat
+                                                 :IMP_PATIENT s3a1)
+                                       :E4 (s3c3 / cooked
+                                                 :IMP_PATIENT s3a1
+                                                 :V_FINAL_STATE s3c2)
+                                       :E0 (s3d / do
+                                                :ACTION s3c))
+                :imp_output (s3c4 / cook.RES))
+      :op2 (s3a / add-02~9
+                :ARG1 (s3s3 / strip~12
+                            :consist-of (s3s / sirloin~11))
+                :location (s3p / pan~15)
+                :time (s3t2 / then~8)
+                :ARG0 s3y
+                :event-structure (s3se2 / subevents
+                                        :E1 (s3t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s3s3
+                                                  :PATIENT_J s3p)
+                                        :E3 (s3t3 / together
+                                                  :PATIENT_I s3s3
+                                                  :PATIENT_J s3p)
+                                        :E0 (s3d2 / do
+                                                  :ACTION s3a))
+                :imp_output (s3a4 / add.RES))
+      :mode imperative)
+
+
+# :: r-1741::step04::sent01
+# :: snt4	Sprinkle the meat with the curry powder and ginger .
+(s4s / sprinkle-01~0
+     :ARG1 (s4a / and~7
+                :op1 (s4p / powder~6
+                          :mod (s4c / curry~5))
+                :op2 (s4g / ginger~8))
+     :ARG2 (s4m / meat~2)
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4h / has_location
+                                     :THEME s4g)
+                            :E3 (s4a1 / and
+                                      :op1 (s4m1 / motion
+                                                 :THEME s4g)
+                                      :op2 (s4h1 / has_location
+                                                 :polarity -
+                                                 :THEME s4g))
+                            :E4 (s4h2 / has_location
+                                      :THEME s4g
+                                      :DESTINATION s4m)
+                            :E0 (s4d / do
+                                     :ACTION s4s))
+     :imp_output (s4s1 / sprinkle.RES))
+
+
+# :: r-1741::step05::sent01
+# :: snt5	Cook over medium heat , stirring and turning , until the meat is browned , about 5 minutes .
+(s5c / cook-01~0
+     :manner (s5h / heat~3
+                  :mod (s5m2 / medium~2))
+     :manner (s5a2 / and~6
+                   :op1 (s5s / stir-01~5
+                             :ARG0 s5y
+                             :event-structure (s5se1 / subevents
+                                                     :E1 (s5h2 / has_material_integrity_state
+                                                               :polarity -
+                                                               :IMP_PATIENT s5c4
+                                                               :V_STATE (s5s2 / stirred))
+                                                     :E3 (s5h3 / has_material_integrity_state
+                                                               :IMP_PATIENT s5c4
+                                                               :V_STATE s5s2)
+                                                     :E0 (s5d1 / do
+                                                               :ACTION s5s))
+                             :imp_output (s5s3 / stir.RES))
+                   :op2 (s5t2 / turn-01~7
+                              :ARG0 s5y
+                              :event-structure (s5se2 / subevents
+                                                      :E1 (s5h4 / has_orientation
+                                                                :polarity -
+                                                                :IMP_THEME s5s3
+                                                                :V_ORIENTATION (s5t1 / turned))
+                                                      :E3 (s5r / rotational_motion
+                                                               :IMP_THEME s5s3)
+                                                      :E4 (s5h5 / has_orientation
+                                                                :IMP_THEME s5s3
+                                                                :V_ORIENTATION s5t1)
+                                                      :E0 (s5d2 / do
+                                                                :ACTION s5t2))
+                              :imp_output (s5t3 / turn.RES)))
+     :mode imperative
+     :duration (s5u / until~9
+                    :op1 (s5b / brown-01~13
+                              :ARG1 (s5m / meat~11))
+                    :op2 (s5a / about~15
+                              :op1 (s5t / temporal-quantity
+                                        :quant 5
+                                        :unit (s5m3 / minute~17))))
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5c1 / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s5s1 / sprinkle.RES)
+                                      :V_FINAL_STATE (s5c2 / cooked))
+                            :E3 (s5a1 / apply_heat
+                                      :INSTRUMENT s5h
+                                      :IMP_PATIENT s5s1)
+                            :E4 (s5a3 / and
+                                      :op1 (s5c3 / cooked
+                                                 :IMP_PATIENT s5s1
+                                                 :V_FINAL_STATE s5c2)
+                                      :op2 (s5h1 / has_state
+                                                 :IMP_PATIENT s5s1
+                                                 :RESULT s5b))
+                            :E0 (s5d / do
+                                     :ACTION s5c))
+     :imp_output (s5c4 / cook.RES))
+
+
+# :: r-1741::step06::sent01
+# :: snt6	Add the coconut milk .
+(s6a / add-02~0
+     :ARG1 (s6m / milk~3
+                :source (s6c / coconut~2))
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6t / together
+                                     :polarity -
+                                     :PATIENT_I s6m)
+                            :E3 (s6t1 / together
+                                      :PATIENT_I s6m)
+                            :E0 (s6d / do
+                                     :ACTION s6a))
+     :imp_output (s6a1 / add.RES))
+
+
+# :: r-1741::step07::sent01
+# :: snt7	Lower the heat to a simmer and cover the pan .
+(s7a / and~6
+     :op1 (s7l / lower-05~0
+               :ARG1 (s7h / heat~2)
+               :ARG4 (s7s / simmer~5))
+     :op2 (s7c / cover-02~7
+               :ARG1 (s7p / pan~9)
+               :ARG0 (s7y / you)
+               :event-structure (s7se / subevents
+                                      :E1 (s7h1 / has_location
+                                                :IMP_THEME (s7s1 / simmer.RES))
+                                      :E3 (s7a1 / and
+                                                :op1 (s7m / motion
+                                                          :IMP_THEME s7s1)
+                                                :op2 (s7h2 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME s7s1))
+                                      :E4 (s7h3 / has_location
+                                                :IMP_THEME s7s1
+                                                :DESTINATION s7p)
+                                      :E0 (s7d / do
+                                               :ACTION s7c))
+               :imp_output (s7c1 / cover.RES))
+     :mode imperative)
+
+
+# :: r-1741::step08::sent01
+# :: snt8	Cook for an additional 15 to 20 minutes , or until the meat is tender .
+(s8c / cook-01~0
+     :duration (s8o / or
+                    :op1 (s8b / between
+                              :op1 (s8t / temporal-quantity
+                                        :unit (s8m2 / minute)
+                                        :quant 15)
+                              :op2 (s8t2 / temporal-quantity
+                                         :unit (s8m3 / minute~7)
+                                         :quant 20)
+                              :mod (s8a / additional~3))
+                    :op2 (s8u / until~10
+                              :op1 (s8t3 / tender~14
+                                         :domain (s8m / meat~12))))
+     :mode imperative
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8c1 / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s8c2 / cover.RES)
+                                      :V_FINAL_STATE (s8c3 / cooked))
+                            :E3 (s8a1 / apply_heat
+                                      :IMP_PATIENT s8c2)
+                            :E4 (s8a2 / and
+                                      :op1 (s8c4 / cooked
+                                                 :IMP_PATIENT s8c2
+                                                 :V_FINAL_STATE s8c3)
+                                      :op2 (s8h / has_state
+                                                :IMP_PATIENT s8c2
+                                                :RESULT s8t3))
+                            :E0 (s8d / do
+                                     :ACTION s8c))
+     :imp_output (s8c5 / cook.RES))
+
+
+# :: r-1741::step09::sent01
+# :: snt9	Serve over hot rice .
+(s9s / serve-02~0
+     :accompanier (s9r / rice~3
+                       :mod (s9h / hot~2))
+     :mode imperative
+     :ARG0 (s9y / you)
+     :event-structure (s9se / subevents
+                            :E1 (s9a / and
+                                     :op1 (s9h1 / has_possession
+                                                :IMP_THEME (s9c / cook.RES))
+                                     :op2 (s9h2 / has_possession
+                                                :polarity -
+                                                :IMP_THEME s9c))
+                            :E2 (s9t / transfer
+                                     :IMP_THEME s9c)
+                            :E3 (s9a1 / and
+                                      :op1 (s9h3 / has_possession
+                                                 :IMP_THEME s9c)
+                                      :op2 (s9h4 / has_possession
+                                                 :polarity -
+                                                 :IMP_THEME s9c))
+                            :E0 (s9d / do
+                                     :ACTION s9s))
+     :imp_output (s9s1 / serve.RES))
+
+

@@ -1,0 +1,61 @@
+# :: f-6RCGMZKY::step01::sent01
+# :: snt1	Combine the 2 1/2 cups sugar , water , vanilla and other flavoring choices into a heavy bottom saucepan .
+(s1 / sentence
+    :coref ((s1s2 :aggregation s1c4)
+			(s1w :aggregation s1c4)
+			(s1v :aggregation s1c4)
+			(s1f :aggregation s1c4)))
+
+
+# :: f-6RCGMZKY::step02::sent01
+# :: snt2	Heat over medium heat until the sugar is dissolved , do not let the mixture boil !
+(s2 / sentence
+    :coref ((s1c4 :cut s2h4)))
+
+
+# :: f-6RCGMZKY::step03::sent01
+# :: snt3	Once the sugar is fully dissolved turn off the heat and remove the pan from the heat .
+(s3 / sentence
+    :coref ((s2h4 :cut s3r1)
+			(s1c4 :cut s3r1)))
+
+
+# :: f-6RCGMZKY::step04::sent01
+# :: snt4	Wash the cranberries and pour them into a large bowl .
+(s4 / sentence
+    :coref ((s3r1 :aggregation s4w)
+			(s1c4 :aggregation s4w)
+			(s4c :cut s4w2)
+			(s4w2 :cut s4p1)
+			(s4p1 :aggregation s4w)))
+
+
+# :: f-6RCGMZKY::step04::sent02
+# :: snt5	Pour the syrup over the cranberries and place a heavy plate on the cranberries to keep them submerged .
+(s5 / sentence
+    :coref ((s4w :cut s5p3)
+			(s3r1 :cut s5p3)
+			(s1c4 :cut s5p3)))
+
+
+# :: f-6RCGMZKY::step05::sent01
+# :: snt6	Refrigerate for 2 - 12 hours , depending on how sweet your want your cranberries .
+(s6 / sentence
+    :coref ((s5p3 :separation s6d2)
+			(s6d2 :separation s6d2)
+			(s6d2 :cut s6y)
+			(s5p3 :cut s6y)
+			(s4w :separation s6d2)
+			(s4w :cut s6y)))
+
+
+# :: f-6RCGMZKY::step06::sent01
+# :: snt7	Once you have reached desired sweetness , drain the cranberries ( reserving the syrup for another use ) and roll the cranberries in the reserved 1 cup sugar until fully covered .
+(s7 / sentence)
+
+
+# :: f-6RCGMZKY::step07::sent01
+# :: snt8	Store covered in the refrigerator until all gone !
+(s8 / sentence)
+
+

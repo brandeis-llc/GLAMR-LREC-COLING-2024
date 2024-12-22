@@ -1,0 +1,168 @@
+# :: r-1676::step01::sent01
+# :: snt1	Wash cauliflower well and remove the stems ( optionally you can keep part of the stems as long as you boil them enough to tender ) .
+(s1a / and~3
+     :op1 (s1w / wash-01~0
+               :ARG1 (s1c / cauliflower~1)
+               :manner (s1w2 / well~2)
+               :ARG0 (s1y1 / you)
+               :event-structure (s1se / subevents
+                                      :E1 (s1h1 / has_state
+                                                :polarity -
+                                                :PATIENT s1c
+                                                :V_FINAL_STATE (s1w1 / washed))
+                                      :E3 (s1h2 / has_state
+                                                :PATIENT s1c
+                                                :V_FINAL_STATE s1w1)
+                                      :E0 (s1d / do
+                                               :ACTION s1w))
+               :imp_output (s1w3 / wash.RES))
+     :op2 (s1r / remove-01~4
+               :ARG1 (s1s2 / stem~6))
+     :op3 (s1k / keep-01~11
+               :ARG0 (s1y / you~9)
+               :ARG1 (s1s / stem~15
+                          :mod (s1p / part~12))
+               :condition (s1a2 / as-long-as~16,17,18
+                                :op1 (s1h / have-degree-91
+                                          :ARG0 "s1y2"
+                                          :ARG1 "s1s"
+                                          :ARG2 (s1b / boil-01~20
+                                                     :ARG0 s1y1
+                                                     :event-structure (s1se2 / subevents
+                                                                             :E1 (s1c1 / cooked
+                                                                                       :polarity -
+                                                                                       :PATIENT (s1t1 / them~21)
+                                                                                       :V_FINAL_STATE (s1b1 / boiled))
+                                                                             :E3 (s1a1 / apply_heat
+                                                                                       :PATIENT s1t1)
+                                                                             :E4 (s1c2 / cooked
+                                                                                       :PATIENT s1t1
+                                                                                       :V_FINAL_STATE s1b1)
+                                                                             :E0 (s1d2 / do
+                                                                                       :ACTION s1b))
+                                                     :imp_output (s1b2 / boil.RES))
+                                          :ARG3 (s1e / enough~22)
+                                          :ARG6 (s1t / tender~24)))
+               :manner (s1o / optionally~8)
+               :ARG0 s1y1
+               :event-structure (s1se1 / subevents
+                                       :E (s1h3 / has_possession
+                                                :AGENT s1y
+                                                :THEME s1s)
+                                       :E0 (s1d1 / do
+                                                 :ACTION s1k))
+               :imp_output (s1k1 / keep.RES))
+     :mode imperative)
+
+
+# :: r-1676::step02::sent01
+# :: snt2	Boil until tender .
+(s2b / boil-01~0
+     :mode imperative
+     :duration (s2u / until~1
+                    :op1 (s2t / tender-02~2))
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT_I (s2r / remove.RES)
+                                     :IMP_PATIENT_J (s2b1 / boil.RES)
+                                     :V_FINAL_STATE (s2b2 / boiled))
+                            :E3 (s2a / apply_heat
+                                     :IMP_PATIENT_I s2r
+                                     :IMP_PATIENT_J s2b1)
+                            :E4 (s2a1 / and
+                                      :op1 (s2c1 / cooked
+                                                 :IMP_PATIENT_I s2r
+                                                 :IMP_PATIENT_J s2b1
+                                                 :V_FINAL_STATE s2b2)
+                                      :op2 (s2h / has_state
+                                                :IMP_PATIENT_I s2r
+                                                :IMP_PATIENT_J s2b1
+                                                :RESULT s2t))
+                            :E0 (s2d / do
+                                     :ACTION s2b))
+     :imp_output (s2b3 / boil.RES))
+
+
+# :: r-1676::step03::sent01
+# :: snt3	Drain the cauliflower well and place in a bowl .
+(s3a / and~4
+     :op1 (s3d / drain-01~0
+               :ARG1 (s3c / cauliflower~2)
+               :manner (s3w / well~3)
+               :ARG0 (s3y / you)
+               :event-structure (s3se / subevents
+                                      :E1 (s3a1 / and
+                                                :op1 (s3h / has_location
+                                                          :IMP_THEME (s3b1 / boil.RES)
+                                                          :SOURCE s3c)
+                                                :op2 (s3h1 / has_state
+                                                           :polarity -
+                                                           :SOURCE s3c
+                                                           :V_FINAL_STATE (s3d1 / drained)))
+                                      :E3 (s3a2 / and
+                                                :op1 (s3m / motion
+                                                          :IMP_THEME s3b1)
+                                                :op2 (s3h2 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME s3b1
+                                                           :SOURCE s3c))
+                                      :E4 (s3a3 / and
+                                                :op1 (s3h3 / has_location
+                                                           :IMP_THEME s3b1)
+                                                :op2 (s3h4 / has_state
+                                                           :SOURCE s3c
+                                                           :V_FINAL_STATE s3d1))
+                                      :E0 (s3d2 / do
+                                                :ACTION s3d))
+               :imp_output (s3d3 / drain.RES))
+     :op2 (s3p / place-01~5
+               :ARG2 (s3b / bowl~8)
+               :ARG0 s3y)
+     :mode imperative)
+
+
+# :: r-1676::step04::sent01
+# :: snt4	Pour some olive oil and sprinkle with lemon juice .
+(s4a2 / and~4
+      :op1 (s4p2 / pour-01~0
+                 :ARG1 (s4o2 / oil~3
+                             :quant (s4s / some~1)
+                             :mod (s4o3 / olive~2))
+                 :ARG0 (s4y / you)
+                 :event-structure (s4se / subevents
+                                        :E1 (s4h / has_location
+                                                 :THEME s4o2)
+                                        :E3 (s4a / and
+                                                 :op1 (s4m / motion
+                                                           :THEME s4o2)
+                                                 :op2 (s4h1 / has_location
+                                                            :polarity -
+                                                            :THEME s4o2))
+                                        :E4 (s4h2 / has_location
+                                                  :THEME s4o2)
+                                        :E0 (s4d / do
+                                                 :ACTION s4p2))
+                 :imp_output (s4p / pour.RES))
+      :op2 (s4s2 / sprinkle-01~5
+                 :ARG1 (s4j / juice~8
+                            :source (s4l / lemon~7))
+                 :ARG0 s4y
+                 :event-structure (s4se1 / subevents
+                                         :E1 (s4h3 / has_location
+                                                   :THEME s4j)
+                                         :E3 (s4a1 / and
+                                                   :op1 (s4m1 / motion
+                                                              :THEME s4j)
+                                                   :op2 (s4h4 / has_location
+                                                              :polarity -
+                                                              :THEME s4j))
+                                         :E4 (s4h5 / has_location
+                                                   :THEME s4j)
+                                         :E0 (s4d1 / do
+                                                   :ACTION s4s2))
+                 :imp_output (s4s1 / sprinkle.RES))
+      :mode imperative)
+
+

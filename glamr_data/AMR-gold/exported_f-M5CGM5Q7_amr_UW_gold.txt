@@ -1,0 +1,388 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1285
+export time: 10/8/2023, 3:03:45 PM
+
+# :: snt1	Place chopped sweet potato in a pot and cover with water .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1p / place-01
+         :ARG1 (s1s2 / sweet-potato
+                 :ARG1-of (s1c / chop-01))
+         :ARG2 (s1p2 / pot))
+  :op2 (s1c3 / cover-02
+         :ARG2 (s1w / water))
+  :mode imperative)
+
+# alignment:s1a2: 8-8
+s1c: 2-2
+s1c3: 9-9
+s1p: 1-1
+s1p2: 7-7
+s1w: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Bring to boil , lower heat and simmer for about 20 minutes or until tender .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2b2 / bring-ON-02
+         :ARG4 (s2b / boil-01))
+  :op2 (s2l / lower-05
+         :ARG1 (s2h / heat))
+  :op3 (s2s / simmer-01
+         :duration (s2a / about
+                     :op1 (s2t / temporal-quantity
+                            :quant 20
+                            :unit (s2m / minute)))
+         :duration (s2u / until
+                     :op1 (s2t2 / tender-02)))
+  :mode imperative)
+
+# alignment:s2a: 10-10
+s2a2: 7-7
+s2b: 3-3
+s2b2: 1-1
+s2h: 6-6
+s2l: 5-5
+s2m: 12-12
+s2s: 8-8
+s2t: 12-12
+s2t2: 15-15
+s2u: 14-14
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Then place the cooked sweet potato , sugar and fresh milk in a liquidiser , blend till very smooth .
+# sentence level graph:
+(s3a / and
+  :op1 (s3p / place-01
+         :ARG1 (s3a2 / and
+                 :op1 (s3s4 / sweet-potato
+                        :ARG1-of (s3c / cook-01))
+                 :op2 (s3s2 / sugar)
+                 :op3 (s3m / milk
+                        :mod (s3f / fresh)))
+         :ARG2 (s3l / liquidiser)
+         :time (s3t / then))
+  :op2 (s3b / blend-01
+         :duration (s3t2 / till
+                     :op1 (s3s / smooth-04
+                            :ARG1 s3a2
+                            :degree (s3v / very))))
+  :mode imperative)
+
+# alignment:s3a: 3-3
+s3a2: 9-9
+s3b: 16-16
+s3c: 4-4
+s3f: 10-10
+s3l: 14-14
+s3m: 11-11
+s3p: 2-2
+s3s: 19-19
+s3s2: 8-8
+s3t: 1-1
+s3t2: 17-17
+s3v: 18-18
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add a little more milk if you find the cooked sweet potato is still a little dry .
+# sentence level graph:
+(s4a / add-02
+  :ARG1 (s4m / milk
+          :quant (s4m2 / more
+                   :quant (s4l / little)))
+  :condition (s4f / find-01
+               :ARG0 (s4y / you)
+               :ARG1 (s4d / dry-02
+                       :ARG1 (s4s3 / sweet-potato
+                               :ARG1-of (s4c / cook-01))
+                       :degree (s4l2 / little)
+                       :mod (s4s / still)))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4c: -1--1
+s4d: 17-17
+s4f: 8-8
+s4l: 3-3
+s4l2: 16-16
+s4m: 5-5
+s4m2: 4-4
+s4s: 14-14
+s4y: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	In a bowl , mix egg yolks and condensed milk together and set aside .
+# sentence level graph:
+(s5a / and
+  :op1 (s5m2 / mix-01
+         :ARG1 (s5y / yolk
+                 :part-of (s5e / egg))
+         :ARG2 (s5m / milk
+                 :ARG1-of (s5c / condense-01))
+         :location (s5b / bowl)
+         :manner (s5t / together))
+  :op2 (s5s / set-01
+         :ARG2 (s5a2 / aside))
+  :mode imperative)
+
+# alignment:s5a: 8-8
+s5a2: 14-14
+s5b: 3-3
+s5c: 9-9
+s5e: 6-6
+s5m: 10-10
+s5m2: 5-5
+s5s: 13-13
+s5t: 11-11
+s5y: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Boil 250ml whipping cream and gradually add into the egg yolk mixture and stir well with a hand whisk .
+# sentence level graph:
+(s6a2 / and
+  :op1 (s6b2 / boil-01
+         :ARG1 (s6c / cream
+                 :quant (s6v / volume-quantity
+                          :quant 250
+                          :unit (s6m3 / ml))
+                 :ARG1-of (s6w2 / whip-01)))
+  :op2 (s6a / add-02
+         :ARG2 (s6m2 / mixture
+                 :consist-of (s6y / yolk
+                               :part-of (s6e / egg)))
+         :manner (s6g / gradual))
+  :op3 (s6s / stir-01
+         :ARG1-of (s6w / well-09)
+         :instrument (s6h2 / hand-whisk))
+  :mode imperative)
+
+# alignment:s6a: 7-7
+s6a2: 5-5
+s6b2: 1-1
+s6c: 4-4
+s6g: 13-13
+s6m2: 12-12
+s6s: 14-14
+s6w: 15-15
+s6w2: 3-3
+s6y: 11-11
+s6e: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Then pour egg yolk mixture back to the pot and bring to boil over low heat , stir until thickens , remove from heat .
+# sentence level graph:
+(s7a / and
+  :op1 (s7p2 / pour-01
+         :ARG1 (s7m / mixture
+                 :consist-of (s7y / yolk
+                               :part-of (s7e / egg)))
+         :ARG2 (s7p / pot)
+         :direction (s7b / back))
+  :op2 (s7b3 / bring-01
+         :purpose (s7b2 / boil-01
+                    :ARG1 s7m
+                    :manner (s7h / heat
+                              :mod (s7l / low))))
+  :op3 (s7s / stir-01
+         :duration (s7u / until
+                     :op1 (s7t2 / thicken-01
+                            :ARG1 s7m)))
+  :op4 (s7r / remove-01
+         :ARG2 s7h)
+  :time (s7t / then)
+  :mode imperative)
+
+# alignment:s7a: 10-10
+s7b: 6-6
+s7b2: 13-13
+s7b3: 11-11
+s7e: 3-3
+s7h: 0-0
+s7l: 15-15
+s7m: 5-5
+s7p: 9-9
+s7p2: 2-2
+s7r: 22-22
+s7s: 18-18
+s7t: 1-1
+s7t2: 20-20
+s7u: 19-19
+s7y: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Add in sweet potato , mix well and leave to cool and chill for 2 hours .
+# sentence level graph:
+(s8a2 / and
+  :op1 (s8a / add-02
+         :ARG1 (s8s2 / sweet-potato))
+  :op2 (s8m / mix-01
+         :manner (s8w / well))
+  :op3 (s8l / leave-14
+         :ARG1 (s8a3 / and
+                 :op1 (s8c2 / cool-06)
+                 :op2 (s8c / chill-01))
+         :duration (s8t / temporal-quantity
+                     :quant 2
+                     :unit (s8h / hour)))
+  :mode imperative)
+
+# alignment:s8a: 1-1
+s8a2: 8-8
+s8a3: 12-12
+s8c: 13-13
+s8c2: 11-11
+s8h: 16-16
+s8l: 9-9
+s8m: 6-6
+s8t: 16-16
+s8w: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Then pour mixture into ice cream maker and churn for about 30 - 40 minutes till soft ice cream is formed or according to maker 's instruction .
+# sentence level graph:
+(s9a2 / and
+  :op1 (s9p / pour-01
+         :ARG1 (s9m4 / mixture)
+         :ARG3 (s9i3 / ice-cream-maker))
+  :op2 (s9c / churn-01
+         :ARG2 (s9i2 / ice-cream
+                 :ARG1-of (s9s / soft-02))
+         :duration (s9u / umr-choice
+                     :op1 (s9b / between
+                            :op1 (s9t2 / temporal-quantity
+                                   :unit (s9m3 / minute)
+                                   :quant 30)
+                            :op2 (s9t / temporal-quantity
+                                   :unit (s9m2 / minute)
+                                   :quant 40))
+                     :op2 (s9s2 / say-01
+                            :ARG0 (s9i4 / instruction
+                                    :poss s9i3))))
+  :time (s9t3 / then)
+  :mode imperative)
+
+# alignment:s9a2: 1-1
+s9b: -1--1
+s9c: 9-9
+s9i2: 0-0
+s9i3: 0-0
+s9i4: 27-27
+s9m2: -1--1
+s9m3: -1--1
+s9m4: 3-3
+s9p: 2-2
+s9s: 17-17
+s9t: -1--1
+s9t2: -1--1
+s9t3: 1-1
+s9u: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Spoon the soft ice cream into a container and freeze for 3 - 4 hours before serving .
+# sentence level graph:
+(s10a / and
+  :op1 (s10s3 / spoon-01
+         :ARG1 (s10i / ice-cream
+                 :ARG1-of (s10s2 / soft-02))
+         :ARG2 (s10c / container))
+  :op2 (s10f / freeze-01
+         :duration (s10b2 / between
+                     :op1 (s10t / temporal-quantity
+                            :quant 3
+                            :unit (s10h2 / hour))
+                     :op2 (s10t2 / temporal-quantity
+                            :quant 4
+                            :unit (s10h / hour)))
+         :time (s10b / before
+                 :op1 (s10s / serve-02)))
+  :mode imperative)
+
+# alignment:s10a: 9-9
+s10b: 16-16
+s10b2: 13-13
+s10c: 8-8
+s10f: 10-10
+s10h: 11-11
+s10h2: 15-15
+s10i: 4-4
+s10s: 17-17
+s10s2: 3-3
+s10s3: 1-1
+s10t: 15-15
+s10t2: 18-18
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Place chopped sweet potato in a pot and cover with water .
+Bring to boil , lower heat and simmer for about 20 minutes or until tender .
+Then place the cooked sweet potato , sugar and fresh milk in a liquidiser , blend till very smooth .
+Add a little more milk if you find the cooked sweet potato is still a little dry .
+In a bowl , mix egg yolks and condensed milk together and set aside .
+Boil 250ml whipping cream and gradually add into the egg yolk mixture and stir well with a hand whisk .
+Then pour egg yolk mixture back to the pot and bring to boil over low heat , stir until thickens , remove from heat .
+Add in sweet potato , mix well and leave to cool and chill for 2 hours .
+Then pour mixture into ice cream maker and churn for about 30 - 40 minutes till soft ice cream is formed or according to maker 's instruction .
+Spoon the soft ice cream into a container and freeze for 3 - 4 hours before serving .

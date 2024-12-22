@@ -1,0 +1,237 @@
+# :: r-75::step01::sent01
+# :: snt1	Preheat the broiler .
+(s1p / preheat-00~0
+     :ARG1 (s1b / broiler~2)
+     :mode imperative)
+
+
+# :: r-75::step02::sent01
+# :: snt2	Prick the eggplant a few times with a fork .
+(s2p / prick-01~0
+     :ARG1 (s2e / eggplant~2)
+     :frequency (s2f / few~4)
+     :instrument (s2f2 / fork~8)
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2h / harmed
+                                     :polarity -
+                                     :PATIENT s2e)
+                            :E2 (s2i / injury
+                                     :PATIENT s2e
+                                     :V_INJURY (s2p1 / pricked))
+                            :E3 (s2h1 / harmed
+                                      :PATIENT s2e)
+                            :E (s2p2 / part_of
+                                     :PATIENT s2e)
+                            :E0 (s2d / do
+                                     :ACTION s2p))
+     :imp_output (s2p3 / prick.RES))
+
+
+# :: r-75::step03::sent01
+# :: snt3	Place it on a foil - lined baking tray .
+(s3p / place-01~0
+     :ARG1 (s3i / it~1)
+     :ARG2 (s3t / tray~8
+                :purpose (s3b / bake-01~7)
+                :ARG1-of (s3l / line-01~6
+                              :ARG2 (s3f / foil~4)))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3h / has_location
+                                     :THEME s3i)
+                            :E3 (s3a / and
+                                     :op1 (s3m / motion
+                                               :THEME s3i)
+                                     :op2 (s3h1 / has_location
+                                                :polarity -
+                                                :THEME s3i))
+                            :E4 (s3h2 / has_location
+                                      :THEME s3i
+                                      :DESTINATION s3t)
+                            :E0 (s3d / do
+                                     :ACTION s3p))
+     :imp_output (s3p1 / place.RES))
+
+
+# :: r-75::step04::sent01
+# :: snt4	Place under broiler .
+(s4p / place-01~0
+     :ARG2 (s4u / under~1
+                :op1 (s4b / broiler~2))
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4h / has_location)
+                            :E3 (s4a / and
+                                     :op1 (s4m / motion
+                                               :IMP_THEME (s4p1 / place.RES))
+                                     :op2 (s4h1 / has_location
+                                                :polarity -
+                                                :IMP_THEME s4p1))
+                            :E4 (s4h2 / has_location
+                                      :IMP_THEME s4p1
+                                      :DESTINATION s4b)
+                            :E0 (s4d / do
+                                     :ACTION s4p))
+     :imp_output (s4p2 / place.RES))
+
+
+# :: r-75::step05::sent01
+# :: snt5	When the skin chars on one side , give the eggplant a 1/4 turn .
+(s5g / give-01~8
+     :ARG1 (s5t / turn-01~13
+                :quant "1/4")
+     :ARG2 (s5e / eggplant~10)
+     :mode imperative
+     :time (s5c / char-01~3
+                :ARG1 (s5s2 / skin~2
+                            :location (s5s / side~6
+                                           :mod 1))))
+
+
+# :: r-75::step06::sent01
+# :: snt6	Continue until entire skin is charred and pulp is soft and mushy .
+(s6c2 / continue-01~0
+      :mode imperative
+      :duration (s6u / until~1
+                     :op1 (s6a / and~6
+                               :op1 (s6c / char-01~5
+                                         :ARG1 (s6s / skin~3
+                                                    :mod (s6e / entire~2)))
+                               :op2 (s6a2 / and~10
+                                          :op1 (s6s2 / soft~9
+                                                     :ARG1 (s6p / pulp~7))
+                                          :op2 (s6m / mushy~11))))
+      :ARG0 (s6y / you))
+
+
+# :: r-75::step07::sent01
+# :: snt7	Peel away skin , rinsing to remove all charred skin .
+(s7a2 / and
+      :op1 (s7p / peel-01~0
+                :ARG1 (s7s / skin~2)
+                :ARG0 (s7y / you)
+                :event-structure (s7se / subevents
+                                       :E1 (s7h / has_location
+                                                :V_THEME s7s
+                                                :V_THEME (s7p1 / peeled-away))
+                                       :E3 (s7a1 / and
+                                                 :op1 (s7m / motion
+                                                           :V_THEME s7s
+                                                           :V_THEME s7p1)
+                                                 :op2 (s7h1 / has_location
+                                                            :polarity -
+                                                            :V_THEME s7s
+                                                            :V_THEME s7p1))
+                                       :E (s7p2 / part_of
+                                                :V_THEME s7s
+                                                :V_THEME s7p1)
+                                       :E0 (s7d / do
+                                                :ACTION s7p))
+                :imp_output (s7p3 / peel.RES))
+      :op2 (s7r2 / rinse-01~4
+                 :purpose (s7r / remove-01~6
+                               :ARG1 (s7s2 / skin~9
+                                           :ARG1-of (s7c / char-01~8)
+                                           :mod (s7a / all~7)))
+                 :ARG0 s7y
+                 :event-structure (s7se1 / subevents
+                                         :E (s7h2 / has_location)
+                                         :E0 (s7d1 / do
+                                                   :ACTION s7r2))
+                 :imp_output (s7r1 / rinse.RES))
+      :mode imperative)
+
+
+# :: r-75::step08::sent01
+# :: snt8	Pat dry .
+(s8p / pat-01~0
+     :purpose (s8d / dry~1)
+     :mode imperative
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8c / contact
+                                     :polarity -
+                                     :IMP_THEME (s8r / rinse.RES))
+                            :E3 (s8c1 / contact
+                                      :IMP_THEME s8r)
+                            :E (s8p1 / part_of
+                                     :IMP_THEME s8r)
+                            :E0 (s8d1 / do
+                                      :ACTION s8p))
+     :imp_output (s8p2 / pat.RES))
+
+
+# :: r-75::step09::sent01
+# :: snt9	In blender or food processor , combine all ingredients .
+(s9c / combine-01~6
+     :ARG1 (s9i / ingredient~8
+                :mod (s9a / all~7))
+     :instrument (s9o / or~2
+                      :op1 (s9b / blender~1)
+                      :op2 (s9p2 / processor~4
+                                 :mod (s9f2 / food~3)))
+     :mode imperative
+     :ARG0 (s9y / you)
+     :event-structure (s9se / subevents
+                            :E1 (s9a1 / and
+                                      :op1 (s9m / mingled
+                                                :polarity -
+                                                :PATIENT_I s9i)
+                                      :op2 (s9h / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT_I s9i
+                                                :V_STATE (s9c1 / combined))
+                                      :op3 (s9h1 / has_material_integrity_state
+                                                 :polarity -
+                                                 :V_STATE s9c1
+                                                 :PATIENT_I s9i))
+                            :E3 (s9a2 / and
+                                      :op1 (s9m1 / mingled
+                                                 :PATIENT_I s9i)
+                                      :op2 (s9h2 / has_material_integrity_state
+                                                 :PATIENT_I s9i
+                                                 :V_STATE s9c1)
+                                      :op3 (s9h3 / has_material_integrity_state
+                                                 :V_STATE s9c1
+                                                 :PATIENT_I s9i))
+                            :E0 (s9d / do
+                                     :ACTION s9c))
+     :imp_output (s9c2 / combine.RES))
+
+
+# :: r-75::step10::sent01
+# :: snt10	Serve with toasted Turkish bread and enjoy !
+(s10a / and~5
+      :op1 (s10s / serve-02~0
+                 :accompanier (s10b / bread~4
+                                    :ARG1-of (s10t / toast-01~2)
+                                    :mod (s10c / country
+                                               :name (s10n / name
+                                                           :op1 "Turkey")))
+                 :ARG0 (s10y / you)
+                 :event-structure (s10se / subevents
+                                         :E1 (s10a1 / and
+                                                    :op1 (s10h / has_possession
+                                                               :IMP_THEME (s10c1 / combine.RES))
+                                                    :op2 (s10h1 / has_possession
+                                                                :polarity -
+                                                                :IMP_THEME s10c1))
+                                         :E2 (s10t1 / transfer
+                                                    :IMP_THEME s10c1)
+                                         :E3 (s10a2 / and
+                                                    :op1 (s10h2 / has_possession
+                                                                :IMP_THEME s10c1)
+                                                    :op2 (s10h3 / has_possession
+                                                                :polarity -
+                                                                :IMP_THEME s10c1))
+                                         :E0 (s10d / do
+                                                   :ACTION s10s))
+                 :imp_output (s10s1 / serve.RES))
+      :op2 (s10e / enjoy-01~6)
+      :mode imperative)
+
+

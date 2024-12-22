@@ -1,0 +1,61 @@
+# :: r-715::step01::sent01
+# :: snt1	Melt butter over medium heat .
+(s1 / sentence
+    :coref ((s1b :cut s1m3)))
+
+
+# :: r-715::step02::sent01
+# :: snt2	Add flour , stirring constantly , until the mixture becomes puffy .
+(s2 / sentence
+    :coref ((s1m3 :aggregation s2a1)
+			(s2a1 :cut s2s2)
+			(s2f :aggregation s2a1)))
+
+
+# :: r-715::step03::sent01
+# :: snt3	Add water , bouillon powder , onions , potatoes and carrots .
+(s3 / sentence
+    :coref ((s2s2 :aggregation s3a1)
+			(s2a1 :aggregation s3a1)
+			(s3w :aggregation s3a1)
+			(s3b :aggregation s3a1)
+			(s3o :aggregation s3a1)
+			(s3p :aggregation s3a1)
+			(s3c :aggregation s3a1)))
+
+
+# :: r-715::step04::sent01
+# :: snt4	Bring to a boil , stirring occasionally .
+(s4 / sentence
+    :coref ((s3a1 :cut s4b3)
+			(s4b3 :cut s4s2)
+			(s3a1 :cut s4s2)))
+
+
+# :: r-715::step05::sent01
+# :: snt5	Reduce heat and simmer until potatoes are almost done ( about 5 to 6 minutes ) .
+(s5 / sentence
+    :coref ((s4s2 :cut s5s3)
+			(s3a1 :cut s5s3)))
+
+
+# :: r-715::step06::sent01
+# :: snt6	Add broccoli and return to boil .
+(s6 / sentence
+    :coref ((s5s3 :aggregation s6a1)
+			(s6a1 :cut s6b3)
+			(s4s2 :aggregation s6a1)
+			(s5s3 :cut s6b3)
+			(s3a1 :aggregation s6a1)
+			(s3a1 :cut s6b3)
+			(s6b2 :aggregation s6a1)))
+
+
+# :: r-715::step07::sent01
+# :: snt7	Simmer for another minute .
+(s7 / sentence
+    :coref ((s6b3 :cut s7s2)
+			(s6a1 :cut s7s2)
+			(s3a1 :cut s7s2)))
+
+

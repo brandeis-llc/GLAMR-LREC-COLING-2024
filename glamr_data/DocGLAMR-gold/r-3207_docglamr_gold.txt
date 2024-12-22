@@ -1,0 +1,30 @@
+# :: r-3207::step01::sent01
+# :: snt1	Shake all ingredients except wine .
+(s1 / sentence
+    :coref ((s1i :cut s1s1)))
+
+
+# :: r-3207::step02::sent01
+# :: snt2	Pour into a glass half filled with ice cubes .
+(s2 / sentence
+    :coref ((s1s1 :aggregation s2p1)
+			(s2i :aggregation s2p1)))
+
+
+# :: r-3207::step03::sent01
+# :: snt3	Add wine and stir gently .
+(s3 / sentence
+    :coref ((s2p1 :aggregation s3a1)
+			(s3a1 :cut s3s2)
+			(s2p1 :cut s3s2)
+			(s3w :aggregation s3a1)))
+
+
+# :: r-3207::step04::sent01
+# :: snt4	Top with a pineapple ring .
+(s4 / sentence
+    :coref ((s3s2 :aggregation s4t)
+			(s3a1 :aggregation s4t)
+			(s4p :aggregation s4t)))
+
+

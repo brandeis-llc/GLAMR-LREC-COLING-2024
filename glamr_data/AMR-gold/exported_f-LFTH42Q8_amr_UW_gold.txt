@@ -1,0 +1,254 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1283
+export time: 9/19/2023, 8:11:51 PM
+
+# :: snt1	Heat the olive oil in a large saucepan , saute the onion for 3 - 4 minutes .
+# sentence level graph:
+(s1a / and
+  :op1 (s1h / heat-01
+         :ARG1 (s1o / oil
+                 :mod (s1o2 / olive))
+         :location (s1s / saucepan
+                     :mod (s1l / large)))
+  :op2 (s1s2 / saute-01
+         :ARG0 (s1y / you)
+         :ARG1 (s1o3 / onion)
+         :duration (s1u / up-to
+                     :op1 (s1t / temporal-quantity
+                            :quant 3
+                            :unit (s1m2 / minute))
+                     :op2 (s1t2 / temporal-quantity
+                            :quant 4
+                            :unit (s1m / minute))))
+  :mode imperative)
+
+# alignment:s1a: 2-2
+s1h: 1-1
+s1l: 7-7
+s1m: 15-15
+s1m2: 17-17
+s1o: 4-4
+s1o2: 3-3
+s1o3: 12-12
+s1s: 8-8
+s1s2: 10-10
+s1t: 17-17
+s1t2: 18-18
+s1u: 13-13
+s1y: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Then add the rest of the vegetables and stir .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2a / add-02
+         :ARG1 (s2v / vegetable
+                 :mod (s2r / rest)))
+  :op2 (s2s / stir-01)
+  :time (s2t / then)
+  :mode imperative)
+
+# alignment:s2a: 2-2
+s2a2: 8-8
+s2r: 4-4
+s2s: 9-9
+s2t: 1-1
+s2v: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add the rice inside the vegetable mix and incorporate it in the vegetable mix .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3a / add-02
+         :ARG1 (s3r / rice)
+         :ARG2 (s3m / mix-01
+                 :consist-of (s3v / vegetable)))
+  :op2 (s3i / incorporate-02
+         :ARG1 s3r
+         :ARG2 s3m)
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 8-8
+s3i: 9-9
+s3m: 14-14
+s3r: 3-3
+s3v: 13-13
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Pour over the grated tomatoes and add the sugar , salt and pepper .
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4p2 / pour-01
+         :ARG1 (s4t / tomato
+                 :ARG1-of (s4g / grate-01))
+         :ARG2 (s4o / over))
+  :op2 (s4a / add-02
+         :ARG1 (s4a3 / and
+                 :op1 (s4s2 / sugar)
+                 :op2 (s4s / salt)
+                 :op3 (s4p / pepper)))
+  :mode imperative)
+
+# alignment:s4a: 7-7
+s4a2: 1-1
+s4a3: 12-12
+s4g: 4-4
+s4o: 2-2
+s4p: 13-13
+s4p2: 1-1
+s4s: 11-11
+s4s2: 9-9
+s4t: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	You will also need to add 2 cups of warm water .
+# sentence level graph:
+(s5n / need-01
+  :ARG0 (s5y / you)
+  :ARG1 (s5a / add-02
+          :ARG0 s5y
+          :ARG1 (s5w2 / water
+                  :quant (s5v / volume-quantity
+                           :quant 2
+                           :unit (s5c / cup))
+                  :mod (s5w / warm-07)))
+  :mode imperative)
+
+# alignment:s5a: 6-6
+s5c: 8-8
+s5n: 4-4
+s5v: 8-8
+s5w: 10-10
+s5w2: 11-11
+s5y: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Simmer in medium heat for about 20 - 25 minutes and then incorporate the chopped herbs .
+# sentence level graph:
+(s6a2 / and
+  :op1 (s6s / simmer-01
+         :duration (s6a / about
+                     :op1 (s6b / between
+                            :op1 (s6t / temporal-quantity
+                                   :quant 20
+                                   :unit (s6m2 / minute))
+                            :op2 (s6t2 / temporal-quantity
+                                   :quant 25
+                                   :unit (s6m3 / minute))))
+         :manner (s6h / heat
+                   :mod (s6m / medium)))
+  :op2 (s6i / incorporate-02
+         :ARG1 (s6h2 / herb
+                 :ARG1-of (s6c / chop-01))
+         :time (s6t3 / then))
+  :mode imperative)
+
+# alignment:s6a: 6-6
+s6a2: 11-11
+s6b: 7-7
+s6c: 15-15
+s6h: 4-4
+s6h2: 16-16
+s6i: 13-13
+s6m: 3-3
+s6m2: 10-10
+s6m3: 17-17
+s6s: 1-1
+s6t: 10-10
+s6t2: 14-14
+s6t3: 12-12
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	If you wish you can add the grated feta inside the rice so it 'll become more edgy and creamy but I prefer to to add the feta over the rice after serving !
+# sentence level graph:
+(s7p3 / prefer-01
+  :ARG1 (s7a4 / add-02
+          :ARG0 (s7y / you)
+          :ARG1 (s7f2 / feta
+                  :ARG1-of (s7g / grate-01))
+          :ARG2 (s7r2 / rice
+                  :location (s7i2 / inside))
+          :purpose (s7b / become-01
+                     :ARG1 s7f2
+                     :ARG2 (s7a2 / and
+                             :op1 (s7e / edgy)
+                             :op2 (s7c / creamy))))
+  :ARG2 (s7a / add-02
+          :ARG0 (s7i / i)
+          :ARG1 s7f2
+          :ARG2 (s7r3 / rice
+                  :location (s7o / over))
+          :time (s7a3 / after
+                  :op1 (s7s / serve-02))))
+
+# alignment:s7a: 26-26
+s7a2: 26-26
+s7b: -1--1
+s7c: 20-20
+s7e: 18-18
+s7f2: 0-0
+s7g: -1--1
+s7i: 22-22
+s7i2: -1--1
+s7o: 29-29
+s7r2: 12-12
+s7r3: 0-0
+s7y: 2-2
+s7a3: 32-32
+s7s: 33-33
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Heat the olive oil in a large saucepan , saute the onion for 3 - 4 minutes .
+Then add the rest of the vegetables and stir .
+Add the rice inside the vegetable mix and incorporate it in the vegetable mix .
+Pour over the grated tomatoes and add the sugar , salt and pepper .
+You will also need to add 2 cups of warm water .
+Simmer in medium heat for about 20 - 25 minutes and then incorporate the chopped herbs .
+If you wish you can add the grated feta inside the rice so it 'll become more edgy and creamy but I prefer to to add the feta over the rice after serving !

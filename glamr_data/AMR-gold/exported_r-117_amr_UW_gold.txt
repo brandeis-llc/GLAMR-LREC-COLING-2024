@@ -1,0 +1,234 @@
+user name: Keer Xu
+user id: 347
+file language: english
+file format: plain_text
+Doc ID in database: 1444
+export time: 2023/10/3 15:12:07
+
+# :: snt1	Fillet the fish and flake the flesh then put in a mortar .
+# sentence level graph:
+(s1a / and
+  :op1 (s1f / fillet-01
+         :ARG1 (s1f2 / fish))
+  :op2 (s1f3 / flake-01
+         :ARG1 (s1f4 / flesh))
+  :op3 (s1p / put-01
+         :ARG2 (s1m / mortar)
+         :time (s1t / then))
+  :mode imperative)
+
+# alignment:s1a: 4-4
+s1f: 1-1
+s1f2: 3-3
+s1f3: 5-5
+s1f4: 7-7
+s1m: 12-12
+s1p: 9-9
+s1t: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Put in garlic and ginger and pound the mixture to a paste .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2p3 / put-01
+         :ARG1 (s2a / and
+                 :op1 (s2g / garlic)
+                 :op2 (s2g2 / ginger)))
+  :snt2 (s2p2 / pound-03
+          :ARG1 (s2m / mixture)
+          :ARG2 (s2p / paste))
+  :mode imperative)
+
+# alignment:s2a: 4-4
+s2g: 3-3
+s2g2: 5-5
+s2m: 9-9
+s2p: 12-12
+s2p2: 7-7
+s2p3: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add in the turmeric , salt and chili flakes .
+# sentence level graph:
+(s3a / add-02
+  :ARG1 (s3a2 / and
+          :op1 (s3t / turmeric)
+          :op2 (s3s / salt)
+          :op3 (s3f / flake
+                 :part-of (s3c / chili)))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 7-7
+s3c: 8-8
+s3f: 9-9
+s3s: 6-6
+s3t: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Pound for 10 - 12 minutes .
+# sentence level graph:
+(s4p / pound-03
+  :duration (s4b / between
+              :op1 (s4t / temporal-quantity
+                     :quant 10
+                     :unit (s4m / minute))
+              :op2 (s4t2 / temporal-quantity
+                     :quant 12
+                     :unit (s4m2 / minutes)))
+  :mode imperative)
+
+# alignment:s4b: 4-4
+s4m: 6-6
+s4p: 1-1
+s4t: 6-6
+s4t2: 7-7
+s4m2: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Moisten your hands with water and scoop some of the pasty mixture and flatten it on your palm until it resembles a cookie .
+# sentence level graph:
+(s5a / and
+  :op1 (s5m2 / moisten-01
+         :ARG1 (s5h / hand
+                 :part-of (s5y / you))
+         :ARG2 (s5w / water))
+  :op2 (s5s / scoop-01
+         :ARG1 (s5m / mixture
+                 :quant (s5s2 / some)
+                 :mod (s5p2 / pasty)))
+  :op3 (s5f / flatten-01
+         :ARG1 s5m
+         :location (s5p / palm
+                     :part-of s5y)
+         :duration (s5u / until
+                     :op1 (s5r / resemble-01
+                            :ARG1 s5m
+                            :ARG2 (s5c / cookie))))
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5c: 23-23
+s5f: 14-14
+s5h: 3-3
+s5m: 12-12
+s5p: 18-18
+s5p2: 11-11
+s5r: 21-21
+s5s: 7-7
+s5s2: 8-8
+s5u: 19-19
+s5w: 5-5
+s5y: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Heat oil in a pan and deep - fry the fish fritters for 4 - 5 minutes or until golden brown .
+# sentence level graph:
+(s6a / and
+  :op1 (s6h / heat-01
+         :ARG1 (s6o / oil)
+         :location (s6p / pan))
+  :op2 (s6f3 / fry-01
+         :ARG1 (s6f2 / fritter
+                 :consist-of (s6f / fish))
+         :manner (s6d / deep)
+         :duration (s6o2 / or
+                     :op1 (s6t2 / temporal-quantity
+                            :quant 4
+                            :unit (s6m2 / minute))
+                     :op2 (s6t / temporal-quantity
+                            :quant 5
+                            :unit (s6m / minute))
+                     :op3 (s6u / until
+                            :op1 (s6b / brown-01
+                                   :mod (s6g / golden)))))
+  :mode imperative)
+
+# alignment:s6a: 6-6
+s6b: 21-21
+s6d: 7-7
+s6f: 11-11
+s6f2: 12-12
+s6f3: 9-9
+s6g: 20-20
+s6h: 1-1
+s6m: 13-13
+s6m2: 17-17
+s6o: 2-2
+s6o2: 18-18
+s6p: 5-5
+s6t: 15-15
+s6t2: 17-17
+s6u: 19-19
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Drain excess oil in absorbent paper before serving .
+# sentence level graph:
+(s7d / drain-01
+  :ARG1 (s7o / oil
+          :mod (s7e / excess))
+  :location (s7p / paper
+              :ARG0-of (s7a / absorb-01))
+  :mode imperative
+  :time (s7b / before
+          :op1 (s7s / serve-02)))
+
+# alignment:s7a: 5-5
+s7b: 7-7
+s7d: 1-1
+s7e: 2-2
+s7o: 3-3
+s7p: 6-6
+s7s: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Fillet the fish and flake the flesh then put in a mortar .
+Put in garlic and ginger and pound the mixture to a paste .
+Add in the turmeric , salt and chili flakes .
+Pound for 10 - 12 minutes .
+Moisten your hands with water and scoop some of the pasty mixture and flatten it on your palm until it resembles a cookie .
+Heat oil in a pan and deep - fry the fish fritters for 4 - 5 minutes or until golden brown .
+Drain excess oil in absorbent paper before serving .

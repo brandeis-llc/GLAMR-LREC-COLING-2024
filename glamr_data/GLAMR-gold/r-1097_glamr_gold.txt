@@ -1,0 +1,283 @@
+# :: r-1097::step01::sent01
+# :: snt1	Combine dry ingredients and set aside .
+(s1a / and~3
+     :op1 (s1c / combine-01~0
+               :ARG1 (s1i / ingredient~2
+                          :mod (s1d / dry~1))
+               :ARG0 (s1y / you)
+               :event-structure (s1se / subevents
+                                      :E1 (s1a1 / and
+                                                :op1 (s1m / mingled
+                                                          :polarity -
+                                                          :PATIENT_I s1i)
+                                                :op2 (s1h / has_material_integrity_state
+                                                          :polarity -
+                                                          :PATIENT_I s1i
+                                                          :V_STATE (s1c1 / combined))
+                                                :op3 (s1h1 / has_material_integrity_state
+                                                           :polarity -
+                                                           :V_STATE s1c1
+                                                           :PATIENT_I s1i))
+                                      :E3 (s1a3 / and
+                                                :op1 (s1m1 / mingled
+                                                           :PATIENT_I s1i)
+                                                :op2 (s1h2 / has_material_integrity_state
+                                                           :PATIENT_I s1i
+                                                           :V_STATE s1c1)
+                                                :op3 (s1h3 / has_material_integrity_state
+                                                           :V_STATE s1c1
+                                                           :PATIENT_I s1i))
+                                      :E0 (s1d1 / do
+                                                :ACTION s1c))
+               :imp_output (s1c2 / combine.RES))
+     :op2 (s1s / set-01~4
+               :ARG2 (s1a2 / aside~5)
+               :ARG0 s1y)
+     :mode imperative)
+
+
+# :: r-1097::step01::sent02
+# :: snt2	cream butter and Sugar until fluffy .
+(s2c / cream-01~0
+     :ARG1 (s2a / and~2
+                :op1 (s2b / butter~1)
+                :op2 (s2s / sugar~3))
+     :duration (s2u / until~4
+                    :op1 (s2f / fluffy~5))
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2a1 / and
+                                      :op1 (s2m / mingled
+                                                :polarity -
+                                                :PATIENT_I s2b
+                                                :PATIENT_J s2s)
+                                      :op2 (s2h / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT_I s2b
+                                                :V_STATE (s2c1 / creamed)
+                                                :PATIENT_J s2s)
+                                      :op3 (s2h1 / has_material_integrity_state
+                                                 :polarity -
+                                                 :PATIENT_J s2s
+                                                 :V_STATE s2c1
+                                                 :PATIENT_I s2b))
+                            :E3 (s2a2 / and
+                                      :op1 (s2m1 / mingled
+                                                 :PATIENT_I s2b
+                                                 :PATIENT_J s2s)
+                                      :op2 (s2h2 / has_material_integrity_state
+                                                 :PATIENT_I s2b
+                                                 :V_STATE s2c1
+                                                 :PATIENT_J s2s)
+                                      :op3 (s2h3 / has_material_integrity_state
+                                                 :PATIENT_J s2s
+                                                 :V_STATE s2c1
+                                                 :PATIENT_I s2b))
+                            :E0 (s2d / do
+                                     :ACTION s2c))
+     :imp_output (s2c2 / cream.RES))
+
+
+# :: r-1097::step02::sent01
+# :: snt3	Beat in eggs , lemon juice and vanilla .
+(s3b / beat-ON-06~0
+     :ARG1 (s3a / and~6
+                :op1 (s3e / egg~2)
+                :op2 (s3j / juice~5
+                          :source (s3l / lemon~4))
+                :op3 (s3v / vanilla~7))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3h / has_material_integrity_state
+                                     :polarity -
+                                     :PATIENT s3v
+                                     :V_STATE (s3b1 / beaten))
+                            :E3 (s3h1 / has_material_integrity_state
+                                      :PATIENT s3v
+                                      :V_STATE s3b1)
+                            :E0 (s3d / do
+                                     :ACTION s3b))
+     :imp_output (s3b2 / beat.RES))
+
+
+# :: r-1097::step03::sent01
+# :: snt4	Add flour and coconut until well blended .
+(s4a / add-02~0
+     :ARG1 (s4a2 / and~2
+                 :op1 (s4f / flour~1)
+                 :op2 (s4c / coconut~3))
+     :mode imperative
+     :duration (s4u / until~4
+                    :op1 (s4b / blend-01~6
+                              :manner (s4w / well~5)))
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4t / together
+                                     :polarity -
+                                     :PATIENT_I s4f
+                                     :PATIENT_J s4c)
+                            :E3 (s4t1 / together
+                                      :PATIENT_I s4f
+                                      :PATIENT_J s4c)
+                            :E0 (s4d / do
+                                     :ACTION s4a))
+     :imp_output (s4a1 / add.RES))
+
+
+# :: r-1097::step04::sent01
+# :: snt5	Shape into ( 4 ) 2 inch rolls .
+(s5s / shape-01~0
+     :ARG2 (s5r / roll~7
+                :mod (s5d / distance-quantity
+                          :quant 2
+                          :unit (s5i / inch~6))
+                :quant 4)
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5b / be
+                                     :polarity -
+                                     :PRODUCT s5r)
+                            :E3 (s5a / and
+                                     :op1 (s5b1 / be
+                                                :PRODUCT s5r)
+                                     :op2 (s5m / made_of
+                                               :PRODUCT s5r))
+                            :E (s5c / cost
+                                    :PRODUCT s5r)
+                            :E0 (s5d1 / do
+                                      :ACTION s5s))
+     :imp_output (s5s1 / shape.RES))
+
+
+# :: r-1097::step04::sent02
+# :: snt6	Roll in colored Sugar .
+(s6r / roll-01~0
+     :ARG2 (s6s / sugar~3
+                :ARG1-of (s6c / color-01~2))
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6h / has_location
+                                     :IMP_THEME (s6s1 / shape.RES))
+                            :E3 (s6a / and
+                                     :op1 (s6m / motion
+                                               :IMP_THEME s6s1)
+                                     :op2 (s6h1 / has_location
+                                                :polarity -
+                                                :IMP_THEME s6s1))
+                            :E4 (s6h2 / has_location
+                                      :IMP_THEME s6s1
+                                      :DESTINATION s6s)
+                            :E0 (s6d / do
+                                     :ACTION s6r))
+     :imp_output (s6r1 / roll.RES))
+
+
+# :: r-1097::step05::sent01
+# :: snt7	Wrap in plastic wrap and chill at least 4 hours .
+(s7a / and~4
+     :op1 (s7w / wrap-01~0
+               :ARG2 (s7w2 / wrap~3
+                           :mod (s7p / plastic~2))
+               :ARG0 (s7y / you)
+               :event-structure (s7se / subevents
+                                      :E1 (s7h1 / has_location
+                                                :THEME s7w2)
+                                      :E3 (s7a1 / and
+                                                :op1 (s7m / motion
+                                                          :THEME s7w2)
+                                                :op2 (s7h2 / has_location
+                                                           :polarity -
+                                                           :THEME s7w2))
+                                      :E4 (s7h3 / has_location
+                                                :THEME s7w2)
+                                      :E0 (s7d / do
+                                               :ACTION s7w))
+               :imp_output (s7w1 / wrap.RES))
+     :op2 (s7c / chill-01~5
+               :duration (s7a2 / at-least~6,7
+                               :op1 (s7t / temporal-quantity
+                                         :unit (s7h / hour~9)
+                                         :quant 4))
+               :ARG0 s7y
+               :event-structure (s7se1 / subevents
+                                       :E1 (s7h4 / has_state
+                                                 :polarity -
+                                                 :IMP_PATIENT s7w1
+                                                 :V_FINAL_STATE (s7c1 / chilled))
+                                       :E3 (s7h5 / has_state
+                                                 :IMP_PATIENT s7w1
+                                                 :V_FINAL_STATE s7c1)
+                                       :E0 (s7d1 / do
+                                                 :ACTION s7c))
+               :imp_output (s7c2 / chill.RES))
+     :mode imperative)
+
+
+# :: r-1097::step06::sent01
+# :: snt8	With a sharp knife , saw into 1/4 inch slices .
+(s8s / saw-04~5
+     :ARG1 (s8s3 / slice~9
+                 :mod (s8d / distance-quantity
+                           :quant "1/4"
+                           :unit (s8i / inch~8)))
+     :instrument (s8k / knife~3
+                      :mod (s8s2 / sharp~2))
+     :mode imperative
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8d1 / degradation_material_integrity
+                                      :polarity -
+                                      :IMP_PATIENT (s8c / chill.RES))
+                            :E2 (s8c1 / contact
+                                      :IMP_PATIENT s8c
+                                      :INSTRUMENT s8k)
+                            :E3 (s8d2 / degradation_material_integrity
+                                      :IMP_PATIENT s8c)
+                            :E0 (s8d3 / do
+                                      :ACTION s8s))
+     :imp_output (s8s1 / see.RES))
+
+
+# :: r-1097::step07::sent01
+# :: snt9	Bake at 375 degrees for 10- 12 minutes , or until slightly browned .
+(s9b / bake-01~0
+     :manner (s9t / temperature-quantity
+                  :quant 375
+                  :scale (s9f / fahrenheit~3))
+     :duration (s9o / or
+                    :op1 (s9b2 / between
+                               :op1 (s9t2 / temporal-quantity
+                                          :quant 10
+                                          :duration s9o
+                                          :unit (s9m2 / minute))
+                               :op2 (s9t3 / temporal-quantity
+                                          :quant 12
+                                          :unit (s9m / minute~7)))
+                    :op2 (s9u / until~10
+                              :op1 (s9b3 / brown-01~12
+                                         :degree (s9s / slight~11))))
+     :mode imperative
+     :ARG0 (s9y / you)
+     :event-structure (s9se / subevents
+                            :E1 (s9c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s9s1 / see.RES)
+                                     :V_FINAL_STATE (s9b1 / baked))
+                            :E3 (s9a / apply_heat
+                                     :IMP_PATIENT s9s1)
+                            :E4 (s9a1 / and
+                                      :op1 (s9c1 / cooked
+                                                 :IMP_PATIENT s9s1
+                                                 :V_FINAL_STATE s9b1)
+                                      :op2 (s9h / has_state
+                                                :IMP_PATIENT s9s1
+                                                :RESULT s9b3))
+                            :E0 (s9d / do
+                                     :ACTION s9b))
+     :imp_output (s9b4 / bake.RES))
+
+

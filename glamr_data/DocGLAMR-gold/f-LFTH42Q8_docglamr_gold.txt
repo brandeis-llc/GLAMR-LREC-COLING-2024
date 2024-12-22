@@ -1,0 +1,53 @@
+# :: f-LFTH42Q8::step01::sent01
+# :: snt1	Heat the olive oil in a large saucepan , saute the onion for 3 - 4 minutes .
+(s1 / sentence
+    :coref ((s1o2 :cut s1h2)
+			(s1h2 :aggregation s1s3)
+			(s1s3 :aggregation s1h)
+			(s1o3 :aggregation s1s3)
+			(s1l :aggregation s1h)
+			(s1o2 :aggregation s1h)))
+
+
+# :: f-LFTH42Q8::step01::sent02
+# :: snt2	Then add the rest of the vegetables and stir .
+(s2 / sentence
+    :coref ((s1h :aggregation s2t)
+			(s2t :aggregation s2v)
+			(s1s3 :aggregation s2t)
+			(s1h :aggregation s2v)
+			(s2r :aggregation s2t)
+			(s2s :aggregation s2v)))
+
+
+# :: f-LFTH42Q8::step01::sent03
+# :: snt3	Add the rice inside the vegetable mix and incorporate it in the vegetable mix .
+(s3 / sentence
+    :coref ((s2v :cut s3a)
+			(s2t :cut s3a)
+			(s1h :cut s3a)))
+
+
+# :: f-LFTH42Q8::step02::sent01
+# :: snt4	Pour over the grated tomatoes and add the sugar , salt and pepper .
+(s4 / sentence
+    :coref ((s3a :aggregation s4a2)
+			(s2v :aggregation s4a2)
+			(s2t :aggregation s4a2)))
+
+
+# :: f-LFTH42Q8::step02::sent02
+# :: snt5	You will also need to add 2 cups of warm water .
+(s5 / sentence)
+
+
+# :: f-LFTH42Q8::step03::sent01
+# :: snt6	Simmer in medium heat for about 20 - 25 minutes and then incorporate the chopped herbs .
+(s6 / sentence)
+
+
+# :: f-LFTH42Q8::step04::sent01
+# :: snt7	If you wish you can add the grated feta inside the rice so it 'll become more edgy and creamy but I prefer to to add the feta over the rice after serving !
+(s7 / sentence)
+
+

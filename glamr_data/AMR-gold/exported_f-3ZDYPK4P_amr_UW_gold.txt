@@ -1,0 +1,313 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1263
+export time: 4/3/2023, 4:24:38 PM
+
+# :: snt1	In a large skillet , cook andouille on high for 2 minutes .
+# sentence level graph:
+(s1c / cook-01
+  :ARG1 (s1a / andouille)
+  :duration (s1t / temporal-quantity
+              :quant 2
+              :unit (s1m / minute))
+  :location (s1s / skillet
+              :mod (s1l / large)
+              :mod (s1t2 / temperature-quantity
+                     :mod (s1h / high-02)))
+  :mode imperative)
+
+# alignment:s1a: 7-7
+s1c: 6-6
+s1h: 9-9
+s1l: 3-3
+s1m: 12-12
+s1s: 4-4
+s1t: 12-12
+s1t2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Lower heat to medium and continue to cook until sausage begins to brown .
+# sentence level graph:
+(s2a / and
+  :op1 (s2l / lower-05
+         :ARG1 (s2h / heat)
+         :ARG4 (s2m / medium))
+  :op2 (s2c / continue-01
+         :ARG1 (s2c2 / cook-01)
+         :time (s2u / until
+                 :op1 (s2b / begin-02
+                        :ARG1 (s2b2 / brown-01
+                                :ARG1 (s2s / sausage)))))
+  :mode imperative)
+
+# alignment:s2a: 5-5
+s2b: 11-11
+s2b2: 13-13
+s2c: 6-6
+s2c2: 8-8
+s2h: 2-2
+s2l: 1-1
+s2m: 4-4
+s2s: 10-10
+s2u: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Stir frequently and scrape juiced from the bottom of the pan .
+# sentence level graph:
+(s3a / and
+  :op1 (s3s2 / stir-01
+         :manner (s3f / frequent-02))
+  :op2 (s3s / scrape-01
+         :ARG1 (s3j / juice)
+         :ARG2 (s3b / bottom
+                 :part-of (s3p / pan)))
+  :mode imperative)
+
+# alignment:s3a: 3-3
+s3b: 8-8
+s3f: 2-2
+s3j: 5-5
+s3p: 11-11
+s3s: 4-4
+s3s2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add onions , celery and peppers .
+# sentence level graph:
+(s4a / add-02
+  :ARG1 (s4a2 / and
+          :op1 (s4o / onion)
+          :op2 (s4c / celery)
+          :op3 (s4p / pepper))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4a2: 5-5
+s4c: 4-4
+s4o: 2-2
+s4p: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Continue to cook until vegetables are tender but still firm , about 7 minutes .
+# sentence level graph:
+(s5c / continue-01
+  :ARG1 (s5c3 / cook-01
+          :duration (s5c2 / contrast-01
+                      :ARG1 (s5t2 / tender-02
+                              :ARG1 (s5v / vegetable))
+                      :ARG2 (s5f / firm-03
+                              :ARG1 s5v
+                              :mod (s5s / still))))
+  :duration (s5a / about
+              :op1 (s5t / temporal-quantity
+                     :quant 7
+                     :unit (s5m / minute)))
+  :mode imperative)
+
+# alignment:s5a: 12-12
+s5c: 1-1
+s5c2: 8-8
+s5c3: 3-3
+s5f: 10-10
+s5m: 14-14
+s5s: 9-9
+s5t: 14-14
+s5t2: 7-7
+s5v: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Return the heat to high , which will bring the oil to the bottom of the pan .
+# sentence level graph:
+(s6r / return-03
+  :ARG1 (s6h / heat)
+  :ARG2 (s6h2 / high-02)
+  :purpose (s6b2 / bring-01
+             :ARG1 (s6o / oil)
+             :ARG2 (s6b / bottom
+                     :part-of (s6p / pan)))
+  :mode imperative)
+
+# alignment:s6b: 14-14
+s6b2: 9-9
+s6h: 3-3
+s6h2: 5-5
+s6o: 11-11
+s6p: 17-17
+s6r: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Add Beaumonde ; cook until the mixture sticks , almost to the point of scorching , about 2 minutes .
+# sentence level graph:
+(s7a4 / and
+  :op1 (s7a2 / add-02
+         :ARG1 (s7p / product
+                 :name (s7n / name
+                         :op1 "Beaumonde")))
+  :op2 (s7c / cook-01
+         :duration (s7a / about
+                     :op1 (s7t / temporal-quantity
+                            :quant 2
+                            :unit (s7m / minute)))
+         :time (s7u / until
+                 :op1 (s7s2 / stick-01
+                        :ARG1 (s7m2 / mixture)
+                        :ARG2-of (s7h / have-degree-91
+                                   :ARG1 s7m2
+                                   :ARG3 (s7t2 / to-the-point)
+                                   :ARG6 (s7s / scorch-01
+                                           :ARG1 s7m2)
+                                   :mod (s7a3 / almost)))))
+  :mode imperative)
+
+# alignment:s7a: 17-17
+s7a2: 1-1
+s7a3: 10-10
+s7a4: 3-3
+s7c: 4-4
+s7h: 14-14
+s7m: 19-19
+s7m2: 7-7
+s7n: 2-2
+s7p: 2-2
+s7s: 15-15
+s7s2: 8-8
+s7t: 19-19
+s7t2: 13-13
+s7u: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Stir and scrape the bottom of the pan constantly over this period .
+# sentence level graph:
+(s8a / and
+  :op1 (s8s2 / stir-01
+         :ARG1 (s8b / bottom
+                 :part-of (s8p / pan)))
+  :op2 (s8s / scrape-01
+         :ARG1 s8b)
+  :duration (s8p2 / period
+              :mod (s8t / this))
+  :manner (s8c / constant)
+  :mode imperative)
+
+# alignment:s8a: 2-2
+s8b: 5-5
+s8c: 9-9
+s8p: 8-8
+s8p2: 12-12
+s8s: 3-3
+s8s2: 1-1
+s8t: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Add stock and bring to a simmer .
+# sentence level graph:
+(s9a4 / and
+  :op1 (s9a / add-02
+         :ARG1 (s9s2 / stock))
+  :op2 (s9b / bring-01
+         :ARG3 (s9s / simmer-01))
+  :mode imperative)
+
+# alignment:s9a: 1-1
+s9s2: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Reduce heat and continue simmering and stirring for another 5 minutes .
+# sentence level graph:
+(s10a4 / and
+  :op1 (s10r / reduce-01
+         :ARG1 (s10h / heat))
+  :op2 (s10c2 / continue-01
+         :ARG1 (s10a5 / and
+                 :op1 (s10s4 / simmer-01)
+                 :op2 (s10s3 / stir-01)
+                 :duration (s10t2 / temporal-quantity
+                             :unit (s10m2 / minute)
+                             :mod (s10a6 / another)
+                             :quant 5)))
+  :mode imperative)
+
+# alignment:s10a5: -1--1
+s10a6: -1--1
+s10c2: 0-0
+s10h: 2-2
+s10m2: -1--1
+s10r: 1-1
+s10s3: -1--1
+s10s4: -1--1
+s10t2: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+In a large skillet , cook andouille on high for 2 minutes .
+Lower heat to medium and continue to cook until sausage begins to brown .
+Stir frequently and scrape juiced from the bottom of the pan .
+Add onions , celery and peppers .
+Continue to cook until vegetables are tender but still firm , about 7 minutes .
+Return the heat to high , which will bring the oil to the bottom of the pan .
+Add Beaumonde ; cook until the mixture sticks , almost to the point of scorching , about 2 minutes .
+Stir and scrape the bottom of the pan constantly over this period .
+Add stock and bring to a simmer .
+Reduce heat and continue simmering and stirring for another 5 minutes .

@@ -1,0 +1,79 @@
+# :: f-8NKNNF6N::step01::sent01
+# :: snt1	Heat a large frying pan with a drizzle of olive oil .
+(s1 / sentence
+    :coref ((s1o2 :cut s1h1)
+			(s1h1 :aggregation s1h2)
+			(s1h2 :cut s1h2)
+			(s1l :aggregation s1h2)
+			(s1p :aggregation s1h2)))
+
+
+# :: f-8NKNNF6N::step01::sent02
+# :: snt2	Add the chickpeas and mushrooms .
+(s2 / sentence
+    :coref ((s1h2 :aggregation s2a)
+			(s2c :aggregation s2a)
+			(s2m :aggregation s2a)))
+
+
+# :: f-8NKNNF6N::step01::sent03
+# :: snt3	Saute the chickpeas and mushrooms on a medium to gentle heat , for a minute or two , until the mushrooms get a slightly rich and healthy color .
+(s3 / sentence
+    :coref ((s2a :aggregation s3a)
+			(s3a :aggregation s3a)
+			(s3a :cut s3c)
+			(s1h2 :aggregation s3a)
+			(s1h2 :cut s3c)
+			(s2a :cut s3c)
+			(s3c :aggregation s3a)
+			(s3c :cut s3c)
+			(s3m4 :aggregation s3a)))
+
+
+# :: f-8NKNNF6N::step02::sent01
+# :: snt4	Add the scallions , garlic and parsley and continue to saute for another minute or two .
+(s4 / sentence
+    :coref ((s4s :cut s4a)))
+
+
+# :: f-8NKNNF6N::step03::sent01
+# :: snt5	Add the wine and the chicken broth .
+(s5 / sentence
+    :coref ((s3c :aggregation s5a)
+			(s5a :aggregation s5a)
+			(s3a :aggregation s5a)
+			(s2a :aggregation s5a)
+			(s4a :aggregation s5a)
+			(s5c :aggregation s5a)))
+
+
+# :: f-8NKNNF6N::step03::sent02
+# :: snt6	Add the butter and seasonings to taste .
+(s6 / sentence)
+
+
+# :: f-8NKNNF6N::step03::sent03
+# :: snt7	Continue to saute on a gentle heat .
+(s7 / sentence)
+
+
+# :: f-8NKNNF6N::step04::sent01
+# :: snt8	Prepare the macaroni as directed .
+(s8 / sentence)
+
+
+# :: f-8NKNNF6N::step05::sent01
+# :: snt9	Drizzle olive oil on a serving platter and plate the macaroni .
+(s9 / sentence)
+
+
+# :: f-8NKNNF6N::step05::sent02
+# :: snt10	Add the mushrooms and chickpeas .
+(s10 / sentence)
+
+
+# :: f-8NKNNF6N::step05::sent03
+# :: snt11	Top with a drizzle of olive oil , red pepper flakes and fresh grated Romano cheese .
+(s11 / sentence)
+
+

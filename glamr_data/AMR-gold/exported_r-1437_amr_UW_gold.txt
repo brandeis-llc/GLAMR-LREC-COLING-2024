@@ -1,0 +1,186 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1466
+export time: 9/26/2023, 9:05:49 PM
+
+# :: snt1	Soak pea overnight .
+# sentence level graph:
+(s1s / soak-01
+  :ARG1 (s1p / pea)
+  :mode imperative
+  :duration (s1o / overnight))
+
+# alignment:s1o: 3-3
+s1p: 2-2
+s1s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Rinse and drain .
+# sentence level graph:
+(s2a / and
+  :op1 (s2r / rinse-01)
+  :op2 (s2d2 / drain-01)
+  :mode imperative)
+
+# alignment:s2a: 2-2
+s2d2: 3-3
+s2r: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	In a large pot , bring peas and water to boil over high heat and reduce to simmer until tender ( 60min ) .
+# sentence level graph:
+(s3a / and
+  :op1 (s3b2 / bring-ON-02
+         :ARG1 (s3a2 / and
+                 :op1 (s3p / pea)
+                 :op2 (s3w / water))
+         :destination (s3b / boil)
+         :manner (s3h / heat
+                   :mod (s3h2 / high)))
+  :op2 (s3r / reduce-01
+         :purpose (s3s / simmer-01
+                    :duration (s3u / until
+                                :op1 (s3t2 / tender)
+                                :op2 (s3t / temporal-quantity
+                                       :quant 60
+                                       :unit (s3m / minute)))))
+  :location (s3p2 / pot
+              :mod (s3l / large))
+  :mode imperative)
+
+# alignment:s3a: 8-8
+s3a2: 15-15
+s3b: 11-11
+s3b2: 6-6
+s3h: -1--1
+s3h2: -1--1
+s3l: 3-3
+s3m: 22-22
+s3p: 7-7
+s3p2: 4-4
+s3r: 16-16
+s3s: 18-18
+s3t: 22-22
+s3u: 20-20
+s3w: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Puree the soup and add butter , sal tand pepper , and mustard .
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4p2 / puree-00
+         :ARG1 (s4s / soup))
+  :op2 (s4a / add-02
+         :ARG1 (s4a3 / and
+                 :op1 (s4b / butter)
+                 :op2 (s4s2 / salt)
+                 :op3 (s4p / pepper)
+                 :op4 (s4m / mustard)))
+  :mode imperative)
+
+# alignment:s4a: 5-5
+s4a2: 4-4
+s4a3: 9-9
+s4b: 6-6
+s4m: -1--1
+s4p: 10-10
+s4p2: 1-1
+s4s: 3-3
+s4s2: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Cook , stirring oftne over medium heat , 10 minutes .
+# sentence level graph:
+(s5c / cook-01
+  :duration (s5t / temporal-quantity
+              :quant 10
+              :unit (s5m2 / minute))
+  :manner (s5s / stir-01
+            :frequency (s5o / often)
+            :manner (s5h / heat
+                      :mod (s5m / medium)))
+  :mode imperative)
+
+# alignment:s5c: 1-1
+s5h: 7-7
+s5m: 6-6
+s5m2: 10-10
+s5o: 4-4
+s5s: 3-3
+s5t: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Adjust seasoning .
+# sentence level graph:
+(s6a / adjust-01
+  :ARG1 (s6s / seasoning)
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6s: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Serve with whipping cream .
+# sentence level graph:
+(s7s / serve-02
+  :accompanier (s7c / cream
+                 :ARG1-of (s7w / whip-01))
+  :mode imperative)
+
+# alignment:s7c: 4-4
+s7s: 1-1
+s7w: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Soak pea overnight .
+Rinse and drain .
+In a large pot , bring peas and water to boil over high heat and reduce to simmer until tender ( 60min ) .
+Puree the soup and add butter , sal tand pepper , and mustard .
+Cook , stirring oftne over medium heat , 10 minutes .
+Adjust seasoning .
+Serve with whipping cream .

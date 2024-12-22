@@ -1,0 +1,171 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1482
+export time: 10/1/2023, 8:31:14 PM
+
+# :: snt1	Crisp - cook soy " bacon " according to package directions .
+# sentence level graph:
+(s1c2 / cook-01
+  :ARG1 (s1b / bacon
+          :source (s1s / soy))
+  :manner (s1s2 / say-01
+            :ARG0 (s1d / directions
+                    :source (s1p / package)))
+  :purpose (s1r / Crisp-01)
+  :mode imperative)
+
+# alignment:s1b: 6-6
+s1c2: 3-3
+s1d: 11-11
+s1p: 10-10
+s1r: 1-1
+s1s: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Remove to plate .
+# sentence level graph:
+(s2r / remove-01
+  :destination (s2p / plate)
+  :mode imperative)
+
+# alignment:s2p: 3-3
+s2r: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	When cool enough to handle , cut into 1/2-inch pieces .
+# sentence level graph:
+(s3c2 / cut-01
+  :destination (s3p / piece
+                 :mod (s3d / distance-quantity
+                        :quant "1/2"
+                        :unit (s3i2 / inch)))
+  :mode imperative
+  :time (s3h3 / have-degree-91
+          :ARG2 (s3c / cool-06)
+          :ARG3 (s3e / enough)
+          :ARG6 (s3h / handle-01)))
+
+# alignment:s3c: 2-2
+s3c2: 7-7
+s3e: -1--1
+s3h: -1--1
+s3p: 10-10
+s3d: 9-9
+s3i2: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	In large bowl , combine soy " bacon " and tofu .
+# sentence level graph:
+(s4c / combine-01
+  :ARG1 (s4b / bacon
+          :source (s4s / soy))
+  :ARG2 (s4t / tofu)
+  :location (s4b2 / bowl
+              :mod (s4l / large))
+  :mode imperative)
+
+# alignment:s4b: 8-8
+s4b2: 3-3
+s4c: 5-5
+s4l: 2-2
+s4s: 6-6
+s4t: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	In small bowl , toss avocado with lemon juice , then add to tofu mixture along with tomatoes and lettuce .
+# sentence level graph:
+(s5a3 / and
+  :op1 (s5t4 / toss-01
+         :ARG1 (s5a4 / avocado)
+         :accompanier (s5j / juice
+                        :source (s5l / lemon)))
+  :op2 (s5a / add-02
+         :ARG2 (s5m / mixture
+                 :consist-of (s5t2 / tofu))
+         :accompanier (s5a2 / and
+                        :op1 (s5t3 / tomato)
+                        :op2 (s5l2 / lettuce))
+         :time (s5t / then))
+  :mode imperative
+  :location (s5b / bowl
+              :mod (s5s / small)))
+
+# alignment:s5a: 12-12
+s5a2: 13-13
+s5a3: 19-19
+s5a4: 6-6
+s5b: -1--1
+s5j: 9-9
+s5l: 8-8
+s5l2: 20-20
+s5m: 15-15
+s5s: -1--1
+s5t: 11-11
+s5t2: 14-14
+s5t3: 18-18
+s5t4: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Add dressing , toss to coat and serve .
+# sentence level graph:
+(s6a2 / and
+  :op1 (s6a / add-02
+         :ARG1 (s6d / dressing))
+  :op2 (s6t / toss-01
+         :purpose (s6c / coat-01))
+  :op3 (s6s / serve-02)
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6a2: 7-7
+s6c: 6-6
+s6d: 2-2
+s6s: 8-8
+s6t: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Crisp - cook soy " bacon " according to package directions .
+Remove to plate .
+When cool enough to handle , cut into 1/2-inch pieces .
+In large bowl , combine soy " bacon " and tofu .
+In small bowl , toss avocado with lemon juice , then add to tofu mixture along with tomatoes and lettuce .
+Add dressing , toss to coat and serve .

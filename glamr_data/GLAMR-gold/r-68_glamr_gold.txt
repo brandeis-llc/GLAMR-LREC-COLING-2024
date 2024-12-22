@@ -1,0 +1,272 @@
+# :: r-68::step01::sent01
+# :: snt1	Firstly , heat the vegetable oil in a medium - sized pan .
+(s1h / heat-01~2
+     :ARG1 (s1o / oil~5
+                :source (s1v / vegetable~4))
+     :li 1
+     :location (s1p / pan~11
+                    :ARG1-of (s1s / size-01~10
+                                  :ARG2 (s1m / medium~8)))
+     :mode imperative
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1c / cooked
+                                     :polarity -
+                                     :PATIENT s1o
+                                     :V_FINAL_STATE (s1h1 / heated))
+                            :E3 (s1a / apply_heat
+                                     :PATIENT s1o)
+                            :E4 (s1c1 / cooked
+                                      :PATIENT s1o
+                                      :V_FINAL_STATE s1h1)
+                            :E0 (s1d / do
+                                     :ACTION s1h))
+     :imp_output (s1h2 / heat.RES))
+
+
+# :: r-68::step02::sent01
+# :: snt2	When the oil is hot , add the almonds and toss until they brown .
+(s2a3 / and~9
+      :op1 (s2a / add-02~6
+                :ARG1 (s2a2 / almond~8,12)
+                :ARG0 (s2y / you)
+                :event-structure (s2se / subevents
+                                       :E1 (s2t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s2a2)
+                                       :E3 (s2t2 / together
+                                                 :PATIENT_I s2a2)
+                                       :E0 (s2d / do
+                                                :ACTION s2a))
+                :imp_output (s2a1 / add.RES))
+      :op2 (s2t / toss-01~10
+                :duration (s2u / until~11
+                               :op1 (s2b / brown-01~13
+                                         :ARG1 s2a2))
+                :ARG0 s2y
+                :event-structure (s2se1 / subevents
+                                        :E1 (s2b1 / be
+                                                  :polarity -
+                                                  :PRODUCT s2b)
+                                        :E3 (s2b2 / be
+                                                  :PRODUCT s2b)
+                                        :E0 (s2d1 / do
+                                                  :ACTION s2t))
+                :imp_output (s2t3 / toss.RES))
+      :mode imperative
+      :time (s2h / hot-05~4
+                 :ARG1 (s2o / oil~2)))
+
+
+# :: r-68::step03::sent01
+# :: snt3	Drain the almonds , making sure any excess water is removed , then mix them with the walnut oil and salt in a blender until they form a smooth paste .
+(s3a2 / and
+      :op1 (s3d / drain-01~0
+                :ARG1 (s3a / almond~2,14)
+                :manner (s3e / ensure-01~4,5
+                             :ARG1 (s3r2 / remove-01~10
+                                         :ARG1 (s3w2 / water~8
+                                                     :mod (s3a4 / any~6)
+                                                     :mod (s3e2 / excess~7))
+                                         :ARG0 s3y
+                                         :event-structure (s3se1 / subevents
+                                                                 :E1 (s3h5 / has_location
+                                                                           :THEME s3w2)
+                                                                 :E3 (s3a7 / and
+                                                                           :op1 (s3m2 / motion
+                                                                                      :THEME s3w2)
+                                                                           :op2 (s3h6 / has_location
+                                                                                      :polarity -
+                                                                                      :THEME s3w2))
+                                                                 :E4 (s3h7 / has_location
+                                                                           :THEME s3w2)
+                                                                 :E0 (s3d5 / do
+                                                                           :ACTION s3r2))
+                                         :imp_output (s3r / remove.RES)))
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3a1 / and
+                                                 :op1 (s3h / has_location
+                                                           :IMP_THEME (s3t1 / toss.RES)
+                                                           :SOURCE s3a)
+                                                 :op2 (s3h1 / has_state
+                                                            :polarity -
+                                                            :SOURCE s3a
+                                                            :V_FINAL_STATE (s3d1 / drained)))
+                                       :E3 (s3a5 / and
+                                                 :op1 (s3m1 / motion
+                                                            :IMP_THEME s3t1)
+                                                 :op2 (s3h2 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s3t1
+                                                            :SOURCE s3a))
+                                       :E4 (s3a6 / and
+                                                 :op1 (s3h3 / has_location
+                                                            :IMP_THEME s3t1)
+                                                 :op2 (s3h4 / has_state
+                                                            :SOURCE s3a
+                                                            :V_FINAL_STATE s3d1))
+                                       :E0 (s3d2 / do
+                                                 :ACTION s3d))
+                :imp_outputI (s3d3 / drain.RES)
+                :imp_outputJ (s3d4 / drain.RES))
+      :op2 (s3m / mix-01~13
+                :ARG1 s3a
+                :ARG2 (s3a3 / and~19
+                            :op1 (s3o / oil~18
+                                      :source (s3w / walnut~17))
+                            :op2 (s3s / salt~20))
+                :instrument (s3b / blender~23)
+                :time (s3t / then~12)
+                :duration (s3u / until~24
+                               :op1 (s3f / form-01~26
+                                         :ARG0 (s3t2 / they~25)
+                                         :ARG1 (s3p / paste~29
+                                                    :mod (s3s2 / smooth~28))))
+                :ARG0 s3y
+                :event-structure (s3se2 / subevents
+                                        :E1 (s3a8 / and
+                                                  :op1 (s3m3 / mingled
+                                                             :polarity -
+                                                             :PATIENT_I s3o
+                                                             :PATIENT_J s3s)
+                                                  :op2 (s3h8 / has_material_integrity_state
+                                                             :polarity -
+                                                             :PATIENT_I s3o
+                                                             :V_STATE (s3m4 / mixed)
+                                                             :PATIENT_J s3s)
+                                                  :op3 (s3h9 / has_material_integrity_state
+                                                             :polarity -
+                                                             :PATIENT_J s3s
+                                                             :V_STATE s3m4
+                                                             :PATIENT_I s3o))
+                                        :E3 (s3a9 / and
+                                                  :op1 (s3m5 / mingled
+                                                             :PATIENT_I s3o
+                                                             :PATIENT_J s3s)
+                                                  :op2 (s3h10 / has_material_integrity_state
+                                                              :PATIENT_I s3o
+                                                              :V_STATE s3m4
+                                                              :PATIENT_J s3s)
+                                                  :op3 (s3h11 / has_material_integrity_state
+                                                              :PATIENT_J s3s
+                                                              :V_STATE s3m4
+                                                              :PATIENT_I s3o))
+                                        :E0 (s3d6 / do
+                                                  :ACTION s3m))
+                :imp_output (s3m6 / mix.RES))
+      :mode imperative)
+
+
+# :: r-68::step04::sent01
+# :: snt4	Add the honey and blend for another few seconds .
+(s4a2 / and~3
+      :op1 (s4a / add-02~0
+                :ARG1 (s4h / honey~2)
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s4h)
+                                       :E3 (s4t2 / together
+                                                 :PATIENT_I s4h)
+                                       :E0 (s4d / do
+                                                :ACTION s4a))
+                :imp_output (s4a1 / add.RES))
+      :op2 (s4b / blend-01~4
+                :duration (s4f / few~7
+                               :op1 (s4t / temporal-quantity
+                                         :quant 1
+                                         :unit (s4s / second~8))
+                               :mod (s4a3 / another~6))
+                :ARG0 s4y
+                :event-structure (s4se1 / subevents
+                                        :E1 (s4a4 / and
+                                                  :op1 (s4m / mingled
+                                                            :polarity -)
+                                                  :op2 (s4h1 / has_material_integrity_state
+                                                             :polarity -
+                                                             :V_STATE (s4b1 / blent))
+                                                  :op3 (s4h2 / has_material_integrity_state
+                                                             :polarity -
+                                                             :V_STATE s4b1))
+                                        :E3 (s4a5 / and
+                                                  :op1 (s4m1 / mingled)
+                                                  :op2 (s4h3 / has_material_integrity_state
+                                                             :V_STATE s4b1)
+                                                  :op3 (s4h4 / has_material_integrity_state
+                                                             :V_STATE s4b1))
+                                        :E0 (s4d1 / do
+                                                  :ACTION s4b))
+                :imp_output (s4b2 / blend.RES))
+      :mode imperative)
+
+
+# :: r-68::step05::sent01
+# :: snt5	Pour into an airtight jar and refrigerate .
+(s5a2 / and~5
+      :op1 (s5p / pour-01~0
+                :ARG3 (s5j / jar~4
+                           :mod (s5a / airtight~3))
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5h / has_location
+                                                :IMP_THEME (s5b / blend.RES))
+                                       :E3 (s5a1 / and
+                                                 :op1 (s5m / motion
+                                                           :IMP_THEME s5b)
+                                                 :op2 (s5h1 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s5b))
+                                       :E4 (s5h2 / has_location
+                                                 :IMP_THEME s5b
+                                                 :DESTINATION s5j)
+                                       :E0 (s5d / do
+                                                :ACTION s5p))
+                :imp_output (s5p1 / pour.RES))
+      :op2 (s5r / refrigerate-01~6
+                :ARG0 s5y
+                :event-structure (s5se1 / subevents
+                                        :E1 (s5h3 / has_state
+                                                  :polarity -
+                                                  :IMP_PATIENT s5p1
+                                                  :V_FINAL_STATE (s5r1 / refrigerated))
+                                        :E3 (s5h4 / has_state
+                                                  :IMP_PATIENT s5p1
+                                                  :V_FINAL_STATE s5r1)
+                                        :E0 (s5d1 / do
+                                                  :ACTION s5r))
+                :imp_output (s5r2 / refrigerate.RES))
+      :mode imperative)
+
+
+# :: r-68::step06::sent01
+# :: snt6	The paste will be good for two months from the day it is made .
+(s6b / be-01~4
+     :ARG1 (s6p / paste-01~1)
+     :ARG2 (s6g / good)
+     :duration (s6a / after
+                    :op1 (s6d / day~10
+                              :time-of (s6m / make-01~13
+                                            :ARG1 s6p
+                                            :ARG0 (s6y / you)
+                                            :event-structure (s6se / subevents
+                                                                   :E1 (s6b1 / be
+                                                                             :polarity -
+                                                                             :PRODUCT (s6i / it~11))
+                                                                   :E3 (s6a1 / and
+                                                                             :op1 (s6b2 / be
+                                                                                        :PRODUCT s6i)
+                                                                             :op2 (s6m1 / made_of
+                                                                                        :PRODUCT s6i))
+                                                                   :E (s6c / cost
+                                                                           :PRODUCT s6i)
+                                                                   :E0 (s6d1 / do
+                                                                             :ACTION s6m))
+                                            :imp_output (s6m3 / make.RES)))
+                    :quant (s6t2 / temporal-quantity
+                                 :quant 2
+                                 :unit (s6m2 / month~7)))
+     :mode imperative)
+
+

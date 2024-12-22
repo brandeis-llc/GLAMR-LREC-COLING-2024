@@ -1,0 +1,229 @@
+# :: f-QSZCGZJG::step01::sent01
+# :: snt1	Heat a sauce pan with the olive oil and add the onion , garlic and zucchini .
+(s1a2 / and~8
+      :op1 (s1h / heat-01~0
+                :ARG1 (s1s / saucepan~2,3)
+                :ARG2 (s1o / oil~7
+                           :mod (s1o2 / olive~6))
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1c / cooked
+                                                :polarity -
+                                                :PATIENT s1o
+                                                :V_FINAL_STATE (s1h1 / heated))
+                                       :E3 (s1a1 / apply_heat
+                                                 :PATIENT s1o)
+                                       :E4 (s1c1 / cooked
+                                                 :PATIENT s1o
+                                                 :V_FINAL_STATE s1h1)
+                                       :E0 (s1d / do
+                                                :ACTION s1h))
+                :imp_output (s1h2 / heat.RES))
+      :op2 (s1a / add-02~9
+                :ARG1 (s1a3 / and~14
+                            :op1 (s1o3 / onion~11)
+                            :op2 (s1g / garlic~13)
+                            :op3 (s1z / zucchini~15))
+                :ARG0 s1y
+                :event-structure (s1se1 / subevents
+                                        :E1 (s1t / together
+                                                 :polarity -
+                                                 :PATIENT_I s1o3
+                                                 :PATIENT_J s1g
+                                                 :PATIENT_K s1z)
+                                        :E3 (s1t1 / together
+                                                  :PATIENT_I s1o3
+                                                  :PATIENT_J s1g
+                                                  :PATIENT_K s1z)
+                                        :E0 (s1d1 / do
+                                                  :ACTION s1a))
+                :imp_output (s1a4 / add.RES))
+      :mode imperative)
+
+
+# :: f-QSZCGZJG::step01::sent02
+# :: snt2	Let this saute for about 1 minute .
+(s2l / let-01~0
+     :ARG1 (s2s / saute-01~2
+                :ARG1 (s2t2 / this~1)
+                :duration (s2a / about~4
+                               :op1 (s2t / temporal-quantity
+                                         :quant 1
+                                         :unit (s2m / minute~6)))
+                :ARG0 (s2y / you)
+                :event-structure (s2se / subevents
+                                       :E1 (s2c / cooked
+                                                :polarity -
+                                                :PATIENT s2t2
+                                                :V_FINAL_STATE (s2s1 / sauted))
+                                       :E3 (s2a1 / apply_heat
+                                                 :PATIENT s2t2)
+                                       :E4 (s2c1 / cooked
+                                                 :PATIENT s2t2
+                                                 :V_FINAL_STATE s2s1)
+                                       :E0 (s2d / do
+                                                :ACTION s2s))
+                :imp_output (s2s2 / saute.RES))
+     :mode imperative)
+
+
+# :: f-QSZCGZJG::step01::sent03
+# :: snt3	Add the chicken broth , lemon juice , fresh basil and seasonings .
+(s3a / add-02~0
+     :ARG1 (s3a2 / and~10
+                 :op1 (s3b2 / broth~3
+                            :mod (s3c / chicken~2))
+                 :op2 (s3j / juice~6
+                           :source (s3l / lemon~5))
+                 :op3 (s3b / basil~9
+                           :mod (s3f / fresh~8))
+                 :op4 (s3s / seasoning~11))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3t / together
+                                     :polarity -
+                                     :PATIENT_I s3b2
+                                     :PATIENT_J s3j
+                                     :PATIENT_K s3b
+                                     :PATIENT_L s3s)
+                            :E3 (s3t1 / together
+                                      :PATIENT_I s3b2
+                                      :PATIENT_J s3j
+                                      :PATIENT_K s3b
+                                      :PATIENT_L s3s)
+                            :E0 (s3d / do
+                                     :ACTION s3a))
+     :imp_output (s3a1 / add.RES))
+
+
+# :: f-QSZCGZJG::step02::sent01
+# :: snt4	Simmer this on low until the zucchini become soft and the onion is transparent .
+(s4s2 / simmer-01~0
+      :ARG1 (s4t2 / this)
+      :manner (s4l / low~3)
+      :mode imperative
+      :duration (s4u / until~4
+                     :op1 (s4a / and~9
+                               :op1 (s4b / become-01~7
+                                         :ARG1 (s4z / zucchini~6)
+                                         :ARG2 (s4s / soft~8))
+                               :op2 (s4t3 / transparency~13
+                                          :domain (s4o / onion~11))))
+      :ARG0 (s4y / you)
+      :event-structure (s4se / subevents
+                             :E1 (s4c / cooked
+                                      :polarity -
+                                      :PATIENT (s4t / this~1)
+                                      :V_FINAL_STATE (s4s1 / simmered))
+                             :E3 (s4a1 / apply_heat
+                                       :INSTRUMENT s4l
+                                       :PATIENT s4t)
+                             :E4 (s4a2 / and
+                                       :op1 (s4c1 / cooked
+                                                  :PATIENT s4t
+                                                  :V_FINAL_STATE s4s1)
+                                       :op2 (s4h / has_state
+                                                 :PATIENT s4t
+                                                 :RESULT s4t3))
+                             :E0 (s4d / do
+                                      :ACTION s4s2))
+      :imp_output (s4s3 / simmer.RES))
+
+
+# :: f-QSZCGZJG::step02::sent02
+# :: snt5	This will take about 30 - 35 minutes .
+(s5t / take-10~2
+     :ARG0 (s5t4 / this)
+     :ARG1 (s5a / about~3
+                :op1 (s5b / between
+                          :op1 (s5t2 / temporal-quantity
+                                     :quant 30
+                                     :unit (s5m2 / minute))
+                          :op2 (s5t3 / temporal-quantity~0
+                                     :quant 35
+                                     :unit (s5m / minute~7)))))
+
+
+# :: f-QSZCGZJG::step03::sent01
+# :: snt6	Add the coconut milk with the zucchini is cooked .
+(s6a / add-02~0
+     :ARG1 (s6m / milk~3
+                :source (s6c / coconut~2))
+     :ARG2 (s6z / zucchini~6
+                :ARG1-of (s6c2 / cook-01~8))
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6t / together
+                                     :polarity -
+                                     :PATIENT_I s6m
+                                     :PATIENT_J s6z)
+                            :E3 (s6t1 / together
+                                      :PATIENT_I s6m
+                                      :PATIENT_J s6z)
+                            :E0 (s6d / do
+                                     :ACTION s6a))
+     :imp_output (s6a1 / add.RES))
+
+
+# :: f-QSZCGZJG::step03::sent02
+# :: snt7	Simmer for another minute or two and adjust the seasonings to taste .
+(s7a2 / and~6
+      :op1 (s7s2 / simmer-01~0
+                 :duration (s7o / or
+                                :op1 (s7t2 / temporal-quantity
+                                           :quant 1
+                                           :unit (s7m / minute~3))
+                                :op2 (s7t3 / temporal-quantity
+                                           :quant 2
+                                           :unit (s7m2 / minute))
+                                :mod (s7a3 / another~2))
+                 :ARG0 (s7y / you)
+                 :event-structure (s7se / subevents
+                                        :E1 (s7c / cooked
+                                                 :polarity -
+                                                 :IMP_PATIENT (s7a1 / add.RES)
+                                                 :V_FINAL_STATE (s7s1 / simmered))
+                                        :E3 (s7a4 / apply_heat
+                                                  :IMP_PATIENT s7a1)
+                                        :E4 (s7c1 / cooked
+                                                  :IMP_PATIENT s7a1
+                                                  :V_FINAL_STATE s7s1)
+                                        :E0 (s7d / do
+                                                 :ACTION s7s2))
+                 :imp_output (s7s3 / simmer.RES))
+      :op2 (s7a / adjust-01~7
+                :ARG1 (s7s / seasoning~9)
+                :ARG2 (s7t / taste-01~11)
+                :ARG0 s7y
+                :event-structure (s7se1 / subevents
+                                        :E1 (s7a5 / adjusted
+                                                  :polarity -
+                                                  :PATIENT s7s)
+                                        :E3 (s7a6 / adjusted
+                                                  :PATIENT s7s)
+                                        :E (s7e / equals
+                                                :PATIENT s7s)
+                                        :E0 (s7d1 / do
+                                                  :ACTION s7a))
+                :imp_output (s7a7 / adjust.RES))
+      :mode imperative)
+
+
+# :: f-QSZCGZJG::step04::sent01
+# :: snt8	Prepare the rice as directed .
+(s8p / prepare-02~0
+     :ARG1 (s8r / rice~2)
+     :manner (s8d / direct-01~4)
+     :mode imperative
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8b / be
+                                     :polarity -)
+                            :E3 (s8b1 / be)
+                            :E0 (s8d1 / do
+                                      :ACTION s8p))
+     :imp_output (s8p1 / prepare.RES))
+
+

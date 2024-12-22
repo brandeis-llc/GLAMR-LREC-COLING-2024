@@ -1,0 +1,212 @@
+# :: r-1901::step01::sent01
+# :: snt1	Peel and chop potatoes
+(s1a / and
+     :op1 (s1p2 / peel-01~0
+                :ARG1 (s1p / potato~3)
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1h / has_location
+                                                :V_THEME s1p
+                                                :V_THEME (s1p1 / peeled))
+                                       :E3 (s1a1 / and
+                                                 :op1 (s1m / motion
+                                                           :V_THEME s1p
+                                                           :V_THEME s1p1)
+                                                 :op2 (s1h1 / has_location
+                                                            :polarity -
+                                                            :V_THEME s1p
+                                                            :V_THEME s1p1))
+                                       :E (s1p3 / part_of
+                                                :V_THEME s1p
+                                                :V_THEME s1p1)
+                                       :E0 (s1d / do
+                                                :ACTION s1p2))
+                :imp_output (s1p4 / peel.RES))
+     :op2 (s1c / chop-01~2
+               :ARG1 s1p
+               :ARG0 s1y
+               :event-structure (s1se1 / subevents
+                                       :E1 (s1d1 / degradation_material_integrity
+                                                 :polarity -
+                                                 :PATIENT s1p)
+                                       :E2 (s1c1 / contact
+                                                 :PATIENT s1p)
+                                       :E3 (s1d2 / degradation_material_integrity
+                                                 :PATIENT s1p)
+                                       :E0 (s1d3 / do
+                                                 :ACTION s1c))
+               :imp_output (s1c2 / chop.RES))
+     :mode imperative)
+
+
+# :: r-1901::step02::sent01
+# :: snt2	Cook shallot in boiling butter and oil for approx 2 - 3 minutes
+(s2c / cook-01~0
+     :ARG1 (s2s / shallot~1)
+     :duration (s2b / between
+                    :op1 (s2t2 / temporal-quantity
+                               :quant (s2a / 2)
+                               :unit (s2m / minute))
+                    :op2 (s2t / temporal-quantity
+                              :quant 3
+                              :unit (s2m2 / minute~12))
+                    :mod (s2a3 / approx~8))
+     :medium (s2a2 / and~5
+                   :op1 (s2b3 / butter~4)
+                   :op2 (s2o / oil~6)
+                   :ARG1-of (s2b2 / boil-01~3))
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2c1 / cooked
+                                      :polarity -
+                                      :PATIENT s2s
+                                      :V_FINAL_STATE (s2c2 / cooked))
+                            :E3 (s2a1 / apply_heat
+                                      :INSTRUMENT s2o
+                                      :PATIENT s2s)
+                            :E4 (s2c3 / cooked
+                                      :PATIENT s2s
+                                      :V_FINAL_STATE s2c2)
+                            :E0 (s2d / do
+                                     :ACTION s2c))
+     :imp_output (s2c4 / cook.RES))
+
+
+# :: r-1901::step03::sent01
+# :: snt3	add leek and cook for another 5 - 6 minutes stirring vigorously
+(s3a2 / and~2
+      :op1 (s3a / add-02~0
+                :ARG1 (s3l / leek~1)
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s3l)
+                                       :E3 (s3t3 / together
+                                                 :PATIENT_I s3l)
+                                       :E0 (s3d / do
+                                                :ACTION s3a))
+                :imp_output (s3a1 / add.RES))
+      :op2 (s3c / cook-01~3
+                :duration (s3b / between
+                               :op1 (s3t / temporal-quantity
+                                         :quant 5
+                                         :unit (s3m / minute))
+                               :op2 (s3t2 / temporal-quantity
+                                          :quant 6
+                                          :unit (s3m2 / minute~9)))
+                :manner (s3s / stir-01~10
+                             :manner (s3v / vigorous~11)
+                             :ARG0 s3y
+                             :event-structure (s3se2 / subevents
+                                                     :E1 (s3h / has_material_integrity_state
+                                                              :polarity -
+                                                              :IMP_PATIENT s3c4
+                                                              :V_STATE (s3s1 / stirred))
+                                                     :E3 (s3h1 / has_material_integrity_state
+                                                               :IMP_PATIENT s3c4
+                                                               :V_STATE s3s1)
+                                                     :E0 (s3d2 / do
+                                                               :ACTION s3s))
+                             :imp_output (s3s2 / stir.RES))
+                :mod (s3a3 / another~5)
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s3a1
+                                                  :V_FINAL_STATE (s3c2 / cooked))
+                                        :E3 (s3a4 / apply_heat
+                                                  :IMP_PATIENT s3a1)
+                                        :E4 (s3c3 / cooked
+                                                  :IMP_PATIENT s3a1
+                                                  :V_FINAL_STATE s3c2)
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3c))
+                :imp_output (s3c4 / cook.RES))
+      :mode imperative)
+
+
+# :: r-1901::step04::sent01
+# :: snt4	add celery , potatoes , and wine and cook for another 4 minutes
+(s4a2 / and~7
+      :op1 (s4a / add-02~0
+                :ARG1 (s4a3 / and~5
+                            :op1 (s4c / celery~1)
+                            :op2 (s4p / potato~3)
+                            :op3 (s4w / wine~6))
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s4c
+                                                 :PATIENT_J s4p
+                                                 :PATIENT_K s4w)
+                                       :E3 (s4t2 / together
+                                                 :PATIENT_I s4c
+                                                 :PATIENT_J s4p
+                                                 :PATIENT_K s4w)
+                                       :E0 (s4d / do
+                                                :ACTION s4a))
+                :imp_output (s4a1 / add.RES))
+      :op2 (s4c2 / cook-01~8
+                 :duration (s4t / temporal-quantity
+                                :quant 4
+                                :mod (s4a4 / another)
+                                :unit (s4m / minute~12))
+                 :ARG0 s4y
+                 :event-structure (s4se1 / subevents
+                                         :E1 (s4c1 / cooked
+                                                   :polarity -
+                                                   :IMP_PATIENT s4a1
+                                                   :V_FINAL_STATE (s4c3 / cooked))
+                                         :E3 (s4a5 / apply_heat
+                                                   :IMP_PATIENT s4a1)
+                                         :E4 (s4c4 / cooked
+                                                   :IMP_PATIENT s4a1
+                                                   :V_FINAL_STATE s4c3)
+                                         :E0 (s4d1 / do
+                                                   :ACTION s4c2))
+                 :imp_output (s4c5 / cook.RES))
+      :mode imperative)
+
+
+# :: r-1901::step05::sent01
+# :: snt5	add broth and let the soup simmer for 60 minutes
+(s5a2 / and~2
+      :op1 (s5a / add-02~0
+                :ARG1 (s5b / broth~1)
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s5b)
+                                       :E3 (s5t2 / together
+                                                 :PATIENT_I s5b)
+                                       :E0 (s5d / do
+                                                :ACTION s5a))
+                :imp_output (s5a1 / add.RES))
+      :op2 (s5l / let-01~3
+                :ARG1 (s5s / simmer-01~6
+                           :ARG1 (s5s2 / soup~5)
+                           :duration (s5t / temporal-quantity
+                                          :quant 60
+                                          :unit (s5m / minute~9))
+                           :ARG0 s5y
+                           :event-structure (s5se1 / subevents
+                                                   :E1 (s5c / cooked
+                                                            :polarity -
+                                                            :PATIENT s5s2
+                                                            :V_FINAL_STATE (s5s1 / simmered))
+                                                   :E3 (s5a3 / apply_heat
+                                                             :PATIENT s5s2)
+                                                   :E4 (s5c1 / cooked
+                                                             :PATIENT s5s2
+                                                             :V_FINAL_STATE s5s1)
+                                                   :E0 (s5d1 / do
+                                                             :ACTION s5s))
+                           :imp_output (s5s3 / simmer.RES)))
+      :mode imperative)
+
+

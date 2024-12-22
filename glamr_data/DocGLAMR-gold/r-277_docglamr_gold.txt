@@ -1,0 +1,91 @@
+# :: r-277::step01::sent01
+# :: snt1	Break the rice sticks into a pan and cover with boiling water for 5 minutes - then strain .
+(s1 / sentence
+    :coref ((s1r :cut s1b3)
+			(s1b3 :aggregation s1c1)
+			(s1c1 :cut s1s)
+			(s1b :aggregation s1c1)))
+
+
+# :: r-277::step02::sent01
+# :: snt2	Reserve .
+(s2 / sentence
+    :coref ((s1s :cut s2r1)
+			(s1c1 :cut s2r1)))
+
+
+# :: r-277::step03::sent01
+# :: snt3	Fry the shallots and garlic for a few minutes in the oil , then add the ginger , coriander , and turmeric .
+(s3 / sentence
+    :coref ((s3s :aggregation s3f2)
+			(s3f2 :aggregation s3a5)
+			(s3g :aggregation s3f2)
+			(s3o :aggregation s3f2)
+			(s3g2 :aggregation s3a5)
+			(s3c :aggregation s3a5)
+			(s3t3 :aggregation s3a5)))
+
+
+# :: r-277::step04::sent01
+# :: snt4	Pour in the stock , bring to a boil , then reduce heat and simmer for 30 minutes .
+(s4 / sentence
+    :coref ((s3a5 :aggregation s4p)
+			(s4p :cut s4b3)
+			(s4b3 :cut s4s3)
+			(s3f2 :aggregation s4p)
+			(s4p :cut s4s3)
+			(s3f2 :cut s4b3)
+			(s3a5 :cut s4b3)
+			(s3a5 :cut s4s3)
+			(s4s2 :aggregation s4p)))
+
+
+# :: r-277::step05::sent01
+# :: snt5	When ready to serve , add the rice sticks and the coconut milk and bring to a simmer for about 5 minutes ( if you bring the coconut milk to a boil , you 'll use the coconut taste )
+(s5 / sentence
+    :coref ((s2r1 :aggregation s5a1)
+			(s5a1 :cut s5s2)
+			(s2r1 :cut s5s2)
+			(s4s3 :aggregation s5a1)
+			(s4s3 :cut s5s2)
+			(s4b3 :aggregation s5a1)
+			(s4b3 :cut s5s2)
+			(s3a5 :aggregation s5a1)
+			(s4p :aggregation s5a1)
+			(s5c :aggregation s5a1)))
+
+
+# :: r-277::step06::sent01
+# :: snt6	Toss in the shrimp and bean sprouts and simmer for 5 more minutes .
+(s6 / sentence
+    :coref ((s5s2 :aggregation s6t)
+			(s6t :cut s6s3)
+			(s5s2 :cut s6s3)
+			(s5a1 :aggregation s6t)
+			(s5a1 :cut s6s3)
+			(s4s3 :aggregation s6t)
+			(s6s :aggregation s6t)
+			(s6b2 :aggregation s6t)))
+
+
+# :: r-277::step07::sent01
+# :: snt7	Adjust the seasoning , ladle into bowls , and garnish with chopped scallions .
+(s7 / sentence
+    :coref ((s6s3 :aggregation s7a4)
+			(s7a4 :cut s7l1)
+			(s7l1 :aggregation s7g1)
+			(s6s3 :cut s7l1)
+			(s6t :aggregation s7a4)
+			(s7a4 :aggregation s7g1)
+			(s5s2 :aggregation s7a4)
+			(s6s3 :aggregation s7g1)
+			(s5s2 :cut s7l1)
+			(s6t :cut s7l1)
+			(s5a1 :aggregation s7a4)
+			(s5a1 :cut s7l1)
+			(s5a1 :aggregation s7g1)
+			(s6t :aggregation s7g1)
+			(s7s2 :aggregation s7a4)
+			(s7c :aggregation s7g1)))
+
+

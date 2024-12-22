@@ -1,0 +1,59 @@
+# :: r-316::step01::sent01
+# :: snt1	Place ribs in the bottom of the crockpot .
+(s1 / sentence
+    :coref ((s1r :cut s1p1)))
+
+
+# :: r-316::step02::sent01
+# :: snt2	Separate onion into rings and place on top of pork .
+(s2 / sentence
+    :coref ((s1p1 :aggregation s2p)
+			(s2o :cut s2s)
+			(s2s :aggregation s2p)))
+
+
+# :: r-316::step03::sent01
+# :: snt3	In a small bowl , mix together ketjap manis , pineapple juice , lime juice , ketchup , brown sugar , ginger , turmeric , and cayenne pepper until blended .
+(s3 / sentence
+    :coref ((s3k2 :aggregation s3m5)
+			(s3p2 :aggregation s3m5)
+			(s3l :aggregation s3m5)
+			(s3k :aggregation s3m5)
+			(s3b3 :aggregation s3m5)
+			(s3g :aggregation s3m5)
+			(s3t :aggregation s3m5)
+			(s3c :aggregation s3m5)))
+
+
+# :: r-316::step04::sent01
+# :: snt4	Pour mixture over pork and onions .
+(s4 / sentence
+    :coref ((s2p :aggregation s4p1)
+			(s3m5 :aggregation s4p1)))
+
+
+# :: r-316::step05::sent01
+# :: snt5	Cover crockpot and cook on low for 6 - 8 hours or on high for 3 - 4 hours or until pork is tender and cooked through .
+(s5 / sentence
+    :coref ((s4p1 :cut s5c1)
+			(s5c1 :cut s5c8)
+			(s2p :cut s5c1)
+			(s4p1 :cut s5c8)
+			(s3m5 :cut s5c1)
+			(s3m5 :cut s5c8)))
+
+
+# :: r-316::step06::sent01
+# :: snt6	Serve pork with rice ( if desired ) , garnished with slices of hot chiles .
+(s6 / sentence
+    :coref ((s5c8 :aggregation s6s1)
+			(s6s1 :aggregation s6g)
+			(s5c1 :aggregation s6s1)
+			(s5c8 :aggregation s6g)
+			(s5c1 :aggregation s6g)
+			(s3m5 :aggregation s6s1)
+			(s3m5 :aggregation s6g)
+			(s6r :aggregation s6s1)
+			(s6h :aggregation s6g)))
+
+

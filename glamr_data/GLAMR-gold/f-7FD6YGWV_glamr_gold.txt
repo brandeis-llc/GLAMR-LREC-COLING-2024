@@ -1,0 +1,395 @@
+# :: f-7FD6YGWV::step01::sent01
+# :: snt1	Preheat oven to 350 degrees F and line a cookie sheet with parchment paper .
+(s1a / and~6
+     :op1 (s1p3 / preheat-00~0
+                :ARG1 (s1o / oven~1)
+                :ARG2 (s1t / temperature-quantity
+                           :quant 350
+                           :scale (s1f / fahrenheit)))
+     :op2 (s1l / line-01~7
+               :ARG1 (s1s / sheet~10
+                          :mod (s1c / cookie~9))
+               :ARG2 (s1p / paper~13
+                          :mod (s1p2 / parchment~12)))
+     :mode imperative)
+
+
+# :: f-7FD6YGWV::step02::sent01
+# :: snt2	Put the cake flour , sugar , coffee , walnuts , and salt in a food processor and process for about 10 seconds ( or until the walnuts are well grounded ) .
+(s2a2 / and~17
+      :op1 (s2p3 / put-01~0
+                 :ARG1 (s2a3 / and~11
+                             :op1 (s2f / flour~3
+                                       :mod (s2c / cake~2))
+                             :op2 (s2s3 / sugar~5)
+                             :op3 (s2c2 / coffee~7)
+                             :op4 (s2w / walnut~9,27)
+                             :op5 (s2s / salt~12))
+                 :ARG2 (s2p2 / processor~16
+                             :mod (s2f2 / food~15))
+                 :ARG0 (s2y / you)
+                 :event-structure (s2se / subevents
+                                        :E1 (s2h / has_location
+                                                 :THEME s2s)
+                                        :E3 (s2a1 / and
+                                                  :op1 (s2m / motion
+                                                            :THEME s2s)
+                                                  :op2 (s2h1 / has_location
+                                                             :polarity -
+                                                             :THEME s2s))
+                                        :E4 (s2h2 / has_location
+                                                  :THEME s2s
+                                                  :DESTINATION s2p2)
+                                        :E0 (s2d / do
+                                                 :ACTION s2p3))
+                 :imp_output (s2p1 / put.RES))
+      :op2 (s2p / process-01~18
+                :ARG1 s2a3
+                :duration (s2a / amr-choice
+                               :op1 (s2a4 / about~20
+                                          :op1 (s2t / temporal-quantity
+                                                    :unit (s2s2 / second~22)
+                                                    :quant 10))
+                               :op2 (s2u2 / until
+                                          :op1 (s2g / ground-01~30
+                                                    :ARG1 s2w
+                                                    :degree (s2w2 / well-09~29))))
+                :ARG0 s2y
+                :event-structure (s2se1 / subevents
+                                        :E1 (s2c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s2p1
+                                                  :V_FINAL_STATE (s2p4 / processed))
+                                        :E3 (s2a5 / apply_heat
+                                                  :IMP_PATIENT s2p1)
+                                        :E4 (s2a6 / and
+                                                  :op1 (s2c3 / cooked
+                                                             :IMP_PATIENT s2p1
+                                                             :V_FINAL_STATE s2p4)
+                                                  :op2 (s2h3 / has_state
+                                                             :IMP_PATIENT s2p1
+                                                             :RESULT s2g))
+                                        :E0 (s2d1 / do
+                                                  :ACTION s2p))
+                :imp_output (s2p5 / process.RES))
+      :mode imperative)
+
+
+# :: f-7FD6YGWV::step03::sent01
+# :: snt3	Now put the mixture into a mixing bowl and add canola oil .
+(s3a2 / and~8
+      :op1 (s3p / put-01~1
+                :ARG1 (s3m / mixture~3)
+                :ARG2 (s3b / bowl~7
+                           :purpose (s3m2 / mix-01~6))
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3h / has_location
+                                                :THEME s3m)
+                                       :E3 (s3a1 / and
+                                                 :op1 (s3m1 / motion
+                                                            :THEME s3m)
+                                                 :op2 (s3h1 / has_location
+                                                            :polarity -
+                                                            :THEME s3m))
+                                       :E4 (s3h2 / has_location
+                                                 :THEME s3m
+                                                 :DESTINATION s3b)
+                                       :E0 (s3d / do
+                                                :ACTION s3p))
+                :imp_output (s3p1 / put.RES))
+      :op2 (s3a / add-02~9
+                :ARG1 (s3o / oil~11
+                           :source (s3c / canola~10))
+                :ARG2 s3m
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3t / together
+                                                 :polarity -
+                                                 :PATIENT_I s3o)
+                                        :E3 (s3t1 / together
+                                                  :PATIENT_I s3o)
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3a))
+                :imp_output (s3a3 / add.RES))
+      :time (s3n / now~0)
+      :mode imperative)
+
+
+# :: f-7FD6YGWV::step03::sent02
+# :: snt4	Form a pasty dough , then separate the dough with your hands to form small crumbs .
+(s4a / and
+     :op1 (s4f / form-01~0
+               :ARG1 (s4d / dough~3,8
+                          :mod (s4p / pasty~2))
+               :ARG0 (s4y1 / you)
+               :event-structure (s4se / subevents
+                                      :E1 (s4b / be
+                                               :polarity -
+                                               :RESULT s4d)
+                                      :E3 (s4b1 / be
+                                                :RESULT s4d)
+                                      :E0 (s4d1 / do
+                                                :ACTION s4f))
+               :imp_output (s4f1 / form.RES))
+     :op2 (s4s / separate-01~6
+               :ARG1 s4d
+               :purpose (s4f2 / form-01~13
+                              :ARG1 (s4c / crumb~15
+                                         :mod (s4s2 / small~14))
+                              :ARG0 s4y1
+                              :event-structure (s4se2 / subevents
+                                                      :E1 (s4b2 / be
+                                                                :polarity -
+                                                                :RESULT s4c)
+                                                      :E3 (s4b3 / be
+                                                                :RESULT s4c)
+                                                      :E0 (s4d4 / do
+                                                                :ACTION s4f2))
+                              :imp_output (s4f3 / form.RES))
+               :instrument (s4h / hand~11
+                                :part-of (s4y / you~10))
+               :time (s4t / then~5)
+               :ARG0 s4y1
+               :event-structure (s4se1 / subevents
+                                       :E1 (s4a1 / attached
+                                                 :PATIENT_I (s4d2 / dough~8))
+                                       :E3 (s4a2 / attached
+                                                 :polarity -
+                                                 :PATIENT_I s4d2)
+                                       :E0 (s4d3 / do
+                                                 :ACTION s4s))
+               :imp_output (s4s1 / separate.RES))
+     :mode imperative)
+
+
+# :: f-7FD6YGWV::step03::sent03
+# :: snt5	Add the water and form into a clean dough .
+(s5a2 / and~3
+      :op1 (s5a / add-02~0
+                :ARG1 (s5w / water~2)
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5t / together
+                                                :polarity -
+                                                :PATIENT_I s5w)
+                                       :E3 (s5t1 / together
+                                                 :PATIENT_I s5w)
+                                       :E0 (s5d1 / do
+                                                 :ACTION s5a))
+                :imp_output (s5a1 / add.RES))
+      :op2 (s5f / form-01~4
+                :ARG2 (s5d / dough~8
+                           :ARG1-of (s5c / clean-04~7))
+                :ARG0 s5y
+                :event-structure (s5se1 / subevents
+                                        :E1 (s5b / be
+                                                 :polarity -
+                                                 :RESULT s5d)
+                                        :E3 (s5b1 / be
+                                                  :RESULT s5d)
+                                        :E0 (s5d2 / do
+                                                  :ACTION s5f))
+                :imp_output (s5f1 / form.RES))
+      :mode imperative)
+
+
+# :: f-7FD6YGWV::step03::sent04
+# :: snt6	If you like raisins , you can combine it with the dough now .
+(s6p / possible-01
+     :ARG1 (s6c / combine-01~7
+                :ARG0 (s6y / you~1,5)
+                :ARG1 (s6r / raisin~3,8)
+                :ARG2 (s6d / dough~11)
+                :time (s6n / now~12)
+                :ARG0 (s6y1 / you)
+                :event-structure (s6se / subevents
+                                       :E1 (s6a / and
+                                                :op1 (s6m / mingled
+                                                          :polarity -
+                                                          :PATIENT_I s6d)
+                                                :op2 (s6h / has_material_integrity_state
+                                                          :polarity -
+                                                          :PATIENT_I s6d
+                                                          :V_STATE (s6c1 / combined))
+                                                :op3 (s6h1 / has_material_integrity_state
+                                                           :polarity -
+                                                           :V_STATE s6c1
+                                                           :PATIENT_I s6d))
+                                       :E3 (s6a1 / and
+                                                 :op1 (s6m1 / mingled
+                                                            :PATIENT_I s6d)
+                                                 :op2 (s6h2 / has_material_integrity_state
+                                                            :PATIENT_I s6d
+                                                            :V_STATE s6c1)
+                                                 :op3 (s6h3 / has_material_integrity_state
+                                                            :V_STATE s6c1
+                                                            :PATIENT_I s6d))
+                                       :E0 (s6d1 / do
+                                                 :ACTION s6c))
+                :imp_output (s6c2 / combine.RES))
+     :condition (s6l / like-01~2
+                     :ARG0 s6y
+                     :ARG1 s6r))
+
+
+# :: f-7FD6YGWV::step04::sent01
+# :: snt7	Divide the dough into 16 pieces and roll each piece into a ball .
+(s7a / and~6
+     :op1 (s7d / divide-02~0
+               :ARG1 (s7d2 / dough~2)
+               :ARG2 (s7p / piece~5
+                          :quant 16)
+               :ARG0 (s7y / you)
+               :event-structure (s7se / subevents
+                                      :E1 (s7a1 / attached
+                                                :PATIENT_I s7d2)
+                                      :E3 (s7a2 / attached
+                                                :polarity -
+                                                :PATIENT_I s7d2)
+                                      :E0 (s7d1 / do
+                                                :ACTION s7d))
+               :imp_output (s7d3 / divide.RES))
+     :op2 (s7r / roll-01~7
+               :ARG1 (s7p2 / piece~9
+                           :mod (s7e / each~8))
+               :ARG2 (s7b / ball~12)
+               :ARG0 s7y
+               :event-structure (s7se1 / subevents
+                                       :E1 (s7h / has_location
+                                                :THEME s7p2)
+                                       :E3 (s7a3 / and
+                                                 :op1 (s7m / motion
+                                                           :THEME s7p2)
+                                                 :op2 (s7h1 / has_location
+                                                            :polarity -
+                                                            :THEME s7p2))
+                                       :E4 (s7a4 / and
+                                                 :op1 (s7h2 / has_location
+                                                            :THEME s7p2)
+                                                 :op2 (s7h3 / has_state
+                                                            :THEME s7p2
+                                                            :RESULT s7b))
+                                       :E0 (s7d4 / do
+                                                 :ACTION s7r))
+               :imp_output (s7r1 / roll.RES))
+     :mode imperative)
+
+
+# :: f-7FD6YGWV::step04::sent02
+# :: snt8	Put each ball on a cookie sheet and bake at 350 degrees F for 25 minutes .
+(s8a / and~7
+     :op1 (s8p / put-01~0
+               :ARG1 (s8b2 / ball~2
+                           :mod (s8e / each~1))
+               :ARG2 (s8s / sheet~6
+                          :mod (s8c / cookie~5))
+               :ARG0 (s8y / you)
+               :event-structure (s8se / subevents
+                                      :E1 (s8h / has_location
+                                               :THEME s8b2)
+                                      :E3 (s8a1 / and
+                                                :op1 (s8m1 / motion
+                                                           :THEME s8b2)
+                                                :op2 (s8h1 / has_location
+                                                           :polarity -
+                                                           :THEME s8b2))
+                                      :E4 (s8h2 / has_location
+                                                :THEME s8b2
+                                                :DESTINATION s8s)
+                                      :E0 (s8d / do
+                                               :ACTION s8p))
+               :imp_output (s8p1 / put.RES))
+     :op2 (s8b / bake-01~8
+               :ARG1 s8b2
+               :ARG3 (s8t / temperature-quantity
+                          :quant 350
+                          :scale (s8f / fahrenheit~12))
+               :duration (s8t2 / temporal-quantity
+                               :quant 25
+                               :unit (s8m / minute~15))
+               :ARG0 s8y
+               :event-structure (s8se1 / subevents
+                                       :E1 (s8c1 / cooked
+                                                 :polarity -
+                                                 :IMP_PATIENT s8p1
+                                                 :V_FINAL_STATE (s8b1 / baked))
+                                       :E3 (s8a2 / apply_heat
+                                                 :IMP_PATIENT s8p1)
+                                       :E4 (s8c2 / cooked
+                                                 :IMP_PATIENT s8p1
+                                                 :V_FINAL_STATE s8b1)
+                                       :E0 (s8d1 / do
+                                                 :ACTION s8b))
+               :imp_output (s8b3 / bake.RES))
+     :mode imperative)
+
+
+# :: f-7FD6YGWV::step05::sent01
+# :: snt9	Let the cookies cool for about 20 minutes .
+(s9l / let-01~0
+     :ARG1 (s9c2 / cool-01~3
+                 :ARG1 (s9c / cookie~2)
+                 :ARG0 (s9y / you)
+                 :event-structure (s9se / subevents
+                                        :E1 (s9h / has_state
+                                                 :polarity -
+                                                 :PATIENT s9c
+                                                 :V_FINAL_STATE (s9c1 / cooled))
+                                        :E3 (s9h1 / has_state
+                                                  :PATIENT s9c
+                                                  :V_FINAL_STATE s9c1)
+                                        :E0 (s9d / do
+                                                 :ACTION s9c2))
+                 :imp_output (s9c3 / cool.RES))
+     :duration (s9a / about~5
+                    :op1 (s9t / temporal-quantity
+                              :quant 20
+                              :unit (s9m / minute~7)))
+     :mode imperative)
+
+
+# :: f-7FD6YGWV::step05::sent02
+# :: snt10	Dust with powdered sugar before serving .
+(s10d / dust-01~0
+      :ARG2 (s10s2 / sugar~3
+                   :ARG1-of (s10p / powder-01~2))
+      :mode imperative
+      :time (s10b / before~4
+                  :op1 (s10s / serve-02~5
+                             :ARG0 s10y
+                             :event-structure (s10se1 / subevents
+                                                      :E1 (s10a1 / and
+                                                                 :op1 (s10h3 / has_possession
+                                                                             :IMP_THEME s10d2)
+                                                                 :op2 (s10h4 / has_possession
+                                                                             :polarity -
+                                                                             :IMP_THEME s10d2))
+                                                      :E2 (s10t / transfer
+                                                                :IMP_THEME s10d2)
+                                                      :E3 (s10a2 / and
+                                                                 :op1 (s10h5 / has_possession
+                                                                             :IMP_THEME s10d2)
+                                                                 :op2 (s10h6 / has_possession
+                                                                             :polarity -
+                                                                             :IMP_THEME s10d2))
+                                                      :E0 (s10d3 / do
+                                                                 :ACTION s10s))
+                             :imp_output (s10s1 / serve.RES)))
+      :ARG0 (s10y / you)
+      :event-structure (s10se / subevents
+                              :E1 (s10h / has_location
+                                        :THEME s10s2)
+                              :E3 (s10a / and
+                                        :op1 (s10m / motion
+                                                   :THEME s10s2)
+                                        :op2 (s10h1 / has_location
+                                                    :polarity -
+                                                    :THEME s10s2))
+                              :E4 (s10h2 / has_location
+                                         :THEME s10s2)
+                              :E0 (s10d1 / do
+                                         :ACTION s10d))
+      :imp_output (s10d2 / dust.RES))
+
+

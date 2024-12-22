@@ -1,0 +1,420 @@
+user name: timobi
+user id: 423
+file language: english
+file format: plain_text
+Doc ID in database: 1432
+export time: 9/14/2023, 2:51:20 PM
+
+# :: snt1	Wash mussels and de - beard , bring a pot of water to a boil and cook the mussels , once shells open , take out mussels , discard shells and put the mussels into a mixing bowl , set aside .
+# sentence level graph:
+(s1a / and
+  :op1 (s1a3 / and
+         :op1 (s1w / wash-01
+                :ARG1 (s1m2 / mussel))
+         :op2 (s1d / de-beard-00))
+  :op2 (s1a5 / and
+         :op1 (s1b3 / bring-ON-02
+                :destination (s1b2 / boil-01
+                               :ARG1 (s1w2 / water
+                                       :quant (s1p2 / pot))))
+         :op2 (s1c / cook-01
+                :ARG1 (s1m3 / mussel)))
+  :op3 (s1a4 / and
+         :op1 (s1d2 / discard-01
+                :ARG1 (s1s3 / shells))
+         :op2 (s1p / put-01
+                :ARG1 (s1m4 / mussel)
+                :ARG2 (s1b / bowl
+                        :mod (s1m / mixing)))
+         :op3 (s1s2 / set-01
+                :ARG2 (s1a2 / aside))
+         :time (s1o / open-01
+                 :ARG2 (s1s / shell)))
+  :mode imperative)
+
+# alignment:s1a: 3-3
+s1a2: -1--1
+s1a3: 31-31
+s1a4: 41-41
+s1b: -1--1
+s1b2: -1--1
+s1c: -1--1
+s1d: 4-4
+s1d2: 29-29
+s1m: -1--1
+s1m2: -1--1
+s1m3: -1--1
+s1m4: 34-34
+s1o: -1--1
+s1p: -1--1
+s1p2: -1--1
+s1s: -1--1
+s1s2: -1--1
+s1s3: 30-30
+s1w: 1-1
+s1w2: -1--1
+s1b3: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Keep the water in the pot and continue to bring to boil .
+# sentence level graph:
+(s2a / and
+  :op1 (s2k / keep-02
+         :ARG1 (s2w / water)
+         :location (s2p / pot))
+  :op2 (s2c / continue-01
+         :ARG1 (s2b / bring-01
+                 :destination (s2b2 / boil-01)))
+  :mode imperative)
+
+# alignment:s2a: 7-7
+s2b: 1-undefined
+s2c: 8-8
+s2k: 1-1
+s2p: 6-6
+s2w: -1--1
+s2b2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Wash squids and cut into bite size , blanch in the same pot of water used to cook mussels , drain and mix with mussels .
+# sentence level graph:
+(s3a / and
+  :op1 (s3w / wash-01
+         :ARG1 (s3s4 / squid))
+  :op2 (s3c2 / cut-01
+         :ARG2 (s3s2 / size
+                 :mod (s3b / bite)))
+  :op3 (s3b2 / blanch-02
+         :location (s3p / pot
+                     :ARG1-of (s3u / use-01
+                                :ARG2 (s3c / cook-01
+                                        :ARG1 (s3m3 / mussel)))
+                     :mod (s3s / same-01)
+                     :consist-of (s3w2 / water)))
+  :op4 (s3a2 / and
+         :op1 (s3d / drain-01)
+         :op2 (s3m / mix-01
+                :ARG2 (s3m2 / mussel)))
+  :mode imperative)
+
+# alignment:s3a: 3-3
+s3a2: 22-22
+s3b: 6-6
+s3b2: 9-9
+s3c: 18-18
+s3c2: 4-4
+s3d: 21-21
+s3m: 23-23
+s3m2: 25-25
+s3m3: 19-19
+s3p: 13-13
+s3s: 12-12
+s3s2: 7-7
+s3s4: -1--1
+s3u: 16-16
+s3w: -1--1
+s3w2: 15-15
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Wash mint leaves , corianders and use the leaves whole .
+# sentence level graph:
+(s4a / and
+  :op1 (s4w / wash-01
+         :ARG1 (s4a2 / and
+                 :op1 (s4l2 / leaf
+                        :part-of (s4m / mint))
+                 :op2 (s4c / coriander)))
+  :op2 (s4u / use-01
+         :ARG1 (s4l / leaf
+                 :mod (s4w2 / whole)))
+  :mode imperative)
+
+# alignment:s4a: 6-6
+s4a2: 0-0
+s4c: 5-5
+s4l: 3-3
+s4l2: -1--1
+s4m: -1--1
+s4u: 7-7
+s4w: 1-1
+s4w2: 6-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Wash tomatoes and slice into thin wedges .
+# sentence level graph:
+(s5a / and
+  :op1 (s5w / wash-01
+         :ARG1 (s5t2 / tomato))
+  :op2 (s5s / slice-01
+         :destination (s5w2 / wedge
+                        :mod (s5t / thin)))
+  :mode imperative)
+
+# alignment:s5a: 3-3
+s5s: 4-4
+s5t: 6-6
+s5t2: 2-2
+s5w: 1-1
+s5w2: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Onion and shallots skin off and sliced
+# sentence level graph:
+(s6a2 / and
+  :op1 (s6s2 / skin-01
+         :ARG1 (s6a / and
+                 :op1 (s6o / onion)
+                 :op2 (s6s / shallot)))
+  :op2 (s6s3 / slice-01)
+  :mode imperative)
+
+# alignment:s6a: 2-2
+s6a2: 6-6
+s6o: 1-1
+s6s: 3-3
+s6s2: 4-4
+s6s3: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Wash bird eyes chilies ( if you want milder flavor , replace with big chilies ) cut into small pieces .
+# sentence level graph:
+(s7a / and
+  :op1 (s7w3 / wash-01
+         :ARG1 (s7c2 / chili
+                 :mod (s7b2 / bird-eyes)))
+  :op2 (s7r / replace-01
+         :ARG2 (s7c3 / chili
+                 :mod (s7b / big))
+         :condition (s7w / want-01
+                      :ARG0 (s7y / you)
+                      :ARG1 (s7f / flavor
+                              :mod (s7h / have-degree-91
+                                     :ARG2 (s7m / mild)
+                                     :ARG3 (s7m2 / more)))))
+  :op3 (s7c4 / cut-01
+         :ARG4 (s7p / piece
+                 :mod (s7s / small)))
+  :mode imperative)
+
+# alignment:s7b: 14-14
+s7b2: 2-3
+s7c2: 0-0
+s7c3: 15-15
+s7c4: 17-17
+s7f: 10-10
+s7h: 11-11
+s7m: 9-9
+s7m2: 7-7
+s7p: -1--1
+s7r: 12-12
+s7s: -1--1
+s7w: 8-8
+s7w3: 1-1
+s7y: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Toss in sliced onion , shallots , chilies and tomatoes .
+# sentence level graph:
+(s8t2 / toss-in-03
+  :ARG1 (s8a / and
+          :op1 (s8o / onion
+                 :ARG1-of (s8s2 / slice-01))
+          :op2 (s8s / shallot)
+          :op3 (s8c / chili)
+          :op4 (s8t / tomato))
+  :mode imperative)
+
+# alignment:s8a: 9-9
+s8c: 8-8
+s8o: 4-4
+s8s: 6-6
+s8s2: 3-3
+s8t: 10-10
+s8t2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Add in seasoning , mix well , taste test .
+# sentence level graph:
+(s9a2 / and
+  :op1 (s9a / add-02
+         :ARG1 (s9s / seasoning))
+  :op2 (s9m / mix-01
+         :manner (s9w / well))
+  :op3 (s9t2 / taste-02
+         :purpose (s9t / test-01))
+  :mode imperative)
+
+# alignment:s9a: 1-1
+s9a2: 1-1
+s9m: 5-5
+s9s: 3-3
+s9t: 8-8
+s9t2: 9-9
+s9w: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Add more fish sauce or lime juice if desire stronger flavour .
+# sentence level graph:
+(s10a / add-02
+  :ARG1 (s10o / or
+          :op1 (s10s / sauce
+                 :mod (s10f / fish))
+          :op2 (s10j / juice
+                 :source (s10l / lime)))
+  :condition (s10d / desire-01
+               :ARG1 (s10f2 / flavor
+                       :ARG1-of (s10h / have-degree-91
+                                  :ARG2 (s10s2 / strong)
+                                  :ARG3 (s10m2 / more))))
+  :mode imperative
+  :mod (s10m / more))
+
+# alignment:s10a: 1-1
+s10d: 9-9
+s10f: 3-3
+s10f2: 11-11
+s10h: 12-12
+s10j: 7-7
+s10l: 6-6
+s10m: -1--1
+s10m2: 12-12
+s10o: 5-5
+s10s: 4-4
+s10s2: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt11	Top with mint and coriander leaves and gently toss together .
+# sentence level graph:
+(s11a2 / and
+  :op1 (s11t2 / top-01
+         :ARG2 (s11a / and
+                 :op1 (s11l2 / leaf
+                        :part-of (s11m / mint))
+                 :op2 (s11l / leaf
+                        :part-of (s11c / coriander))))
+  :op2 (s11t3 / toss-01
+         :manner (s11t / together)
+         :manner (s11g / gently))
+  :mode imperative)
+
+# alignment:s11a: 2-2
+s11a2: 7-7
+s11c: 5-5
+s11g: 8-8
+s11l: 4-4
+s11l2: 6-6
+s11m: 3-3
+s11t: 10-10
+s11t2: 1-1
+s11t3: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt12	Serve on a platter lined with lettuce and garnish with extra mint leaves .
+# sentence level graph:
+(s12a / and
+  :op1 (s12s / serve-02
+         :location (s12p / platter
+                     :ARG1-of (s12l3 / line-01
+                                :ARG2 (s12l2 / lettuce))))
+  :op2 (s12g / garnish-01
+         :ARG2 (s12l / leaf
+                 :mod (s12m / mint)
+                 :mod (s12e / extra)))
+  :mode imperative)
+
+# alignment:s12a: 8-8
+s12e: 11-11
+s12g: 9-9
+s12l: 13-13
+s12l2: 7-7
+s12l3: 5-5
+s12m: 12-12
+s12p: 4-4
+s12s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Wash mussels and de - beard , bring a pot of water to a boil and cook the mussels , once shells open , take out mussels , discard shells and put the mussels into a mixing bowl , set aside .
+Keep the water in the pot and continue to bring to boil .
+Wash squids and cut into bite size , blanch in the same pot of water used to cook mussels , drain and mix with mussels .
+Wash mint leaves , corianders and use the leaves whole .
+Wash tomatoes and slice into thin wedges .
+Onion and shallots skin off and sliced
+Wash bird eyes chilies ( if you want milder flavor , replace with big chilies ) cut into small pieces .
+Toss in sliced onion , shallots , chilies and tomatoes .
+Add in seasoning , mix well , taste test .
+Add more fish sauce or lime juice if desire stronger flavour .
+Top with mint and coriander leaves and gently toss together .
+Serve on a platter lined with lettuce and garnish with extra mint leaves .

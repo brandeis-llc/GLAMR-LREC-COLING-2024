@@ -1,0 +1,199 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1442
+export time: 9/11/2023, 9:02:23 PM
+
+# :: snt1	Firstly , heat the vegetable oil in a medium - sized pan .
+# sentence level graph:
+(s1h / heat-01
+  :ARG1 (s1o / oil
+          :source (s1v / vegetable))
+  :li 1
+  :location (s1p / pan
+              :ARG1-of (s1s / size-01
+                         :ARG2 (s1m / medium)))
+  :mode imperative)
+
+# alignment:s1h: 3-3
+s1m: 9-9
+s1o: 6-6
+s1p: 12-12
+s1s: 11-11
+s1v: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	When the oil is hot , add the almonds and toss until they brown .
+# sentence level graph:
+(s2a3 / and
+  :op1 (s2a / add-02
+         :ARG1 (s2a2 / almond))
+  :op2 (s2t / toss-01
+         :duration (s2u / until
+                     :op1 (s2b / brown-01
+                            :ARG1 s2a2)))
+  :mode imperative
+  :time (s2h / hot-05
+          :ARG1 (s2o / oil)))
+
+# alignment:s2a: 7-7
+s2a2: 9-9
+s2a3: 1-1
+s2b: 14-14
+s2h: 5-5
+s2o: 3-3
+s2t: 11-11
+s2u: 12-12
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Drain the almonds , making sure any excess water is removed , then mix them with the walnut oil and salt in a blender until they form a smooth paste .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3d / drain-01
+         :ARG1 (s3a / almond)
+         :manner (s3e / ensure-01
+                   :ARG1 (s3r2 / remove-01
+                           :ARG1 (s3w2 / water
+                                   :mod (s3a4 / any)
+                                   :mod (s3e2 / excess)))))
+  :op2 (s3m / mix-01
+         :ARG1 s3a
+         :ARG2 (s3a3 / and
+                 :op1 (s3o / oil
+                        :source (s3w / walnut))
+                 :op2 (s3s / salt))
+         :instrument (s3b / blender)
+         :time (s3t / then)
+         :duration (s3u / until
+                     :op1 (s3f / form-01
+                            :ARG0 (s3t2 / they)
+                            :ARG1 (s3p / paste
+                                    :mod (s3s2 / smooth)))))
+  :mode imperative)
+
+# alignment:s3a: 0-0
+s3a2: 2-2
+s3a3: 20-20
+s3a4: 7-7
+s3b: 24-24
+s3e: 6-6
+s3e2: 8-8
+s3f: 27-27
+s3m: 14-14
+s3o: 19-19
+s3p: 30-30
+s3r2: 11-11
+s3s: 21-21
+s3s2: 29-29
+s3t: 13-13
+s3u: 25-25
+s3w: 18-18
+s3w2: 9-9
+s3t2: 26-26
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add the honey and blend for another few seconds .
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4a / add-02
+         :ARG1 (s4h / honey))
+  :op2 (s4b / blend-01
+         :duration (s4f / few
+                     :op1 (s4t / temporal-quantity
+                            :quant 1
+                            :unit (s4s / second))
+                     :mod (s4a3 / another)))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4a2: 4-4
+s4a3: 7-7
+s4b: 5-5
+s4f: 8-8
+s4h: 3-3
+s4s: 9-9
+s4t: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Pour into an airtight jar and refrigerate .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5p / pour-01
+         :ARG3 (s5j / jar
+                 :mod (s5a / airtight)))
+  :op2 (s5r / refrigerate-01)
+  :mode imperative)
+
+# alignment:s5a: 4-4
+s5a2: 6-6
+s5j: 5-5
+s5p: 1-1
+s5r: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	The paste will be good for two months from the day it is made .
+# sentence level graph:
+(s6b / be-01
+  :ARG1 (s6p / paste-01)
+  :ARG2 (s6g / good)
+  :duration (s6a / after
+              :op1 (s6d / day
+                     :time-of (s6m / make-01
+                                :ARG1 s6p))
+              :quant (s6t2 / temporal-quantity
+                       :quant 2
+                       :unit (s6m2 / month)))
+  :mode imperative)
+
+# alignment:s6d: 11-11
+s6g: 5-5
+s6m: 14-14
+s6m2: -1--1
+s6p: 2-2
+s6t2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Firstly , heat the vegetable oil in a medium - sized pan .
+When the oil is hot , add the almonds and toss until they brown .
+Drain the almonds , making sure any excess water is removed , then mix them with the walnut oil and salt in a blender until they form a smooth paste .
+Add the honey and blend for another few seconds .
+Pour into an airtight jar and refrigerate .
+The paste will be good for two months from the day it is made .

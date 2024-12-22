@@ -1,0 +1,561 @@
+# :: f-Q7FS58VW::step01::sent01
+# :: snt1	Wash mussels and de - beard , bring a pot of water to a boil and cook the mussels , once shells open , take out mussels , discard shells and put the mussels into a mixing bowl , set aside .
+(s1a / and
+     :op1 (s1a3 / and~2
+                :op1 (s1w / wash-01~0
+                          :ARG1 (s1m2 / mussel~1)
+                          :ARG0 (s1y / you)
+                          :event-structure (s1se / subevents
+                                                 :E1 (s1h / has_state
+                                                          :polarity -
+                                                          :PATIENT s1m2
+                                                          :V_FINAL_STATE (s1w1 / washed))
+                                                 :E3 (s1h1 / has_state
+                                                           :PATIENT s1m2
+                                                           :V_FINAL_STATE s1w1)
+                                                 :E0 (s1d1 / do
+                                                           :ACTION s1w))
+                          :imp_output (s1w3 / wash.RES))
+                :op2 (s1d / de-beard-00~3,5
+                          :ARG0 s1y
+                          :event-structure (s1se1 / subevents
+                                                  :E1 (s1h2 / has_location
+                                                            :THEME s1m2)
+                                                  :E3 (s1a1 / and
+                                                            :op1 (s1m1 / motion
+                                                                       :THEME s1m2)
+                                                            :op2 (s1h3 / has_location
+                                                                       :polarity -
+                                                                       :THEME s1m2))
+                                                  :E4 (s1h4 / has_location
+                                                            :THEME s1m2)
+                                                  :E0 (s1d3 / do
+                                                            :ACTION s1d))
+                          :imp_output (s1d4 / de---beard.RES)))
+     :op2 (s1a5 / and~15
+                :op1 (s1b3 / bring-ON-02~7
+                           :destination (s1b2 / boil-01~14
+                                              :ARG1 (s1w2 / water~11
+                                                          :quant (s1p2 / pot~9))))
+                :op2 (s1c / cook-01~16
+                          :ARG1 (s1m3 / mussel~18)
+                          :ARG0 s1y
+                          :event-structure (s1se2 / subevents
+                                                  :E1 (s1c1 / cooked
+                                                            :polarity -
+                                                            :PATIENT s1m3
+                                                            :V_FINAL_STATE (s1c2 / cooked))
+                                                  :E3 (s1a6 / apply_heat
+                                                            :PATIENT s1m3)
+                                                  :E4 (s1c3 / cooked
+                                                            :PATIENT s1m3
+                                                            :V_FINAL_STATE s1c2)
+                                                  :E0 (s1d5 / do
+                                                            :ACTION s1c))
+                          :imp_output (s1c4 / cook.RES)))
+     :op3 (s1a4 / and~30
+                :op1 (s1d2 / discard-01~28
+                           :ARG1 (s1s3 / shells~29)
+                           :ARG0 s1y
+                           :event-structure (s1se3 / subevents
+                                                   :E1 (s1h5 / has_location
+                                                             :THEME s1s3)
+                                                   :E2 (s1a7 / and
+                                                             :op1 (s1e / exert_force
+                                                                       :THEME s1s3)
+                                                             :op2 (s1c5 / contact
+                                                                        :THEME s1s3))
+                                                   :E3 (s1a8 / and
+                                                             :op1 (s1m5 / motion
+                                                                        :THEME s1s3)
+                                                             :op2 (s1h6 / has_location
+                                                                        :polarity -
+                                                                        :THEME s1s3))
+                                                   :E4 (s1c6 / contact
+                                                             :polarity -
+                                                             :THEME s1s3)
+                                                   :E5 (s1h7 / has_location
+                                                             :THEME s1s3)
+                                                   :E0 (s1d6 / do
+                                                             :ACTION s1d2))
+                           :imp_outputI (s1d7 / discard.RES)
+                           :imp_outputJ (s1d8 / discard.RES))
+                :op2 (s1p / put-01~31
+                          :ARG1 (s1m4 / mussel~33)
+                          :ARG2 (s1b / bowl~37
+                                     :mod (s1m / mixing~36))
+                          :ARG0 s1y
+                          :event-structure (s1se4 / subevents
+                                                  :E1 (s1h8 / has_location
+                                                            :THEME s1m4)
+                                                  :E3 (s1a9 / and
+                                                            :op1 (s1m6 / motion
+                                                                       :THEME s1m4)
+                                                            :op2 (s1h9 / has_location
+                                                                       :polarity -
+                                                                       :THEME s1m4))
+                                                  :E4 (s1h10 / has_location
+                                                             :THEME s1m4
+                                                             :DESTINATION s1a2)
+                                                  :E0 (s1d9 / do
+                                                            :ACTION s1p))
+                          :imp_output (s1p1 / put.RES))
+                :op3 (s1s2 / set-01~39
+                           :ARG2 (s1a2 / aside~40)
+                           :ARG0 s1y
+                           :event-structure (s1se5 / subevents
+                                                   :E1 (s1h11 / has_location)
+                                                   :E3 (s1a10 / and
+                                                              :op1 (s1m7 / motion
+                                                                         :IMP_THEME s1p1)
+                                                              :op2 (s1h12 / has_location
+                                                                          :polarity -
+                                                                          :IMP_THEME s1p1))
+                                                   :E4 (s1h13 / has_location
+                                                              :IMP_THEME s1p1
+                                                              :DESTINATION s1a2)
+                                                   :E0 (s1d10 / do
+                                                              :ACTION s1s2))
+                           :imp_output (s1s1 / set.RES))
+                :time (s1o / open-01~22
+                           :ARG2 (s1s / shell~21)))
+     :mode imperative)
+
+
+# :: f-Q7FS58VW::step01::sent02
+# :: snt2	Keep the water in the pot and continue to bring to boil .
+(s2a / and~6
+     :op1 (s2k / keep-02~0
+               :ARG1 (s2w / water~2)
+               :location (s2p / pot~5)
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E (s2h / has_possession
+                                              :THEME s2w)
+                                      :E0 (s2d / do
+                                               :ACTION s2k))
+               :imp_output (s2k1 / keep.RES))
+     :op2 (s2c / continue-01~7
+               :ARG1 (s2b / bring-01~9
+                          :destination (s2b2 / boil-01~11)
+                          :ARG0 s2y
+                          :event-structure (s2se1 / subevents
+                                                  :E1 (s2c1 / cooked
+                                                            :polarity -
+                                                            :IMP_PATIENT s2k1
+                                                            :V_FINAL_STATE (s2b1 / brought-to-boil))
+                                                  :E3 (s2a1 / apply_heat
+                                                            :IMP_PATIENT s2k1)
+                                                  :E4 (s2c2 / cooked
+                                                            :IMP_PATIENT s2k1
+                                                            :V_FINAL_STATE s2b1)
+                                                  :E0 (s2d1 / do
+                                                            :ACTION s2b))
+                          :imp_output (s2b3 / bring-to-boil.RES)))
+     :mode imperative)
+
+
+# :: f-Q7FS58VW::step02::sent01
+# :: snt3	Wash squids and cut into bite size , blanch in the same pot of water used to cook mussels , drain and mix with mussels .
+(s3a / and~2
+     :op1 (s3w / wash-01~0
+               :ARG1 (s3s4 / squid~1)
+               :ARG0 (s3y / you)
+               :event-structure (s3se / subevents
+                                      :E1 (s3h / has_state
+                                               :polarity -
+                                               :PATIENT s3s4
+                                               :V_FINAL_STATE (s3w1 / washed))
+                                      :E3 (s3h1 / has_state
+                                                :PATIENT s3s4
+                                                :V_FINAL_STATE s3w1)
+                                      :E0 (s3d1 / do
+                                                :ACTION s3w))
+               :imp_output (s3w3 / wash.RES))
+     :op2 (s3c2 / cut-01~3
+                :ARG2 (s3s2 / size~6
+                            :mod (s3b / bite~5))
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3d2 / degradation_material_integrity
+                                                  :polarity -
+                                                  :PATIENT s3s4)
+                                        :E2 (s3c1 / contact
+                                                  :PATIENT s3s4)
+                                        :E3 (s3d3 / degradation_material_integrity
+                                                  :PATIENT s3s4)
+                                        :E0 (s3d4 / do
+                                                  :ACTION s3c2))
+                :imp_output (s3c3 / cut.RES))
+     :op3 (s3b2 / blanch-02~8
+                :location (s3p / pot~12
+                               :ARG1-of (s3u / use-01~15
+                                             :ARG2 (s3c / cook-01~17
+                                                        :ARG1 (s3m3 / mussel~18)))
+                               :mod (s3s / same-01~11)
+                               :consist-of (s3w2 / water~14))
+                :ARG0 s3y
+                :event-structure (s3se2 / subevents
+                                        :E1 (s3c4 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT_I s3c3
+                                                  :IMP_PATIENT_J (s3b1 / bring-to-boil.RES)
+                                                  :V_FINAL_STATE (s3b3 / blanched))
+                                        :E3 (s3a1 / apply_heat
+                                                  :INSTRUMENT s3m3
+                                                  :IMP_PATIENT_I s3c3
+                                                  :IMP_PATIENT_J s3b1)
+                                        :E4 (s3c5 / cooked
+                                                  :IMP_PATIENT_I s3c3
+                                                  :IMP_PATIENT_J s3b1
+                                                  :V_FINAL_STATE s3b3)
+                                        :E0 (s3d5 / do
+                                                  :ACTION s3b2))
+                :imp_output (s3b4 / blanch.RES))
+     :op4 (s3a2 / and
+                :op1 (s3d / drain-01~20
+                          :ARG0 s3y
+                          :event-structure (s3se3 / subevents
+                                                  :E1 (s3a3 / and
+                                                            :op1 (s3h2 / has_location
+                                                                       :THEME s3w2
+                                                                       :SOURCE s3s4)
+                                                            :op2 (s3h3 / has_state
+                                                                       :polarity -
+                                                                       :SOURCE s3s4
+                                                                       :V_FINAL_STATE (s3d6 / drained)))
+                                                  :E3 (s3a4 / and
+                                                            :op1 (s3m1 / motion
+                                                                       :THEME s3w2)
+                                                            :op2 (s3h4 / has_location
+                                                                       :polarity -
+                                                                       :THEME s3w2
+                                                                       :SOURCE s3s4))
+                                                  :E4 (s3a5 / and
+                                                            :op1 (s3h5 / has_location
+                                                                       :THEME s3w2)
+                                                            :op2 (s3h6 / has_state
+                                                                       :SOURCE s3s4
+                                                                       :V_FINAL_STATE s3d6))
+                                                  :E0 (s3d7 / do
+                                                            :ACTION s3d))
+                          :imp_output (s3d8 / drain.RES))
+                :op2 (s3m / mix-01~22
+                          :ARG2 (s3m2 / mussel~24)
+                          :ARG0 s3y
+                          :event-structure (s3se4 / subevents
+                                                  :E1 (s3a6 / and
+                                                            :op1 (s3m4 / mingled
+                                                                       :polarity -
+                                                                       :PATIENT_I s3s4
+                                                                       :PATIENT_J s3m2)
+                                                            :op2 (s3h7 / has_material_integrity_state
+                                                                       :polarity -
+                                                                       :PATIENT_I s3s4
+                                                                       :V_STATE (s3m5 / mixed)
+                                                                       :PATIENT_J s3m2)
+                                                            :op3 (s3h8 / has_material_integrity_state
+                                                                       :polarity -
+                                                                       :PATIENT_J s3m2
+                                                                       :V_STATE s3m5
+                                                                       :PATIENT_I s3s4))
+                                                  :E3 (s3a7 / and
+                                                            :op1 (s3m6 / mingled
+                                                                       :PATIENT_I s3s4
+                                                                       :PATIENT_J s3m2)
+                                                            :op2 (s3h9 / has_material_integrity_state
+                                                                       :PATIENT_I s3s4
+                                                                       :V_STATE s3m5
+                                                                       :PATIENT_J s3m2)
+                                                            :op3 (s3h10 / has_material_integrity_state
+                                                                        :PATIENT_J s3m2
+                                                                        :V_STATE s3m5
+                                                                        :PATIENT_I s3s4))
+                                                  :E0 (s3d9 / do
+                                                            :ACTION s3m))
+                          :imp_output (s3m7 / mix.RES)))
+     :mode imperative)
+
+
+# :: f-Q7FS58VW::step03::sent01
+# :: snt4	Wash mint leaves , corianders and use the leaves whole .
+(s4a / and~5
+     :op1 (s4w / wash-01~0
+               :ARG1 (s4a2 / and
+                           :op1 (s4l2 / leaf~2
+                                      :part-of (s4m / mint~1))
+                           :op2 (s4c / coriander~4))
+               :ARG0 (s4y / you)
+               :event-structure (s4se / subevents
+                                      :E1 (s4h / has_state
+                                               :polarity -
+                                               :PATIENT s4c
+                                               :V_FINAL_STATE (s4w1 / washed))
+                                      :E3 (s4h1 / has_state
+                                                :PATIENT s4c
+                                                :V_FINAL_STATE s4w1)
+                                      :E0 (s4d / do
+                                               :ACTION s4w))
+               :imp_output (s4w3 / wash.RES))
+     :op2 (s4u / use-01~6
+               :ARG1 (s4l / leaf~8
+                          :mod (s4w2 / whole~9))
+               :ARG0 s4y
+               :event-structure (s4se1 / subevents
+                                       :E1 (s4u1 / use
+                                                 :THEME s4l)
+                                       :E0 (s4d1 / do
+                                                 :ACTION s4u))
+               :imp_output (s4u2 / use.RES))
+     :mode imperative)
+
+
+# :: f-Q7FS58VW::step04::sent01
+# :: snt5	Wash tomatoes and slice into thin wedges .
+(s5a / and~2
+     :op1 (s5w / wash-01~0
+               :ARG1 (s5t2 / tomato~1)
+               :ARG0 (s5y / you)
+               :event-structure (s5se / subevents
+                                      :E1 (s5h / has_state
+                                               :polarity -
+                                               :PATIENT s5t2
+                                               :V_FINAL_STATE (s5w1 / washed))
+                                      :E3 (s5h1 / has_state
+                                                :PATIENT s5t2
+                                                :V_FINAL_STATE s5w1)
+                                      :E0 (s5d / do
+                                               :ACTION s5w))
+               :imp_output (s5w3 / wash.RES))
+     :op2 (s5s / slice-01~3
+               :destination (s5w2 / wedge~6
+                                  :mod (s5t / thin~5))
+               :ARG0 s5y
+               :event-structure (s5se1 / subevents
+                                       :E1 (s5d1 / degradation_material_integrity
+                                                 :polarity -
+                                                 :PATIENT s5t2)
+                                       :E2 (s5c / contact
+                                                :PATIENT s5t2)
+                                       :E3 (s5d2 / degradation_material_integrity
+                                                 :PATIENT s5t2)
+                                       :E0 (s5d3 / do
+                                                 :ACTION s5s))
+               :imp_output (s5s1 / slice.RES))
+     :mode imperative)
+
+
+# :: f-Q7FS58VW::step05::sent01
+# :: snt6	Onion and shallots skin off and sliced
+(s6a2 / and
+      :op1 (s6s2 / skin-01~3
+                 :ARG1 (s6a / and~1
+                            :op1 (s6o / onion~0)
+                            :op2 (s6s / shallot~2)))
+      :op2 (s6s3 / slice-01)
+      :mode imperative)
+
+
+# :: f-Q7FS58VW::step06::sent01
+# :: snt7	Wash bird eyes chilies ( if you want milder flavor , replace with big chilies ) cut into small pieces .
+(s7a / and
+     :op1 (s7w3 / wash-01~0
+                :ARG1 (s7c2 / chili~3
+                            :mod (s7b2 / bird-eyes~1,2))
+                :ARG0 (s7y1 / you)
+                :event-structure (s7se / subevents
+                                       :E (s7h1 / has_location
+                                                :?THEME s7c2)
+                                       :E0 (s7d / do
+                                                :ACTION s7w3))
+                :imp_output (s7w1 / wash.RES))
+     :op2 (s7r / replace-01~11
+               :ARG2 (s7c3 / chili~14
+                           :mod (s7b / big~13))
+               :condition (s7w / want-01~7
+                               :ARG0 (s7y / you~6)
+                               :ARG1 (s7f / flavor~9
+                                          :mod (s7h / have-degree-91
+                                                    :ARG2 (s7m / mild~8)
+                                                    :ARG3 (s7m2 / more)))))
+     :op3 (s7c4 / cut-01~16
+                :ARG4 (s7p / piece~19
+                           :mod (s7s / small~18))
+                :ARG0 s7y1
+                :event-structure (s7se1 / subevents
+                                        :E1 (s7d1 / degradation_material_integrity
+                                                  :polarity -
+                                                  :IMP_PATIENT s7w1)
+                                        :E2 (s7c / contact
+                                                 :IMP_PATIENT s7w1)
+                                        :E3 (s7d2 / degradation_material_integrity
+                                                  :IMP_PATIENT s7w1)
+                                        :E0 (s7d3 / do
+                                                  :ACTION s7c4))
+                :imp_output (s7c1 / cut.RES))
+     :mode imperative)
+
+
+# :: f-Q7FS58VW::step07::sent01
+# :: snt8	Toss in sliced onion , shallots , chilies and tomatoes .
+(s8t2 / toss-in-03~0,1
+      :ARG1 (s8a / and~8
+                 :op1 (s8o / onion~3
+                           :ARG1-of (s8s2 / slice-01~2))
+                 :op2 (s8s / shallot~5)
+                 :op3 (s8c / chili~7)
+                 :op4 (s8t / tomato~9))
+      :mode imperative
+      :ARG0 (s8y / you)
+      :event-structure (s8se / subevents
+                             :E1 (s8b / be
+                                      :polarity -)
+                             :E3 (s8b1 / be)
+                             :E0 (s8d / do
+                                      :ACTION s8t2))
+      :imp_output (s8t1 / toss.RES))
+
+
+# :: f-Q7FS58VW::step08::sent01
+# :: snt9	Add in seasoning , mix well , taste test .
+(s9a2 / and
+      :op1 (s9a / add-02~0
+                :ARG1 (s9s / seasoning~2)
+                :ARG0 (s9y / you)
+                :event-structure (s9se / subevents
+                                       :E1 (s9t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s9s)
+                                       :E3 (s9t3 / together
+                                                 :PATIENT_I s9s)
+                                       :E0 (s9d / do
+                                                :ACTION s9a))
+                :imp_output (s9a1 / add.RES))
+      :op2 (s9m / mix-01~4
+                :manner (s9w / well~5)
+                :ARG0 s9y
+                :event-structure (s9se1 / subevents
+                                        :E1 (s9a3 / and
+                                                  :op1 (s9m1 / mingled
+                                                             :polarity -)
+                                                  :op2 (s9h / has_material_integrity_state
+                                                            :polarity -
+                                                            :V_STATE (s9m2 / mixed))
+                                                  :op3 (s9h1 / has_material_integrity_state
+                                                             :polarity -
+                                                             :V_STATE s9m2))
+                                        :E3 (s9a4 / and
+                                                  :op1 (s9m3 / mingled)
+                                                  :op2 (s9h2 / has_material_integrity_state
+                                                             :V_STATE s9m2)
+                                                  :op3 (s9h3 / has_material_integrity_state
+                                                             :V_STATE s9m2))
+                                        :E0 (s9d1 / do
+                                                  :ACTION s9m))
+                :imp_output (s9m4 / mix.RES))
+      :op3 (s9t2 / taste-02~7
+                 :purpose (s9t / test-01~8))
+      :mode imperative)
+
+
+# :: f-Q7FS58VW::step08::sent02
+# :: snt10	Add more fish sauce or lime juice if desire stronger flavour .
+(s10a / add-02~0
+      :ARG1 (s10o / or
+                  :op1 (s10s / sauce~3
+                             :mod (s10f / fish~2))
+                  :op2 (s10j / juice~6
+                             :source (s10l / lime~5)))
+      :condition (s10d / desire-01~8
+                       :ARG1 (s10f2 / flavor~10
+                                    :ARG1-of (s10h / have-degree-91
+                                                   :ARG2 (s10s2 / strong~9)
+                                                   :ARG3 (s10m2 / more))))
+      :mode imperative
+      :mod (s10m / more~1)
+      :ARG0 (s10y / you)
+      :event-structure (s10se / subevents
+                              :E1 (s10t / together
+                                        :polarity -
+                                        :PATIENT_I s10s
+                                        :PATIENT_J s10j)
+                              :E3 (s10t1 / together
+                                         :PATIENT_I s10s
+                                         :PATIENT_J s10j)
+                              :E0 (s10d1 / do
+                                         :ACTION s10a))
+      :imp_output (s10a1 / add.RES))
+
+
+# :: f-Q7FS58VW::step09::sent01
+# :: snt11	Top with mint and coriander leaves and gently toss together .
+(s11a2 / and
+       :op1 (s11t2 / top-01~0
+                   :ARG2 (s11a / and~6
+                               :op1 (s11l2 / leaf
+                                           :part-of (s11m / mint~2))
+                               :op2 (s11l / leaf
+                                          :part-of (s11c / coriander~4)))
+                   :ARG0 (s11y / you))
+       :op2 (s11t3 / toss-01~8
+                   :manner (s11t / together~9)
+                   :manner (s11g / gently~7)
+                   :ARG0 s11y
+                   :event-structure (s11se / subevents
+                                           :E1 (s11b / be
+                                                     :polarity -)
+                                           :E3 (s11b1 / be)
+                                           :E0 (s11d / do
+                                                     :ACTION s11t3))
+                   :imp_output (s11t1 / toss.RES))
+       :mode imperative)
+
+
+# :: f-Q7FS58VW::step10::sent01
+# :: snt12	Serve on a platter lined with lettuce and garnish with extra mint leaves .
+(s12a / and
+      :op1 (s12s / serve-02~0
+                 :location (s12p / platter~3
+                                 :ARG1-of (s12l3 / line-01~4
+                                                 :ARG2 (s12l2 / lettuce~6)))
+                 :ARG0 (s12y / you)
+                 :event-structure (s12se / subevents
+                                         :E1 (s12a1 / and
+                                                    :op1 (s12h / has_possession
+                                                               :IMP_THEME (s12t / toss.RES))
+                                                    :op2 (s12h1 / has_possession
+                                                                :polarity -
+                                                                :IMP_THEME s12t))
+                                         :E2 (s12t1 / transfer
+                                                    :IMP_THEME s12t)
+                                         :E3 (s12a2 / and
+                                                    :op1 (s12h2 / has_possession
+                                                                :IMP_THEME s12t)
+                                                    :op2 (s12h3 / has_possession
+                                                                :polarity -
+                                                                :IMP_THEME s12t))
+                                         :E0 (s12d / do
+                                                   :ACTION s12s))
+                 :imp_output (s12s1 / serve.RES))
+      :op2 (s12g / garnish-01~8
+                 :ARG2 (s12l / leaf~12
+                             :mod (s12m / mint~11)
+                             :mod (s12e / extra~10))
+                 :ARG0 s12y
+                 :event-structure (s12se1 / subevents
+                                          :E1 (s12h4 / has_location
+                                                     :THEME s12l)
+                                          :E3 (s12a3 / and
+                                                     :op1 (s12m1 / motion
+                                                                 :THEME s12l)
+                                                     :op2 (s12h5 / has_location
+                                                                 :polarity -
+                                                                 :THEME s12l))
+                                          :E4 (s12h6 / has_location
+                                                     :THEME s12l)
+                                          :E0 (s12d1 / do
+                                                     :ACTION s12g))
+                 :imp_output (s12g1 / garnish.RES))
+      :mode imperative)
+
+

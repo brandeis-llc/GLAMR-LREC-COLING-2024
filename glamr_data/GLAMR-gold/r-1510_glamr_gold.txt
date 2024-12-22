@@ -1,0 +1,373 @@
+# :: r-1510::step01::sent01
+# :: snt1	Heat butter and add the seekh kebab and fry till golden brown .
+(s1a2 / and~2,7
+      :op1 (s1h / heat-01~0
+                :ARG1 (s1b2 / butter~1)
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1c / cooked
+                                                :polarity -
+                                                :PATIENT s1b2
+                                                :V_FINAL_STATE (s1h1 / heated))
+                                       :E3 (s1a1 / apply_heat
+                                                 :PATIENT s1b2)
+                                       :E4 (s1c1 / cooked
+                                                 :PATIENT s1b2
+                                                 :V_FINAL_STATE s1h1)
+                                       :E0 (s1d / do
+                                                :ACTION s1h))
+                :imp_output (s1h2 / heat.RES))
+      :op2 (s1a / add-02~3
+                :ARG1 (s1k / kebab~6
+                           :mod (s1s / seekh~5))
+                :ARG0 s1y
+                :event-structure (s1se1 / subevents
+                                        :E1 (s1t / together
+                                                 :polarity -
+                                                 :PATIENT_I s1k)
+                                        :E3 (s1t1 / together
+                                                  :PATIENT_I s1k)
+                                        :E0 (s1d1 / do
+                                                  :ACTION s1a))
+                :imp_output (s1a3 / add.RES))
+      :op3 (s1f / fry-01~8
+                :duration (s1u / until~9
+                               :op1 (s1b / brown~11
+                                         :mod (s1g / golden~10)))
+                :ARG0 s1y
+                :event-structure (s1se2 / subevents
+                                        :E1 (s1c2 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s1a3
+                                                  :V_FINAL_STATE (s1f1 / fried))
+                                        :E3 (s1a4 / apply_heat
+                                                  :IMP_PATIENT s1a3)
+                                        :E4 (s1a5 / and
+                                                  :op1 (s1c3 / cooked
+                                                             :IMP_PATIENT s1a3
+                                                             :V_FINAL_STATE s1f1)
+                                                  :op2 (s1h3 / has_state
+                                                             :IMP_PATIENT s1a3
+                                                             :RESULT s1b))
+                                        :E0 (s1d2 / do
+                                                  :ACTION s1f))
+                :imp_output (s1f2 / fry.RES))
+      :mode imperative)
+
+
+# :: r-1510::step02::sent01
+# :: snt2	Slit the seekh kebab from top and stuff it with grated cheese .
+(s2a / and~6
+     :op1 (s2s / slit-01~0
+               :ARG1 (s2k / kebab~3
+                          :mod (s2s3 / seekh~2))
+               :ARG2 (s2t / top~5)
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E1 (s2a1 / and
+                                                :op1 (s2d / degradation_material_integrity
+                                                          :polarity -
+                                                          :PATIENT s2k)
+                                                :op2 (s2h / has_physical_form
+                                                          :polarity -
+                                                          :PATIENT s2k
+                                                          :V_FORM (s2s1 / slit)))
+                                      :E2 (s2c1 / contact
+                                                :PATIENT s2k)
+                                      :E3 (s2a2 / and
+                                                :op1 (s2d1 / degradation_material_integrity
+                                                           :PATIENT s2k)
+                                                :op2 (s2h1 / has_physical_form
+                                                           :PATIENT s2k
+                                                           :V_FORM s2s1))
+                                      :E0 (s2d2 / do
+                                                :ACTION s2s))
+               :imp_output (s2s4 / slit.RES))
+     :op2 (s2s2 / stuff-01~7
+                :ARG1 s2k
+                :ARG2 (s2c / cheese~11
+                           :ARG1-of (s2g / grate-01~10))
+                :ARG0 s2y)
+     :mode imperative)
+
+
+# :: r-1510::step03::sent01
+# :: snt3	Fry the onions in butter .
+(s3f / fry-01~0
+     :ARG1 (s3o / onion~2)
+     :medium (s3b / butter~4)
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3c / cooked
+                                     :polarity -
+                                     :PATIENT s3o
+                                     :V_FINAL_STATE (s3f1 / fried))
+                            :E3 (s3a / apply_heat
+                                     :INSTRUMENT s3b
+                                     :PATIENT s3o)
+                            :E4 (s3c1 / cooked
+                                      :PATIENT s3o
+                                      :V_FINAL_STATE s3f1)
+                            :E0 (s3d / do
+                                     :ACTION s3f))
+     :imp_output (s3f2 / fry.RES))
+
+
+# :: r-1510::step04::sent01
+# :: snt4	Add salt , vinegar and paprika and fry until translucent .
+(s4a3 / and~6
+      :op1 (s4a / add-02~0
+                :ARG1 (s4a2 / and~4
+                            :op1 (s4s / salt~1)
+                            :op2 (s4v / vinegar~3)
+                            :op3 (s4p / paprika~5))
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s4s
+                                                 :PATIENT_J s4v
+                                                 :PATIENT_K s4p)
+                                       :E3 (s4t2 / together
+                                                 :PATIENT_I s4s
+                                                 :PATIENT_J s4v
+                                                 :PATIENT_K s4p)
+                                       :E0 (s4d / do
+                                                :ACTION s4a))
+                :imp_output (s4a1 / add.RES))
+      :op2 (s4f / fry-01~7
+                :duration (s4u / until~8
+                               :op1 (s4t / translucent~9))
+                :ARG0 s4y
+                :event-structure (s4se1 / subevents
+                                        :E1 (s4c / cooked
+                                                 :polarity -
+                                                 :IMP_PATIENT s4a1
+                                                 :V_FINAL_STATE (s4f1 / fried))
+                                        :E3 (s4a4 / apply_heat
+                                                  :IMP_PATIENT s4a1)
+                                        :E4 (s4a5 / and
+                                                  :op1 (s4c1 / cooked
+                                                             :IMP_PATIENT s4a1
+                                                             :V_FINAL_STATE s4f1)
+                                                  :op2 (s4h / has_state
+                                                            :IMP_PATIENT s4a1
+                                                            :RESULT s4t))
+                                        :E0 (s4d1 / do
+                                                  :ACTION s4f))
+                :imp_output (s4f2 / fry.RES))
+      :mode imperative)
+
+
+# :: r-1510::step05::sent01
+# :: snt5	Slit the bun in half , apply butter and grill to golden brown .
+(s5a / and~8
+     :op1 (s5s / slit-01~0
+               :ARG1 (s5b2 / bun~2)
+               :manner (s5h / half~4)
+               :ARG0 (s5y / you)
+               :event-structure (s5se / subevents
+                                      :E1 (s5a1 / and
+                                                :op1 (s5d / degradation_material_integrity
+                                                          :polarity -
+                                                          :PATIENT s5b2)
+                                                :op2 (s5h1 / has_physical_form
+                                                           :polarity -
+                                                           :PATIENT s5b2
+                                                           :V_FORM (s5s1 / slit)))
+                                      :E2 (s5c / contact
+                                               :PATIENT s5b2)
+                                      :E3 (s5a3 / and
+                                                :op1 (s5d1 / degradation_material_integrity
+                                                           :PATIENT s5b2)
+                                                :op2 (s5h2 / has_physical_form
+                                                           :PATIENT s5b2
+                                                           :V_FORM s5s1))
+                                      :E0 (s5d2 / do
+                                                :ACTION s5s))
+               :imp_output (s5s2 / slit.RES))
+     :op2 (s5a2 / apply-03~6
+                :ARG1 (s5b3 / butter~7)
+                :ARG0 s5y
+                :event-structure (s5se1 / subevents
+                                        :E1 (s5h3 / has_location
+                                                  :THEME s5b3)
+                                        :E3 (s5a4 / and
+                                                  :op1 (s5m / motion
+                                                            :THEME s5b3)
+                                                  :op2 (s5h4 / has_location
+                                                             :polarity -
+                                                             :THEME s5b3))
+                                        :E4 (s5h5 / has_location
+                                                  :THEME s5b3)
+                                        :E0 (s5d3 / do
+                                                  :ACTION s5a2))
+                :imp_output (s5a5 / apply.RES))
+     :op3 (s5g2 / grill-01~9
+                :destination (s5b / brown~12
+                                  :mod (s5g / golden~11))
+                :ARG0 s5y
+                :event-structure (s5se2 / subevents
+                                        :E1 (s5c1 / cooked
+                                                  :polarity -
+                                                  :PATIENT s5b2
+                                                  :V_FINAL_STATE (s5g1 / grilled))
+                                        :E3 (s5a6 / apply_heat
+                                                  :PATIENT s5b2)
+                                        :E4 (s5c2 / cooked
+                                                  :PATIENT s5b2
+                                                  :V_FINAL_STATE s5g1)
+                                        :E0 (s5d4 / do
+                                                  :ACTION s5g2))
+                :imp_output (s5g3 / grill.RES))
+     :mode imperative)
+
+
+# :: r-1510::step06::sent01
+# :: snt6	Cut the tomatoes in half slice and place them on the bun ] .
+(s6a / and~6
+     :op1 (s6c / cut-01~0
+               :ARG1 (s6t / tomato~2,8)
+               :manner (s6s / slice~5
+                            :mod (s6h / half~4))
+               :ARG0 (s6y / you)
+               :event-structure (s6se / subevents
+                                      :E1 (s6d / degradation_material_integrity
+                                               :polarity -
+                                               :PATIENT s6t)
+                                      :E2 (s6c1 / contact
+                                                :PATIENT s6t)
+                                      :E3 (s6d1 / degradation_material_integrity
+                                                :PATIENT s6t)
+                                      :E0 (s6d2 / do
+                                                :ACTION s6c))
+               :imp_output (s6c2 / cut.RES))
+     :op2 (s6p / place-01~7
+               :ARG1 s6t
+               :ARG2 (s6b / bun~11)
+               :ARG0 s6y
+               :event-structure (s6se1 / subevents
+                                       :E1 (s6h1 / has_location
+                                                 :THEME (s6t1 / them~8))
+                                       :E3 (s6a1 / and
+                                                 :op1 (s6m / motion
+                                                           :THEME s6t1)
+                                                 :op2 (s6h2 / has_location
+                                                            :polarity -
+                                                            :THEME s6t1))
+                                       :E4 (s6h3 / has_location
+                                                 :THEME s6t1
+                                                 :DESTINATION s6b)
+                                       :E0 (s6d3 / do
+                                                 :ACTION s6p))
+               :imp_output (s6p1 / place.RES))
+     :mode imperative)
+
+
+# :: r-1510::step07::sent01
+# :: snt7	Put seekh kebab and onions , and grate cheese over the sandwich .
+(s7a2 / and~6
+      :op1 (s7p / put-01~0
+                :ARG1 (s7a / and~3
+                           :op1 (s7k / kebab~2
+                                     :mod (s7s2 / seekh~1))
+                           :op2 (s7o / onion~4))
+                :ARG0 (s7y / you)
+                :event-structure (s7se / subevents
+                                       :E1 (s7h / has_location
+                                                :THEME s7o)
+                                       :E3 (s7a1 / and
+                                                 :op1 (s7m / motion
+                                                           :THEME s7o)
+                                                 :op2 (s7h1 / has_location
+                                                            :polarity -
+                                                            :THEME s7o))
+                                       :E4 (s7h2 / has_location
+                                                 :THEME s7o)
+                                       :E0 (s7d / do
+                                                :ACTION s7p))
+                :imp_output (s7p1 / put.RES))
+      :op2 (s7g / grate-01~7
+                :ARG1 (s7c / cheese~8)
+                :location (s7o2 / over~9
+                                :op1 (s7s / sandwich~11))
+                :ARG0 s7y
+                :event-structure (s7se1 / subevents
+                                        :E1 (s7a3 / and
+                                                  :op1 (s7d1 / degradation_material_integrity
+                                                             :polarity -
+                                                             :PATIENT s7c)
+                                                  :op2 (s7h3 / has_physical_form
+                                                             :polarity -
+                                                             :PATIENT s7c
+                                                             :V_FORM (s7g1 / grated)))
+                                        :E2 (s7c1 / contact
+                                                  :PATIENT s7c)
+                                        :E3 (s7a4 / and
+                                                  :op1 (s7d2 / degradation_material_integrity
+                                                             :PATIENT s7c)
+                                                  :op2 (s7h4 / has_physical_form
+                                                             :PATIENT s7c
+                                                             :V_FORM s7g1))
+                                        :E0 (s7d3 / do
+                                                  :ACTION s7g))
+                :imp_output (s7g2 / grate.RES))
+      :mode imperative)
+
+
+# :: r-1510::step08::sent01
+# :: snt8	Grill until cheese melts .
+(s8g / grill-01~0
+     :mode imperative
+     :duration (s8u / until~1
+                    :op1 (s8m / melt-01~3
+                              :ARG1 (s8c / cheese~2)))
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8c1 / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s8g1 / grate.RES)
+                                      :V_FINAL_STATE (s8g2 / grilled))
+                            :E3 (s8a / apply_heat
+                                     :IMP_PATIENT s8g1)
+                            :E4 (s8a1 / and
+                                      :op1 (s8c2 / cooked
+                                                 :IMP_PATIENT s8g1
+                                                 :V_FINAL_STATE s8g2)
+                                      :op2 (s8h / has_state
+                                                :IMP_PATIENT s8g1
+                                                :RESULT s8m))
+                            :E0 (s8d / do
+                                     :ACTION s8g))
+     :imp_output (s8g3 / grill.RES))
+
+
+# :: r-1510::step09::sent01
+# :: snt9	Serve with chips and salad .
+(s9s2 / serve-02~0
+      :accompanier (s9a / and~3
+                        :op1 (s9c / chip~2)
+                        :op2 (s9s / salad~4))
+      :mode imperative
+      :ARG0 (s9y / you)
+      :event-structure (s9se / subevents
+                             :E1 (s9a1 / and
+                                       :op1 (s9h / has_possession
+                                                 :IMP_THEME (s9g / grill.RES))
+                                       :op2 (s9h1 / has_possession
+                                                  :polarity -
+                                                  :IMP_THEME s9g))
+                             :E2 (s9t / transfer
+                                      :IMP_THEME s9g)
+                             :E3 (s9a2 / and
+                                       :op1 (s9h2 / has_possession
+                                                  :IMP_THEME s9g)
+                                       :op2 (s9h3 / has_possession
+                                                  :polarity -
+                                                  :IMP_THEME s9g))
+                             :E0 (s9d / do
+                                      :ACTION s9s2))
+      :imp_output (s9s1 / serve.RES))
+
+

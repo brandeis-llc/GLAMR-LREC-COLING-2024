@@ -1,0 +1,50 @@
+# :: r-2311::step01::sent01
+# :: snt1	Crisp - cook soy " bacon " according to package directions .
+(s1 / sentence
+    :coref ((s1s :cut s1c4)))
+
+
+# :: r-2311::step02::sent01
+# :: snt2	Remove to plate .
+(s2 / sentence
+    :coref ((s1c4 :cut s2r1)))
+
+
+# :: r-2311::step03::sent01
+# :: snt3	When cool enough to handle , cut into 1/2-inch pieces .
+(s3 / sentence
+    :coref ((s2r1 :cut s3c3)))
+
+
+# :: r-2311::step04::sent01
+# :: snt4	In large bowl , combine soy " bacon " and tofu .
+(s4 / sentence
+    :coref ((s3c3 :aggregation s4c2)
+			(s4t :aggregation s4c2)))
+
+
+# :: r-2311::step05::sent01
+# :: snt5	In small bowl , toss avocado with lemon juice , then add to tofu mixture along with tomatoes and lettuce .
+(s5 / sentence
+    :coref ((s4c2 :aggregation s5a1)
+			(s5a4 :aggregation s5t1)
+			(s5t1 :aggregation s5a1)
+			(s5l :aggregation s5t1)
+			(s5t3 :aggregation s5a1)
+			(s5l2 :aggregation s5a1)))
+
+
+# :: r-2311::step06::sent01
+# :: snt6	Add dressing , toss to coat and serve .
+(s6 / sentence
+    :coref ((s5a1 :aggregation s6a1)
+			(s6a1 :cut s6t3)
+			(s6t3 :cut s6s1)
+			(s4c2 :aggregation s6a1)
+			(s6a1 :cut s6s1)
+			(s5a1 :cut s6t3)
+			(s5t1 :aggregation s6a1)
+			(s5a1 :cut s6s1)
+			(s6d :aggregation s6a1)))
+
+

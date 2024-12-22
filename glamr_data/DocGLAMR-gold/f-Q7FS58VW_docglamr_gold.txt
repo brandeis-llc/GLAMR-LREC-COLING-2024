@@ -1,0 +1,103 @@
+# :: f-Q7FS58VW::step01::sent01
+# :: snt1	Wash mussels and de - beard , bring a pot of water to a boil and cook the mussels , once shells open , take out mussels , discard shells and put the mussels into a mixing bowl , set aside .
+(s1 / sentence
+    :coref ((s1m2 :cut s1w3)
+			(s1w3 :cut s1d4)
+			(s1d4 :aggregation s1c4)
+			(s1c4 :cut s1w)
+			(s1w :cut s1p2)
+			(s1w2 :cut s1b2)
+			(s1b2 :aggregation s1c4)
+			(s1c4 :cut s1p2)))
+
+
+# :: f-Q7FS58VW::step01::sent02
+# :: snt2	Keep the water in the pot and continue to bring to boil .
+(s2 / sentence)
+
+
+# :: f-Q7FS58VW::step02::sent01
+# :: snt3	Wash squids and cut into bite size , blanch in the same pot of water used to cook mussels , drain and mix with mussels .
+(s3 / sentence
+    :coref ((s3s4 :aggregation s3w)
+			(s3w :cut s3s2)))
+
+
+# :: f-Q7FS58VW::step03::sent01
+# :: snt4	Wash mint leaves , corianders and use the leaves whole .
+(s4 / sentence
+    :coref ((s4m :cut s4w)))
+
+
+# :: f-Q7FS58VW::step04::sent01
+# :: snt5	Wash tomatoes and slice into thin wedges .
+(s5 / sentence
+    :coref ((s5a :aggregation s5s)
+			(s5s :cut s5w2)
+			(s5w :aggregation s5s)))
+
+
+# :: f-Q7FS58VW::step05::sent01
+# :: snt6	Onion and shallots skin off and sliced
+(s6 / sentence
+    :coref ((s6a :aggregation s6o)))
+
+
+# :: f-Q7FS58VW::step06::sent01
+# :: snt7	Wash bird eyes chilies ( if you want milder flavor , replace with big chilies ) cut into small pieces .
+(s7 / sentence
+    :coref ((s1p2 :aggregation s7w3)
+			(s4w :aggregation s7w3)
+			(s5w2 :aggregation s7w3)
+			(s5s :aggregation s7w3)
+			(s6o :aggregation s7w3)))
+
+
+# :: f-Q7FS58VW::step07::sent01
+# :: snt8	Toss in sliced onion , shallots , chilies and tomatoes .
+(s8 / sentence
+    :coref ((s7w3 :aggregation s8t2)
+			(s8t2 :aggregation s8t2)
+			(s1p2 :aggregation s8t2)
+			(s8s2 :aggregation s8t2)
+			(s8s :aggregation s8t2)))
+
+
+# :: f-Q7FS58VW::step08::sent01
+# :: snt9	Add in seasoning , mix well , taste test .
+(s9 / sentence
+    :coref ((s8t2 :aggregation s9a)
+			(s9a :cut s9t)
+			(s8t2 :cut s9t)
+			(s3s2 :aggregation s9a)
+			(s7w3 :aggregation s9a)
+			(s7w3 :cut s9t)
+			(s8s2 :aggregation s9a)))
+
+
+# :: f-Q7FS58VW::step08::sent02
+# :: snt10	Add more fish sauce or lime juice if desire stronger flavour .
+(s10 / sentence
+     :coref ((s9t :cut s10a)
+			(s10a :aggregation s10d)
+			(s9t :aggregation s10d)
+			(s9a :cut s10a)
+			(s9a :aggregation s10d)
+			(s7w3 :cut s10a)
+			(s7w3 :aggregation s10d)
+			(s8t2 :cut s10a)
+			(s8t2 :aggregation s10d)
+			(s10j :aggregation s10d)
+			(s10f2 :aggregation s10d)))
+
+
+# :: f-Q7FS58VW::step09::sent01
+# :: snt11	Top with mint and coriander leaves and gently toss together .
+(s11 / sentence)
+
+
+# :: f-Q7FS58VW::step10::sent01
+# :: snt12	Serve on a platter lined with lettuce and garnish with extra mint leaves .
+(s12 / sentence)
+
+

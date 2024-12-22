@@ -1,0 +1,287 @@
+# :: r-2099::step01::sent01
+# :: snt1	Boil potatoes with skin on until cooked .
+(s1b / boil-01~0
+     :ARG1 (s1p / potato~1)
+     :manner (s1s / skin~3
+                  :mod (s1o / on~4))
+     :mode imperative
+     :duration (s1u / until~5
+                    :op1 (s1c / cook-01~6))
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1c1 / cooked
+                                      :polarity -
+                                      :PATIENT s1p
+                                      :V_FINAL_STATE (s1b1 / boiled))
+                            :E3 (s1a / apply_heat
+                                     :PATIENT s1p)
+                            :E4 (s1a1 / and
+                                      :op1 (s1c2 / cooked
+                                                 :PATIENT s1p
+                                                 :V_FINAL_STATE s1b1)
+                                      :op2 (s1h / has_state
+                                                :PATIENT s1p
+                                                :RESULT s1c))
+                            :E0 (s1d / do
+                                     :ACTION s1b))
+     :imp_output (s1b2 / boil.RES))
+
+
+# :: r-2099::step02::sent01
+# :: snt2	Drain , peel and slice in halves .
+(s2a / and~3
+     :op1 (s2d / drain-01~0
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E1 (s2a1 / and
+                                                :op1 (s2h1 / has_location
+                                                           :IMP_THEME (s2b / boil.RES))
+                                                :op2 (s2h2 / has_state
+                                                           :polarity -
+                                                           :V_FINAL_STATE (s2d1 / drained)))
+                                      :E3 (s2a2 / and
+                                                :op1 (s2m / motion
+                                                          :IMP_THEME s2b)
+                                                :op2 (s2h3 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME s2b))
+                                      :E4 (s2a3 / and
+                                                :op1 (s2h4 / has_location
+                                                           :IMP_THEME s2b)
+                                                :op2 (s2h5 / has_state
+                                                           :V_FINAL_STATE s2d1))
+                                      :E0 (s2d2 / do
+                                                :ACTION s2d))
+               :imp_output (s2d3 / drain.RES))
+     :op2 (s2p / peel-01~2
+               :ARG0 s2y
+               :event-structure (s2se1 / subevents
+                                       :E1 (s2h6 / has_location
+                                                 :V_THEME (s2p1 / peeled))
+                                       :E3 (s2a4 / and
+                                                 :op1 (s2m1 / motion
+                                                            :V_THEME s2p1)
+                                                 :op2 (s2h7 / has_location
+                                                            :polarity -
+                                                            :V_THEME s2p1))
+                                       :E (s2p2 / part_of
+                                                :V_THEME s2p1)
+                                       :E0 (s2d4 / do
+                                                 :ACTION s2p))
+               :imp_output (s2p3 / peel.RES))
+     :op3 (s2s / slice-01~4
+               :manner (s2h / half~6)
+               :ARG0 s2y
+               :event-structure (s2se2 / subevents
+                                       :E1 (s2d5 / degradation_material_integrity
+                                                 :polarity -
+                                                 :IMP_PATIENT s2p3)
+                                       :E2 (s2c / contact
+                                                :IMP_PATIENT s2p3)
+                                       :E3 (s2d6 / degradation_material_integrity
+                                                 :IMP_PATIENT s2p3)
+                                       :E0 (s2d7 / do
+                                                 :ACTION s2s))
+               :imp_output (s2s1 / slice.RES))
+     :mode imperative)
+
+
+# :: r-2099::step03::sent01
+# :: snt3	Cut potatoes in small chunks .
+(s3c2 / cut-01~0
+      :ARG1 (s3p / potato~1)
+      :destination (s3c / chunk~4
+                        :mod (s3s / small~3))
+      :mode imperative
+      :ARG0 (s3y / you)
+      :event-structure (s3se / subevents
+                             :E1 (s3d / degradation_material_integrity
+                                      :polarity -
+                                      :PATIENT s3p)
+                             :E2 (s3c1 / contact
+                                       :PATIENT s3p)
+                             :E3 (s3d1 / degradation_material_integrity
+                                       :PATIENT s3p)
+                             :E0 (s3d2 / do
+                                       :ACTION s3c2))
+      :imp_output (s3c3 / cut.RES))
+
+
+# :: r-2099::step04::sent01
+# :: snt4	Put in bowl and sprinkle with vinegar .
+(s4a / and~3
+     :op1 (s4p / put-01~0
+               :ARG2 (s4b / bowl~2)
+               :ARG0 (s4y / you)
+               :event-structure (s4se / subevents
+                                      :E1 (s4h / has_location)
+                                      :E3 (s4a1 / and
+                                                :op1 (s4m / motion
+                                                          :IMP_THEME (s4c / cut.RES))
+                                                :op2 (s4h1 / has_location
+                                                           :polarity -
+                                                           :IMP_THEME s4c))
+                                      :E4 (s4h2 / has_location
+                                                :IMP_THEME s4c
+                                                :DESTINATION s4b)
+                                      :E0 (s4d / do
+                                               :ACTION s4p))
+               :imp_output (s4p1 / put.RES))
+     :op2 (s4s / sprinkle-01~4
+               :ARG1 (s4v / vinegar~6)
+               :ARG0 s4y
+               :event-structure (s4se1 / subevents
+                                       :E1 (s4h3 / has_location
+                                                 :IMP_THEME s4p1)
+                                       :E3 (s4a2 / and
+                                                 :op1 (s4m1 / motion
+                                                            :IMP_THEME s4p1)
+                                                 :op2 (s4h4 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s4p1))
+                                       :E4 (s4h5 / has_location
+                                                 :IMP_THEME s4p1)
+                                       :E0 (s4d1 / do
+                                                 :ACTION s4s))
+               :imp_output (s4s1 / sprinkle.RES))
+     :mode imperative)
+
+
+# :: r-2099::step05::sent01
+# :: snt5	Add celery , onion , eggs , pepper and mayonnaise .
+(s5a / add-02~0
+     :ARG1 (s5a2 / and~8
+                 :op1 (s5c / celery~1)
+                 :op2 (s5o / onion~3)
+                 :op3 (s5e / egg~5)
+                 :op4 (s5p / pepper~7)
+                 :op5 (s5m / mayonnaise~9))
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5t / together
+                                     :polarity -
+                                     :PATIENT_I s5c
+                                     :PATIENT_J s5o
+                                     :PATIENT_K s5e
+                                     :PATIENT_L s5p
+                                     :PATIENT_M s5m)
+                            :E3 (s5t1 / together
+                                      :PATIENT_I s5c
+                                      :PATIENT_J s5o
+                                      :PATIENT_K s5e
+                                      :PATIENT_L s5p
+                                      :PATIENT_M s5m)
+                            :E0 (s5d / do
+                                     :ACTION s5a))
+     :imp_output (s5a1 / add.RES))
+
+
+# :: r-2099::step06::sent01
+# :: snt6	Mix well .
+(s6m / mix-01~0
+     :manner (s6w / well~1)
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6a / and
+                                     :op1 (s6m1 / mingled
+                                                :polarity -)
+                                     :op2 (s6h / has_material_integrity_state
+                                               :polarity -
+                                               :V_STATE (s6m2 / mixed))
+                                     :op3 (s6h1 / has_material_integrity_state
+                                                :polarity -
+                                                :V_STATE s6m2))
+                            :E3 (s6a1 / and
+                                      :op1 (s6m3 / mingled)
+                                      :op2 (s6h2 / has_material_integrity_state
+                                                 :V_STATE s6m2)
+                                      :op3 (s6h3 / has_material_integrity_state
+                                                 :V_STATE s6m2))
+                            :E0 (s6d / do
+                                     :ACTION s6m))
+     :imp_output (s6m4 / mix.RES))
+
+
+# :: r-2099::step07::sent01
+# :: snt7	When ready to serve , lay out lettuce leaves on a platter .
+(s7l / lay-01~5
+     :ARG1 (s7l2 / leaf~8
+                 :source (s7l3 / lettuce~7))
+     :ARG2 (s7p / platter~11)
+     :mode imperative
+     :time (s7r / ready-02~1
+                :ARG2 (s7s / serve-02~3))
+     :ARG0 (s7y / you)
+     :event-structure (s7se / subevents
+                            :E1 (s7h / has_location
+                                     :THEME s7l2)
+                            :E3 (s7a / and
+                                     :op1 (s7m / motion
+                                               :THEME s7l2)
+                                     :op2 (s7h1 / has_location
+                                                :polarity -
+                                                :THEME s7l2))
+                            :E4 (s7a1 / and
+                                      :op1 (s7h2 / has_location
+                                                 :THEME s7l2
+                                                 :DESTINATION s7p)
+                                      :op2 (s7h3 / has_configuration
+                                                 :THEME s7l2
+                                                 :V_CONFIGURATION (s7l1 / laid-out)))
+                            :E0 (s7d / do
+                                     :ACTION s7l))
+     :imp_output (s7l4 / lay.RES))
+
+
+# :: r-2099::step08::sent01
+# :: snt8	Put potato salad .
+(s8p2 / put-01~0
+      :ARG1 (s8s / salad~2
+                 :consist-of (s8p / potato~1))
+      :mode imperative
+      :ARG0 (s8y / you)
+      :event-structure (s8se / subevents
+                             :E1 (s8h / has_location
+                                      :THEME s8s)
+                             :E3 (s8a / and
+                                      :op1 (s8m / motion
+                                                :THEME s8s)
+                                      :op2 (s8h1 / has_location
+                                                 :polarity -
+                                                 :THEME s8s))
+                             :E4 (s8h2 / has_location
+                                       :THEME s8s)
+                             :E0 (s8d / do
+                                      :ACTION s8p2))
+      :imp_output (s8p1 / put.RES))
+
+
+# :: r-2099::step09::sent01
+# :: snt9	Top with egg slices and sprinkle with a little paprika .
+(s9a / and~4
+     :op1 (s9t / top-01~0
+               :ARG2 (s9s / slice~3
+                          :consist-of (s9e / egg~2))
+               :ARG0 (s9y / you))
+     :op2 (s9s2 / sprinkle-01~5
+                :ARG1 (s9p / paprika~9
+                           :quant (s9l / little~8))
+                :ARG0 s9y
+                :event-structure (s9se / subevents
+                                       :E1 (s9h / has_location
+                                                :IMP_THEME (s9t1 / top.RES))
+                                       :E3 (s9a1 / and
+                                                 :op1 (s9m / motion
+                                                           :IMP_THEME s9t1)
+                                                 :op2 (s9h1 / has_location
+                                                            :polarity -
+                                                            :IMP_THEME s9t1))
+                                       :E4 (s9h2 / has_location
+                                                 :IMP_THEME s9t1)
+                                       :E0 (s9d / do
+                                                :ACTION s9s2))
+                :imp_output (s9s1 / sprinkle.RES)))
+
+

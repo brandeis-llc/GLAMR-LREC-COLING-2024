@@ -1,0 +1,334 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1276
+export time: 4/6/2023, 3:21:25 PM
+
+# :: snt1	Preheat oven to 350 degrees F and line a cookie sheet with parchment paper .
+# sentence level graph:
+(s1a / and
+  :op1 (s1p3 / preheat-00
+         :ARG1 (s1o / oven)
+         :ARG2 (s1t / temperature-quantity
+                 :quant 350
+                 :scale (s1f / fahrenheit)))
+  :op2 (s1l / line-01
+         :ARG1 (s1s / sheet
+                 :mod (s1c / cookie))
+         :ARG2 (s1p / paper
+                 :mod (s1p2 / parchment)))
+  :mode imperative)
+
+# alignment:s1a: 7-7
+s1c: 10-10
+s1f: 5-5
+s1l: 8-8
+s1o: 2-2
+s1p: 14-14
+s1p2: 13-13
+s1s: 11-11
+s1t: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Put the cake flour , sugar , coffee , walnuts , and salt in a food processor and process for about 10 seconds ( or until the walnuts are well grounded ) .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2p3 / put-01
+         :ARG1 (s2a3 / and
+                 :op1 (s2f / flour
+                        :mod (s2c / cake))
+                 :op2 (s2s3 / sugar)
+                 :op3 (s2c2 / coffee)
+                 :op4 (s2w / walnut)
+                 :op5 (s2s / salt))
+         :ARG2 (s2p2 / processor
+                 :mod (s2f2 / food)))
+  :op2 (s2p / process-01
+         :ARG1 s2a3
+         :duration (s2a / amr-choice
+                     :op1 (s2a4 / about
+                            :op1 (s2t / temporal-quantity
+                                   :unit (s2s2 / second)
+                                   :quant 10))
+                     :op2 (s2u2 / until
+                            :op1 (s2g / ground-01
+                                   :ARG1 s2w
+                                   :degree (s2w2 / well-09)))))
+  :mode imperative)
+
+# alignment:s2a: 21-21
+s2a2: 12-12
+s2a3: 0-0
+s2a4: 0-0
+s2c: 3-3
+s2c2: 8-8
+s2f: 4-4
+s2f2: 16-16
+s2g: -1--1
+s2p: 19-19
+s2p2: 17-17
+s2p3: 1-1
+s2s: 13-13
+s2s2: -1--1
+s2s3: 6-6
+s2t: -1--1
+s2u2: 0-0
+s2w: -1--1
+s2w2: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Now put the mixture into a mixing bowl and add canola oil .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3p / put-01
+         :ARG1 (s3m / mixture)
+         :ARG2 (s3b / bowl
+                 :purpose (s3m2 / mix-01)))
+  :op2 (s3a / add-02
+         :ARG1 (s3o / oil
+                 :source (s3c / canola))
+         :ARG2 s3m)
+  :time (s3n / now)
+  :mode imperative)
+
+# alignment:s3a: 10-10
+s3a2: 9-9
+s3b: 8-8
+s3c: 11-11
+s3m2: 7-7
+s3n: 1-1
+s3o: 12-12
+s3p: 2-2
+s3m: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Form a pasty dough , then separate the dough with your hands to form small crumbs .
+# sentence level graph:
+(s4a / and
+  :op1 (s4f / form-01
+         :ARG1 (s4d / dough
+                 :mod (s4p / pasty)))
+  :op2 (s4s / separate-01
+         :ARG1 s4d
+         :purpose (s4f2 / form-01
+                    :ARG1 (s4c / crumb
+                            :mod (s4s2 / small)))
+         :instrument (s4h / hand
+                       :part-of (s4y / you))
+         :time (s4t / then))
+  :mode imperative)
+
+# alignment:s4a: 2-2
+s4c: 16-16
+s4d: 9-9
+s4f: 1-1
+s4f2: 14-14
+s4h: 12-12
+s4p: 3-3
+s4s: 7-7
+s4s2: 15-15
+s4t: 6-6
+s4y: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Add the water and form into a clean dough .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5a / add-02
+         :ARG1 (s5w / water))
+  :op2 (s5f / form-01
+         :ARG2 (s5d / dough
+                 :ARG1-of (s5c / clean-04)))
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5a2: 4-4
+s5c: 8-8
+s5d: 9-9
+s5f: 5-5
+s5w: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	If you like raisins , you can combine it with the dough now .
+# sentence level graph:
+(s6p / possible-01
+    :ARG1 (s6c / combine-01
+        :ARG0 (s6y / you)
+        :ARG1 (s6r / raisin)
+        :ARG2 (s6d / dough)
+        :time (s6n / now))
+    :condition (s6l / like-01
+        :ARG0 s6y
+        :ARG1 s6r))
+
+
+# alignment:s6l: 3-3
+s6r: 4-4
+s6y: 6-6
+s6p: 7-7
+s6c: 8-8
+s6d: 12-12
+s6n: 13-13
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Divide the dough into 16 pieces and roll each piece into a ball .
+# sentence level graph:
+(s7a / and
+  :op1 (s7d / divide-02
+         :ARG1 (s7d2 / dough)
+         :ARG2 (s7p / piece
+                 :quant 16))
+  :op2 (s7r / roll-01
+         :ARG1 (s7p2 / piece
+                 :mod (s7e / each))
+         :ARG2 (s7b / ball))
+  :mode imperative)
+
+# alignment:s7a: 7-7
+s7b: 13-13
+s7d: 1-1
+s7d2: 3-3
+s7e: 9-9
+s7p: 6-6
+s7p2: 10-10
+s7r: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Put each ball on a cookie sheet and bake at 350 degrees F for 25 minutes .
+# sentence level graph:
+(s8a / and
+  :op1 (s8p / put-01
+         :ARG1 (s8b2 / ball
+                 :mod (s8e / each))
+         :ARG2 (s8s / sheet
+                 :mod (s8c / cookie)))
+  :op2 (s8b / bake-01
+         :ARG1 s8b2
+         :ARG3 (s8t / temperature-quantity
+                 :quant 350
+                 :scale (s8f / fahrenheit))
+         :duration (s8t2 / temporal-quantity
+                     :quant 25
+                     :unit (s8m / minute)))
+  :mode imperative)
+
+# alignment:s8a: 8-8
+s8b: 9-9
+s8b2: 0-0
+s8c: 6-6
+s8e: 2-2
+s8f: 12-12
+s8m: 16-16
+s8p: 1-1
+s8s: 7-7
+s8t: 10-10
+s8t2: 16-16
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Let the cookies cool for about 20 minutes .
+# sentence level graph:
+(s9l / let-01
+  :ARG1 (s9c2 / cool-01
+          :ARG1 (s9c / cookie))
+  :duration (s9a / about
+              :op1 (s9t / temporal-quantity
+                     :quant 20
+                     :unit (s9m / minute)))
+  :mode imperative)
+
+# alignment:s9a: 6-6
+s9c: 3-3
+s9c2: 4-4
+s9l: 1-1
+s9m: 8-8
+s9t: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Dust with powdered sugar before serving .
+# sentence level graph:
+(s10d / dust-01
+  :ARG2 (s10s2 / sugar
+          :ARG1-of (s10p / powder-01))
+  :mode imperative
+  :time (s10b / before
+          :op1 (s10s / serve-02)))
+
+# alignment:s10b: 5-5
+s10d: 1-1
+s10p: 3-3
+s10s: 6-6
+s10s2: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Preheat oven to 350 degrees F and line a cookie sheet with parchment paper .
+Put the cake flour , sugar , coffee , walnuts , and salt in a food processor and process for about 10 seconds ( or until the walnuts are well grounded ) .
+Now put the mixture into a mixing bowl and add canola oil .
+Form a pasty dough , then separate the dough with your hands to form small crumbs .
+Add the water and form into a clean dough .
+If you like raisins , you can combine it with the dough now .
+Divide the dough into 16 pieces and roll each piece into a ball .
+Put each ball on a cookie sheet and bake at 350 degrees F for 25 minutes .
+Let the cookies cool for about 20 minutes .
+Dust with powdered sugar before serving .

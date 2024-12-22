@@ -1,0 +1,304 @@
+# :: r-289::step01::sent01
+# :: snt1	Clean the beef rump and cut into cubes .
+(s1a / and~4
+     :op1 (s1c / clean-01~0
+               :ARG1 (s1r / rump~3
+                          :part-of (s1b / beef~2))
+               :ARG0 (s1y / you)
+               :event-structure (s1se / subevents
+                                      :E1 (s1a1 / and
+                                                :op1 (s1h / has_location
+                                                          :THEME s1r)
+                                                :op2 (s1h1 / has_state
+                                                           :polarity -
+                                                           :V_FINAL_STATE (s1c1 / cleaned)))
+                                      :E3 (s1a2 / and
+                                                :op1 (s1m / motion
+                                                          :THEME s1r)
+                                                :op2 (s1h2 / has_location
+                                                           :polarity -
+                                                           :THEME s1r))
+                                      :E4 (s1a3 / and
+                                                :op1 (s1h3 / has_location
+                                                           :THEME s1r)
+                                                :op2 (s1h4 / has_state
+                                                           :V_FINAL_STATE s1c1))
+                                      :E0 (s1d / do
+                                               :ACTION s1c))
+               :imp_output (s1c4 / clean.RES))
+     :op2 (s1c3 / cut-01~5
+                :destination (s1c2 / cube~7)
+                :ARG0 s1y
+                :event-structure (s1se1 / subevents
+                                        :E1 (s1d1 / degradation_material_integrity
+                                                  :polarity -
+                                                  :PATIENT s1r)
+                                        :E2 (s1c5 / contact
+                                                  :PATIENT s1r)
+                                        :E3 (s1d2 / degradation_material_integrity
+                                                  :PATIENT s1r)
+                                        :E0 (s1d3 / do
+                                                  :ACTION s1c3))
+                :imp_output (s1c6 / cut.RES))
+     :mode imperative)
+
+
+# :: r-289::step02::sent01
+# :: snt2	Blend shallot , garlic , ginger , candlenut , turmeric , red chile and black nuts ( kluwek ) until smooth .
+(s2b2 / blend-01~0
+      :ARG1 (s2a / and~13
+                 :op1 (s2s / shallot~1)
+                 :op2 (s2g / garlic~3)
+                 :op3 (s2g2 / ginger~5)
+                 :op4 (s2c / candlenut~7)
+                 :op5 (s2t / turmeric~9)
+                 :op6 (s2c2 / chile~12
+                            :mod (s2r / red~11))
+                 :op7 (s2n / nut~15
+                           :ARG1-of (s2m / mean-01
+                                         :ARG2 (s2k / kluwek~17))
+                           :mod (s2b / black~14)))
+      :duration (s2u / until~19
+                     :op1 (s2s2 / smooth~20))
+      :mode imperative
+      :ARG0 (s2y / you)
+      :event-structure (s2se / subevents
+                             :E1 (s2a1 / and
+                                       :op1 (s2m1 / mingled
+                                                  :polarity -
+                                                  :PATIENT_I s2s
+                                                  :PATIENT_J s2g
+                                                  :PATIENT_K s2g2
+                                                  :PATIENT_L s2c
+                                                  :PATIENT_M s2t
+                                                  :PATIENT_N s2c2
+                                                  :PATIENT_O s2n
+                                                  :PATIENT_P s2k)
+                                       :op2 (s2h / has_material_integrity_state
+                                                 :polarity -
+                                                 :PATIENT_I s2s
+                                                 :V_STATE (s2b1 / blent)
+                                                 :PATIENT_J s2g
+                                                 :PATIENT_K s2g2
+                                                 :PATIENT_L s2c
+                                                 :PATIENT_M s2t
+                                                 :PATIENT_N s2c2
+                                                 :PATIENT_O s2n
+                                                 :PATIENT_P s2k)
+                                       :op3 (s2h1 / has_material_integrity_state
+                                                  :polarity -
+                                                  :PATIENT_J s2g
+                                                  :V_STATE s2b1
+                                                  :PATIENT_I s2s
+                                                  :PATIENT_K s2g2
+                                                  :PATIENT_L s2c
+                                                  :PATIENT_M s2t
+                                                  :PATIENT_N s2c2
+                                                  :PATIENT_O s2n
+                                                  :PATIENT_P s2k))
+                             :E3 (s2a2 / and
+                                       :op1 (s2m2 / mingled
+                                                  :PATIENT_I s2s
+                                                  :PATIENT_J s2g
+                                                  :PATIENT_K s2g2
+                                                  :PATIENT_L s2c
+                                                  :PATIENT_M s2t
+                                                  :PATIENT_N s2c2
+                                                  :PATIENT_O s2n
+                                                  :PATIENT_P s2k)
+                                       :op2 (s2h2 / has_material_integrity_state
+                                                  :PATIENT_I s2s
+                                                  :V_STATE s2b1
+                                                  :PATIENT_J s2g
+                                                  :PATIENT_K s2g2
+                                                  :PATIENT_L s2c
+                                                  :PATIENT_M s2t
+                                                  :PATIENT_N s2c2
+                                                  :PATIENT_O s2n
+                                                  :PATIENT_P s2k)
+                                       :op3 (s2h3 / has_material_integrity_state
+                                                  :PATIENT_J s2g
+                                                  :V_STATE s2b1
+                                                  :PATIENT_I s2s
+                                                  :PATIENT_K s2g2
+                                                  :PATIENT_L s2c
+                                                  :PATIENT_M s2t
+                                                  :PATIENT_N s2c2
+                                                  :PATIENT_O s2n
+                                                  :PATIENT_P s2k))
+                             :E0 (s2d / do
+                                      :ACTION s2b2))
+      :imp_output (s2b3 / blend.RES))
+
+
+# :: r-289::step03::sent01
+# :: snt3	Heat pan and put all blended ingredients and saute until cooked and smell good .
+(s3a2 / and~2
+      :op1 (s3h / heat-01~0
+                :ARG1 (s3p / pan~1))
+      :op2 (s3p2 / put-01~3
+                 :ARG1 (s3i / ingredient~6
+                            :ARG1-of (s3b / blend-01~5)
+                            :mod (s3a / all~4))
+                 :ARG0 (s3y / you)
+                 :event-structure (s3se / subevents
+                                        :E1 (s3h1 / has_location
+                                                  :THEME s3i)
+                                        :E3 (s3a1 / and
+                                                  :op1 (s3m / motion
+                                                            :THEME s3i)
+                                                  :op2 (s3h2 / has_location
+                                                             :polarity -
+                                                             :THEME s3i))
+                                        :E4 (s3h3 / has_location
+                                                  :THEME s3i)
+                                        :E0 (s3d / do
+                                                 :ACTION s3p2))
+                 :imp_output (s3p1 / put.RES))
+      :op3 (s3s2 / saute-01~8
+                 :duration (s3u / until~9
+                                :op1 (s3a3 / and~11
+                                           :op1 (s3c / cook-01~10)
+                                           :op2 (s3s / smell-02~12
+                                                     :mod (s3g / good~13))))
+                 :ARG0 s3y
+                 :event-structure (s3se1 / subevents
+                                         :E1 (s3c1 / cooked
+                                                   :polarity -
+                                                   :IMP_PATIENT s3p1
+                                                   :V_FINAL_STATE (s3s1 / sauted))
+                                         :E3 (s3a4 / apply_heat
+                                                   :IMP_PATIENT s3p1)
+                                         :E4 (s3a5 / and
+                                                   :op1 (s3c2 / cooked
+                                                              :IMP_PATIENT s3p1
+                                                              :V_FINAL_STATE s3s1)
+                                                   :op2 (s3h4 / has_state
+                                                              :IMP_PATIENT s3p1
+                                                              :RESULT s3g))
+                                         :E0 (s3d1 / do
+                                                   :ACTION s3s2))
+                 :imp_output (s3s3 / saute.RES))
+      :mode imperative)
+
+
+# :: r-289::step04::sent01
+# :: snt4	Add beef rump cubes and water to make the stock .
+(s4a / add-02~0
+     :ARG1 (s4a2 / and~4
+                 :op1 (s4c / cube~3
+                           :consist-of (s4r / rump~2
+                                            :part-of (s4b / beef~1)))
+                 :op2 (s4w / water~5))
+     :purpose (s4m / make-01~7
+                   :ARG1 (s4s / stock~9)
+                   :ARG0 s4y
+                   :event-structure (s4se1 / subevents
+                                           :E1 (s4b1 / be
+                                                     :polarity -
+                                                     :PRODUCT s4s)
+                                           :E3 (s4a3 / and
+                                                     :op1 (s4b2 / be
+                                                                :PRODUCT s4s)
+                                                     :op2 (s4m1 / made_of
+                                                                :PRODUCT s4s))
+                                           :E (s4c1 / cost
+                                                    :PRODUCT s4s)
+                                           :E0 (s4d1 / do
+                                                     :ACTION s4m))
+                   :imp_output (s4m2 / make.RES))
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4t / together
+                                     :polarity -
+                                     :PATIENT_I s4c
+                                     :PATIENT_J s4w)
+                            :E3 (s4t1 / together
+                                      :PATIENT_I s4c
+                                      :PATIENT_J s4w)
+                            :E0 (s4d / do
+                                     :ACTION s4a))
+     :imp_output (s4a1 / add.RES))
+
+
+# :: r-289::step05::sent01
+# :: snt5	Put kaffir lime leaves , salam , galangal , lemon grass and boil until beef is tender .
+(s5a2 / and~11
+      :op1 (s5p / put-01~0
+                :ARG1 (s5a / and
+                           :op1 (s5l / leaf~3
+                                     :part-of (s5l3 / lime~2
+                                                    :mod (s5k / kaffir~1)))
+                           :op2 (s5s / salam~5)
+                           :op3 (s5g / galangal~7)
+                           :op4 (s5l2 / lemongrass~9,10))
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5h / has_location
+                                                :THEME s5l2)
+                                       :E3 (s5a1 / and
+                                                 :op1 (s5m / motion
+                                                           :THEME s5l2)
+                                                 :op2 (s5h1 / has_location
+                                                            :polarity -
+                                                            :THEME s5l2))
+                                       :E4 (s5h2 / has_location
+                                                 :THEME s5l2)
+                                       :E0 (s5d / do
+                                                :ACTION s5p))
+                :imp_output (s5p1 / put.RES))
+      :op2 (s5b2 / boil-01~12
+                 :duration (s5u / until~13
+                                :op1 (s5t / tender-ON-03~16
+                                          :ARG1 (s5b / beef~14)))
+                 :ARG0 s5y
+                 :event-structure (s5se1 / subevents
+                                         :E1 (s5c / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s5p1
+                                                  :V_FINAL_STATE (s5b1 / boiled))
+                                         :E3 (s5a3 / apply_heat
+                                                   :IMP_PATIENT s5p1)
+                                         :E4 (s5a4 / and
+                                                   :op1 (s5c1 / cooked
+                                                              :IMP_PATIENT s5p1
+                                                              :V_FINAL_STATE s5b1)
+                                                   :op2 (s5h3 / has_state
+                                                              :IMP_PATIENT s5p1
+                                                              :RESULT s5t))
+                                         :E0 (s5d1 / do
+                                                   :ACTION s5b2))
+                 :imp_output (s5b3 / boil.RES))
+      :mode imperative)
+
+
+# :: r-289::step06::sent01
+# :: snt6	Season with coriander powder , cumin , salt and sugar according to taste .
+(s6s2 / season-01~0
+      :ARG2 (s6a / and~8
+                 :op1 (s6p / powder~3
+                           :source (s6c / coriander~2))
+                 :op2 (s6c2 / cumin~5)
+                 :op3 (s6s / salt~7)
+                 :op4 (s6s3 / sugar~9))
+      :cause (s6a2 / according~10
+                   :op1 (s6t / taste-01~12))
+      :mode imperative
+      :ARG0 (s6y / you)
+      :event-structure (s6se / subevents
+                             :E1 (s6h / has_location
+                                      :IMP_THEME (s6b / boil.RES))
+                             :E3 (s6a1 / and
+                                       :op1 (s6m / motion
+                                                 :IMP_THEME s6b)
+                                       :op2 (s6h1 / has_location
+                                                  :polarity -
+                                                  :IMP_THEME s6b))
+                             :E4 (s6h2 / has_location
+                                       :IMP_THEME s6b)
+                             :E0 (s6d / do
+                                      :ACTION s6s2))
+      :imp_output (s6s1 / season.RES))
+
+

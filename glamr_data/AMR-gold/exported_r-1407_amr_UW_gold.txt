@@ -1,0 +1,189 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1464
+export time: 9/26/2023, 8:54:30 PM
+
+# :: snt1	Fry the sewian in hot oil until golden brown .
+# sentence level graph:
+(s1f / fry-01
+  :ARG1 (s1s / sewian)
+  :medium (s1o / oil
+            :mod (s1h / hot))
+  :mode imperative
+  :duration (s1u / until
+              :op1 (s1b / brown
+                     :mod (s1g / gold))))
+
+# alignment:s1b: 9-9
+s1f: 1-1
+s1g: 8-8
+s1h: 5-5
+s1o: 6-6
+s1s: 3-3
+s1u: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Heat the milk to boiling and add the sewian .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2h / heat-01
+         :ARG1 (s2m / milk)
+         :destination (s2b / boiling))
+  :op2 (s2a / add-02
+         :ARG1 (s2s / sewer))
+  :mode imperative)
+
+# alignment:s2a: 7-7
+s2a2: 6-6
+s2b: 5-5
+s2h: 1-1
+s2m: 3-3
+s2s: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Cook until the milk is reduced by half .
+# sentence level graph:
+(s3c / cook-01
+  :mode imperative
+  :duration (s3u / until
+              :op1 (s3r / reduce-01
+                     :ARG1 (s3m / milk)
+                     :ARG2 (s3h / half))))
+
+# alignment:s3c: 1-1
+s3h: 8-8
+s3m: 4-4
+s3r: 6-6
+s3u: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add sugar and cook on low heat until creamy ( about 25 minutes ) .
+# sentence level graph:
+(s4a3 / and
+  :op1 (s4a2 / add-02
+         :ARG1 (s4s2 / sugar))
+  :op2 (s4c / cook-01
+         :manner (s4h / heat
+                   :mod (s4l / low))
+         :duration (s4u / until
+                     :op1 (s4c2 / creamy)
+                     :op2 (s4a / about
+                            :op1 (s4t / temporal-quantity
+                                   :quant 25
+                                   :unit (s4m / minute)))))
+  :mode imperative)
+
+# alignment:s4a: 11-11
+s4a2: 1-1
+s4a3: 3-3
+s4c: 4-4
+s4h: 7-7
+s4l: 6-6
+s4m: 13-13
+s4s2: 2-2
+s4t: 13-13
+s4u: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Remove from the heat .
+# sentence level graph:
+(s5r / remove-01
+  :ARG2 (s5h / heat)
+  :mode imperative)
+
+# alignment:s5h: 4-4
+s5r: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Add in rose water .
+# sentence level graph:
+(s6a / add-02
+  :ARG1 (s6w / water
+          :mod (s6r / rose))
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6r: 3-3
+s6w: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Decorate with blanched finely shredded almonds and pistachio nuts and silver leaves if desired .
+# sentence level graph:
+(s7d / decorate-01
+  :ARG2 (s7a2 / and
+          :op1 (s7a / almond
+                 :ARG1-of (s7b / blanch-01)
+                 :ARG1-of (s7s / shred-01
+                            :manner (s7f / fine)))
+          :op2 (s7n / nut
+                 :mod (s7p / pistachio))
+          :op3 (s7l / leaf
+                 :consist-of (s7s2 / silver)))
+  :condition (s7d2 / desire-01)
+  :mode imperative)
+
+# alignment:s7a: 6-6
+s7a2: 7-7
+s7b: 3-3
+s7d: 1-1
+s7d2: 14-14
+s7f: 4-4
+s7l: 12-12
+s7n: 9-9
+s7p: 8-8
+s7s: 5-5
+s7s2: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Fry the sewian in hot oil until golden brown .
+Heat the milk to boiling and add the sewian .
+Cook until the milk is reduced by half .
+Add sugar and cook on low heat until creamy ( about 25 minutes ) .
+Remove from the heat .
+Add in rose water .
+Decorate with blanched finely shredded almonds and pistachio nuts and silver leaves if desired .

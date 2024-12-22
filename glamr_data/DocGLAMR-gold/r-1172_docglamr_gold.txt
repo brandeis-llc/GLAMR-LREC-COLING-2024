@@ -1,0 +1,55 @@
+# :: r-1172::step01::sent01
+# :: snt1	Bring a medium pot of water to a boil .
+(s1 / sentence
+    :coref ((s1w :cut s1b)))
+
+
+# :: r-1172::step02::sent01
+# :: snt2	Drop in corn , beans , and carrots ; cook for 3 minutes .
+(s2 / sentence
+    :coref ((s1b :aggregation s2d3)
+			(s2d3 :cut s2c6)
+			(s2c2 :aggregation s2d3)
+			(s2b :aggregation s2d3)
+			(s2c3 :aggregation s2d3)))
+
+
+# :: r-1172::step03::sent01
+# :: snt3	Drain vegetables and plunge into cold water .
+(s3 / sentence
+    :coref ((s2c6 :cut s3d3)
+			(s3d3 :aggregation s3p1)
+			(s2d3 :cut s3d3)
+			(s2d3 :aggregation s3p1)
+			(s3c :aggregation s3p1)))
+
+
+# :: r-1172::step04::sent01
+# :: snt4	Drain again and place in a large bowl .
+(s4 / sentence
+    :coref ((s3p1 :cut s4d3)
+			(s4d3 :cut s4p2)
+			(s3d3 :cut s4d3)
+			(s3p1 :cut s4p2)
+			(s2d3 :cut s4d3)))
+
+
+# :: r-1172::step05::sent01
+# :: snt5	Add remaining ingredients and toss to mix well .
+(s5 / sentence
+    :coref ((s4p2 :aggregation s5a1)
+			(s5a1 :cut s5t3)
+			(s4d3 :aggregation s5a1)
+			(s4p2 :cut s5t3)
+			(s4d3 :cut s5t3)
+			(s3p1 :aggregation s5a1)
+			(s5i :aggregation s5a1)))
+
+
+# :: r-1172::step06::sent01
+# :: snt6	Refrigerate for 1 hour to blend flavors .
+(s6 / sentence
+    :coref ((s5t3 :cut s6r2)
+			(s5a1 :cut s6r2)))
+
+

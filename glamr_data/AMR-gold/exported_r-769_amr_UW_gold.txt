@@ -1,0 +1,301 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1456
+export time: 9/20/2023, 9:25:33 PM
+
+# :: snt1	cream 2 tablespoons butter , beat in eggs and salt .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1c / cream-01
+         :ARG1 (s1b2 / butter
+                 :quant (s1v / volume-quantity
+                          :quant 2
+                          :unit (s1t / teaspoon))))
+  :op2 (s1b / beat-ON-06
+         :ARG1 (s1a / and
+                 :op1 (s1e / egg)
+                 :op2 (s1s / salt)))
+  :mode imperative)
+
+# alignment:s1a: 5-5
+s1a2: 9-9
+s1b: 6-6
+s1b2: 4-4
+s1e: 8-8
+s1s: 10-10
+s1t: 3-3
+s1v: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Gradually beat in flour and riced potatoes .
+# sentence level graph:
+(s2b / beat-ON-06
+  :ARG1 (s2a / and
+          :op1 (s2f / flour)
+          :op2 (s2p / potato
+                 :ARG1-of (s2r / rice-01)))
+  :manner (s2g / gradual)
+  :mode imperative)
+
+# alignment:s2a: 5-5
+s2b: 2-2
+s2f: 4-4
+s2g: 1-1
+s2p: 7-7
+s2r: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Dough should be stiff to knead thoroughly .
+# sentence level graph:
+(s3r / recommend-01
+  :ARG1 (s3s / stiff
+          :domain (s3d / dough)
+          :purpose (s3k / knead-01
+                     :degree (s3t / thorough)))
+  :mode imperative)
+
+# alignment:s3d: 1-1
+s3k: 6-6
+s3r: 2-2
+s3s: 4-4
+s3t: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	On floured board roll out dough to 1/4-inch thickness , then cut 3-inch squares .
+# sentence level graph:
+(s4a / and
+  :op1 (s4r / roll-out-ON-06
+         :ARG1 (s4d2 / dough)
+         :ARG2 (s4t2 / thickness
+                 :quant "1/4"
+                 :unit (s4i2 / inch))
+         :location (s4b / board
+                     :ARG1-of (s4f / flour-01)))
+  :op2 (s4c / cut-01
+         :ARG1 (s4s / square
+                 :mod (s4d / distance-quantity
+                        :quant 3
+                        :unit (s4i / inch)))
+         :time (s4t / then))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4b: 3-3
+s4c: 12-12
+s4d: 13-13
+s4d2: 6-6
+s4f: 2-2
+s4i: 13-13
+s4r: 4-4
+s4s: 14-14
+s4t: 11-11
+s4t2: 9-9
+s4i2: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Lay 1 plum on each square , sprinkle with little cinnamon sugar and fold edges over plum .
+# sentence level graph:
+(s5a / and
+  :op1 (s5l / lay-01
+         :ARG1 (s5p / plum
+                 :quant 1)
+         :ARG2 (s5s2 / square
+                 :mod (s5e / each)))
+  :op2 (s5s / sprinkle-01
+         :ARG1 (s5s3 / sugar
+                 :mod (s5c / cinnamon)
+                 :mod (s5l2 / little)))
+  :op3 (s5f / fold-03
+         :ARG1 (s5e2 / edge)
+         :location (s5o / over
+                     :op1 s5p))
+  :mode imperative)
+
+# alignment:s5a: 13-13
+s5c: 11-11
+s5e: 5-5
+s5e2: 15-15
+s5f: 14-14
+s5l: 1-1
+s5l2: 10-10
+s5p: 0-0
+s5s: 8-8
+s5s2: 6-6
+s5s3: 12-12
+s5o: 16-16
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Shape with hands into a ball .
+# sentence level graph:
+(s6s / shape-01
+  :ARG2 (s6b / ball)
+  :instrument (s6h / hand)
+  :mode imperative)
+
+# alignment:s6b: 6-6
+s6h: 3-3
+s6s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	The wall of dough should be very thin .
+# sentence level graph:
+(s7r / recommend-01
+  :ARG1 (s7t / thin
+          :domain (s7w / wall
+                    :consist-of (s7d / dough))
+          :degree (s7v / very)))
+
+# alignment:s7d: 4-4
+s7r: 5-5
+s7t: 8-8
+s7v: 7-7
+s7w: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Drop dumplings into boiling salted water , cover and simmer for about 15 minutes .
+# sentence level graph:
+(s8a2 / and
+  :op1 (s8d / drop-01
+         :ARG1 (s8u / Dumpling)
+         :ARG4 (s8w / water
+                 :ARG1-of (s8s / salt-01)
+                 :ARG1-of (s8b / boil-01)))
+  :op2 (s8c / cover-02)
+  :op3 (s8s2 / simmer-01
+         :duration (s8a / about
+                     :op1 (s8t / temporal-quantity
+                            :quant 15
+                            :unit (s8m / minute))))
+  :mode imperative)
+
+# alignment:s8a: 12-12
+s8a2: 9-9
+s8b: 4-4
+s8c: 8-8
+s8d: 1-1
+s8m: 14-14
+s8s: 5-5
+s8s2: 10-10
+s8t: 14-14
+s8u: 2-2
+s8w: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Brown bread crumbs in 1/3 cup hot butter .
+# sentence level graph:
+(s9b2 / brown-01
+  :ARG1 (s9c / crumb
+          :source (s9b / bread))
+  :medium (s9b3 / butter
+            :quant (s9v / volume-quantity
+                     :quant "1/3"
+                     :unit (s9c2 / cup))
+            :mod (s9h / hot))
+  :mode imperative)
+
+# alignment:s9b: -1--1
+s9b2: 1-1
+s9b3: 8-8
+s9c: 3-3
+s9c2: 6-6
+s9h: 7-7
+s9v: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt10	Roll dumplings in buttered bread crumbs , sprinkle with cinnamon sugar .
+# sentence level graph:
+(s10a / and
+  :op1 (s10r / roll-01
+         :ARG1 (s10u / Dumpling)
+         :ARG2 (s10c2 / crumb
+                 :ARG1-of (s10b2 / butter-01)
+                 :source (s10b / bread)))
+  :op2 (s10s / sprinkle-01
+         :ARG1 (s10s2 / sugar
+                 :mod (s10c / cinnamon)))
+  :mode imperative)
+
+# alignment:s10a: 3-3
+s10b: 5-5
+s10b2: 4-4
+s10c: 10-10
+s10c2: 6-6
+s10r: 1-1
+s10s: 8-8
+s10s2: 11-11
+s10u: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+cream 2 tablespoons butter , beat in eggs and salt .
+Gradually beat in flour and riced potatoes .
+Dough should be stiff to knead thoroughly .
+On floured board roll out dough to 1/4-inch thickness , then cut 3-inch squares .
+Lay 1 plum on each square , sprinkle with little cinnamon sugar and fold edges over plum .
+Shape with hands into a ball .
+The wall of dough should be very thin .
+Drop dumplings into boiling salted water , cover and simmer for about 15 minutes .
+Brown bread crumbs in 1/3 cup hot butter .
+Roll dumplings in buttered bread crumbs , sprinkle with cinnamon sugar .

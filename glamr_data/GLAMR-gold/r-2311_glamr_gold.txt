@@ -1,0 +1,206 @@
+# :: r-2311::step01::sent01
+# :: snt1	Crisp - cook soy " bacon " according to package directions .
+(s1c2 / cook-01~2
+      :ARG1 (s1b / bacon~5
+                 :source (s1s / soy~3))
+      :manner (s1s2 / say-01~7
+                    :ARG0 (s1d / directions~10
+                               :source (s1p / package~9)))
+      :purpose (s1r / Crisp-01~0
+                    :ARG0 (s1y / you)
+                    :event-structure (s1se / subevents
+                                           :E1 (s1c / cooked
+                                                    :polarity -
+                                                    :PATIENT s1b
+                                                    :V_FINAL_STATE (s1c1 / crisped---cook))
+                                           :E3 (s1a / apply_heat
+                                                    :PATIENT s1b)
+                                           :E4 (s1c3 / cooked
+                                                     :PATIENT s1b
+                                                     :V_FINAL_STATE s1c1)
+                                           :E0 (s1d1 / do
+                                                     :ACTION s1r))
+                    :imp_output (s1c4 / crisp---cook.RES))
+      :mode imperative)
+
+
+# :: r-2311::step02::sent01
+# :: snt2	Remove to plate .
+(s2r / remove-01~0
+     :destination (s2p / plate~2)
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2h / has_location)
+                            :E3 (s2a / and
+                                     :op1 (s2m / motion
+                                               :IMP_THEME (s2c / crisp---cook.RES))
+                                     :op2 (s2h1 / has_location
+                                                :polarity -
+                                                :IMP_THEME s2c))
+                            :E4 (s2h2 / has_location
+                                      :IMP_THEME s2c
+                                      :DESTINATION s2p)
+                            :E0 (s2d / do
+                                     :ACTION s2r))
+     :imp_output (s2r1 / remove.RES))
+
+
+# :: r-2311::step03::sent01
+# :: snt3	When cool enough to handle , cut into 1/2-inch pieces .
+(s3c2 / cut-01~6
+      :destination (s3p / piece~9
+                        :mod (s3d / distance-quantity
+                                  :quant "1/2"
+                                  :unit (s3i2 / inch)))
+      :mode imperative
+      :time (s3h3 / have-degree-91
+                  :ARG2 (s3c / cool-06~1)
+                  :ARG3 (s3e / enough~2)
+                  :ARG6 (s3h / handle-01~4))
+      :ARG0 (s3y / you)
+      :event-structure (s3se / subevents
+                             :E1 (s3d1 / degradation_material_integrity
+                                       :polarity -
+                                       :IMP_PATIENT (s3r / remove.RES))
+                             :E2 (s3c1 / contact
+                                       :IMP_PATIENT s3r)
+                             :E3 (s3d2 / degradation_material_integrity
+                                       :IMP_PATIENT s3r)
+                             :E0 (s3d3 / do
+                                       :ACTION s3c2))
+      :imp_output (s3c3 / cut.RES))
+
+
+# :: r-2311::step04::sent01
+# :: snt4	In large bowl , combine soy " bacon " and tofu .
+(s4c / combine-01~4
+     :ARG1 (s4b / bacon~7
+                :source (s4s / soy~5))
+     :ARG2 (s4t / tofu~10)
+     :location (s4b2 / bowl~2
+                     :mod (s4l / large~1))
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4a / and
+                                     :op1 (s4m / mingled
+                                               :polarity -
+                                               :PATIENT_I s4b
+                                               :PATIENT_J s4t)
+                                     :op2 (s4h / has_material_integrity_state
+                                               :polarity -
+                                               :PATIENT_I s4b
+                                               :V_STATE (s4c1 / combined)
+                                               :PATIENT_J s4t)
+                                     :op3 (s4h1 / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT_J s4t
+                                                :V_STATE s4c1
+                                                :PATIENT_I s4b))
+                            :E3 (s4a1 / and
+                                      :op1 (s4m1 / mingled
+                                                 :PATIENT_I s4b
+                                                 :PATIENT_J s4t)
+                                      :op2 (s4h2 / has_material_integrity_state
+                                                 :PATIENT_I s4b
+                                                 :V_STATE s4c1
+                                                 :PATIENT_J s4t)
+                                      :op3 (s4h3 / has_material_integrity_state
+                                                 :PATIENT_J s4t
+                                                 :V_STATE s4c1
+                                                 :PATIENT_I s4b))
+                            :E0 (s4d / do
+                                     :ACTION s4c))
+     :imp_output (s4c2 / combine.RES))
+
+
+# :: r-2311::step05::sent01
+# :: snt5	In small bowl , toss avocado with lemon juice , then add to tofu mixture along with tomatoes and lettuce .
+(s5a3 / and
+      :op1 (s5t4 / toss-01~4
+                 :ARG1 (s5a4 / avocado~5)
+                 :accompanier (s5j / juice~8
+                                   :source (s5l / lemon~7))
+                 :ARG0 (s5y / you)
+                 :event-structure (s5se / subevents
+                                        :E1 (s5b1 / be
+                                                  :polarity -)
+                                        :E3 (s5b2 / be)
+                                        :E0 (s5d / do
+                                                 :ACTION s5t4))
+                 :imp_output (s5t1 / toss.RES))
+      :op2 (s5a / add-02~11
+                :ARG2 (s5m / mixture~14
+                           :consist-of (s5t2 / tofu~13))
+                :accompanier (s5a2 / and~18
+                                   :op1 (s5t3 / tomato~17)
+                                   :op2 (s5l2 / lettuce~19))
+                :time (s5t / then~10)
+                :ARG0 s5y
+                :event-structure (s5se1 / subevents
+                                        :E1 (s5t5 / together
+                                                  :polarity -
+                                                  :PATIENT_I s5m
+                                                  :PATIENT_J s5t3
+                                                  :PATIENT_K s5l2)
+                                        :E3 (s5t6 / together
+                                                  :PATIENT_I s5m
+                                                  :PATIENT_J s5t3
+                                                  :PATIENT_K s5l2)
+                                        :E0 (s5d1 / do
+                                                  :ACTION s5a))
+                :imp_output (s5a1 / add.RES))
+      :mode imperative
+      :location (s5b / bowl~2
+                     :mod (s5s / small~1)))
+
+
+# :: r-2311::step06::sent01
+# :: snt6	Add dressing , toss to coat and serve .
+(s6a2 / and~6
+      :op1 (s6a / add-02~0
+                :ARG1 (s6d / dressing~1)
+                :ARG0 (s6y / you)
+                :event-structure (s6se / subevents
+                                       :E1 (s6t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s6d)
+                                       :E3 (s6t2 / together
+                                                 :PATIENT_I s6d)
+                                       :E0 (s6d1 / do
+                                                 :ACTION s6a))
+                :imp_output (s6a1 / add.RES))
+      :op2 (s6t / toss-01~3
+                :purpose (s6c / coat-01~5)
+                :ARG0 s6y
+                :event-structure (s6se1 / subevents
+                                        :E1 (s6b / be
+                                                 :polarity -)
+                                        :E3 (s6b1 / be)
+                                        :E0 (s6d2 / do
+                                                  :ACTION s6t))
+                :imp_output (s6t3 / toss.RES))
+      :op3 (s6s / serve-02~7
+                :ARG0 s6y
+                :event-structure (s6se2 / subevents
+                                        :E1 (s6a3 / and
+                                                  :op1 (s6h / has_possession
+                                                            :IMP_THEME s6t3)
+                                                  :op2 (s6h1 / has_possession
+                                                             :polarity -
+                                                             :IMP_THEME s6t3))
+                                        :E2 (s6t4 / transfer
+                                                  :IMP_THEME s6t3)
+                                        :E3 (s6a4 / and
+                                                  :op1 (s6h2 / has_possession
+                                                             :IMP_THEME s6t3)
+                                                  :op2 (s6h3 / has_possession
+                                                             :polarity -
+                                                             :IMP_THEME s6t3))
+                                        :E0 (s6d3 / do
+                                                  :ACTION s6s))
+                :imp_output (s6s1 / serve.RES))
+      :mode imperative)
+
+

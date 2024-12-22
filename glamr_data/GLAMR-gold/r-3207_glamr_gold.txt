@@ -1,0 +1,93 @@
+# :: r-3207::step01::sent01
+# :: snt1	Shake all ingredients except wine .
+(s1s / shake-01~0
+     :ARG1 (s1i / ingredient~2
+                :ARG2-of (s1e / except-01~3
+                              :ARG1 (s1w / wine~4))
+                :mod (s1a / all))
+     :mode imperative
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1h / has_location
+                                     :THEME s1w)
+                            :E3 (s1a1 / and
+                                      :op1 (s1m / motion
+                                                :THEME s1w)
+                                      :op2 (s1h1 / has_location
+                                                 :polarity -
+                                                 :THEME s1w))
+                            :E4 (s1h2 / has_location
+                                      :THEME s1w)
+                            :E0 (s1d / do
+                                     :ACTION s1s))
+     :imp_output (s1s1 / shake.RES))
+
+
+# :: r-3207::step02::sent01
+# :: snt2	Pour into a glass half filled with ice cubes .
+(s2p / pour-01~0
+     :ARG3 (s2g / glass~3
+                :ARG1-of (s2f / fill-01~5
+                              :ARG2 (s2c / cube~8
+                                         :consist-of (s2i / ice~7))
+                              :degree (s2h / half~4)))
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2h1 / has_location
+                                      :IMP_THEME (s2s / shake.RES))
+                            :E3 (s2a / and
+                                     :op1 (s2m / motion
+                                               :IMP_THEME s2s)
+                                     :op2 (s2h2 / has_location
+                                                :polarity -
+                                                :IMP_THEME s2s))
+                            :E4 (s2h3 / has_location
+                                      :IMP_THEME s2s
+                                      :DESTINATION s2c)
+                            :E0 (s2d / do
+                                     :ACTION s2p))
+     :imp_output (s2p1 / pour.RES))
+
+
+# :: r-3207::step03::sent01
+# :: snt3	Add wine and stir gently .
+(s3a2 / and~2
+      :op1 (s3a / add-02~0
+                :ARG1 (s3w / wine~1)
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3t / together
+                                                :polarity -
+                                                :PATIENT_I s3w)
+                                       :E3 (s3t1 / together
+                                                 :PATIENT_I s3w)
+                                       :E0 (s3d / do
+                                                :ACTION s3a))
+                :imp_output (s3a1 / add.RES))
+      :op2 (s3s / stir-01~3
+                :manner (s3g / gentle~4)
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3h / has_material_integrity_state
+                                                 :polarity -
+                                                 :IMP_PATIENT s3a1
+                                                 :V_STATE (s3s1 / stirred))
+                                        :E3 (s3h1 / has_material_integrity_state
+                                                  :IMP_PATIENT s3a1
+                                                  :V_STATE s3s1)
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3s))
+                :imp_output (s3s2 / stir.RES))
+      :mode imperative)
+
+
+# :: r-3207::step04::sent01
+# :: snt4	Top with a pineapple ring .
+(s4t / top-01~0
+     :ARG1 (s4r / ring~4
+                :consist-of (s4p / pineapple~3))
+     :mode imperative
+     :ARG0 (s4y / you))
+
+

@@ -1,0 +1,56 @@
+# :: r-4::step01::sent01
+# :: snt1	Wash the chickpeas , drain , cover with water and let soak overnight .
+(s1 / sentence
+    :coref ((s1c :cut s1w3)
+			(s1w3 :cut s1d4)
+			(s1d4 :aggregation s1c1)
+			(s1c1 :cut s1s1)
+			(s1w2 :aggregation s1c1)))
+
+
+# :: r-4::step02::sent01
+# :: snt2	Next day , boil till tender an hour or longer .
+(s2 / sentence
+    :coref ((s1s1 :cut s2b2)
+			(s1c1 :cut s2b2)))
+
+
+# :: r-4::step03::sent01
+# :: snt3	Mash all but a quarter cup to a puree .
+(s3 / sentence
+    :coref ((s2b2 :separation s3m1)
+			(s3m1 :separation s3m3)
+			(s2b2 :separation s3m3)))
+
+
+# :: r-4::step04::sent01
+# :: snt4	Add the sesame oil , lemon juice , salt , and garlic .
+(s4 / sentence
+    :coref ((s4s2 :aggregation s4a1)
+			(s4l :aggregation s4a1)
+			(s4s :aggregation s4a1)
+			(s4g :aggregation s4a1)))
+
+
+# :: r-4::step05::sent01
+# :: snt5	Mix well and put on a plate .
+(s5 / sentence
+    :coref ((s4a1 :cut s5m4)
+			(s5m4 :cut s5p1)
+			(s4a1 :cut s5p1)))
+
+
+# :: r-4::step06::sent01
+# :: snt6	Pour the olive oil on top and garnish with the extra whole chick Peas , paprika , and parsley .
+(s6 / sentence
+    :coref ((s3m3 :aggregation s6g1)
+			(s5p1 :aggregation s6p1)
+			(s6p1 :aggregation s6g1)
+			(s5p1 :aggregation s6g1)
+			(s4a1 :aggregation s6p1)
+			(s4a1 :aggregation s6g1)
+			(s6o2 :aggregation s6p1)
+			(s6p :aggregation s6g1)
+			(s6p2 :aggregation s6g1)))
+
+

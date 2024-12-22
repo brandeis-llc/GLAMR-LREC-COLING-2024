@@ -1,0 +1,252 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1471
+export time: 9/20/2023, 8:58:08 PM
+
+# :: snt1	Heat the oil in a large skillet .
+# sentence level graph:
+(s1h / heat-01
+  :ARG1 (s1o / oil)
+  :location (s1s / skillet
+              :mod (s1l / large))
+  :mode imperative)
+
+# alignment:s1h: 1-1
+s1l: 6-6
+s1o: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Add the garlic , jalapeno , green onions and onions .
+# sentence level graph:
+(s2a / add-02
+  :ARG1 (s2a2 / and
+          :op1 (s2g / garlic)
+          :op2 (s2j / jalapeno)
+          :op3 (s2o / onion)
+          :op4 (s2o2 / onion
+                 :mod (s2g2 / green)))
+  :mode imperative)
+
+# alignment:s2a: 1-1
+s2a2: 9-9
+s2g: 3-3
+s2g2: 7-7
+s2j: 5-5
+s2o: 8-8
+s2o2: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Cook , stirring , for 2 minutes , then add the sirloin strips to the pan .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3c / cook-01
+         :manner (s3s2 / stir-01)
+         :duration (s3t / temporal-quantity
+                     :unit (s3m / minute)
+                     :quant 2))
+  :op2 (s3a / add-02
+         :ARG1 (s3s3 / strip
+                 :consist-of (s3s / sirloin))
+         :location (s3p / pan)
+         :time (s3t2 / then))
+  :mode imperative)
+
+# alignment:s3a: 10-10
+s3a2: 14-14
+s3c: 1-1
+s3m: -1--1
+s3p: 16-16
+s3s: 12-12
+s3s2: 3-3
+s3s3: 13-13
+s3t: 1-1
+s3t2: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Sprinkle the meat with the curry powder and ginger .
+# sentence level graph:
+(s4s / sprinkle-01
+  :ARG1 (s4a / and
+          :op1 (s4p / powder
+                 :mod (s4c / curry))
+          :op2 (s4g / ginger))
+  :ARG2 (s4m / meat)
+  :mode imperative)
+
+# alignment:s4a: 8-8
+s4c: 6-6
+s4g: 9-9
+s4m: 3-3
+s4p: 7-7
+s4s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Cook over medium heat , stirring and turning , until the meat is browned , about 5 minutes .
+# sentence level graph:
+(s5c / cook-01
+  :manner (s5h / heat
+            :mod (s5m2 / medium))
+  :manner (s5a2 / and
+            :op1 (s5s / stir-01)
+            :op2 (s5t2 / turn-01))
+  :mode imperative
+  :duration (s5u / until
+              :op1 (s5b / brown-01
+                     :ARG1 (s5m / meat))
+              :op2 (s5a / about
+                     :op1 (s5t / temporal-quantity
+                            :quant 5
+                            :unit (s5m3 / minute)))))
+
+# alignment:s5a: 16-16
+s5a2: 7-7
+s5b: 14-14
+s5c: 1-1
+s5h: 4-4
+s5m: 12-12
+s5m2: 3-3
+s5m3: 18-18
+s5s: 6-6
+s5t: 18-18
+s5t2: 8-8
+s5u: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Add the coconut milk .
+# sentence level graph:
+(s6a / add-02
+  :ARG1 (s6m / milk
+          :source (s6c / coconut))
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6c: 3-3
+s6m: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Lower the heat to a simmer and cover the pan .
+# sentence level graph:
+(s7a / and
+  :op1 (s7l / lower-05
+         :ARG1 (s7h / heat)
+         :ARG4 (s7s / simmer))
+  :op2 (s7c / cover-02
+         :ARG1 (s7p / pan))
+  :mode imperative)
+
+# alignment:s7a: 7-7
+s7c: 8-8
+s7h: 3-3
+s7l: 1-1
+s7p: 10-10
+s7s: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Cook for an additional 15 to 20 minutes , or until the meat is tender .
+# sentence level graph:
+(s8c / cook-01
+  :duration (s8o / or
+              :op1 (s8b / between
+                     :op1 (s8t / temporal-quantity
+                            :unit (s8m2 / minute)
+                            :quant 15)
+                     :op2 (s8t2 / temporal-quantity
+                            :unit (s8m3 / minute)
+                            :quant 20)
+                     :mod (s8a / additional))
+              :op2 (s8u / until
+                     :op1 (s8t3 / tender
+                            :domain (s8m / meat))))
+  :mode imperative)
+
+# alignment:s8a: -1--1
+s8b: 6-6
+s8c: 1-1
+s8m: -1--1
+s8m2: -1--1
+s8m3: -1--1
+s8o: 10-10
+s8t: -1--1
+s8t2: -1--1
+s8t3: -1--1
+s8u: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Serve over hot rice .
+# sentence level graph:
+(s9s / serve-02
+  :accompanier (s9r / rice
+                 :mod (s9h / hot))
+  :mode imperative)
+
+# alignment:s9h: 3-3
+s9r: 4-4
+s9s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Heat the oil in a large skillet .
+Add the garlic , jalapeno , green onions and onions .
+Cook , stirring , for 2 minutes , then add the sirloin strips to the pan .
+Sprinkle the meat with the curry powder and ginger .
+Cook over medium heat , stirring and turning , until the meat is browned , about 5 minutes .
+Add the coconut milk .
+Lower the heat to a simmer and cover the pan .
+Cook for an additional 15 to 20 minutes , or until the meat is tender .
+Serve over hot rice .

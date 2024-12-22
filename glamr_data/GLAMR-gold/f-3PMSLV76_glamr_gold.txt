@@ -1,0 +1,510 @@
+# :: f-3PMSLV76::step01::sent01
+# :: snt1	Pre heat oven to 350 degrees F. In a large bowl combine flour , powdered sugar , and cornstarch .
+(s1a2 / and
+      :op1 (s1p2 / preheat-00~0,1
+                 :ARG1 (s1o / oven~2
+                            :mod (s1t / temperature-quantity
+                                      :scale (s1f / fahrenheit~5,6)
+                                      :quant 350)))
+      :op2 (s1c / combine-01~11
+                :ARG1 (s1a / and
+                           :op1 (s1f2 / flour~12)
+                           :op2 (s1s / sugar~15
+                                     :ARG1-of (s1p / powder-01~14))
+                           :op3 (s1c2 / cornstarch~18))
+                :location (s1b2 / bowl~10
+                                :mod (s1l / large~9))
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1a1 / and
+                                                 :op1 (s1m / mingled
+                                                           :polarity -
+                                                           :PATIENT_I s1f2
+                                                           :PATIENT_J s1s
+                                                           :PATIENT_K s1c2)
+                                                 :op2 (s1h / has_material_integrity_state
+                                                           :polarity -
+                                                           :PATIENT_I s1f2
+                                                           :V_STATE (s1c1 / combined)
+                                                           :PATIENT_J s1s
+                                                           :PATIENT_K s1c2)
+                                                 :op3 (s1h1 / has_material_integrity_state
+                                                            :polarity -
+                                                            :PATIENT_J s1s
+                                                            :V_STATE s1c1
+                                                            :PATIENT_I s1f2
+                                                            :PATIENT_K s1c2))
+                                       :E3 (s1a3 / and
+                                                 :op1 (s1m1 / mingled
+                                                            :PATIENT_I s1f2
+                                                            :PATIENT_J s1s
+                                                            :PATIENT_K s1c2)
+                                                 :op2 (s1h2 / has_material_integrity_state
+                                                            :PATIENT_I s1f2
+                                                            :V_STATE s1c1
+                                                            :PATIENT_J s1s
+                                                            :PATIENT_K s1c2)
+                                                 :op3 (s1h3 / has_material_integrity_state
+                                                            :PATIENT_J s1s
+                                                            :V_STATE s1c1
+                                                            :PATIENT_I s1f2
+                                                            :PATIENT_K s1c2))
+                                       :E0 (s1d / do
+                                                :ACTION s1c))
+                :imp_output (s1c3 / combine.RES))
+      :mode imperative)
+
+
+# :: f-3PMSLV76::step01::sent02
+# :: snt2	Using a spoon , mix in apple sauce and vanilla extract until a soft dough forms .
+(s2m / mix-01~4
+     :ARG2 (s2a / and
+                :op1 (s2s / sauce~7
+                          :mod (s2a2 / apple~6))
+                :op2 (s2e / extract-01~10
+                          :ARG1 (s2v / vanilla~9)))
+     :instrument (s2s4 / spoon~2)
+     :duration (s2u / until
+                    :op1 (s2f / form-01~15
+                              :ARG1 (s2d / dough~14
+                                         :ARG1-of (s2s2 / soft-02~13))
+                              :ARG0 s2y
+                              :event-structure (s2se1 / subevents
+                                                      :E1 (s2b / be
+                                                               :polarity -
+                                                               :RESULT s2d)
+                                                      :E3 (s2b1 / be
+                                                                :RESULT s2d)
+                                                      :E0 (s2d2 / do
+                                                                :ACTION s2f))
+                              :imp_output (s2f1 / form.RES)))
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2a1 / and
+                                      :op1 (s2m1 / mingled
+                                                 :polarity -
+                                                 :PATIENT_I s2s
+                                                 :PATIENT_J s2e)
+                                      :op2 (s2h / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT_I s2s
+                                                :V_STATE (s2m2 / mixed)
+                                                :PATIENT_J s2e)
+                                      :op3 (s2h1 / has_material_integrity_state
+                                                 :polarity -
+                                                 :PATIENT_J s2e
+                                                 :V_STATE s2m2
+                                                 :PATIENT_I s2s))
+                            :E3 (s2a3 / and
+                                      :op1 (s2m3 / mingled
+                                                 :PATIENT_I s2s
+                                                 :PATIENT_J s2e)
+                                      :op2 (s2h2 / has_material_integrity_state
+                                                 :PATIENT_I s2s
+                                                 :V_STATE s2m2
+                                                 :PATIENT_J s2e)
+                                      :op3 (s2h3 / has_material_integrity_state
+                                                 :PATIENT_J s2e
+                                                 :V_STATE s2m2
+                                                 :PATIENT_I s2s))
+                            :E0 (s2d1 / do
+                                      :ACTION s2m))
+     :imp_output (s2m4 / mix.RES))
+
+
+# :: f-3PMSLV76::step02::sent01
+# :: snt3	Shape dough into 1-inch balls and place in prepared muffin pans .
+(s3a / and
+     :op1 (s3s / shape-01~0
+               :ARG1 (s3d2 / dough~1)
+               :ARG2 (s3b / ball~4
+                          :mod (s3d / distance-quantity
+                                    :quant 1
+                                    :unit (s3i2 / inch~3)))
+               :ARG0 (s3y / you)
+               :event-structure (s3se / subevents
+                                      :E1 (s3b1 / be
+                                                :polarity -
+                                                :PRODUCT s3b)
+                                      :E3 (s3a1 / and
+                                                :op1 (s3b2 / be
+                                                           :PRODUCT s3b)
+                                                :op2 (s3m1 / made_of
+                                                           :PRODUCT s3b))
+                                      :E (s3c / cost
+                                              :PRODUCT s3b)
+                                      :E0 (s3d1 / do
+                                                :ACTION s3s))
+               :imp_output (s3s1 / shape.RES))
+     :op2 (s3p2 / place-01~6
+                :ARG1 s3d2
+                :ARG2 (s3p / pan~10
+                           :ARG1-of (s3p3 / prepare-01~8)
+                           :mod (s3m / muffin~9))
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3h / has_location
+                                                 :THEME s3b)
+                                        :E3 (s3a2 / and
+                                                  :op1 (s3m2 / motion
+                                                             :THEME s3b)
+                                                  :op2 (s3h1 / has_location
+                                                             :polarity -
+                                                             :THEME s3b))
+                                        :E4 (s3h2 / has_location
+                                                  :THEME s3b
+                                                  :DESTINATION s3p)
+                                        :E0 (s3d3 / do
+                                                  :ACTION s3p2))
+                :imp_output (s3p1 / place.RES))
+     :mode imperative)
+
+
+# :: f-3PMSLV76::step02::sent02
+# :: snt4	Press dough in bottom and up the side of each muffin cup .
+(s4p / press-01~0
+     :ARG1 (s4d / dough~1)
+     :location (s4a / and
+                    :op1 (s4b / bottom~3
+                              :part-of (s4c / cup~11
+                                            :mod (s4m / muffin~10)
+                                            :mod (s4e / each~9)))
+                    :op2 (s4u / up-03~5
+                              :ARG2 (s4s / side~7
+                                         :part-of s4c)))
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E (s4a1 / and
+                                     :op1 (s4e1 / exert_force
+                                                :THEME s4d)
+                                     :op2 (s4c1 / contact
+                                                :THEME s4d))
+                            :E0 (s4d1 / do
+                                      :ACTION s4p))
+     :imp_output (s4p1 / press.RES))
+
+
+# :: f-3PMSLV76::step02::sent03
+# :: snt5	Bake the dough - lined cup for about 8 - 10 minutes .
+(s5b / bake-01~0
+     :ARG1 (s5c / cup~5
+                :mod "dough-lined")
+     :duration (s5a / about~7
+                    :duration (s5b2 / between
+                                    :op1 (s5t / temporal-quantity
+                                              :quant 8
+                                              :unit (s5m2 / minute~11))
+                                    :op2 (s5t2 / temporal-quantity
+                                               :quant 10
+                                               :unit s5m2)))
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5c1 / cooked
+                                      :polarity -
+                                      :PATIENT s5c
+                                      :V_FINAL_STATE (s5b1 / baked))
+                            :E3 (s5a1 / apply_heat
+                                      :PATIENT s5c)
+                            :E4 (s5c2 / cooked
+                                      :PATIENT s5c
+                                      :V_FINAL_STATE s5b1)
+                            :E0 (s5d / do
+                                     :ACTION s5b))
+     :imp_output (s5b3 / bake.RES))
+
+
+# :: f-3PMSLV76::step02::sent04
+# :: snt6	Remove the muffin pan from the oven and let rest for a few minutes .
+(s6a / and~7
+     :op1 (s6r / remove-01~0
+               :ARG1 (s6p / pan~3
+                          :mod (s6m2 / muffin~2))
+               :ARG2 (s6o / oven~6)
+               :ARG0 (s6y / you)
+               :event-structure (s6se / subevents
+                                      :E1 (s6h / has_location
+                                               :THEME s6p)
+                                      :E3 (s6a1 / and
+                                                :op1 (s6m1 / motion
+                                                           :THEME s6p)
+                                                :op2 (s6h1 / has_location
+                                                           :polarity -
+                                                           :THEME s6p))
+                                      :E4 (s6h2 / has_location
+                                                :THEME s6p)
+                                      :E0 (s6d / do
+                                               :ACTION s6r))
+               :imp_output (s6r1 / remove.RES))
+     :op2 (s6r2 / rest-01~9
+                :ARG1 s6p
+                :duration (s6f / few~12
+                               :op1 (s6t / temporal-quantity
+                                         :quant 1
+                                         :unit (s6m / minute~13)))
+                :ARG0 s6y
+                :event-structure (s6se1 / subevents
+                                        :E1 (s6h3 / has_location
+                                                  :THEME s6m2)
+                                        :E3 (s6a2 / and
+                                                  :op1 (s6m3 / motion
+                                                             :THEME s6m2)
+                                                  :op2 (s6h4 / has_location
+                                                             :polarity -
+                                                             :THEME s6m2))
+                                        :E4 (s6a3 / and
+                                                  :op1 (s6h5 / has_location
+                                                             :THEME s6m2)
+                                                  :op2 (s6h6 / has_configuration
+                                                             :THEME s6m2
+                                                             :V_CONFIGURATION (s6r3 / rested)))
+                                        :E0 (s6d1 / do
+                                                  :ACTION s6r2))
+                :imp_output (s6r4 / rest.RES))
+     :mode imperative)
+
+
+# :: f-3PMSLV76::step02::sent05
+# :: snt7	Spoon 1 teaspoon of preserves into each muffin cup .
+(s7s / spoon-00~0
+     :ARG1 (s7p / preserve~4
+                :quant (s7v / volume-quantity
+                            :quant 1
+                            :unit (s7t / teaspoon~2)))
+     :destination (s7c / cup~8
+                       :mod (s7e / each~6)
+                       :mod (s7m / muffin~7))
+     :mode imperative
+     :ARG0 (s7y / you)
+     :event-structure (s7se / subevents
+                            :E1 (s7h / has_location
+                                     :THEME s7p)
+                            :E3 (s7a / and
+                                     :op1 (s7m1 / motion
+                                                :THEME s7p)
+                                     :op2 (s7h1 / has_location
+                                                :polarity -
+                                                :THEME s7p))
+                            :E4 (s7h2 / has_location
+                                      :THEME s7p
+                                      :DESTINATION s7c)
+                            :E0 (s7d / do
+                                     :ACTION s7s))
+     :imp_output (s7s1 / spoon.RES))
+
+
+# :: f-3PMSLV76::step03::sent01
+# :: snt8	In a small bowl mix together sugar , egg and coconut with a fork until well blended .
+(s8m / mix-01~4
+     :ARG1 (s8a / and~9
+                :op1 (s8s2 / sugar~6)
+                :op2 (s8e / egg~8)
+                :op3 (s8c / coconut~10))
+     :instrument (s8f / fork~13)
+     :location (s8b2 / bowl~3
+                     :mod (s8s / small~2))
+     :time (s8u / until~14
+                :op1 (s8b / blend-01~16
+                          :ARG1 s8a
+                          :degree (s8w / well-09~15)))
+     :mode imperative
+     :ARG0 (s8y / you)
+     :event-structure (s8se / subevents
+                            :E1 (s8a1 / and
+                                      :op1 (s8m1 / mingled
+                                                 :polarity -
+                                                 :PATIENT_I s8s2
+                                                 :PATIENT_J s8e
+                                                 :PATIENT_K s8c)
+                                      :op2 (s8h / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT_I s8s2
+                                                :V_STATE (s8m2 / mixed)
+                                                :PATIENT_J s8e
+                                                :PATIENT_K s8c)
+                                      :op3 (s8h1 / has_material_integrity_state
+                                                 :polarity -
+                                                 :PATIENT_J s8e
+                                                 :V_STATE s8m2
+                                                 :PATIENT_I s8s2
+                                                 :PATIENT_K s8c))
+                            :E3 (s8a2 / and
+                                      :op1 (s8m3 / mingled
+                                                 :PATIENT_I s8s2
+                                                 :PATIENT_J s8e
+                                                 :PATIENT_K s8c)
+                                      :op2 (s8h2 / has_material_integrity_state
+                                                 :PATIENT_I s8s2
+                                                 :V_STATE s8m2
+                                                 :PATIENT_J s8e
+                                                 :PATIENT_K s8c)
+                                      :op3 (s8h3 / has_material_integrity_state
+                                                 :PATIENT_J s8e
+                                                 :V_STATE s8m2
+                                                 :PATIENT_I s8s2
+                                                 :PATIENT_K s8c))
+                            :E0 (s8d / do
+                                     :ACTION s8m))
+     :imp_output (s8m4 / mix.RES))
+
+
+# :: f-3PMSLV76::step03::sent02
+# :: snt9	Spoon a teaspoon of coconut mixture over preserves in each cup .
+(s9s / spoon-00~0
+     :ARG1 (s9m / mixture~5
+                :quant (s9v / volume-quantity
+                            :unit (s9t / teaspoon~2)
+                            :quant 1)
+                :consist-of (s9c / coconut~4))
+     :location (s9o2 / over~6
+                     :op1 (s9p / preserve~7
+                               :location (s9c2 / cup~10
+                                               :mod (s9e / each~9))))
+     :mode imperative
+     :ARG0 (s9y / you)
+     :event-structure (s9se / subevents
+                            :E1 (s9h / has_location
+                                     :THEME s9m)
+                            :E3 (s9a / and
+                                     :op1 (s9m1 / motion
+                                                :THEME s9m)
+                                     :op2 (s9h1 / has_location
+                                                :polarity -
+                                                :THEME s9m))
+                            :E4 (s9h2 / has_location
+                                      :THEME s9m
+                                      :DESTINATION s9c2)
+                            :E0 (s9d / do
+                                     :ACTION s9s))
+     :imp_output (s9s1 / spoon.RES))
+
+
+# :: f-3PMSLV76::step04::sent01
+# :: snt10	Bake 23 -33 minutes or until cookie crusts are lightly golden brown .
+(s10b / bake-01~0
+      :duration (s10a / amr-choice~4
+                      :op1 (s10b2 / between
+                                  :op1 (s10t / temporal-quantity
+                                             :unit (s10m / minute~3)
+                                             :quant 23)
+                                  :op2 (s10t2 / temporal-quantity
+                                              :unit (s10m2 / minute)
+                                              :quant 33))
+                      :op2 (s10u2 / until~5
+                                  :time (s10b3 / brown-01~11
+                                               :ARG1 (s10c / crust~7
+                                                           :part-of (s10c2 / cookie~6))
+                                               :mod (s10g / golden~10
+                                                          :degree (s10l / light-06~9)))))
+      :mode imperative
+      :ARG0 (s10y / you)
+      :event-structure (s10se / subevents
+                              :E1 (s10c1 / cooked
+                                         :polarity -
+                                         :IMP_PATIENT (s10s / spoon.RES)
+                                         :V_FINAL_STATE (s10b1 / baked))
+                              :E3 (s10a1 / apply_heat
+                                         :IMP_PATIENT s10s)
+                              :E4 (s10a2 / and
+                                         :op1 (s10c3 / cooked
+                                                     :IMP_PATIENT s10s
+                                                     :V_FINAL_STATE s10b1)
+                                         :op2 (s10h / has_state
+                                                    :IMP_PATIENT s10s
+                                                    :RESULT s10b3))
+                              :E0 (s10d / do
+                                        :ACTION s10b))
+      :imp_output (s10b4 / bake.RES))
+
+
+# :: f-3PMSLV76::step04::sent02
+# :: snt11	Cool in pans on a cooling rack for 30 minutes .
+(s11c / cool-01~0
+      :duration (s11t / temporal-quantity
+                      :quant 30
+                      :unit (s11m / minute~9))
+      :location (s11p / pan~2
+                      :location (s11r / rack~6
+                                      :ARG0-of (s11c2 / cool-01~5)))
+      :mode imperative
+      :ARG0 (s11y / you)
+      :event-structure (s11se / subevents
+                              :E1 (s11h / has_state
+                                        :polarity -
+                                        :IMP_PATIENT (s11b / bake.RES)
+                                        :V_FINAL_STATE (s11c1 / cooled))
+                              :E3 (s11h1 / has_state
+                                         :IMP_PATIENT s11b
+                                         :V_FINAL_STATE s11c1)
+                              :E0 (s11d / do
+                                        :ACTION s11c))
+      :imp_output (s11c3 / cool.RES))
+
+
+# :: f-3PMSLV76::step05::sent01
+# :: snt12	Gently remove each cookie tart , sprinkle with confectioner 's sugar and serve !
+(s12a / and
+      :op1 (s12r / remove-01~1
+                 :ARG1 (s12t / tart~4
+                             :mod (s12c2 / cookie~3)
+                             :mod (s12e / each~2))
+                 :manner (s12g / gentle~0)
+                 :ARG0 (s12y / you)
+                 :event-structure (s12se / subevents
+                                         :E1 (s12h / has_location
+                                                   :THEME s12t)
+                                         :E3 (s12a1 / and
+                                                    :op1 (s12m / motion
+                                                               :THEME s12t)
+                                                    :op2 (s12h1 / has_location
+                                                                :polarity -
+                                                                :THEME s12t))
+                                         :E4 (s12h2 / has_location
+                                                    :THEME s12t)
+                                         :E0 (s12d / do
+                                                   :ACTION s12r))
+                 :imp_output (s12r1 / remove.RES))
+      :op2 (s12s2 / sprinkle-01~6
+                  :ARG2 (s12s3 / sugar~10
+                               :mod (s12c / confection~8))
+                  :ARG0 s12y
+                  :event-structure (s12se1 / subevents
+                                           :E1 (s12h3 / has_location
+                                                      :THEME s12s3)
+                                           :E3 (s12a2 / and
+                                                      :op1 (s12m1 / motion
+                                                                  :THEME s12s3)
+                                                      :op2 (s12h4 / has_location
+                                                                  :polarity -
+                                                                  :THEME s12s3))
+                                           :E4 (s12h5 / has_location
+                                                      :THEME s12s3
+                                                      :DESTINATION s12t)
+                                           :E0 (s12d1 / do
+                                                      :ACTION s12s2))
+                  :imp_output (s12s1 / sprinkle.RES))
+      :op3 (s12s / serve-02~12
+                 :ARG0 s12y
+                 :event-structure (s12se2 / subevents
+                                          :E1 (s12a3 / and
+                                                     :op1 (s12h6 / has_possession
+                                                                 :IMP_THEME s12s1)
+                                                     :op2 (s12h7 / has_possession
+                                                                 :polarity -
+                                                                 :IMP_THEME s12s1))
+                                          :E2 (s12t1 / transfer
+                                                     :IMP_THEME s12s1)
+                                          :E3 (s12a4 / and
+                                                     :op1 (s12h8 / has_possession
+                                                                 :IMP_THEME s12s1)
+                                                     :op2 (s12h9 / has_possession
+                                                                 :polarity -
+                                                                 :IMP_THEME s12s1))
+                                          :E0 (s12d2 / do
+                                                     :ACTION s12s))
+                 :imp_output (s12s4 / serve.RES))
+      :mode imperative)
+
+

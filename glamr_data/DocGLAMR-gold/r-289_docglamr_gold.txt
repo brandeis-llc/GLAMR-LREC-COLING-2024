@@ -1,0 +1,69 @@
+# :: r-289::step01::sent01
+# :: snt1	Clean the beef rump and cut into cubes .
+(s1 / sentence
+    :coref ((s1b :cut s1c4)
+			(s1c4 :cut s1c6)))
+
+
+# :: r-289::step02::sent01
+# :: snt2	Blend shallot , garlic , ginger , candlenut , turmeric , red chile and black nuts ( kluwek ) until smooth .
+(s2 / sentence
+    :coref ((s2s :aggregation s2b3)
+			(s2g :aggregation s2b3)
+			(s2g2 :aggregation s2b3)
+			(s2c :aggregation s2b3)
+			(s2t :aggregation s2b3)
+			(s2r :aggregation s2b3)
+			(s2k :aggregation s2b3)))
+
+
+# :: r-289::step03::sent01
+# :: snt3	Heat pan and put all blended ingredients and saute until cooked and smell good .
+(s3 / sentence
+    :coref ((s2b3 :cut s3p1)
+			(s3p1 :cut s3s3)
+			(s2b3 :cut s3s3)))
+
+
+# :: r-289::step04::sent01
+# :: snt4	Add beef rump cubes and water to make the stock .
+(s4 / sentence
+    :coref ((s1c6 :aggregation s4a1)
+			(s4a1 :cut s4m2)
+			(s3s3 :aggregation s4a1)
+			(s3s3 :cut s4m2)
+			(s2b3 :aggregation s4a1)
+			(s2b3 :cut s4m2)
+			(s4w :aggregation s4a1)))
+
+
+# :: r-289::step05::sent01
+# :: snt5	Put kaffir lime leaves , salam , galangal , lemon grass and boil until beef is tender .
+(s5 / sentence
+    :coref ((s4m2 :aggregation s5p1)
+			(s5p1 :cut s5b3)
+			(s4a1 :aggregation s5p1)
+			(s4m2 :cut s5b3)
+			(s4a1 :cut s5b3)
+			(s2b3 :aggregation s5p1)
+			(s2b3 :cut s5b3)
+			(s5k :aggregation s5p1)
+			(s5s :aggregation s5p1)
+			(s5g :aggregation s5p1)
+			(s5l2 :aggregation s5p1)))
+
+
+# :: r-289::step06::sent01
+# :: snt6	Season with coriander powder , cumin , salt and sugar according to taste .
+(s6 / sentence
+    :coref ((s5b3 :aggregation s6s1)
+			(s5p1 :aggregation s6s1)
+			(s4m2 :aggregation s6s1)
+			(s2b3 :aggregation s6s1)
+			(s4a1 :aggregation s6s1)
+			(s6c :aggregation s6s1)
+			(s6c2 :aggregation s6s1)
+			(s6s :aggregation s6s1)
+			(s6s3 :aggregation s6s1)))
+
+

@@ -1,0 +1,169 @@
+﻿user name: Keer Xu
+user id: 347
+file language: english
+file format: plain_text
+Doc ID in database: 1460
+export time: 2023/9/17 16:11:45
+
+
+# :: snt1	Preheat oven to 350degF.
+# sentence level graph:
+(s1p / preheat-00
+  :ARG1 (s1o2 / oven)
+  :ARG2 (s1t / temperature-quantity
+          :quant 350
+          :scale (s1f / f))
+  :mode imperative)
+
+
+# alignment:s1o2: 2-2
+s1t: 3-3
+s1f: 4-4
+
+
+# document level annotation:
+
+
+
+
+
+
+
+
+
+
+
+
+# :: snt2	Combine meat ball ingredients and shape into meat balls .
+# sentence level graph:
+(s2a / and
+  :op1 (s2c / combine-01
+         :ARG1 (s2i / ingredient
+                 :mod (s2b / ball
+                        :consist-of (s2m / meat))))
+  :ARG2 (s2s / shape-01
+          :ARG2 s2b)
+  :mode imperative)
+
+
+# alignment:s2b: -1--1
+s2c: 1-1
+s2i: 4-4
+s2m: 8-8
+s2s: -1--1
+
+
+# document level annotation:
+
+
+
+
+
+
+
+
+
+
+
+
+# :: snt3	Bake 30 minutes or more depending on size .
+# sentence level graph:
+(s3b / bake-01
+  :mode imperative
+  :duration (s3o / or
+              :op1 (s3a / at-least
+                     :op1 (s3t / temporal-quantity
+                            :unit (s3m / minute)
+                            :quant 30))
+              :op2 (s3m2 / more
+                     :condition (s3s / size))))
+
+
+# alignment:s3a: -1--1
+s3b: 1-1
+s3m: -1--1
+s3o: 4-4
+s3s: -1--1
+s3t: -1--1
+
+
+# document level annotation:
+
+
+
+
+
+
+
+
+
+
+
+
+# :: snt4	Simmer in the sauce for 5 minutes before serving .
+# sentence level graph:
+(s4s3 / simmer-01
+  :location (s4s / sauce)
+  :duration (s4t / temporal-quantity
+              :quant 5
+              :unit (s4m / minute))
+  :mode imperative
+  :time (s4b / before
+          :op1 (s4s2 / serve-02)))
+
+
+# alignment:s4b: 8-8
+s4m: 7-7
+s4s: 4-4
+s4s2: 9-9
+s4s3: 1-1
+s4t: 7-7
+
+
+# document level annotation:
+
+
+
+
+
+
+
+
+
+
+
+
+# :: snt5	Sprinkle with scallions .
+# sentence level graph:
+(s5s2 / sprinkle-01
+    :ARG1 (s5s / scallion)
+    :mode imperative)
+
+
+
+
+# alignment:s5s2: 1-1
+s5y: 2-2
+s5s: 3-3
+s50: 4-4
+
+
+# document level annotation:
+
+
+
+
+
+
+
+
+
+
+
+
+# Source File: 
+Preheat oven to 350degF.
+Combine meat ball ingredients and shape into meat balls .
+Bake 30 minutes or more depending on size .
+Simmer in the sauce for 5 minutes before serving .
+Sprinkle with scallions .

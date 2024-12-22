@@ -1,0 +1,208 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1438
+export time: 9/14/2023, 3:35:10 PM
+
+# :: snt1	Preheat oven to 350 F.
+# sentence level graph:
+(s1p / preheat-00
+  :ARG1 (s1o / oven)
+  :destination (s1t / temperature-quantity
+                 :quant 350
+                 :scale (s1f / fahrenheit))
+  :mode imperative)
+
+# alignment:s1f: 5-5
+s1o: 2-2
+s1t: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Grease cookie sheets .
+# sentence level graph:
+(s2g / grease-01
+  :ARG1 (s2s / sheet
+          :mod (s2c / cookie))
+  :mode imperative)
+
+# alignment:s2c: 2-2
+s2g: 1-1
+s2s: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	In a medium bowl , cream together the shortening , sugar , coffee and Cuppa Joe Spice .
+# sentence level graph:
+(s3c2 / cream-01
+  :ARG1 (s3a / and
+          :op1 (s3s / shortening)
+          :op2 (s3s2 / sugar)
+          :op3 (s3c / coffee)
+          :op4 (s3p / product
+                 :name (s3n / name
+                         :op1 "Cuppa"
+                         :op2 "Joe"
+                         :op3 "Spice")))
+  :location (s3b / bowl
+              :mod (s3m / medium))
+  :manner (s3t / together)
+  :mode imperative)
+
+# alignment:s3a: 14-14
+s3b: 4-4
+s3c: 13-13
+s3m: 3-3
+s3n: 15-15
+s3p: 15-15
+s3s: 9-9
+s3s2: 11-11
+s3t: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Beat in the egg , flour , vanilla and chopped nuts .
+# sentence level graph:
+(s4b / beat-01
+  :ARG1 (s4a / and
+          :op1 (s4e / egg)
+          :op2 (s4f / flour)
+          :op3 (s4v / vanilla)
+          :op4 (s4n / nut
+                 :ARG1-of (s4c / chop-01)))
+  :mode imperative)
+
+# alignment:s4a: 9-9
+s4b: 1-1
+s4c: 10-10
+s4e: 4-4
+s4f: 6-6
+s4n: 11-11
+s4v: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Mix until well blended .
+# sentence level graph:
+(s5m / mix-01
+  :duration (s5u / until
+              :op1 (s5b / blend-01
+                     :manner (s5w / well)))
+  :mode imperative)
+
+# alignment:s5b: 4-4
+s5m: 1-1
+s5u: 2-2
+s5w: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Drop by teaspoonfuls onto cookie sheets
+# sentence level graph:
+(s6d / drop-01
+  :ARG4 (s6s / sheet
+          :mod (s6c / cookie))
+  :manner (s6t2 / teaspoonful)
+  :mode imperative)
+
+# alignment:s6c: 5-5
+s6d: 1-1
+s6s: 6-6
+s6t2: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Bake for 10 to 12 minutes in the preheated oven , or until edges are golden .
+# sentence level graph:
+(s7b / bake-01
+  :duration (s7u / until
+              :op1 (s7g / golden-03
+                     :ARG1 (s7e / edge)))
+  :duration (s7b2 / between
+              :op1 (s7t / temporal-quantity
+                     :quant 10
+                     :unit (s7m / minute))
+              :op2 (s7t2 / temporal-quantity
+                     :quant 12
+                     :unit (s7m2 / minute)))
+  :location (s7o / oven
+              :ARG1-of (s7p / preheat-00))
+  :mode imperative)
+
+# alignment:s7b: 1-1
+s7b2: 3-3
+s7e: 14-14
+s7g: 16-16
+s7m: 5-5
+s7m2: 6-6
+s7o: 10-10
+s7t: 5-5
+s7t2: 6-6
+s7u: 13-13
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Let cool on wire racks
+# sentence level graph:
+(s8l / let-01
+  :ARG1 (s8c / cool-04
+          :location (s8r / rack
+                      :mod (s8w / wire)))
+  :mode imperative)
+
+# alignment:s8c: 2-2
+s8r: 5-5
+s8w: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Preheat oven to 350 F.
+Grease cookie sheets .
+In a medium bowl , cream together the shortening , sugar , coffee and Cuppa Joe Spice .
+Beat in the egg , flour , vanilla and chopped nuts .
+Mix until well blended .
+Drop by teaspoonfuls onto cookie sheets
+Bake for 10 to 12 minutes in the preheated oven , or until edges are golden .
+Let cool on wire racks

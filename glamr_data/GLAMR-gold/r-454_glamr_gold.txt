@@ -1,0 +1,151 @@
+# :: r-454::step01::sent01
+# :: snt1	Peel bananas ; slice lengthwise , then in half .
+(s1a / and
+     :op1 (s1e / Peel-01~0
+               :ARG1 (s1b / banana~1)
+               :ARG0 (s1y / you)
+               :event-structure (s1se / subevents
+                                      :E1 (s1h / has_location
+                                               :V_THEME s1b
+                                               :V_THEME (s1p / peeled))
+                                      :E3 (s1a1 / and
+                                                :op1 (s1m / motion
+                                                          :V_THEME s1b
+                                                          :V_THEME s1p)
+                                                :op2 (s1h1 / has_location
+                                                           :polarity -
+                                                           :V_THEME s1b
+                                                           :V_THEME s1p))
+                                      :E (s1p1 / part_of
+                                               :V_THEME s1b
+                                               :V_THEME s1p)
+                                      :E0 (s1d / do
+                                               :ACTION s1e))
+               :imp_output (s1p2 / peel.RES))
+     :op2 (s1s / slice-01~3
+               :manner (s1h2 / half~8
+                             :time (s1t / then~6))
+               :manner (s1l / lengthwise~4)
+               :ARG0 s1y
+               :event-structure (s1se1 / subevents
+                                       :E1 (s1d1 / degradation_material_integrity
+                                                 :polarity -
+                                                 :PATIENT s1b)
+                                       :E2 (s1c / contact
+                                                :PATIENT s1b)
+                                       :E3 (s1d2 / degradation_material_integrity
+                                                 :PATIENT s1b)
+                                       :E0 (s1d3 / do
+                                                 :ACTION s1s))
+               :imp_output (s1s1 / slice.RES))
+     :mode imperative)
+
+
+# :: r-454::step02::sent01
+# :: snt2	Fry in butter til soft and golden .
+(s2f / fry-01~0
+     :medium (s2b / butter~2)
+     :mode imperative
+     :duration (s2t / til~3
+                    :op1 (s2a / and~5
+                              :op1 (s2s / soft~4)
+                              :op2 (s2g / golden~6)))
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s2s1 / slice.RES)
+                                     :V_FINAL_STATE (s2f1 / fried))
+                            :E3 (s2a1 / apply_heat
+                                      :INSTRUMENT s2b
+                                      :IMP_PATIENT s2s1)
+                            :E4 (s2a2 / and
+                                      :op1 (s2c1 / cooked
+                                                 :IMP_PATIENT s2s1
+                                                 :V_FINAL_STATE s2f1)
+                                      :op2 (s2h / has_state
+                                                :IMP_PATIENT s2s1
+                                                :RESULT s2g))
+                            :E0 (s2d / do
+                                     :ACTION s2f))
+     :imp_output (s2f2 / fry.RES))
+
+
+# :: r-454::step03::sent01
+# :: snt3	Add Sugar and stir til syrup thickens .
+(s3a2 / and~2
+      :op1 (s3a / add-02~0
+                :ARG1 (s3s2 / sugar~1)
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s3s2)
+                                       :E3 (s3t3 / together
+                                                 :PATIENT_I s3s2)
+                                       :E0 (s3d / do
+                                                :ACTION s3a))
+                :imp_output (s3a1 / add.RES))
+      :op2 (s3s / stir-01~3
+                :duration (s3t2 / til~4
+                                :op1 (s3t / thicken-01~6
+                                          :ARG1 (s3s3 / syrup~5)))
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3h / has_material_integrity_state
+                                                 :polarity -
+                                                 :IMP_PATIENT s3a1
+                                                 :V_STATE (s3s1 / stirred))
+                                        :E3 (s3h1 / has_material_integrity_state
+                                                  :IMP_PATIENT s3a1
+                                                  :V_STATE s3s1)
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3s))
+                :imp_output (s3s4 / stir.RES))
+      :mode imperative)
+
+
+# :: r-454::step04::sent01
+# :: snt4	Sprinkle with lime juice and serve .
+(s4a / and~4
+     :op1 (s4s2 / sprinkle-01~0
+                :ARG1 (s4j / juice~3
+                           :source (s4l / lime~2))
+                :ARG0 (s4y / you)
+                :event-structure (s4se / subevents
+                                       :E1 (s4h / has_location
+                                                :THEME s4j)
+                                       :E3 (s4a1 / and
+                                                 :op1 (s4m / motion
+                                                           :THEME s4j)
+                                                 :op2 (s4h1 / has_location
+                                                            :polarity -
+                                                            :THEME s4j))
+                                       :E4 (s4h2 / has_location
+                                                 :THEME s4j)
+                                       :E0 (s4d / do
+                                                :ACTION s4s2))
+                :imp_output (s4s1 / sprinkle.RES))
+     :op2 (s4s / serve-02~5
+               :ARG0 s4y
+               :event-structure (s4se1 / subevents
+                                       :E1 (s4a2 / and
+                                                 :op1 (s4h3 / has_possession
+                                                            :IMP_THEME s4s1)
+                                                 :op2 (s4h4 / has_possession
+                                                            :polarity -
+                                                            :IMP_THEME s4s1))
+                                       :E2 (s4t / transfer
+                                                :IMP_THEME s4s1)
+                                       :E3 (s4a3 / and
+                                                 :op1 (s4h5 / has_possession
+                                                            :IMP_THEME s4s1)
+                                                 :op2 (s4h6 / has_possession
+                                                            :polarity -
+                                                            :IMP_THEME s4s1))
+                                       :E0 (s4d1 / do
+                                                 :ACTION s4s))
+               :imp_output (s4s3 / serve.RES))
+     :mode imperative)
+
+

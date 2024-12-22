@@ -1,0 +1,27 @@
+# :: r-532::step01::sent01
+# :: snt1	Mix together first 4 ingredients .
+(s1 / sentence
+    :coref ((s1i :cut s1m4)))
+
+
+# :: r-532::step02::sent01
+# :: snt2	Spread evenly on toast rounds .
+(s2 / sentence
+    :coref ((s1m4 :aggregation s2s1)
+			(s2t :aggregation s2s1)))
+
+
+# :: r-532::step03::sent01
+# :: snt3	Place on baking sheet , and broil 2 minutes or until Cheese melts .
+(s3 / sentence
+    :coref ((s2s1 :cut s3p1)
+			(s3p1 :cut s3b3)
+			(s2s1 :cut s3b3)))
+
+
+# :: r-532::step04::sent01
+# :: snt4	Serve hot .
+(s4 / sentence
+    :coref ((s3b3 :cut s4s1)))
+
+

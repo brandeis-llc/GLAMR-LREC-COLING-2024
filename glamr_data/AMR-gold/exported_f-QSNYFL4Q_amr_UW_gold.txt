@@ -1,0 +1,291 @@
+user name: timobi
+user id: 423
+file language: english
+file format: plain_text
+Doc ID in database: 1435
+export time: 9/14/2023, 2:52:06 PM
+
+# :: snt1	Chop the lemongrass into 2 inch pieces and then slice down the center , add to the soup pot along with the broth and coconut milk , garlic and ginger .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1c3 / chop-01
+         :ARG1 (s1l / lemongrass)
+         :destination (s1p / piece
+                        :mod (s1d / distance-quantity
+                               :quant 2
+                               :unit (s1i / inch))))
+  :op2 (s1s / slice-01
+         :ARG1 (s1c / center)
+         :direction (s1d2 / down)
+         :time (s1t / then))
+  :op3 (s1a / add-02
+         :ARG1 (s1a3 / and
+                 :op1 (s1b / broth)
+                 :op2 (s1m / milk
+                        :source (s1c2 / coconut))
+                 :op3 (s1g / garlic)
+                 :op4 (s1g2 / ginger))
+         :ARG2 (s1p2 / pot
+                 :mod (s1s2 / soup)))
+  :mode imperative)
+
+# alignment:s1a: 15-15
+s1a2: 8-8
+s1a3: 20-20
+s1b: 23-23
+s1c: 13-13
+s1c2: 25-25
+s1d: 6-6
+s1d2: 11-11
+s1g: 28-28
+s1g2: 30-30
+s1i: 6-6
+s1l: 3-3
+s1m: 26-26
+s1p: 7-7
+s1p2: 19-19
+s1s: 10-10
+s1s2: 18-18
+s1t: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Bring to a boil and them simmer on low for 30 minutes .
+# sentence level graph:
+(s2a / and
+  :op1 (s2b / bring-ON-02
+         :destination (s2b2 / boil-01))
+  :op2 (s2s / simmer-01
+         :duration (s2t / temporal-quantity
+                     :quant 30
+                     :unit (s2m / minute))
+         :manner (s2l / low)
+         :mode imperative
+         :time (s2t3 / then)))
+
+# alignment:s2a: 5-5
+s2b: 4-4
+s2l: 9-9
+s2m: 12-12
+s2s: 7-7
+s2t: 12-12
+s2t3: 0-0
+s2b2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Once the broth is done simmering you will want to strain it through some cheese cloth .
+# sentence level graph:
+(s3w / want-01
+  :ARG0 (s3y / you)
+  :ARG1 (s3s2 / strain-02
+          :ARG0 (s3c2 / cheese-cloth)
+          :ARG1 (s3i2 / it
+                  :mod (s3s3 / some)))
+  :time (s3o / once
+          :op1 (s3c / complete-01
+                 :ARG1 (s3s / simmer-01
+                         :ARG1 (s3b / broth))))
+  :mode imperative)
+
+# alignment:s3b: -1--1
+s3c: 0-0
+s3c2: 16-16
+s3i2: 0-0
+s3s: -1--1
+s3s3: 14-14
+s3w: 9-9
+s3y: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	The lemongrass stalks are not edible , I found that out the hard way .
+# sentence level graph:
+(s4p / possible-01
+  :ARG1 (s4e / eat-01
+          :ARG1 (s4s / stalk
+                  :part-of (s4l / lemongrass)))
+  :ARG1-of (s4f / find-out-03
+             :ARG0 (s4i / i)
+             :manner (s4w / way
+                       :mod (s4h / hard)))
+  :polarity -)
+
+# alignment:s4e: 6-6
+s4f: 9-9
+s4h: 13-13
+s4i: 8-8
+s4l: 2-2
+s4p: 1-1
+s4s: 3-3
+s4w: 14-14
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Bring the broth back to a simmer and add the tofu , mushrooms , snow peas and the rice noodles .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5b2 / bring-ON-02
+         :ARG1 (s5b3 / broth)
+         :ARG4 (s5s / simmer-01)
+         :direction (s5b / back))
+  :op2 (s5a / add-02
+         :ARG1 (s5a3 / and
+                 :op1 (s5t / tofu)
+                 :op2 (s5m / mushroom)
+                 :op3 (s5p / pea
+                        :mod (s5s2 / snow))
+                 :op4 (s5n / noodle
+                        :mod (s5r / rice))))
+  :mode imperative)
+
+# alignment:s5a: 9-9
+s5a2: 8-8
+s5a3: 17-17
+s5b: 4-4
+s5b2: 1-1
+s5b3: 3-3
+s5m: 13-13
+s5n: 20-20
+s5p: 16-16
+s5r: 19-19
+s5s: 7-7
+s5s2: 15-15
+s5t: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	You can add the lime juice at any time .
+# sentence level graph:
+(s6p / possible-01
+  :ARG1 (s6a / add-02
+          :ARG0 (s6y / you)
+          :ARG1 (s6j / juice
+                  :source (s6l / lime))
+          :time (s6a2 / any)))
+
+# alignment:s6a: 3-3
+s6a2: 8-8
+s6j: 6-6
+s6l: 5-5
+s6p: 2-2
+s6y: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	I added some lime juice at the beginning and then some at the end before serving .
+# sentence level graph:
+(s7a3 / and
+  :op1 (s7a / add-02
+         :ARG0 (s7i / i)
+         :ARG1 (s7j / juice
+                 :quant (s7s2 / some)
+                 :source (s7l / lime))
+         :time (s7b2 / beginning))
+  :op2 (s7a2 / add-02
+         :ARG1 (s7j2 / juice
+                 :quant (s7s3 / some))
+         :time (s7e / end)
+         :time (s7b / before
+                 :op1 (s7s / serve-02))))
+
+# alignment:s7a: 2-2
+s7a2: 6-6
+s7a3: 9-9
+s7b: -1--1
+s7b2: 8-8
+s7e: 14-14
+s7i: -1--1
+s7j: 5-5
+s7j2: 7-7
+s7l: 4-4
+s7s: -1--1
+s7s2: 3-3
+s7s3: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Simmer until the noodles are soft .
+# sentence level graph:
+(s8s2 / simmer-01
+  :duration (s8u / until
+              :op1 (s8n / noodle
+                     :mod (s8s / soft)))
+  :mode imperative)
+
+# alignment:s8n: 4-4
+s8s: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Garnish with grated ginger or scallions .
+# sentence level graph:
+(s9g3 / garnish-01
+  :ARG2 (s9o / or
+          :op1 (s9g / ginger
+                 :ARG1-of (s9g2 / grate-01))
+          :op2 (s9s / scallion))
+  :mode imperative)
+
+# alignment:s9g: 4-4
+s9g2: 4-4
+s9o: 5-5
+s9s: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Chop the lemongrass into 2 inch pieces and then slice down the center , add to the soup pot along with the broth and coconut milk , garlic and ginger .
+Bring to a boil and them simmer on low for 30 minutes .
+Once the broth is done simmering you will want to strain it through some cheese cloth .
+The lemongrass stalks are not edible , I found that out the hard way .
+Bring the broth back to a simmer and add the tofu , mushrooms , snow peas and the rice noodles .
+You can add the lime juice at any time .
+I added some lime juice at the beginning and then some at the end before serving .
+Simmer until the noodles are soft .
+Garnish with grated ginger or scallions .

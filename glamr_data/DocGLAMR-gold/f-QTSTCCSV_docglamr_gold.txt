@@ -1,0 +1,54 @@
+# :: f-QTSTCCSV::step01::sent01
+# :: snt1	Saute pancetta in a large pan over medium - high heat , stirring occasionally , until crispy .
+(s1 / sentence
+    :coref ((s1p2 :cut s1s2)
+			(s1s2 :cut s1s4)
+			(s1s4 :separation s1a)
+			(s1a :separation s1a)
+			(s1a :cut s1m2)))
+
+
+# :: f-QTSTCCSV::step01::sent02
+# :: snt2	Remove pancetta with a slotted spoon and set aside .
+(s2 / sentence)
+
+
+# :: f-QTSTCCSV::step02::sent01
+# :: snt3	Add asparagus to the pan and saute in the pancetta grease for about 5 - 6 minutes , stirring occasionally , until almost cooked .
+(s3 / sentence)
+
+
+# :: f-QTSTCCSV::step03::sent01
+# :: snt4	Slowly add the white wine to deglaze the pan .
+(s4 / sentence)
+
+
+# :: f-QTSTCCSV::step03::sent02
+# :: snt5	Continue cooking for 5 minutes or until the wine has reduced by about half .
+(s5 / sentence
+    :coref ((s1m2 :aggregation s5c)
+			(s5c :aggregation s5c)
+			(s5c :cut s5w)
+			(s5w :aggregation s5c)))
+
+
+# :: f-QTSTCCSV::step04::sent01
+# :: snt6	Cook the pasta in a large pot according to package instructions .
+(s6 / sentence)
+
+
+# :: f-QTSTCCSV::step04::sent02
+# :: snt7	Drain , but reserve 1/4 cup of the pasta water for later ( if needed ) .
+(s7 / sentence)
+
+
+# :: f-QTSTCCSV::step05::sent01
+# :: snt8	Add the pasta , pancetta and 1/4 cup Parmesan cheese to the saute pan with asparagus , and toss until combined .
+(s8 / sentence)
+
+
+# :: f-QTSTCCSV::step05::sent02
+# :: snt9	Sprinkle pasta with the remaining Parmesan cheese and serve immediately .
+(s9 / sentence)
+
+

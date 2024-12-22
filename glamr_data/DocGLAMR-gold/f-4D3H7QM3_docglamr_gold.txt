@@ -1,0 +1,73 @@
+# :: f-4D3H7QM3::step01::sent01
+# :: snt1	Heat the oil with the garlic in a heavy skillet over medium heat .
+(s1 / sentence
+    :coref ((s1o2 :aggregation s1h2)
+			(s1h2 :cut s1h)
+			(s1h :cut s1h)
+			(s1h :cut s1m2)
+			(s1g :aggregation s1h2)
+			(s1h2 :cut s1m2)))
+
+
+# :: f-4D3H7QM3::step01::sent02
+# :: snt2	Cook stirring occasionally , until the garlic is golden .
+(s2 / sentence
+    :coref ((s1m2 :aggregation s2c)
+			(s2c :aggregation s2c)
+			(s2c :cut s2g4)
+			(s1m2 :cut s2g4)
+			(s2o :aggregation s2c)
+			(s2o :cut s2g4)
+			(s2u2 :aggregation s2c)
+			(s2g3 :aggregation s2c)))
+
+
+# :: f-4D3H7QM3::step01::sent03
+# :: snt3	Remove the garlic from the skillet with a slotted spoon and transfer to a paper towel .
+(s3 / sentence
+    :coref ((s2g4 :aggregation s3r)
+			(s3r :cut s3s)
+			(s3s :aggregation s3r)
+			(s3r :aggregation s3s)
+			(s2g4 :cut s3s)
+			(s3s :aggregation s3s)
+			(s2c :aggregation s3r)
+			(s3r :aggregation s3r)
+			(s2g4 :aggregation s3s)
+			(s2c :cut s3s)
+			(s2c :aggregation s3s)
+			(s3g :aggregation s3r)
+			(s3s2 :aggregation s3s)))
+
+
+# :: f-4D3H7QM3::step02::sent01
+# :: snt4	Add the butter to the oil in the skillet and heat over medium heat .
+(s4 / sentence
+    :coref ((s3s :cut s4a3)
+			(s4a3 :aggregation s4s2)
+			(s3s :aggregation s4s2)
+			(s3r :cut s4a3)
+			(s3r :aggregation s4s2)
+			(s4o2 :aggregation s4s2)))
+
+
+# :: f-4D3H7QM3::step02::sent02
+# :: snt5	Add the onions , salt and pepper and saute , until the onions are translucent and starting to turn golden .
+(s5 / sentence)
+
+
+# :: f-4D3H7QM3::step03::sent01
+# :: snt6	Add the beans and continue cooking stirring occasionally .
+(s6 / sentence)
+
+
+# :: f-4D3H7QM3::step03::sent02
+# :: snt7	Stir in both vinegars and season with salt and pepper to taste .
+(s7 / sentence)
+
+
+# :: f-4D3H7QM3::step04::sent01
+# :: snt8	Transfer the beans to a serving dish and sprinkle with the garlic chips .
+(s8 / sentence)
+
+

@@ -1,0 +1,33 @@
+# :: r-217::step01::sent01
+# :: snt1	Place fruit in serving bowl .
+(s1 / sentence
+    :coref ((s1f :cut s1p1)))
+
+
+# :: r-217::step02::sent01
+# :: snt2	Pour orange juice over fruit and mix gently .
+(s2 / sentence
+    :coref ((s1p1 :aggregation s2p1)
+			(s2p1 :cut s2m5)
+			(s2o :aggregation s2p1)))
+
+
+# :: r-217::step03::sent01
+# :: snt3	Garnish with almonds or coconut .
+(s3 / sentence
+    :coref ((s2m5 :aggregation s3g1)
+			(s2p1 :aggregation s3g1)
+			(s3a2 :aggregation s3g1)
+			(s3c :aggregation s3g1)))
+
+
+# :: r-217::step04::sent01
+# :: snt4	Cover and chill several hours before serving .
+(s4 / sentence
+    :coref ((s3g1 :cut s4c1)
+			(s4c1 :cut s4c4)
+			(s4c4 :cut s4s1)
+			(s3g1 :cut s4c4)
+			(s3g1 :cut s4s1)))
+
+

@@ -1,0 +1,260 @@
+# :: r-452::step01::sent01
+# :: snt1	Cut chicken thighs in half and place in a bowl .
+(s1a / and~5
+     :op1 (s1c / cut-02~0
+               :ARG1 (s1t / thigh~2
+                          :part-of (s1c2 / chicken~1))
+               :ARG2 (s1h / half~4)
+               :ARG0 (s1y / you)
+               :event-structure (s1se / subevents
+                                      :E1 (s1d / degradation_material_integrity
+                                               :polarity -
+                                               :PATIENT s1t)
+                                      :E2 (s1c1 / contact
+                                                :PATIENT s1t)
+                                      :E3 (s1d1 / degradation_material_integrity
+                                                :PATIENT s1t)
+                                      :E0 (s1d2 / do
+                                                :ACTION s1c))
+               :imp_output (s1c3 / cut.RES))
+     :op2 (s1p / place-01~6
+               :ARG2 (s1b / bowl~9)
+               :ARG0 s1y)
+     :mode imperative)
+
+
+# :: r-452::step02::sent01
+# :: snt2	Combine the next 9 ingredients ( garlic thru oil ) and grind to a paste using a mortar and pestle .
+(s2a / and~10
+     :op1 (s2c / combine-01~0
+               :ARG1 (s2i / ingredient~4
+                          :quant 9
+                          :example (s2t / thru~7
+                                        :op1 (s2g / garlic~6)
+                                        :op2 (s2o / oil~8))
+                          :mod (s2n / next~2))
+               :ARG0 (s2y / you)
+               :event-structure (s2se / subevents
+                                      :E1 (s2a1 / and
+                                                :op1 (s2m1 / mingled
+                                                           :polarity -
+                                                           :PATIENT_I s2i
+                                                           :PATIENT_J s2g
+                                                           :PATIENT_K s2o)
+                                                :op2 (s2h / has_material_integrity_state
+                                                          :polarity -
+                                                          :PATIENT_I s2i
+                                                          :V_STATE (s2c1 / combined)
+                                                          :PATIENT_J s2g
+                                                          :PATIENT_K s2o)
+                                                :op3 (s2h1 / has_material_integrity_state
+                                                           :polarity -
+                                                           :PATIENT_J s2g
+                                                           :V_STATE s2c1
+                                                           :PATIENT_I s2i
+                                                           :PATIENT_K s2o))
+                                      :E3 (s2a2 / and
+                                                :op1 (s2m2 / mingled
+                                                           :PATIENT_I s2i
+                                                           :PATIENT_J s2g
+                                                           :PATIENT_K s2o)
+                                                :op2 (s2h2 / has_material_integrity_state
+                                                           :PATIENT_I s2i
+                                                           :V_STATE s2c1
+                                                           :PATIENT_J s2g
+                                                           :PATIENT_K s2o)
+                                                :op3 (s2h3 / has_material_integrity_state
+                                                           :PATIENT_J s2g
+                                                           :V_STATE s2c1
+                                                           :PATIENT_I s2i
+                                                           :PATIENT_K s2o))
+                                      :E0 (s2d / do
+                                               :ACTION s2c))
+               :imp_output (s2c2 / combine.RES))
+     :op2 (s2g2 / grind-01~11
+                :ARG2 (s2p / paste~14)
+                :instrument (s2a4 / and~18
+                                  :op1 (s2m / mortar~17)
+                                  :op2 (s2p2 / pestle~19))
+                :ARG0 s2y
+                :event-structure (s2se1 / subevents
+                                        :E1 (s2a3 / and
+                                                  :op1 (s2d1 / degradation_material_integrity
+                                                             :polarity -
+                                                             :IMP_PATIENT s2c2)
+                                                  :op2 (s2h4 / has_physical_form
+                                                             :polarity -
+                                                             :IMP_PATIENT s2c2
+                                                             :V_FORM (s2g1 / ground)))
+                                        :E2 (s2c3 / contact
+                                                  :INSTRUMENT s2p2
+                                                  :IMP_PATIENT s2c2)
+                                        :E3 (s2a5 / and
+                                                  :op1 (s2d2 / degradation_material_integrity
+                                                             :IMP_PATIENT s2c2)
+                                                  :op2 (s2h5 / has_physical_form
+                                                             :IMP_PATIENT s2c2
+                                                             :V_FORM s2g1))
+                                        :E0 (s2d3 / do
+                                                  :ACTION s2g2))
+                :imp_output (s2g3 / grind.RES))
+     :mode imperative)
+
+
+# :: r-452::step03::sent01
+# :: snt3	Combine the paste with the chicken and mix well ; refrigerate several hours or overnight .
+(s3a2 / and~6
+      :op1 (s3c / combine-01~0
+                :ARG1 (s3p / paste~2)
+                :ARG2 (s3c2 / chicken~5)
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3a / and
+                                                :op1 (s3m1 / mingled
+                                                           :polarity -
+                                                           :PATIENT_I s3p
+                                                           :PATIENT_J s3c2)
+                                                :op2 (s3h1 / has_material_integrity_state
+                                                           :polarity -
+                                                           :PATIENT_I s3p
+                                                           :V_STATE (s3c1 / combined)
+                                                           :PATIENT_J s3c2)
+                                                :op3 (s3h2 / has_material_integrity_state
+                                                           :polarity -
+                                                           :PATIENT_J s3c2
+                                                           :V_STATE s3c1
+                                                           :PATIENT_I s3p))
+                                       :E3 (s3a1 / and
+                                                 :op1 (s3m2 / mingled
+                                                            :PATIENT_I s3p
+                                                            :PATIENT_J s3c2)
+                                                 :op2 (s3h3 / has_material_integrity_state
+                                                            :PATIENT_I s3p
+                                                            :V_STATE s3c1
+                                                            :PATIENT_J s3c2)
+                                                 :op3 (s3h4 / has_material_integrity_state
+                                                            :PATIENT_J s3c2
+                                                            :V_STATE s3c1
+                                                            :PATIENT_I s3p))
+                                       :E0 (s3d / do
+                                                :ACTION s3c))
+                :imp_output (s3c3 / combine.RES))
+      :op2 (s3m / mix-01~7
+                :manner (s3w / well~8)
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3a3 / and
+                                                  :op1 (s3m3 / mingled
+                                                             :polarity -)
+                                                  :op2 (s3h5 / has_material_integrity_state
+                                                             :polarity -
+                                                             :V_STATE (s3m4 / mixed))
+                                                  :op3 (s3h6 / has_material_integrity_state
+                                                             :polarity -
+                                                             :V_STATE s3m4))
+                                        :E3 (s3a4 / and
+                                                  :op1 (s3m5 / mingled)
+                                                  :op2 (s3h7 / has_material_integrity_state
+                                                             :V_STATE s3m4)
+                                                  :op3 (s3h8 / has_material_integrity_state
+                                                             :V_STATE s3m4))
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3m))
+                :imp_output (s3m6 / mix.RES))
+      :op3 (s3r / refrigerate-01~10
+                :duration (s3o / or~13
+                               :op1 (s3t / temporal-quantity
+                                         :unit (s3h / hour~12)
+                                         :quant (s3s / several~11))
+                               :op2 (s3o2 / overnight~14))
+                :ARG0 s3y
+                :event-structure (s3se2 / subevents
+                                        :E1 (s3h9 / has_state
+                                                  :polarity -
+                                                  :IMP_PATIENT s3m6
+                                                  :V_FINAL_STATE (s3r1 / refrigerated))
+                                        :E3 (s3h10 / has_state
+                                                   :IMP_PATIENT s3m6
+                                                   :V_FINAL_STATE s3r1)
+                                        :E0 (s3d2 / do
+                                                  :ACTION s3r))
+                :imp_output (s3r2 / refrigerate.RES))
+      :mode imperative)
+
+
+# :: r-452::step04::sent01
+# :: snt4	Just before serving , grill chicken until tender , basting frequently with coconut milk .
+(s4g / grill-01~4
+     :ARG1 (s4c / chicken~5)
+     :duration (s4u / until~6
+                    :op1 (s4t / tender~7))
+     :manner (s4b / baste-01~9
+                  :ARG2 (s4m / milk~13
+                             :mod (s4c2 / coconut~12))
+                  :ARG0 s4y
+                  :event-structure (s4se1 / subevents
+                                          :E1 (s4h1 / has_location
+                                                    :IMP_THEME s4g2)
+                                          :E3 (s4a2 / and
+                                                    :op1 (s4m1 / motion
+                                                               :IMP_THEME s4g2)
+                                                    :op2 (s4h2 / has_location
+                                                               :polarity -
+                                                               :IMP_THEME s4g2))
+                                          :E4 (s4h3 / has_location
+                                                    :IMP_THEME s4g2)
+                                          :E0 (s4d1 / do
+                                                    :ACTION s4b))
+                  :imp_output (s4b1 / baste.RES))
+     :mode imperative
+     :time (s4b2 / before~1
+                 :op1 (s4s / serve-02~2)
+                 :mod (s4j / just~0))
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4c1 / cooked
+                                      :polarity -
+                                      :PATIENT s4c
+                                      :V_FINAL_STATE (s4g1 / grilled))
+                            :E3 (s4a / apply_heat
+                                     :PATIENT s4c)
+                            :E4 (s4a1 / and
+                                      :op1 (s4c3 / cooked
+                                                 :PATIENT s4c
+                                                 :V_FINAL_STATE s4g1)
+                                      :op2 (s4h / has_state
+                                                :PATIENT s4c
+                                                :RESULT s4t))
+                            :E0 (s4d / do
+                                     :ACTION s4g))
+     :imp_output (s4g2 / grill.RES))
+
+
+# :: r-452::step05::sent01
+# :: snt5	Serve with sweet vinegar sauce .
+(s5s2 / serve-02~0
+      :accompanier (s5s / sauce~4
+                        :mod (s5v / vinegar~3
+                                  :mod (s5s3 / sweet~2)))
+      :mode imperative
+      :ARG0 (s5y / you)
+      :event-structure (s5se / subevents
+                             :E1 (s5a / and
+                                      :op1 (s5h / has_possession
+                                                :IMP_THEME (s5b / baste.RES))
+                                      :op2 (s5h1 / has_possession
+                                                 :polarity -
+                                                 :IMP_THEME s5b))
+                             :E2 (s5t / transfer
+                                      :IMP_THEME s5b)
+                             :E3 (s5a1 / and
+                                       :op1 (s5h2 / has_possession
+                                                  :IMP_THEME s5b)
+                                       :op2 (s5h3 / has_possession
+                                                  :polarity -
+                                                  :IMP_THEME s5b))
+                             :E0 (s5d / do
+                                      :ACTION s5s2))
+      :imp_output (s5s1 / serve.RES))
+
+

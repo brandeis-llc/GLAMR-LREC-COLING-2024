@@ -1,0 +1,46 @@
+# :: r-1849::step01::sent01
+# :: snt1	Place meat in a pot and cover with water .
+(s1 / sentence
+    :coref ((s1m :cut s1p1)
+			(s1p1 :aggregation s1c1)
+			(s1c1 :cut s1p)
+			(s1w :aggregation s1c1)))
+
+
+# :: r-1849::step01::sent02
+# :: snt2	Bring to a boil .
+(s2 / sentence
+    :coref ((s1p :aggregation s2b2)
+			(s1c1 :aggregation s2b2)))
+
+
+# :: r-1849::step02::sent01
+# :: snt3	Add diced carrots , parsnips , herbs and seasoning .
+(s3 / sentence
+    :coref ((s2b2 :cut s3a)))
+
+
+# :: r-1849::step03::sent01
+# :: snt4	Simmer over moderate low heat for 20 minutes .
+(s4 / sentence
+    :coref ((s3a :aggregation s4s)
+			(s2b2 :aggregation s4s)))
+
+
+# :: r-1849::step04::sent01
+# :: snt5	Add peeled whole potatoes and beef stock .
+(s5 / sentence
+    :coref ((s4s :cut s5a)
+			(s5a :cut s5a)))
+
+
+# :: r-1849::step05::sent01
+# :: snt6	Simmer on low heat for 1 hour .
+(s6 / sentence)
+
+
+# :: r-1849::step05::sent02
+# :: snt7	Stir occasionally .
+(s7 / sentence)
+
+

@@ -1,0 +1,50 @@
+# :: f-BMZKXRGQ::step01::sent01
+# :: snt1	Cube the chicken breast to prepare for the food processor .
+(s1 / sentence
+    :coref ((s1c :cut s1c4)))
+
+
+# :: f-BMZKXRGQ::step02::sent01
+# :: snt2	Combine the cubed chicken , creamed spinach , olive oil , garlic , Parmesan cheese and the olive oil in the food processor and process .
+(s2 / sentence
+    :coref ((s1c4 :aggregation s2c6)
+			(s2c6 :cut s2p1)
+			(s2c4 :aggregation s2c6)
+			(s2g :aggregation s2c6)))
+
+
+# :: f-BMZKXRGQ::step03::sent01
+# :: snt3	Form into patties .
+(s3 / sentence
+    :coref ((s2p1 :cut s3f1)
+			(s2c6 :cut s3f1)))
+
+
+# :: f-BMZKXRGQ::step04::sent01
+# :: snt4	Heat a large frying pan with a drizzle of vegetable oil and place the patties in the pan .
+(s4 / sentence
+    :coref ((s3f1 :aggregation s4p1)
+			(s4p1 :cut s4o)
+			(s4o :cut s4p3)
+			(s3f1 :cut s4o)
+			(s2c6 :aggregation s4p1)
+			(s4p1 :cut s4p3)
+			(s4v :cut s4h2)
+			(s4h2 :aggregation s4p1)))
+
+
+# :: f-BMZKXRGQ::step04::sent02
+# :: snt5	When the patties firm and become golden on one side flip and finish cooking .
+(s5 / sentence)
+
+
+# :: f-BMZKXRGQ::step05::sent01
+# :: snt6	The cooking time will depend on the thickness of the patties .
+(s6 / sentence)
+
+
+# :: f-BMZKXRGQ::step06::sent01
+# :: snt7	Serve with your favorite garnish and bread .
+(s7 / sentence)
+
+

@@ -1,0 +1,187 @@
+# :: r-1849::step01::sent01
+# :: snt1	Place meat in a pot and cover with water .
+(s1a / and~5
+     :op1 (s1p / place-01~0
+               :ARG1 (s1m / meat~1)
+               :ARG2 (s1p2 / pot~4)
+               :ARG0 (s1y / you)
+               :event-structure (s1se / subevents
+                                      :E1 (s1h / has_location
+                                               :THEME s1m)
+                                      :E3 (s1a1 / and
+                                                :op1 (s1m1 / motion
+                                                           :THEME s1m)
+                                                :op2 (s1h1 / has_location
+                                                           :polarity -
+                                                           :THEME s1m))
+                                      :E4 (s1h2 / has_location
+                                                :THEME s1m
+                                                :DESTINATION s1p2)
+                                      :E0 (s1d / do
+                                               :ACTION s1p))
+               :imp_output (s1p1 / place.RES))
+     :op2 (s1c / cover-02~6
+               :ARG2 (s1w / water~8)
+               :ARG0 s1y
+               :event-structure (s1se1 / subevents
+                                       :E1 (s1h3 / has_location
+                                                 :THEME s1w)
+                                       :E3 (s1a2 / and
+                                                 :op1 (s1m2 / motion
+                                                            :THEME s1w)
+                                                 :op2 (s1h4 / has_location
+                                                            :polarity -
+                                                            :THEME s1w))
+                                       :E4 (s1h5 / has_location
+                                                 :THEME s1w)
+                                       :E0 (s1d1 / do
+                                                 :ACTION s1c))
+               :imp_output (s1c1 / cover.RES))
+     :mode imperative)
+
+
+# :: r-1849::step01::sent02
+# :: snt2	Bring to a boil .
+(s2b2 / bring-ON-02~0
+      :destination (s2b / boil~3)
+      :mode imperative
+      :ARG0 (s2y / you)
+      :event-structure (s2se / subevents
+                             :E1 (s2c / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s2c1 / cover.RES)
+                                      :V_FINAL_STATE (s2b1 / brought-to-a-boil))
+                             :E3 (s2a / apply_heat
+                                      :IMP_PATIENT s2c1)
+                             :E4 (s2c2 / cooked
+                                       :IMP_PATIENT s2c1
+                                       :V_FINAL_STATE s2b1)
+                             :E0 (s2d / do
+                                      :ACTION s2b2))
+      :imp_output (s2b3 / bring-to-a-boil.RES))
+
+
+# :: r-1849::step02::sent01
+# :: snt3	Add diced carrots , parsnips , herbs and seasoning .
+(s3a / add-02~0
+     :ARG1 (s3a2 / and~7
+                 :op1 (s3c / carrot~2
+                           :ARG1-of (s3d / diced-01~1))
+                 :op2 (s3p / parsnip~4)
+                 :op3 (s3h / herb~6)
+                 :op4 (s3s / seasoning~8))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3t / together
+                                     :polarity -
+                                     :PATIENT_I s3c
+                                     :PATIENT_J s3p
+                                     :PATIENT_K s3h
+                                     :PATIENT_L s3s)
+                            :E3 (s3t1 / together
+                                      :PATIENT_I s3c
+                                      :PATIENT_J s3p
+                                      :PATIENT_K s3h
+                                      :PATIENT_L s3s)
+                            :E0 (s3d1 / do
+                                      :ACTION s3a))
+     :imp_output (s3a1 / add.RES))
+
+
+# :: r-1849::step03::sent01
+# :: snt4	Simmer over moderate low heat for 20 minutes .
+(s4s / simmer-01~0
+     :duration (s4t / temporal-quantity
+                    :quant 20
+                    :unit (s4m / minute~7))
+     :manner (s4h / heat~4
+                  :mod (s4l / low~3
+                            :mod (s4m2 / moderate~2)))
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s4a / add.RES)
+                                     :V_FINAL_STATE (s4s1 / simmered))
+                            :E3 (s4a1 / apply_heat
+                                      :INSTRUMENT s4h
+                                      :IMP_PATIENT s4a)
+                            :E4 (s4c1 / cooked
+                                      :IMP_PATIENT s4a
+                                      :V_FINAL_STATE s4s1)
+                            :E0 (s4d / do
+                                     :ACTION s4s))
+     :imp_output (s4s2 / simmer.RES))
+
+
+# :: r-1849::step04::sent01
+# :: snt5	Add peeled whole potatoes and beef stock .
+(s5a / add-02~0
+     :ARG1 (s5a2 / and~4
+                 :op1 (s5p2 / potato~3
+                            :ARG1-of (s5p / peel-01~1)
+                            :mod (s5w / whole~2))
+                 :op2 (s5s / stock~6
+                           :source (s5b / beef~5)))
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5t / together
+                                     :polarity -
+                                     :PATIENT_I s5p2
+                                     :PATIENT_J s5s)
+                            :E3 (s5t1 / together
+                                      :PATIENT_I s5p2
+                                      :PATIENT_J s5s)
+                            :E0 (s5d / do
+                                     :ACTION s5a))
+     :imp_output (s5a1 / add.RES))
+
+
+# :: r-1849::step05::sent01
+# :: snt6	Simmer on low heat for 1 hour .
+(s6s / simmer-01~0
+     :duration (s6t / temporal-quantity
+                    :quant 1
+                    :unit (s6h2 / hour~6))
+     :mode imperative
+     :manner (s6h / heat~3
+                  :mod (s6l / low~2))
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s6a / add.RES)
+                                     :V_FINAL_STATE (s6s1 / simmered))
+                            :E3 (s6a1 / apply_heat
+                                      :INSTRUMENT s6h
+                                      :IMP_PATIENT s6a)
+                            :E4 (s6c1 / cooked
+                                      :IMP_PATIENT s6a
+                                      :V_FINAL_STATE s6s1)
+                            :E0 (s6d / do
+                                     :ACTION s6s))
+     :imp_output (s6s2 / simmer.RES))
+
+
+# :: r-1849::step05::sent02
+# :: snt7	Stir occasionally .
+(s7s / stir-01~0
+     :manner (s7o / occasional~1)
+     :mode imperative
+     :ARG0 (s7y / you)
+     :event-structure (s7se / subevents
+                            :E1 (s7h / has_material_integrity_state
+                                     :polarity -
+                                     :IMP_PATIENT (s7s1 / simmer.RES)
+                                     :V_STATE (s7s2 / stirred))
+                            :E3 (s7h1 / has_material_integrity_state
+                                      :IMP_PATIENT s7s1
+                                      :V_STATE s7s2)
+                            :E0 (s7d / do
+                                     :ACTION s7s))
+     :imp_output (s7s3 / stir.RES))
+
+

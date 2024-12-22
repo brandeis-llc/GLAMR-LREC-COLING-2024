@@ -1,0 +1,83 @@
+# :: f-DB3YGNCY::step01::sent01
+# :: snt1	Preheat the grill to medium - high heat .
+(s1 / sentence)
+
+
+# :: f-DB3YGNCY::step02::sent01
+# :: snt2	Combine the melted butter with parsley .
+(s2 / sentence
+    :coref ((s2m :aggregation s2c2)
+			(s2c2 :cut s2c)
+			(s2p :aggregation s2c2)
+			(s2b :cut s2c)))
+
+
+# :: f-DB3YGNCY::step02::sent02
+# :: snt3	Make sure the corn cobs are stripped of all the silks , then brush each one with the butter / parsley mix .
+(s3 / sentence
+    :coref ((s2c :cut s3e3)
+			(s3e3 :cut s3s)
+			(s2c2 :cut s3e3)
+			(s2c :cut s3s)))
+
+
+# :: f-DB3YGNCY::step02::sent03
+# :: snt4	Wrap each individual corn cob in aluminum foil .
+(s4 / sentence
+    :coref ((s4c2 :aggregation s4w)
+			(s4a :aggregation s4w)))
+
+
+# :: f-DB3YGNCY::step03::sent01
+# :: snt5	Grill them over direct heat , turning about every 4 - 5 minutes .
+(s5 / sentence
+    :coref ((s3s :cut s5m)
+			(s3e3 :cut s5m)))
+
+
+# :: f-DB3YGNCY::step03::sent02
+# :: snt6	They should be done in about 15 minutes .
+(s6 / sentence
+    :coref ((s5m :aggregation s6t2)
+			(s6t2 :cut s6a2)
+			(s5m :cut s6a2)
+			(s3s :aggregation s6t2)
+			(s4w :aggregation s6t2)
+			(s4w :cut s6a2)))
+
+
+# :: f-DB3YGNCY::step03::sent03
+# :: snt7	Every grill is different , so watch them .
+(s7 / sentence)
+
+
+# :: f-DB3YGNCY::step04::sent01
+# :: snt8	Whisk together the sesame oil , vinegar , chicken broth and ramen seasoning ; refrigerate .
+(s8 / sentence)
+
+
+# :: f-DB3YGNCY::step05::sent01
+# :: snt9	Once the corn is done and has cooled off a bit , cut the corn off using a sharp knife .
+(s9 / sentence)
+
+
+# :: f-DB3YGNCY::step05::sent02
+# :: snt10	Do n't cut your fingers off .
+(s10 / sentence)
+
+
+# :: f-DB3YGNCY::step05::sent03
+# :: snt11	Please .
+(s11 / sentence)
+
+
+# :: f-DB3YGNCY::step06::sent01
+# :: snt12	In a large bowl combine the slaw mix , corn , ramen noodles , dressing and basil .
+(s12 / sentence)
+
+
+# :: f-DB3YGNCY::step06::sent02
+# :: snt13	Add the feta and gently toss .
+(s13 / sentence)
+
+

@@ -1,0 +1,203 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1445
+export time: 9/11/2023, 9:15:59 PM
+
+# :: snt1	Wash spinach and cut into small pieces .
+# sentence level graph:
+(s1a / and
+  :op1 (s1w / wash-01
+         :ARG1 (s1s2 / spinach))
+  :op2 (s1c / cut-01
+         :destination (s1p / piece
+                        :mod (s1s / small)))
+  :mode imperative)
+
+# alignment:s1a: 3-3
+s1c: 4-4
+s1p: 7-7
+s1s: 6-6
+s1s2: 2-2
+s1w: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Fry onions and garlic in oil until slightly golden .
+# sentence level graph:
+(s2f / fry-01
+  :ARG1 (s2a / and
+          :op1 (s2o2 / onion)
+          :op2 (s2g / garlic))
+  :medium (s2o / oil)
+  :duration (s2u / until
+              :op1 (s2g2 / golden-02
+                     :degree (s2s / slight)))
+  :mode imperative)
+
+# alignment:s2a: 3-3
+s2f: 1-1
+s2g: 4-4
+s2g2: 9-9
+s2o: 6-6
+s2o2: 2-2
+s2s: 8-8
+s2u: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add spinach and fry together over medium heat until cooked .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3a / add-02
+         :ARG1 (s3s / spinach))
+  :op2 (s3f / fry-01
+         :manner (s3h / heat
+                   :mod (s3m / medium))
+         :manner (s3t / together)
+         :duration (s3u / until
+                     :op1 (s3c / cook-01)))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 3-3
+s3c: 10-10
+s3f: 4-4
+s3h: 8-8
+s3m: 7-7
+s3s: 2-2
+s3t: 5-5
+s3u: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Let it cool down completely in the refrigerator .
+# sentence level graph:
+(s4l / let-01
+  :ARG1 (s4c2 / cool-down-02
+          :ARG1 (s4i / it)
+          :ARG1-of (s4c / complete-02))
+  :location (s4r2 / refrigerator)
+  :mode imperative)
+
+# alignment:s4c: 5-5
+s4c2: 3-3
+s4i: 2-2
+s4l: 1-1
+s4r2: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Add salt and pepper to yogurt to taste and beat well until the yogurt is a free - flowing liquid .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5a / add-02
+         :ARG1 (s5a3 / and
+                 :op1 (s5s / salt)
+                 :op2 (s5p / pepper))
+         :ARG2 (s5y / yogurt)
+         :purpose (s5t / taste-01))
+  :op2 (s5b / beat-01
+         :manner (s5w / well)
+         :duration (s5u / until
+                     :op1 (s5l / liquid
+                            :ARG1-of (s5f / flow-01
+                                       :ARG1-of (s5f2 / free-04))
+                            :domain s5y)))
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5a2: 3-3
+s5a3: 9-9
+s5b: 10-10
+s5f: 19-19
+s5f2: 17-17
+s5l: 20-20
+s5p: 4-4
+s5s: 2-2
+s5t: 8-8
+s5u: 12-12
+s5w: 11-11
+s5y: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Add spinach to yogurt and mix well .
+# sentence level graph:
+(s6a2 / and
+  :op1 (s6a / add-02
+         :ARG1 (s6s / spinach)
+         :ARG2 (s6y / yogurt))
+  :op2 (s6m / mix-01
+         :manner (s6w / well))
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6a2: 5-5
+s6m: 6-6
+s6s: 2-2
+s6w: 7-7
+s6y: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	The mix should be thick and homogeneous .
+# sentence level graph:
+(s7r / recommend-01
+  :ARG1 (s7a / and
+          :op1 (s7t / thick-02)
+          :op2 (s7h / homogeneous)
+          :domain (s7m / mix)))
+
+# alignment:s7a: 6-6
+s7m: -1--1
+s7r: 3-3
+s7t: 5-5
+s7h: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Wash spinach and cut into small pieces .
+Fry onions and garlic in oil until slightly golden .
+Add spinach and fry together over medium heat until cooked .
+Let it cool down completely in the refrigerator .
+Add salt and pepper to yogurt to taste and beat well until the yogurt is a free - flowing liquid .
+Add spinach to yogurt and mix well .
+The mix should be thick and homogeneous .

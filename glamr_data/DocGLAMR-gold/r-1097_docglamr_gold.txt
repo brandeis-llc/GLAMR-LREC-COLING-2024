@@ -1,0 +1,65 @@
+# :: r-1097::step01::sent01
+# :: snt1	Combine dry ingredients and set aside .
+(s1 / sentence
+    :coref ((s1d :cut s1c2)
+			(s1c2 :cut s1s)
+			(s1d :aggregation s1c)
+			(s1a :aggregation s1c)))
+
+
+# :: r-1097::step01::sent02
+# :: snt2	cream butter and Sugar until fluffy .
+(s2 / sentence
+    :coref ((s1c :aggregation s2c)
+			(s2a :aggregation s2c)
+			(s2u :aggregation s2c)))
+
+
+# :: r-1097::step02::sent01
+# :: snt3	Beat in eggs , lemon juice and vanilla .
+(s3 / sentence
+    :coref ((s1s :aggregation s3b)
+			(s2c :aggregation s3b)
+			(s1c :aggregation s3b)))
+
+
+# :: r-1097::step03::sent01
+# :: snt4	Add flour and coconut until well blended .
+(s4 / sentence
+    :coref ((s3b :cut s4a)
+			(s4a :aggregation s4a)
+			(s3b :aggregation s4a)
+			(s2c :cut s4a)
+			(s2c :aggregation s4a)
+			(s4a2 :aggregation s4a)))
+
+
+# :: r-1097::step04::sent01
+# :: snt5	Shape into ( 4 ) 2 inch rolls .
+(s5 / sentence
+    :coref ((s4a :cut s5s)
+			(s3b :cut s5s)))
+
+
+# :: r-1097::step04::sent02
+# :: snt6	Roll in colored Sugar .
+(s6 / sentence)
+
+
+# :: r-1097::step05::sent01
+# :: snt7	Wrap in plastic wrap and chill at least 4 hours .
+(s7 / sentence
+    :coref ((s5s :cut s7w)
+			(s4a :cut s7w)))
+
+
+# :: r-1097::step06::sent01
+# :: snt8	With a sharp knife , saw into 1/4 inch slices .
+(s8 / sentence)
+
+
+# :: r-1097::step07::sent01
+# :: snt9	Bake at 375 degrees for 10- 12 minutes , or until slightly browned .
+(s9 / sentence)
+
+

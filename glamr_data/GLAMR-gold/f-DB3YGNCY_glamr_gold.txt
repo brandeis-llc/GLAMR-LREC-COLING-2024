@@ -1,0 +1,358 @@
+# :: f-DB3YGNCY::step01::sent01
+# :: snt1	Preheat the grill to medium - high heat .
+(s1p / preheat-00~0
+     :ARG1 (s1g / grill-01~2
+                :mod (s1t / temperature-quantity
+                          :mod (s1u / umr-choice
+                                    :op1 (s1m / medium~4)
+                                    :op2 (s1h / high-02~6))))
+     :mode imperative)
+
+
+# :: f-DB3YGNCY::step02::sent01
+# :: snt2	Combine the melted butter with parsley .
+(s2c / combine-01~0
+     :ARG1 (s2b / butter~3
+                :ARG1-of (s2m / melt-01~2))
+     :ARG2 (s2p / parsley~5)
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2a / and
+                                     :op1 (s2m1 / mingled
+                                                :polarity -
+                                                :PATIENT_I s2b
+                                                :PATIENT_J s2p)
+                                     :op2 (s2h / has_material_integrity_state
+                                               :polarity -
+                                               :PATIENT_I s2b
+                                               :V_STATE (s2c1 / combined)
+                                               :PATIENT_J s2p)
+                                     :op3 (s2h1 / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT_J s2p
+                                                :V_STATE s2c1
+                                                :PATIENT_I s2b))
+                            :E3 (s2a1 / and
+                                      :op1 (s2m2 / mingled
+                                                 :PATIENT_I s2b
+                                                 :PATIENT_J s2p)
+                                      :op2 (s2h2 / has_material_integrity_state
+                                                 :PATIENT_I s2b
+                                                 :V_STATE s2c1
+                                                 :PATIENT_J s2p)
+                                      :op3 (s2h3 / has_material_integrity_state
+                                                 :PATIENT_J s2p
+                                                 :V_STATE s2c1
+                                                 :PATIENT_I s2b))
+                            :E0 (s2d / do
+                                     :ACTION s2c))
+     :imp_output (s2c2 / combine.RES))
+
+
+# :: f-DB3YGNCY::step02::sent02
+# :: snt3	Make sure the corn cobs are stripped of all the silks , then brush each one with the butter / parsley mix .
+(s3a2 / and
+      :op1 (s3e3 / ensure-01~0,1
+                 :ARG1 (s3s / strip-01~6
+                            :ARG1 (s3s3 / silk~10
+                                        :mod (s3a / all~8))
+                            :ARG2 (s3c / cob~4
+                                       :mod (s3c2 / corn~3))))
+      :op2 (s3b / brush-01~13
+                :ARG1 s3s3
+                :instrument (s3m2 / mix-01~21
+                                  :ARG1 (s3b2 / butter~18)
+                                  :ARG2 (s3p / parsley~20))
+                :time (s3t / then~12)
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3h / has_location
+                                                :THEME s3m2)
+                                       :E3 (s3a1 / and
+                                                 :op1 (s3m / motion
+                                                           :THEME s3m2)
+                                                 :op2 (s3h1 / has_location
+                                                            :polarity -
+                                                            :THEME s3m2))
+                                       :E4 (s3h2 / has_location
+                                                 :THEME s3m2
+                                                 :DESTINATION (s3e / each-one))
+                                       :E0 (s3d / do
+                                                :ACTION s3b))
+                :imp_output (s3b1 / brush.RES))
+      :mode imperative)
+
+
+# :: f-DB3YGNCY::step02::sent03
+# :: snt4	Wrap each individual corn cob in aluminum foil .
+(s4w / wrap-01~0
+     :ARG1 (s4c / cob~4
+                :mod (s4i / individual~2)
+                :mod (s4c2 / corn~3)
+                :mod (s4e / each~1))
+     :ARG2 (s4f / foil~7
+                :mod (s4a / aluminum~6))
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4h / has_location
+                                     :THEME s4c)
+                            :E3 (s4a1 / and
+                                      :op1 (s4m / motion
+                                                :THEME s4c)
+                                      :op2 (s4h1 / has_location
+                                                 :polarity -
+                                                 :THEME s4c))
+                            :E4 (s4h2 / has_location
+                                      :THEME s4c)
+                            :E0 (s4d / do
+                                     :ACTION s4w))
+     :imp_output (s4w1 / wrap.RES))
+
+
+# :: f-DB3YGNCY::step03::sent01
+# :: snt5	Grill them over direct heat , turning about every 4 - 5 minutes .
+(s5g / grill-01~0
+     :ARG1 (s5t3 / they~1)
+     :manner (s5o / over~2
+                  :op1 (s5h / heat~4
+                            :mod (s5d / direct~3)))
+     :manner (s5t4 / turn-01~6
+                   :ARG1 s5t3
+                   :frequency (s5e / every~8
+                                   :op1 (s5b / between
+                                             :op1 (s5t / temporal-quantity
+                                                       :quant 4
+                                                       :unit (s5m2 / minute))
+                                             :op2 (s5t2 / temporal-quantity
+                                                        :quant 5
+                                                        :unit (s5m / minute~12))))
+                   :ARG0 s5y
+                   :event-structure (s5se1 / subevents
+                                           :E1 (s5h1 / has_orientation
+                                                     :polarity -
+                                                     :IMP_THEME s5g2
+                                                     :V_ORIENTATION (s5t1 / turned))
+                                           :E3 (s5r / rotational_motion
+                                                    :IMP_THEME s5g2)
+                                           :E4 (s5h2 / has_orientation
+                                                     :IMP_THEME s5g2
+                                                     :V_ORIENTATION s5t1)
+                                           :E0 (s5d2 / do
+                                                     :ACTION s5t4))
+                   :imp_output (s5t5 / turn.RES))
+     :mode imperative
+     :ARG0 (s5y / you)
+     :event-structure (s5se / subevents
+                            :E1 (s5c / cooked
+                                     :polarity -
+                                     :PATIENT s5t3
+                                     :V_FINAL_STATE (s5g1 / grilled))
+                            :E3 (s5a / apply_heat
+                                     :INSTRUMENT s5h
+                                     :PATIENT s5t3)
+                            :E4 (s5c1 / cooked
+                                      :PATIENT s5t3
+                                      :V_FINAL_STATE s5g1)
+                            :E0 (s5d1 / do
+                                      :ACTION s5g))
+     :imp_output (s5g2 / grill.RES))
+
+
+# :: f-DB3YGNCY::step03::sent02
+# :: snt6	They should be done in about 15 minutes .
+(s6r / recommend-01~1
+     :ARG1 (s6d / done-08~3
+                :ARG1 (s6t2 / they~0)
+                :time (s6a2 / after~5
+                            :op1 (s6n / now)
+                            :quant (s6a / about
+                                        :op1 (s6t / temporal-quantity
+                                                  :quant 15
+                                                  :unit (s6m / minute~7))))))
+
+
+# :: f-DB3YGNCY::step03::sent03
+# :: snt7	Every grill is different , so watch them .
+(s7d / differ-02~3
+     :ARG1 (s7g / grill~1
+                :mod (s7e / every~0))
+     :ARG0-of (s7c / cause-01
+                   :ARG1 (s7w / watch-01~6
+                              :ARG1 (s7t / them~7)))
+     :mode imperative)
+
+
+# :: f-DB3YGNCY::step04::sent01
+# :: snt8	Whisk together the sesame oil , vinegar , chicken broth and ramen seasoning ; refrigerate .
+(s8m / multi-sentence
+     :snt1 (s8h / Whisk-01~0
+                :ARG1 (s8a / and~10
+                           :op1 (s8o / oil~4
+                                     :source (s8s2 / sesame~3))
+                           :op2 (s8v / vinegar~6)
+                           :op3 (s8b / broth~9
+                                     :source (s8c / chicken~8))
+                           :op4 (s8s / season-01~12
+                                     :mod (s8r / ramen~11)))
+                :mod (s8t / together)
+                :mode imperative
+                :ARG0 (s8y / you)
+                :event-structure (s8se / subevents
+                                       :E (s8p / part_of
+                                               :PATIENT s8s)
+                                       :E0 (s8d / do
+                                                :ACTION s8h))
+                :imp_output (s8w / whisk.RES))
+     :snt2 (s8r2 / refrigerate-01~14
+                 :mode imperative
+                 :ARG0 s8y
+                 :event-structure (s8se1 / subevents
+                                         :E1 (s8h1 / has_state
+                                                   :polarity -
+                                                   :IMP_PATIENT s8w
+                                                   :V_FINAL_STATE (s8r1 / refrigerated))
+                                         :E3 (s8h2 / has_state
+                                                   :IMP_PATIENT s8w
+                                                   :V_FINAL_STATE s8r1)
+                                         :E0 (s8d1 / do
+                                                   :ACTION s8r2))
+                 :imp_output (s8r3 / refrigerate.RES)))
+
+
+# :: f-DB3YGNCY::step05::sent01
+# :: snt9	Once the corn is done and has cooled off a bit , cut the corn off using a sharp knife .
+(s9c3 / cut-off-04~12,15
+      :ARG1 (s9c2 / corn~2,14)
+      :instrument (s9k / knife~19
+                       :ARG1-of (s9s / sharp~18))
+      :mode imperative
+      :time (s9a / and
+                 :op1 (s9b / be-done-08~3,4)
+                 :op2 (s9c / cool-01~7
+                           :ARG1 s9c2
+                           :degree (s9b2 / bit~10)))
+      :ARG0 (s9y / you)
+      :event-structure (s9se / subevents
+                             :E1 (s9d / degradation_material_integrity
+                                      :polarity -
+                                      :PATIENT (s9t / the-corn))
+                             :E2 (s9c1 / contact
+                                       :PATIENT s9t)
+                             :E3 (s9d1 / degradation_material_integrity
+                                       :PATIENT s9t)
+                             :E0 (s9d2 / do
+                                       :ACTION s9c3))
+      :imp_output (s9c4 / cut.RES))
+
+
+# :: f-DB3YGNCY::step05::sent02
+# :: snt10	Do n't cut your fingers off .
+(s10c / cut-off-04~2,5
+      :ARG1 (s10f / finger~4
+                  :part-of (s10y / you~3))
+      :mode imperative
+      :polarity -)
+
+
+# :: f-DB3YGNCY::step05::sent03
+# :: snt11	Please .
+(s11p / please-01~0
+      :mode imperative)
+
+
+# :: f-DB3YGNCY::step06::sent01
+# :: snt12	In a large bowl combine the slaw mix , corn , ramen noodles , dressing and basil .
+(s12c / combine-01~4
+      :ARG1 (s12a / and~15
+                  :op1 (s12m / mix~7
+                             :ARG1 (s12s / slaw~6))
+                  :op2 (s12c2 / corn~9)
+                  :op3 (s12n / noodle~12
+                             :mod (s12r / ramen~11))
+                  :op4 (s12d / dressing~14)
+                  :op5 (s12b / basil~16))
+      :ARG2 (s12b2 / bowl~3
+                   :mod (s12l / large~2))
+      :mode imperative
+      :ARG0 (s12y / you)
+      :event-structure (s12se / subevents
+                              :E1 (s12a1 / and
+                                         :op1 (s12m1 / mingled
+                                                     :polarity -
+                                                     :PATIENT_I s12m
+                                                     :PATIENT_J s12c2
+                                                     :PATIENT_K s12n
+                                                     :PATIENT_L s12d
+                                                     :PATIENT_M s12b)
+                                         :op2 (s12h / has_material_integrity_state
+                                                    :polarity -
+                                                    :PATIENT_I s12m
+                                                    :V_STATE (s12c1 / combined)
+                                                    :PATIENT_J s12c2
+                                                    :PATIENT_K s12n
+                                                    :PATIENT_L s12d
+                                                    :PATIENT_M s12b)
+                                         :op3 (s12h1 / has_material_integrity_state
+                                                     :polarity -
+                                                     :PATIENT_J s12c2
+                                                     :V_STATE s12c1
+                                                     :PATIENT_I s12m
+                                                     :PATIENT_K s12n
+                                                     :PATIENT_L s12d
+                                                     :PATIENT_M s12b))
+                              :E3 (s12a2 / and
+                                         :op1 (s12m2 / mingled
+                                                     :PATIENT_I s12m
+                                                     :PATIENT_J s12c2
+                                                     :PATIENT_K s12n
+                                                     :PATIENT_L s12d
+                                                     :PATIENT_M s12b)
+                                         :op2 (s12h2 / has_material_integrity_state
+                                                     :PATIENT_I s12m
+                                                     :V_STATE s12c1
+                                                     :PATIENT_J s12c2
+                                                     :PATIENT_K s12n
+                                                     :PATIENT_L s12d
+                                                     :PATIENT_M s12b)
+                                         :op3 (s12h3 / has_material_integrity_state
+                                                     :PATIENT_J s12c2
+                                                     :V_STATE s12c1
+                                                     :PATIENT_I s12m
+                                                     :PATIENT_K s12n
+                                                     :PATIENT_L s12d
+                                                     :PATIENT_M s12b))
+                              :E0 (s12d1 / do
+                                         :ACTION s12c))
+      :imp_output (s12c3 / combine.RES))
+
+
+# :: f-DB3YGNCY::step06::sent02
+# :: snt13	Add the feta and gently toss .
+(s13a2 / and~3
+       :op1 (s13a / add-02~0
+                  :ARG1 (s13f / feta~2)
+                  :ARG0 (s13y / you)
+                  :event-structure (s13se / subevents
+                                          :E1 (s13t1 / together
+                                                     :polarity -
+                                                     :PATIENT_I s13f)
+                                          :E3 (s13t2 / together
+                                                     :PATIENT_I s13f)
+                                          :E0 (s13d / do
+                                                    :ACTION s13a))
+                  :imp_output (s13a1 / add.RES))
+       :op2 (s13t / toss-01~5
+                  :manner (s13g / gentle~4)
+                  :ARG0 s13y
+                  :event-structure (s13se1 / subevents
+                                           :E1 (s13b / be
+                                                     :polarity -)
+                                           :E3 (s13b1 / be)
+                                           :E0 (s13d1 / do
+                                                      :ACTION s13t))
+                  :imp_output (s13t3 / toss.RES))
+       :mode imperative)
+
+

@@ -1,0 +1,70 @@
+# :: r-866::step01::sent01
+# :: snt1	Put onions in skillet with wine , vinegar , salt , pepper , and lemon slices .
+(s1 / sentence
+    :coref ((s1o :aggregation s1p1)
+			(s1w :aggregation s1p1)
+			(s1v :aggregation s1p1)
+			(s1s :aggregation s1p1)
+			(s1p :aggregation s1p1)
+			(s1l :aggregation s1p1)))
+
+
+# :: r-866::step02::sent01
+# :: snt2	Simmer until onions are just tender but still crisp in the center .
+(s2 / sentence
+    :coref ((s1p1 :cut s2s3)))
+
+
+# :: r-866::step03::sent01
+# :: snt3	Stir in tomato paste and raisins and cook for several minutes .
+(s3 / sentence
+    :coref ((s2s3 :aggregation s3s3)
+			(s3s3 :cut s3c4)
+			(s1p1 :aggregation s3s3)
+			(s1p1 :cut s3c4)
+			(s3t2 :aggregation s3s3)
+			(s3r :aggregation s3s3)))
+
+
+# :: r-866::step04::sent01
+# :: snt4	Remove the onions to a dish .
+(s4 / sentence
+    :coref ((s3c4 :separation s4r1)
+			(s4r1 :separation s4r2)
+			(s3s3 :separation s4r1)
+			(s3c4 :separation s4r2)
+			(s1p1 :separation s4r1)
+			(s1p1 :separation s4r2)
+			(s3s3 :separation s4r2)))
+
+
+# :: r-866::step05::sent01
+# :: snt5	Let the juices cook down with the raisins until the liquid is almost a glaze .
+(s5 / sentence
+    :coref ((s4r2 :cut s5c4)
+			(s4r1 :cut s5c4)
+			(s1p1 :cut s5c4)
+			(s3s3 :cut s5c4)))
+
+
+# :: r-866::step06::sent01
+# :: snt6	Pour over the onions and chill .
+(s6 / sentence
+    :coref ((s5c4 :aggregation s6p1)
+			(s6p1 :cut s6c3)
+			(s5c4 :cut s6c3)
+			(s4r2 :aggregation s6p1)
+			(s4r1 :aggregation s6p1)
+			(s4r2 :cut s6c3)))
+
+
+# :: r-866::step07::sent01
+# :: snt7	Serve as an hors - d'oeuvre or with cold meat .
+(s7 / sentence
+    :coref ((s6c3 :aggregation s7s1)
+			(s6p1 :aggregation s7s1)
+			(s5c4 :aggregation s7s1)
+			(s4r2 :aggregation s7s1)
+			(s7c :aggregation s7s1)))
+
+

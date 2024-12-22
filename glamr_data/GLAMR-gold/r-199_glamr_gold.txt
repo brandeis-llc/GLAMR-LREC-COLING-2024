@@ -1,0 +1,229 @@
+# :: r-199::step01::sent01
+# :: snt1	Wash spinach and cut into small pieces .
+(s1a / and~2
+     :op1 (s1w / wash-01~0
+               :ARG1 (s1s2 / spinach~1)
+               :ARG0 (s1y / you)
+               :event-structure (s1se / subevents
+                                      :E1 (s1h / has_state
+                                               :polarity -
+                                               :PATIENT s1s2
+                                               :V_FINAL_STATE (s1w1 / washed))
+                                      :E3 (s1h1 / has_state
+                                                :PATIENT s1s2
+                                                :V_FINAL_STATE s1w1)
+                                      :E0 (s1d / do
+                                               :ACTION s1w))
+               :imp_output (s1w2 / wash.RES))
+     :op2 (s1c / cut-01~3
+               :destination (s1p / piece~6
+                                 :mod (s1s / small~5))
+               :ARG0 s1y
+               :event-structure (s1se1 / subevents
+                                       :E1 (s1d1 / degradation_material_integrity
+                                                 :polarity -
+                                                 :PATIENT s1s2)
+                                       :E2 (s1c1 / contact
+                                                 :PATIENT s1s2)
+                                       :E3 (s1d2 / degradation_material_integrity
+                                                 :PATIENT s1s2)
+                                       :E0 (s1d3 / do
+                                                 :ACTION s1c))
+               :imp_output (s1c2 / cut.RES))
+     :mode imperative)
+
+
+# :: r-199::step02::sent01
+# :: snt2	Fry onions and garlic in oil until slightly golden .
+(s2f / fry-01~0
+     :ARG1 (s2a / and~2
+                :op1 (s2o2 / onion~1)
+                :op2 (s2g / garlic~3))
+     :medium (s2o / oil~5)
+     :duration (s2u / until~6
+                    :op1 (s2g2 / golden-02~8
+                               :degree (s2s / slight~7)))
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2c / cooked
+                                     :polarity -
+                                     :PATIENT s2g
+                                     :V_FINAL_STATE (s2f1 / fried))
+                            :E3 (s2a1 / apply_heat
+                                      :INSTRUMENT s2o
+                                      :PATIENT s2g)
+                            :E4 (s2a2 / and
+                                      :op1 (s2c1 / cooked
+                                                 :PATIENT s2g
+                                                 :V_FINAL_STATE s2f1)
+                                      :op2 (s2h / has_state
+                                                :PATIENT s2g
+                                                :RESULT s2g2))
+                            :E0 (s2d / do
+                                     :ACTION s2f))
+     :imp_output (s2f2 / fry.RES))
+
+
+# :: r-199::step03::sent01
+# :: snt3	Add spinach and fry together over medium heat until cooked .
+(s3a2 / and~2
+      :op1 (s3a / add-02~0
+                :ARG1 (s3s / spinach~1)
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I s3s)
+                                       :E3 (s3t2 / together
+                                                 :PATIENT_I s3s)
+                                       :E0 (s3d / do
+                                                :ACTION s3a))
+                :imp_output (s3a1 / add.RES))
+      :op2 (s3f / fry-01~3
+                :manner (s3h / heat~7
+                             :mod (s3m / medium~6))
+                :manner (s3t / together~4)
+                :duration (s3u / until~8
+                               :op1 (s3c / cook-01~9))
+                :ARG0 s3y
+                :event-structure (s3se1 / subevents
+                                        :E1 (s3c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s3a1
+                                                  :V_FINAL_STATE (s3f1 / fried))
+                                        :E3 (s3a3 / apply_heat
+                                                  :INSTRUMENT s3h
+                                                  :IMP_PATIENT s3a1)
+                                        :E4 (s3a4 / and
+                                                  :op1 (s3c2 / cooked
+                                                             :IMP_PATIENT s3a1
+                                                             :V_FINAL_STATE s3f1)
+                                                  :op2 (s3h1 / has_state
+                                                             :IMP_PATIENT s3a1
+                                                             :RESULT s3c))
+                                        :E0 (s3d1 / do
+                                                  :ACTION s3f))
+                :imp_output (s3f2 / fry.RES))
+      :mode imperative)
+
+
+# :: r-199::step04::sent01
+# :: snt4	Let it cool down completely in the refrigerator .
+(s4l / let-01~0
+     :ARG1 (s4c2 / cool-down-02~2,3
+                 :ARG1 (s4i / it~1)
+                 :ARG1-of (s4c / complete-02~4)
+                 :ARG0 (s4y / you)
+                 :event-structure (s4se / subevents
+                                        :E1 (s4h / has_state
+                                                 :polarity -
+                                                 :PATIENT s4i
+                                                 :V_FINAL_STATE (s4c1 / cooled-down))
+                                        :E3 (s4h1 / has_state
+                                                  :PATIENT s4i
+                                                  :V_FINAL_STATE s4c1)
+                                        :E0 (s4d / do
+                                                 :ACTION s4c2))
+                 :imp_output (s4c3 / cool.RES))
+     :location (s4r2 / refrigerator~7)
+     :mode imperative)
+
+
+# :: r-199::step05::sent01
+# :: snt5	Add salt and pepper to yogurt to taste and beat well until the yogurt is a free - flowing liquid .
+(s5a2 / and~8
+      :op1 (s5a / add-02~0,1
+                :ARG1 (s5a3 / and~2
+                            :op1 (s5s / salt)
+                            :op2 (s5p / pepper~3))
+                :ARG2 (s5y / yogurt~5,13)
+                :purpose (s5t / taste-01~7)
+                :ARG0 (s5y1 / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5t1 / together
+                                                 :polarity -
+                                                 :PATIENT_I (s5s1 / salt~1)
+                                                 :PATIENT_J s5p
+                                                 :PATIENT_K s5y)
+                                       :E3 (s5t2 / together
+                                                 :PATIENT_I s5s1
+                                                 :PATIENT_J s5p
+                                                 :PATIENT_K s5y)
+                                       :E0 (s5d / do
+                                                :ACTION s5a))
+                :imp_output (s5a1 / add.RES))
+      :op2 (s5b / beat-01~9
+                :manner (s5w / well~10)
+                :duration (s5u / until~11
+                               :op1 (s5l / liquid~19
+                                         :ARG1-of (s5f / flow-01~18
+                                                       :ARG1-of (s5f2 / free-04~16))
+                                         :domain s5y))
+                :ARG0 s5y1
+                :event-structure (s5se1 / subevents
+                                        :E1 (s5h / has_material_integrity_state
+                                                 :polarity -
+                                                 :IMP_PATIENT s5a1
+                                                 :V_STATE (s5b1 / beaten))
+                                        :E3 (s5h1 / has_material_integrity_state
+                                                  :IMP_PATIENT s5a1
+                                                  :V_STATE s5b1)
+                                        :E0 (s5d1 / do
+                                                  :ACTION s5b))
+                :imp_output (s5b2 / beat.RES))
+      :mode imperative)
+
+
+# :: r-199::step06::sent01
+# :: snt6	Add spinach to yogurt and mix well .
+(s6a2 / and
+      :op1 (s6a / add-02~0
+                :ARG1 (s6s / spinach~1)
+                :ARG2 (s6y / yogurt~3)
+                :ARG0 (s6y1 / you)
+                :event-structure (s6se / subevents
+                                       :E1 (s6t / together
+                                                :polarity -
+                                                :PATIENT_I s6s
+                                                :PATIENT_J s6y)
+                                       :E3 (s6t1 / together
+                                                 :PATIENT_I s6s
+                                                 :PATIENT_J s6y)
+                                       :E0 (s6d / do
+                                                :ACTION s6a))
+                :imp_output (s6a1 / add.RES))
+      :op2 (s6m / mix-01~5
+                :manner (s6w / well~6)
+                :ARG0 s6y1
+                :event-structure (s6se1 / subevents
+                                        :E1 (s6a3 / and
+                                                  :op1 (s6m1 / mingled
+                                                             :polarity -)
+                                                  :op2 (s6h / has_material_integrity_state
+                                                            :polarity -
+                                                            :V_STATE (s6m2 / mixed))
+                                                  :op3 (s6h1 / has_material_integrity_state
+                                                             :polarity -
+                                                             :V_STATE s6m2))
+                                        :E3 (s6a4 / and
+                                                  :op1 (s6m3 / mingled)
+                                                  :op2 (s6h2 / has_material_integrity_state
+                                                             :V_STATE s6m2)
+                                                  :op3 (s6h3 / has_material_integrity_state
+                                                             :V_STATE s6m2))
+                                        :E0 (s6d1 / do
+                                                  :ACTION s6m))
+                :imp_output (s6m4 / mix.RES))
+      :mode imperative)
+
+
+# :: r-199::step06::sent02
+# :: snt7	The mix should be thick and homogeneous .
+(s7r / recommend-01~2
+     :ARG1 (s7a / and
+                :op1 (s7t / thick-02~4)
+                :op2 (s7h / homogeneous~6)
+                :domain (s7m / mix~1)))
+
+

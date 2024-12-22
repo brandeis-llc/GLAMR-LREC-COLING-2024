@@ -1,0 +1,248 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1461
+export time: 9/26/2023, 12:53:52 PM
+
+# :: snt1	Combine dry ingredients and set aside .
+# sentence level graph:
+(s1a / and
+  :op1 (s1c / combine-01
+         :ARG1 (s1i / ingredient
+                 :mod (s1d / dry)))
+  :op2 (s1s / set-01
+         :ARG2 (s1a2 / aside))
+  :mode imperative)
+
+# alignment:s1a: 4-4
+s1a2: 6-6
+s1c: 1-1
+s1d: 2-2
+s1i: 3-3
+s1s: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	cream butter and Sugar until fluffy .
+# sentence level graph:
+(s2c / cream-01
+  :ARG1 (s2a / and
+          :op1 (s2b / butter)
+          :op2 (s2s / sugar))
+  :duration (s2u / until
+              :op1 (s2f / fluffy))
+  :mode imperative)
+
+# alignment:s2a: 3-3
+s2b: 2-2
+s2c: 1-1
+s2s: 4-4
+s2u: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Beat in eggs , lemon juice and vanilla .
+# sentence level graph:
+(s3b / beat-ON-06
+  :ARG1 (s3a / and
+          :op1 (s3e / egg)
+          :op2 (s3j / juice
+                 :source (s3l / lemon))
+          :op3 (s3v / vanilla))
+  :mode imperative)
+
+# alignment:s3a: 7-7
+s3b: 1-1
+s3e: 3-3
+s3j: 6-6
+s3l: 5-5
+s3v: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add flour and coconut until well blended .
+# sentence level graph:
+(s4a / add-02
+  :ARG1 (s4a2 / and
+          :op1 (s4f / flour)
+          :op2 (s4c / coconut))
+  :mode imperative
+  :duration (s4u / until
+              :op1 (s4b / blend-01
+                     :manner (s4w / well))))
+
+# alignment:s4a: 1-1
+s4a2: 3-3
+s4b: 7-7
+s4c: 4-4
+s4f: 2-2
+s4u: 5-5
+s4w: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Shape into ( 4 ) 2 inch rolls .
+# sentence level graph:
+(s5s / shape-01
+  :ARG2 (s5r / roll
+          :mod (s5d / distance-quantity
+                 :quant 2
+                 :unit (s5i / inch))
+          :quant 4)
+  :mode imperative)
+
+# alignment:s5d: 7-7
+s5i: 7-7
+s5r: 8-8
+s5s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Roll in colored Sugar .
+# sentence level graph:
+(s6r / roll-01
+  :ARG2 (s6s / sugar
+          :ARG1-of (s6c / color-01))
+  :mode imperative)
+
+# alignment:s6c: -1--1
+s6r: 1-1
+s6s: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Wrap in plastic wrap and chill at least 4 hours .
+# sentence level graph:
+(s7a / and
+  :op1 (s7w / wrap-01
+         :ARG2 (s7w2 / wrap
+                 :mod (s7p / plastic)))
+  :op2 (s7c / chill-01
+         :duration (s7a2 / at-least
+                     :op1 (s7t / temporal-quantity
+                            :unit (s7h / hour)
+                            :quant 4)))
+  :mode imperative)
+
+# alignment:s7a: 5-5
+s7a2: 8-8
+s7c: 6-6
+s7h: 10-10
+s7p: 3-3
+s7t: 10-10
+s7w: 1-1
+s7w2: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	With a sharp knife , saw into 1/4 inch slices .
+# sentence level graph:
+(s8s / saw-04
+  :ARG1 (s8s3 / slice
+          :mod (s8d / distance-quantity
+                 :quant "1/4"
+                 :unit (s8i / inch)))
+  :instrument (s8k / knife
+                :mod (s8s2 / sharp))
+  :mode imperative)
+
+# alignment:s8d: 9-9
+s8i: 9-9
+s8k: 4-4
+s8s: 6-6
+s8s2: 3-3
+s8s3: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt9	Bake at 375 degrees for 10- 12 minutes , or until slightly browned .
+# sentence level graph:
+(s9b / bake-01
+  :manner (s9t / temperature-quantity
+            :quant 375
+            :scale (s9f / fahrenheit))
+  :duration (s9o / or
+              :op1 (s9b2 / between
+                     :op1 (s9t2 / temporal-quantity
+                            :quant 10
+                            :duration s9o
+                            :unit (s9m2 / minute))
+                     :op2 (s9t3 / temporal-quantity
+                            :quant 12
+                            :unit (s9m / minute)))
+              :op2 (s9u / until
+                     :op1 (s9b3 / brown-01
+                            :degree (s9s / slight))))
+  :mode imperative)
+
+# alignment:s9b: 1-1
+s9b2: 14-14
+s9b3: 13-13
+s9f: 4-4
+s9m: 5-5
+s9m2: 8-8
+s9o: 10-10
+s9s: 12-12
+s9t: 4-4
+s9t2: 8-8
+s9t3: 9-9
+s9u: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Combine dry ingredients and set aside .
+cream butter and Sugar until fluffy .
+Beat in eggs , lemon juice and vanilla .
+Add flour and coconut until well blended .
+Shape into ( 4 ) 2 inch rolls .
+Roll in colored Sugar .
+Wrap in plastic wrap and chill at least 4 hours .
+With a sharp knife , saw into 1/4 inch slices .
+Bake at 375 degrees for 10- 12 minutes , or until slightly browned .

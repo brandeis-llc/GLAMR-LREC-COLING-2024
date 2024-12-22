@@ -1,0 +1,217 @@
+# :: r-715::step01::sent01
+# :: snt1	Melt butter over medium heat .
+(s1m2 / melt-01~0
+      :ARG1 (s1b / butter~1)
+      :manner (s1h / heat~4
+                   :mod (s1m / medium~3))
+      :mode imperative
+      :ARG0 (s1y / you)
+      :event-structure (s1se / subevents
+                             :E1 (s1b1 / be
+                                       :polarity -)
+                             :E2 (s1a / and
+                                      :op1 (s1b2 / be)
+                                      :op2 (s1m1 / made_of))
+                             :E0 (s1d / do
+                                      :ACTION s1m2))
+      :imp_output (s1m3 / melt.RES))
+
+
+# :: r-715::step02::sent01
+# :: snt2	Add flour , stirring constantly , until the mixture becomes puffy .
+(s2a / add-02~0
+     :ARG1 (s2f / flour~1)
+     :manner (s2s / stir-01~3
+                  :manner (s2c / constant~4)
+                  :ARG0 s2y
+                  :event-structure (s2se1 / subevents
+                                          :E1 (s2h / has_material_integrity_state
+                                                   :polarity -
+                                                   :IMP_PATIENT s2a1
+                                                   :V_STATE (s2s1 / stirred))
+                                          :E3 (s2h1 / has_material_integrity_state
+                                                    :IMP_PATIENT s2a1
+                                                    :V_STATE s2s1)
+                                          :E0 (s2d1 / do
+                                                    :ACTION s2s))
+                  :imp_output (s2s2 / stir.RES))
+     :mode imperative
+     :duration (s2u / until~6
+                    :op1 (s2b / become-01~9
+                              :ARG1 (s2m / mix-01~8)
+                              :ARG2 (s2p / puffy~10)))
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2t / together
+                                     :polarity -
+                                     :PATIENT_I s2f)
+                            :E3 (s2t1 / together
+                                      :PATIENT_I s2f)
+                            :E0 (s2d / do
+                                     :ACTION s2a))
+     :imp_output (s2a1 / add.RES))
+
+
+# :: r-715::step03::sent01
+# :: snt3	Add water , bouillon powder , onions , potatoes and carrots .
+(s3a / add-02~0
+     :ARG1 (s3a2 / and~9
+                 :op1 (s3w / water~1)
+                 :op2 (s3p2 / powder~4
+                            :mod (s3b / bouillon~3))
+                 :op3 (s3o / onion~6)
+                 :op4 (s3p / potato~8)
+                 :op5 (s3c / carrot~10))
+     :mode imperative
+     :ARG0 (s3y / you)
+     :event-structure (s3se / subevents
+                            :E1 (s3t / together
+                                     :polarity -
+                                     :PATIENT_I s3w
+                                     :PATIENT_J s3p2
+                                     :PATIENT_K s3o
+                                     :PATIENT_L s3p
+                                     :PATIENT_M s3c)
+                            :E3 (s3t1 / together
+                                      :PATIENT_I s3w
+                                      :PATIENT_J s3p2
+                                      :PATIENT_K s3o
+                                      :PATIENT_L s3p
+                                      :PATIENT_M s3c)
+                            :E0 (s3d / do
+                                     :ACTION s3a))
+     :imp_output (s3a1 / add.RES))
+
+
+# :: r-715::step04::sent01
+# :: snt4	Bring to a boil , stirring occasionally .
+(s4b2 / bring-ON-02~0
+      :destination (s4b / boil~3)
+      :manner (s4s / stir-01~5
+                   :manner (s4o / occasional~6)
+                   :ARG0 s4y
+                   :event-structure (s4se1 / subevents
+                                           :E1 (s4h / has_material_integrity_state
+                                                    :polarity -
+                                                    :IMP_PATIENT s4b3
+                                                    :V_STATE (s4s1 / stirred))
+                                           :E3 (s4h1 / has_material_integrity_state
+                                                     :IMP_PATIENT s4b3
+                                                     :V_STATE s4s1)
+                                           :E0 (s4d1 / do
+                                                     :ACTION s4s))
+                   :imp_output (s4s2 / stir.RES))
+      :mode imperative
+      :ARG0 (s4y / you)
+      :event-structure (s4se / subevents
+                             :E1 (s4c / cooked
+                                      :polarity -
+                                      :IMP_PATIENT (s4a / add.RES)
+                                      :V_FINAL_STATE (s4b1 / brought-to-a-boil))
+                             :E3 (s4a1 / apply_heat
+                                       :IMP_PATIENT s4a)
+                             :E4 (s4c1 / cooked
+                                       :IMP_PATIENT s4a
+                                       :V_FINAL_STATE s4b1)
+                             :E0 (s4d / do
+                                      :ACTION s4b2))
+      :imp_output (s4b3 / bring-to-a-boil.RES))
+
+
+# :: r-715::step05::sent01
+# :: snt5	Reduce heat and simmer until potatoes are almost done ( about 5 to 6 minutes ) .
+(s5a3 / and
+      :op1 (s5r / reduce-01
+                :ARG1 (s5h / heat~1))
+      :op2 (s5s / simmer-01~3
+                :ARG0 (s5y / you)
+                :event-structure (s5se / subevents
+                                       :E1 (s5c / cooked
+                                                :polarity -
+                                                :IMP_PATIENT (s5s1 / stir.RES)
+                                                :V_FINAL_STATE (s5s2 / simmered))
+                                       :E3 (s5a1 / apply_heat
+                                                 :IMP_PATIENT s5s1)
+                                       :E4 (s5a4 / and
+                                                 :op1 (s5c1 / cooked
+                                                            :IMP_PATIENT s5s1
+                                                            :V_FINAL_STATE s5s2)
+                                                 :op2 (s5h1 / has_state
+                                                            :IMP_PATIENT s5s1
+                                                            :RESULT s5d))
+                                       :E0 (s5d1 / do
+                                                 :ACTION s5s))
+                :imp_output (s5s3 / simmer.RES))
+      :duration (s5u / until~4
+                     :op1 (s5d / done-08~8
+                               :ARG1 (s5p / potato~5)
+                               :mod (s5a2 / almost~7))
+                     :op2 (s5a / about~10
+                               :op1 (s5b2 / between
+                                          :op1 (s5t / temporal-quantity
+                                                    :quant 5
+                                                    :unit (s5m / minute~14))
+                                          :op2 (s5t2 / temporal-quantity
+                                                     :quant 6
+                                                     :unit (s5m2 / minute)))))
+      :mode imperative)
+
+
+# :: r-715::step06::sent01
+# :: snt6	Add broccoli and return to boil .
+(s6a2 / and
+      :op1 (s6a / add-02~0
+                :ARG1 (s6b2 / broccoli~1)
+                :ARG0 (s6y / you)
+                :event-structure (s6se / subevents
+                                       :E1 (s6t / together
+                                                :polarity -
+                                                :PATIENT_I s6b2)
+                                       :E3 (s6t1 / together
+                                                 :PATIENT_I s6b2)
+                                       :E0 (s6d / do
+                                                :ACTION s6a))
+                :imp_output (s6a1 / add.RES))
+      :op2 (s6r / return-01~3
+                :ARG4 (s6b / boil~5
+                           :ARG0 s6y
+                           :event-structure (s6se1 / subevents
+                                                   :E1 (s6c / cooked
+                                                            :polarity -
+                                                            :PATIENT s6b2
+                                                            :V_FINAL_STATE (s6b1 / boiled))
+                                                   :E3 (s6a3 / apply_heat
+                                                             :PATIENT s6b2)
+                                                   :E4 (s6c1 / cooked
+                                                             :PATIENT s6b2
+                                                             :V_FINAL_STATE s6b1)
+                                                   :E0 (s6d1 / do
+                                                             :ACTION s6b))
+                           :imp_output (s6b3 / boil.RES)))
+      :mode imperative)
+
+
+# :: r-715::step07::sent01
+# :: snt7	Simmer for another minute .
+(s7s / simmer-01~0
+     :duration (s7t / temporal-quantity
+                    :quant 1
+                    :mod (s7a / another~2)
+                    :unit (s7m / minute~3))
+     :mode imperative
+     :ARG0 (s7y / you)
+     :event-structure (s7se / subevents
+                            :E1 (s7c / cooked
+                                     :polarity -
+                                     :IMP_PATIENT (s7b / boil.RES)
+                                     :V_FINAL_STATE (s7s1 / simmered))
+                            :E3 (s7a1 / apply_heat
+                                      :IMP_PATIENT s7b)
+                            :E4 (s7c1 / cooked
+                                      :IMP_PATIENT s7b
+                                      :V_FINAL_STATE s7s1)
+                            :E0 (s7d / do
+                                     :ACTION s7s))
+     :imp_output (s7s2 / simmer.RES))
+
+

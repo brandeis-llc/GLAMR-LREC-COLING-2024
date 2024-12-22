@@ -1,0 +1,250 @@
+user name: timobi
+user id: 423
+file language: english
+file format: plain_text
+Doc ID in database: 1447
+export time: 10/3/2023, 5:18:01 PM
+
+# :: snt1	Break the rice sticks into a pan and cover with boiling water for 5 minutes - then strain .
+# sentence level graph:
+(s1a / and
+  :op1 (s1b2 / break-01
+         :ARG1 (s1s3 / stick
+                 :consist-of (s1r / rice))
+         :location (s1p / pan))
+  :op2 (s1c / cover-02
+         :ARG2 (s1w / water
+                 :ARG1-of (s1b / boil-01))
+         :duration (s1t / temporal-quantity
+                     :quant 5
+                     :unit (s1m / minute)))
+  :op3 (s1s2 / strain-01
+         :time (s1t2 / then))
+  :mode imperative)
+
+# alignment:s1a: 8-8
+s1b: 11-11
+s1b2: 1-1
+s1c: 9-9
+s1m: 15-15
+s1p: 7-7
+s1r: 3-3
+s1s2: 18-18
+s1t: 15-15
+s1t2: 17-17
+s1w: 12-12
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Reserve .
+# sentence level graph:
+(s2r / reserve-01
+  :mode imperative)
+
+# alignment:s2r: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Fry the shallots and garlic for a few minutes in the oil , then add the ginger , coriander , and turmeric .
+# sentence level graph:
+(s3a4 / and
+  :op1 (s3f / fry-01
+         :ARG1 (s3a2 / and
+                 :op1 (s3s / shallot)
+                 :op2 (s3g / garlic))
+         :medium (s3o / oil)
+         :duration (s3t / temporal-quantity
+                     :unit (s3m / minute)
+                     :quant "few"))
+  :op2 (s3a / add-02
+         :ARG1 (s3a3 / and
+                 :op1 (s3g2 / ginger)
+                 :op2 (s3c / coriander)
+                 :op3 (s3t3 / turmeric))
+         :time (s3t2 / then))
+  :mode imperative)
+
+# alignment:s3a: 15-15
+s3a2: -1--1
+s3a3: 21-21
+s3c: 19-19
+s3f: 1-0
+s3g: -1--1
+s3g2: 17-17
+s3m: -1--1
+s3o: -1--1
+s3s: -1--1
+s3t: -1--1
+s3t2: 14-14
+s3t3: 22-22
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Pour in the stock , bring to a boil , then reduce heat and simmer for 30 minutes .
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4p2 / pour-01
+         :ARG1 (s4s2 / stock))
+  :op2 (s4b2 / bring-ON-02
+         :destination (s4b / boil-01))
+  :op3 (s4r / reduce-01
+         :ARG1 (s4h / heat)
+         :time (s4t2 / then))
+  :op4 (s4s / simmer-01
+         :duration (s4t / temporal-quantity
+                     :quant 30
+                     :unit (s4m / minute)))
+  :mode imperative)
+
+# alignment:s4a2: 14-14
+s4b: 9-9
+s4b2: 6-6
+s4h: 13-12
+s4m: 18-18
+s4r: 12-12
+s4s: 15-15
+s4s2: 4-4
+s4t: 18-18
+s4t2: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	When ready to serve , add the rice sticks and the coconut milk and bring to a simmer for about 5 minutes ( if you bring the coconut milk to a boil , you 'll use the coconut taste )
+# sentence level graph:
+(s5a5 / and
+  :op1 (s5a2 / add-02
+         :ARG1 (s5a3 / and
+                 :op1 (s5s3 / sticks
+                        :consist-of (s5r2 / rice))
+                 :op2 (s5m3 / milk
+                        :source (s5c / coconut))))
+  :op2 (s5b2 / bring-ON-02
+         :destination (s5s2 / simmer-01
+                        :duration (s5a / about
+                                    :op1 (s5t2 / temporal-quantity
+                                           :unit (s5m2 / minute)
+                                           :quant 5))))
+  :op3 (s5u / use-01
+         :ARG0 (s5y / you)
+         :ARG1 (s5t / taste
+                 :mod (s5c2 / coconut))
+         :condition (s5b / bring-01
+                      :destination (s5b3 / boil-01
+                                     :ARG1 (s5m / milk))))
+  :mode imperative
+  :time (s5r / ready-02
+          :ARG2 (s5s / serve-02)))
+
+# alignment:s5a: -1--1
+s5a2: -1--1
+s5a3: -1--1
+s5b: 32-32
+s5b2: -1--1
+s5b3: 0-0
+s5c: -1--1
+s5c2: 38-38
+s5m: -1--1
+s5m2: -1--1
+s5m3: -1--1
+s5r: -1--1
+s5r2: 0-0
+s5s: -1--1
+s5s2: -1--1
+s5s3: -1--1
+s5t: 39-39
+s5t2: -1--1
+s5u: 36-36
+s5y: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Toss in the shrimp and bean sprouts and simmer for 5 more minutes .
+# sentence level graph:
+(s6a / and
+  :op1 (s6t2 / toss-01
+         :ARG1 (s6a2 / and
+                 :op1 (s6s / shrimp)
+                 :op2 (s6b2 / bean-sprout)))
+  :op2 (s6s2 / simmer-01
+         :duration (s6t3 / temporal-quantity
+                     :quant 5
+                     :unit (s6m3 / minute)
+                     :mod (s6m / more)))
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6a2: 5-5
+s6m: -1--1
+s6m3: 0-0
+s6s: 4-4
+s6s2: 9-9
+s6t2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Adjust the seasoning , ladle into bowls , and garnish with chopped scallions .
+# sentence level graph:
+(s7a2 / and
+  :op1 (s7a / adjust-01
+         :ARG1 (s7s2 / seasoning))
+  :op2 (s7l / ladle-01
+         :ARG2 (s7b / bowl))
+  :op3 (s7g / garnish-01
+         :ARG2 (s7s / scallion
+                 :ARG1-of (s7c / chop-01)))
+  :mode imperative)
+
+# alignment:s7a: 1-1
+s7a2: 9-9
+s7b: 7-7
+s7c: 12-12
+s7g: 10-10
+s7l: 5-5
+s7s: 13-13
+s7s2: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Break the rice sticks into a pan and cover with boiling water for 5 minutes - then strain .
+Reserve .
+Fry the shallots and garlic for a few minutes in the oil , then add the ginger , coriander , and turmeric .
+Pour in the stock , bring to a boil , then reduce heat and simmer for 30 minutes .
+When ready to serve , add the rice sticks and the coconut milk and bring to a simmer for about 5 minutes ( if you bring the coconut milk to a boil , you 'll use the coconut taste )
+Toss in the shrimp and bean sprouts and simmer for 5 more minutes .
+Adjust the seasoning , ladle into bowls , and garnish with chopped scallions .

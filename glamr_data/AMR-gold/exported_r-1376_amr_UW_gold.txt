@@ -1,0 +1,205 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1463
+export time: 9/26/2023, 8:47:22 PM
+
+# :: snt1	In a 3 quart saucepan , place prunes and 2 cups water ; heat to boiling .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1p / place-01
+         :ARG1 (s1a / and
+                 :op1 (s1p2 / prune)
+                 :op2 (s1w / water
+                        :quant (s1v2 / volume-quantity
+                                 :quant 2
+                                 :unit (s1c / cup))))
+         :location (s1s / saucepan
+                     :mod (s1v / volume-quantity
+                            :quant 3
+                            :unit (s1q / quart))))
+  :op2 (s1h / heat-01
+         :destination (s1b / boiling))
+  :mode imperative)
+
+# alignment:s1a: 9-9
+s1b: 16-16
+s1c: 11-11
+s1h: 14-14
+s1p: 7-7
+s1p2: 8-8
+s1q: 4-4
+s1s: 5-5
+s1v: 4-4
+s1v2: 11-11
+s1w: 12-12
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Reduce heat , and simmer , covered , 30 minutes , or until prunes are very tender .
+# sentence level graph:
+(s2a / and
+  :op1 (s2r / reduce-01
+         :ARG1 (s2h / heat))
+  :op2 (s2s / simmer-01
+         :manner (s2c / cover-02)
+         :duration (s2o / or
+                     :op1 (s2t / temporal-quantity
+                            :unit (s2m / minute)
+                            :quant 30)
+                     :op2 (s2u / until
+                            :op1 (s2t2 / tender-ON-03
+                                   :ARG1 (s2p / prune)
+                                   :degree (s2v / very)))))
+  :mode imperative)
+
+# alignment:s2a: 4-4
+s2c: 7-7
+s2h: 2-2
+s2m: -1--1
+s2p: -1--1
+s2r: 1-1
+s2s: 5-5
+s2t: -1--1
+s2t2: -1--1
+s2u: -1--1
+s2v: -1--1
+s2o: 12-12
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Drain prunes , reserving liquid .
+# sentence level graph:
+(s3d / drain-01
+  :ARG1 (s3p / prune)
+  :manner (s3r / reserve-01
+            :ARG1 (s3l / liquid))
+  :mode imperative)
+
+# alignment:s3d: 1-1
+s3l: 5-5
+s3p: 2-2
+s3r: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Chop prunes finely .
+# sentence level graph:
+(s4c / chop-01
+  :ARG1 (s4p / prune)
+  :manner (s4f / fine)
+  :mode imperative)
+
+# alignment:s4f: 3-3
+s4p: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Add 3/4 cup granulated sugar , 1 teaspoon vanilla ; the cardamom , 1/4 teaspoon salt , and 1/2 cup reserved cooking liquid ; mix until ingredients are well blended .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5a / add-02
+         :ARG1 (s5a3 / and
+                 :op1 (s5s2 / sugar
+                        :ARG1-of (s5g / granulate-01)
+                        :quant (s5v3 / volume-quantity
+                                 :quant "3/4"
+                                 :unit (s5c5 / cup)))
+                 :op2 (s5v / vanilla
+                        :quant (s5v4 / volume-quantity
+                                 :quant 1
+                                 :unit (s5t / teaspoon)))
+                 :op3 (s5c / cardamom)
+                 :op4 (s5s / salt
+                        :quant (s5v5 / volume-quantity
+                                 :quant "1/4"
+                                 :unit (s5t2 / teaspoon)))
+                 :op5 (s5l / liquid
+                        :purpose (s5c2 / cook-01)
+                        :quant (s5v2 / volume-quantity
+                                 :quant "1/2"
+                                 :unit (s5c4 / cup))
+                        :ARG1-of (s5r / reserve-01))))
+  :op2 (s5m3 / mix-01
+         :duration (s5u / until
+                     :op1 (s5b / blend-01
+                            :ARG1 (s5i / ingredient)
+                            :manner (s5w / well))))
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5a2: 10-10
+s5a3: 18-18
+s5b: 30-30
+s5c: 12-12
+s5c2: 22-22
+s5c4: 20-20
+s5g: 4-4
+s5i: 27-27
+s5l: 23-23
+s5m3: 25-25
+s5r: 21-21
+s5s: 16-16
+s5s2: 5-5
+s5t: 8-8
+s5t2: 15-15
+s5u: 26-26
+s5v: 9-9
+s5v2: 20-20
+s5w: 29-29
+s5v3: 0-0
+s5c5: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Set aside to cool .
+# sentence level graph:
+(s6s / set-01
+  :ARG2 (s6a / aside)
+  :purpose (s6c / cool-01)
+  :mode imperative)
+
+# alignment:s6a: 2-2
+s6c: 4-4
+s6s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+In a 3 quart saucepan , place prunes and 2 cups water ; heat to boiling .
+Reduce heat , and simmer , covered , 30 minutes , or until prunes are very tender .
+Drain prunes , reserving liquid .
+Chop prunes finely .
+Add 3/4 cup granulated sugar , 1 teaspoon vanilla ; the cardamom , 1/4 teaspoon salt , and 1/2 cup reserved cooking liquid ; mix until ingredients are well blended .
+Set aside to cool .

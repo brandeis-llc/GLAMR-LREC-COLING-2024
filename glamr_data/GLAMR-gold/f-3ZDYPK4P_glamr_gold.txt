@@ -1,0 +1,311 @@
+# :: f-3ZDYPK4P::step01::sent01
+# :: snt1	In a large skillet , cook andouille on high for 2 minutes .
+(s1c / cook-01~5
+     :ARG1 (s1a / andouille~6)
+     :duration (s1t / temporal-quantity
+                    :quant 2
+                    :unit (s1m / minute~11))
+     :location (s1s / skillet~3
+                    :mod (s1l / large~2)
+                    :mod (s1t2 / temperature-quantity
+                               :mod (s1h / high-02~8)))
+     :mode imperative
+     :ARG0 (s1y / you)
+     :event-structure (s1se / subevents
+                            :E1 (s1c1 / cooked
+                                      :polarity -
+                                      :PATIENT s1a
+                                      :V_FINAL_STATE (s1c2 / cooked))
+                            :E3 (s1a1 / apply_heat
+                                      :INSTRUMENT s1h
+                                      :PATIENT s1a)
+                            :E4 (s1c3 / cooked
+                                      :PATIENT s1a
+                                      :V_FINAL_STATE s1c2)
+                            :E0 (s1d / do
+                                     :ACTION s1c))
+     :imp_output (s1c4 / cook.RES))
+
+
+# :: f-3ZDYPK4P::step01::sent02
+# :: snt2	Lower heat to medium and continue to cook until sausage begins to brown .
+(s2a / and~4
+     :op1 (s2l / lower-05~0
+               :ARG1 (s2h / heat~1)
+               :ARG4 (s2m / medium~3))
+     :op2 (s2c / continue-01~5
+               :ARG1 (s2c2 / cook-01~7
+                           :ARG0 (s2y / you)
+                           :event-structure (s2se / subevents
+                                                  :E1 (s2c1 / cooked
+                                                            :polarity -
+                                                            :IMP_PATIENT (s2c3 / cook.RES)
+                                                            :V_FINAL_STATE (s2c4 / cooked))
+                                                  :E3 (s2a1 / apply_heat
+                                                            :IMP_PATIENT s2c3)
+                                                  :E4 (s2a2 / and
+                                                            :op1 (s2c5 / cooked
+                                                                       :IMP_PATIENT s2c3
+                                                                       :V_FINAL_STATE s2c4)
+                                                            :op2 (s2h1 / has_state
+                                                                       :IMP_PATIENT s2c3
+                                                                       :RESULT s2b2))
+                                                  :E0 (s2d / do
+                                                           :ACTION s2c2))
+                           :imp_output (s2c6 / cook.RES))
+               :time (s2u / until~8
+                          :op1 (s2b / begin-02~10
+                                    :ARG1 (s2b2 / brown-01~12
+                                                :ARG1 (s2s / sausage~9)))))
+     :mode imperative)
+
+
+# :: f-3ZDYPK4P::step02::sent01
+# :: snt3	Stir frequently and scrape juiced from the bottom of the pan .
+(s3a / and~2
+     :op1 (s3s2 / stir-01~0
+                :manner (s3f / frequent-02~1)
+                :ARG0 (s3y / you)
+                :event-structure (s3se / subevents
+                                       :E1 (s3h / has_material_integrity_state
+                                                :polarity -
+                                                :IMP_PATIENT (s3c / cook.RES)
+                                                :V_STATE (s3s1 / stirred))
+                                       :E3 (s3h1 / has_material_integrity_state
+                                                 :IMP_PATIENT s3c
+                                                 :V_STATE s3s1)
+                                       :E0 (s3d / do
+                                                :ACTION s3s2))
+                :imp_output (s3s3 / stir.RES))
+     :op2 (s3s / scrape-01~3
+               :ARG1 (s3j / juice~4)
+               :ARG2 (s3b / bottom~7
+                          :part-of (s3p / pan~10))
+               :ARG0 s3y
+               :event-structure (s3se1 / subevents
+                                       :E (s3h2 / has_location
+                                                :SOURCE s3p)
+                                       :E0 (s3d1 / do
+                                                 :ACTION s3s))
+               :imp_output (s3s4 / scrape.RES))
+     :mode imperative)
+
+
+# :: f-3ZDYPK4P::step03::sent01
+# :: snt4	Add onions , celery and peppers .
+(s4a / add-02~0
+     :ARG1 (s4a2 / and~4
+                 :op1 (s4o / onion~1)
+                 :op2 (s4c / celery~3)
+                 :op3 (s4p / pepper~5))
+     :mode imperative
+     :ARG0 (s4y / you)
+     :event-structure (s4se / subevents
+                            :E1 (s4t / together
+                                     :polarity -
+                                     :PATIENT_I s4o
+                                     :PATIENT_J s4c
+                                     :PATIENT_K s4p)
+                            :E3 (s4t1 / together
+                                      :PATIENT_I s4o
+                                      :PATIENT_J s4c
+                                      :PATIENT_K s4p)
+                            :E0 (s4d / do
+                                     :ACTION s4a))
+     :imp_output (s4a1 / add.RES))
+
+
+# :: f-3ZDYPK4P::step03::sent02
+# :: snt5	Continue to cook until vegetables are tender but still firm , about 7 minutes .
+(s5c / continue-01~0
+     :ARG1 (s5c3 / cook-01~2
+                 :duration (s5c2 / contrast-01
+                                 :ARG1 (s5t2 / tender-02~6
+                                             :ARG1 (s5v / vegetable~4))
+                                 :ARG2 (s5f / firm-03~9
+                                            :ARG1 s5v
+                                            :mod (s5s / still~8)))
+                 :ARG0 (s5y / you)
+                 :event-structure (s5se / subevents
+                                        :E1 (s5c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT (s5a1 / add.RES)
+                                                  :V_FINAL_STATE (s5c4 / cooked))
+                                        :E3 (s5a2 / apply_heat
+                                                  :IMP_PATIENT s5a1)
+                                        :E4 (s5a3 / and
+                                                  :op1 (s5c5 / cooked
+                                                             :IMP_PATIENT s5a1
+                                                             :V_FINAL_STATE s5c4)
+                                                  :op2 (s5h / has_state
+                                                            :IMP_PATIENT s5a1
+                                                            :RESULT s5f))
+                                        :E0 (s5d / do
+                                                 :ACTION s5c3))
+                 :imp_output (s5c6 / cook.RES))
+     :duration (s5a / about~11
+                    :op1 (s5t / temporal-quantity
+                              :quant 7
+                              :unit (s5m / minute~13)))
+     :mode imperative)
+
+
+# :: f-3ZDYPK4P::step04::sent01
+# :: snt6	Return the heat to high , which will bring the oil to the bottom of the pan .
+(s6r / return-03~0
+     :ARG1 (s6h / heat~2)
+     :ARG2 (s6h2 / high-02~4)
+     :purpose (s6b2 / bring-01~8
+                    :ARG1 (s6o / oil~10)
+                    :ARG2 (s6b / bottom~13
+                               :part-of (s6p / pan~16)))
+     :mode imperative)
+
+
+# :: f-3ZDYPK4P::step05::sent01
+# :: snt7	Add Beaumonde ; cook until the mixture sticks , almost to the point of scorching , about 2 minutes .
+(s7a4 / and
+      :op1 (s7a2 / add-02~0
+                 :ARG1 (s7p / product
+                            :name (s7n / name
+                                       :op1 "Beaumonde"))
+                 :ARG0 (s7y / you)
+                 :event-structure (s7se / subevents
+                                        :E1 (s7t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I (s7B / Beaumonde~1))
+                                        :E3 (s7t3 / together
+                                                  :PATIENT_I s7B)
+                                        :E0 (s7d / do
+                                                 :ACTION s7a2))
+                 :imp_output (s7a1 / add.RES))
+      :op2 (s7c / cook-01~3
+                :duration (s7a / about~16
+                               :op1 (s7t / temporal-quantity
+                                         :quant 2
+                                         :unit (s7m / minute~18)))
+                :time (s7u / until~4
+                           :op1 (s7s2 / stick-01~7
+                                      :ARG1 (s7m2 / mixture~6)
+                                      :ARG2-of (s7h / have-degree-91
+                                                    :ARG1 s7m2
+                                                    :ARG3 (s7t2 / to-the-point)
+                                                    :ARG6 (s7s / scorch-01~14
+                                                               :ARG1 s7m2)
+                                                    :mod (s7a3 / almost~9))))
+                :ARG0 s7y
+                :event-structure (s7se1 / subevents
+                                        :E1 (s7c1 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s7a1
+                                                  :V_FINAL_STATE (s7c2 / cooked))
+                                        :E3 (s7a5 / apply_heat
+                                                  :IMP_PATIENT s7a1)
+                                        :E4 (s7a6 / and
+                                                  :op1 (s7c3 / cooked
+                                                             :IMP_PATIENT s7a1
+                                                             :V_FINAL_STATE s7c2)
+                                                  :op2 (s7h1 / has_state
+                                                             :IMP_PATIENT s7a1
+                                                             :RESULT s7s2))
+                                        :E0 (s7d1 / do
+                                                  :ACTION s7c))
+                :imp_output (s7c4 / cook.RES))
+      :mode imperative)
+
+
+# :: f-3ZDYPK4P::step05::sent02
+# :: snt8	Stir and scrape the bottom of the pan constantly over this period .
+(s8a / and~1
+     :op1 (s8s2 / stir-01~0
+                :ARG1 (s8b / bottom~4
+                           :part-of (s8p / pan~7))
+                :ARG0 (s8y / you)
+                :event-structure (s8se / subevents
+                                       :E1 (s8h / has_material_integrity_state
+                                                :polarity -
+                                                :PATIENT s8p
+                                                :V_STATE (s8s1 / stirred))
+                                       :E3 (s8h1 / has_material_integrity_state
+                                                 :PATIENT s8p
+                                                 :V_STATE s8s1)
+                                       :E0 (s8d / do
+                                                :ACTION s8s2))
+                :imp_output (s8s3 / stir.RES))
+     :op2 (s8s / scrape-01~2
+               :ARG1 s8b
+               :ARG0 s8y
+               :event-structure (s8se1 / subevents
+                                       :E (s8h2 / has_location
+                                                :SOURCE s8p)
+                                       :E0 (s8d1 / do
+                                                 :ACTION s8s))
+               :imp_output (s8s4 / scrape.RES))
+     :duration (s8p2 / period~11
+                     :mod (s8t / this~10))
+     :manner (s8c / constant~8)
+     :mode imperative)
+
+
+# :: f-3ZDYPK4P::step06::sent01
+# :: snt9	Add stock and bring to a simmer .
+(s9a4 / and~2
+      :op1 (s9a / add-02~0
+                :ARG1 (s9s2 / stock~1)
+                :ARG0 (s9y / you)
+                :event-structure (s9se / subevents
+                                       :E1 (s9t / together
+                                                :polarity -
+                                                :PATIENT_I s9s2)
+                                       :E3 (s9t1 / together
+                                                 :PATIENT_I s9s2)
+                                       :E0 (s9d / do
+                                                :ACTION s9a))
+                :imp_output (s9a1 / add.RES))
+      :op2 (s9b / bring-01~3
+                :ARG3 (s9s / simmer-01~6))
+      :mode imperative)
+
+
+# :: f-3ZDYPK4P::step06::sent02
+# :: snt10	Reduce heat and continue simmering and stirring for another 5 minutes .
+(s10a4 / and~2
+       :op1 (s10r / reduce-01~0
+                  :ARG1 (s10h / heat~1))
+       :op2 (s10c2 / continue-01~3
+                   :ARG1 (s10a5 / and~5
+                                :op1 (s10s4 / simmer-01~4
+                                            :ARG0 (s10y / you)
+                                            :event-structure (s10se / subevents
+                                                                    :E1 (s10c / cooked
+                                                                              :polarity -
+                                                                              :IMP_PATIENT (s10s / simmer.RES)
+                                                                              :V_FINAL_STATE (s10s1 / simmered))
+                                                                    :E3 (s10a / apply_heat
+                                                                              :IMP_PATIENT s10s)
+                                                                    :E4 (s10c1 / cooked
+                                                                               :IMP_PATIENT s10s
+                                                                               :V_FINAL_STATE s10s1)
+                                                                    :E0 (s10d / do
+                                                                              :ACTION s10s4))
+                                            :imp_output (s10s2 / simmer.RES))
+                                :op2 (s10s3 / stir-01~6
+                                            :ARG0 s10y
+                                            :event-structure (s10se1 / subevents
+                                                                     :E1 (s10h1 / has_material_integrity_state
+                                                                                :polarity -
+                                                                                :IMP_PATIENT s10s2
+                                                                                :V_STATE (s10s5 / stirred))
+                                                                     :E3 (s10h2 / has_material_integrity_state
+                                                                                :IMP_PATIENT s10s2
+                                                                                :V_STATE s10s5)
+                                                                     :E0 (s10d1 / do
+                                                                                :ACTION s10s3))
+                                            :imp_output (s10s6 / stir.RES))
+                                :duration (s10t2 / temporal-quantity
+                                                 :unit (s10m2 / minute~10)
+                                                 :mod (s10a6 / another~8)
+                                                 :quant 5)))
+       :mode imperative)
+
+

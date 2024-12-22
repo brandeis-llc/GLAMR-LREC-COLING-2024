@@ -1,0 +1,69 @@
+# :: f-M5CGM5Q7::step01::sent01
+# :: snt1	Place chopped sweet potato in a pot and cover with water .
+(s1 / sentence
+    :coref ((s1c :cut s1p1)
+			(s1p1 :cut s1c1)
+			(s1c1 :cut s1p)
+			(s1p :cut s1a2)
+			(s1a2 :aggregation s1c)
+			(s1c :aggregation s1p)
+			(s1a2 :aggregation s1p)))
+
+
+# :: f-M5CGM5Q7::step01::sent02
+# :: snt2	Bring to boil , lower heat and simmer for about 20 minutes or until tender .
+(s2 / sentence
+    :coref ((s2h :aggregation s2l)
+			(s2l :aggregation s2a2)
+			(s2a2 :cut s2u)
+			(s2b :cut s2b2)
+			(s2b2 :aggregation s2a2)))
+
+
+# :: f-M5CGM5Q7::step01::sent03
+# :: snt3	Then place the cooked sweet potato , sugar and fresh milk in a liquidiser , blend till very smooth .
+(s3 / sentence
+    :coref ((s1p :aggregation s3t)
+			(s3t :cut s3m)
+			(s1p :cut s3m)
+			(s2u :aggregation s3t)
+			(s2a2 :aggregation s3t)))
+
+
+# :: f-M5CGM5Q7::step01::sent04
+# :: snt4	Add a little more milk if you find the cooked sweet potato is still a little dry .
+(s4 / sentence)
+
+
+# :: f-M5CGM5Q7::step02::sent01
+# :: snt5	In a bowl , mix egg yolks and condensed milk together and set aside .
+(s5 / sentence
+    :coref ((s3m :cut s5m)
+			(s3t :cut s5m)))
+
+
+# :: f-M5CGM5Q7::step02::sent02
+# :: snt6	Boil 250ml whipping cream and gradually add into the egg yolk mixture and stir well with a hand whisk .
+(s6 / sentence)
+
+
+# :: f-M5CGM5Q7::step02::sent03
+# :: snt7	Then pour egg yolk mixture back to the pot and bring to boil over low heat , stir until thickens , remove from heat .
+(s7 / sentence)
+
+
+# :: f-M5CGM5Q7::step03::sent01
+# :: snt8	Add in sweet potato , mix well and leave to cool and chill for 2 hours .
+(s8 / sentence)
+
+
+# :: f-M5CGM5Q7::step04::sent01
+# :: snt9	Then pour mixture into ice cream maker and churn for about 30 - 40 minutes till soft ice cream is formed or according to maker 's instruction .
+(s9 / sentence)
+
+
+# :: f-M5CGM5Q7::step05::sent01
+# :: snt10	Spoon the soft ice cream into a container and freeze for 3 - 4 hours before serving .
+(s10 / sentence)
+
+

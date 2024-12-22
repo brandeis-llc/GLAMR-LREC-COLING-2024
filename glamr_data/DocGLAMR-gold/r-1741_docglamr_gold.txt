@@ -1,0 +1,91 @@
+# :: r-1741::step01::sent01
+# :: snt1	Heat the oil in a large skillet .
+(s1 / sentence
+    :coref ((s1o :cut s1h2)))
+
+
+# :: r-1741::step02::sent01
+# :: snt2	Add the garlic , jalapeno , green onions and onions .
+(s2 / sentence
+    :coref ((s1h2 :aggregation s2a1)
+			(s2g :aggregation s2a1)
+			(s2j :aggregation s2a1)
+			(s2g2 :aggregation s2a1)
+			(s2o :aggregation s2a1)))
+
+
+# :: r-1741::step03::sent01
+# :: snt3	Cook , stirring , for 2 minutes , then add the sirloin strips to the pan .
+(s3 / sentence
+    :coref ((s2a1 :cut s3c4)
+			(s3c4 :cut s3s4)
+			(s3s4 :aggregation s3a4)
+			(s2a1 :cut s3s4)
+			(s2a1 :aggregation s3a4)
+			(s3s :aggregation s3a4)))
+
+
+# :: r-1741::step04::sent01
+# :: snt4	Sprinkle the meat with the curry powder and ginger .
+(s4 / sentence
+    :coref ((s3a4 :aggregation s4s1)
+			(s3s4 :aggregation s4s1)
+			(s2a1 :aggregation s4s1)
+			(s4c :aggregation s4s1)
+			(s4g :aggregation s4s1)))
+
+
+# :: r-1741::step05::sent01
+# :: snt5	Cook over medium heat , stirring and turning , until the meat is browned , about 5 minutes .
+(s5 / sentence
+    :coref ((s4s1 :cut s5c4)
+			(s5c4 :cut s5s3)
+			(s5s3 :cut s5t3)
+			(s4s1 :cut s5s3)
+			(s3a4 :cut s5c4)
+			(s5c4 :cut s5t3)
+			(s4s1 :cut s5t3)
+			(s2a1 :cut s5c4)
+			(s3a4 :cut s5s3)))
+
+
+# :: r-1741::step06::sent01
+# :: snt6	Add the coconut milk .
+(s6 / sentence
+    :coref ((s5t3 :aggregation s6a1)
+			(s5s3 :aggregation s6a1)
+			(s5c4 :aggregation s6a1)
+			(s4s1 :aggregation s6a1)
+			(s6c :aggregation s6a1)))
+
+
+# :: r-1741::step07::sent01
+# :: snt7	Lower the heat to a simmer and cover the pan .
+(s7 / sentence
+    :coref ((s6a1 :cut s7s1)
+			(s7s1 :cut s7c1)
+			(s6a1 :cut s7c1)
+			(s5t3 :cut s7s1)
+			(s5t3 :cut s7c1)
+			(s5s3 :cut s7s1)
+			(s4s1 :cut s7s1)))
+
+
+# :: r-1741::step08::sent01
+# :: snt8	Cook for an additional 15 to 20 minutes , or until the meat is tender .
+(s8 / sentence
+    :coref ((s7c1 :cut s8c5)
+			(s7s1 :cut s8c5)
+			(s6a1 :cut s8c5)))
+
+
+# :: r-1741::step09::sent01
+# :: snt9	Serve over hot rice .
+(s9 / sentence
+    :coref ((s8c5 :aggregation s9s1)
+			(s7c1 :aggregation s9s1)
+			(s7s1 :aggregation s9s1)
+			(s6a1 :aggregation s9s1)
+			(s9h :aggregation s9s1)))
+
+

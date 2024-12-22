@@ -1,0 +1,195 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1455
+export time: 9/15/2023, 8:30:32 PM
+
+# :: snt1	Melt butter over medium heat .
+# sentence level graph:
+(s1m2 / melt-01
+  :ARG1 (s1b / butter)
+  :manner (s1h / heat
+            :mod (s1m / medium))
+  :mode imperative)
+
+# alignment:s1b: 2-2
+s1h: 5-5
+s1m: 4-4
+s1m2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Add flour , stirring constantly , until the mixture becomes puffy .
+# sentence level graph:
+(s2a / add-02
+  :ARG1 (s2f / flour)
+  :manner (s2s / stir-01
+            :manner (s2c / constant))
+  :mode imperative
+  :duration (s2u / until
+              :op1 (s2b / become-01
+                     :ARG1 (s2m / mix-01)
+                     :ARG2 (s2p / puffy))))
+
+# alignment:s2a: 1-1
+s2b: 10-10
+s2c: 5-5
+s2f: 2-2
+s2m: 9-9
+s2p: 11-11
+s2s: 4-4
+s2u: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add water , bouillon powder , onions , potatoes and carrots .
+# sentence level graph:
+(s3a / add-02
+  :ARG1 (s3a2 / and
+          :op1 (s3w / water)
+          :op2 (s3p2 / powder
+                 :mod (s3b / bouillon))
+          :op3 (s3o / onion)
+          :op4 (s3p / potato)
+          :op5 (s3c / carrot))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 10-10
+s3b: 4-4
+s3c: 11-11
+s3o: 7-7
+s3p: 9-9
+s3p2: 5-5
+s3w: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Bring to a boil , stirring occasionally .
+# sentence level graph:
+(s4b2 / bring-ON-02
+  :destination (s4b / boil)
+  :manner (s4s / stir-01
+            :manner (s4o / occasional))
+  :mode imperative)
+
+# alignment:s4b: -1--1
+s4b2: 1-1
+s4o: 7-7
+s4s: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Reduce heat and simmer until potatoes are almost done ( about 5 to 6 minutes ) .
+# sentence level graph:
+(s5a3 / and
+  :op1 (s5r / reduce-01
+         :ARG1 (s5h / heat))
+  :op2 (s5s / simmer-01)
+  :duration (s5u / until
+              :op1 (s5d / done-08
+                     :ARG1 (s5p / potato)
+                     :mod (s5a2 / almost))
+              :op2 (s5a / about
+                     :op1 (s5b2 / between
+                            :op1 (s5t / temporal-quantity
+                                   :quant 5
+                                   :unit (s5m / minute))
+                            :op2 (s5t2 / temporal-quantity
+                                   :quant 6
+                                   :unit (s5m2 / minute)))))
+  :mode imperative)
+
+# alignment:s5a: 11-11
+s5a2: 8-8
+s5a3: 3-3
+s5b2: 12-12
+s5h: 2-2
+s5m: 14-14
+s5m2: 15-15
+s5p: 6-6
+s5r: 1-1
+s5s: 4-4
+s5t: 14-14
+s5t2: 15-15
+s5u: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Add broccoli and return to boil .
+# sentence level graph:
+(s6a2 / and
+  :op1 (s6a / add-02
+         :ARG1 (s6b2 / broccoli))
+  :op2 (s6r / return-01
+         :ARG4 (s6b / boil))
+  :mode imperative)
+
+# alignment:s6a: 1-1
+s6a2: 3-3
+s6b: 6-6
+s6b2: 2-2
+s6r: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Simmer for another minute .
+# sentence level graph:
+(s7s / simmer-01
+  :duration (s7t / temporal-quantity
+              :quant 1
+              :mod (s7a / another)
+              :unit (s7m / minute))
+  :mode imperative)
+
+# alignment:s7a: 3-3
+s7m: 4-4
+s7s: 1-1
+s7t: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Melt butter over medium heat .
+Add flour , stirring constantly , until the mixture becomes puffy .
+Add water , bouillon powder , onions , potatoes and carrots .
+Bring to a boil , stirring occasionally .
+Reduce heat and simmer until potatoes are almost done ( about 5 to 6 minutes ) .
+Add broccoli and return to boil .
+Simmer for another minute .

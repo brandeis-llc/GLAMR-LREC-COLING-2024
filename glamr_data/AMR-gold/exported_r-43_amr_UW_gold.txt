@@ -1,0 +1,241 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1441
+export time: 9/11/2023, 8:50:18 PM
+
+# :: snt1	Wash burghul under running water then soak in water for about 60 minutes .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1w / wash-01
+         :ARG1 (s1b / burghul)
+         :ARG2 (s1w3 / water
+                 :ARG1-of (s1r / run-08)))
+  :op2 (s1s / soak-01
+         :duration (s1a / about
+                     :op1 (s1t / temporal-quantity
+                            :unit (s1m / minute)
+                            :quant 60))
+         :location (s1w2 / water)
+         :time (s1t2 / then))
+  :mode imperative)
+
+# alignment:s1a: -1--1
+s1b: 2-2
+s1m: -1--1
+s1r: -1--1
+s1s: 7-7
+s1t: -1--1
+s1t2: -1--1
+s1w: 1-1
+s1w2: 9-9
+s1w3: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Drain , then press to remove moisture as much as possible .
+# sentence level graph:
+(s2a / and
+  :op1 (s2d / drain-01)
+  :op2 (s2p2 / press-01
+         :purpose (s2r / remove-01
+                    :ARG1 (s2m / moisture
+                            :ARG1-of (s2h / have-quant-91
+                                       :ARG2 (s2m2 / much)
+                                       :ARG3 (s2e / equal)
+                                       :ARG4 (s2p / possible-01))))
+         :time (s2t / then))
+  :mode imperative)
+
+# alignment:s2a: 1-1
+s2d: 1-1
+s2e: 9-9
+s2h: 8-8
+s2m: 7-7
+s2m2: 9-9
+s2p: 11-11
+s2p2: 4-4
+s2r: 6-6
+s2t: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Mash onion in the food processor then add minced meat in batches .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3m / mash-01
+         :ARG1 (s3o / onion)
+         :location (s3m4 / machine
+                     :purpose (s3p / process-01
+                                :ARG1 (s3f / food))))
+  :op2 (s3a / add-02
+         :ARG1 (s3m2 / meat
+                 :ARG1-of (s3m3 / minced-02))
+         :manner (s3b / batch)
+         :time (s3t / then))
+  :mode imperative)
+
+# alignment:s3a: 8-8
+s3a2: 1-1
+s3b: 12-12
+s3f: -1--1
+s3m: 1-1
+s3m2: 10-10
+s3m3: 9-9
+s3o: 2-2
+s3p: 6-6
+s3t: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Remove and place aside .
+# sentence level graph:
+(s4a / and
+  :op1 (s4r / remove-01)
+  :op2 (s4p / place-01
+         :ARG2 (s4a2 / aside))
+  :mode imperative)
+
+# alignment:s4a: 2-2
+s4a2: 4-4
+s4p: 3-3
+s4r: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Mix meat mixture with burghul , salt , green chile , allspice , and cinnamon .
+# sentence level graph:
+(s5m2 / mix-01
+  :ARG1 (s5m3 / mixture
+          :consist-of (s5m / meat))
+  :ARG2 (s5a2 / and
+          :op1 (s5b / burghul)
+          :op2 (s5s / salt)
+          :op3 (s5c / chile
+                 :mod (s5g / green))
+          :op4 (s5a / allspice)
+          :op5 (s5c2 / cinnamon))
+  :mode imperative)
+
+# alignment:s5a: 12-12
+s5a2: 4-4
+s5b: 5-5
+s5c: 10-10
+s5c2: 15-15
+s5g: 9-9
+s5m: 2-2
+s5m2: 1-1
+s5m3: 3-3
+s5s: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Process well in batches into a firm paste .
+# sentence level graph:
+(s6p2 / process-01
+  :ARG2 (s6p / paste
+          :mod (s6f / firm))
+  :manner (s6w / well)
+  :manner (s6b / batch)
+  :mode imperative)
+
+# alignment:s6b: 4-4
+s6f: -1--1
+s6p: -1--1
+s6p2: 1-1
+s6w: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Knead mixture with wet hands into a smooth paste .
+# sentence level graph:
+(s7k2 / knead-01
+  :ARG0 (s7h / hand
+          :mod (s7w / wet))
+  :ARG1 (s7m / mixture)
+  :ARG2 (s7p / paste
+          :mod (s7s / smooth))
+  :mode imperative)
+
+# alignment:s7h: 5-5
+s7p: 9-9
+s7s: 8-8
+s7w: 4-4
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Put in refrigerator for 30 minutes covered with a piece of wet texture .
+# sentence level graph:
+(s8p2 / put-01
+  :ARG2 (s8r / refrigerator)
+  :duration (s8t / temporal-quantity
+              :quant 30
+              :unit (s8m / minute))
+  :mode imperative
+  :manner (s8c / cover-02
+            :ARG2 (s8t2 / texture
+                    :mod (s8w / wet)
+                    :unit (s8p / piece)
+                    :quant (s8x / 1))))
+
+# alignment:s8c: -1--1
+s8m: 6-6
+s8p: 10-10
+s8p2: 1-1
+s8r: 3-3
+s8t: 6-6
+s8t2: -1--1
+s8w: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Wash burghul under running water then soak in water for about 60 minutes .
+Drain , then press to remove moisture as much as possible .
+Mash onion in the food processor then add minced meat in batches .
+Remove and place aside .
+Mix meat mixture with burghul , salt , green chile , allspice , and cinnamon .
+Process well in batches into a firm paste .
+Knead mixture with wet hands into a smooth paste .
+Put in refrigerator for 30 minutes covered with a piece of wet texture .

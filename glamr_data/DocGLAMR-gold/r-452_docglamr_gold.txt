@@ -1,0 +1,40 @@
+# :: r-452::step01::sent01
+# :: snt1	Cut chicken thighs in half and place in a bowl .
+(s1 / sentence
+    :coref ((s1c2 :cut s1c3)
+			(s1c3 :cut s1p)))
+
+
+# :: r-452::step02::sent01
+# :: snt2	Combine the next 9 ingredients ( garlic thru oil ) and grind to a paste using a mortar and pestle .
+(s2 / sentence
+    :coref ((s2i :cut s2c2)
+			(s2c2 :cut s2g3)))
+
+
+# :: r-452::step03::sent01
+# :: snt3	Combine the paste with the chicken and mix well ; refrigerate several hours or overnight .
+(s3 / sentence
+    :coref ((s1p :aggregation s3c3)
+			(s3c3 :cut s3m6)
+			(s3m6 :cut s3r2)
+			(s2g3 :aggregation s3c3)
+			(s3c3 :cut s3r2)))
+
+
+# :: r-452::step04::sent01
+# :: snt4	Just before serving , grill chicken until tender , basting frequently with coconut milk .
+(s4 / sentence
+    :coref ((s3r2 :cut s4g2)
+			(s4g2 :aggregation s4b1)
+			(s3r2 :aggregation s4b1)
+			(s4c2 :aggregation s4b1)))
+
+
+# :: r-452::step05::sent01
+# :: snt5	Serve with sweet vinegar sauce .
+(s5 / sentence
+    :coref ((s4b1 :aggregation s5s1)
+			(s5s3 :aggregation s5s1)))
+
+

@@ -1,0 +1,260 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1450
+export time: 9/11/2023, 8:28:37 PM
+
+# :: snt1	Heat oil in a skillet , add chicken and brown on both sides , 3 - 5 minutes per side , remove .
+# sentence level graph:
+(s1a3 / and
+  :op1 (s1h / heat-01
+         :ARG1 (s1o / oil)
+         :location (s1s3 / skillet))
+  :op2 (s1a / add-02
+         :ARG1 (s1c / chicken))
+  :op3 (s1b3 / brown-01
+         :location (s1s / side
+                     :mod (s1b2 / both))
+         :manner (s1r / rate-entity-91
+                   :ARG1 (s1b4 / between
+                           :op1 (s1t2 / temporal-quantity
+                                  :unit (s1m2 / minute)
+                                  :quant 3)
+                           :op2 (s1t / temporal-quantity
+                                  :unit (s1m / minute)
+                                  :quant 5))
+                   :ARG2 (s1s2 / side
+                           :mod (s1b / both))))
+  :op4 (s1r2 / remove-01)
+  :mode imperative)
+
+# alignment:s1a: 7-7
+s1a3: 9-9
+s1b: -1--1
+s1b2: 12-12
+s1b3: 10-10
+s1c: 8-8
+s1h: 1-1
+s1m: -1--1
+s1m2: -1--1
+s1o: 2-2
+s1r: -1--1
+s1r2: 22-22
+s1s: 13-13
+s1s2: -1--1
+s1s3: 5-5
+s1t: -1--1
+s1t2: -1--1
+s1b4: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Add onions and garlic to pan , cook for 2 minutes .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2a / add-02
+         :ARG1 (s2a3 / and
+                 :op1 (s2o / onion)
+                 :op2 (s2g / garlic))
+         :ARG2 (s2p / pan))
+  :op2 (s2c / cook-01
+         :duration (s2t / temporal-quantity
+                     :quant 2
+                     :unit (s2m / minute)))
+  :mode imperative)
+
+# alignment:s2a: 1-1
+s2a2: 3-3
+s2a3: 5-5
+s2c: 8-8
+s2g: 4-4
+s2m: 11-11
+s2o: 2-2
+s2p: 6-6
+s2t: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Add walnuts , cook for 1 minute .
+# sentence level graph:
+(s3a2 / and
+  :op1 (s3a / add-02
+         :ARG1 (s3w / walnut))
+  :op2 (s3c / cook-01
+         :duration (s3t / temporal-quantity
+                     :quant 1
+                     :unit (s3m / minute)))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3a2: 3-3
+s3c: 4-4
+s3m: 7-7
+s3t: 7-7
+s3w: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add flour , cinnamon , red pepper flakes , stirring .
+# sentence level graph:
+(s4a / and
+  :op1 (s4a3 / add-02
+         :ARG1 (s4a2 / and
+                 :op1 (s4f2 / flour)
+                 :op2 (s4c / cinnamon)
+                 :op3 (s4f / flake
+                        :consist-of (s4p / pepper
+                                      :mod (s4r / red)))))
+  :op2 (s4s / stir-01)
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4a2: -1--1
+s4c: -1--1
+s4f: -1--1
+s4f2: -1--1
+s4p: -1--1
+s4r: -1--1
+s4s: 10-10
+s4a3: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Add broth , stir to mix well .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5a / add-02
+         :ARG1 (s5b / broth))
+  :op2 (s5s / stir-01
+         :purpose (s5m / mix-01
+                    :manner (s5w / well)))
+  :mode imperative)
+
+# alignment:s5a: 1-1
+s5a2: 3-3
+s5b: 2-2
+s5m: 6-6
+s5s: 4-4
+s5w: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Return chicken to pan , cover , simmer 15 minutes until chicken is cooked through and sauce thickens .
+# sentence level graph:
+(s6a / and
+  :op1 (s6r / return-03
+         :ARG1 (s6c / chicken)
+         :ARG2 (s6p / pan))
+  :op2 (s6c3 / cover-02)
+  :op3 (s6s2 / simmer-01
+         :duration (s6t / temporal-quantity
+                     :quant 15
+                     :unit (s6m / minute))
+         :duration (s6u / until
+                     :op1 (s6a2 / and
+                            :op1 (s6c2 / cook-01
+                                   :ARG1 s6c
+                                   :manner (s6t3 / through))
+                            :op2 (s6t2 / thicken-01
+                                   :ARG1 (s6s / sauce)))))
+  :mode imperative)
+
+# alignment:s6a: 3-3
+s6a2: 12-12
+s6c: 2-2
+s6c2: 14-14
+s6c3: 6-6
+s6m: 10-10
+s6p: 4-4
+s6r: 1-1
+s6s: 17-17
+s6s2: 8-8
+s6t: 10-10
+s6t2: 18-18
+s6t3: 15-15
+s6u: 11-11
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Stir in parsley , salt , pepper , vinegar .
+# sentence level graph:
+(s7s2 / stir-01
+  :ARG1 (s7a / and
+          :op1 (s7p / parsley)
+          :op2 (s7s / salt)
+          :op3 (s7p2 / pepper)
+          :op4 (s7v / vinegar))
+  :mode imperative)
+
+# alignment:s7a: 2-2
+s7p: 3-3
+s7p2: 7-7
+s7s: 5-5
+s7s2: 1-1
+s7v: 9-9
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt8	Serve over rice .
+# sentence level graph:
+(s8s / serve-02
+  :mode imperative
+  :location (s8o / over
+              :op1 (s8r / rice)))
+
+# alignment:s8r: -1--1
+s8s: 1-1
+s8o: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Heat oil in a skillet , add chicken and brown on both sides , 3 - 5 minutes per side , remove .
+Add onions and garlic to pan , cook for 2 minutes .
+Add walnuts , cook for 1 minute .
+Add flour , cinnamon , red pepper flakes , stirring .
+Add broth , stir to mix well .
+Return chicken to pan , cover , simmer 15 minutes until chicken is cooked through and sauce thickens .
+Stir in parsley , salt , pepper , vinegar .
+Serve over rice .

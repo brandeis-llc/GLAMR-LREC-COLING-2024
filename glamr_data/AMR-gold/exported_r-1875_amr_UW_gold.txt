@@ -1,0 +1,171 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1474
+export time: 9/30/2023, 5:01:39 PM
+
+# :: snt1	Chop the onion and brown in a pot with the oil .
+# sentence level graph:
+(s1a / and
+  :op1 (s1c / chop-01
+         :ARG1 (s1o2 / onion))
+  :op2 (s1b / brown-01
+         :medium (s1o / oil)
+         :location (s1p / pot))
+  :mode imperative)
+
+# alignment:s1a: 4-4
+s1b: 5-5
+s1o: 11-11
+s1o2: 3-3
+s1p: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Add the meat and brown the sides .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2a / add-02
+         :ARG1 (s2m / meat))
+  :op2 (s2b / brown-01
+         :ARG1 (s2s / side))
+  :mode imperative)
+
+# alignment:s2a: 1-1
+s2a2: 4-4
+s2b: 5-5
+s2m: 3-3
+s2s: 7-7
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Sprinkle salt and pepper .
+# sentence level graph:
+(s3s2 / sprinkle-01
+  :ARG1 (s3a / and
+          :op1 (s3s / salt)
+          :op2 (s3p / pepper))
+  :mode imperative)
+
+# alignment:s3a: 3-3
+s3p: 4-4
+s3s: 2-2
+s3s2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add the sugar , cover with the tomato juice and add the same amount of water .
+# sentence level graph:
+(s4a4 / and
+  :op1 (s4a / add-02
+         :ARG1 (s4s2 / sugar))
+  :op2 (s4c / cover-02
+         :ARG2 (s4j / juice
+                 :source (s4t / tomato)))
+  :op3 (s4a2 / add-02
+         :ARG1 (s4w / water
+                 :quant (s4a3 / amount
+                          :mod (s4s / same))))
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4a2: 11-11
+s4a3: 14-14
+s4a4: 10-10
+s4c: 2-2
+s4j: 9-9
+s4s: 13-13
+s4s2: 3-3
+s4t: 8-8
+s4w: 16-16
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Let cook for an hour or more until the meat is soft ( in a pressure cooker it takes 20 minutes ) .
+# sentence level graph:
+(s5l / let-01
+  :ARG1 (s5c / cook-01
+          :duration (s5a2 / at-least
+                      :op1 (s5t2 / temporal-quantity
+                             :quant 1
+                             :unit (s5h2 / hour)))
+          :duration (s5u / until
+                      :op1 (s5s / soft-02
+                             :ARG1 (s5m / meat)))
+          :example (s5t / take-10
+                     :ARG1 (s5t3 / temporal-quantity
+                             :unit (s5m2 / minute)
+                             :quant 20)
+                     :location (s5c2 / cooker
+                                 :mod (s5p / pressure))))
+  :mode imperative)
+
+# alignment:s5a2: -1--1
+s5c: 2-2
+s5c2: 17-17
+s5h2: -1--1
+s5m: -1--1
+s5m2: -1--1
+s5p: 16-16
+s5s: -1--1
+s5t: 17-undefined
+s5t2: -1--1
+s5t3: -1--1
+s5u: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Serve with rice or fries / chips .
+# sentence level graph:
+(s6s / serve-02
+  :accompanier (s6o / or
+                 :op1 (s6r / rice)
+                 :op2 (s6f / fries)
+                 :op3 (s6c2 / chip))
+  :mode imperative)
+
+# alignment:s6c2: 7-7
+s6f: 5-5
+s6r: 3-3
+s6s: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Chop the onion and brown in a pot with the oil .
+Add the meat and brown the sides .
+Sprinkle salt and pepper .
+Add the sugar , cover with the tomato juice and add the same amount of water .
+Let cook for an hour or more until the meat is soft ( in a pressure cooker it takes 20 minutes ) .
+Serve with rice or fries / chips .

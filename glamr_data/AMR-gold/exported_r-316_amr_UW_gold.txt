@@ -1,0 +1,221 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1449
+export time: 9/12/2023, 3:37:06 PM
+
+# :: snt1	Place ribs in the bottom of the crockpot .
+# sentence level graph:
+(s1p / place-01
+  :ARG1 (s1r / rib)
+  :ARG2 (s1b / bottom
+          :part-of (s1c / crockpot))
+  :mode imperative)
+
+# alignment:s1b: 5-5
+s1c: 8-8
+s1p: 1-1
+s1r: 2-2
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Separate onion into rings and place on top of pork .
+# sentence level graph:
+(s2a / and
+  :op1 (s2s / separate-02
+         :ARG1 (s2o / onion)
+         :destination (s2r / ring))
+  :op2 (s2p / place-01
+         :ARG2 (s2t / top
+                 :part-of (s2p2 / pork)))
+  :mode imperative)
+
+# alignment:s2a: 5-5
+s2o: 2-2
+s2p: 6-6
+s2p2: 10-10
+s2r: 4-4
+s2s: 1-1
+s2t: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	In a small bowl , mix together ketjap manis , pineapple juice , lime juice , ketchup , brown sugar , ginger , turmeric , and cayenne pepper until blended .
+# sentence level graph:
+(s3m2 / mix-01
+  :ARG1 (s3a / and
+          :op1 (s3m / manis
+                 :mod (s3k2 / ketjap))
+          :op2 (s3j / juice
+                 :source (s3p2 / pineapple))
+          :op3 (s3j2 / juice
+                 :source (s3l / lime))
+          :op4 (s3k / ketchup)
+          :op5 (s3s3 / sugar
+                 :mod (s3b3 / brown))
+          :op6 (s3g / ginger)
+          :op7 (s3t / turmeric)
+          :op8 (s3p / pepper
+                 :mod (s3c / cayenne)))
+  :location (s3b2 / bowl
+              :mod (s3s / small))
+  :mode imperative
+  :duration (s3u / until
+              :op1 (s3b / blend-01)))
+
+# alignment:s3a: 26-26
+s3b: 30-30
+s3b2: 4-4
+s3b3: 19-19
+s3c: 27-27
+s3g: 22-22
+s3j: 12-12
+s3j2: 15-15
+s3k: 17-17
+s3l: 14-14
+s3m: 9-9
+s3m2: 6-6
+s3p: 28-28
+s3p2: 11-11
+s3s: 3-3
+s3s3: 20-20
+s3t: 24-24
+s3u: 29-29
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Pour mixture over pork and onions .
+# sentence level graph:
+(s4p2 / pour-01
+  :ARG1 (s4m / mixture)
+  :ARG3 (s4a / and
+          :op1 (s4p / pork)
+          :op2 (s4o / onion))
+  :mode imperative)
+
+# alignment:s4a: 5-5
+s4m: 2-2
+s4o: 6-6
+s4p: 4-4
+s4p2: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Cover crockpot and cook on low for 6 - 8 hours or on high for 3 - 4 hours or until pork is tender and cooked through .
+# sentence level graph:
+(s5a / and
+  :op1 (s5c3 / cover-02
+         :ARG1 (s5c4 / crockpot))
+  :op2 (s5c / cook-01
+         :duration (s5o2 / or
+                     :op1 (s5b / between
+                            :op1 (s5t2 / temporal-quantity
+                                   :unit (s5h3 / hour)
+                                   :quant 8)
+                            :op2 (s5t / temporal-quantity
+                                   :unit (s5h2 / hour)
+                                   :quant 6)
+                            :manner (s5l / low-04))
+                     :op2 (s5b2 / between
+                            :op1 (s5t4 / temporal-quantity
+                                   :unit (s5h5 / hour)
+                                   :quant 3)
+                            :op2 (s5t3 / temporal-quantity
+                                   :unit (s5h4 / hour)
+                                   :quant 4)
+                            :manner (s5h / high-02))
+                     :op3 (s5u / until
+                            :op1 (s5a2 / and
+                                   :op1 (s5t6 / tender-02)
+                                   :op2 (s5c2 / cook-01
+                                          :manner (s5t5 / through))
+                                   :domain (s5p / pork)))))
+  :mode imperative)
+
+# alignment:s5a: 3-3
+s5a2: -1--1
+s5b: -1--1
+s5b2: -1--1
+s5c: 4-4
+s5c2: -1--1
+s5c3: 1-1
+s5c4: 2-2
+s5h: -1--1
+s5h2: -1--1
+s5h3: -1--1
+s5h4: -1--1
+s5h5: -1--1
+s5l: -1--1
+s5p: -1--1
+s5t: -1--1
+s5t2: -1--1
+s5t3: -1--1
+s5t4: -1--1
+s5t5: -1--1
+s5t6: -1--1
+s5u: -1--1
+s5o2: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Serve pork with rice ( if desired ) , garnished with slices of hot chiles .
+# sentence level graph:
+(s6s / serve-02
+  :ARG1 (s6p / pork
+          :ARG1-of (s6g / garnish-01
+                     :ARG2 (s6c / chile
+                             :mod (s6h / hot-05)
+                             :quant (s6s2 / slice))))
+  :ARG2 (s6r / rice)
+  :condition (s6d / desire-01)
+  :mode imperative)
+
+# alignment:s6c: -1--1
+s6d: 7-7
+s6g: 10-11
+s6h: -1--1
+s6p: 2-2
+s6r: 4-4
+s6s: 1-1
+s6s2: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Place ribs in the bottom of the crockpot .
+Separate onion into rings and place on top of pork .
+In a small bowl , mix together ketjap manis , pineapple juice , lime juice , ketchup , brown sugar , ginger , turmeric , and cayenne pepper until blended .
+Pour mixture over pork and onions .
+Cover crockpot and cook on low for 6 - 8 hours or on high for 3 - 4 hours or until pork is tender and cooked through .
+Serve pork with rice ( if desired ) , garnished with slices of hot chiles .

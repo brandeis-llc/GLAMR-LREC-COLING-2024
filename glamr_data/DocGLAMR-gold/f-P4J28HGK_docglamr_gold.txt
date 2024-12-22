@@ -1,0 +1,32 @@
+# :: f-P4J28HGK::step01::sent01
+# :: snt1	Clean pumpkin seeds and spread on a cookie sheet overnight to dry .
+(s1 / sentence
+    :coref ((s1p :cut s1c3)
+			(s1c3 :cut s1s1)
+			(s1s1 :cut s1d)))
+
+
+# :: f-P4J28HGK::step02::sent01
+# :: snt2	Preheat oven to 350
+(s2 / sentence)
+
+
+# :: f-P4J28HGK::step03::sent01
+# :: snt3	Spray seeds with cooking spray and season with curry powder and salt .
+(s3 / sentence
+    :coref ((s1d :aggregation s3s1)
+			(s3s1 :aggregation s3s6)
+			(s3c :aggregation s3s1)
+			(s3c3 :aggregation s3s6)
+			(s3s :aggregation s3s6)))
+
+
+# :: f-P4J28HGK::step04::sent01
+# :: snt4	Roast in the oven for 40 minutes , flipping after 20 .
+(s4 / sentence
+    :coref ((s3s6 :cut s4r2)
+			(s4r2 :cut s4f1)
+			(s3s1 :cut s4r2)
+			(s3s6 :cut s4f1)))
+
+

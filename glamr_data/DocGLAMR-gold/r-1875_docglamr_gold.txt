@@ -1,0 +1,61 @@
+# :: r-1875::step01::sent01
+# :: snt1	Chop the onion and brown in a pot with the oil .
+(s1 / sentence
+    :coref ((s1o2 :cut s1c2)
+			(s1c2 :aggregation s1b2)
+			(s1o :aggregation s1b2)))
+
+
+# :: r-1875::step02::sent01
+# :: snt2	Add the meat and brown the sides .
+(s2 / sentence
+    :coref ((s1b2 :aggregation s2a1)
+			(s2a1 :cut s2b2)
+			(s1b2 :cut s2b2)
+			(s2m :aggregation s2a1)))
+
+
+# :: r-1875::step03::sent01
+# :: snt3	Sprinkle salt and pepper .
+(s3 / sentence
+    :coref ((s2b2 :aggregation s3s1)
+			(s2a1 :aggregation s3s1)
+			(s3s :aggregation s3s1)
+			(s3p :aggregation s3s1)))
+
+
+# :: r-1875::step04::sent01
+# :: snt4	Add the sugar , cover with the tomato juice and add the same amount of water .
+(s4 / sentence
+    :coref ((s3s1 :aggregation s4a1)
+			(s4a1 :aggregation s4c1)
+			(s4c1 :aggregation s4a6)
+			(s2b2 :aggregation s4a1)
+			(s4a1 :aggregation s4a6)
+			(s3s1 :aggregation s4c1)
+			(s3s1 :aggregation s4a6)
+			(s4s2 :aggregation s4a1)
+			(s4t :aggregation s4c1)
+			(s4w :aggregation s4a6)))
+
+
+# :: r-1875::step05::sent01
+# :: snt5	Let cook for an hour or more until the meat is soft ( in a pressure cooker it takes 20 minutes ) .
+(s5 / sentence
+    :coref ((s4a6 :cut s5c5)
+			(s4c1 :cut s5c5)
+			(s3s1 :cut s5c5)
+			(s4a1 :cut s5c5)))
+
+
+# :: r-1875::step06::sent01
+# :: snt6	Serve with rice or fries / chips .
+(s6 / sentence
+    :coref ((s5c5 :aggregation s6s1)
+			(s4a6 :aggregation s6s1)
+			(s4c1 :aggregation s6s1)
+			(s6r :aggregation s6s1)
+			(s6f :aggregation s6s1)
+			(s6c2 :aggregation s6s1)))
+
+

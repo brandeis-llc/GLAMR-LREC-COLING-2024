@@ -1,0 +1,87 @@
+# :: f-4R6HP6R7::step01::sent01
+# :: snt1	Place the oil into the bottom of your Instant Pot , and turn on the Saute mode .
+(s1 / sentence
+    :coref ((s1o :cut s1p1)
+			(s1p1 :aggregation s1p)
+			(s1i :aggregation s1p)
+			(s1t :aggregation s1p)
+			(s1m :aggregation s1p)))
+
+
+# :: f-4R6HP6R7::step01::sent02
+# :: snt2	While it is heating , liberally season your chicken breasts with the salt , pepper , garlic salt , and onion powder .
+(s2 / sentence
+    :coref ((s1p :separation s2s3)
+			(s2s3 :separation s2s3)
+			(s2s3 :aggregation s2p)
+			(s2p :cut s2y)
+			(s1p :aggregation s2p)
+			(s1p :cut s2y)
+			(s2g :aggregation s2p)))
+
+
+# :: f-4R6HP6R7::step01::sent03
+# :: snt3	Brown the chicken breasts on each side .
+(s3 / sentence
+    :coref ((s2y :aggregation s3b2)
+			(s3b2 :aggregation s3b2)
+			(s2p :aggregation s3b2)
+			(s1p :aggregation s3b2)
+			(s3b :aggregation s3b2)))
+
+
+# :: f-4R6HP6R7::step02::sent01
+# :: snt4	Once the breasts are browned , remove from the pot and set aside and add the sliced onion in .
+(s4 / sentence
+    :coref ((s3b2 :cut s4b3)
+			(s4b3 :separation s4a)
+			(s4a :separation s4a)
+			(s3b2 :separation s4a)
+			(s2y :cut s4b3)
+			(s2p :cut s4b3)))
+
+
+# :: f-4R6HP6R7::step02::sent02
+# :: snt5	Saute for 3 - 4 minutes , stirring frequently .
+(s5 / sentence
+    :coref ((s4a :aggregation s5s2)
+			(s4b3 :aggregation s5s2)
+			(s3b2 :aggregation s5s2)
+			(s4s :aggregation s5s2)))
+
+
+# :: f-4R6HP6R7::step03::sent01
+# :: snt6	Add in the dry hard cider , diced tomatoes , cilantro , and salsa .
+(s6 / sentence)
+
+
+# :: f-4R6HP6R7::step03::sent02
+# :: snt7	Place the chicken into this mixture , replace the lid , and change the function of your pot to Manual and set the timer to 8 minutes .
+(s7 / sentence)
+
+
+# :: f-4R6HP6R7::step04::sent01
+# :: snt8	Once the pot is finished , do a quick release of the pressure and remove the chicken from the pot .
+(s8 / sentence)
+
+
+# :: f-4R6HP6R7::step04::sent02
+# :: snt9	Shred the chicken with two forks , and return to the pot .
+(s9 / sentence)
+
+
+# :: f-4R6HP6R7::step04::sent03
+# :: snt10	Turn the pot back to saute , and add in the taco seasoning packet .
+(s10 / sentence)
+
+
+# :: f-4R6HP6R7::step04::sent04
+# :: snt11	Stir constantly for 2 minutes until the mixture is slightly thickened .
+(s11 / sentence)
+
+
+# :: f-4R6HP6R7::step05::sent01
+# :: snt12	Serve with your favorite taco fixings , and enjoy !
+(s12 / sentence)
+
+

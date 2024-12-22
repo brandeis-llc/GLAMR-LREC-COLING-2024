@@ -1,0 +1,121 @@
+# :: f-VSG7PZYZ::step01::sent01
+# :: snt1	In a tall glass , fill with ice and add one and half jiggers of spiced rum , add 2/3 of the glass with pineapple soda
+(s1a3 / and~8
+      :op1 (s1f / fill-01~5
+                :ARG2 (s1i / ice~7)
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1h / has_location
+                                                :THEME s1i)
+                                       :E3 (s1a1 / and
+                                                 :op1 (s1m / motion
+                                                           :THEME s1i)
+                                                 :op2 (s1h1 / has_location
+                                                            :polarity -
+                                                            :THEME s1i))
+                                       :E4 (s1h2 / has_location
+                                                 :THEME s1i
+                                                 :DESTINATION s1g)
+                                       :E0 (s1d / do
+                                                :ACTION s1f))
+                :imp_output (s1f1 / fill.RES))
+      :op2 (s1a / add-02~9
+                :ARG1 (s1r / rum~16
+                           :quant (s1v / volume-quantity
+                                       :quant 1.5
+                                       :unit (s1j / jigger~13))
+                           :ARG1-of (s1s2 / spice-02~15))
+                :ARG0 s1y
+                :event-structure (s1se1 / subevents
+                                        :E1 (s1t1 / together
+                                                  :polarity -
+                                                  :PATIENT_I s1r)
+                                        :E3 (s1t2 / together
+                                                  :PATIENT_I s1r)
+                                        :E0 (s1d1 / do
+                                                  :ACTION s1a))
+                :imp_output (s1a4 / add.RES))
+      :op3 (s1a2 / add-02~18
+                 :ARG1 (s1v2 / volume-quantity
+                             :quant "2/3"
+                             :unit (s1g3 / glass~22))
+                 :ARG2 (s1s / soda~25
+                            :mod (s1p / pineapple~24))
+                 :ARG0 s1y
+                 :event-structure (s1se2 / subevents
+                                         :E1 (s1t3 / together
+                                                   :polarity -
+                                                   :PATIENT_I s1g3
+                                                   :PATIENT_J s1s)
+                                         :E3 (s1t4 / together
+                                                   :PATIENT_I s1g3
+                                                   :PATIENT_J s1s)
+                                         :E0 (s1d2 / do
+                                                   :ACTION s1a2))
+                 :imp_output (s1a5 / add.RES))
+      :location (s1g / glass~3
+                     :mod (s1t / tall~2)))
+
+
+# :: f-VSG7PZYZ::step02::sent01
+# :: snt2	float til glass is full with ginger beer
+(s2f / float-01~0
+     :mode imperative
+     :time (s2u / until
+                :op1 (s2f2 / fill-01~4
+                           :ARG1 (s2g2 / glass~2)
+                           :ARG2 (s2b / beer~7
+                                      :mod (s2g / ginger~6))))
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2h / has_location
+                                     :IMP_THEME (s2a / add.RES))
+                            :E3 (s2a1 / and
+                                      :op1 (s2m / motion
+                                                :IMP_THEME s2a)
+                                      :op2 (s2h1 / has_location
+                                                 :polarity -
+                                                 :IMP_THEME s2a))
+                            :E4 (s2h2 / has_location
+                                      :IMP_THEME s2a)
+                            :E0 (s2d / do
+                                     :ACTION s2f))
+     :imp_output (s2f1 / float.RES))
+
+
+# :: f-VSG7PZYZ::step03::sent01
+# :: snt3	squeeze a generous squeeze of lime
+(s3s / squeeze-02~0
+     :ARG1 (s3l2 / lime~5
+                 :quant (s3v / volume-quantity
+                             :mod (s3g / generous~2)
+                             :unit (s3s2 / squeeze~3)))
+     :mode imperative
+     :ARG0 (s3y / you))
+
+
+# :: f-VSG7PZYZ::step04::sent01
+# :: snt4	add straw stir gently drink slowly and enjoy !
+(s4a2 / and~6
+      :op1 (s4a / add-02~0
+                :ARG1 (s4s3 / straw~1))
+      :op2 (s4s2 / stir-01~2
+                 :manner (s4g / gentle~3)
+                 :ARG0 (s4y / you)
+                 :event-structure (s4se / subevents
+                                        :E1 (s4h / has_material_integrity_state
+                                                 :polarity -
+                                                 :IMP_PATIENT (s4s1 / squeeze.RES)
+                                                 :V_STATE (s4s4 / stirred))
+                                        :E3 (s4h1 / has_material_integrity_state
+                                                  :IMP_PATIENT s4s1
+                                                  :V_STATE s4s4)
+                                        :E0 (s4d1 / do
+                                                  :ACTION s4s2))
+                 :imp_output (s4s5 / stir.RES))
+      :op3 (s4e / enjoy-01)
+      :mode imperative
+      :op3 (s4d / drink-01~4
+                :manner (s4s / slow~5)))
+
+

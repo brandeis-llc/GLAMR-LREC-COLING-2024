@@ -1,0 +1,82 @@
+# :: f-NWNMXTLN::step01::sent01
+# :: snt1	Mix and combine , until smooth , sour milk , yogurt , oil , eggs and baking powder .
+(s1 / sentence
+    :coref ((s1s :aggregation s1m5)
+			(s1m5 :cut s1c2)
+			(s1y :aggregation s1m5)
+			(s1o :aggregation s1m5)
+			(s1e :aggregation s1m5)
+			(s1b :aggregation s1m5)))
+
+
+# :: f-NWNMXTLN::step02::sent01
+# :: snt2	Spoon and set aside 8 tablespoons of the mixture .
+(s2 / sentence
+    :coref ((s1c2 :cut s2s1)
+			(s2s1 :separation s2s3)
+			(s2s3 :separation s2s4)
+			(s1m5 :cut s2s1)
+			(s2s1 :separation s2s4)
+			(s1m5 :separation s2s3)
+			(s1m5 :separation s2s4)))
+
+
+# :: f-NWNMXTLN::step03::sent01
+# :: snt3	Set aside 4 sheets of phyllo dough , and tear the remaining sheets into small pieces .
+(s3 / sentence
+    :coref ((s3p :separation s3s1)
+			(s3s1 :separation s3s2)
+			(s3s2 :cut s3t1)
+			(s3t1 :aggregation s3s)))
+
+
+# :: f-NWNMXTLN::step03::sent02
+# :: snt4	Stir them gently into the sour milk filling .
+(s4 / sentence
+    :coref ((s3s :aggregation s4s2)
+			(s4s2 :cut s4g)))
+
+
+# :: f-NWNMXTLN::step04::sent01
+# :: snt5	Add and combine crumbled feta cheese .
+(s5 / sentence
+    :coref ((s4g :aggregation s5a)))
+
+
+# :: f-NWNMXTLN::step05::sent01
+# :: snt6	Place 2 pastry sheets on the bottom of the oiled baking pan .
+(s6 / sentence
+    :coref ((s2s4 :aggregation s6p3)
+			(s2s3 :aggregation s6p3)
+			(s1m5 :aggregation s6p3)
+			(s5a :aggregation s6p3)))
+
+
+# :: f-NWNMXTLN::step05::sent02
+# :: snt7	Cover with evenly distributed sour milk filling , cover with 2 remaining pastry sheets .
+(s7 / sentence
+    :coref ((s6p3 :cut s7c)
+			(s2s4 :cut s7c)))
+
+
+# :: f-NWNMXTLN::step06::sent01
+# :: snt8	Spread 8 tablespoons of the sour milk , yogurt , oil , eggs and baking powder mixture over the top sheet .
+(s8 / sentence
+    :coref ((s7c :cut s8t2)
+			(s8t2 :cut s8s2)
+			(s7c :cut s8s2)
+			(s6p3 :cut s8t2)
+			(s2s4 :cut s8t2)
+			(s6p3 :cut s8s2)))
+
+
+# :: f-NWNMXTLN::step07::sent01
+# :: snt9	Bake at 2000C for about 30 minutes or until done and golden in colour .
+(s9 / sentence)
+
+
+# :: f-NWNMXTLN::step08::sent01
+# :: snt10	Allow to cool slightly , cut and serve .
+(s10 / sentence)
+
+

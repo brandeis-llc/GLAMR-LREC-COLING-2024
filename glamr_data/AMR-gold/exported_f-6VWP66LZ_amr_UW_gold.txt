@@ -1,0 +1,253 @@
+user name: Keer Xu
+user id: 347
+file language: english
+file format: plain_text
+Doc ID in database: 1275
+export time: 2023/10/8 09:38:20
+
+# :: snt1	Cut the broccoli into flowerets and the stem into bite - size pieces ; cut carrots and zucchini into cubes .
+# sentence level graph:
+(s1a3 / and
+  :op1 (s1c4 / cut-01
+         :ARG1 (s1a / and
+                 :op1 (s1b2 / broccoli)
+                 :op2 (s1s2 / stem))
+         :ARG2 (s1p / piece
+                 :ARG1-of (s1s / size-01
+                            :ARG2 (s1b / bite)))
+         :mod (s1f / flowre)
+         :mode imperative)
+  :op2 (s1c3 / cut-01
+         :ARG1 (s1a2 / and
+                 :op1 (s1c / carrot)
+                 :op2 (s1z / zucchini))
+         :ARG2 (s1c2 / cube)
+         :mode imperative))
+
+# alignment:s1a: 6-6
+s1a2: 14-14
+s1b: 10-10
+s1b2: 3-3
+s1c: 16-16
+s1c2: 20-20
+s1c3: 15-15
+s1c4: 1-1
+s1f: 5-5
+s1p: 13-13
+s1s: 12-12
+s1s2: 8-8
+s1z: 18-18
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Saute onion in 2 tablespoons of olive oil , add chopped vegetables and cook for 10 minutes over low heat , stirring occasionally .
+# sentence level graph:
+(s2a4 / and
+  :op1 (s2s2 / saute-01
+         :ARG1 (s2o4 / onion)
+         :location (s2o2 / oil
+                     :quant (s2v2 / volume-quantity
+                              :quant 2
+                              :unit (s2t2 / tablespoons))
+                     :mod (s2o3 / olive)))
+  :op2 (s2a3 / add-02
+         :ARG1 (s2v / vegetable
+                 :ARG1-of (s2c / chop-01)))
+  :op3 (s2c2 / cook-01
+         :duration (s2t / temporal-quantity
+                     :quant 10
+                     :unit (s2m / minute))
+         :manner (s2h / heat
+                   :mod (s2l / low-04))
+         :manner (s2s / stir-01
+                   :frequency (s2o / occasional)))
+  :mode imperative)
+
+# alignment:s2a3: 10-10
+s2a4: 13-13
+s2c: 11-11
+s2c2: 14-14
+s2h: 20-20
+s2l: 19-19
+s2m: 17-17
+s2o: 23-23
+s2o2: 8-8
+s2o3: 7-7
+s2o4: 2-2
+s2s: 22-22
+s2t: 17-17
+s2v: 12-12
+s2v2: 5-5
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	In a separate pan saute minced meat breaking it up well , and stir for 6 - 8 minutes until browned .
+# sentence level graph:
+(s3a / and
+  :op1 (s3s3 / saute-01
+         :ARG1 (s3m / meat
+                 :ARG1-of (s3m2 / minced-01))
+         :manner (s3b3 / break-01
+                   :ARG1 s3m
+                   :manner (s3w / well-09)))
+  :op2 (s3s2 / stir-01
+         :duration (s3b / between
+                     :op1 (s3t / temporal-quantity
+                            :quant 6
+                            :unit (s3m4 / minute))
+                     :op2 (s3t2 / temporal-quantity
+                            :quant 8
+                            :unit (s3m3 / minute)))
+         :duration (s3b2 / brown-01))
+  :location (s3p / pan
+              :ARG1-of (s3s / separate-02))
+  :mode imperative)
+
+# alignment:s3a: 13-13
+s3b: 15-15
+s3b2: 21-21
+s3b3: 8-8
+s3m: 0-0
+s3m2: 6-6
+s3m3: 17-17
+s3m4: 19-19
+s3p: 4-4
+s3s: 3-3
+s3s2: 14-14
+s3t: 19-19
+s3t2: 22-22
+s3w: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Add the tinned tomatoes to the cooked vegetables , mash them coarsely , stir and combine .
+# sentence level graph:
+(s4a2 / and
+  :op1 (s4a / add-02
+         :ARG1 (s4t2 / tomato
+                 :ARG1-of (s4t / tin-ON-02))
+         :ARG2 (s4v / vegetable
+                 :ARG1-of (s4c3 / cook-01)))
+  :op2 (s4m / mash-01
+         :ARG1 (s4a3 / and
+                 :op1 s4t2
+                 :op2 s4v)
+         :manner (s4c / coarse))
+  :op3 (s4s / stir-01)
+  :op4 (s4c2 / combine-01)
+  :mode imperative)
+
+# alignment:s4a: 1-1
+s4a2: 15-15
+s4a3: 0-0
+s4c: 12-12
+s4c2: 16-16
+s4c3: 7-7
+s4m: 10-10
+s4s: 14-14
+s4t: 3-3
+s4t2: 0-0
+s4v: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	Transfer the meat into the pan with the vegetables , season with salt and pepper , mix thoroughly to combine all ingredients .
+# sentence level graph:
+(s5a2 / and
+  :op1 (s5t2 / transfer-01
+         :ARG1 (s5m / meat)
+         :ARG2 (s5p / pan)
+         :accompanier (s5v / vegetable))
+  :op2 (s5s2 / season-01
+         :ARG2 (s5a3 / and
+                 :op1 (s5s / salt)
+                 :op2 (s5p2 / pepper)))
+  :op3 (s5m2 / mix-01
+         :purpose (s5c / combine-01
+                    :ARG1 (s5i / ingredient
+                            :mod (s5a / all)))
+         :manner (s5t / thorough))
+  :mode imperative)
+
+# alignment:s5a: 21-21
+s5a2: 2-2
+s5a3: 12-12
+s5c: 20-20
+s5i: 22-22
+s5m: 0-0
+s5m2: 17-17
+s5p: 6-6
+s5p2: 15-15
+s5s: 13-13
+s5s2: 11-11
+s5t: 18-18
+s5t2: 1-1
+s5v: 0-0
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	Serve with cooked rice or something similar ( couscous , mashed potatoes ) .
+# sentence level graph:
+(s6s / serve-02
+  :ARG1 (s6o / or
+          :op1 (s6r2 / rice
+                 :ARG1-of (s6c / cook-01))
+          :op2 (s6s2 / something
+                 :ARG1-of (s6r / resemble-01
+                            :ARG2 s6r2)
+                 :example (s6o2 / or
+                            :op1 (s6c3 / couscous)
+                            :op2 (s6p / potato
+                                   :ARG1-of (s6m / mash-01)))))
+  :mode imperative)
+
+# alignment:s6c: 3-3
+s6c3: 9-9
+s6m: 11-11
+s6o: 5-5
+s6o2: 10-10
+s6p: 12-12
+s6r: 7-7
+s6r2: 4-4
+s6s: 1-1
+s6s2: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Cut the broccoli into flowerets and the stem into bite - size pieces ; cut carrots and zucchini into cubes .
+Saute onion in 2 tablespoons of olive oil , add chopped vegetables and cook for 10 minutes over low heat , stirring occasionally .
+In a separate pan saute minced meat breaking it up well , and stir for 6 - 8 minutes until browned .
+Add the tinned tomatoes to the cooked vegetables , mash them coarsely , stir and combine .
+Transfer the meat into the pan with the vegetables , season with salt and pepper , mix thoroughly to combine all ingredients .
+Serve with cooked rice or something similar ( couscous , mashed potatoes ) .

@@ -1,0 +1,213 @@
+user name: Keer Xu
+user id: 347
+file language: english
+file format: plain_text
+Doc ID in database: 1279
+export time: 2023/4/9 21:03:51
+
+# :: snt1	Cube the chicken breast to prepare for the food processor .
+# sentence level graph:
+(s1c2 / cube-01
+  :ARG1 (s1b / breast
+          :part-of (s1c / chicken))
+  :purpose (s1p / prepare-02
+             :ARG1 s1b
+             :ARG2 (s1p2 / process-01
+                     :ARG1 (s1f / food)))
+  :mode imperative)
+
+# alignment:s1b: 0-0
+s1c: 3-3
+s1c2: 1-1
+s1f: 9-9
+s1p: 6-6
+s1p2: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	Combine the cubed chicken , creamed spinach , olive oil , garlic , Parmesan cheese and the olive oil in the food processor and process .
+# sentence level graph:
+(s2a2 / and
+  :op1 (s2c3 / combine-01
+         :ARG1 (s2a / and
+                 :op1 (s2c2 / chicken
+                        :mod (s2c5 / cub-01))
+                 :op2 (s2s / spinach
+                        :mod (s2c4 / cream-02))
+                 :op3 (s2g / garlic)
+                 :op4 (s2c / cheese
+                        :name (s2n / name
+                                :op1 "Parmesan"))
+                 :op5 (s2o / oil
+                        :mod (s2o2 / olive)))
+         :loaction (s2p3 / processor
+                     :mod (s2f2 / food)))
+  :op2 (s2p2 / process-01
+         :ARG1 s2a)
+  :mode imperative)
+
+# alignment:s2a: 0-0
+s2c: -1--1
+s2c2: -1--1
+s2c3: 1-1
+s2c4: -1--1
+s2c5: -1--1
+s2f2: 22-22
+s2g: -1--1
+s2n: -1--1
+s2o: -1--1
+s2o2: -1--1
+s2p2: 25-25
+s2s: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Form into patties .
+# sentence level graph:
+(s3f / form-01
+  :ARG2 (s3p / patties)
+  :mode imperative)
+
+# alignment:s3f: 1-1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Heat a large frying pan with a drizzle of vegetable oil and place the patties in the pan .
+# sentence level graph:
+(s4a / and
+  :op1 (s4h / heat-01
+         :ARG1 (s4p / pan
+                 :ARG1-of (s4f / fry-01)
+                 :mod (s4l / large))
+         :instrument (s4d / drizzle-01
+                       :ARG2 (s4o / oil
+                               :source (s4v / vegetable))))
+  :op2 (s4p3 / place-01
+         :ARG1 (s4p2 / pattie)
+         :ARG2 s4p)
+  :mode imperative)
+
+# alignment:s4a: 12-12
+s4d: 8-8
+s4f: 4-4
+s4h: 1-1
+s4l: 3-3
+s4o: 11-11
+s4p: 5-5
+s4p2: 15-15
+s4p3: 13-13
+s4v: 10-10
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt5	When the patties firm and become golden on one side flip and finish cooking .
+# sentence level graph:
+(s5a3 / and
+  :op1 (s5f / flip-01
+         :ARG1 (s5p2 / patty))
+  :op2 (s5f3 / finish-01
+         :ARG1 (s5c / cook-01))
+  :time (s5b / be-temporally-at-91
+          :ARG2 (s5a / and
+                  :op1 (s5f2 / firm-01
+                         :ARG1 (s5p / patty))
+                  :op2 (s5b2 / become-01
+                         :ARG1 "s5p"
+                         :ARG2 (s5g / golden
+                                 :location (s5s / side
+                                             :mod 1)))))
+  :mode imperative)
+
+# alignment:s5a: -1--1
+s5b: -1--1
+s5b2: -1--1
+s5c: -1--1
+s5f: -1--1
+s5f2: -1--1
+s5f3: -1--1
+s5g: -1--1
+s5s: -1--1
+s5p: -1--1
+s5p2: -1--1
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt6	The cooking time will depend on the thickness of the patties .
+# sentence level graph:
+(s6d / depend-01
+  :ARG0 (s6t2 / time
+          :time-of (s6c / cook-01))
+  :ARG1 (s6t / thickness
+          :ARG1-of (s6p / patty)))
+
+# alignment:s6c: 2-2
+s6d: 5-5
+s6p: 11-11
+s6t: 8-8
+s6t2: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt7	Serve with your favorite garnish and bread .
+# sentence level graph:
+(s7s / serve-02
+  :accompanier (s7a / and
+                 :op1 (s7g / garnish
+                        :ARG1-of (s7f / favor-01
+                                   :ARG0 (s7y / you)))
+                 :op2 (s7b / bread
+                        :ARG1-of s7f))
+  :mode imperative)
+
+# alignment:s7a: 6-6
+s7b: 7-7
+s7f: 4-4
+s7g: 5-5
+s7s: 1-1
+s7y: 3-3
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+Cube the chicken breast to prepare for the food processor .
+Combine the cubed chicken , creamed spinach , olive oil , garlic , Parmesan cheese and the olive oil in the food processor and process .
+Form into patties .
+Heat a large frying pan with a drizzle of vegetable oil and place the patties in the pan .
+When the patties firm and become golden on one side flip and finish cooking .
+The cooking time will depend on the thickness of the patties .
+Serve with your favorite garnish and bread .

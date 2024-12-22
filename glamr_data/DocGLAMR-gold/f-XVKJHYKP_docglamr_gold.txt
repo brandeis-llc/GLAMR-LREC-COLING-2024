@@ -1,0 +1,70 @@
+# :: f-XVKJHYKP::step01::sent01
+# :: snt1	Preheat oven to 350 degrees F.
+(s1 / sentence)
+
+
+# :: f-XVKJHYKP::step02::sent01
+# :: snt2	Line cookie sheet with parchment paper .
+(s2 / sentence)
+
+
+# :: f-XVKJHYKP::step03::sent01
+# :: snt3	In a medium bowl , combine ground cereal and oats .
+(s3 / sentence
+    :coref ((s3g :aggregation s3c3)
+			(s3o :aggregation s3c3)))
+
+
+# :: f-XVKJHYKP::step03::sent02
+# :: snt4	Toss .
+(s4 / sentence
+    :coref ((s3c3 :aggregation s4t)
+			(s4t :cut s4t)
+			(s3c3 :cut s4t)))
+
+
+# :: f-XVKJHYKP::step04::sent01
+# :: snt5	Add agave , oil , vanilla and egg .
+(s5 / sentence
+    :coref ((s4t :aggregation s5a)))
+
+
+# :: f-XVKJHYKP::step04::sent02
+# :: snt6	Mix until a thick sticky batter forms .
+(s6 / sentence
+    :coref ((s5a :cut s6b)
+			(s4t :cut s6b)))
+
+
+# :: f-XVKJHYKP::step05::sent01
+# :: snt7	Fold in chocolate chips .
+(s7 / sentence
+    :coref ((s6b :cut s7f)
+			(s7f :cut s7f)))
+
+
+# :: f-XVKJHYKP::step06::sent01
+# :: snt8	Using 1 round tablespoon , scoop cookie dough onto baking sheets .
+(s8 / sentence)
+
+
+# :: f-XVKJHYKP::step06::sent02
+# :: snt9	You should get about 1 dozen or so .
+(s9 / sentence)
+
+
+# :: f-XVKJHYKP::step07::sent01
+# :: snt10	Bake for approximately 8 minutes until golden around the edges .
+(s10 / sentence)
+
+
+# :: f-XVKJHYKP::step07::sent02
+# :: snt11	Transfer to a cooling rack immediately .
+(s11 / sentence)
+
+
+# :: f-XVKJHYKP::step07::sent03
+# :: snt12	Enjoy !
+(s12 / sentence)
+
+

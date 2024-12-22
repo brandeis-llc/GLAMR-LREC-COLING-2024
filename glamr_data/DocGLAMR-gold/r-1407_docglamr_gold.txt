@@ -1,0 +1,58 @@
+# :: r-1407::step01::sent01
+# :: snt1	Fry the sewian in hot oil until golden brown .
+(s1 / sentence
+    :coref ((s1s :aggregation s1f2)
+			(s1o :aggregation s1f2)))
+
+
+# :: r-1407::step02::sent01
+# :: snt2	Heat the milk to boiling and add the sewian .
+(s2 / sentence
+    :coref ((s1f2 :aggregation s2a1)
+			(s2m :cut s2b)
+			(s2b :aggregation s2a1)))
+
+
+# :: r-1407::step03::sent01
+# :: snt3	Cook until the milk is reduced by half .
+(s3 / sentence
+    :coref ((s2a1 :cut s3c4)
+			(s1f2 :cut s3c4)))
+
+
+# :: r-1407::step04::sent01
+# :: snt4	Add sugar and cook on low heat until creamy ( about 25 minutes ) .
+(s4 / sentence
+    :coref ((s3c4 :aggregation s4a1)
+			(s4a1 :cut s4c5)
+			(s3c4 :cut s4c5)
+			(s2a1 :aggregation s4a1)
+			(s4s2 :aggregation s4a1)))
+
+
+# :: r-1407::step05::sent01
+# :: snt5	Remove from the heat .
+(s5 / sentence
+    :coref ((s4c5 :cut s5r1)
+			(s4a1 :cut s5r1)))
+
+
+# :: r-1407::step06::sent01
+# :: snt6	Add in rose water .
+(s6 / sentence
+    :coref ((s5r1 :aggregation s6a1)
+			(s4c5 :aggregation s6a1)
+			(s4a1 :aggregation s6a1)
+			(s6r :aggregation s6a1)))
+
+
+# :: r-1407::step07::sent01
+# :: snt7	Decorate with blanched finely shredded almonds and pistachio nuts and silver leaves if desired .
+(s7 / sentence
+    :coref ((s6a1 :aggregation s7d3)
+			(s5r1 :aggregation s7d3)
+			(s7s :aggregation s7d3)
+			(s7p :aggregation s7d3)
+			(s7s2 :aggregation s7d3)))
+
+

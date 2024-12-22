@@ -1,0 +1,372 @@
+# :: r-769::step01::sent01
+# :: snt1	cream 2 tablespoons butter , beat in eggs and salt .
+(s1a2 / and
+      :op1 (s1c / cream-01~0
+                :ARG1 (s1b2 / butter~3
+                            :quant (s1v / volume-quantity
+                                        :quant 2
+                                        :unit (s1t / teaspoon~2)))
+                :ARG0 (s1y / you)
+                :event-structure (s1se / subevents
+                                       :E1 (s1a1 / and
+                                                 :op1 (s1m / mingled
+                                                           :polarity -
+                                                           :PATIENT_I s1b2)
+                                                 :op2 (s1h / has_material_integrity_state
+                                                           :polarity -
+                                                           :PATIENT_I s1b2
+                                                           :V_STATE (s1c1 / creamed))
+                                                 :op3 (s1h1 / has_material_integrity_state
+                                                            :polarity -
+                                                            :V_STATE s1c1
+                                                            :PATIENT_I s1b2))
+                                       :E3 (s1a3 / and
+                                                 :op1 (s1m1 / mingled
+                                                            :PATIENT_I s1b2)
+                                                 :op2 (s1h2 / has_material_integrity_state
+                                                            :PATIENT_I s1b2
+                                                            :V_STATE s1c1)
+                                                 :op3 (s1h3 / has_material_integrity_state
+                                                            :V_STATE s1c1
+                                                            :PATIENT_I s1b2))
+                                       :E0 (s1d / do
+                                                :ACTION s1c))
+                :imp_output (s1c2 / cream.RES))
+      :op2 (s1b / beat-ON-06~5
+                :ARG1 (s1a / and~8
+                           :op1 (s1e / egg~7)
+                           :op2 (s1s / salt~9))
+                :ARG0 s1y
+                :event-structure (s1se1 / subevents
+                                        :E1 (s1h4 / has_material_integrity_state
+                                                  :polarity -
+                                                  :PATIENT s1s
+                                                  :V_STATE (s1b1 / beaten))
+                                        :E3 (s1h5 / has_material_integrity_state
+                                                  :PATIENT s1s
+                                                  :V_STATE s1b1)
+                                        :E0 (s1d1 / do
+                                                  :ACTION s1b))
+                :imp_output (s1b3 / beat.RES))
+      :mode imperative)
+
+
+# :: r-769::step02::sent01
+# :: snt2	Gradually beat in flour and riced potatoes .
+(s2b / beat-ON-06~1
+     :ARG1 (s2a / and~4
+                :op1 (s2f / flour~3)
+                :op2 (s2p / potato~6
+                          :ARG1-of (s2r / rice-01~5)))
+     :manner (s2g / gradual~0)
+     :mode imperative
+     :ARG0 (s2y / you)
+     :event-structure (s2se / subevents
+                            :E1 (s2h / has_material_integrity_state
+                                     :polarity -
+                                     :PATIENT s2p
+                                     :V_STATE (s2b1 / beaten))
+                            :E3 (s2h1 / has_material_integrity_state
+                                      :PATIENT s2p
+                                      :V_STATE s2b1)
+                            :E0 (s2d / do
+                                     :ACTION s2b))
+     :imp_output (s2b2 / beat.RES))
+
+
+# :: r-769::step03::sent01
+# :: snt3	Dough should be stiff to knead thoroughly .
+(s3r / recommend-01~1
+     :ARG1 (s3s / stiff~3
+                :domain (s3d / dough~0)
+                :purpose (s3k / knead-01~5
+                              :degree (s3t / thorough~6)
+                              :ARG0 (s3y / you)))
+     :mode imperative)
+
+
+# :: r-769::step04::sent01
+# :: snt4	On floured board roll out dough to 1/4-inch thickness , then cut 3-inch squares .
+(s4a / and
+     :op1 (s4r / roll-out-ON-06~3,4
+               :ARG1 (s4d2 / dough~5)
+               :ARG2 (s4t2 / thickness~8
+                           :quant "1/4"
+                           :unit (s4i2 / inch~7))
+               :location (s4b / board~2
+                              :ARG1-of (s4f / flour-01~1))
+               :ARG0 (s4y / you)
+               :event-structure (s4se / subevents
+                                      :E1 (s4h / has_location
+                                               :THEME s4d2)
+                                      :E3 (s4a1 / and
+                                                :op1 (s4m / motion
+                                                          :THEME s4d2)
+                                                :op2 (s4h1 / has_location
+                                                           :polarity -
+                                                           :THEME s4d2))
+                                      :E4 (s4h2 / has_location
+                                                :THEME s4d2
+                                                :DESTINATION s4b)
+                                      :E0 (s4d1 / do
+                                                :ACTION s4r))
+               :imp_output (s4r1 / roll.RES))
+     :op2 (s4c / cut-01~11
+               :ARG1 (s4s / square~13
+                          :mod (s4d / distance-quantity
+                                    :quant 3
+                                    :unit (s4i / inch~12)))
+               :time (s4t / then~10)
+               :ARG0 s4y
+               :event-structure (s4se1 / subevents
+                                       :E1 (s4d3 / degradation_material_integrity
+                                                 :polarity -
+                                                 :PATIENT s4d2)
+                                       :E2 (s4c1 / contact
+                                                 :PATIENT s4d2)
+                                       :E3 (s4d4 / degradation_material_integrity
+                                                 :PATIENT s4d2)
+                                       :E0 (s4d5 / do
+                                                 :ACTION s4c))
+               :imp_output (s4c2 / cut.RES))
+     :mode imperative)
+
+
+# :: r-769::step05::sent01
+# :: snt5	Lay 1 plum on each square , sprinkle with little cinnamon sugar and fold edges over plum .
+(s5a / and~12
+     :op1 (s5l / lay-01~0
+               :ARG1 (s5p / plum~2,16
+                          :quant 1)
+               :ARG2 (s5s2 / square~5
+                           :mod (s5e / each~4))
+               :ARG0 (s5y / you)
+               :event-structure (s5se / subevents
+                                      :E1 (s5h / has_location
+                                               :THEME s5p)
+                                      :E3 (s5a1 / and
+                                                :op1 (s5m / motion
+                                                          :THEME s5p)
+                                                :op2 (s5h1 / has_location
+                                                           :polarity -
+                                                           :THEME s5p))
+                                      :E4 (s5a2 / and
+                                                :op1 (s5h2 / has_location
+                                                           :THEME s5p
+                                                           :DESTINATION s5s2)
+                                                :op2 (s5h3 / has_configuration
+                                                           :THEME s5p
+                                                           :V_CONFIGURATION (s5l1 / lied)))
+                                      :E0 (s5d / do
+                                               :ACTION s5l))
+               :imp_output (s5l3 / lay.RES))
+     :op2 (s5s / sprinkle-01~7
+               :ARG1 (s5s3 / sugar~11
+                           :mod (s5c / cinnamon~10)
+                           :mod (s5l2 / little~9))
+               :ARG0 s5y
+               :event-structure (s5se1 / subevents
+                                       :E1 (s5h4 / has_location
+                                                 :THEME s5s3)
+                                       :E3 (s5a3 / and
+                                                 :op1 (s5m1 / motion
+                                                            :THEME s5s3)
+                                                 :op2 (s5h5 / has_location
+                                                            :polarity -
+                                                            :THEME s5s3))
+                                       :E4 (s5h6 / has_location
+                                                 :THEME s5s3)
+                                       :E0 (s5d1 / do
+                                                 :ACTION s5s))
+               :imp_output (s5s1 / sprinkle.RES))
+     :op3 (s5f / fold-03~13
+               :ARG1 (s5e2 / edge~14)
+               :location (s5o / over~15
+                              :op1 s5p)
+               :ARG0 s5y
+               :event-structure (s5se2 / subevents
+                                       :E1 (s5h7 / has_physical_form
+                                                 :polarity -
+                                                 :PATIENT s5e2
+                                                 :V_FINAL_STATE (s5f1 / folded))
+                                       :E3 (s5h8 / has_physical_form
+                                                 :PATIENT s5e2
+                                                 :V_FINAL_STATE s5f1)
+                                       :E0 (s5d2 / do
+                                                 :ACTION s5f))
+               :imp_output (s5f2 / fold.RES))
+     :mode imperative)
+
+
+# :: r-769::step06::sent01
+# :: snt6	Shape with hands into a ball .
+(s6s / shape-01~0
+     :ARG2 (s6b / ball~5)
+     :instrument (s6h / hand~2)
+     :mode imperative
+     :ARG0 (s6y / you)
+     :event-structure (s6se / subevents
+                            :E1 (s6b1 / be
+                                      :polarity -
+                                      :PRODUCT s6b)
+                            :E3 (s6a / and
+                                     :op1 (s6b2 / be
+                                                :PRODUCT s6b)
+                                     :op2 (s6m / made_of
+                                               :PRODUCT s6b))
+                            :E (s6c / cost
+                                    :PRODUCT s6b)
+                            :E0 (s6d / do
+                                     :ACTION s6s))
+     :imp_output (s6s1 / shape.RES))
+
+
+# :: r-769::step07::sent01
+# :: snt7	The wall of dough should be very thin .
+(s7r / recommend-01~4
+     :ARG1 (s7t / thin~7
+                :domain (s7w / wall~1
+                             :consist-of (s7d / dough~3))
+                :degree (s7v / very~6)))
+
+
+# :: r-769::step08::sent01
+# :: snt8	Drop dumplings into boiling salted water , cover and simmer for about 15 minutes .
+(s8a2 / and~8
+      :op1 (s8d / drop-01~0
+                :ARG1 (s8u / Dumpling~1)
+                :ARG4 (s8w / water~5
+                           :ARG1-of (s8s / salt-01~4)
+                           :ARG1-of (s8b / boil-01~3))
+                :ARG0 (s8y / you)
+                :event-structure (s8se / subevents
+                                       :E1 (s8h / has_location
+                                                :THEME s8u)
+                                       :E2 (s8e / exert_force
+                                                :THEME s8u)
+                                       :E3 (s8a1 / and
+                                                 :op1 (s8m1 / motion
+                                                            :THEME s8u
+                                                            :V_TRAJECTORY (s8d1 / dropped))
+                                                 :op2 (s8h1 / has_location
+                                                            :polarity -
+                                                            :THEME s8u))
+                                       :E4 (s8h2 / has_location
+                                                 :THEME s8u
+                                                 :DESTINATION s8w)
+                                       :E0 (s8d2 / do
+                                                 :ACTION s8d))
+                :imp_output (s8d3 / drop.RES))
+      :op2 (s8c / cover-02~7
+                :ARG0 s8y
+                :event-structure (s8se1 / subevents
+                                        :E1 (s8h3 / has_location
+                                                  :IMP_THEME s8d3)
+                                        :E3 (s8a3 / and
+                                                  :op1 (s8m2 / motion
+                                                             :IMP_THEME s8d3)
+                                                  :op2 (s8h4 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s8d3))
+                                        :E4 (s8h5 / has_location
+                                                  :IMP_THEME s8d3
+                                                  :DESTINATION s8u)
+                                        :E0 (s8d4 / do
+                                                  :ACTION s8c))
+                :imp_output (s8c1 / cover.RES))
+      :op3 (s8s2 / simmer-01~9
+                 :duration (s8a / about~11
+                                :op1 (s8t / temporal-quantity
+                                          :quant 15
+                                          :unit (s8m / minute~13)))
+                 :ARG0 s8y
+                 :event-structure (s8se2 / subevents
+                                         :E1 (s8c2 / cooked
+                                                   :polarity -
+                                                   :PATIENT s8u
+                                                   :V_FINAL_STATE (s8s1 / simmered))
+                                         :E3 (s8a4 / apply_heat
+                                                   :PATIENT s8u)
+                                         :E4 (s8c3 / cooked
+                                                   :PATIENT s8u
+                                                   :V_FINAL_STATE s8s1)
+                                         :E0 (s8d5 / do
+                                                   :ACTION s8s2))
+                 :imp_output (s8s3 / simmer.RES))
+      :mode imperative)
+
+
+# :: r-769::step09::sent01
+# :: snt9	Brown bread crumbs in 1/3 cup hot butter .
+(s9b2 / brown-01~0
+      :ARG1 (s9c / crumb~2
+                 :source (s9b / bread~1))
+      :medium (s9b3 / butter~7
+                    :quant (s9v / volume-quantity
+                                :quant "1/3"
+                                :unit (s9c2 / cup))
+                    :mod (s9h / hot~6))
+      :mode imperative
+      :ARG0 (s9y / you)
+      :event-structure (s9se / subevents
+                             :E1 (s9c1 / cooked
+                                       :polarity -
+                                       :PATIENT s9c
+                                       :V_FINAL_STATE (s9b1 / browned))
+                             :E3 (s9a / apply_heat
+                                      :INSTRUMENT s9b3
+                                      :PATIENT s9c)
+                             :E4 (s9c3 / cooked
+                                       :PATIENT s9c
+                                       :V_FINAL_STATE s9b1)
+                             :E0 (s9d / do
+                                      :ACTION s9b2))
+      :imp_output (s9b4 / brown.RES))
+
+
+# :: r-769::step10::sent01
+# :: snt10	Roll dumplings in buttered bread crumbs , sprinkle with cinnamon sugar .
+(s10a / and
+      :op1 (s10r / roll-01~0
+                 :ARG1 (s10u / Dumpling~1)
+                 :ARG2 (s10c2 / crumb~5
+                              :ARG1-of (s10b2 / butter-01~3)
+                              :source (s10b / bread~4))
+                 :ARG0 (s10y / you)
+                 :event-structure (s10se / subevents
+                                         :E1 (s10h / has_location
+                                                   :THEME s10u)
+                                         :E3 (s10a1 / and
+                                                    :op1 (s10m / motion
+                                                               :THEME s10u)
+                                                    :op2 (s10h1 / has_location
+                                                                :polarity -
+                                                                :THEME s10u))
+                                         :E4 (s10h2 / has_location
+                                                    :THEME s10u
+                                                    :DESTINATION s10c2)
+                                         :E0 (s10d / do
+                                                   :ACTION s10r))
+                 :imp_output (s10r1 / roll.RES))
+      :op2 (s10s / sprinkle-01~7
+                 :ARG1 (s10s2 / sugar~10
+                              :mod (s10c / cinnamon~9))
+                 :ARG0 s10y
+                 :event-structure (s10se1 / subevents
+                                          :E1 (s10h3 / has_location
+                                                     :THEME s10s2)
+                                          :E3 (s10a2 / and
+                                                     :op1 (s10m1 / motion
+                                                                 :THEME s10s2)
+                                                     :op2 (s10h4 / has_location
+                                                                 :polarity -
+                                                                 :THEME s10s2))
+                                          :E4 (s10h5 / has_location
+                                                     :THEME s10s2
+                                                     :DESTINATION s10u)
+                                          :E0 (s10d1 / do
+                                                     :ACTION s10s))
+                 :imp_output (s10s1 / sprinkle.RES))
+      :mode imperative)
+
+

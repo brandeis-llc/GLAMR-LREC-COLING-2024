@@ -1,0 +1,60 @@
+# :: f-FDML6BVQ::step01::sent01
+# :: snt1	Preheat oven to 400deg .
+(s1 / sentence)
+
+
+# :: f-FDML6BVQ::step02::sent01
+# :: snt2	Prepare the dough as directed .
+(s2 / sentence
+    :coref ((s2d2 :cut s2p1)))
+
+
+# :: f-FDML6BVQ::step03::sent01
+# :: snt3	Drizzle oil over rolled out dough .
+(s3 / sentence
+    :coref ((s2p1 :aggregation s3d3)
+			(s3o :aggregation s3d3)))
+
+
+# :: f-FDML6BVQ::step04::sent01
+# :: snt4	Sprinkle Aussie Outback Rub over the dough .
+(s4 / sentence
+    :coref ((s3d3 :aggregation s4s1)))
+
+
+# :: f-FDML6BVQ::step05::sent01
+# :: snt5	Spread spinach and then parnips on the pizza .
+(s5 / sentence
+    :coref ((s4s1 :aggregation s5s1)
+			(s3d3 :aggregation s5s1)
+			(s5s :aggregation s5s1)
+			(s5p :aggregation s5s1)))
+
+
+# :: f-FDML6BVQ::step06::sent01
+# :: snt6	Add feta and then top with machengo .
+(s6 / sentence
+    :coref ((s5s1 :aggregation s6a1)
+			(s6a1 :aggregation s6t2)
+			(s5s1 :aggregation s6t2)
+			(s6f :aggregation s6a1)
+			(s6m :aggregation s6t2)))
+
+
+# :: f-FDML6BVQ::step07::sent01
+# :: snt7	Toss pine nuts over everything .
+(s7 / sentence
+    :coref ((s6t2 :aggregation s7t1)
+			(s5s1 :aggregation s7t1)
+			(s6a1 :aggregation s7t1)
+			(s7p :aggregation s7t1)))
+
+
+# :: f-FDML6BVQ::step08::sent01
+# :: snt8	Cook for about 20 minutes or until the crust and cheese have browned to your liking .
+(s8 / sentence
+    :coref ((s7t1 :cut s8c6)
+			(s6t2 :cut s8c6)
+			(s5s1 :cut s8c6)))
+
+

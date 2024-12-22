@@ -1,0 +1,175 @@
+user name: yueliulu
+user id: 348
+file language: english
+file format: plain_text
+Doc ID in database: 1470
+export time: 10/3/2023, 9:52:48 PM
+
+# :: snt1	In a large pot , bring the water and salt to a boil ; add the lentils , reduce the heat to medium - low and cook for 30 minutes or until the lentils are tender but not overcooked ; drain .
+# sentence level graph:
+(s1a2 / and
+  :op1 (s1b2 / bring-ON-02
+         :ARG1 (s1a3 / and
+                 :op1 (s1w / water)
+                 :op2 (s1s / salt))
+         :destination (s1b / boil))
+  :op2 (s1a / add-02
+         :ARG1 (s1l2 / lentil))
+  :op3 (s1r / reduce-01
+         :ARG1 (s1h / heat)
+         :ARG4 (s1a4 / amr-choice
+                 :op1 (s1m / medium)
+                 :op2 (s1l3 / low)))
+  :op4 (s1c2 / cook-01
+         :duration (s1o2 / or
+                     :op1 (s1t / temporal-quantity
+                            :unit (s1m2 / minute)
+                            :quant 30)
+                     :op2 (s1u / until
+                            :op1 (s1c3 / contrast-01
+                                   :ARG1 (s1t2 / tender-ON-03)
+                                   :ARG2 (s1o / overcook-01
+                                           :polarity -)
+                                   :domain s1l2))))
+  :op5 (s1d / drain-01)
+  :location (s1p / pot
+              :mod (s1l / large))
+  :mode imperative)
+
+# alignment:s1a: 15-15
+s1a2: 9-9
+s1a3: 14-14
+s1b: 13-13
+s1b2: 6-6
+s1c2: 27-27
+s1d: 41-41
+s1h: 21-21
+s1l: 3-3
+s1l2: 34-34
+s1l3: 25-25
+s1m: 23-23
+s1m2: -1--1
+s1o: -1--1
+s1o2: 31-31
+s1p: 4-4
+s1r: 19-19
+s1s: 10-10
+s1t: -1--1
+s1t2: 36-36
+s1u: -1--1
+s1w: 8-8
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt2	In a colander , rinse the cooked lentils under cold water until slightly cool , then place them in a bowl .
+# sentence level graph:
+(s2a / and
+  :op1 (s2r / rinse-01
+         :ARG1 (s2l / lentil
+                 :ARG1-of (s2c4 / cook-01))
+         :location (s2u / under
+                     :op1 (s2w / water
+                            :mod (s2c3 / cold)))
+         :location (s2c2 / colander)
+         :duration (s2u2 / until
+                     :op1 (s2c5 / cool-06
+                            :degree (s2s / slight))))
+  :op2 (s2p / place-01
+         :ARG1 s2l
+         :ARG2 (s2b / bowl)
+         :time (s2t / then))
+  :mode imperative)
+
+# alignment:s2a: 1-1
+s2c2: 3-3
+s2c3: 10-10
+s2c4: 7-7
+s2c5: 14-14
+s2l: 8-8
+s2p: 17-17
+s2r: 5-5
+s2s: 13-13
+s2t: 16-16
+s2u: 9-9
+s2u2: 12-12
+s2w: 11-11
+s2b: 21-21
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt3	Whisk together the remaining ingredients ; pour over the lentils and combine well .
+# sentence level graph:
+(s3a / and
+  :op1 (s3w / whisk-ON-03
+         :ARG1 (s3i / ingredient
+                 :ARG1-of (s3r / remain-01))
+         :manner (s3t / together))
+  :op2 (s3p / pour-01
+         :ARG1 (s3l / lentil))
+  :op3 (s3c / combine-01
+         :manner (s3w2 / well))
+  :mode imperative)
+
+# alignment:s3a: 1-1
+s3c: 12-12
+s3i: 5-5
+s3l: 10-10
+s3p: 7-7
+s3r: 4-4
+s3t: 2-2
+s3w2: 13-13
+
+# document level annotation:
+
+
+
+
+
+
+# :: snt4	Chill for 1 to 2 hours and serve cold .
+# sentence level graph:
+(s4a / and
+  :op1 (s4c / chill-01
+         :duration (s4b / between
+                     :op1 (s4t / temporal-quantity
+                            :quant 1
+                            :unit (s4h2 / hour))
+                     :op2 (s4t2 / temporal-quantity
+                            :unit (s4h / hour)
+                            :quant 2)))
+  :op2 (s4s / serve-02
+         :manner (s4c2 / cold))
+  :mode imperative)
+
+# alignment:s4a: 7-7
+s4b: 5-5
+s4c: 1-1
+s4c2: 9-9
+s4h: 6-6
+s4h2: 10-10
+s4s: 8-8
+s4t: 4-4
+s4t2: 6-6
+
+# document level annotation:
+
+
+
+
+
+
+# Source File: 
+In a large pot , bring the water and salt to a boil ; add the lentils , reduce the heat to medium - low and cook for 30 minutes or until the lentils are tender but not overcooked ; drain .
+In a colander , rinse the cooked lentils under cold water until slightly cool , then place them in a bowl .
+Whisk together the remaining ingredients ; pour over the lentils and combine well .
+Chill for 1 to 2 hours and serve cold .

@@ -1,0 +1,222 @@
+# :: f-LWGGLHLM::step01::sent01
+# :: snt1	Melt cheese cubes and grated Parmesan in milk over low heat , stirring occasionally .
+(s1m3 / melt-01~0
+      :ARG1 (s1a / and~3
+                 :op1 (s1c / cube~2
+                           :consist-of (s1c2 / cheese~1))
+                 :op2 (s1p / parmesan~5
+                           :ARG1-of (s1g / grate-01~4))
+                 :op3 (s1m2 / milk~7))
+      :manner (s1h / heat-01~10
+                   :mod (s1l / low-04~9))
+      :manner (s1s / stir-01~12
+                   :frequency (s1o / occasional~13)
+                   :ARG0 s1y
+                   :event-structure (s1se1 / subevents
+                                           :E1 (s1h1 / has_material_integrity_state
+                                                     :polarity -
+                                                     :IMP_PATIENT s1m1
+                                                     :V_STATE (s1s1 / stirred))
+                                           :E3 (s1h2 / has_material_integrity_state
+                                                     :IMP_PATIENT s1m1
+                                                     :V_STATE s1s1)
+                                           :E0 (s1d1 / do
+                                                     :ACTION s1s))
+                   :imp_output (s1s2 / stir.RES))
+      :mode imperative
+      :ARG0 (s1y / you)
+      :event-structure (s1se / subevents
+                             :E1 (s1b / be
+                                      :polarity -)
+                             :E2 (s1a1 / and
+                                       :op1 (s1b1 / be)
+                                       :op2 (s1m / made_of))
+                             :E0 (s1d / do
+                                      :ACTION s1m3))
+      :imp_output (s1m1 / melt.RES))
+
+
+# :: f-LWGGLHLM::step01::sent02
+# :: snt2	When cheese is completely melted , set the sauce aside , season with pepper .
+(s2a / and
+     :op1 (s2s3 / set-01~6
+                :ARG1 (s2s / sauce~8)
+                :ARG2 (s2a2 / aside~9)
+                :ARG0 (s2y / you)
+                :event-structure (s2se / subevents
+                                       :E1 (s2h / has_location
+                                                :THEME s2s)
+                                       :E3 (s2a1 / and
+                                                 :op1 (s2m1 / motion
+                                                            :THEME s2s)
+                                                 :op2 (s2h1 / has_location
+                                                            :polarity -
+                                                            :THEME s2s))
+                                       :E4 (s2h2 / has_location
+                                                 :THEME s2s)
+                                       :E0 (s2d / do
+                                                :ACTION s2s3))
+                :imp_output (s2s1 / set.RES))
+     :op2 (s2s2 / season-01~11
+                :ARG2 (s2p / pepper~13)
+                :ARG0 s2y
+                :event-structure (s2se1 / subevents
+                                        :E1 (s2h3 / has_location
+                                                  :IMP_THEME s2s1)
+                                        :E3 (s2a3 / and
+                                                  :op1 (s2m2 / motion
+                                                             :IMP_THEME s2s1)
+                                                  :op2 (s2h4 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s2s1))
+                                        :E4 (s2h5 / has_location
+                                                  :IMP_THEME s2s1)
+                                        :E0 (s2d1 / do
+                                                  :ACTION s2s2))
+                :imp_output (s2s4 / season.RES))
+     :time (s2m / melt-01~4
+                :ARG1 (s2c / cheese~1)
+                :degree (s2c2 / completely~3))
+     :mode imperative)
+
+
+# :: f-LWGGLHLM::step02::sent01
+# :: snt3	In a pan saute the schnitzels for 3 minutes on both sides over low heat .
+(s3s2 / saute-01~3
+      :ARG1 (s3s3 / schnitzel~5
+                  :location (s3s / side~11
+                                 :mod (s3b / both~10)))
+      :duration (s3t / temporal-quantity
+                     :quant 3
+                     :unit (s3m / minute~8))
+      :location (s3p / pan~2)
+      :manner (s3h / heat-01~14
+                   :ARG1-of (s3l / low-04~13))
+      :mode imperative
+      :ARG0 (s3y / you)
+      :event-structure (s3se / subevents
+                             :E1 (s3c / cooked
+                                      :polarity -
+                                      :PATIENT s3s3
+                                      :V_FINAL_STATE (s3s1 / sauted))
+                             :E3 (s3a / apply_heat
+                                      :INSTRUMENT s3h
+                                      :PATIENT s3s3)
+                             :E4 (s3c1 / cooked
+                                       :PATIENT s3s3
+                                       :V_FINAL_STATE s3s1)
+                             :E0 (s3d / do
+                                      :ACTION s3s2))
+      :imp_output (s3s4 / saute.RES))
+
+
+# :: f-LWGGLHLM::step03::sent01
+# :: snt4	Pour the cheese sauce over schnitzels , sprinkle with chopped herbs , cover and cook for 5 minutes on low .
+(s4a / and
+     :op1 (s4p / pour-01~0
+               :ARG1 (s4s / sauce~3
+                          :consist-of (s4c / cheese~2))
+               :ARG2 (s4s2 / schnitzel~5)
+               :ARG0 (s4y / you)
+               :event-structure (s4se / subevents
+                                      :E1 (s4h1 / has_location
+                                                :THEME s4s)
+                                      :E3 (s4a1 / and
+                                                :op1 (s4m1 / motion
+                                                           :THEME s4s)
+                                                :op2 (s4h2 / has_location
+                                                           :polarity -
+                                                           :THEME s4s))
+                                      :E4 (s4h3 / has_location
+                                                :THEME s4s
+                                                :DESTINATION s4s2)
+                                      :E0 (s4d / do
+                                               :ACTION s4p))
+               :imp_output (s4p1 / pour.RES))
+     :op2 (s4s3 / sprinkle-01~7
+                :ARG1 (s4h / herb~10
+                           :ARG1-of (s4c2 / chop-01~9))
+                :ARG0 s4y
+                :event-structure (s4se1 / subevents
+                                        :E1 (s4h4 / has_location
+                                                  :THEME s4h)
+                                        :E3 (s4a2 / and
+                                                  :op1 (s4m2 / motion
+                                                             :THEME s4h)
+                                                  :op2 (s4h5 / has_location
+                                                             :polarity -
+                                                             :THEME s4h))
+                                        :E4 (s4h6 / has_location
+                                                  :THEME s4h)
+                                        :E0 (s4d1 / do
+                                                  :ACTION s4s3))
+                :imp_output (s4s1 / sprinkle.RES))
+     :op3 (s4c4 / cover-02~12
+                :ARG0 s4y
+                :event-structure (s4se2 / subevents
+                                        :E1 (s4h7 / has_location
+                                                  :IMP_THEME s4s1)
+                                        :E3 (s4a3 / and
+                                                  :op1 (s4m3 / motion
+                                                             :IMP_THEME s4s1)
+                                                  :op2 (s4h8 / has_location
+                                                             :polarity -
+                                                             :IMP_THEME s4s1))
+                                        :E4 (s4h9 / has_location
+                                                  :IMP_THEME s4s1)
+                                        :E0 (s4d2 / do
+                                                  :ACTION s4c4))
+                :imp_output (s4c1 / cover.RES))
+     :op4 (s4c3 / cook-01~14
+                :duration (s4t / temporal-quantity
+                               :quant 5
+                               :unit (s4m / minute~17))
+                :manner (s4l2 / low~19)
+                :ARG0 s4y
+                :event-structure (s4se3 / subevents
+                                        :E1 (s4c5 / cooked
+                                                  :polarity -
+                                                  :IMP_PATIENT s4c1
+                                                  :V_FINAL_STATE (s4c6 / cooked))
+                                        :E3 (s4a4 / apply_heat
+                                                  :INSTRUMENT s4l2
+                                                  :IMP_PATIENT s4c1)
+                                        :E4 (s4c7 / cooked
+                                                  :IMP_PATIENT s4c1
+                                                  :V_FINAL_STATE s4c6)
+                                        :E0 (s4d3 / do
+                                                  :ACTION s4c3))
+                :imp_output (s4c8 / cook.RES))
+     :mode imperative)
+
+
+# :: f-LWGGLHLM::step04::sent01
+# :: snt5	Serve immediately with rice and green salad .
+(s5s2 / serve-02~0
+      :mode imperative
+      :time (s5i / immediate~1)
+      :accompanier (s5a2 / and
+                         :op1 (s5r / rice~3)
+                         :op2 (s5s3 / salad~6
+                                    :mod (s5g2 / green-01~5)))
+      :ARG0 (s5y / you)
+      :event-structure (s5se / subevents
+                             :E1 (s5a / and
+                                      :op1 (s5h / has_possession
+                                                :IMP_THEME (s5c / cook.RES))
+                                      :op2 (s5h1 / has_possession
+                                                 :polarity -
+                                                 :IMP_THEME s5c))
+                             :E2 (s5t / transfer
+                                      :IMP_THEME s5c)
+                             :E3 (s5a1 / and
+                                       :op1 (s5h2 / has_possession
+                                                  :IMP_THEME s5c)
+                                       :op2 (s5h3 / has_possession
+                                                  :polarity -
+                                                  :IMP_THEME s5c))
+                             :E0 (s5d / do
+                                      :ACTION s5s2))
+      :imp_output (s5s / serve.RES))
+
+
